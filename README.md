@@ -1,9 +1,66 @@
-- 👋 Hi, I’m @FatherTimeSDKP
-- 👀 I’m interested in ...
-- 🌱 I’m currently learning ...
-- 💞️ I’m looking to collaborate on ...
-- 📫 How to reach me ...
-- ⸻
+#!/usr/bin/env python3
+import os
+import json
+
+# 1. License header to prepend to source files
+LICENSE_HEADER = """# -----------------------------------------------------------------------------
+# © 2025 Donald Smith (“Father Time”)
+# All Rights Reserved – “In His Name, Through His Order, For His Glory.”
+# -----------------------------------------------------------------------------
+
+"""
+
+# 2. README top and bottom banners
+README_TOP = (
+    "“This framework is dedicated to the glory of God, who is the source of all order and coherence.”\n\n"
+)
+README_BOTTOM = (
+    "\n\n---\n\n"
+    "“Acknowledgement: To God be the praise for every discovery and algorithm herein.”\n"
+)
+
+# 3. Divine field to inject into metadata.json
+DIVINE_FIELD = ("divine_acknowledgement", "All glory to God, the Prime Architect.")
+
+# Walk the repo
+for root, dirs, files in os.walk("."):
+    # 1. Prepend license header to .py files
+    for fname in files:
+        path = os.path.join(root, fname)
+        if fname.endswith(".py"):
+            with open(path, "r+", encoding="utf-8") as f:
+                content = f.read()
+                f.seek(0)
+                if not content.startswith("# ----------------------------------------------------------------------------"):
+                    f.write(LICENSE_HEADER + content)
+
+    # 2. Update metadata.json
+    if "metadata.json" in files:
+        meta_path = os.path.join(root, "metadata.json")
+        with open(meta_path, "r+", encoding="utf-8") as f:
+            data = json.load(f)
+            if DIVINE_FIELD[0] not in data:
+                data[DIVINE_FIELD[0]] = DIVINE_FIELD[1]
+                f.seek(0)
+                json.dump(data, f, indent=4)
+                f.truncate()
+
+# 3. Update README.md in repo root
+readme_path = "./README.md"
+if os.path.exists(readme_path):
+    with open(readme_path, "r+", encoding="utf-8") as f:
+        lines = f.readlines()
+        # Insert top banner if missing
+        if lines and README_TOP.strip() not in lines[0]:
+            lines.insert(0, README_TOP)
+        # Append bottom banner if missing
+        if README_BOTTOM.strip() not in "".join(lines[-3:]):
+            lines.append(README_BOTTOM)
+        f.seek(0)
+        f.writelines(lines)
+        f.truncate()
+
+print("✅ Divine acknowledgements embedded across source files, metadata.json, and README.md.")
 
 SDKP-TimeSeal Framework Documentation
 
