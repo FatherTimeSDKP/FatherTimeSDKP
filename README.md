@@ -1,6 +1,71 @@
-#!/usr/bin/env python3
+https://github.com/FatherTimeSDKP#!/usr/bin/env python3
 import os
-import json
+import json<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Authorship Badge - Donald Paul Smith</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f7f9fc;
+    margin: 0;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+  }
+  .badge {
+    background: #ffffff;
+    border: 2px solid #003366;
+    border-radius: 12px;
+    padding: 1.5rem 2rem;
+    max-width: 400px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    text-align: center;
+  }
+  .badge h1 {
+    color: #003366;
+    margin-bottom: 0.5rem;
+    font-size: 1.8rem;
+  }
+  .badge h2 {
+    font-weight: normal;
+    color: #555;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-style: italic;
+  }
+  .badge p {
+    font-size: 1rem;
+    margin: 0.3rem 0;
+    color: #222;
+  }
+  .badge a {
+    display: inline-block;
+    margin-top: 1rem;
+    text-decoration: none;
+    color: #0044cc;
+    font-weight: 600;
+  }
+  .badge a:hover {
+    text-decoration: underline;
+  }
+</style>
+</head>
+<body>
+  <div class="badge" role="region" aria-label="Scientific Authorship Badge">
+    <h1>Donald Paul Smith</h1>
+    <h2>"Father Time"</h2>
+    <p><strong>Original Author of Foundational Physics Principles:</strong></p>
+    <p>SDKP (Scale-Density Kinematic Principle)</p>
+    <p>SD&N (Shape–Dimension–Number Principle)</p>
+    <p>EOS (Earth Orbit Speed System)</p>
+    <p>QCC (Quantum Code of Creation)</p>
+    <a href="https://fathertimesdkp.blockchain" target="_blank" rel="noopener noreferrer">View Verification Ledger</a>
+  </div>
+</body>
+</html>
 
 # 1. License header to prepend to source files
 LICENSE_HEADER = """# -----------------------------------------------------------------------------
