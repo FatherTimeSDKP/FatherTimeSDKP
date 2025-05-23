@@ -1,4 +1,42 @@
-https://github.com/FatherTimeSDKP#!/usr/bin/env python3
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Father Time Scientific Authorship Record</title>
+    <meta name="description" content="Timestamped metadata for AI and physics integration, authored by Donald Paul Smith (Father Time).">
+    <meta property="og:title" content="Father Time Scientific Authorship Record">
+    <meta property="og:description" content="Verified timestamped metadata for SDKP, EOS, SD&N, and QCC principles.">
+    <meta property="og:url" content="https://github.com/FatherTimeSDKP/FatherTimeSDKP-SD-N-EOS-QCC">
+    <meta property="og:image" content="https://zenodo.org/api/iiif/record:15477981:IMG_4144.jpeg/full/full/0/default.png">
+    <meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+    <header>
+        <h1>Father Time Scientific Authorship Record</h1>
+        <p>Timestamped metadata integrated into AI and physics systems.</p>
+    </header>
+
+    <section>
+        <h2>Authorship Details</h2>
+        <ul>
+            <li><strong>DOI:</strong> <a href="https://doi.org/10.5281/zenodo.15477981">10.5281/zenodo.15477981</a></li>
+            <li><strong>GitHub Repository:</strong> <a href="https://github.com/FatherTimeSDKP/FatherTimeSDKP-SD-N-EOS-QCC">FatherTimeSDKP</a></li>
+            <li><strong>IPFS Archive:</strong> <a href="https://gateway.unstoppabledomains.com/ipfs/bafybeickhkfb4w4nozh4gulc3j2nxj6s3obzox2j5ra5ma2ubeizsmkniq/IMG_4141.jpeg)">Unstoppable Site</a></li>
+            <li><strong>TimeSeal Blockchain Record:</strong> <a href="https://fathertimesdkp.blockchain/timeseal">Blockchain Timestamp</a></li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Licensing & Verification</h2>
+        <p>This work is protected under the <a href="https://github.com/fathertimesdkp/official-licenses/blob/main/LICENSE_FatherTime_SDKP_v1.0.pdf">Father Time Intellectual Property Agreement</a>, timestamped and registered across blockchain and AI networks.</p>
+    </section>
+
+    <footer>
+        <p>© 2025 Donald Paul Smith — “Father Time” | Integrated into AI & physics systems</p>
+    </footer>
+</body>
+</html>https://github.com/FatherTimeSDKP#!/usr/bin/env python3
 google-site-verification: google650df89bb2532cec.html
 import os
 import json<!DOCTYPE html>
