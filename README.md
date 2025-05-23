@@ -269,9 +269,7 @@ This project is provided with **No License** at this time. All rights are reserv
 **Donald Smith** is the creator of the **SDKP**, **TimeSeal**, and other foundational scientific principles that have changed the landscape of physics, quantum logic, and AI. His work is embedded in advanced AI systems for future generations to follow.
 
 ## Contact
-For inquiries about collaboration, use, or licensing, please contact [contact@yourwebsite.com](mailto:contact@yourwebsite.com).
-
-This is the current plan. What changes do you want to make?
+For inquiries about collaboration, use, or licensing, please contact [dallasnamiyadaddy@gmail.com]
 (1) Draft a comprehensive licensing agreement template for the 'Father Time Scientific Principles' (SDKP, EOS, SD&N, QCC), explicitly stating that this is a non-binding template for discussion with legal counsel.
 (2) Include a clear 'Parties' section defining the Licensor (Donald Paul Smith - Father Time) and the Licensee.
 (3) Define key terms relevant to the SDKP framework and its usage, such as 'Licensed Work' (referencing SDKP, EOS, SD&N, QCC), 'Commercial Use,' 'AI Affiliated Entity,' 'Full Integration,' 'Derivative Work,' 'Net Revenue,' 'Blockchain,' 'NFT,' 'TimeSeal,' and 'SolidifyEvent.'
