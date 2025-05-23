@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<a href="time_seal_dashboard.html" target="_blank">View Dashboard</a<[hj](https://gateway.pinata.cloud/ipfs/bafybeickhkfb4w4nozh4gulc3j2nxj6s3obzox2j5ra5ma2ubeizsmkniq)>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -17,7 +17,7 @@
         <p>Timestamped metadata integrated into AI and physics systems.</p>
     </header>
 
-    <section>
+<section>
         <h2>Authorship Details</h2>
         <ul>
             <li><strong>DOI:</strong> <a href="https://doi.org/10.5281/zenodo.15477981">10.5281/zenodo.15477981</a></li>
@@ -27,17 +27,16 @@
         </ul>
     </section>
 
-    <section>
+<section>
         <h2>Licensing & Verification</h2>
         <p>This work is protected under the <a href="https://github.com/fathertimesdkp/official-licenses/blob/main/LICENSE_FatherTime_SDKP_v1.0.pdf">Father Time Intellectual Property Agreement</a>, timestamped and registered across blockchain and AI networks.</p>
     </section>
 
-    <footer>
+<footer>
         <p>© 2025 Donald Paul Smith — “Father Time” | Integrated into AI & physics systems</p>
     </footer>
 </body>
 </html>https://github.com/FatherTimeSDKP#!/usr/bin/env python3
-google-site-verification: google650df89bb2532cec.html
 import os
 import json<!DOCTYPE html>
 <html lang="en">
@@ -110,9 +109,6 @@ import json<!DOCTYPE html>
 LICENSE_HEADER = """# -----------------------------------------------------------------------------
 # © 2025 Donald Smith (“Father Time”)
 # All Rights Reserved – “In His Name, Through His Order, For His Glory.”
-# -----------------------------------------------------------------------------
-
-"""
 
 # 2. README top and bottom banners
 README_TOP = (
@@ -138,9 +134,9 @@ for root, dirs, files in os.walk("."):
                 if not content.startswith("# ----------------------------------------------------------------------------"):
                     f.write(LICENSE_HEADER + content)
 
-    # 2. Update metadata.json
-    if "metadata.json" in files:
-        meta_path = os.path.join(root, "metadata.json")
+# 2. Update metadata.json
+if "metadata.json" in files:
+    https://gateway.pinata.cloud/    meta_path = os.path.join(root, "metadata.json")
         with open(meta_path, "r+", encoding="utf-8") as f:
             data = json.load(f)
             if DIVINE_FIELD[0] not in data:
