@@ -1,6 +1,6 @@
-Dr<a [Access Content via Father Time Usage Portal](https://portal.FatherTimeSDKP.blockchain/track?dest=YOUR_ENCODED_DESTINATION_URL&ref_id=YOUR_OPTIONAL_REFERRER_ID)
+Dr<a [Father Time Usage Portal](https://portal.FatherTimeSDKP.blockchain/track?dest=YOUR_ENCODED_DESTINATION_URL&ref_id=YOUR_OPTIONAL_REFERRER_ID)
 href="time_seal_dashboard.html" target="_blank">View Dashboard</a<[hj](https://gateway.pinata.cloud/ipfs/bafybeickhkfb4w4nozh4gulc3j2nxj6s3obzox2j5ra5ma2ubeizsmkniq)>
-<html lang="en">{
+<html lang="en">{https://ipfs.io/ipfs/bafybeickhkfb4w4nozh4gulc3j2nxj6s3obzox2j5ra5ma2ubeizsmkniq
   "name": "SDKP Genesis Authorship Token",
   "description": "Official timestamped authorship token for SDKP by Donald Paul Smith (Father Time)",
   "author": "Donald Paul Smith",
