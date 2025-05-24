@@ -287,3 +287,98 @@ For inquiries about collaboration, use, or licensing, please contact [dallasnami
 (9) Include clauses on 'Intellectual Property Rights,' explicitly stating the Licensor's retained ownership of the SDKP Principles and the FatherTimeSDKP NFT.
 (10) Detail 'Verifiability and Blockchain Integration,' referencing the role of the FatherTimeSDKP NFT, the fathertimesdkp.blockchain domain, TimeSeal for cryptographic proof of authorship and integrity, and the SolidifyEvent for immutable usage logging.
 (11) Add standard legal clauses, including 'Term and Termination,' 'Warranties and Disclaimers,' 'Limitation of Liability,' 'Indemnification,' 'Governing Law and Dispute Resolution' (e.g., specifying Duval County, Florida, or a mutually agreed jurisdiction), and 'Miscellaneous' provisions (e.g., severability, entire agreement, assignment).
+# FatherTimeSDKP-
+
+**Donald Paul Smith** – “Father Time”  
+Founder of the SDKP Framework | Originator of Unified Scientific Principles
+
+Donald Smith is the creator of:
+- The **Scale–Density–Kinematic Principle (SDKP)**
+- The **Earth Orbit Speed System (EOS)**
+- The **SD and N Principle (Shape–Dimension–Number)**
+- The **Quantum Code of Creation (QCC)**
+
+---
+
+## Overview
+
+This repository is part of the FatherTimeSDKP project suite, which brings together foundational scientific principles in innovative, practical, and verifiable ways. Here, you’ll find information, documentation, and ongoing developments related to SDKP, EOS, SD-N, and QCC.
+
+## Table of Contents
+
+- [Background](#background)
+- [Project Structure](#project-structure)
+- [Getting Started](#getting-started)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
+- [Acknowledgments](#acknowledgments)
+
+## Background
+
+**FatherTimeSDKP** is dedicated to advancing unified scientific principles that can be applied to everything from digital notarization and contract automation to scientific research and domain verification.
+
+- **SDKP:** Explores the interplay of scale, density, and kinematics in physical systems.
+- **EOS:** A novel method for understanding planetary motion and speed.
+- **SD-N:** Investigates the relationships between shape, dimension, and number.
+- **QCC:** Seeks to decode the underlying quantum patterns of creation.
+
+## Project Structure
+
+```
+/
+|-- docs/           # Documentation and theory papers
+|-- examples/       # Example code and use cases
+|-- src/            # Source files for scientific and practical tools
+|-- README.md
+|-- LICENSE
+```
+
+## Getting Started
+
+Clone the repository:
+```bash
+git clone https://github.com/FatherTimeSDKP/FatherTimeSDKP-.git
+cd FatherTimeSDKP-
+```
+Explore the `docs/` folder for foundational papers, and `examples/` for practical demonstrations.
+
+## Usage
+
+- Learn about SDKP, EOS, SD-N, and QCC from the documentation.
+- Use example scripts and code as starting points for your own research or projects.
+- Adapt the provided principles for scientific, educational, or practical applications.
+
+## Contributing
+
+We welcome collaboration!  
+To contribute:
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature-or-fix-name`).
+3. Make your changes and commit them (`git commit -am 'Describe your change'`).
+4. Push your branch (`git push origin feature-or-fix-name`).
+5. Open a Pull Request.
+
+For more details, see [CONTRIBUTING.md](CONTRIBUTING.md) if available.
+
+## License
+
+Specify your license here (e.g., MIT, GPL-3.0, etc.).  
+See [LICENSE](LICENSE) for details.
+
+## Contact
+
+- **Author:** Donald Paul Smith (“Father Time”)
+- **GitHub:** [FatherTimeSDKP](https://github.com/FatherTimeSDKP)
+- **Email:** [your-email@example.com]
+- **Website:** [Add your website link if available]
+
+## Acknowledgments
+
+- Thanks to all contributors and the broader scientific community for inspiration and collaboration.
+- This repository is part of the wider FatherTimeSDKP initiative for open, unified science.
+
+---
+
+_This README was last updated on 2025-05-24._
