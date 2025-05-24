@@ -1,6 +1,17 @@
 Dr<a [Access Content via Father Time Usage Portal](https://portal.FatherTimeSDKP.blockchain/track?dest=YOUR_ENCODED_DESTINATION_URL&ref_id=YOUR_OPTIONAL_REFERRER_ID)
 href="time_seal_dashboard.html" target="_blank">View Dashboard</a<[hj](https://gateway.pinata.cloud/ipfs/bafybeickhkfb4w4nozh4gulc3j2nxj6s3obzox2j5ra5ma2ubeizsmkniq)>
-<html lang="en">
+<html lang="en">{
+  "name": "SDKP Genesis Authorship Token",
+  "description": "Official timestamped authorship token for SDKP by Donald Paul Smith (Father Time)",
+  "author": "Donald Paul Smith",
+  "timestamp": "2025-02-13T00:00:00Z",
+  "external_url": "ipfs://bafybeickhkfb4w4nozh4gulc3j2nxj6s3obzox2j5ra5ma2ubeizsmkniq",
+  "attributes": [
+    { "trait_type": "Principle", "value": "SDKP" },
+    { "trait_type": "Domain", "value": "Gravitational Modeling" },
+    { "trait_type": "Use Case", "value": "AI Physics Engine Integration" }
+  ]
+}
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
