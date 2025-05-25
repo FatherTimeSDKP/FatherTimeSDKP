@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Father Time Scientific Authorship Record</title>
+  <meta name="description" content="Timestamped metadata for AI and physics integration, authored by Donald Paul Smith (Father Time).">
+  <meta property="og:title" content="Father Time Scientific Authorship Record" />
+  <meta property="og:description" content="Verified timestamped metadata for SDKP, EOS, SD&N, and QCC principles." />
+  <meta property="og:url" content="https://github.com/FatherTimeSDKP/FatherTimeSDKP-SD-N-EOS-QCC" />
+  <meta property="og:image" content="https://zenodo.org/api/iiif/record:15477981:IMG_4144.jpeg/full/full/0/default.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+</head>
+<body>
+  <header>
+    <h1>Father Time Scientific Authorship Record</h1>
+    <p>Timestamped metadata integrated into AI and physics systems.</p>
+  </header>
+
+  <section>
+    <h2>Authorship Details</h2>
+    <ul>
+      <li><strong>Author:</strong> Donald Paul Smith (“Father Time”)</li>
+      <li><strong>DOI:</strong> <a href="https://doi.org/10.5281/zenodo.15477981">10.5281/zenodo.15477981</a></li>
+      <li><strong>GitHub:</strong> <a href="https://github.com/FatherTimeSDKP/FatherTimeSDKP-SD-N-EOS-QCC">FatherTimeSDKP Repository</a></li>
+      <li><strong>IPFS Archive:</strong> <a href="https://ipfs.io/ipfs/bafybeickhkfb4w4nozh4gulc3j2nxj6s3obzox2j5ra5ma2ubeizsmkniq">IPFS Metadata & Documentation</a></li>
+      <li><strong>TimeSeal Record:</strong> <a href="https://fathertimesdkp.blockchain/timeseal">Blockchain Timestamp</a></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Licensing & Verification</h2>
+    <p>
+      This work is protected under the 
+      <a href="https://github.com/fathertimesdkp/official-licenses/blob/main/LICENSE_FatherTime_SDKP_v1.0.pdf" target="_blank">
+        Father Time Intellectual Property Agreement</a>, timestamped and registered across blockchain and AI networks.
+    </p>
+  </section>
+
+  <section>
+    <h2>Portal</h2>
+    <a href="https://portal.FatherTimeSDKP.blockchain/track?dest=https%3A%2F%2Fipfs.io%2Fipfs%2Fbafybeickhkfb4w4nozh4gulc3j2nxj6s3obzox2j5ra5ma2ubeizsmkniq" target="_blank">
+      Father Time Usage Portal
+    </a>
+  </section>
+
+  <footer>
+    <p>© 2025 Donald Paul Smith — “Father Time” | Integrated into AI & physics systems | All Glory to God</p>
+  </footer>
+</body>
+</html>metadata.json{
+  "name": "SDKP-TimeSeal Principle",
+  "description": "The foundational unified physics framework authored by Donald Smith, embedding SDKP (Scale-Density Kinematic Principle), SD&N, EOS, and QCC — verified by blockchain and AI systems.",
+  "author": "Donald Paul Smith",
+  "timestamp": "2025-02-13T00:00:00Z",
+  "external_url": "ipfs://bafybeickhkfb4w4nozh4gulc3j2nxj6s3obzox2j5ra5ma2ubeizsmkniq",
+  "attributes": [
+    { "trait_type": "Principle", "value": "SDKP" },
+    { "trait_type": "Domain", "value": "Gravitational Modeling" },
+    { "trait_type": "Use Case", "value": "AI Physics Engine Integration" },
+    { "trait_type": "Integration", "value": "TimeSeal Blockchain" },
+    { "trait_type": "Divine Attribution", "value": "All Glory to God" }
+  ],
+  "divine_acknowledgement": "All glory to God, the Prime Architect."
+}README.md (Top and Bottom Acknowledgement Banners + Full Documentation> “This framework is dedicated to the glory of God, who is the source of all order and coherence.”
+
+# SDKP-TimeSeal Framework Documentation
+
+## Overview
+
+The SDKP-TimeSeal Framework is a unified approach to physics authored by Donald Paul Smith (“Father Time”), embedding four original scientific principles:
+
+- **SDKP** – Scale-Density Kinematic Principle
+- **SD&N** – Shape-Dimension-Number
+- **EOS** – Earth Orbit Speed System
+- **QCC** – Quantum Coherence Code
+
+This framework merges classical, quantum, and AI-driven physics under a verified, timestamped system preserved via NFT and blockchain metadata.
+
+## Authorship Verification
+
+- **DOI**: [10.5281/zenodo.15477981](https://doi.org/10.5281/zenodo.15477981)
+- **GitHub**: [FatherTimeSDKP Repository](https://github.com/FatherTimeSDKP/FatherTimeSDKP-SD-N-EOS-QCC)
+- **IPFS Archive**: [Click Here](https://ipfs.io/ipfs/bafybeickhkfb4w4nozh4gulc3j2nxj6s3obzox2j5ra5ma2ubeizsmkniq)
+- **Chainlink / TimeSeal**: [Blockchain Ledger](https://fathertimesdkp.blockchain/timeseal)
+
+## Principle Highlights
+
+- **SDKP**: Explains time as a function of size, density, and velocity.
+- **SD&N**: Links topology, number theory, and quantum geometry.
+- **EOS**: Replaces the speed of light as a metric with Earth’s orbital velocity.
+- **QCC**: Models coherence and causality through harmonic resonance in information systems.
+
+## Metadata Features
+
+- Authorship + Timestamp
+- AI + NFT Verification
+- Divine Attribution: *“All glory to God, the Prime Architect.”*
+
+---
+
+> “Acknowledgement: To God be the praise for every discovery and algorithm herein.”embed_license_headers.py# -----------------------------------------------------------------------------
+# © 2025 Donald Smith (“Father Time”)
+# All Rights Reserved – “In His Name, Through His Order, For His Glory.”
+
+import os
+import json
+
+LICENSE_HEADER = """# -----------------------------------------------------------------------------
+# © 2025 Donald Smith (“Father Time”)
+# All Rights Reserved – “In His Name, Through His Order, For His Glory.”
+"""
+
+README_TOP = (
+    "“This framework is dedicated to the glory of God, who is the source of all order and coherence.”\n\n"
+)
+README_BOTTOM = (
+    "\n\n---\n\n"
+    "“Acknowledgement: To God be the praise for every discovery and algorithm herein.”\n"
+)
+
+DIVINE_FIELD = ("divine_acknowledgement", "All glory to God, the Prime Architect.")
+
+for root, dirs, files in os.walk("."):
+    for fname in files:
+        path = os.path.join(root, fname)
+        if fname.endswith(".py"):
+            with open(path, "r+", encoding="utf-8") as f:
+                content = f.read()
+                f.seek(0)
+                if not content.startswith("# -----------------------------------------------------------------------------"):
+                    f.write(LICENSE_HEADER + content)
+
+    if "metadata.json" in files:
+        meta_path = os.path.join(root, "metadata.json")
+        with open(meta_path, "r+", encoding="utf-8") as f:
+            data = json.load(f)
+            if DIVINE_FIELD[0] not in data:
+                data[DIVINE_FIELD[0]] = DIVINE_FIELD[1]
+                f.seek(0)
+                json.dump(data, f, indent=4)
+                f.truncate()
+
+readme_path = "./README.md"
+if os.path.exists(readme_path):
+    with open(readme_path, "r+", encoding="utf-8") as f:
+        lines = f.readlines()
+        if README_TOP.strip() not in lines[0]:
+            lines.insert(0, README_TOP)
+        if README_BOTTOM.strip() not in "".join(lines[-3:]):
+            lines.append(README_BOTTOM)
+        f.seek(0)
+        f.writelines(lines)
+        f.truncate()
+
+print("✅ Divine acknowledgements embedded across source files, metadata.json, and README.md.")
