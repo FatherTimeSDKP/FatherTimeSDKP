@@ -492,3 +492,147 @@ function computeEOSFactor(uint256 v) public pure returns (uint256) {
     require(vEarthOrbit > 0, "Invalid Earth orbit speed");
     return (v * 1e18) / vEarthOrbit;  // Scaled by 1e18 for fixed-point precision
 }
+# SD&N: Shape–Dimension–Number — Detailed Explanation & Physical Framework
+
+---
+
+## 1. Core Idea
+
+The SD&N principle encodes fundamental particles and systems through three intrinsic parameters:
+
+- **Shape (S):** The topological or geometric form of the particle or system, often expressed as knots, braids, or dimensional embeddings.
+- **Dimension (D):** The spatial or fractal dimensionality associated with the particle or its effective space.
+- **Number (N):** A discrete numeric identifier representing quantized particle states, charges, or count of fundamental subunits.
+
+Together, SD&N forms a **vector space** encoding particle identity and properties in a geometric-numeric framework.
+
+---
+
+## 2. Mathematical Framework
+
+### 2.1 Parameter Definitions
+
+- \( S \in \mathcal{S} \) — Shape space: often modeled via knot theory, braid groups, or algebraic topology. Examples: trefoil knot (simplest nontrivial knot), unknots, torus knots.
+- \( D \in \mathbb{R}^+ \) — Effective dimension: integer or fractional dimension (fractal), e.g., 1D string, 2D membrane, 3D volume, or fractal dimension \( D_f \).
+- \( N \in \mathbb{Z}^+ \) — Number: count of fundamental constituents, e.g., quarks in a baryon, or number of topological crossings.
+
+### 2.2 SD&N Vector Space
+
+Represented as a tuple:
+
+\[
+\mathbf{v} = (N, D, S)
+\]
+
+where \( S \) can be encoded as a vector or scalar invariant from knot theory (e.g., knot polynomial degree, crossing number).
+
+---
+
+### 2.3 Mass and Property Scaling
+
+Mass \( m \) or other physical properties are computed as a function \( f \) over SD&N parameters, for example:
+
+\[
+m = \gamma \cdot (N \cdot S)^{\alpha} \cdot D^{\beta}
+\]
+
+Where:  
+- \( \alpha, \beta, \gamma \) are empirically or theoretically derived scaling exponents/constants.  
+- \( S \) is quantified by an invariant such as the minimal crossing number or a topological invariant polynomial evaluation.
+
+---
+
+## 3. Physical Correspondences
+
+- **Particle Physics:** Quarks and leptons correspond to specific shapes \( S \) (e.g., trefoil knot for electrons), dimensions \( D \) reflecting confinement or effective space, and number \( N \) representing charge or generation count.  
+- **Topology in Quantum Fields:** Knotted field configurations in QFT (e.g., knotted flux tubes, solitons) model particle stability and quantum numbers.  
+- **Fractal Dimensions:** Effective fractal dimensionality of particle wavefunctions or confinement volumes influence mass scaling and interaction cross sections.  
+- **Discrete Quantum Numbers:** Charge, color, flavor are encapsulated by \( N \).
+
+---
+
+## 4. Examples & Usage
+
+### Example 1: Electron
+
+- \( N = 1 \) (single fundamental charge unit)  
+- \( D = 1 \) (modeled as 1D closed loop or string)  
+- \( S = 3 \) (trefoil knot crossing number)
+
+Calculate mass approximation:
+
+\[
+m_e = \gamma \times (1 \times 3)^\alpha \times 1^\beta = \gamma \times 3^\alpha
+\]
+
+With \( \gamma, \alpha \) fitted to known electron mass scale.
+
+---
+
+### Example 2: Proton
+
+- \( N = 3 \) (three quarks)  
+- \( D = 3 \) (3D spatial structure)  
+- \( S = 6 \) (composite knot complexity, crossing number)
+
+Mass:
+
+\[
+m_p = \gamma \times (3 \times 6)^\alpha \times 3^\beta = \gamma \times 18^\alpha \times 3^\beta
+\]
+
+---
+
+## 5. Instructions for Use
+
+- Identify the **Shape** \( S \) of your particle/system by selecting or calculating a topological invariant (e.g., minimal crossing number).  
+- Determine effective **Dimension** \( D \), integer or fractal, describing spatial embedding or confinement.  
+- Assign **Number** \( N \) based on particle constituents or quantum numbers.  
+- Use the mass scaling function with calibrated constants \( \alpha, \beta, \gamma \).  
+- For composite systems, combine SD&N vectors additively or via tensor products depending on interaction context.
+
+---
+
+## 6. Extensions and Advanced Notes
+
+- Explore higher-dimensional knots or braids to encode exotic particles or states (e.g., 4D knots, linkages).  
+- Incorporate fractal dimensionality from wavefunction probability densities or holographic principles.  
+- Couple SD&N with SDKP density scaling and EOS velocity factors for multi-scale modeling.  
+- Link with QCC causal compression flows for topological quantum computation.
+
+---
+
+## 7. Solidity Snippet (SDNLib.sol)
+
+```solidity
+pragma solidity ^0.8.0;
+
+contract SDNLib {
+    // Scaling exponents and gamma constant (fixed-point with 18 decimals)
+    uint256 public alpha = 18e17;  // 1.8 in 18 decimals
+    uint256 public beta = 10e17;   // 1.0
+    uint256 public gamma = 50e17;  // 5.0
+
+    // Calculate mass scaling from SDN parameters
+    // S: shape invariant (e.g., crossing number), N: number, D: dimension
+    // All inputs scaled as uint256 with 18 decimals fixed-point (for decimals support)
+    function computeMass(uint256 N, uint256 D, uint256 S) public view returns (uint256) {
+        // Using approximate power function: (N * S)^alpha * D^beta * gamma
+        uint256 NS = (N * S) / 1e18;
+        uint256 NS_pow = pow(NS, alpha);
+        uint256 D_pow = pow(D, beta);
+        uint256 mass = (gamma * NS_pow / 1e18) * D_pow / 1e18;
+        return mass;
+    }
+
+    // Power function for fixed-point exponentiation (simplified)
+    // For demonstration only: implement proper fixed-point pow for real use
+    function pow(uint256 base, uint256 exp) internal pure returns (uint256) {
+        // Very simplified integer power for demonstration
+        uint256 result = 1e18;
+        for(uint256 i = 0; i < exp / 1e18; i++) {
+            result = (result * base) / 1e18;
+        }
+        return result;
+    }
+}
