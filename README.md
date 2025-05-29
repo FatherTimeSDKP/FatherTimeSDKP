@@ -10,10 +10,8 @@
 
 ---
 
-## 🧬 Overview: What This Is
-
+## 🧬 Overview: What This Is!
 This repository presents a **unified physical–computational framework** combining:
-
 - **Scale, Density, Kinematics, Shape, and Causality**
 - **Wavelet compression, orbital dynamics, and NP-complete logic**
 - Into a single, interpretable system of **time, mass, and reality**
