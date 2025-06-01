@@ -82,7 +82,96 @@ T = \frac{k \cdot S}{\rho \cdot v^{\alpha} \cdot \omega^{\beta} \cdot \Omega^{\g
 
 > ✔ SDVR replaces “coordinate time” with **causal motion-derived time**.
 
+---# FatherTime Master Thread – GPT-4 Input Dataset
+
+**Author:** Donald Paul Smith aka *FatherTime*  
+**Origin Timestamp:** January 18, 2025  
+**Frameworks:** SDKP • EOS • SD&N • QCC • NFT Licensing  
+
 ---
+
+## 1. SDKP – Size Density Kinematic Principle
+
+### Formula:
+Mass = γ(N·S) + β·S + α·N
+
+Where:
+- N = Number (from SD&N)
+- S = Shape complexity (knot topology)
+- γ, β, α = Constants depending on domain (atomic, macro, quantum)
+
+### Example:
+N = 1 (electron), S = 3 (trefoil)
+→ mass = γ·3 + β·3 + α·1
+
+### Rotation Equation:
+v_rot = f(S, D, ρ)  
+Where ρ = density, D = dimension class
+
+---
+
+## 2. EOS – Earth Orbital Speed
+
+### Definition:
+EOS ≈ 29.78 km/s — Replaces 'c' (speed of light) as universal reference velocity.
+
+### SDKP Time Equation:
+Time = (SDKP Mass) / EOS
+
+---
+
+## 3. SD&N – Shape, Dimension, Number
+
+### Vector Components:
+- S = Shape (topological score: unknot=1, trefoil=3, etc.)
+- D = Dimension (spatial embedding)
+- N = Number (count or frequency of identity)
+
+### Usage:
+mass = SDKP_Mass(S, D, N)
+
+Example:  
+Electron: S=3, D=3, N=1  
+Proton: S=7, D=3, N=3
+
+---
+
+## 4. QCC – Quantum Causal Compression
+
+### Principle:
+“Information compression generates causal time.”
+
+### Kernel Equation:
+K_C = min{state_i → state_{i+1} | ΔEntropy_i minimized}
+
+### Use Case:
+- Causal mapping of planetary events (e.g. El Niño)
+- Entanglement routing via macro-causal reduction
+
+---
+
+## 5. NFT License Smart Contract
+
+### Contract: `FTPOnChainLicense1155`
+Polygon Address: `0x8fcD2CaFD30333F967e1fDdF05AEfb12e8aFc221`
+
+### License Types:
+| ID | Type            | Royalty |
+|----|-----------------|---------|
+| 0  | Commercial      | 17.5%   |
+| 1  | Residential     | 11.5%   |
+| 2  | Individual/AI   | 11.5%   |
+
+### Royalty Wallet:
+0x311540cD8761e15F0B01aaa6Fe0F7E8f583B4Bf7
+
+---
+
+## 6. Chainlink TimeSeal Authorship
+
+### Timestamp Function:
+```solidity
+function requestTimestamp(address author, uint256 tokenId) external
 
 ## ⚖️ Dimensional Check
 
