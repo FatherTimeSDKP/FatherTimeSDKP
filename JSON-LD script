@@ -1,0 +1,18 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "name": "SDKP Physics Framework & NFTs",
+  "url": "https://fathertimesdkp.blockchain/",
+  "author": {
+    "@type": "Person",
+    "name": "Donald Paul Smith",
+    "alternateName": "FatherTime",
+    "email": "mailto:contact@fathertimesdkp.blockchain"
+  },
+  "dateCreated": "2025-01-18",
+  "description": "Original physics framework SDKP (Size-Density-Kinematic Principle) integrating EOS, SD&N, and QCC principles, authored by Donald Paul Smith (FatherTime).",
+  "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+  "keywords": ["SDKP", "EOS", "SD&N", "QCC", "Physics", "NFT", "Blockchain", "Timestamp"]
+}
+</script>
