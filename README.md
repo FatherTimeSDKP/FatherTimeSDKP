@@ -721,5 +721,124 @@ contract SDNLib {
             result = (result * base) / 1e18;
         }
         return result;
-    }
+    }/lib/sdkp.ts
+/lib/contract.ts
+/lib/ipfs.ts
+/lib/timeseal.ts
+/components/ResonanceGraph.tsx
+/pages/mint.tsx
+/vercel.json
+/.env.example
+/README.md
+// Vibrational + SDKP + QCC utility functions
+
+export function psi(theta: number, phi: number, A = 1, B = 1) {
+  return A * Math.sin(6 * theta) + B * Math.cos(7 * phi)
+}
+
+export function validateEntanglement(theta: number, phi: number, threshold = 1.95) {
+  return psi(theta, phi) >= threshold
+}
+
+export function calculateSDKPMass(rho = 1.2, size = 0.85, alpha = 2.0, beta = 1.5, gamma = 1.0) {
+  return gamma * rho ** alpha * size ** beta
+}
+
+export function generateQCCHash(theta: number, phi: number, resonance: number, mass: number) {
+  const str = `${theta.toFixed(6)}:${phi.toFixed(6)}:${resonance.toFixed(6)}:${mass.toFixed(6)}`
+  return ethers.utils.sha256(ethers.utils.toUtf8Bytes(str))
+}import { ethers } from "ethers"
+
+export const CONTRACT_ADDRESS = process.env.NEXT_PUBLIC_CONTRACT_ADDRESS!
+export const provider = new ethers.providers.JsonRpcProvider(process.env.NEXT_PUBLIC_RPC_URL)
+export const contract = new ethers.Contract(CONTRACT_ADDRESS, ABI, provider)
+export function getSigner() {
+  return provider.getSigner()
+}
+
+export async function mintToken(tokenId: number, metadataUri: string) {
+  const signer = getSigner()
+  const connected = contract.connect(signer)
+  return connected.mint(signer.getAddress(), tokenId, 1, metadataUri)
+}import { NFTStorage, File } from "nft.storage"
+
+const client = new NFTStorage({ token: process.env.NFT_STORAGE_API_KEY! })
+
+export async function uploadMetadata(metadata: object) {
+  const blob = new Blob([JSON.stringify(metadata)], { type: "application/json" })
+  return client.storeBlob(blob)
+}import axios from "axios"
+
+export async function timeSeal(hash: string) {
+  await axios.post("/api/timeSeal", { hash })
+}import { useEffect, useRef } from "react"
+import Chart from "chart.js"
+
+export default function ResonanceGraph({ theta, phi }) {
+  const canvasRef = useRef<HTMLCanvasElement>()
+
+  useEffect(() => {
+    const ctx = canvasRef.current.getContext("2d")
+    // Render psi over θ/φ...
+  }, [theta, phi])
+
+  return <canvas ref={canvasRef} />
+}"use client"
+import { useState } from "react"
+import { psi, calculateSDKPMass, generateQCCHash, validateEntanglement } from "../lib/sdkp"
+import { uploadMetadata } from "../lib/ipfs"
+import { mintToken } from "../lib/contract"
+import ResonanceGraph from "../components/ResonanceGraph"
+
+export default function MintPage() {
+  const [theta, setTheta] = useState(0)
+  const [phi, setPhi] = useState(0)
+
+  const resonance = psi(theta, phi)
+  const entangled = validateEntanglement(theta, phi)
+  const mass = calculateSDKPMass()
+  const qcc = generateQCCHash(theta, phi, resonance, mass)
+
+  async function handleMint() {
+    const cid = await uploadMetadata({ theta, phi, resonance, mass, qcc })
+    const tx = await mintToken(0, `ipfs://${cid}`)
+    console.log(tx)
+  }
+
+  return (
+    <div>
+      <ResonanceGraph theta={theta} phi={phi} />
+      <input type="range" min="0" max={2 * Math.PI} onChange={e => setTheta(parseFloat(e.target.value))} />
+      <input type="range" min="0" max={2 * Math.PI} onChange={e => setPhi(parseFloat(e.target.value))} />
+      <p>Resonance: {resonance.toFixed(4)}</p>
+      <p>Mass: {mass.toFixed(4)}</p>
+      <p>QCC Hash: {qcc}</p>
+      <button disabled={!entangled} onClick={handleMint}>
+        {entangled ? "🔐 Mint Entangled NFT" : "Not Entangled YET"}
+      </button>
+    </div>
+  )
+}{
+  "version": 2,
+  "builds": [{ "src": "next.config.js", "use": "@vercel/next" }],
+  "env": [
+    "NEXT_PUBLIC_CONTRACT_ADDRESS",
+    "NEXT_PUBLIC_RPC_URL",
+    "NFT_STORAGE_API_KEY"
+  ]
+}NEXT_PUBLIC_CONTRACT_ADDRESS=0xYourContractAddress
+NEXT_PUBLIC_RPC_URL=https://polygon-rpc.com
+NFT_STORAGE_API_KEY=YOUR_API_KEY
+# FatherTimeSDKP Entanglement dApp
+
+Live minting using vibrational field entanglement:
+- psi(θ,φ) = sin(6θ) + cos(7φ)
+- Requires ψ ≥ 1.95 to mint
+- SDKP mass, QCC hash, SD&N are hashed into metadata
+- Uses IPFS, Polygon, Chainlink TimeSeal
+
+To run:npm install
+cp .env.example .env
+npm run dev
+
 }
