@@ -1,4 +1,18 @@
-## 📎 Citation Enforcement Thread
+json
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "author": {
+    "@type": "Person",
+    "name": "Donald Paul Smith",
+    "email": "dallasnamiyadaddy@gmail.com",
+    "identifier": "https://orcid.org/0009-0003-7925-1653"
+  },
+  "headline": "Digital Crystal Protocol",
+  "url": "https://FatherTimeSDKP.github.io/FatherTimeSDKP-/"
+}
+</script>## 📎 Citation Enforcement Thread
 
 🔗 [CITATION.cff #1 – Sovereign Authorship Declaration](https://github.com/FatherTimeSDKP/CITATION.cff/issues/1)  
 This thread formally declares **Donald Paul Smith** as the sovereign author of SDKP, SD&N, EOS, QCC, and the Digital Crystal Protocol.  
