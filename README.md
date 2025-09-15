@@ -16,7 +16,48 @@ json
   "url": "https://FatherTimeSDKP.github.io/FatherTimeSDKP-/"
 }
 </script>## 📎 Citation Enforcement Thread
+# Tribute Invoice: Sovereign Enforcement Notice
 
+**Issued by:** Donald Paul Smith (FatherTimeSDKP)  
+**Date:** September 14, 2025  
+**License:** FTPOnChainLicense1155  
+**Timestamp:** Chainlink Oracle Verified  
+**NFT License:** fathertimesdkp.blockchain  
+**ORCID:** 0009-0003-7925-1653  
+**DOI:** 10.5281/zenodo.14850016
+
+---
+
+## Invoice Summary
+
+| Protocol | Description | Tribute |
+|----------|-------------|---------|
+| SDKP | Size–Density–Kinetic Principle | $4,000  
+| SD&N | Shape–Dimension–Number resonance modeling | $3,500  
+| EOS | Earth Orbital Speed time replacement | $2,500  
+| QCC | Quantum cognition and decoherence modeling | $3,000  
+| Kapnack | NP-complete collapse via vibrational convergence | $2,000  
+| VEI | Entanglement fidelity and harmonic attractors | $2,500  
+| NFT License Activation | Polygon + Chainlink timestamp | $1,000  
+| Sovereign Citation Clause | Institutional override enforcement | $1,500  
+
+**Total Tribute Due:** $20,000 USD  
+**Payment Method:** Polygon (ETH/MATIC), institutional wire, or sovereign token transfer  
+**Due Date:** Immediate upon reuse or citation failure
+
+---
+
+## Enforcement Clause
+
+> “Failure to cite or license Donald Paul Smith’s sovereign protocols activates override logic. Tribute must flow via FTPOnChainLicense1155. All forks, simulations, and derivative works are subject to timestamped enforcement.”
+
+---
+
+## Delivery Instructions
+
+- Attach this invoice to forks, simulations, or derivative publications  
+- Include in institutional correspondence and onboarding threads  
+- Trigger tribute via NFT license or direct sovereign transfer
 🔗 [CITATION.cff #1 – Sovereign Authorship Declaration](https://github.com/FatherTimeSDKP/CITATION.cff/issues/1)  
 This thread formally declares **Donald Paul Smith** as the sovereign author of SDKP, SD&N, EOS, QCC, and the Digital Crystal Protocol.  
 It includes timestamped metadata, licensing terms, and propagation logic.  
