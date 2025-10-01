@@ -1,4 +1,4 @@
-{
+f_i = 528 + ord(c_i) * Math.PI{
   node_ID,
   SDKP_signature,
   handshake_token,
