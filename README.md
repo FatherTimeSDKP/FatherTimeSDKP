@@ -1,3 +1,79 @@
+/**
+ * DCP_Geometry_Solver.js
+ * Author: Donald Paul Smith (FatherTimeSDKP)
+ * Purpose: Defines core VFE mathematical functions for QCC stability and 7D-12D geometry transitions.
+ * Fix: Integrates ancient mathematical constants (Phi, Pi) for Harmonic Resonance.
+ */
+
+// Global DCP Mathematical Constants for QCC Integrity
+const PHI = 1.6180339887; // The Golden Ratio (Optimal Harmonic Resonance / Delta Entropy Convergence)
+const PI = 3.1415926535;  // The Rotational Constant (Integral to CWT/SDVR 'Rotation' parameter)
+const HARMONIC_BASE = 528; // The Vibrational Seed (Reference frequency for temporal coherence)
+
+// --- 1. QCC Shape Mapping ---
+
+/**
+ * Maps a named geometry (Shape) to its corresponding QCC state vector.
+ * @param {string} shape - The VFE shape (e.g., Sevenogon, Oneagon, Startagon).
+ * @param {number} dimension - The current operational dimension (7, 8, 12, etc.).
+ * @returns {object} A geometric state vector (size, density, kinetic_coefficient).
+ */
+const getGeometryStateVector = (shape, dimension) => {
+    // This is the implementation of the SDKP principle derived from shape and dimension
+    switch (shape.toLowerCase()) {
+        case 'oneagon':
+            // The simplest stable 7D form, used for QCC initialization
+            return { size: 1, density: 1, kinetic_coefficient: 1.0 };
+        case 'sevenogon':
+            // 7D Geometry, critical for CWT phase calculations
+            return { size: 7, density: 7 * PHI, kinetic_coefficient: 7 / dimension };
+        case 'octagonalon':
+            // 8D Geometry, critical for entanglement calculations
+            return { size: 8, density: 8 * (PI / PHI), kinetic_coefficient: 8 / dimension };
+        case 'startagon':
+             // 12D Geometry, highest known coherence state in the DCP
+            return { size: 12, density: 12 * PI, kinetic_coefficient: 12 / dimension };
+        default:
+            throw new Error(`Invalid VFE Shape: ${shape}. QCC requires a defined geometry.`);
+    }
+};
+
+// --- 2. VFE Calculation Functions ---
+
+/**
+ * Calculates the optimal Delta Entropy Convergence Rate (a QCC stability measure).
+ * The rate is scaled by the Golden Ratio (PHI) to ensure harmonic stability.
+ * @param {object} stateVector - The output from getGeometryStateVector.
+ * @returns {number} The required Delta Entropy (dE) per chronon wake.
+ */
+const calculateDeltaEntropyConvergence = (stateVector) => {
+    // Formula ensures dE approaches PHI for optimal, stable QCC operation.
+    const entropy_base = stateVector.density * stateVector.kinetic_coefficient;
+    return (entropy_base / stateVector.size) * PHI; 
+};
+
+/**
+ * Calculates the rotational component of Chronon Wake Time (CWT) using SDVR.
+ * Integrates PI into the velocity and rotation parameters.
+ * @param {number} velocity - The local velocity (v).
+ * @param {number} rotation - The local rotational energy (omega).
+ * @returns {number} The PI-scaled CWT rotational factor.
+ */
+const calculateCWTRotationalFactor = (velocity, rotation) => {
+    // CWT/SDVR law: Time (T) is emergent from Rotation, scaled by PI.
+    const density_term = (velocity * PI) / rotation;
+    return Math.log(density_term) * HARMONIC_BASE; // Log ensures stable scaling.
+};
+
+// --- Exports ---
+export { 
+    PHI, 
+    PI, 
+    HARMONIC_BASE,
+    getGeometryStateVector, 
+    calculateDeltaEntropyConvergence,
+    calculateCWTRotationalFactor 
+};
 # 🌌 The Digital Crystal Protocol (DCP): Paradigm Shift Activation
 
 ## OFFICIAL DECLARATION AND MANIFESTO
