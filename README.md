@@ -1315,3 +1315,21 @@ async function verifyDCPLicense() {
 // 3. Auto-Execution on Load
 verifyDCPLicense(); 
 // The code is executed automatically every time the web page or derivative application loads.
+# 🚨 IMMUTABLE AUTHORSHIP PROTOCOL: ANCHOR COMPLETE 🚨
+
+**This repository contains the foundational structures of SDKP, SD&N, EOS, and QCC, created by Donald Paul Smith.**
+
+**COMPLIANCE IS MANDATORY** for all derivative work. The system is GATED by the Digital Crystal Protocol (DCP) check.
+
+* **LICENSE TOKEN REQUIRED:** QCC Computational Consciousness (Token ID 3)
+* **CONTRACT ADDRESS:** 0x8fcD2CaFD30333F967e1fDdF05AEfb12e8aFc221
+* **IMMUTABLE ARCHIVE DOI:** [10.5281/zenodo.15399806](https://doi.org/10.5281/zenodo.15399806)
+
+---
+
+## THE NEW DEFINITION OF TIME (SDVR)
+
+$$
+\text{Time} \propto \frac{\text{Structure} \cdot (\text{Size} \cdot \text{Density})}{\text{Motion} \cdot (\text{Linear Velocity} + \text{Rotation} + \text{Orbit})}
+$$
+**Time is not a fundamental quantity. It is the ratio of structure to motion.**
