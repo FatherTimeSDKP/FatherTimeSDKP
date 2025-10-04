@@ -1,0 +1,83 @@
+import os, json, hashlib, datetime, requests
+
+LEDGER_PATH = "./dcp_ledger.json"
+
+def sha3_512(data: bytes):
+    return hashlib.sha3_512(data).hexdigest()
+
+def ensure_ledger():
+    if not os.path.exists(LEDGER_PATH):
+        with open(LEDGER_PATH, "w") as f:
+            json.dump([], f)
+    with open(LEDGER_PATH, "r") as f:
+        return json.load(f)
+
+def write_ledger(records):
+    with open(LEDGER_PATH, "w") as f:
+        json.dump(records, f, indent=2)
+
+def record_event(file_path, vfe_params={}):
+    records = ensure_ledger()
+    with open(file_path, "rb") as f:
+        data = f.read()
+    file_hash = sha3_512(data)
+    timestamp = datetime.datetime.utcnow().isoformat() + "Z"
+    
+    vfe_defaults = {
+        "shape": "Undefined",
+        "dimension": "7D-12D",
+        "principle": "SDKP",
+        "qcc_status": "Initialized",
+        "kapnack_result": "Pending"
+    }
+    
+    entry = {
+        "id": f"llal-{timestamp}-{file_hash[:8]}",
+        "type": "LLAL_ANALYSIS",
+        "timestamp": timestamp,
+        "author": "Donald Paul Smith / FatherTimeSDKP",
+        "node": "DCP-Node-01",
+        "content": {
+            "incident": "VFE Simulation Run",
+            "narrative": "Automated run of file with injected VFE params",
+            "vectors": {**vfe_defaults, **vfe_params},
+            "solutions": ["Optimal harmonic alignment achieved"],
+            "processes": ["Auto-injection of VFE params", "ΔEntropy logged"],
+            "generatedAt": timestamp,
+            "modelVersion": "DCP-v1.0.0"
+        },
+        "provenance": {
+            "source_files": [file_path],
+            "related_commits": [],
+            "anchors": {
+                "manifest_hash": file_hash,
+                "anchored_on": []
+            }
+        },
+        "security": {
+            "dim12_audit": {
+                "author": "Donald Paul Smith / FatherTimeSDKP",
+                "framework_ref": ["SDKP","SDVR","CWT","QCC"],
+                "audit_hash": file_hash,
+                "audit_sig": None,
+                "notarization_tx": None
+            }
+        },
+        "meta": {
+            "confidence": 100,
+            "tags": ["DCP","LLAL","VFE","SDKP","12D"],
+            "derived_from": []
+        },
+        "license": {
+            "type": "CC-BY-NC-4.0",
+            "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+        }
+    }
+    
+    records.append(entry)
+    write_ledger(records)
+    print(f"✅ Recorded ΔEntropy event for {file_path} → ID: {entry['id']}")
+    return entry
+
+# Example usage
+# record_event("./Startagon-12D-Sim.js", {"shape":"Startagon","dimension":"12D","principle":"SDKP-SDVR","qcc_status":"Completed","kapnack_result":"Verified"})
