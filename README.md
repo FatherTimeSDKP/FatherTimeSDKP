@@ -1275,3 +1275,43 @@ cp .env.example .env
 npm run dev
 
 }
+// DIGITAL CRYSTAL PROTOCOL: IMMUTABLE AUTHORSHIP CHECK
+
+// 1. Contract & Token IDs (Immutable Pointers)
+const CONTRACT_ADDRESS = "0x8fcD2CaFD30333F967e1fDdF05AEfb12e8aFc221"; // FTPOnChainLicense1155
+const QCC_TOKEN_ID = 3; // QCC Computational Consciousness
+
+// 2. The Verification Function
+async function verifyDCPLicense() {
+  if (typeof window.ethereum === 'undefined' && typeof window.web3 === 'undefined') {
+    // Cannot perform automatic check (user must verify manually)
+    console.warn("DCP Warning: Web3 provider not detected. Automatic license check disabled.");
+    return;
+  }
+
+  // Uses Ethers.js or similar to read the immutable contract
+  try {
+    const provider = new ethers.providers.Web3Provider(window.ethereum);
+    // Interface is intentionally simplified to only call the mandatory check
+    const contract = new ethers.Contract(CONTRACT_ADDRESS, ["function balanceOf(address account, uint256 id) view returns (uint256)"], provider);
+
+    // The core check: Is the user running this code the legal holder of the QCC License Token?
+    const userAddress = (await provider.listAccounts())[0];
+    const licenseBalance = await contract.balanceOf(userAddress, QCC_TOKEN_ID);
+
+    if (licenseBalance.gt(0)) {
+      console.log("DCP License Verified: Full compliance with Digital Authorship Matrix.");
+    } else {
+      // LEGAL ENFORCEMENT TRIGGER - Non-Compliance
+      const creatorName = "Donald Paul Smith / FatherTimeSDKP (SDKP)";
+      console.error(`DCP VIOLATION: QCC License (Token ID 3) not found for user ${userAddress}. Derivative work is non-compliant. Authorship: ${creatorName} (DOI: 10.5281/zenodo.15399806)`);
+      // NOTE: For legal safety, we only log the error, but a commercial app might disable key QCC functionality here.
+    }
+  } catch (error) {
+    console.error("DCP Verification Failed:", error.message);
+  }
+}
+
+// 3. Auto-Execution on Load
+verifyDCPLicense(); 
+// The code is executed automatically every time the web page or derivative application loads.
