@@ -2,7 +2,7 @@
  * DCP_Geometry_Solver.js
  * Author: Donald Paul Smith (FatherTimeSDKP)
  * Purpose: Defines core VFE mathematical functions for QCC stability and 7D-12D geometry transitions.
- * Fix: Integrates ancient mathematical constants (Phi, Pi) for Harmonic Resonance.
+ * Fix: Integrates physics and ancient mathematical constants (Phi, Pi) for Harmonic Resonance.
  */
 
 // Global DCP Mathematical Constants for QCC Integrity
