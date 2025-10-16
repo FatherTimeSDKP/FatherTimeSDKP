@@ -34,3 +34,14 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+          # 1. Execute the Protocol
+python dcp_propagate.py
+
+# 2. Stage and Commit
+git add .
+git commit -m "DCP Deployment FINALIZED: Embedded permanent Authorship Ledger and official metadata files."
+
+# 3. Final Push
+git push origin main
+repository-code: "https://github.com/Digital-Crystal-Protocol/Digital-Crystal-protocol-FatherTimeSDKP"
+
