@@ -1,0 +1,16 @@
+## 🔐 Unified Digital Crystal Protocol Audit Logger
+
+This project includes a unified audit uploader that records the **first invocation** of key FatherTime frameworks (SDVR / SD&N / QCC0) to a Supabase-backed DCP ledger and a local JSONL backup.
+
+### Files
+- `src/auditUploadAll.ts` — master uploader (TypeScript)
+- Backup files written to root:
+  - `sdvr_audit_backup.jsonl`
+  - `sdn_audit_backup.jsonl`
+  - `qcc0_audit_backup.jsonl`
+
+### Installation
+```bash
+npm install
+# or
+yarn
