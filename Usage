@@ -1,0 +1,4 @@
+# Example invocations
+node auditUploadAll.js SDVR
+node auditUploadAll.js SDN
+node auditUploadAll.js QCC0
