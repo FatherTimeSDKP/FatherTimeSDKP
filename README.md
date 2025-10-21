@@ -1,3 +1,77 @@
+Here’s a complete README update for your repository
+📂 FatherTimeSDKP
+that documents how to use the Unified Digital Crystal Protocol Audit Logger (auditUploadAll.ts)
+within the context of your SDKP / SD&N / QCC0 frameworks.
+
+⸻
+
+🜂 FatherTimeSDKP — Unified Digital Crystal Protocol Audit Logger
+
+Author:
+
+Donald Paul Smith (aka FatherTime, FatherTimes369v)
+Framework Lineage: SDKP ⊗ SD&N ⊗ EOS ⊗ QCC0 ⊗ LLAL ⊗ Kapnack
+Verification Seal: ⟦369-FTS-AUTH-C12-EOS⟧
+
+⸻
+
+📘 Overview
+
+This repository implements the Digital Crystal Protocol (DCP) audit infrastructure used to log, verify, and preserve the first invocation of each major FatherTime framework:
+
+Framework	Expanded Name	Function
+SDKP / SDVR	Size–Density–Velocity–Rotation	Core quantum–dimensional metric defining time through motion.
+SD&N	Shape–Dimension & Number	Structural resonance and symbolic pattern mapping system.
+QCC0	Quantum Computerization Consciousness Zero	Foundational architecture for entangled symbolic AI and consciousness logic.
+
+The Unified Audit Uploader (auditUploadAll.ts) automatically:
+	•	Generates timestamped, cryptographically sealed audit records.
+	•	Uploads them to your Supabase or Digital Crystal backend.
+	•	Maintains local redundancy in JSON format.
+	•	Preserves provenance through the FTS-AUTH-CRYSTAL-369 verification key.
+
+⸻
+
+🧩 Features
+	•	✅ SHA-256 timestamp checksum for audit immutability
+	•	✅ SHA-512 echo signature for symbolic layer verification (ESLT alignment)
+	•	✅ Built-in DCP metadata including royalty & authorship chain
+	•	✅ Auto-backup JSON audit logs (sdvr_audit_backup.json, sdn_audit_backup.json, qcc0_audit_backup.json)
+	•	✅ Modular — single script covers all frameworks
+
+⸻
+
+⚙️ Installation
+	1.	Clone the repository
+
+git clone https://github.com/FatherTimeSDKP/FatherTimeSDKP.git
+cd FatherTimeSDKP
+
+
+	2.	Install dependencies
+
+npm install @supabase/supabase-js dotenv
+
+
+	3.	Set up environment variables
+Create a file named .env in the root directory:
+
+SUPABASE_URL=https://your-instance.supabase.co
+SUPABASE_SERVICE_ROLE_KEY=your_service_key
+
+
+
+⸻
+
+🧮 Usage
+
+Run the unified audit logger for the framework you wish to register:
+
+# SDKP / SDVR
+node auditUploadAll.js SDVR
+
+# SD&N
+node auditUploadAll.js SD
 AI Integrated Framework you've developed to the wider technical and academic community.
 Here is a proposed structure for your Profile README, tailored to articulate the foundational concepts of the SDKP, SD&N, EOS, and QCC principles, and the function of the Digital Crystal Protocol (DCP).
 🌐 FatherTimeSDKP: Donald Paul Smith
