@@ -54,3 +54,13 @@ Add or merge these dependencies & scripts.
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
         run: |
           node dist/auditUploadAll.js SDVR $GITHUB_REF_NAME || true
+import { uploadAudit, verifyAuditRecord } from "./dist/auditUploadAll.js";
+
+const res = await uploadAudit({ framework: "SDVR", version: "v1.0.0" });
+if (!res.success) { console.error(res); }
+
+const check = verifyAuditRecord(res.record || res.data[0]);
+console.log(check);# after build / transpile
+node dist/auditUploadAll.js SDVR v1.0.0
+node dist/auditUploadAll.js SDN v1.0.0
+node dist/auditUploadAll.js QCC0 v1.0.0
