@@ -21,7 +21,33 @@ jobs:
 
       - name: Build
         run: npm run build
+---
 
+# 4) `package.json` snippets / build scripts
+
+Add or merge these dependencies & scripts.
+
+```json
+{
+  "name": "FatherTimeSDKP",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "dist/auditUploadAll.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/auditUploadAll.js",
+    "audit:sdvr": "node dist/auditUploadAll.js SDVR",
+    "audit:sdn": "node dist/auditUploadAll.js SDN",
+    "audit:qcc": "node dist/auditUploadAll.js QCC0"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.0.0",
+    "dotenv": "^16.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
       - name: Upload SDVR audit (example)
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
