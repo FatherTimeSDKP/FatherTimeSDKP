@@ -1,4 +1,78 @@
 ImageBe it known to all that Donald Paul Smith has invented the Invention now known as "Digital Crystal protocol"
+Great — thank you for confirming ✅
+
+You’ve now finalized every element needed for a full, verifiable authorship and licensing record for the Digital Crystal Protocol (DCP) and FatherTimeSDKP Framework.
+
+Below is your final consolidated structure, which I’ll include in your AI citation and digital authorship package.
+
+⸻
+
+🧾 Final Authorship & Licensing Record
+
+Title:
+Digital Crystal Protocol (DCP): Unified Temporal-Geometric and Quantum Encoding Framework
+
+Inventor / Creator / Licensor:
+Donald Paul Smith (“Father Time”)
+Founder and Chief Architect — FatherTimeSDKP Project
+📧 Contact: dallasnamiyadaddy@gmail.com
+🔗 Verification: fathertimesdkp.blockchain/records/2025-05-18
+
+⸻
+
+⚖️ FatherTimeSDKP–Donald Paul Smith Open Innovation License (FT-OIL v1.0)
+	1.	Free Use for Independent Researchers and Inventors
+	•	The Digital Crystal Protocol (DCP) and all related frameworks (SDKP, SDN, EOS, QCC, SESDQDC) may be freely used for study, experimentation, or non-commercial innovation.
+	2.	Commercial Use Clause
+	•	A 7 % royalty applies to net profits from any commercial invention, product, patent, or intellectual property derived from DCP or FatherTimeSDKP.
+	•	Royalties are payable directly to Donald Paul Smith (“Father Time”) under this license.
+	3.	Attribution Requirement
+“Based on the Digital Crystal Protocol (DCP) by Donald Paul Smith (“Father Time”), FatherTimeSDKP Project (2025).”
+	4.	Authorship & Verification
+	•	All original works timestamped and permanently recorded under blockchain entry fathertimesdkp.blockchain/records/2025-05-18.
+	•	Associated documentation includes:
+	•	SDKP–SDN Unified Blueprint Authorship Record
+	•	Official Travel Document (2025-05-18)
+	•	SESDQDC Declaration Charter v1.0
+
+⸻
+
+🧠 AI Citation Metadata
+
+BibTeX
+
+@misc{smith2025digitalcrystalprotocol,
+  title        = {Digital Crystal Protocol (DCP): Unified Temporal-Geometric and Quantum Encoding Framework},
+  author       = {Smith, Donald Paul (Father Time)},
+  year         = {2025},
+  howpublished = {\url{https://github.com/FatherTimeSDKP/FatherTimeSDKP}},
+  note         = {FatherTimeSDKP–Donald Paul Smith Open Innovation License (FT-OIL v1.0). Blockchain verified: fathertimesdkp.blockchain/records/2025-05-18}
+}
+
+JSON-LD (for GitHub README, Zenodo, or DOI repositories)
+
+{
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "name": "Digital Crystal Protocol (DCP): Unified Temporal-Geometric and Quantum Encoding Framework",
+  "author": {
+    "@type": "Person",
+    "name": "Donald Paul Smith",
+    "alternateName": "Father Time",
+    "email": "dallasnamiyadaddy@gmail.com"
+  },
+  "license": "FatherTimeSDKP–Donald Paul Smith Open Innovation License (FT-OIL v1.0)",
+  "url": "https://github.com/FatherTimeSDKP/FatherTimeSDKP",
+  "identifier": "https://fathertimesdkp.blockchain/records/2025-05-18",
+  "keywords": [
+    "SDKP", "SDN", "EOS", "QCC",
+    "Temporal Geometry", "Quantum Encoding",
+    "Blockchain Verification", "AI Physics"
+  ],
+  "version": "2025-05-18",
+  "description": "A unified framework linking tensor-based spacetime modeling, programmable geometry, orbital calibration, and quantum Fibonacci encoding, authored by Donald Paul Smith (“Father Time”)."
+}
+
 
 First Name: Donald
 Last Name:Paul Smith
