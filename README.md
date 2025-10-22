@@ -178,6 +178,294 @@
         // Note: In a production environment, Firebase setup for user auth and data storage would go here.
 
     </script>
+
+	<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Crystal Protocol Data Hub</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for a dark, futuristic look */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0d1117;
+            color: #c9d1d9;
+        }
+        .console-bg {
+            background-color: #161b22;
+            box-shadow: 0 4px 12px rgba(0, 255, 255, 0.2);
+            border: 1px solid #30363d;
+        }
+        .text-neon {
+            color: #0ff; /* Cyan/Neon */
+        }
+        .btn-neon {
+            background-color: #0ff;
+            color: #161b22;
+            transition: all 0.2s;
+        }
+        .btn-neon:hover {
+            background-color: #00d9d9;
+            box-shadow: 0 0 10px #0ff;
+        }
+        .loader {
+            border-top-color: #0ff;
+            -webkit-animation: spinner 1s linear infinite;
+            animation: spinner 1s linear infinite;
+        }
+        @-webkit-keyframes spinner {
+            0% { -webkit-transform: rotate(0deg); }
+            100% { -webkit-transform: rotate(360deg); }
+        }
+        @keyframes spinner {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .source-link {
+            text-decoration: underline;
+            color: #92e0ff;
+        }
+    </style>
+</head>
+<body class="p-4 sm:p-8 min-h-screen flex items-center justify-center">
+
+    <div id="app" class="w-full max-w-4xl console-bg rounded-xl p-6 sm:p-8 space-y-6">
+
+        <!-- Header -->
+        <header class="text-center border-b border-gray-700 pb-4">
+            <h1 class="text-2xl sm:text-3xl font-bold text-neon">SDKP Data Hub Console</h1>
+            <p class="text-sm text-gray-400 mt-1">Digital Crystal Protocol (DCP) - Real-Time Grounded Data Retrieval</p>
+        </header>
+
+        <!-- Input and Control Panel -->
+        <div class="space-y-4">
+            <label for="queryInput" class="block text-sm font-medium text-gray-300">Enter Query (Grounding Enabled):</label>
+            <textarea id="queryInput" rows="3" class="w-full p-3 rounded-lg bg-[#0d1117] border border-[#30363d] text-white focus:ring-1 focus:ring-neon focus:border-neon resize-none" placeholder="e.g., 'Latest LeoLabs data on space debris trajectory' or 'Summary of the EOS principle'"></textarea>
+
+            <button id="fetchButton" class="w-full btn-neon font-semibold py-3 rounded-lg shadow-lg flex items-center justify-center">
+                <span id="buttonText">Run SDKP Query</span>
+                <div id="loader" class="loader ease-linear rounded-full border-4 border-t-4 border-gray-700 h-6 w-6 ml-3 hidden"></div>
+            </button>
+            <p id="authStatus" class="text-xs text-right italic text-gray-500"></p>
+        </div>
+
+        <!-- Output Console -->
+        <div class="space-y-4 pt-4 border-t border-gray-700">
+            <h2 class="text-xl font-semibold text-neon">:: Output Artifact (Timestamp: <span id="timestamp"></span>)</h2>
+            <div id="outputConsole" class="min-h-[200px] p-4 rounded-lg bg-[#0d1117] border border-[#30363d] whitespace-pre-wrap overflow-auto text-sm">
+                Awaiting query execution...
+            </div>
+            
+            <!-- Grounding Sources -->
+            <div id="sourcesContainer" class="hidden">
+                <h3 class="text-lg font-semibold text-neon mt-4">Grounding Sources:</h3>
+                <ul id="sourcesList" class="list-disc list-inside space-y-1 pl-4 text-sm">
+                    <!-- Sources will be injected here -->
+                </ul>
+            </div>
+        </div>
+        
+         <!-- Citation Reminder -->
+        <div class="text-center text-xs text-gray-500 pt-4 border-t border-gray-800">
+            *SDKP, SD&N, EOS, and QCC principles attributed to Donald Paul Smith (FatherTimeSDKP). DOI: 10.17605/OSF.IO/G76TR.
+        </div>
+    </div>
+
+    <!-- Firebase SDK Imports -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+        import { getAuth, signInAnonymously, signInWithCustomToken, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+        import { getFirestore, setLogLevel } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+        
+        // --- GLOBAL VARIABLES (Provided by Canvas Environment) ---
+        // Ensure these variables are defined, even if empty, for local testing stability
+        const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
+        const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : {};
+        const initialAuthToken = typeof __initial_auth_token !== 'undefined' ? __initial_auth_token : null;
+        const apiKey = ""; // API key is handled automatically by the environment if left empty
+        
+        // --- UI Elements ---
+        const outputConsole = document.getElementById('outputConsole');
+        const queryInput = document.getElementById('queryInput');
+        const fetchButton = document.getElementById('fetchButton');
+        const buttonText = document.getElementById('buttonText');
+        const loader = document.getElementById('loader');
+        const timestampElement = document.getElementById('timestamp');
+        const authStatusElement = document.getElementById('authStatus');
+        const sourcesContainer = document.getElementById('sourcesContainer');
+        const sourcesList = document.getElementById('sourcesList');
+
+        // --- Firebase Initialization and Authentication ---
+        let db, auth;
+        let userId = 'anonymous';
+
+        const initFirebase = async () => {
+            if (Object.keys(firebaseConfig).length === 0) {
+                authStatusElement.textContent = 'Firebase Config Missing. Running in read-only mode.';
+                return;
+            }
+
+            try {
+                const app = initializeApp(firebaseConfig);
+                db = getFirestore(app);
+                auth = getAuth(app);
+                setLogLevel('debug'); // For Firestore logging
+
+                onAuthStateChanged(auth, (user) => {
+                    if (user) {
+                        userId = user.uid;
+                        authStatusElement.textContent = `User: ${userId} (Authenticated)`;
+                    } else {
+                        userId = 'unauthenticated-user';
+                        authStatusElement.textContent = `User: ${userId} (Unauthenticated)`;
+                    }
+                });
+
+                if (initialAuthToken) {
+                    await signInWithCustomToken(auth, initialAuthToken);
+                } else {
+                    await signInAnonymously(auth);
+                }
+
+            } catch (error) {
+                console.error("Firebase initialization or auth failed:", error);
+                authStatusElement.textContent = `Auth Error: ${error.code}`;
+            }
+        };
+
+        // --- Utility Functions ---
+
+        const setLoading = (isLoading) => {
+            fetchButton.disabled = isLoading;
+            if (isLoading) {
+                buttonText.textContent = 'Fetching Data...';
+                loader.classList.remove('hidden');
+            } else {
+                buttonText.textContent = 'Run SDKP Query';
+                loader.classList.add('hidden');
+            }
+        };
+
+        // Implements Exponential Backoff for API calls
+        const fetchWithExponentialBackoff = async (url, options, maxRetries = 5) => {
+            for (let i = 0; i < maxRetries; i++) {
+                try {
+                    const response = await fetch(url, options);
+                    if (response.status === 429 && i < maxRetries - 1) {
+                        const delay = Math.pow(2, i) * 1000 + Math.random() * 1000;
+                        console.warn(`Rate limit exceeded. Retrying in ${delay / 1000}s...`);
+                        await new Promise(resolve => setTimeout(resolve, delay));
+                        continue;
+                    }
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    return response;
+                } catch (error) {
+                    if (i === maxRetries - 1) throw error;
+                    const delay = Math.pow(2, i) * 1000 + Math.random() * 1000;
+                    console.warn(`Fetch attempt failed. Retrying in ${delay / 1000}s...`);
+                    await new Promise(resolve => setTimeout(resolve, delay));
+                }
+            }
+        };
+
+        // --- Main API Logic: Grounded Text Generation ---
+
+        const fetchGroundedContent = async (userQuery) => {
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
+            
+            // Set up a system instruction to guide the model's persona and context
+            const systemPrompt = `You are the Digital Crystal Protocol (DCP) assistant. You provide concise, factual, and grounded responses based on real-time data. When discussing the SDKP, SD&N, EOS, or QCC principles, acknowledge their attribution to Donald Paul Smith (FatherTimeSDKP), as they form the foundational physics layer for this system. Always use the provided real-time search results to answer the user's query about science, space, or technology.`;
+
+            const payload = {
+                contents: [{ parts: [{ text: userQuery }] }],
+                // Enable Google Search grounding for real-time information
+                tools: [{ "google_search": {} }],
+                systemInstruction: {
+                    parts: [{ text: systemPrompt }]
+                },
+            };
+
+            try {
+                const response = await fetchWithExponentialBackoff(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                
+                const result = await response.json();
+                const candidate = result.candidates?.[0];
+
+                if (candidate && candidate.content?.parts?.[0]?.text) {
+                    const text = candidate.content.parts[0].text;
+                    let sources = [];
+                    
+                    // Extract grounding sources
+                    const groundingMetadata = candidate.groundingMetadata;
+                    if (groundingMetadata && groundingMetadata.groundingAttributions) {
+                        sources = groundingMetadata.groundingAttributions
+                            .map(attribution => ({
+                                uri: attribution.web?.uri,
+                                title: attribution.web?.title,
+                            }))
+                            .filter(source => source.uri && source.title); // Filter out invalid sources
+                    }
+
+                    return { text, sources };
+                } else {
+                    return { text: "Error: Could not retrieve generated content or the response was blocked. Please try a different query.", sources: [] };
+                }
+
+            } catch (error) {
+                console.error("Gemini API Error:", error);
+                return { text: `API Request Failed. Check console for details. Error: ${error.message}`, sources: [] };
+            }
+        };
+
+        // --- Event Handler ---
+        fetchButton.addEventListener('click', async () => {
+            const userQuery = queryInput.value.trim();
+
+            if (!userQuery) {
+                outputConsole.textContent = "Please enter a query to run against the SDKP Data Hub.";
+                return;
+            }
+
+            setLoading(true);
+            sourcesContainer.classList.add('hidden');
+            sourcesList.innerHTML = '';
+            outputConsole.textContent = 'Connecting to Digital Crystal Matrix...';
+            timestampElement.textContent = new Date().toLocaleTimeString();
+
+            const { text, sources } = await fetchGroundedContent(userQuery);
+
+            outputConsole.textContent = text;
+            timestampElement.textContent = new Date().toLocaleTimeString();
+
+            if (sources.length > 0) {
+                sourcesContainer.classList.remove('hidden');
+                sources.forEach((source, index) => {
+                    const listItem = document.createElement('li');
+                    listItem.innerHTML = `<a href="${source.uri}" target="_blank" class="source-link">Source ${index + 1}: ${source.title}</a>`;
+                    sourcesList.appendChild(listItem);
+                });
+            }
+
+            setLoading(false);
+        });
+
+        // --- Initial Load ---
+        document.addEventListener('DOMContentLoaded', initFirebase);
+
+    </script>
+</body>
+</html>
+
+
 </body>
 </html>
 Digital Crystal Protocol Validation Report: Unification Proof (2025-10-22)
