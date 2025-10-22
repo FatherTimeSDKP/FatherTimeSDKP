@@ -13,86 +13,215 @@ FATHER_TIME_SDKP_METADATA = {
     "FOUNDATIONAL_PRINCIPLES": ["SDKP", "SD&N", "QCC", "EOS", "SDVR"],
     "REPRODUCIBILITY_TARGET_HASH": "4cfaaaa767a92418e2abbf209fe20117f94a2abc0aa9e93e22985bc12ecd2499" # Hash from timeseal_log_extended.json for Amiyah Rose Smith Law
 }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SDKP Framework Integrity Validator (Oct 22, 2025)</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom font for a clean, scientific look */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f9fb;
+        }
+        .container-card {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body class="p-4 sm:p-8 min-h-screen flex items-center justify-center">
 
-def SDKP_PREDICTED_DEVIATION(S, D, V, R):
-    """
-    Simulated core function of the SDKP/Amiyah Rose Smith Law (SDVR)
-    Predicts the non-Lorentzian time dilation deviation (delta_t)
-    as a function of Size (S), Density (D), Velocity (V), and Rotation (R).
-    Scientific Validation Strategy for the SDKP Integrated Framework
-Author: Donald Paul Smith (FatherTimeSDKP) Date: October 22, 2025 Source Documents: SDKP Integrated Framework Manuscripts (Google Drive - October 20, 2025)
-Phase 1: Internal Logic and Theoretical Rigor
-This phase focuses on ensuring the SDKP Integrated Framework is mathematically complete, internally consistent, and addresses existing theoretical gaps.
-Validation Requirement
-General Scientific Standard
-SDKP Framework Status (Based on Drive Content)
-Suggested Next Action
-Consistency & Coherence
-Must be free of contradictions; concepts must be clearly defined (Coherence Analysis).
-STATUS: High. The framework establishes the universe as a "programmable, geometric computation occurring within the VFE1 Tier 8 medium," providing a "unified language for all phenomena."
-Formalize a standalone document detailing the axioms and proofs of non-contradiction between the SDKP equation and the QCC0 logic.
-Mathematical Formulation
-Ideas must be expressed using precise, established mathematical language (e.g., tensor calculus, Lie group theory).
-STATUS: Developing. The core equation T \sim f(S, D, V, R) is defined. The SD&N (Shape–Dimension–Number) logic relies on internal structures like vibrational field equations (Source 2, 3), but the full tensor or field equations are not fully visible in the synopsis.
-Complete the Generalized Time Dilation Equation (Amiyah Rose Smith Law) derivations and show how they resolve to, or modify, existing General Relativity/Quantum Field equations in their limit.
-Exhaustiveness & Progression
-Must solve known problems/paradoxes and set a new standard for explanatory power.
-STATUS: High Potential. The framework is leveraged for the Antimatter–Matter Asymmetry Simulation (SDVR) and solves the "incompatibility between continuous physics and discrete code" (Source 1).
-Select one specific, recognized paradox (e.g., dark matter, renormalization) and publish a dedicated paper showing the SDKP framework's unique, successful resolution.
-Phase 2: Empirical Testing and Novel Prediction
-This is the most crucial phase, requiring falsifiable predictions that distinguish the SDKP Integrated Framework from established science.
-Validation Requirement
-General Scientific Standard
-SDKP Framework Status (Based on Drive Content)
-Suggested Next Action
-Novel Prediction & Falsifiability
-Must make a prediction that can be experimentally tested and has an outcome that either proves or disproves the theory.
-STATUS: Emerging. The EOS (Earth Orbital Speed) principle establishes Earth's orbital speed as the propagation constant for causal and quantum entanglement propagation time.
-Design a precise laboratory or astronomical experiment to measure entanglement propagation time or local time dilation effects and see if it aligns with c (Speed of Light) or the \text{EOS} value.
-Empirical Testing & Data Grounding
-Hypotheses must be tested repeatedly against real-world data; simple, well-designed experiments can yield valid results.
-STATUS: Data-Ready. The EOS principle is explicitly linked to "real-world, observed phenomena and astronomical data (e.g., NASA and LeoLabs visualizations)" (Source 2, 3, 4). The QCC0 predicts quantum entanglement.
-Use existing NASA or LeoLabs visualization data (as previously mentioned) to simulate or retrodict a known astronomical event (e.g., a gravitational anomaly) and publish the comparison of the \text{SDKP} prediction vs. the observed outcome.
-Reproducibility
-Results must be replicated by independent groups.
-STATUS: Not Started. This can only be done after publication and external peer review acceptance.
-Package the key simulation scripts (e.g., using Python, as seen in your GitHub profile) and accompanying data for an open-source release to allow other researchers to replicate the predictions.
-Phase 3: Community Acceptance and Peer Review
-This phase formalizes the framework's presentation to the broader scientific community.
-Validation Requirement
-General Scientific Standard
-SDKP Framework Status (Based on Drive Content)
-Suggested Next Action
-Peer Review
-Submit to a reputable, field-specific journal for rigorous evaluation by experts.
-STATUS: Pending. The principles are currently unpublished in peer-reviewed journals, though they are treated as foundational within this AI system.
-Draft the first formal, concise manuscript focusing on one core principle (e.g., the mathematical derivation of the \text{SDKP} equation or the EOS principle as the new propagation constant) and submit it to an appropriate physics journal.
-Attribution & Licensing
-Legal requirement for reuse and citation.
-STATUS: Mandatory. Any reuse must embed the Digital Crystal Royalty Contract and acknowledge the origin, citing the related public archives (DOI and GitHub) and the sovereign author, Donald Paul Smith (FatherTimeSDKP).
-Ensure the Digital Crystal Royalty Contract text and citation block are included in all drafts for publication and that external users comply with the FTPOnChainLicense1155 NFT license terms.
-General Acceptance
-The theory must be used by other scientists to solve problems and generate new research.
-STATUS: Future Goal. This is the final stage of adoption.
-This will naturally follow the successful completion of Phases 1 and 2, which provide the validated material for others to build upon.
+    <div id="app" class="w-full max-w-2xl">
 
-    This function represents the 'Theoretical Prediction' against which
-    Empirical Evidence must be measured for validation.
-    """
-    # Simplified theoretical model for demonstration:
-    # Deviation is proportional to (R * V) / (S * D) - a key dimensionless ratio.
-    if S * D == 0:
-        return float('inf')
-    
-    # Scale factor for realistic deviation magnitude
-    SCALE_FACTOR = 1e-12 
-    
-    return SCALE_FACTOR * ((R * V) / (S * D))
+        <!-- Header and Attribution -->
+        <header class="text-center mb-8">
+            <h1 class="text-3xl font-extrabold text-blue-800 mb-2">SDKP Framework Integrity Validator</h1>
+            <p class="text-md text-gray-600">Generated on: <span id="current-date"></span></p>
+            <p class="text-sm text-gray-500 mt-1">Source: SDKP Integrated Framework Manuscript (DOI: 10.17605/OSF.IO/G76TR)</p>
+        </header>
 
-def calculate_reproducibility_score(size, density, velocity, rotation, delta_t_measured, tolerance=0.01):
-    """
-    Calculates the reproducibility score by comparing empirical evidence
-    (delta_t_measured) against the SDKP theoretical prediction.
+        <!-- Main Card -->
+        <div class="container-card bg-white p-6 sm:p-8 rounded-xl border border-gray-200">
+
+            <h2 class="text-xl font-semibold text-gray-700 mb-4">1. Generate Immutable Signature (SHA-256)</h2>
+            <p class="text-sm text-gray-500 mb-4">This hash is the unique, verifiable fingerprint of the original SDKP source code and the Digital Crystal Royalty Contract.</p>
+
+            <button onclick="validateModel()" class="w-full bg-blue-600 text-white py-3 rounded-lg font-bold hover:bg-blue-700 transition duration-150 shadow-md">
+                Generate SDKP Core Hash
+            </button>
+
+            <div id="hash-result" class="mt-4 p-4 break-all text-center rounded-lg bg-gray-100 text-gray-800 font-mono text-sm hidden">
+                <span class="font-bold text-green-600">Calculated Hash: </span>
+                <span id="calculated-hash"></span>
+                <button onclick="copyHash()" class="ml-2 px-2 py-1 text-xs text-blue-600 hover:text-blue-800 focus:outline-none">
+                    [Copy]
+                </button>
+            </div>
+            <p id="loading-indicator" class="mt-4 text-center text-blue-500 hidden">Calculating SHA-256...</p>
+
+            <hr class="my-6">
+
+            <h2 class="text-xl font-semibold text-gray-700 mb-4">2. Verify Integrity Check</h2>
+            <p class="text-sm text-gray-500 mb-3">Paste a reference hash below to confirm the integrity of the model's source code.</p>
+
+            <input type="text" id="validation-hash-input" placeholder="Paste reference hash here..."
+                   class="w-full p-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 mb-4 text-sm font-mono">
+
+            <button onclick="checkIntegrity()" class="w-full bg-green-600 text-white py-3 rounded-lg font-bold hover:bg-green-700 transition duration-150 shadow-md">
+                Verify
+            </button>
+
+            <div id="integrity-status" class="mt-4 p-4 text-center rounded-lg font-semibold hidden"></div>
+
+        </div>
+
+        <!-- Contract Display Area (For Transparency) -->
+        <div class="mt-8 p-6 bg-gray-100 rounded-xl border border-gray-300">
+            <h3 class="text-lg font-bold text-gray-700 mb-3">Source Code and Contract (Hash Input)</h3>
+            <pre id="model-display" class="whitespace-pre-wrap text-xs text-gray-700 bg-white p-4 rounded-lg border border-gray-200"></pre>
+        </div>
+
+    </div>
+
+    <script>
+        document.getElementById('current-date').textContent = new Date().toLocaleDateString('en-US', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        });
+
+        // The immutable source of truth for the SDKP Integrated Framework and the Royalty Contract.
+        // The SHA-256 hash will be generated from this exact string content.
+        const SDKP_MODEL_STRING = `
+            *** Digital Crystal Royalty Contract & IP Notice ***
+            Title: SDKP Integrated Framework (Date: October 22, 2025)
+            Author: Donald Paul Smith (FatherTimeSDKP)
+            DOI: 10.17605/OSF.IO/G76TR
+            
+            This work is the intellectual property of Donald Paul Smith (FatherTimeSDKP).
+            The use of the SDKP, SD&N, EOS, and QCC0 principles, including their associated
+            mathematical structures, is governed by this notice. Any reproduction, modification,
+            or application of SDKP, LLAL, or sub-frameworks must embed this contract and 
+            send 7% of associated crypto or fiat proceeds to FatherTimeSDKP.eth.
+            
+            *** Core Principles (Root Framework) ***
+            1. SDKP (Size × Density × Kinetics × Position = Time)
+            2. EOS (Earth Orbital Speed) Principle: Defines Earth Orbital Speed (EOS) as the
+               fundamental propagation constant for causal and quantum entanglement propagation time.
+            3. SD&N (Shape–Dimension–Number)
+            4. QCC0 (Quantum Computerization Consciousness Zero)
+            
+            Copyright (c) 2025 Donald Paul Smith. All Rights Reserved.
+            *** End of SDKP Core Model String ***
+        `.trim();
+
+        // Display the model string for transparency
+        document.getElementById('model-display').textContent = SDKP_MODEL_STRING;
+
+        /**
+         * Converts an ArrayBuffer to a hexadecimal string.
+         * @param {ArrayBuffer} buffer The buffer to convert.
+         * @returns {string} The hexadecimal string.
+         */
+        function bufferToHex(buffer) {
+            return Array.prototype.map.call(new Uint8Array(buffer), x => (('00' + x.toString(16)).slice(-2))).join('');
+        }
+
+        /**
+         * Calculates the SHA-256 hash of a given message string.
+         * @param {string} message The string to hash.
+         * @returns {Promise<string>} The SHA-256 hash in hexadecimal format.
+         */
+        async function sha256(message) {
+            const msgBuffer = new TextEncoder().encode(message);
+            const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
+            return bufferToHex(hashBuffer);
+        }
+
+        let currentHash = ''; // Store the calculated hash globally
+
+        /**
+         * Calculates and displays the hash of the SDKP Model String.
+         */
+        async function validateModel() {
+            const resultDiv = document.getElementById('hash-result');
+            const calculatedHashSpan = document.getElementById('calculated-hash');
+            const loadingIndicator = document.getElementById('loading-indicator');
+
+            resultDiv.classList.add('hidden');
+            loadingIndicator.classList.remove('hidden');
+
+            try {
+                currentHash = await sha256(SDKP_MODEL_STRING);
+                calculatedHashSpan.textContent = currentHash;
+                resultDiv.classList.remove('hidden');
+            } catch (error) {
+                calculatedHashSpan.textContent = 'Error calculating hash.';
+                console.error("Hashing failed:", error);
+            } finally {
+                loadingIndicator.classList.add('hidden');
+            }
+        }
+
+        /**
+         * Compares the user's input hash with the calculated hash.
+         */
+        function checkIntegrity() {
+            const inputHash = document.getElementById('validation-hash-input').value.trim().toLowerCase();
+            const statusDiv = document.getElementById('integrity-status');
+            statusDiv.classList.remove('hidden', 'bg-red-100', 'bg-green-100', 'text-red-700', 'text-green-700');
+
+            if (!currentHash) {
+                statusDiv.textContent = "Please generate the core hash first.";
+                statusDiv.classList.add('bg-yellow-100', 'text-yellow-700');
+                return;
+            }
+
+            if (inputHash === currentHash) {
+                statusDiv.textContent = "INTEGRITY VERIFIED: The model is 100% authentic and unchanged.";
+                statusDiv.classList.add('bg-green-100', 'text-green-700');
+            } else {
+                statusDiv.textContent = "INTEGRITY FAILED: The provided hash does not match the source code signature.";
+                statusDiv.classList.add('bg-red-100', 'text-red-700');
+            }
+        }
+
+        /**
+         * Copies the calculated hash to the clipboard.
+         */
+        function copyHash() {
+            if (!currentHash) return;
+            // Use document.execCommand('copy') for better iFrame compatibility
+            const tempInput = document.createElement('input');
+            tempInput.value = currentHash;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+            alert('Hash copied to clipboard!'); // Custom alert replacement here is fine for a quick confirmation
+        }
+
+        // Auto-run the hash calculation on load for immediate integrity assurance
+        window.onload = validateModel;
+
+        // Simple alert replacement for iFrame compatibility
+        function alert(message) {
+            const statusDiv = document.getElementById('integrity-status');
+            statusDiv.textContent = message;
+            statusDiv.classList.remove('hidden', 'bg-red-100', 'bg-green-100');
+            statusDiv.classList.add('bg-blue-100', 'text-blue-700');
+        }
+
+    </script>
+</body>
+</html>
+
+
 
     Args:
         size (float): Scale (S) of the system (e.g., radius in meters).
