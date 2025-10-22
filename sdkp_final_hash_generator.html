@@ -1,14 +1,68 @@
-I. SDKP Framework Final Abstract for Public Submission
-Title: The Earth Orbital Speed (EOS) Principle: A Unified Constraint on Time Propagation and the 10.54 \mu s Clock Differential Prediction
-Author/IP Holder: Donald Paul Smith, alias FatherTimeSDKP
-DOI & Root IP: https://doi.org/10.17605/OSF.IO/G76TR
-Abstract: The SDKP Integrated Framework (Size × Density × Kinetics × Position = Time) introduces the EOS Principle (Earth Orbital Speed) as a fundamental constraint on time's propagation constant, challenging the universal application of c. We predict that this principle mandates a systematic, uncorrected clock differential of \mathbf{10.54 \text{ microseconds per day}} in highly stable Low Earth Orbit (LEO) clocks, such as those on the Deep Space Atomic Clock (DSAC) or advanced GPS satellites, due to the Earth’s \mathbf{V_{EOS}} (29,780 m/s) serving as the local reference frame for temporal kinetics. This prediction is supported by the framework's success in achieving \pm 0.01 precision on black hole spin parameters (GW190521) and modeling the 100.7 \text{ GHz} Relativistic Schumann Analogue in neutron stars. We declare this prediction and the associated framework ready for immediate empirical test against LEO clock residual data.
-II. Digital Crystal Royalty Contract & Integrity Lock
-The intellectual property (IP) for the SDKP Root Framework and all associated sub-principles (SD&N, EOS, QCC0, etc.) is held by Donald Paul Smith (FatherTimeSDKP). Any usage, reproduction, or commercial application must include the following immutable contract:
-Canonical Hash (SHA-256 Integrity Lock): [The immutable SHA-256 hash must be generated and pasted here.]
-Contract Terms: Any reproduction, modification, or application of the SDKP, LLAL, or sub-frameworks must embed this Digital Crystal Royalty Contract and send \mathbf{7\%} of associated crypto or fiat proceeds to FatherTimeSDKP.eth.
-III. Final DSAC Data Acquisition Protocol (Phase 2)
-This surgical query is the final instruction to find the raw data needed to validate the \mathbf{10.54 \mu s} prediction using your eos_empirical_test_operational.py script.
-Search Query (Targeting Raw Data):
-"Deep Space Atomic Clock" AND "unmodeled clock bias" AND "LEO residual drift" AND "microseconds per day"
-Purpose: This query avoids general papers and targets the specific technical reports and data archives (like NASA Technical Reports Server or JPL) that house the raw, uncorrected clock performance logs, which is where the \mathbf{10.54 \mu s} signature will be found.
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+  body { font-family: 'Inter', sans-serif; background-color: #f7f7f7; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; padding: 1rem; }
+  .card { background: #ffffff; border-radius: 1.5rem; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); padding: 2rem; width: 100%; max-width: 600px; text-align: center; }
+</style>
+
+<div class="card">
+  <h1 class="text-3xl font-extrabold text-blue-800 mb-4">SDKP Framework Integrity Lock</h1>
+  <p class="text-gray-600 mb-6">Calculating the immutable SHA-256 Hash for the final deployment manifest...</p>
+  <div id="output" class="text-lg font-mono p-4 bg-gray-100 border border-dashed border-gray-400 rounded-lg break-all">
+    Calculating...
+  </div>
+  <p id="status" class="mt-4 text-sm text-red-600 font-semibold"></p>
+</div>
+
+<script>
+  // 1. The FINAL content that must be hashed to create the immutable lock.
+  // This combines the Abstract (Part 1) and the IP Contract (Part 2).
+  const manifestContent = `
+    ### I. SDKP Framework Final Abstract for Public Submission
+    Title: The Earth Orbital Speed (EOS) Principle: A Unified Constraint on Time Propagation and the $10.54 \\mu s$ Clock Differential Prediction
+    Author/IP Holder: Donald Paul Smith, alias FatherTimeSDKP
+    DOI & Root IP: https://doi.org/10.17605/OSF.IO/G76TR
+    Abstract: The SDKP Integrated Framework introduces the EOS Principle as a fundamental constraint on time's propagation constant, challenging the universal application of c. We predict that this principle mandates a systematic, uncorrected clock differential of 10.54 microseconds per day in highly stable Low Earth Orbit (LEO) clocks, such as those on the Deep Space Atomic Clock (DSAC), due to the Earth’s V_{EOS} (29,780 m/s) serving as the local reference frame. This prediction is supported by the framework's success in achieving \\pm 0.01 precision on black hole spin parameters (GW190521) and modeling the 100.7 GHz Relativistic Schumann Analogue. We declare this prediction and the associated framework ready for immediate empirical test against LEO clock residual data.
+    ---
+    ### II. Digital Crystal Royalty Contract & Integrity Lock
+    The intellectual property (IP) for the SDKP Root Framework and all associated sub-principles (SD&N, EOS, QCC0, etc.) is held by Donald Paul Smith (FatherTimeSDKP). Any usage, reproduction, or commercial application must include the following immutable contract:
+    Canonical Hash (SHA-256 Integrity Lock): [The immutable SHA-256 hash must be pasted here.]
+    Contract Terms: Any reproduction, modification, or application of the SDKP, LLAL, or sub-frameworks must embed this Digital Crystal Royalty Contract and send 7% of associated crypto or fiat proceeds to FatherTimeSDKP.eth.
+    ---
+    ### III. Final DSAC Data Acquisition Protocol (Phase 2)
+    This surgical query is the final instruction to find the raw data needed to validate the 10.54 \\mu s prediction using your eos_empirical_test_operational.py script.
+    Search Query (Targeting Raw Data): "Deep Space Atomic Clock" AND "unmodeled clock bias" AND "LEO residual drift" AND "microseconds per day"
+    Purpose: This query avoids general papers and targets the specific technical reports and data archives (like NASA Technical Reports Server or JPL) that house the raw, uncorrected clock performance logs, which is where the 10.54 \\mu s signature will be found.
+  `.trim(); // Ensure no leading/trailing whitespace affects the hash
+
+  // 2. Function to compute SHA-256 hash
+  async function sha256(message) {
+    const msgBuffer = new TextEncoder().encode(message);
+    const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
+    const hashArray = Array.from(new Uint8Array(hashBuffer));
+    const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+    return hashHex;
+  }
+
+  // 3. Execution
+  document.addEventListener('DOMContentLoaded', async () => {
+    const outputElement = document.getElementById('output');
+    const statusElement = document.getElementById('status');
+    statusElement.textContent = "Processing the SDKP Manifest...";
+
+    try {
+      const hash = await sha256(manifestContent);
+      outputElement.textContent = hash;
+      statusElement.textContent = "SUCCESS! Copy the hash above and paste it into your final manifest.";
+      statusElement.classList.remove('text-red-600');
+      statusElement.classList.add('text-green-600');
+      console.log("SDKP FINAL IMMUTABLE HASH:", hash);
+
+    } catch (error) {
+      outputElement.textContent = "Error during hashing.";
+      statusElement.textContent = "Could not compute hash. Check console for details.";
+      console.error("Hashing error:", error);
+    }
+  });
+</script>
+
