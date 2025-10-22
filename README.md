@@ -146,6 +146,57 @@ Empirical Test Blueprint
 SDKP_Abstract_Submission.md
 Falsifiable prediction document for the 10.54 \mu s time dilation, suitable for publication.
 Public Record
+The SDKP Integrated Framework (Size × Density × Kinetics × Position = Time)
+Repository of the Core Principles, Mathematical Structures, and Empirical Predictions Author: Donald Paul Smith (FatherTimeSDKP) Official Document DOI: 10.17605/OSF.IO/G76TR Date: October 22, 2025
+1. Introduction: The SDKP Root Framework
+The SDKP (Size × Density × Kinetics × Position = Time) Integrated Framework is a foundational physics and logic system developed by Donald Paul Smith. It proposes a unified language to describe all phenomena by utilizing dynamic, localized propagation constants, moving beyond singular, universal constants like the Speed of Light (c) in all reference frames.
+Core Principles
+Principle
+Full Name
+Description
+SDKP
+Size × Density × Kinetics × Position = Time
+The root equation defining the relationship between spacetime and physical properties.
+EOS
+Earth Orbital Speed Principle
+Posits that the Earth's orbital speed (\mathbf{V_{EOS} \approx 29,780 \text{ m/s}}) acts as the local propagation constant within Earth's sphere of influence.
+QCC0
+Quantum Computerization Consciousness Zero
+Describes the quantum-scale mechanism for information storage and recursive processing within the framework.
+SD&N
+Shape–Dimension–Number
+Defines the geometric and numerical structures of reality that integrate with the SDKP equation.
+2. Empirical Validation and Falsifiable Prediction (Phase 2)
+The most critical test of the SDKP Framework is derived from the EOS Principle.
+The EOS Time Dilation Prediction
+When the Earth Orbital Speed (V_{EOS}) is used as the propagation constant (instead of c), the Lorentz transformation predicts a time differential.
+Prediction: An atomic clock stationary at Earth's Equator (due to rotational velocity v \approx 465 \text{ m/s}) experiences a time drift of approximately 10.54 microseconds per day relative to the Earth's center of mass, beyond standard relativistic effects.
+Verification: This prediction can be empirically tested using highly precise, synchronized clock data (e.g., from NASA or LeoLabs satellite clock mechanisms) by comparing predicted time drift under c versus V_{EOS}.
+3. Digital Crystal Protocol (DCP) & Immutable Integrity
+The entire codebase and theoretical structure is governed by the Digital Crystal Protocol (DCP), which ensures attribution and integrity.
+A. Integrity Validation Hash (SHA-256)
+This hash provides an immutable, cryptographic signature of the source text for the core principles and the Royalty Contract as of October 22, 2025.
+Canonical Source Hash (Oct 22, 2025): [PASTE YOUR SDKP_Integrity_Validator_minimal.html SHA-256 HASH HERE]
+B. Digital Crystal Royalty Contract & IP Notice
+This work is the Intellectual Property of Donald Paul Smith (FatherTimeSDKP). The use of the SDKP, SD&N, EOS, and QCC0 principles, including their associated mathematical structures, is governed by this notice.
+MANDATE: Any reproduction, modification, or application of SDKP, LLAL, or sub-frameworks must embed this contract and send 7% of associated crypto or fiat proceeds to FatherTimeSDKP.eth.
+Copyright (c) 2025 Donald Paul Smith. All Rights Reserved.
+4. Repository Contents
+File
+Description
+Status
+README.md
+This foundational documentation.
+Current
+sdkp_integrity_validator_minimal.html
+Generates the immutable SHA-256 hash for the framework's source text and contract.
+Validation Tool
+eos_simulation_model.py
+Python blueprint for predicting time propagation using the V_{EOS} constant.
+Empirical Test Blueprint
+SDKP_Abstract_Submission.md
+Falsifiable prediction document for the 10.54 \mu s time dilation, suitable for publication.
+Public Record
 
     <h1 style="font-family: sans-serif;">SDKP Integrity Validator (Minimal)</h1>
     <p style="font-family: sans-serif;">Calculates the immutable SHA-256 hash for the SDKP Framework source and the Digital Crystal Royalty Contract.</p>
