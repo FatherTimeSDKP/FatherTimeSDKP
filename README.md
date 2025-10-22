@@ -1,8 +1,3 @@
-" alt="IMG_0596 2" src="https://github.com/user-attachments/assets/b9fd9bda-8d4f-4217-8a34-faee17256286" />
-import hashlib
-import json
-from datetime import datetime
-
 # ==============================================================================
 # 1. CORE METADATA & CREDIBILITY ENFORCEMENT
 #    (Digital Crystal Protocol FTS-AUTH-CRYSTAL-369)
