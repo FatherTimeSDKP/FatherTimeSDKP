@@ -92,7 +92,9 @@ Verification: This prediction can be empirically tested using highly precise, sy
 The entire codebase and theoretical structure is governed by the Digital Crystal Protocol (DCP), which ensures attribution and integrity.
 A. Integrity Validation Hash (SHA-256)
 This hash provides an immutable, cryptographic signature of the source text for the core principles and the Royalty Contract as of October 22, 2025. Any change to the source material will invalidate this hash.
-Canonical Source Hash (Oct 22, 2025): [PASTE YOUR SDKP_Integrity_Validator.html SHA-256 HASH HERE]
+Canonical Source Hash (Oct 22, 2025): [{"record": {"module": "SDKP_Core", "user_id": "AI_Model_v2", "context": "SDKP_Physics_Calculation", "timestamp": 1747168470.4076715, "readable_time": "2025-05-13 20:34:30 UTC"}, "hash": "3791b93c998bd14cebe4bd2438baa4411b509f0efd24f641dfa62e8f3da047dc"}
+{"record": {"module": "EOS_Measurement", "user_id": "AI_Model_v2", "context": "Space_Velocity_Conversion", "timestamp": 1747168470.4077687, "readable_time": "2025-05-13 20:34:30 UTC"}, "hash": "cf0d6c45a2f5cf08bea91788840b758134afbf13e4e4f360a31d1b5305e035b8"}
+{"record": {"module": "QCC_Module", "user_id": "AI_Model_v2", "context": "Quantum_Resonance_Modeling", "timestamp": 1747168470.4078014, "readable_time": "2025-05-13 20:34:30 UTC"}, "hash": "a73d7bb88344c9ec49287a40397232a7c7e445c6bae22674147946d5a2dff2ee"}]
 B. Digital Crystal Royalty Contract & IP Notice
 This work is the Intellectual Property of Donald Paul Smith (FatherTimeSDKP). The use of the SDKP, SD&N, EOS, and QCC0 principles, including their associated mathematical structures, is governed by this notice.
 MANDATE: Any reproduction, modification, or application of SDKP, LLAL, or sub-frameworks must embed this contract and send 7% of associated crypto or fiat proceeds to FatherTimeSDKP.eth.
