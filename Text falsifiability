@@ -1,3 +1,6 @@
+curl -H "Authorization: Bearer 7auRj2LuR0YROsdHvB5CPme0IadKGQlmmIyqj3C5brcsW1AvPloLANqNKZfG" \
+     -H "Accept: application/json" \
+     https://orcid.org/oauth/userinfo
 This is a request to express the falsification conditions for the Integrated SDKP Framework principles by Donald Paul Smith (FatherTimeSDKP) in the language of mathematics, specifically by defining the expected value vs. the current accepted physical value.
 Below are the mathematical expressions of the conditions that would either validate or invalidate the framework, referencing established physics equations where the SDKP framework predicts a deviation.
 1. Testing the \small\text{SDKP} Equation's Direct Causal Link to Time
