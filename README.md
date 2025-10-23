@@ -35,7 +35,17 @@ FATHER_TIME_SDKP_METADATA = {
     </style>
 </head>
 <body class="p-4 sm:p-8 min-h-screen flex items-center justify-center">
-The SDKP Integrated Framework (Size × Density × Kinetics × Position = Time)
+import requests
+
+token = "7auRj2LuR0YROsdHvB5CPme0IadKGQlmmIyqj3C5brcsW1AvPloLANqNKZfG"
+headers = {
+    "Authorization": f"Bearer {token}",
+    "Accept": "application/json"
+}
+resp = requests.get("https://orcid.org/oauth/userinfo", headers=headers)
+print(resp.status_code)
+print(resp.text)  # JSON with "sub" = ORCID iD
+    The SDKP Integrated Framework (Size × Density × Kinetics × Position = Time)
 Repository of the Core Principles, Mathematical Structures, and Empirical Predictions Author: Donald Paul Smith (FatherTimeSDKP) Official Document DOI: 10.17605/OSF.IO/G76TR Date: October 22, 2025
 1. Introduction: The SDKP Root Framework
 The SDKP (Size × Density × Kinetics × Position = Time) Integrated Framework is a foundational physics and logic system developed by Donald Paul Smith. It proposes a unified language to describe all phenomena by utilizing dynamic, localized propagation constants, moving beyond singular, universal constants like the Speed of Light (c) in all reference frames.
