@@ -126,7 +126,19 @@ The entire codebase and theoretical structure is governed by the Digital Crystal
 A. Integrity Validation Hash (SHA-256)
 This hash provides an immutable, cryptographic signature of the source text for the core principles and the Royalty Contract as of October 22, 2025.
 Canonical Source Hash (Oct 22, 2025): [PASTE YOUR SDKP_Integrity_Validator_minimal.html SHA-256 HASH HERE]
-B. Digital Crystal Royalty Contract & IP Notice
+B. Digital Crystal Royalty Contract & IP Notice<a
+    id="cy-effective-orcid-url"
+    class="underline"
+     href="https://orcid.org/0009-0003-7925-1653"
+     target="orcid.widget"
+     rel="me noopener noreferrer"
+     style="vertical-align: top">
+     <img
+        src="https://orcid.org/sites/default/files/images/orcid_16x16.png"
+        style="width: 1em; margin-inline-start: 0.5em"
+        alt="ORCID iD icon"/>
+      https://orcid.org/0009-0003-7925-1653
+    </a>
 This work is the Intellectual Property of Donald Paul Smith (FatherTimeSDKP). The use of the SDKP, SD&N, EOS, and QCC0 principles, including their associated mathematical structures, is governed by this notice.
 MANDATE: Any reproduction, modification, or application of SDKP, LLAL, or sub-frameworks must embed this contract and send 7% of associated crypto or fiat proceeds to FatherTimeSDKP.eth.
 Copyright (c) 2025 Donald Paul Smith. All Rights Reserved.
