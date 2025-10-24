@@ -20,7 +20,21 @@ FATHER_TIME_SDKP_METADATA = {
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14850016.svg)](https://doi.org/10.5281/zenodo.14850016)
 
 ---
+# 1. Extract the project
+unzip timing-sdk-management.zip
+cd timing-sdk-management
 
+# 2. Install dependencies for frontend
+npm install
+
+# 3. Start the backend
+cd backend
+npm install
+npm start  # starts Express API server (default: http://localhost:5000)
+
+# 4. Start the frontend
+cd ..
+npm run dev  # starts Vite app (default: http://localhost:5173)
 ## Overview
 
 The **FatherTimeSDKP Framework**, developed by **Donald Paul Smith (aka FatherTimeSDKP)**, unifies physical, computational, and consciousness modeling principles into a reproducible scientific architecture.  
