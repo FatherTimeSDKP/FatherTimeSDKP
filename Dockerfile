@@ -1,30 +1,30 @@
-# Stage 1 — Build Frontend
+# =====================================
+# Stage 1 — Build Frontend (Vite/React)
+# =====================================
 FROM node:20 AS build
 WORKDIR /app
 
-# Copy root dependencies (frontend)
+# Copy and install dependencies
 COPY package*.json ./
 RUN npm install
 
-# Copy frontend source
-COPY .# Build Docker image
-docker build -t timing-sdk-management .
+# Copy all source files
+COPY . .
 
-# Run container
-docker run -p 3000:3000 timing-sdk-management .
-
-# Build frontend (Vite)
+# Build frontend
 RUN npm run build
 
+# =====================================
 # Stage 2 — Setup Backend + Serve App
+# =====================================
 FROM node:20-alpine
 WORKDIR /app
 
-# Copy backend
+# Copy backend code
 COPY backend ./backend
-WORKDIR /app/backend
 
 # Install backend dependencies
+WORKDIR /app/backend
 COPY backend/package*.json ./
 RUN npm install --production
 
@@ -32,37 +32,45 @@ RUN npm install --production
 WORKDIR /app
 COPY --from=build /app/dist ./backend/public
 
-# Set environment
+# Environment variables
 ENV NODE_ENV=production
 ENV PORT=3000
 
+# Expose backend port
 EXPOSE 3000
 
-# Run backend server
-CMD ["node", "import express from 'express';
+# Start backend
+WORKDIR /app/backend
+CMD ["node", "{
+  "import express from 'express';
+import cors from 'cors';
 import path from 'path';
 import { fileURLToPath } from 'url';
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+import dotenv from 'dotenv';
 
-const app = express();
-
-// Serve built frontend
-app.use(express.static(path.join(__dirname, 'public')));
-
-// API routes
 import dataRoutes from './routes/data.js';
 import sdkpRoutes from './routes/sdkp.js';
 import statusRoutes from './routes/status.js';
 
+dotenv.config();
+
+const app = express();
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+app.use(cors());
+app.use(express.json());
+
+// API routes
 app.use('/api/data', dataRoutes);
 app.use('/api/sdkp', sdkpRoutes);
 app.use('/api/status', statusRoutes);
 
-// Catch-all to serve frontend
+// Serve built frontend
+app.use(express.static(path.join(__dirname, 'public')));
 app.get('*', (_, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`Unified SDKP-TimeSeal app running on port ${PORT}`));"]
+app.listen(PORT, () => console.log(`✅ Backend running on port ${PORT}`));"]
