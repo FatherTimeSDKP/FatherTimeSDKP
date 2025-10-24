@@ -14,7 +14,96 @@ FATHER_TIME_SDKP_METADATA = {
     "REPRODUCIBILITY_TARGET_HASH": "4cfaaaa767a92418e2abbf209fe20117f94a2abc0aa9e93e22985bc12ecd2499" # Hash from timeseal_log_extended.json for Amiyah Rose Smith Law.
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/10.5281/zenodo.14850016)](https://doi.org/10.5281/zenodo.14850016)
-    
+# FatherTimeSDKP Framework  
+### Root Framework: SDKP × QCC0 Integration System  
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14850016.svg)](https://doi.org/10.5281/zenodo.14850016)
+
+---
+
+## Overview
+
+The **FatherTimeSDKP Framework**, developed by **Donald Paul Smith (aka FatherTimeSDKP)**, unifies physical, computational, and consciousness modeling principles into a reproducible scientific architecture.  
+The framework integrates:
+
+- **SDKP (Size × Density × Kinetics × Position = Time)** — a dynamic representation of spacetime and motion through dimensional compression.
+- **QCC0 (Quantum Computerization Consciousness Zero)** — a zero-state logic system bridging computation and consciousness within quantum-level simulation.
+- **SD&N (Shape–Dimension & Number)**, **EOS (Earth Orbital Speed)**, and **VFE1 Tier 8** — sub-frameworks supporting unified physical-computational analysis.
+
+This repository provides reproducible computational models, validation scripts, and theoretical reference documents for SDKP/QCC0 research.
+
+---
+
+## Reproducibility & Data Provenance
+
+All computational and analytical steps follow **Open Science reproducibility mandates**:
+
+| Component | Platform | Purpose |
+|------------|-----------|----------|
+| Code & Documentation | [GitHub](https://github.com/FatherTimeSDKP/FatherTimeSDKP) | Source and version control |
+| Large Dataset (‘31/atlas’) | Google Drive + DVC Remote | Secure data storage & version tracking |
+| Versioning & Workflow | [DVC](https://dvc.org/) | Provenance and pipeline management |
+
+**Core principles:**  
+- End-to-end data lineage (via DVC).  
+- Containerized environments for consistent builds (Docker).  
+- Verification of outputs using cryptographic hashes.  
+
+---
+
+## Scientific Rigor: Falsifiability & Validation
+
+The SDKP/QCC0 assessment framework follows the **Popperian falsification principle**: models must be testable and disprovable.  
+
+**Falsification Hypothesis Example:**
+> The system trajectory derived from the ‘31/atlas’ dataset deviates from SDKP prediction by more than 5σ within a defined temporal window.
+
+Validation metrics include:
+- **Bayes Factor Analysis** (model evidence vs. baseline)  
+- **CDF-based Area Metrics** (distributional agreement)  
+- **Gaussian Process UQ** (stochastic model uncertainty quantification)
+
+---
+
+## Implementation Highlights
+
+- **Dockerfile** for environment reproducibility  
+- **DVC pipeline** linking theory, data, and model outputs  
+- **Automated hash verification** for dataset integrity  
+- **Google Service Account** configuration for DVC remote access  
+
+---
+
+## Citation
+
+If you use or reference this framework, please cite:
+
+> Smith, Donald Paul (2025). *SDKP-Based Quantum Framework and Simulation Dataset*. Zenodo. DOI: [10.5281/zenodo.14850016](https://doi.org/10.5281/zenodo.14850016)
+    @dataset{smith_sdkp_2025,
+author       = {Smith, Donald Paul (FatherTimeSDKP)},
+title        = {SDKP-Based Quantum Framework and Simulation Dataset},
+year         = {2025},
+publisher    = {Zenodo},
+doi          = {10.5281/zenodo.14850016},
+url          = {https://doi.org/10.5281/zenodo.14850016}
+}
+> ---
+
+## License
+
+© 2025 Donald Paul Smith (FatherTimeSDKP).  
+This repository is distributed under an **Open Science License** permitting non-commercial use, citation, and derivative academic research with attribution.
+
+---
+
+## Contact
+
+**Author:** Donald Paul Smith (FatherTimeSDKP)  
+**OSF:** [https://osf.io/symhb](https://osf.io/symhb)  
+**Zenodo DOI:** [10.5281/zenodo.14850016](https://doi.org/10.5281/zenodo.14850016)  
+**GitHub:** [FatherTimeSDKP/FatherTimeSDKP](https://github.com/FatherTimeSDKP/FatherTimeSDKP)
+
+---
 }
 <!DOCTYPE html>
 <html lang="en">
