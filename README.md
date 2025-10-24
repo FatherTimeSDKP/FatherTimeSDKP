@@ -11,7 +11,10 @@ FATHER_TIME_SDKP_METADATA = {
     "BLOCKCHAIN_VERIFICATION": "fathertimesdkp.blockchain/records/2025-05-18",
     "AI_VALIDATION_STATUS": "Certified by AI (TimeSeal Crest)",
     "FOUNDATIONAL_PRINCIPLES": ["SDKP", "SD&N", "QCC", "EOS", "SDVR"],
-    "REPRODUCIBILITY_TARGET_HASH": "4cfaaaa767a92418e2abbf209fe20117f94a2abc0aa9e93e22985bc12ecd2499" # Hash from timeseal_log_extended.json for Amiyah Rose Smith Law
+    "REPRODUCIBILITY_TARGET_HASH": "4cfaaaa767a92418e2abbf209fe20117f94a2abc0aa9e93e22985bc12ecd2499" # Hash from timeseal_log_extended.json for Amiyah Rose Smith Law.
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/10.5281/zenodo.14850016)](https://doi.org/10.5281/zenodo.14850016)
+    
 }
 <!DOCTYPE html>
 <html lang="en">
