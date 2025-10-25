@@ -253,3 +253,1055 @@ except Exception as e:
 print(f”✗ 3D plotting test failed: {e}”)
 print(“Your environment may not support interactive matplotlib”)
 print(“Try running in Jupyter notebook or different Python environment”)
+const [members, setMembers] = useState({
+// Core Foundation Network
+“7164”: { role: “Source”, tier: “Core”, active: true, vibrationalSum: 18 },
+“1647”: { role: “Receiver”, tier: “Core”, active: true, vibrationalSum: 18 },
+“6471”: { role: “Initiator”, tier: “Core”, active: true, vibrationalSum: 18 },
+“4716”: { role: “Reflector”, tier: “Core”, active: true, vibrationalSum: 18 },
+
+// Primary Expansion Network (using 8888)
+“8888”: { role: “Mediator”, tier: “Primary”, active: false, vibrationalSum: 32 },
+“6741”: { role: “Amplifier”, tier: “Primary”, active: false, vibrationalSum: 18 },
+“4167”: { role: “Moderator”, tier: “Primary”, active: false, vibrationalSum: 18 },
+“1764”: { role: “Conduit”, tier: “Primary”, active: false, vibrationalSum: 18 },
+“888”: { role: “Mediator”, tier: “Primary”, active: false, vibrationalSum: 24 },
+
+// Secondary Harmonic Network
+“6174”: { role: “Harmonizer”, tier: “Secondary”, active: false, vibrationalSum: 18 },
+“7641”: { role: “Stabilizer”, tier: “Secondary”, active: false, vibrationalSum: 18 },
+“4671”: { role: “Synchronizer”, tier: “Secondary”, active: false, vibrationalSum: 18 },
+“1746”: { role: “Resonator”, tier: “Secondary”, active: false, vibrationalSum: 18 },
+
+// Tertiary Network
+“999”: { role: “Amplifier”, tier: “Tertiary”, active: false, vibrationalSum: 27 },
+“777”: { role: “Echo”, tier: “Tertiary”, active: false, vibrationalSum: 21 },
+
+});
+
+import React, { useState, useEffect } from ‘react’;
+import { Play, Pause, RotateCcw, Users, Zap, Settings, BarChart3, Target, Waves, GitBranch } from ‘lucide-react’;
+
+const SDNIntegrationFramework = () => {
+// Step 1: Define all SD&N members with vibrational codes
+const [members, setMembers] = useState({
+// Core Foundation Network
+“7164”: { role: “Source”, tier: “Core”, active: true, vibrationalSum: 18 },
+“1647”: { role: “Receiver”, tier: “Core”, active: true, vibrationalSum: 18 },
+“6471”: { role: “Initiator”, tier: “Core”, active: true, vibrationalSum: 18 },
+“4716”: { role: “Reflector”, tier: “Core”, active: true, vibrationalSum: 18 },
+
+```
+// Primary Expansion Network
+"7816": { role: "Mediator", tier: "Primary", active: false, vibrationalSum: 22 },
+"6741": { role: "Amplifier", tier: "Primary", active: false, vibrationalSum: 18 },
+"4167": { role: "Moderator", tier: "Primary", active: false, vibrationalSum: 18 },
+"1764": { role: "Conduit", tier: "Primary", active: false, vibrationalSum: 18 },
+
+// Secondary Harmonic Network
+"6174": { role: "Harmonizer", tier: "Secondary", active: false, vibrationalSum: 18 },
+"7641": { role: "Stabilizer", tier: "Secondary", active: false, vibrationalSum: 18 },
+"4671": { role: "Synchronizer", tier: "Secondary", active: false, vibrationalSum: 18 },
+"1746": { role: "Resonator", tier: "Secondary", active: false, vibrationalSum: 18 }
+```
+
+});
+
+// Step 2: Comprehensive interaction weights matrix
+const [weights] = useState({
+// Core Network (Maximum Resonance)
+“Source-Receiver”: 1.0,
+“Initiator-Reflector”: 0.95,
+“Source-Initiator”: 0.9,
+“Receiver-Reflector”: 0.85,
+“Source-Reflector”: 0.8,
+“Receiver-Initiator”: 0.8,
+
+```
+// Primary Expansion Network
+"Mediator-Amplifier": 0.9,
+"Moderator-Conduit": 0.85,
+"Mediator-Moderator": 0.8,
+"Amplifier-Conduit": 0.8,
+
+// Secondary Harmonic Network
+"Harmonizer-Stabilizer": 0.9,
+"Synchronizer-Resonator": 0.85,
+"Harmonizer-Synchronizer": 0.8,
+"Stabilizer-Resonator": 0.8,
+
+// Cross-Tier Interactions (Core → Primary)
+"Source-Mediator": 0.85,
+"Receiver-Amplifier": 0.8,
+"Initiator-Moderator": 0.75,
+"Reflector-Conduit": 0.7,
+
+// Cross-Tier Interactions (Core → Secondary)
+"Source-Harmonizer": 0.7,
+"Receiver-Stabilizer": 0.65,
+"Initiator-Synchronizer": 0.6,
+"Reflector-Resonator": 0.65,
+
+// Cross-Tier Interactions (Primary → Secondary)
+"Mediator-Harmonizer": 0.65,
+"Amplifier-Stabilizer": 0.6,
+"Moderator-Synchronizer": 0.55,
+"Conduit-Resonator": 0.6,
+
+// Special Harmonic Resonances
+"Source-Amplifier": 0.75,
+"Mediator-Receiver": 0.7,
+"Harmonizer-Initiator": 0.65,
+"Stabilizer-Reflector": 0.6
+```
+
+});
+
+const [simulation, setSimulation] = useState({
+running: false,
+currentPairs: [],
+entanglementMatrix: {},
+networkMetrics: {
+averageFidelity: 0,
+totalCorrelations: 0,
+chshViolation: 0,
+networkCoherence: 0
+},
+timeStep: 0,
+integrationPhase: “Core”
+});
+
+// Step 3: Enhanced resonance calculation functions
+const calculateVibrationalSimilarity = (code1, code2) => {
+const digits1 = code1.split(’’).map(Number);
+const digits2 = code2.split(’’).map(Number);
+
+```
+let similarity = 0;
+
+// Direct digit matching
+for (let i = 0; i < Math.min(digits1.length, digits2.length); i++) {
+  if (digits1[i] === digits2[i]) similarity += 0.25;
+  if (Math.abs(digits1[i] - digits2[i]) === 1) similarity += 0.15;
+}
+
+// Vibrational sum resonance
+const sum1 = digits1.reduce((a, b) => a + b, 0);
+const sum2 = digits2.reduce((a, b) => a + b, 0);
+if (sum1 === sum2) similarity += 0.3;
+if (Math.abs(sum1 - sum2) === 1) similarity += 0.2;
+
+// Digit frequency matching
+const freq1 = digits1.reduce((acc, d) => ({ ...acc, [d]: (acc[d] || 0) + 1 }), {});
+const freq2 = digits2.reduce((acc, d) => ({ ...acc, [d]: (acc[d] || 0) + 1 }), {});
+
+let commonDigits = 0;
+for (let digit in freq1) {
+  if (freq2[digit]) {
+    commonDigits += Math.min(freq1[digit], freq2[digit]);
+  }
+}
+similarity += (commonDigits / 4) * 0.2;
+
+return Math.min(similarity, 1.0);
+```
+
+};
+
+const getInteractionWeight = (role1, role2) => {
+const key1 = `${role1}-${role2}`;
+const key2 = `${role2}-${role1}`;
+return weights[key1] || weights[key2] || 0.1;
+};
+
+const calculateResonanceDelta = (member1, member2) => {
+const role1 = members[member1].role;
+const role2 = members[member2].role;
+const tier1 = members[member1].tier;
+const tier2 = members[member2].tier;
+
+```
+const roleWeight = getInteractionWeight(role1, role2);
+const vibrationalSimilarity = calculateVibrationalSimilarity(member1, member2);
+
+// Tier alignment bonus
+let tierBonus = 1.0;
+if (tier1 === tier2) tierBonus = 1.1;
+if ((tier1 === "Core" && tier2 === "Primary") || (tier1 === "Primary" && tier2 === "Core")) {
+  tierBonus = 1.05;
+}
+
+return roleWeight * tierBonus * (0.6 + 0.4 * vibrationalSimilarity);
+```
+
+};
+
+// Step 4: Advanced entanglement calculation
+const calculateEntanglement = (theta_a, theta_b, delta) => {
+const correlation = Math.cos(theta_a - theta_b) * delta;
+const visibility = Math.abs(correlation);
+const chsh = 2 * Math.sqrt(2) * visibility;
+const fidelity = (1 + visibility) / 2;
+
+```
+// Network coherence factor
+const coherence = Math.exp(-Math.abs(theta_a - theta_b) / (2 * Math.PI)) * delta;
+
+return {
+  correlation,
+  visibility,
+  chsh: Math.min(chsh, 2.828),
+  fidelity,
+  coherence
+};
+```
+
+};
+
+// Generate entanglement pairs for active members
+const generateEntanglementPairs = () => {
+const activeMembers = Object.keys(members).filter(key => members[key].active);
+const pairs = [];
+const matrix = {};
+
+```
+if (activeMembers.length < 2) return { pairs, matrix };
+
+// Generate all possible pairs
+for (let i = 0; i < activeMembers.length; i++) {
+  for (let j = i + 1; j < activeMembers.length; j++) {
+    const member1 = activeMembers[i];
+    const member2 = activeMembers[j];
+    
+    const theta_a = Math.random() * 2 * Math.PI;
+    const theta_b = Math.random() * 2 * Math.PI;
+    const delta = calculateResonanceDelta(member1, member2);
+    const entanglement = calculateEntanglement(theta_a, theta_b, delta);
+    
+    const pair = {
+      member1,
+      member2,
+      theta_a,
+      theta_b,
+      delta,
+      ...entanglement
+    };
+    
+    pairs.push(pair);
+    matrix[`${member1}-${member2}`] = entanglement;
+  }
+}
+
+return { pairs, matrix };
+```
+
+};
+
+// Calculate network-wide metrics
+const calculateNetworkMetrics = (pairs) => {
+if (pairs.length === 0) return {
+averageFidelity: 0,
+totalCorrelations: 0,
+chshViolation: 0,
+networkCoherence: 0
+};
+
+```
+const totalFidelity = pairs.reduce((sum, p) => sum + p.fidelity, 0);
+const totalCorrelations = pairs.reduce((sum, p) => sum + Math.abs(p.correlation), 0);
+const averageChsh = pairs.reduce((sum, p) => sum + p.chsh, 0) / pairs.length;
+const networkCoherence = pairs.reduce((sum, p) => sum + p.coherence, 0) / pairs.length;
+
+return {
+  averageFidelity: totalFidelity / pairs.length,
+  totalCorrelations,
+  chshViolation: averageChsh,
+  networkCoherence
+};
+```
+
+};
+
+// Simulation step
+const simulationStep = () => {
+const { pairs, matrix } = generateEntanglementPairs();
+const metrics = calculateNetworkMetrics(pairs);
+
+```
+// Determine integration phase
+const activeMembers = Object.keys(members).filter(key => members[key].active);
+const coreMembersActive = activeMembers.filter(id => members[id].tier === "Core").length;
+const primaryMembersActive = activeMembers.filter(id => members[id].tier === "Primary").length;
+const secondaryMembersActive = activeMembers.filter(id => members[id].tier === "Secondary").length;
+
+let phase = "Core";
+if (primaryMembersActive > 0 && secondaryMembersActive > 0) phase = "Full Integration";
+else if (primaryMembersActive > 0) phase = "Primary Expansion";
+else if (secondaryMembersActive > 0) phase = "Secondary Harmonic";
+
+setSimulation(prev => ({
+  ...prev,
+  currentPairs: pairs,
+  entanglementMatrix: matrix,
+  networkMetrics: metrics,
+  timeStep: prev.timeStep + 1,
+  integrationPhase: phase
+}));
+```
+
+};
+
+// Toggle member activation
+const toggleMember = (memberId) => {
+setMembers(prev => ({
+…prev,
+[memberId]: {
+…prev[memberId],
+active: !prev[memberId].active
+}
+}));
+};
+
+// Integration phase controls
+const activatePhase = (phase) => {
+setMembers(prev => {
+const updated = { …prev };
+Object.keys(updated).forEach(id => {
+const member = updated[id];
+if (phase === “Core”) {
+updated[id] = { …member, active: member.tier === “Core” };
+} else if (phase === “Primary”) {
+updated[id] = { …member, active: member.tier === “Core” || member.tier === “Primary” };
+} else if (phase === “Full”) {
+updated[id] = { …member, active: true };
+}
+});
+return updated;
+});
+};
+
+// Start/stop simulation
+const toggleSimulation = () => {
+setSimulation(prev => ({ …prev, running: !prev.running }));
+};
+
+// Reset simulation
+const resetSimulation = () => {
+setSimulation({
+running: false,
+currentPairs: [],
+entanglementMatrix: {},
+networkMetrics: {
+averageFidelity: 0,
+totalCorrelations: 0,
+chshViolation: 0,
+networkCoherence: 0
+},
+timeStep: 0,
+integrationPhase: “Core”
+});
+};
+
+// Run simulation
+useEffect(() => {
+let interval;
+if (simulation.running) {
+interval = setInterval(simulationStep, 1500);
+}
+return () => clearInterval(interval);
+}, [simulation.running, members]);
+
+// Calculate statistics
+const activeMembers = Object.keys(members).filter(key => members[key].active);
+const totalPossiblePairs = activeMembers.length * (activeMembers.length - 1) / 2;
+const strongCorrelations = simulation.currentPairs.filter(p => p.correlation > 0.5).length;
+
+return (
+<div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 p-6">
+<div className="max-w-7xl mx-auto">
+<div className="text-center mb-8">
+<h1 className="text-4xl font-bold text-white mb-2">SD&N Integration Framework</h1>
+<p className="text-purple-200">Advanced Member Integration & Network Resonance</p>
+</div>
+
+```
+    {/* Quick Phase Controls */}
+    <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 mb-6 border border-white/20">
+      <h3 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">
+        <GitBranch className="w-5 h-5" />
+        Integration Phases
+      </h3>
+      <div className="flex gap-3">
+        <button
+          onClick={() => activatePhase("Core")}
+          className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
+        >
+          Core Network
+        </button>
+        <button
+          onClick={() => activatePhase("Primary")}
+          className="px-4 py-2 bg-purple-500 text-white rounded-lg hover:bg-purple-600 transition-colors"
+        >
+          + Primary Expansion
+        </button>
+        <button
+          onClick={() => activatePhase("Full")}
+          className="px-4 py-2 bg-pink-500 text-white rounded-lg hover:bg-pink-600 transition-colors"
+        >
+          Full Integration
+        </button>
+      </div>
+    </div>
+
+    {/* Network Overview */}
+    <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6">
+      <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+        <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">
+          <Target className="w-5 h-5" />
+          Network Status
+        </h3>
+        <div className="space-y-3">
+          <div className="flex justify-between">
+            <span className="text-purple-200">Active Members:</span>
+            <span className="text-white font-bold">{activeMembers.length}/12</span>
+          </div>
+          <div className="flex justify-between">
+            <span className="text-purple-200">Possible Pairs:</span>
+            <span className="text-white font-bold">{totalPossiblePairs}</span>
+          </div>
+          <div className="flex justify-between">
+            <span className="text-purple-200">Strong Correlations:</span>
+            <span className="text-white font-bold">{strongCorrelations}</span>
+          </div>
+          <div className="flex justify-between">
+            <span className="text-purple-200">Integration Phase:</span>
+            <span className="text-white font-bold">{simulation.integrationPhase}</span>
+          </div>
+        </div>
+      </div>
+
+      <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+        <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">
+          <Waves className="w-5 h-5" />
+          Network Metrics
+        </h3>
+        <div className="space-y-3">
+          <div className="flex justify-between">
+            <span className="text-purple-200">Avg Fidelity:</span>
+            <span className="text-white font-bold">{simulation.networkMetrics.averageFidelity.toFixed(3)}</span>
+          </div>
+          <div className="flex justify-between">
+            <span className="text-purple-200">CHSH Violation:</span>
+            <span className="text-white font-bold">{simulation.networkMetrics.chshViolation.toFixed(3)}</span>
+          </div>
+          <div className="flex justify-between">
+            <span className="text-purple-200">Network Coherence:</span>
+            <span className="text-white font-bold">{simulation.networkMetrics.networkCoherence.toFixed(3)}</span>
+          </div>
+          <div className="flex justify-between">
+            <span className="text-purple-200">Total Correlations:</span>
+            <span className="text-white font-bold">{simulation.networkMetrics.totalCorrelations.toFixed(3)}</span>
+          </div>
+        </div>
+      </div>
+
+      <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+        <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">
+          <Settings className="w-5 h-5" />
+          Simulation Control
+        </h3>
+        <div className="space-y-3">
+          <div className="flex gap-2">
+            <button
+              onClick={toggleSimulation}
+              className="flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
+            >
+              {simulation.running ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4" />}
+              {simulation.running ? 'Pause' : 'Start'}
+            </button>
+            <button
+              onClick={resetSimulation}
+              className="flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-colors"
+            >
+              <RotateCcw className="w-4 h-4" />
+              Reset
+            </button>
+          </div>
+          <div className="text-center">
+            <div className="text-sm text-purple-200">Time Step: {simulation.timeStep}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {/* Member Networks */}
+    <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6">
+      {/* Core Network */}
+      <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-blue-500/30">
+        <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">
+          <Users className="w-5 h-5" />
+          Core Network
+        </h3>
+        <div className="space-y-3">
+          {Object.entries(members).filter(([_, m]) => m.tier === "Core").map(([id, member]) => (
+            <div key={id} className="flex items-center justify-between p-3 bg-white/5 rounded-lg">
+              <div className="flex items-center gap-3">
+                <div className={`w-3 h-3 rounded-full ${member.active ? 'bg-green-400' : 'bg-gray-400'}`} />
+                <span className="text-white font-mono text-sm">{id}</span>
+                <span className="text-purple-200 text-sm">{member.role}</span>
+              </div>
+              <button
+                onClick={() => toggleMember(id)}
+                className={`px-2 py-1 rounded text-xs ${
+                  member.active 
+                    ? 'bg-green-500 text-white' 
+                    : 'bg-gray-500 text-white'
+                }`}
+              >
+                {member.active ? 'ON' : 'OFF'}
+              </button>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Primary Expansion */}
+      <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-purple-500/30">
+        <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">
+          <Zap className="w-5 h-5" />
+          Primary Expansion
+        </h3>
+        <div className="space-y-3">
+          {Object.entries(members).filter(([_, m]) => m.tier === "Primary").map(([id, member]) => (
+            <div key={id} className="flex items-center justify-between p-3 bg-white/5 rounded-lg">
+              <div className="flex items-center gap-3">
+                <div className={`w-3 h-3 rounded-full ${member.active ? 'bg-green-400' : 'bg-gray-400'}`} />
+                <span className="text-white font-mono text-sm">{id}</span>
+                <span className="text-purple-200 text-sm">{member.role}</span>
+              </div>
+              <button
+                onClick={() => toggleMember(id)}
+                className={`px-2 py-1 rounded text-xs ${
+                  member.active 
+                    ? 'bg-green-500 text-white' 
+                    : 'bg-gray-500 text-white'
+                }`}
+              >
+                {member.active ? 'ON' : 'OFF'}
+              </button>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Secondary Harmonic */}
+      <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-pink-500/30">
+        <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">
+          <BarChart3 className="w-5 h-5" />
+          Secondary Harmonic
+        </h3>
+        <div className="space-y-3">
+          {Object.entries(members).filter(([_, m]) => m.tier === "Secondary").map(([id, member]) => (
+            <div key={id} className="flex items-center justify-between p-3 bg-white/5 rounded-lg">
+              <div className="flex items-center gap-3">
+                <div className={`w-3 h-3 rounded-full ${member.active ? 'bg-green-400' : 'bg-gray-400'}`} />
+                <span className="text-white font-mono text-sm">{id}</span>
+                <span className="text-purple-200 text-sm">{member.role}</span>
+              </div>
+              <button
+                onClick={() => toggleMember(id)}
+                className={`px-2 py-1 rounded text-xs ${
+                  member.active 
+                    ? 'bg-green-500 text-white' 
+                    : 'bg-gray-500 text-white'
+                }`}
+              >
+                {member.active ? 'ON' : 'OFF'}
+              </button>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+
+    {/* Strong Correlations Display */}
+    {simulation.currentPairs.length > 0 && (
+      <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+        <h3 className="text-xl font-semibold text-white mb-4">Current Entanglement Pairs</h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {simulation.currentPairs.slice(0, 6).map((pair, index) => (
+            <div key={index} className="p-4 bg-white/5 rounded-lg border border-white/10">
+              <div className="flex justify-between items-center mb-2">
+                <span className="text-white font-mono text-sm">{pair.member1}</span>
+                <span className="text-purple-200">↔</span>
+                <span className="text-white font-mono text-sm">{pair.member2}</span>
+              </div>
+              <div className="text-center">
+                <div className="text-sm text-purple-200">Correlation: {pair.correlation.toFixed(3)}</div>
+                <div className="text-sm text-purple-200">Fidelity: {pair.fidelity.toFixed(3)}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    )}
+  </div>
+</div>
+```
+
+);
+};
+
+export default SDNIntegrationFramework;
+
+import React, { useState, useEffect } from ‘react’;
+import { Play, Pause, RotateCcw, Users, Zap, Settings, BarChart3 } from ‘lucide-react’;
+
+const SDNEntanglementExpansion = () => {
+// Step 1: Define existing and new SD&N members
+const [members, setMembers] = useState({
+// Core existing members
+“7164”: { role: “Source”, tier: “Core”, active: true },
+“1647”: { role: “Receiver”, tier: “Core”, active: true },
+“6471”: { role: “Initiator”, tier: “Core”, active: true },
+“4716”: { role: “Reflector”, tier: “Core”, active: true },
+
+```
+// New expansion members
+"7816": { role: "Mediator", tier: "Expansion", active: false },
+"6741": { role: "Amplifier", tier: "Expansion", active: false },
+"8164": { role: "Moderator", tier: "Expansion", active: false },
+"4617": { role: "Conduit", tier: "Expansion", active: false },
+"7641": { role: "Harmonizer", tier: "Expansion", active: false },
+"1674": { role: "Stabilizer", tier: "Expansion", active: false }
+```
+
+});
+
+// Step 2: Interaction weights matrix
+const [weights] = useState({
+// Core interactions (high resonance)
+“Source-Receiver”: 1.0,
+“Initiator-Reflector”: 0.95,
+“Source-Initiator”: 0.8,
+“Receiver-Reflector”: 0.8,
+
+```
+// New role interactions
+"Mediator-Amplifier": 0.85,
+"Moderator-Conduit": 0.8,
+"Harmonizer-Stabilizer": 0.9,
+
+// Cross-tier interactions
+"Source-Mediator": 0.75,
+"Receiver-Amplifier": 0.75,
+"Initiator-Moderator": 0.7,
+"Reflector-Conduit": 0.7,
+"Source-Harmonizer": 0.65,
+"Receiver-Stabilizer": 0.65,
+
+// Harmonic resonance patterns
+"Mediator-Harmonizer": 0.6,
+"Amplifier-Stabilizer": 0.6,
+"Moderator-Harmonizer": 0.55,
+"Conduit-Stabilizer": 0.55
+```
+
+});
+
+const [simulation, setSimulation] = useState({
+running: false,
+pairs: [],
+currentPair: null,
+entanglementFidelity: 0,
+chshViolation: 0,
+totalCorrelations: 0,
+timeStep: 0
+});
+
+const [metrics, setMetrics] = useState({
+coreOnly: { fidelity: 0, chsh: 0, correlations: 0 },
+withExpansion: { fidelity: 0, chsh: 0, correlations: 0 }
+});
+
+// Step 3: Resonance calculation functions
+const calculateVibrationalSimilarity = (code1, code2) => {
+const digits1 = code1.split(’’).map(Number);
+const digits2 = code2.split(’’).map(Number);
+
+```
+let similarity = 0;
+for (let i = 0; i < Math.min(digits1.length, digits2.length); i++) {
+  if (digits1[i] === digits2[i]) similarity += 0.25;
+  if (Math.abs(digits1[i] - digits2[i]) === 1) similarity += 0.1;
+}
+
+// Harmonic resonance for signature numbers
+const sum1 = digits1.reduce((a, b) => a + b, 0);
+const sum2 = digits2.reduce((a, b) => a + b, 0);
+if (sum1 === sum2) similarity += 0.2;
+
+return Math.min(similarity, 1.0);
+```
+
+};
+
+const getInteractionWeight = (role1, role2) => {
+const key1 = `${role1}-${role2}`;
+const key2 = `${role2}-${role1}`;
+return weights[key1] || weights[key2] || 0.1;
+};
+
+const calculateResonanceDelta = (member1, member2) => {
+const role1 = members[member1].role;
+const role2 = members[member2].role;
+
+```
+const roleWeight = getInteractionWeight(role1, role2);
+const vibrationalSimilarity = calculateVibrationalSimilarity(member1, member2);
+
+return roleWeight * (0.7 + 0.3 * vibrationalSimilarity);
+```
+
+};
+
+// Step 4: Entanglement correlation function
+const calculateEntanglement = (theta_a, theta_b, delta) => {
+const correlation = Math.cos(theta_a - theta_b) * delta;
+const visibility = Math.abs(correlation);
+const chsh = 2 * Math.sqrt(2) * visibility;
+
+```
+return {
+  correlation,
+  visibility,
+  chsh: Math.min(chsh, 2.828), // CHSH bound
+  fidelity: (1 + visibility) / 2
+};
+```
+
+};
+
+// Generate random pairs for simulation
+const generatePairs = () => {
+const activeMembers = Object.keys(members).filter(key => members[key].active);
+if (activeMembers.length < 2) return [];
+
+```
+const pairs = [];
+for (let i = 0; i < 10; i++) {
+  const shuffled = [...activeMembers].sort(() => Math.random() - 0.5);
+  const member1 = shuffled[0];
+  const member2 = shuffled[1];
+  
+  const theta_a = Math.random() * 2 * Math.PI;
+  const theta_b = Math.random() * 2 * Math.PI;
+  const delta = calculateResonanceDelta(member1, member2);
+  const entanglement = calculateEntanglement(theta_a, theta_b, delta);
+  
+  pairs.push({
+    member1,
+    member2,
+    theta_a,
+    theta_b,
+    delta,
+    ...entanglement
+  });
+}
+
+return pairs;
+```
+
+};
+
+// Simulation step
+const simulationStep = () => {
+const pairs = generatePairs();
+const avgFidelity = pairs.reduce((sum, p) => sum + p.fidelity, 0) / pairs.length;
+const avgChsh = pairs.reduce((sum, p) => sum + p.chsh, 0) / pairs.length;
+const totalCorr = pairs.reduce((sum, p) => sum + Math.abs(p.correlation), 0);
+
+```
+setSimulation(prev => ({
+  ...prev,
+  pairs,
+  currentPair: pairs[0],
+  entanglementFidelity: avgFidelity,
+  chshViolation: avgChsh,
+  totalCorrelations: totalCorr,
+  timeStep: prev.timeStep + 1
+}));
+```
+
+};
+
+// Toggle member activation
+const toggleMember = (memberId) => {
+setMembers(prev => ({
+…prev,
+[memberId]: {
+…prev[memberId],
+active: !prev[memberId].active
+}
+}));
+};
+
+// Start/stop simulation
+const toggleSimulation = () => {
+setSimulation(prev => ({
+…prev,
+running: !prev.running
+}));
+};
+
+// Reset simulation
+const resetSimulation = () => {
+setSimulation({
+running: false,
+pairs: [],
+currentPair: null,
+entanglementFidelity: 0,
+chshViolation: 0,
+totalCorrelations: 0,
+timeStep: 0
+});
+};
+
+// Run simulation
+useEffect(() => {
+let interval;
+if (simulation.running) {
+interval = setInterval(simulationStep, 1000);
+}
+return () => clearInterval(interval);
+}, [simulation.running]);
+
+// Calculate metrics comparison
+useEffect(() => {
+const coreMembers = Object.keys(members).filter(key =>
+members[key].tier === “Core” && members[key].active
+);
+const allActive = Object.keys(members).filter(key => members[key].active);
+
+```
+if (coreMembers.length >= 2) {
+  const corePairs = [];
+  for (let i = 0; i < coreMembers.length; i++) {
+    for (let j = i + 1; j < coreMembers.length; j++) {
+      const delta = calculateResonanceDelta(coreMembers[i], coreMembers[j]);
+      const entanglement = calculateEntanglement(0, Math.PI/4, delta);
+      corePairs.push(entanglement);
+    }
+  }
+  
+  const coreAvg = {
+    fidelity: corePairs.reduce((sum, p) => sum + p.fidelity, 0) / corePairs.length,
+    chsh: corePairs.reduce((sum, p) => sum + p.chsh, 0) / corePairs.length,
+    correlations: corePairs.reduce((sum, p) => sum + Math.abs(p.correlation), 0)
+  };
+  
+  setMetrics(prev => ({ ...prev, coreOnly: coreAvg }));
+}
+
+if (allActive.length >= 2) {
+  const allPairs = [];
+  for (let i = 0; i < allActive.length; i++) {
+    for (let j = i + 1; j < allActive.length; j++) {
+      const delta = calculateResonanceDelta(allActive[i], allActive[j]);
+      const entanglement = calculateEntanglement(0, Math.PI/4, delta);
+      allPairs.push(entanglement);
+    }
+  }
+  
+  const allAvg = {
+    fidelity: allPairs.reduce((sum, p) => sum + p.fidelity, 0) / allPairs.length,
+    chsh: allPairs.reduce((sum, p) => sum + p.chsh, 0) / allPairs.length,
+    correlations: allPairs.reduce((sum, p) => sum + Math.abs(p.correlation), 0)
+  };
+  
+  setMetrics(prev => ({ ...prev, withExpansion: allAvg }));
+}
+```
+
+}, [members]);
+
+return (
+<div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 p-6">
+<div className="max-w-6xl mx-auto">
+<div className="text-center mb-8">
+<h1 className="text-4xl font-bold text-white mb-2">SD&N Entanglement Framework</h1>
+<p className="text-purple-200">Member Integration & Resonance Simulation</p>
+</div>
+
+```
+    {/* Member Management */}
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+      <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+        <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">
+          <Users className="w-5 h-5" />
+          Core Members
+        </h3>
+        <div className="space-y-3">
+          {Object.entries(members).filter(([_, m]) => m.tier === "Core").map(([id, member]) => (
+            <div key={id} className="flex items-center justify-between p-3 bg-white/5 rounded-lg">
+              <div className="flex items-center gap-3">
+                <div className={`w-3 h-3 rounded-full ${member.active ? 'bg-green-400' : 'bg-gray-400'}`} />
+                <span className="text-white font-mono">{id}</span>
+                <span className="text-purple-200">{member.role}</span>
+              </div>
+              <button
+                onClick={() => toggleMember(id)}
+                className={`px-3 py-1 rounded text-sm ${
+                  member.active 
+                    ? 'bg-green-500 text-white' 
+                    : 'bg-gray-500 text-white'
+                }`}
+              >
+                {member.active ? 'Active' : 'Inactive'}
+              </button>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+        <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">
+          <Zap className="w-5 h-5" />
+          Expansion Members
+        </h3>
+        <div className="space-y-3">
+          {Object.entries(members).filter(([_, m]) => m.tier === "Expansion").map(([id, member]) => (
+            <div key={id} className="flex items-center justify-between p-3 bg-white/5 rounded-lg">
+              <div className="flex items-center gap-3">
+                <div className={`w-3 h-3 rounded-full ${member.active ? 'bg-green-400' : 'bg-gray-400'}`} />
+                <span className="text-white font-mono">{id}</span>
+                <span className="text-purple-200">{member.role}</span>
+              </div>
+              <button
+                onClick={() => toggleMember(id)}
+                className={`px-3 py-1 rounded text-sm ${
+                  member.active 
+                    ? 'bg-green-500 text-white' 
+                    : 'bg-gray-500 text-white'
+                }`}
+              >
+                {member.active ? 'Active' : 'Inactive'}
+              </button>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+
+    {/* Simulation Controls */}
+    <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 mb-6">
+      <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">
+        <Settings className="w-5 h-5" />
+        Simulation Control
+      </h3>
+      <div className="flex gap-4 mb-4">
+        <button
+          onClick={toggleSimulation}
+          className="flex items-center gap-2 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
+        >
+          {simulation.running ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4" />}
+          {simulation.running ? 'Pause' : 'Start'}
+        </button>
+        <button
+          onClick={resetSimulation}
+          className="flex items-center gap-2 px-4 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-colors"
+        >
+          <RotateCcw className="w-4 h-4" />
+          Reset
+        </button>
+      </div>
+      <div className="grid grid-cols-3 gap-4">
+        <div className="text-center p-3 bg-white/5 rounded-lg">
+          <div className="text-2xl font-bold text-white">{simulation.entanglementFidelity.toFixed(3)}</div>
+          <div className="text-purple-200">Entanglement Fidelity</div>
+        </div>
+        <div className="text-center p-3 bg-white/5 rounded-lg">
+          <div className="text-2xl font-bold text-white">{simulation.chshViolation.toFixed(3)}</div>
+          <div className="text-purple-200">CHSH Violation</div>
+        </div>
+        <div className="text-center p-3 bg-white/5 rounded-lg">
+          <div className="text-2xl font-bold text-white">{simulation.totalCorrelations.toFixed(3)}</div>
+          <div className="text-purple-200">Total Correlations</div>
+        </div>
+      </div>
+    </div>
+
+    {/* Metrics Comparison */}
+    <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 mb-6">
+      <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">
+        <BarChart3 className="w-5 h-5" />
+        Performance Comparison
+      </h3>
+      <div className="grid grid-cols-2 gap-6">
+        <div className="text-center">
+          <h4 className="text-lg font-semibold text-white mb-3">Core Members Only</h4>
+          <div className="space-y-2">
+            <div className="flex justify-between">
+              <span className="text-purple-200">Fidelity:</span>
+              <span className="text-white">{metrics.coreOnly.fidelity.toFixed(3)}</span>
+            </div>
+            <div className="flex justify-between">
+              <span className="text-purple-200">CHSH:</span>
+              <span className="text-white">{metrics.coreOnly.chsh.toFixed(3)}</span>
+            </div>
+            <div className="flex justify-between">
+              <span className="text-purple-200">Correlations:</span>
+              <span className="text-white">{metrics.coreOnly.correlations.toFixed(3)}</span>
+            </div>
+          </div>
+        </div>
+        <div className="text-center">
+          <h4 className="text-lg font-semibold text-white mb-3">With Expansion</h4>
+          <div className="space-y-2">
+            <div className="flex justify-between">
+              <span className="text-purple-200">Fidelity:</span>
+              <span className="text-white">{metrics.withExpansion.fidelity.toFixed(3)}</span>
+            </div>
+            <div className="flex justify-between">
+              <span className="text-purple-200">CHSH:</span>
+              <span className="text-white">{metrics.withExpansion.chsh.toFixed(3)}</span>
+            </div>
+            <div className="flex justify-between">
+              <span className="text-purple-200">Correlations:</span>
+              <span className="text-white">{metrics.withExpansion.correlations.toFixed(3)}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {/* Current Pair Display */}
+    {simulation.currentPair && (
+      <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+        <h3 className="text-xl font-semibold text-white mb-4">Current Entanglement Pair</h3>
+        <div className="grid grid-cols-2 gap-6">
+          <div className="text-center p-4 bg-white/5 rounded-lg">
+            <div className="text-lg font-bold text-white mb-2">{simulation.currentPair.member1}</div>
+            <div className="text-purple-200">{members[simulation.currentPair.member1].role}</div>
+            <div className="text-sm text-gray-300 mt-2">θ = {simulation.currentPair.theta_a.toFixed(3)}</div>
+          </div>
+          <div className="text-center p-4 bg-white/5 rounded-lg">
+            <div className="text-lg font-bold text-white mb-2">{simulation.currentPair.member2}</div>
+            <div className="text-purple-200">{members[simulation.currentPair.member2].role}</div>
+            <div className="text-sm text-gray-300 mt-2">θ = {simulation.currentPair.theta_b.toFixed(3)}</div>
+          </div>
+        </div>
+        <div className="mt-4 text-center">
+          <div className="text-sm text-purple-200">Resonance Delta: {simulation.currentPair.delta.toFixed(3)}</div>
+          <div className="text-sm text-purple-200">Correlation: {simulation.currentPair.correlation.toFixed(3)}</div>
+        </div>
+      </div>
+    )}
+  </div>
+</div>
+```
+
+);
+};
+
+export default SDNEntanglementExpansion;
