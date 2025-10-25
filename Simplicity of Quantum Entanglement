@@ -1,0 +1,206 @@
+import numpy as np
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
+import time
+
+# Setup roles, codes, and colors based on SDKP framework
+
+roles = [‘Source’, ‘Initiator’, ‘Receiver’, ‘Reflector’]
+codes = [‘7146’, ‘6471’, ‘4716’, ‘1647’]
+colors = {‘Source’: ‘red’, ‘Initiator’: ‘blue’, ‘Receiver’: ‘green’, ‘Reflector’: ‘gold’}
+
+# Parameters
+
+pair_count = 4
+np.random.seed(42)
+
+# Initialize positions and SDKP parameters
+
+positions = np.random.rand(pair_count, 3) * 10
+directions = (np.random.rand(pair_count, 3) - 0.5) * 0.2
+fidelities = np.clip(np.random.rand(pair_count), 0.75, 1.0)
+
+# SDKP Framework parameters
+
+sizes = np.random.rand(pair_count) * 2 + 1
+densities = np.random.rand(pair_count) * 2 + 1
+kinetics = np.random.rand(pair_count) * 2 + 1
+
+def sdkp_flow(size, density, kinetic):
+“”“SDKP Framework: Size-Density-Kinetic Principle”””
+return size * density * kinetic
+
+def qcc_entropy_modulation(fidelity, harmonic_code):
+“”“QCC (Quantum Computerization Consciousness) entropy modulation”””
+entropy_index = sum(int(d) for d in harmonic_code) % 10
+return fidelity * (1 + 0.1 * entropy_index)
+
+def vei(codeA, codeB):
+“”“Vibrational Entanglement Index”””
+return abs(int(codeA) - int(codeB)) % 10000 / 10000
+
+def create_static_plot(frame_num=0):
+“”“Create a single frame of the simulation”””
+fig = plt.figure(figsize=(12, 8))
+fig.patch.set_facecolor(‘black’)
+ax = fig.add_subplot(111, projection=‘3d’)
+
+```
+ax.set_xlim([0, 12])
+ax.set_ylim([0, 12])
+ax.set_zlim([0, 12])
+ax.set_title("3D Quantum Entanglement Simulation\nSDKP Framework & QCC Integration", 
+            color='white', fontsize=14)
+ax.set_facecolor("black")
+
+# Set axis colors
+ax.xaxis.label.set_color('white')
+ax.yaxis.label.set_color('white')
+ax.zaxis.label.set_color('white')
+ax.tick_params(axis='x', colors='white')
+ax.tick_params(axis='y', colors='white')
+ax.tick_params(axis='z', colors='white')
+
+for i in range(pair_count):
+    # Update positions
+    positions[i] += directions[i] * frame_num * 0.1
+    
+    x1, y1, z1 = positions[i]
+    
+    # Apply SDKP flow
+    T = sdkp_flow(sizes[i], densities[i], kinetics[i])
+    angle = frame_num / 25.0 + i
+    
+    x2 = x1 + np.cos(angle) * T * 0.1
+    y2 = y1 + np.sin(angle) * T * 0.1
+    z2 = z1 + np.cos(angle + np.pi/4) * T * 0.1
+    
+    # Assign roles and codes
+    roleA = roles[i % 4]
+    roleB = roles[(i + 2) % 4]
+    codeA = codes[i % 4]
+    codeB = codes[(i + 2) % 4]
+    colorA = colors[roleA]
+    colorB = colors[roleB]
+    
+    # Apply QCC calculations
+    entropy_mod = qcc_entropy_modulation(fidelities[i], codeA)
+    vib_index = vei(codeA, codeB)
+    effective_fid = np.clip(entropy_mod * (1 - vib_index), 0, 1)
+    
+    # Draw connections
+    connection_width = 1 + 3 * effective_fid
+    ax.plot([x1, x2], [y1, y2], [z1, z2], 
+            color='cyan', linewidth=connection_width, alpha=0.7)
+    
+    # Draw particles
+    particle_size = 50 * (sizes[i] / 3.0)
+    ax.scatter(x1, y1, z1, color=colorA, s=particle_size, alpha=0.8)
+    ax.scatter(x2, y2, z2, color=colorB, s=particle_size, alpha=0.8)
+    
+    # Add labels
+    ax.text(x1, y1, z1 + 0.3, f"{roleA}\n({codeA})", 
+            color='white', fontsize=8, ha='center')
+    ax.text(x2, y2, z2 + 0.3, f"{roleB}\n({codeB})", 
+            color='white', fontsize=8, ha='center')
+    
+    # Special effects
+    if effective_fid > 0.97:
+        ax.plot([x1, x2], [y1, y2], [z1, z2], 
+                color='gold', linewidth=3, alpha=0.9)
+    elif effective_fid > 0.85:
+        ax.plot([x1, x2], [y1, y2], [z1, z2], 
+                color='magenta', linewidth=2, alpha=0.7)
+
+# Add information
+info_text = f"Frame: {frame_num}\nSDKP Flow Active\nQCC Modulation: ON"
+ax.text2D(0.02, 0.98, info_text, transform=ax.transAxes, 
+          color='white', fontsize=10, verticalalignment='top',
+          bbox=dict(boxstyle="round,pad=0.3", facecolor='black', alpha=0.7))
+
+# Attribution
+attribution_text = "SDKP Framework & QCC Principles\nDonald Paul Smith (2025)"
+ax.text2D(0.02, 0.02, attribution_text, transform=ax.transAxes, 
+          color='gray', fontsize=8, verticalalignment='bottom',
+          bbox=dict(boxstyle="round,pad=0.3", facecolor='black', alpha=0.5))
+
+return fig, ax
+```
+
+def run_simulation():
+“”“Run the simulation”””
+print(“Starting 3D Quantum Entanglement Simulation…”)
+print(“Integrating SDKP Framework and QCC Principles…”)
+
+```
+try:
+    # Try animated version first
+    fig = plt.figure(figsize=(12, 8))
+    fig.patch.set_facecolor('black')
+    ax = fig.add_subplot(111, projection='3d')
+    
+    def animate(frame):
+        ax.clear()
+        ax.set_xlim([0, 12])
+        ax.set_ylim([0, 12])
+        ax.set_zlim([0, 12])
+        ax.set_title("3D Quantum Entanglement Simulation\nSDKP Framework & QCC Integration", 
+                    color='white', fontsize=14)
+        ax.set_facecolor("black")
+        
+        # Same plotting logic as static version
+        for i in range(pair_count):
+            positions[i] += directions[i]
+            for j in range(3):
+                if positions[i, j] < 0 or positions[i, j] > 12:
+                    directions[i, j] *= -1
+            
+            x1, y1, z1 = positions[i]
+            T = sdkp_flow(sizes[i], densities[i], kinetics[i])
+            angle = frame / 25.0 + i
+            
+            x2 = x1 + np.cos(angle) * T * 0.1
+            y2 = y1 + np.sin(angle) * T * 0.1
+            z2 = z1 + np.cos(angle + np.pi/4) * T * 0.1
+            
+            roleA = roles[i % 4]
+            roleB = roles[(i + 2) % 4]
+            codeA = codes[i % 4]
+            codeB = codes[(i + 2) % 4]
+            colorA = colors[roleA]
+            colorB = colors[roleB]
+            
+            entropy_mod = qcc_entropy_modulation(fidelities[i], codeA)
+            vib_index = vei(codeA, codeB)
+            effective_fid = np.clip(entropy_mod * (1 - vib_index), 0, 1)
+            
+            connection_width = 1 + 3 * effective_fid
+            ax.plot([x1, x2], [y1, y2], [z1, z2], 
+                    color='cyan', linewidth=connection_width, alpha=0.7)
+            
+            particle_size = 50 * (sizes[i] / 3.0)
+            ax.scatter(x1, y1, z1, color=colorA, s=particle_size, alpha=0.8)
+            ax.scatter(x2, y2, z2, color=colorB, s=particle_size, alpha=0.8)
+            
+            if effective_fid > 0.97:
+                ax.plot([x1, x2], [y1, y2], [z1, z2], 
+                        color='gold', linewidth=3, alpha=0.9)
+    
+    # Try to create animation
+    import matplotlib.animation as animation
+    ani = animation.FuncAnimation(fig, animate, frames=200, interval=100, repeat=True)
+    plt.show()
+    
+except Exception as e:
+    print(f"Animation failed: {e}")
+    print("Creating static plot instead...")
+    
+    # Create static plot
+    fig, ax = create_static_plot(50)  # Show frame 50
+    plt.show()
+```
+
+# Run the simulation
+
+if **name** == “**main**”:
+run_simulation()
