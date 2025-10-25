@@ -2134,3 +2134,83 @@ return vfe1_value
 
 quantum_systems = {
 “IBM_
+Compression
+
+# Language: Python (Flask)
+from flask import Flask, request, jsonify
+from flask_caching import Cache
+from flask_compress import Compress
+
+app = Flask(__name__)
+
+# Enable gzip compression
+Compress(app)
+
+# Configure cache (in-memory for simplicity)
+cache = Cache(app, config={'CACHE_TYPE': 'SimpleCache'})
+
+# Mock ledger dataset
+ledger_data = [{'entry': f'Entry {i}'} for i in range(10000)]
+
+@app.route("/api/ledger")
+def get_ledger():
+    start = int(request.args.get('start', 0))
+    limit = int(request.args.get('limit', 50))
+    # Use caching to avoid recalculating for same page
+    cache_key = f"ledger_{start}_{limit}"
+    cached = cache.get(cache_key)
+    if cached:
+        return jsonify(cached)
+    chunk = ledger_data[start:start+limit]
+    cache.set(cache_key, chunk, timeout=300)  # cache for 5 minutes
+    return jsonify(chunk)
+
+if __name__ == "__main__":
+    app.run(debug=True)
+    // Language: JavaScript (React)
+import React, { useState, useEffect } from 'react';
+import { FixedSizeList as List } from 'react-window';
+import axios from 'axios';
+
+// Skeleton loader for initial feedback
+const SkeletonRow = () => (
+  <div style={{ padding: '10px', borderBottom: '1px solid #ccc', backgroundColor: '#eee' }}>
+    Loading...
+  </div>
+);
+
+const LedgerTable = () => {
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [page, setPage] = useState(0);
+  const pageSize = 50;
+
+  // Fetch data chunks from backend
+  useEffect(() => {
+    const fetchData = async () => {
+      setLoading(true);
+      const response = await axios.get(`/api/ledger?start=${page * pageSize}&limit=${pageSize}`);
+      setData(prev => [...prev, ...response.data]);
+      setLoading(false);
+    };
+    fetchData();
+  }, [page]);
+
+  // Load next page chunk
+  const loadMore = () => setPage(prev => prev + 1);
+
+  if (loading && data.length === 0) return <SkeletonRow />;
+
+  return (
+    <div>
+      <List height={400} itemCount={data.length} itemSize={35} width="100%">
+        {({ index, style }) => (
+          <div style={style}>{data[index].entry}</div>
+        )}
+      </List>
+      <button onClick={loadMore} style={{ marginTop: '10px' }}>Load More</button>
+    </div>
+  );
+};
+
+export default LedgerTable;
