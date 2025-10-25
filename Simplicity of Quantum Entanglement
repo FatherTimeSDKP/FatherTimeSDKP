@@ -204,3 +204,52 @@ except Exception as e:
 
 if **name** == “**main**”:
 run_simulation()
+
+# Test script to check if your environment is ready
+
+import sys
+
+print(“Python version:”, sys.version)
+
+try:
+import numpy as np
+print(“✓ NumPy available:”, np.**version**)
+except ImportError:
+print(“✗ NumPy not installed. Run: pip install numpy”)
+
+try:
+import matplotlib
+import matplotlib.pyplot as plt
+print(“✓ Matplotlib available:”, matplotlib.**version**)
+except ImportError:
+print(“✗ Matplotlib not installed. Run: pip install matplotlib”)
+
+try:
+from mpl_toolkits.mplot3d import Axes3D
+print(“✓ 3D plotting available”)
+except ImportError:
+print(“✗ 3D plotting not available”)
+
+# Simple test plot
+
+try:
+fig = plt.figure(figsize=(8, 6))
+ax = fig.add_subplot(111, projection=‘3d’)
+
+```
+# Test data
+x = [1, 2, 3, 4]
+y = [1, 2, 3, 4]
+z = [1, 2, 3, 4]
+
+ax.scatter(x, y, z, c='red', s=50)
+ax.set_title("Test 3D Plot")
+
+print("✓ 3D plotting test successful")
+plt.show()
+```
+
+except Exception as e:
+print(f”✗ 3D plotting test failed: {e}”)
+print(“Your environment may not support interactive matplotlib”)
+print(“Try running in Jupyter notebook or different Python environment”)
