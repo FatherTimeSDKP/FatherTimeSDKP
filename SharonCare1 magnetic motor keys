@@ -5,3 +5,604 @@ Time to Reach 1% Speed of Light (hours)	1.52
 Total Energy Output (MW)	1.8375000000000003e+17
 Proper Time (Years) Inside SC1 (Moon-Scale)	[100000, 1000000, 10000000, 100000000]
 Dilated Time Experienced Outside (Years) at 90% Light Speed	[229415.73, 2294157.34, 22941573.39, 229415733.87]
+Value
+SC1 Moon-Scale Thrust (N)	4.022892e+25
+SC1 Moon-Scale Acceleration (m/s²)	547.332244897959
+Time to Reach 1% Speed of Light (hours)	1.52
+Total Energy Output (MW)	1.8375000000000003e+17
+Proper Time (Years) Inside SC1 (Moon-Scale)	[100000, 1000000, 10000000, 100000000]
+Dilated Time Experienced Outside (Years) at 90% Light Speed	[229415.73, 2294157.34, 22941573.39, 229415733.87]
+
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+from datetime import datetime, timedelta
+import georinex as gr
+import pymap3d as pm
+from scipy.interpolate import interp1d
+from scipy.optimize import curve_fit
+import statsmodels.api as sm
+from statsmodels.formula.api import ols
+
+# ==============================================
+# GPS SATELLITE DATA ANALYSIS FOR SDKP TESTING
+# ==============================================
+
+class SDKPGPSAnalysis:
+    """
+    Class for analyzing GPS satellite data to test the SDKP theory
+    """
+    def __init__(self):
+        # Constants
+        self.c = 299792458  # speed of light in m/s
+        self.GM = 3.986004418e14  # Earth's gravitational parameter (m³/s²)
+        self.omega_e = 7.2921151467e-5  # Earth's rotation rate (rad/s)
+        self.R_earth = 6378137.0  # Earth's equatorial radius (m)
+        
+        # Reference values for SDKP model
+        self.D0 = 5515.0  # Earth's average density (kg/m³)
+        self.R0 = self.omega_e  # Earth's rotation rate as reference
+        self.S0 = self.R_earth  # Earth's radius as reference scale
+        
+        # Initialize data containers
+        self.nav_data = None
+        self.clock_data = None
+        self.processed_data = None
+        
+    def load_rinex_data(self, nav_file, clock_file=None):
+        """
+        Load RINEX navigation and clock files
+        """
+        print(f"Loading navigation data from {nav_file}...")
+        self.nav_data = gr.load(nav_file)
+        
+        if clock_file:
+            print(f"Loading clock data from {clock_file}...")
+            self.clock_data = gr.load(clock_file)
+            
+        print("Data loaded successfully.")
+        
+    def process_satellite_data(self, prn, start_time, end_time, interval=30):
+        """
+        Process satellite data for a specific PRN and time range
+        
+        Parameters:
+        - prn: Satellite PRN number (e.g., 'G01')
+        - start_time: Start time (datetime object)
+        - end_time: End time (datetime object)
+        - interval: Time interval in seconds
+        """
+        print(f"Processing data for satellite {prn} from {start_time} to {end_time}...")
+        
+        # Generate time points
+        time_points = []
+        current_time = start_time
+        while current_time <= end_time:
+            time_points.append(current_time)
+            current_time += timedelta(seconds=interval)
+        
+        # Extract ephemeris data for the satellite
+        sat_data = self.nav_data.sel(sv=prn)
+        
+        # Initialize results dataframe
+        results = []
+        
+        for t in time_points:
+            # Find closest ephemeris data
+            # In a real implementation, we would interpolate between ephemeris points
+            # or use the satellite's equation of motion
+            
+            # Calculate satellite position and velocity (simplified)
+            pos_ecef, vel_ecef = self._calculate_sat_pos_vel(sat_data, t)
+            
+            if pos_ecef is not None:
+                # Calculate derived parameters
+                r = np.linalg.norm(pos_ecef)  # distance from Earth center
+                v = np.linalg.norm(vel_ecef)  # velocity magnitude
+                
+                # Calculate parameters for SDKP model
+                # 1. Lorentz factor (standard relativistic correction)
+                lorentz_factor = 1.0 / np.sqrt(1.0 - (v/self.c)**2)
+                
+                # 2. Gravitational time dilation (standard GR correction)
+                gravity_potential = -self.GM / r
+                gravity_factor = 1.0 / np.sqrt(1.0 + (2.0 * gravity_potential) / (self.c**2))
+                
+                # 3. SDKP specific parameters
+                # Density proxy: Use gravitational potential as proxy for density effect
+                D_proxy = self.D0 * (self.R_earth / r)**3  # Simplified density model
+                
+                # Rotation: Calculate angular velocity component
+                # This is a simplification - in reality we would compute frame dragging effects
+                R_proxy = self.omega_e
+                
+                # Scale: Use distance from Earth's center
+                S_proxy = r
+                
+                # Standard relativistic time dilation (SR + GR)
+                std_time_dilation = lorentz_factor * gravity_factor
+                
+                # Store results
+                results.append({
+                    'time': t,
+                    'x': pos_ecef[0],
+                    'y': pos_ecef[1],
+                    'z': pos_ecef[2],
+                    'vx': vel_ecef[0],
+                    'vy': vel_ecef[1],
+                    'vz': vel_ecef[2],
+                    'r': r,
+                    'v': v,
+                    'lorentz_factor': lorentz_factor,
+                    'gravity_factor': gravity_factor,
+                    'std_time_dilation': std_time_dilation,
+                    'D_proxy': D_proxy,
+                    'R_proxy': R_proxy,
+                    'S_proxy': S_proxy,
+                    'D_norm': D_proxy / self.D0,
+                    'R_norm': R_proxy / self.R0,
+                    'S_norm': S_proxy / self.S0
+                })
+        
+        # Convert to dataframe
+        self.processed_data = pd.DataFrame(results)
+        print(f"Processed {len(self.processed_data)} time points.")
+        
+        return self.processed_data
+    
+    def simulate_clock_offsets(self, alpha=0.02, beta=0.03, gamma=0.05, noise_level=1e-12):
+        """
+        Simulate GPS clock offsets based on SDKP model
+        
+        Parameters:
+        - alpha: Density coefficient
+        - beta: Rotation coefficient
+        - gamma: Scale coefficient
+        - noise_level: Standard deviation of clock noise in seconds
+        """
+        if self.processed_data is None:
+            raise ValueError("No processed data available. Run process_satellite_data first.")
+        
+        # Calculate SDKP time dilation factor
+        self.processed_data['sdkp_factor'] = (
+            self.processed_data['std_time_dilation'] * 
+            (1 + alpha * self.processed_data['D_norm']) *
+            (1 + beta * self.processed_data['R_norm']) *
+            (self.processed_data['S_norm'])**gamma
+        )
+        
+        # Calculate clock differences (SR+GR vs SDKP)
+        # Convert to nanoseconds for easier interpretation
+        self.processed_data['std_clock_offset'] = (self.processed_data['std_time_dilation'] - 1) * 1e9
+        self.processed_data['sdkp_clock_offset'] = (self.processed_data['sdkp_factor'] - 1) * 1e9
+        self.processed_data['clock_difference'] = self.processed_data['sdkp_clock_offset'] - self.processed_data['std_clock_offset']
+        
+        # Add realistic measurement noise
+        self.processed_data['measured_offset'] = (
+            self.processed_data['sdkp_clock_offset'] + 
+            np.random.normal(0, noise_level * 1e9, len(self.processed_data))
+        )
+        
+        print("Simulated clock offsets calculated.")
+        return self.processed_data
+    
+    def fit_sdkp_model(self):
+        """
+        Fit the SDKP model to the simulated data and compare with standard relativity
+        """
+        if self.processed_data is None or 'measured_offset' not in self.processed_data.columns:
+            raise ValueError("No simulated clock data available.")
+        
+        # Create the dependent variable
+        # We subtract the standard relativistic prediction
+        self.processed_data['Y'] = (
+            (self.processed_data['measured_offset'] * 1e-9 + 1) / 
+            self.processed_data['std_time_dilation']
+        )
+        
+        # Take natural log
+        self.processed_data['log_Y'] = np.log(self.processed_data['Y'])
+        
+        # Create independent variables
+        X = pd.DataFrame({
+            'D_norm': self.processed_data['D_norm'],
+            'R_norm': self.processed_data['R_norm'],
+            'log_S': np.log(self.processed_data['S_norm'])
+        })
+        
+        # Fit the model
+        model = sm.OLS(self.processed_data['log_Y'], sm.add_constant(X)).fit()
+        print("\nSDKP Model Fit Results:")
+        print(model.summary())
+        
+        # Extract coefficients
+        const = model.params['const']
+        alpha_est = model.params['D_norm']
+        beta_est = model.params['R_norm']
+        gamma_est = model.params['log_S']
+        
+        print("\nEstimated SDKP Parameters:")
+        print(f"Alpha (density): {alpha_est:.6f} (p-value: {model.pvalues['D_norm']:.4e})")
+        print(f"Beta (rotation): {beta_est:.6f} (p-value: {model.pvalues['R_norm']:.4e})")
+        print(f"Gamma (scale): {gamma_est:.6f} (p-value: {model.pvalues['log_S']:.4e})")
+        
+        # Compare model fit
+        # Standard relativity model: just constant
+        std_model = sm.OLS(self.processed_data['log_Y'], sm.add_constant(pd.DataFrame(index=X.index))).fit()
+        
+        print("\nModel Comparison:")
+        print(f"Standard relativity R²: {std_model.rsquared:.6f}")
+        print(f"SDKP model R²: {model.rsquared:.6f}")
+        print(f"Improvement: {model.rsquared - std_model.rsquared:.6f}")
+        
+        # Calculate AIC and BIC
+        print(f"Standard relativity AIC: {std_model.aic:.2f}")
+        print(f"SDKP model AIC: {model.aic:.2f}")
+        print(f"Standard relativity BIC: {std_model.bic:.2f}")
+        print(f"SDKP model BIC: {model.bic:.2f}")
+        
+        return model
+    
+    def plot_results(self, save_path=None):
+        """
+        Plot the results of the SDKP analysis
+        """
+        if self.processed_data is None or 'measured_offset' not in self.processed_data.columns:
+            raise ValueError("No simulated clock data available.")
+        
+        fig, axes = plt.subplots(2, 2, figsize=(14, 12))
+        
+        # Plot 1: Satellite trajectory
+        ax = axes[0, 0]
+        ax.plot(self.processed_data['x'] / 1000, self.processed_data['y'] / 1000, '.-')
+        ax.set_xlabel('X (km)')
+        ax.set_ylabel('Y (km)')
+        ax.set_title('Satellite Trajectory (XY Plane)')
+        ax.grid(True)
+        
+        # Plot 2: Time dilation factors
+        ax = axes[0, 1]
+        ax.plot(self.processed_data['time'], self.processed_data['std_time_dilation'], 
+                label='Standard (SR+GR)', linewidth=2)
+        ax.plot(self.processed_data['time'], self.processed_data['sdkp_factor'], 
+                label='SDKP', linewidth=2, linestyle='--')
+        ax.set_xlabel('Time')
+        ax.set_ylabel('Time Dilation Factor')
+        ax.set_title('Time Dilation Comparison')
+        ax.legend()
+        ax.grid(True)
+        
+        # Plot 3: Clock offsets
+        ax = axes[1, 0]
+        ax.plot(self.processed_data['time'], self.processed_data['std_clock_offset'], 
+                label='Standard (SR+GR)', linewidth=2)
+        ax.plot(self.processed_data['time'], self.processed_data['measured_offset'], 
+                label='Measured (with noise)', marker='.', linestyle='', alpha=0.5)
+        ax.set_xlabel('Time')
+        ax.set_ylabel('Clock Offset (ns)')
+        ax.set_title('Clock Offset Comparison')
+        ax.legend()
+        ax.grid(True)
+        
+        # Plot 4: Clock difference (SDKP - Standard)
+        ax = axes[1, 1]
+        ax.plot(self.processed_data['time'], self.processed_data['clock_difference'], 
+                linewidth=2)
+        ax.axhline(y=0, color='r', linestyle='--')
+        ax.set_xlabel('Time')
+        ax.set_ylabel('Difference (ns)')
+        ax.set_title('SDKP - Standard Clock Offset')
+        ax.grid(True)
+        
+        plt.tight_layout()
+        if save_path:
+            plt.savefig(save_path)
+            print(f"Saved plot to {save_path}")
+        plt.show()
+    
+    def _calculate_sat_pos_vel(self, sat_data, time):
+        """
+        Calculate satellite position and velocity at a given time
+        This is a simplified implementation - a real one would use 
+        the equations of motion for GPS satellites
+        """
+        # In real implementation, this would use the GPS satellite equations of motion
+        # to calculate position and velocity from ephemeris data
+        
+        # For demonstration, we'll return simplified values
+        # In a full implementation, we would select the appropriate ephemeris
+        # and calculate the precise position and velocity
+        
+        # Example calculation (simplified)
+        # Semi-major axis
+        a = 26600000.0  # typical GPS orbit altitude (m)
+        
+        # Calculate position and velocity based on a circular orbit
+        # with random phase for demonstration
+        phase = hash(str(time)) % 1000 / 1000.0 * 2 * np.pi
+        
+        # Position in ECEF coordinates
+        x = a * np.cos(phase)
+        y = a * np.sin(phase)
+        z = 0.0  # simplified to equatorial orbit
+        
+        # Velocity in ECEF coordinates
+        v_orbit = np.sqrt(self.GM / a)  # orbital velocity
+        vx = -v_orbit * np.sin(phase)
+        vy = v_orbit * np.cos(phase)
+        vz = 0.0
+        
+        pos = np.array([x, y, z])
+        vel = np.array([vx, vy, vz])
+        
+        return pos, vel
+
+
+# Demonstration of usage 
+# (note: real RINEX files would be needed for actual analysis)
+def demonstrate_sdkp_gps_analysis():
+    # Create an instance of the analysis class
+    analyzer = SDKPGPSAnalysis()
+    
+    # Since we don't have actual RINEX files, we'll simulate the process
+    print("Note: This is a demonstration without actual RINEX files.")
+    print("In a real analysis, you would load RINEX navigation and clock files.")
+    
+    # Set up simulation parameters
+    prn = 'G01'
+    start_time = datetime(2025, 5, 15, 0, 0, 0)
+    end_time = datetime(2025, 5, 15, 4, 0, 0)
+    interval = 300  # 5 minutes
+    
+    # Process satellite data (simulated)
+    print(f"\nSimulating satellite data for {prn} on May 15, 2025...")
+    analyzer.process_satellite_data(prn, start_time, end_time, interval)
+    
+    # Set SDKP parameters and add measurement noise
+    alpha = 0.02  # density effect
+    beta = 0.03   # rotation effect
+    gamma = 0.05  # scale effect
+    noise_level = 1e-11  # 10 picoseconds (realistic for GPS clocks)
+    
+    print(f"\nSimulating clock offsets with SDKP parameters:")
+    print(f"α = {alpha}, β = {beta}, γ = {gamma}")
+    analyzer.simulate_clock_offsets(alpha, beta, gamma, noise_level)
+    
+    # Fit the SDKP model to the simulated data
+    print("\nFitting SDKP model to simulated data...")
+    model = analyzer.fit_sdkp_model()
+    
+    # Plot results
+    print("\nGenerating plots...")
+    analyzer.plot_results("sdkp_gps_analysis.png")
+    
+    # Report conclusion
+    print("\n===== CONCLUSION =====")
+    print("If SDKP theory is correct, we would expect to see systematic differences")
+    print("between measured GPS clock offsets and predictions from standard relativity.")
+    print("\nThese differences would correlate with:")
+    print("1. Density proxy (related to gravitational potential)")
+    print("2. Rotation effects")
+    print("3. Scale (distance from Earth's center)")
+    print("\nThe statistical significance of our estimated parameters indicates")
+    print("whether the SDKP theory provides a better explanation of GPS timing")
+    print("than standard relativity alone.")
+
+
+# Run the demonstration
+if __name__ == "__main__":
+    demonstrate_sdkp_gps_analysis()
+
+
+# ======================================
+# EXPERIMENTAL PROTOCOL DOCUMENT
+# ======================================
+
+def generate_experimental_protocol():
+    """
+    Generate a detailed experimental protocol for testing SDKP with GPS data
+    """
+    protocol = """
+# Experimental Protocol: Testing SDKP with GPS Satellite Data
+
+## 1. Research Question
+
+Can the Scale-Density Kinematic Principle (SDKP) better explain observed GPS satellite clock offsets than standard relativistic corrections?
+
+## 2. Hypothesis
+
+H₀: The SDKP parameters (α, β, γ) are all zero, indicating no effect beyond standard relativity.
+H₁: At least one SDKP parameter is non-zero, indicating additional effects beyond standard relativity.
+
+## 3. Data Requirements
+
+### 3.1 GPS Data Sources
+- **RINEX Navigation Files**: Contain satellite ephemeris data (position, velocity)
+- **RINEX Clock Files**: Contain precise clock offset measurements
+- **IGS Products**: International GNSS Service precise orbit and clock solutions
+
+### 3.2 Temporal Coverage
+- Minimum of 30 days of continuous data
+- Data should cover various orbital configurations and seasons
+
+### 3.3 Satellite Selection
+- All operational GPS satellites (PRN 01-32)
+- Special focus on satellites with different:
+  - Orbital planes (varying density environments)
+  - Inclinations (varying rotation effects)
+  - Block types (varying physical sizes)
+
+## 4. Measurement Variables
+
+### 4.1 Independent Variables
+- **Velocity (V)**: Satellite velocity relative to Earth-centered inertial frame
+- **Density Proxy (D)**: Local gravitational potential as density proxy
+- **Rotation (R)**: Angular velocity components
+- **Scale (S)**: Distance from Earth's center
+
+### 4.2 Dependent Variable
+- **Clock Offset**: Difference between measured clock time and reference time
+
+### 4.3 Control Variables
+- **Satellite Block Type**: Different generations have different clock technologies
+- **Solar Activity**: Can affect clock performance
+- **Earth's Shadow**: Thermal effects during eclipse periods
+
+## 5. Data Processing Methodology
+
+### 5.1 Pre-processing
+1. Download RINEX navigation and clock files
+2. Filter for quality and continuity
+3. Calculate precise satellite positions and velocities
+4. Compute standard relativistic corrections
+
+### 5.2 SDKP Parameter Calculation
+1. Calculate normalized density proxy (D/D₀)
+2. Calculate normalized rotation parameter (R/R₀)
+3. Calculate normalized scale parameter (S/S₀)
+
+### 5.3 Statistical Analysis
+1. Calculate residuals after applying standard relativistic corrections
+2. Fit SDKP model to residuals
+3. Test significance of SDKP parameters
+4. Compare model fit metrics (R², AIC, BIC)
+
+## 6. Expected Outcomes
+
+### 6.1 If SDKP is Valid
+- Significant non-zero values for α, β, or γ
+- Improved fit to observed clock offsets compared to standard relativity
+- Systematic patterns in residuals that correlate with SDKP parameters
+
+### 6.2 If SDKP is Invalid
+- SDKP parameters statistically indistinguishable from zero
+- No improvement in fit metrics over standard relativity
+- Random distribution of residuals with no correlation to SDKP parameters
+
+## 7. Validation Approach
+
+### 7.1 Cross-validation
+- Split data into training and test sets
+- Validate parameter estimates across different time periods
+- Check consistency across different satellites
+
+### 7.2 Alternative Explanations
+- Test against known error sources (atmospheric effects, hardware delays)
+- Compare with other alternative theories
+
+### 7.3 Sensitivity Analysis
+- Vary reference values (D₀, R₀, S₀)
+- Test different functional forms of the SDKP model
+
+## 8. Equipment and Resources
+
+### 8.1 Computing Resources
+- High-performance computing cluster for orbit determination
+- Storage for massive RINEX datasets (>100GB)
+- Specialized GNSS processing software
+
+### 8.2 Data Sources
+- NASA CDDIS archive
+- IGS data centers
+- Regional GNSS networks
+
+### 8.3 Software Tools
+- RTKLIB for RINEX processing
+- GIPSY-OASIS or GAMIT-GLOBK for precise orbit determination
+- Custom SDKP analysis software (Python-based)
+
+## 9. Implementation Timeline
+
+1. **Month 1**: Data collection and preparation
+2. **Month 2**: Standard relativistic analysis
+3. **Month 3**: SDKP model implementation and testing
+4. **Month 4**: Statistical analysis and validation
+5. **Month 5**: Review, refinement, and documentation
+
+## 10. Error Sources and Mitigation
+
+### 10.1 Known Error Sources
+- Satellite clock instability: Use ensemble averaging
+- Ionospheric delay: Use dual-frequency corrections
+- Tropospheric delay: Apply tropospheric models
+- Multipath effects: Filter observations with high quality indicators
+
+### 10.2 Statistical Considerations
+- Account for autocorrelation in time series data
+- Handle outliers appropriately
+- Consider heteroskedasticity in measurement errors
+
+## 11. Ethical Considerations
+
+- All data used is publicly available
+- No interference with operational GPS system
+- Results to be openly shared with scientific community
+
+## 12. Reporting and Documentation
+
+- Maintain detailed processing logs
+- Document all assumptions and approximations
+- Prepare findings for peer-reviewed publication
+- Make analysis code available as open source
+
+## 13. Quality Assurance
+
+- Cross-check orbital calculations with IGS products
+- Validate clock offset measurements against official GPS performance reports
+- Implement independent verification of statistical analysis
+
+## 14. Contingency Plans
+
+- If GPS data quality is insufficient: Extend observation period
+- If results are inconclusive: Refine model or increase data volume
+- If systematic errors discovered: Recalibrate and reprocess
+
+## 15. References
+
+1. Standard GPS Interface Specification (IS-GPS-200K)
+2. IGS Analysis Center Coordinator products and reports
+3. RINEX format specification version 3.04
+4. IERS Conventions (2010)
+"""
+    return protocol
+
+# Generate the protocol document
+print(generate_experimental_protocol())
+// SDKP-QCC Key Validator
+// Author: Donald Paul Smith aka Father Time
+
+function isValidSDKPKey(key) {
+  const regex = /^sdkp-(11|12|19)-\d{4}-qcc-(\d{8})-([α-ζ])[a-f0-9]{12}$/;
+  return regex.test(key);
+}
+
+function getKeyMetadata(key) {
+  if (!isValidSDKPKey(key)) return null;
+
+  const parts = key.split("-");
+  return {
+    scaleDomain: parts[1],
+    collapseCode: parts[2],
+    timestamp: parts[4],
+    suffixHash: parts[5]
+  };
+}
+
+// Example usage
+const testKey = "sdkp-12-9999-qcc-20250601-ζ02b138be5b";
+console.log("Valid Key?", isValidSDKPKey(testKey));
+console.log("Metadata:", getKeyMetadata(testKey));
+
+{
+  "name": "FatherTime SDKP Scientific IP Token",
+  "description": "This NFT certifies timestamped authorship and licensing of Donald Paul Smith’s SDKP, SD&N, EOS, and QCC scientific frameworks. Enforced under blockchain governance with full commercial rights.",
+  "image": "ipfs://<CID-for-visual>",
+  "license": "ipfs://<CID-for-license>",
+  "timestamp": "2025-05-19",
+  "author": "Donald Paul Smith",
+  "holders": ["Amiyah Rose Smith", "Dallas Paul Smith"],
+  "royalty": "17.5%",
+  "commercial_rights": "Yes, sublicensing approved",
+  "location": "Florida, United States",
+  "signature": "ipfs://<CID-or-hash-of-signature>"
+}
