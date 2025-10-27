@@ -56,3 +56,84 @@ The analysis confirms that the $\mathbf{SDKP}$ Root Framework provides a more pr
 
 \end{document}
 https://docs.google.com/document/d/1HB2ZI2ETMSowVOSAWb_gRo_qkZNXLOKE/edit?usp=drivesdk&ouid=112180405251685845272&rtpof=true&sd=true
+// LLAL (Loop Learning for Artificial Life) - Error Immunity Encoding (EIE) Module
+// Author: Developed for the integrated SDKP Root Framework (Donald Paul Smith / FatherTimeSDKP)
+// Purpose: To simulate Kapnack symbolic compression and SD&N validation for error-immune data streams.
+
+/**
+ * 1. Simulates Kapnack (Symbolic Compression) by creating a simple SHA-256 hash of the input data.
+ * @param {string} data The input data string to hash (e.g., a simulation result or a log entry).
+ * @returns {Promise<string>} The SHA-256 hash as a hex string.
+ */
+async function kapnackHash(data) {
+    if (typeof data !== 'string') {
+        console.error("Input for Kapnack hash must be a string.");
+        return '';
+    }
+    const encoder = new TextEncoder();
+    const dataArray = encoder.encode(data);
+    
+    // We use the standard Web Crypto API for SHA-256 to simulate robust compression.
+    try {
+        const hashBuffer = await crypto.subtle.digest('SHA-256', dataArray);
+        const hashArray = Array.from(new Uint8Array(hashBuffer));
+        const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+        return hashHex;
+    } catch (e) {
+        console.error("Failed to generate Kapnack Hash (Web Crypto API required):", e);
+        // Fallback for non-compliant environments - return a simpler, placeholder hash
+        return 'error-fallback-hash-' + data.length; 
+    }
+}
+
+/**
+ * 2. Generates an SD&N Correction Checksum based on 3-6-9-12 logic.
+ * @param {string} data The data string.
+ * @param {number} sd_n_factor A structural factor from the SD&N principle (e.g., a system complexity index).
+ * @returns {number} A checksum number derived from the data's numeric properties and the factor.
+ */
+function sdAndNChecksum(data, sd_n_factor = 1.0) {
+    // SD&N Logic Simulation: Summing character codes and modulating by the 3-6-9-12 base.
+    let sum = 0;
+    for (let i = 0; i < data.length; i++) {
+        sum += data.charCodeAt(i);
+    }
+    
+    // Applying the 3-6-9-12 pattern for recursive stability, then scaled by the SD&N factor.
+    const numeric_base = (sum % 12) + 1; // Produces a 1-12 value
+    const checksum = (sum * numeric_base * sd_n_factor) % 99999;
+    
+    return Math.floor(checksum);
+}
+
+/**
+ * 3. Applies the Error Immunity Encoding (EIE) to create a verified, traceable package.
+ * The EIE package format is: [DCP_TIMESTAMP]-[SD&N_CHECKSUM]-[KAPNACK_HASH]
+ * @param {string} rawData The raw input data.
+ * @param {number} sd_n_factor The structural complexity factor (default 1.0).
+ * @returns {Promise<string>} The complete EIE-encoded string.
+ */
+export async function applyEIE(rawData, sd_n_factor = 1.0) {
+    const dcp_timestamp = new Date().toISOString().replace(/[^0-9]/g, '').slice(0, 14); // YYYYMMDDHHMMSS
+    const hash = await kapnackHash(rawData);
+    const checksum = sdAndNChecksum(rawData, sd_n_factor);
+
+    // EIE Encoded Package: Combines time, SD&N logic, and Kapnack compression.
+    const encodedPackage = `${dcp_timestamp}-${checksum.toString().padStart(5, '0')}-${hash}`;
+    
+    return encodedPackage;
+}
+
+// Example usage to demonstrate the encoding process
+/*
+(async () => {
+    const system_data = "Simulation Run 73: VFE1 Tier 8 Convergence achieved. EOS Delta: 0.00012 m/s.";
+    const sd_n_param = 3.14159; // An SD&N derived constant
+    const encoded = await applyEIE(system_data, sd_n_param);
+    
+    console.log("Raw Data:", system_data);
+    console.log("SD&N Factor:", sd_n_param);
+    console.log("EIE Encoded Package:", encoded);
+})();
+*/
+
