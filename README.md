@@ -1,7 +1,12 @@
 — FatherTimeSDKP-Core 
 
 ⸻ https://osf.oi/ct75m/
-
+APA
+Smith, D. P. (2025, September 24). FatherTimeSDKP Integrated Master fra. https://doi.org/10.17605/OSF.IO/T9AEB
+MLA
+Smith, Donald P. “Fathertimesdkp Integrated Master Fra.” OSF, 24 Sept. 2025. Web.
+Chicago
+Smith, Donald P. 2025. “Fathertimesdkp Integrated Master Fra.” OSF. September 24. doi:10.17605/OSF.IO/T9AEB.
 
 # 🜂 FatherTimeSDKP-Core  
 ### Unified Quantum–Computational Framework by Donald Paul Smith (aka *FatherTime*, FatherTimes369v)
