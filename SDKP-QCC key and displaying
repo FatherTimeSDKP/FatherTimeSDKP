@@ -1,0 +1,146 @@
+import React, { useState, useEffect } from 'react';
+
+// Mandated global variables for Firebase (required boilerplate for Canvas)
+const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
+const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : {};
+const initialAuthToken = typeof __initial_auth_token !== 'undefined' ? __initial_auth_token : null;
+
+// Mock data integration based on uploaded metadata files
+const MOCK_NFT_METADATA = {
+  name: "FatherTime SDKP Scientific IP Token",
+  author: "Donald Paul Smith",
+  royalty: "17.5%",
+  license: "Digital Crystal Protocol Law",
+  verification: "May 18, 2025, 6:46:53 PM UTC",
+  ipfs: "QmW2cGzkRT3Xmqjjr6n5qFeFwVXPnPqdSbTwHoVzZGfRex",
+  tx_hash: "0xaae1d1453fdaed71fa18e8a365621c1ed5cd3420b44ea71da7ab87e3c2221e1d",
+};
+
+// --- SDKP-QCC Key Validator Logic from sdkp_key_validator.js ---
+function isValidSDKPKey(key) {
+  // Regex ensures key matches the structure: sdkp-(11|12|19)-[4 digits]-qcc-[8 digits (timestamp)]-[Greek letter + 12 hex chars]
+  const regex = /^sdkp-(11|12|19)-\d{4}-qcc-(\d{8})-([α-ζ])[a-f0-9]{12}$/;
+  return regex.test(key);
+}
+
+function getKeyMetadata(key) {
+  if (!isValidSDKPKey(key)) return null;
+
+  const parts = key.split("-");
+  return {
+    scaleDomain: parts[1], // e.g., 12
+    collapseCode: parts[2], // e.g., 9999
+    timestamp: parts[4],   // e.g., 20250601
+    suffixHash: parts[5]   // e.g., ζ02b138be5b
+  };
+}
+// -----------------------------------------------------------------
+
+const StatCard = ({ title, value, isCritical = false }) => (
+  <div className={`p-4 rounded-xl shadow-lg transition-all duration-300 ${isCritical ? 'bg-indigo-700/70 border-2 border-indigo-400' : 'bg-gray-700/50 border border-gray-600'}`}>
+    <p className="text-sm font-light text-gray-300">{title}</p>
+    <p className={`mt-1 text-xl font-bold ${isCritical ? 'text-indigo-200' : 'text-white'}`}>{value}</p>
+  </div>
+);
+
+const App = () => {
+  const [keyInput, setKeyInput] = useState('');
+  const [keyData, setKeyData] = useState(null);
+  const [isReady, setIsReady] = useState(false);
+
+  // Placeholder for Firebase/Auth initialization (required for the environment)
+  useEffect(() => {
+    // This is where Firebase initialization and auth would happen.
+    // We set isReady to true to allow the component to render, fulfilling the environment requirement.
+    setIsReady(true);
+  }, []);
+
+  const handleValidation = () => {
+    if (isValidSDKPKey(keyInput)) {
+      setKeyData(getKeyMetadata(keyInput));
+    } else {
+      setKeyData(false);
+    }
+  };
+
+  const statusColor = keyData === null ? 'text-gray-400' : (keyData ? 'text-green-400' : 'text-red-400');
+  const statusMessage = keyData === null ? 'Enter Key Above' : (keyData ? 'Key Validated: SDKP-QCC Connection Confirmed' : 'Invalid Key: Does Not Meet SDKP-QCC Protocol');
+
+  if (!isReady) {
+    return <div className="flex justify-center items-center h-screen bg-gray-900 text-white">Loading Auth Context...</div>;
+  }
+
+  return (
+    <div className="min-h-screen bg-gray-900 text-white font-sans p-4 sm:p-8">
+      <header className="text-center mb-8">
+        <h1 className="text-3xl sm:text-4xl font-extrabold text-indigo-400 mb-2">
+          Digital Crystal Protocol (DCP) Validator
+        </h1>
+        <p className="text-md text-gray-400">
+          SDKP Root Framework $\rightarrow$ TimeSeal Legacy NFT IP Proof.
+        </p>
+      </header>
+
+      {/* Input and Validation Section */}
+      <div className="max-w-3xl mx-auto p-6 bg-gray-800 rounded-2xl shadow-2xl border border-gray-700/50">
+        <label htmlFor="sdkp-key" className="block text-lg font-medium mb-2 text-indigo-300">
+          Enter SDKP-QCC Key
+        </label>
+        <div className="flex flex-col sm:flex-row gap-4">
+          <input
+            id="sdkp-key"
+            type="text"
+            value={keyInput}
+            onChange={(e) => setKeyInput(e.target.value)}
+            placeholder="e.g., sdkp-12-9999-qcc-20250601-ζ02b138be5b"
+            className="flex-grow p-3 rounded-xl border border-gray-600 bg-gray-900 text-white focus:ring-indigo-500 focus:border-indigo-500 transition-shadow shadow-inner"
+          />
+          <button
+            onClick={handleValidation}
+            className="p-3 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-xl shadow-md transition-all duration-200 active:scale-95 whitespace-nowrap"
+          >
+            Validate Key
+          </button>
+        </div>
+        <p className={`mt-4 text-center text-sm font-semibold ${statusColor}`}>{statusMessage}</p>
+
+        {/* Key Metadata Display */}
+        {keyData && (
+          <div className="mt-8">
+            <h2 className="text-xl font-bold text-indigo-300 mb-4 border-b border-gray-700 pb-2">QCC Key Parameters</h2>
+            <div className="grid grid-cols-2 gap-4">
+              <StatCard title="SDKP Scale Domain" value={`Domain ${keyData.scaleDomain}`} />
+              <StatCard title="QCC Timestamp/Date" value={keyData.timestamp} />
+              <StatCard title="Entanglement Hash Suffix" value={keyData.suffixHash} />
+              <StatCard title="Collapse Code" value={keyData.collapseCode} />
+            </div>
+          </div>
+        )}
+      </div>
+
+      {/* Legacy IP/NFT Metadata Display */}
+      <div className="max-w-3xl mx-auto mt-12 p-6 bg-gray-800 rounded-2xl shadow-2xl border border-gray-700/50">
+        <h2 className="text-2xl font-bold text-indigo-400 mb-4">TimeSeal Legacy NFT IP Data</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <StatCard title="NFT Name" value={MOCK_NFT_METADATA.name} />
+          <StatCard title="Author/Originator" value={MOCK_NFT_METADATA.author} isCritical={true} />
+          <StatCard title="IP Timestamp" value={MOCK_NFT_METADATA.verification} />
+          <StatCard title="IPFS Anchor" value={MOCK_NFT_METADATA.ipfs.substring(0, 25) + '...'} />
+          <StatCard title="Royalty Requirement" value={MOCK_NFT_METADATA.royalty} isCritical={true} />
+          <StatCard title="Governing Law" value={MOCK_NFT_METADATA.license} />
+        </div>
+        <p className="mt-6 text-xs text-gray-500 text-center">
+          Transaction Hash: {MOCK_NFT_METADATA.tx_hash} (Excerpt)
+        </p>
+      </div>
+
+      <footer className="text-center mt-12 text-sm text-gray-500">
+        <p>SDKP Root Framework: $\text{Size} \times \text{Density} \times \text{Kinetics} \times \text{Position} = \text{Time}$</p>
+        <p>Generated by Donald Paul Smith (FatherTimeSDKP) via the Digital Crystal Protocol (DCP).</p>
+      </footer>
+    </div>
+  );
+};
+
+export default App;
+
