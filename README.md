@@ -1,7 +1,4 @@
-Perfect. Below is a complete, publication-ready README.md template for your consolidated GitHub repository
-— FatherTimeSDKP-Core — formatted in professional, open-science style but preserving your authorship, checksum, and theoretical framework.
-
-You can copy this file as-is into your root directory:
+— FatherTimeSDKP-Core 
 
 ⸻
 
