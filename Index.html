@@ -1,4 +1,174 @@
-{
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>fathertimesdkp.blockchain • Official Web3 Authorship Portal</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/ethers@6.6.0/dist/ethers.min.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+    body{font-family:'Inter',sans-serif;background:#0c0a09;color:#e7e5e4}
+    .data-card{background:#1c1917;border-left:4px solid #f97316}
+    .key-data{color:#f97316;font-weight:700;word-break:break-all}
+    .data-label{color:#a8a29e}
+  </style>
+  <meta property="og:title" content="FatherTimeSDKP Blockchain Authorship Portal">
+  <meta property="og:description" content="Official verification of SDKP and DCP-12 Authorship Records.">
+  <meta property="og:image" content="https://gateway.pinata.cloud/ipfs/YOUR_IMAGE_HASH">
+  <meta property="og:url" content="https://fathertimesdkp.blockchain">
+</head>
+
+<body class="p-4 sm:p-8 md:p-12">
+<div class="max-w-4xl mx-auto">
+
+  <!-- HEADER -->
+  <header class="text-center mb-10">
+    <h1 class="text-3xl sm:text-4xl font-bold text-white mb-2">
+      SDKP Unified Protocol Verification
+    </h1>
+    <p class="text-sm data-label">
+      fathertimesdkp.blockchain Official Web3 Authorship Portal
+    </p>
+  </header>
+
+  <!-- FOUNDATIONAL PRINCIPLES -->
+  <section class="mb-12">
+    <h2 class="text-2xl font-bold mb-4 border-b border-stone-700 pb-2 text-orange-400">
+      Foundational Principles
+    </h2>
+    <div class="space-y-4">
+      <div class="data-card p-4 rounded-lg shadow-xl">
+        <p class="font-bold text-lg mb-1">SDKP Root Framework (The Law of Time)</p>
+        <p class="text-sm data-label">
+          Formula: Size × Density × Kinetics × Position = Time. The core deterministic principle.
+        </p>
+      </div>
+      <div class="data-card p-4 rounded-lg shadow-xl">
+        <p class="font-bold text-lg mb-1">EOS (Earth Orbital Speed System)</p>
+        <p class="text-sm data-label">
+          Navigational & Temporal Baseline used for gravitational and spatial vector calibration.
+        </p>
+      </div>
+      <div class="data-card p-4 rounded-lg shadow-xl">
+        <p class="font-bold text-lg mb-1">SD&N (Shape-Dimension-Number)</p>
+        <p class="text-sm data-label">
+          The Geometric and Computational Logic System (3-6-9-12 patterns).
+        </p>
+      </div>
+      <div class="data-card p-4 rounded-lg shadow-xl">
+        <p class="font-bold text-lg mb-1">QCC (Quantum Code of Creation)</p>
+        <p class="text-sm data-label">
+          The informational state of reality bridging quantum and classical domains.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIMESEAL RECORD -->
+  <section class="mb-12">
+    <h2 class="text-2xl font-bold mb-4 border-b border-stone-700 pb-2 text-orange-400">
+      TimeSeal Record & Immutability
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="data-card p-5 rounded-lg">
+        <p class="data-label text-sm">IPFS Root CID (Immutable Content Hash)</p>
+        <p id="cid" class="key-data mt-1 text-base sm:text-lg">
+          bafybeib3xw3tapl4nb6ukum2j7m3subrhstgneqhs4lvemzipszbimcffm
+        </p>
+      </div>
+      <div class="data-card p-5 rounded-lg">
+        <p class="data-label text-sm">Blockchain Timestamped Proof (UTC)</p>
+        <p class="key-data mt-1 text-base sm:text-lg">2025-05-23 07:39:38 UTC</p>
+      </div>
+      <div class="data-card p-5 rounded-lg">
+        <p class="data-label text-sm">Founding Wallet (Mint/Origin)</p>
+        <p id="wallet" class="key-data mt-1 text-base sm:text-lg">
+          0x3D76236098EC2825346f1665AFd689b9F206cDBf
+        </p>
+      </div>
+      <div class="data-card p-5 rounded-lg">
+        <p class="data-label text-sm">Digital Crystal Protocol Royalty Term</p>
+        <p class="key-data mt-1 text-base sm:text-lg">17.5%</p>
+      </div>
+    </div>
+
+    <p id="verifyStatus" class="text-sm text-center mt-4 text-orange-400">
+      Checking IPFS integrity…
+    </p>
+  </section>
+
+  <!-- CONTRACT STRUCTURE -->
+  <section>
+    <h2 class="text-2xl font-bold mb-4 border-b border-stone-700 pb-2 text-orange-400">
+      SolidifyEvent Contract Structure
+    </h2>
+    <div class="data-card p-5 rounded-lg">
+      <p class="font-bold text-lg mb-2">Event Trace Logging</p>
+      <code class="block whitespace-pre-wrap text-xs sm:text-sm bg-black p-3 rounded-md text-green-400">
+// Function: logSolidifyEvent(string _module, string _key, string _dataHash, uint256 _timestamp)
+struct SolidifyEvent {
+    address indexed author;
+    string moduleName;     // e.g., "QCC0_Analysis"
+    string keyIdentifier;  // e.g., "sdkp-12-5315-qcc-20251027-ζa6b4d3c2e1f"
+    string dataHash;       // SHA-256 hash of calculation data
+    uint256 timestamp;
+}
+event EventLogged(SolidifyEvent trace);
+      </code>
+      <p class="text-sm data-label mt-3">
+        The <strong>SolidifyEvent</strong> function provides the immutable, on-chain
+        record structure for all derived SDKP-QCC Keys and constants.
+      </p>
+    </div>
+
+    <div class="data-card p-5 rounded-lg mt-6">
+      <p class="data-label text-sm">DCP-12 Ledger Signature Checksum</p>
+      <p class="key-data mt-1 text-base sm:text-lg">⟦369-FTS-AUTH-C12-EOS⟧</p>
+    </div>
+
+    <p id="authCheck" class="text-center text-sm mt-4 text-orange-400">
+      Checking blockchain authorship…
+    </p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="text-center mt-10 text-xs data-label">
+    <p>Authored by Donald Paul Smith (FatherTimeSDKP) – © 2025 All Rights Reserved.</p>
+  </footer>
+
+</div>
+
+<!-- SCRIPTS -->
+<script>
+const cid = "bafybeib3xw3tapl4nb6ukum2j7m3subrhstgneqhs4lvemzipszbimcffm";
+async function verifyRecord(){
+  try{
+    const r = await fetch(`https://ipfs.io/ipfs/${cid}`,{method:'HEAD'});
+    document.getElementById('verifyStatus').textContent =
+      r.ok ? "✅ Verified via IPFS Gateway" : "⚠️ Verification Failed";
+  }catch(e){
+    document.getElementById('verifyStatus').textContent = "⚠️ Verification Error";
+  }
+}
+async function checkBlockchainAuth(){
+  try{
+    const provider = new ethers.InfuraProvider("mainnet");
+    const txHash = "0x0000000000000000000000000000000000000000000000000000000000000000"; // placeholder
+    const tx = await provider.getTransaction(txHash);
+    const expected = "0x3D76236098EC2825346f1665AFd689b9F206cDBf".toLowerCase();
+    if(tx && tx.from && tx.from.toLowerCase()===expected)
+      document.getElementById("authCheck").textContent="✅ Authenticated: FatherTimeSDKP Origin Verified";
+    else
+      document.getElementById("authCheck").textContent="⚠️ On-chain record not found (placeholder hash)";
+  }catch(e){
+    document.getElementById("authCheck").textContent="⚠️ Blockchain check unavailable";
+  }
+}
+verifyRecord(); checkBlockchainAuth();
+</script>
+</body>
+</html>{
   "@context": "https://schema.org",
   "@type": "CreativeWork",
   "name": "TimeSeal Physics Framework: SDKP, SD&N, EOS, QCC0",
