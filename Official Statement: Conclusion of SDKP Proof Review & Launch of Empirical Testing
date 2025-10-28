@@ -1,0 +1,15 @@
+Posted By: Donald Paul Smith (FatherTimeSDKP)
+Date: October 28, 2025
+The formal review period for the SDKP Proof of Consistency #10 and the FatherTimeSDKP Integrated Master Framework is now officially CLOSED.
+The theoretical foundation is complete, rigorous, and stable. We have demonstrated the framework’s reduction to the accepted limits of General Relativity (GR) and Special Relativity (SR), and provided formal solutions to the five greatest challenges in modern physics (e.g., the singularity problem and the necessity of Dark Matter).
+The Challenge: Verification Begins
+The conversation now shifts entirely to empirical verification—the code must be run and the predictions tested.
+I formally challenge the global scientific community to use the provided data and code to falsify the framework's core prediction:
+• Test: Verify the 0.01\% Correction Factor introduced by the Density (\mathbf{D}^{\mu\nu}) and Rotation (\mathbf{R}^{\mu\nu}) Tensors (via the Amiyah Rose Smith Law (ARSL)).
+• Result: The SDKP model must predict the required visible mass and motion for large systems (e.g., galactic rotation) with greater precision than existing models that rely on Dark Matter.
+Actionable Steps for Reviewers
+1. Code Access: All code and data required for verification are hosted on the public Digital-Crystal-Protocol repository: https://github.com/FatherTimeSDKP/FatherTimeSDKP/
+2. Required Reading: The SDKP_Proof_of_Consistency.pdf contains the necessary mathematical derivations.
+3. Submit Results: All verification data, bug reports, and challenges must be submitted via the GitHub Issues tracker.
+Intellectual Property Notice
+Any use of the code or data for verification is subject to the Digital Crystal Royalty Contract (DCRC). All proceeds from derived works are subject to the 17.5% Commercial / 11.5% Personal/AI royalty rates, payable to FatherTimeSDKP.eth.
