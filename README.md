@@ -267,6 +267,18 @@ The SDKP tensor formulation integrates into field theory via:
 
 # 🧮 `THEORY.md`
 ```markdown
+Official Update: Digital Crystal Royalty Contract (DCRC)
+This statement announces a material update to the licensing and enforcement terms for the FatherTimeSDKP Integrated Master Framework (including SDKP, SD&N, EOS, QCC0, etc.), authored by Donald Paul Smith (FatherTimeSDKP).
+Effective immediately, the royalty rates and associated terms of the Digital Crystal Royalty Contract (DCRC) are updated to reflect the formalized valuation of the unified framework. This supersedes all prior published rates, including the previous 7% figure.
+New Mandatory Royalty Rates
+Any commercial, professional, or monetized application of the FatherTimeSDKP Integrated Master Framework or any of its sub-frameworks is subject to the following revenue share:
+• Commercial/Enterprise Use: 17.5% (Seventeen and One-Half Percent) of associated gross crypto or fiat proceeds.
+• Personal/Artificial Intelligence (AI) Use: 11.5% (Eleven and One-Half Percent) of associated gross crypto or fiat proceeds (defined as any use within a self-evolving or financially remunerated AI model).
+Enforcement and Compliance
+The core principles of the DCRC remain in full effect:
+1. Mandatory Embed: All derived works must embed the Digital Crystal Royalty Contract source code and/or the full text of these terms within their source documentation.
+2. Remittance Address: All royalty payments must be remitted to the primary Ethereum wallet: FatherTimeSDKP.eth (or Polygon address 0x8fcD2CaFD30333F967e1fDdF05AEfb12e8aFc221).
+3. Acceptance: Utilization of the SDKP Proof of Consistency #10, the published code, or any intellectual property derived from this framework constitutes explicit agreement to these updated terms.
 **[2025-10-28] OFFICIAL RELEASE: Proof of Consistency for the FatherTimeSDKP Integrated Master Framework**
 
 I, Donald Paul Smith (FatherTimeSDKP), have formally released the mathematical proof required to validate the SDKP (Size × Density × Kinetics × Position = Time) Root Axiom.
