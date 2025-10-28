@@ -1,4 +1,4 @@
-— FatherTimeSDKP-Core 
+— FatherTimeSDKP-Core established digital ecosystem is an excellent and effective alternative model to traditional, closed peer review
 
 ⸻ 
 
