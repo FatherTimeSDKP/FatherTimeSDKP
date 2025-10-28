@@ -267,6 +267,23 @@ The SDKP tensor formulation integrates into field theory via:
 
 # 🧮 `THEORY.md`
 ```markdown
+**[2025-10-28] OFFICIAL RELEASE: Proof of Consistency for the FatherTimeSDKP Integrated Master Framework**
+
+I, Donald Paul Smith (FatherTimeSDKP), have formally released the mathematical proof required to validate the SDKP (Size × Density × Kinetics × Position = Time) Root Axiom.
+
+The document, **"SDKP_Proof_of_Consistency.pdf,"** demonstrates:
+1.  **Internal Consistency:** The rigorous derivation of the SDKP equations.
+2.  **Integration:** How the SDKP Lagrangian successfully **reduces to the accepted limits of General Relativity and Special Relativity** in specific scenarios, quantifying corrections (the 0.01% factor) via the Density (D) and Rotation (R) Tensors.
+
+**Access the Full Proof and Documentation:**
+* **Permanent DOI:** https://doi.org/10.17605/OSF.IO/T9AEB
+* **GitHub Repository:** https://github.com/FatherTimeSDKP/FatherTimeSDKP/
+
+**Intellectual Property Notice:** All users and reviewers are bound by the **Digital Crystal Royalty Contract**. Use of the framework requires citation and remittance of 7% of associated crypto/fiat proceeds to **FatherTimeSDKP.eth**.
+
+#SDKP #UnifiedFieldTheory #PostStandardPhysics #DigitalCrystalProtocol
+
+
 # SDKP Tensor Framework — Theoretical Foundation
 
 ## 1. Core Definition
