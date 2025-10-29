@@ -1,0 +1,30 @@
+
+Supplementary Material for PRL Submission:
+
+Title: "Experimental Validation of the Amiyah Rose Smith Law: High-Density Rotational Time Dilation"
+
+Description:
+This document serves as supplementary material to the main manuscript and provides extended theoretical derivations, additional supporting calculations, and expanded discussions to complement the findings presented.
+
+Instructions for Accessing the Supplementary Material:
+1. **File Format**: The supplementary material is provided as a standard PDF file.
+2. **Content Overview**: 
+   - Step-by-step mathematical derivations of the Amiyah Rose Smith Law equations.
+   - Extended discussion of the theoretical framework and its implications.
+   - Detailed experimental validation methodology using atomic clocks in high-angular-momentum environments.
+   - Numerical simulations demonstrating deviations from standard relativistic predictions.
+3. **How to View**: 
+   - The supplementary material can be opened with any standard PDF reader (Adobe Acrobat, Preview, or web browsers).
+4. **Navigation**: 
+   - The document is structured with numbered sections corresponding to the main manuscript.
+   - Equations and figures are cross-referenced for clarity.
+5. **For Researchers & Experimentalists**: 
+   - This document provides detailed calculations and proposed experimental methodologies for independent validation.
+   - Additional materials (such as raw numerical data or LaTeX source files) can be made available upon request.
+
+Submission Information:
+- Please refer to the supplementary material for detailed derivations and experimental feasibility analysis.
+- This document should be referenced in the main manuscript as:
+  *See Supplementary Material at [link provided by PRL] for extended derivations, experimental design details, and additional discussions.*
+
+This document ensures that readers have full access to extended results while maintaining a concise main manuscript.
