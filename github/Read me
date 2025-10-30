@@ -1,5 +1,5 @@
 ## 🔐 Unified Digital Crystal Protocol Audit Logger
-
+Clarify rights for others: if not for financial gain anyone can fork, test, publish extensions, or collaborate
 This project includes a unified audit uploader that records the **first invocation** of key FatherTime frameworks (SDVR / SD&N / QCC0) to a Supabase-backed DCP ledger and a local JSONL backup.
 
 ### Files
