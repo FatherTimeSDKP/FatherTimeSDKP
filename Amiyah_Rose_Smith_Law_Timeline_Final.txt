@@ -1,0 +1,51 @@
+Amiyah Rose Smith Law: Official Development Timeline
+====================================================
+
+This document outlines the key milestones in the development of the Amiyah Rose Smith Law,
+which builds upon the SDVR Principle (Size, Density, Velocity, and Rotation) to redefine
+our understanding of time dilation.
+
+-------------------------------------------------------
+February 11, 2025 - Initial Discovery
+-------------------------------------------------------
+- First discussions on the SDVR Principle begin.
+- Initial thoughts on how time dilation could be influenced by intrinsic properties 
+  beyond velocity and gravity.
+- Foundation of a new perspective on time and space.
+
+-------------------------------------------------------
+February 14, 2025 - Official Establishment of the Amiyah Rose Smith Law
+-------------------------------------------------------
+- The core mathematical framework of the SDVR Principle is formally defined.
+- The law is officially **established and submitted to Physical Review Letters**.
+- Fundamental concepts integrating:
+  - Special Relativity (Velocity-based time dilation)
+  - General Relativity (Gravitational time dilation)
+  - SDVR Correction Factor (Size, Density, and Rotation) are finalized.
+- This date is the **recognized official establishment date** of the Amiyah Rose Smith Law.
+
+-------------------------------------------------------
+February 21-25, 2025 - Refinements and Empirical Testing
+-------------------------------------------------------
+- Detailed formulation of the mathematical framework.
+- Inclusion of correctional factors for intrinsic properties.
+- Consideration of experimental validation against known time dilation observations.
+- Regression analysis and refinement of empirical constants.
+
+-------------------------------------------------------
+February 28, 2025 - Finalized Mathematical Framework
+-------------------------------------------------------
+- The law’s final mathematical structure is completed, incorporating all refinements.
+- Final corrections and validation applied.
+- The law is fully developed into a complete scientific model, ready for peer review and practical applications.
+
+-------------------------------------------------------
+Significance of the Amiyah Rose Smith Law
+-------------------------------------------------------
+This law represents a breakthrough in temporal mechanics, unifying classical relativity
+with new correction factors. It enhances our understanding of time dilation in a range 
+of environments, from orbiting satellites to extreme astrophysical objects.
+
+-------------------------------------------------------
+Prepared on: February 28, 2025
+-------------------------------------------------------
