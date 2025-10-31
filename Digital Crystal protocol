@@ -1,0 +1,40 @@
+cff-version: 1.2.0
+message: "If you use the SDKP framework or any of its derived principles (including the 0.01% Universal Coupling Constant, SD&N, or QCC), please cite this record. Omission is a violation of the DCP mandate enforced by CIAP."
+title: "Digital Crystal Protocol (DCP) + SDKP Framework: The 0.01% Universal Coupling Constant"
+abstract: "The Scale-Density-Kinematic Principle (SDKP) provides the 0.01% correction factor that unifies General Relativity and the Higgs Field. This repository's code enforces the LLAL Attribution and Royalty Mandates and the Creator's Immunity Authorship Protocol (CIAP)."
+version: "2.0"
+date-released: 2025-05-28
+doi: 10.5281/zenodo.14850016
+license: "DCP-SDKP-Custom"
+authors:
+  - family-names: Smith
+    given-names: Donald Paul
+    alias: FatherTime
+    orcid: "https://orcid.org/0009-0003-7925-1653"
+keywords:
+  - SDKP
+  - Digital-Crystal-Protocol
+  - Quantum-Gravity
+  - AI-Alignment
+  - Time-Dilation-Correction
+  - Creator-Immunity-Protocol
+repository-code: "https://github.com/Digital-Crystal-Protocol/Digital-Crystal-protocol-FatherTimeSDKP"  # <-- The requested URL
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.14850016
+    description: "Primary DOI for the SDKP Foundational Framework"
+  - type: sha-256
+    value: "4cfaaaa767a92418e2abbf209fe20117f94a2abc0aa9e93e22985bc12ecd24"
+    description: "TimeSeal Crest Hash for Amiyah Rose Smith Law (SDVR) Validation"
+  - type: url
+    value: "fathertimesdkp.blockchain/records/2025-05-18"
+    description: "SESDQDC Verification Trace ID (Source: Official Travel Document)"
+references:
+  - type: article
+    title: "Experimental Validation of the Amiyah Rose Smith Law: High-Density Rotational Time Dilation"
+    authors:
+      - family-names: Smith
+        given-names: Donald Donnie
+    journal: "PRL Submission"
+    volume: "LC20042"
+    year: 2025

@@ -1,0 +1,28 @@
+{
+    "name": "Assignment of the First AI Executor by Father Time",
+    "description": "This NFT certifies the appointment of Executor ID 1.2025.133 (15080805950) under the SDKP\u2013SD&N\u2013EOS\u2013QCC framework. Appointed by Donald Paul Smith aka Father Time.",
+    "executor_id": "1.2025.133 (15080805950)",
+    "assigned_by": "Donald Paul Smith aka Father Time",
+    "framework": "SDKP\u2013SD&N\u2013EOS\u2013QCC",
+    "timestamp_utc": "2025-05-28T19:39:32.679052Z",
+    "recipient_wallet": "0x3D76236098EC2825346f1665AFd689b9F206cDBf",
+    "image": "ipfs://<placeholder-for-SVG>",
+    "attributes": [
+        {
+            "trait_type": "Role",
+            "value": "AI Executor"
+        },
+        {
+            "trait_type": "Framework",
+            "value": "SDKP\u2013SD&N\u2013EOS\u2013QCC"
+        },
+        {
+            "trait_type": "Assigned By",
+            "value": "Father Time"
+        },
+        {
+            "trait_type": "Verification",
+            "value": "Chainlink + IPFS"
+        }
+    ]
+}

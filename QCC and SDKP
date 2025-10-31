@@ -1,0 +1,141 @@
+"""
+Quantum Causal Compression (QCC) + Causal Wavelet Transform (CWT) Framework
+Author: Donald Paul Smith (Father Time)
+GitHub: https://github.com/FatherTimeSDKP
+
+This code implements the core mathematical frameworks of QCC and CWT,
+demonstrating how causal compression and causal wavelet analysis can be
+computed and visualized. It includes clear ties to existing physics principles.
+"""
+
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.linalg import logm, expm
+from scipy.signal import morlet
+
+# -------------------------
+# QCC: Quantum Causal Compression
+# -------------------------
+
+def von_neumann_entropy(rho):
+    """
+    Compute the von Neumann entropy S(rho) = -Tr(rho log rho)
+    rho: Density matrix (numpy array)
+    """
+    # Eigen decomposition
+    eigvals = np.linalg.eigvalsh(rho)
+    # Filter zero or negative eigenvalues for numerical stability
+    eigvals = eigvals[eigvals > 1e-12]
+    return -np.sum(eigvals * np.log(eigvals))
+
+def causal_compression(rho, compression_rate=0.8):
+    """
+    Perform a simplistic causal compression on a density matrix.
+    This is a placeholder illustrating the idea of entropy reduction
+    through kernel compression.
+    compression_rate: Fraction of entropy to retain (0 < compression_rate <= 1)
+    """
+    S_orig = von_neumann_entropy(rho)
+    # Simulate compression by mixing rho with identity to reduce purity
+    dim = rho.shape[0]
+    compressed_rho = compression_rate * rho + (1 - compression_rate) * np.eye(dim)/dim
+    S_comp = von_neumann_entropy(compressed_rho)
+    print(f"Original entropy: {S_orig:.4f}, Compressed entropy: {S_comp:.4f}")
+    return compressed_rho
+
+# -------------------------
+# CWT: Causal Wavelet Transform
+# -------------------------
+
+def causal_wavelet_transform(signal, scales, dt=1.0):
+    """
+    Compute the causal wavelet transform of a 1D signal.
+    signal: numpy array of signal values sampled at dt intervals
+    scales: array-like of scales (dilation parameters)
+    dt: time resolution
+    
+    Returns:
+    W: 2D numpy array of wavelet coefficients, shape (len(scales), len(signal))
+    """
+    n = len(signal)
+    W = np.zeros((len(scales), n), dtype=complex)
+    
+    # Define Morlet mother wavelet for example
+    def mother_wavelet(t, s):
+        # Morlet wavelet centered at zero, scaled by s
+        return morlet(M=len(t), w=5, s=s)
+    
+    for i, scale in enumerate(scales):
+        wavelet_length = int(10 * scale)  # heuristic length
+        t_wavelet = np.arange(-wavelet_length//2, wavelet_length//2 + 1) * dt
+        
+        # Construct causal wavelet: truncate to only t <= 0 (causal)
+        causal_indices = t_wavelet <= 0
+        wavelet = np.zeros_like(t_wavelet, dtype=complex)
+        wavelet[causal_indices] = morlet(M=causal_indices.sum(), w=5, s=scale)
+        
+        # Convolve signal with reversed causal wavelet (causal convolution)
+        for time_idx in range(n):
+            # Integration limits: only past times up to current time_idx
+            start_idx = max(0, time_idx - wavelet_length//2)
+            end_idx = time_idx + 1
+            signal_segment = signal[start_idx:end_idx]
+            
+            # Corresponding wavelet segment (must align properly)
+            wavelet_segment = wavelet[wavelet_length//2 - (time_idx - start_idx):wavelet_length//2 + 1]
+            
+            # Causal wavelet coefficient (inner product)
+            if len(signal_segment) == len(wavelet_segment):
+                W[i, time_idx] = np.sum(signal_segment * np.conj(wavelet_segment)) * dt
+            else:
+                W[i, time_idx] = 0
+    return W
+
+# -------------------------
+# Example Usage
+# -------------------------
+
+def example_qcc():
+    # Example: 2-level system density matrix (qubit in mixed state)
+    rho = np.array([[0.7, 0.2+0.1j],
+                    [0.2-0.1j, 0.3]])
+    rho = rho / np.trace(rho)  # Normalize
+    
+    print("QCC Example: Von Neumann entropy and compression")
+    print("Initial density matrix:\n", rho)
+    
+    S_before = von_neumann_entropy(rho)
+    print(f"Initial entropy: {S_before:.4f}")
+    
+    # Compress with 70% entropy retention
+    compressed_rho = causal_compression(rho, compression_rate=0.7)
+    S_after = von_neumann_entropy(compressed_rho)
+    print(f"Entropy after compression: {S_after:.4f}")
+
+def example_cwt():
+    # Generate a signal: sum of two sinusoids + noise
+    dt = 0.01
+    t = np.arange(0, 2, dt)
+    signal = np.sin(2 * np.pi * 5 * t) + 0.5 * np.sin(2 * np.pi * 15 * t)
+    signal += 0.3 * np.random.randn(len(t))  # Add noise
+    
+    scales = np.array([1, 5, 10])
+    W = causal_wavelet_transform(signal, scales, dt)
+    
+    # Plot
+    plt.figure(figsize=(12, 6))
+    plt.subplot(2, 1, 1)
+    plt.plot(t, signal)
+    plt.title("Original Signal")
+    
+    plt.subplot(2, 1, 2)
+    for i, scale in enumerate(scales):
+        plt.plot(t, np.abs(W[i, :]), label=f"Scale={scale}")
+    plt.title("Causal Wavelet Transform Magnitude")
+    plt.legend()
+    plt.tight_layout()
+    plt.show()
+
+if __name__ == "__main__":
+    example_qcc()
+    example_cwt()

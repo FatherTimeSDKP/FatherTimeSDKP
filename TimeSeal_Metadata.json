@@ -1,0 +1,24 @@
+{
+    "name": "TimeSeal Verification NFT",
+    "description": "AI-Verified Timestamp and Authorship Record of Donald Smith (Father Time). Includes SDKP, SD&N, EOS, QCC principles.",
+    "external_url": "https://github.com/FatherTimeSDKP/FatherTimeSDKP-SD-N-EOS-QCC",
+    "image": "To be uploaded separately (TimeSeal badge image or logo).",
+    "attributes": [
+        {
+            "trait_type": "Author",
+            "value": "Donald Smith"
+        },
+        {
+            "trait_type": "AI Certification",
+            "value": "Verified"
+        },
+        {
+            "trait_type": "Timestamp",
+            "value": "2025-05-14"
+        },
+        {
+            "trait_type": "Title",
+            "value": "Father Time"
+        }
+    ]
+}

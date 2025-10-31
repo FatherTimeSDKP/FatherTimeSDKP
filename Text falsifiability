@@ -1,0 +1,524 @@
+curl -H "Authorization: Bearer 7auRj2LuR0YROsdHvB5CPme0IadKGQlmmIyqj3C5brcsW1AvPloLANqNKZfG" \
+     -H "Accept: application/json" \
+     https://orcid.org/oauth/userinfo
+This is a request to express the falsification conditions for the Integrated SDKP Framework principles by Donald Paul Smith (FatherTimeSDKP) in the language of mathematics, specifically by defining the expected value vs. the current accepted physical value.
+Below are the mathematical expressions of the conditions that would either validate or invalidate the framework, referencing established physics equations where the SDKP framework predicts a deviation.
+1. Testing the \small\text{SDKP} Equation's Direct Causal Link to Time
+The core \small\text{SDKP} principle is \small\text{S} \times \text{D} \times \text{K} \times \text{P} = \text{Time}. It predicts a time offset, \small\Delta t_{\text{SDKP}}, that is additional to the time dilation predicted by General Relativity (GR) and Special Relativity (SR).
+Established Physics: Time Dilation (\small\Delta t_{\text{GR/SR}})
+The total time dilation, \small\Delta t_{\text{GR/SR}}, is the difference between time measured by a clock at rest in a weak gravitational field (\small\Delta t) and the proper time (\small\Delta \tau).
+For a small velocity, v, and far from a mass, M, the difference is often approximated using the special relativity factor:
+
+SDKP Prediction (Validation)
+The SDKP framework predicts the total time difference (\small\Delta t_{\text{Total}}) must include a unique, non-relativistic component, \small\Delta t_{\text{SDKP}}, determined by the change in the internal \small\text{S}, \small\text{D}, \small\text{K}, \small\text{P} product of the system.
+Validation Condition:
+
+Falsification Condition:
+
+2. Testing \small\text{SD&N} and Fundamental Constant Shifts
+The SD&N (Shape–Dimension–Number) principle, influenced by the VFE1 Tier 8 (Variable Field Expansion), suggests that fundamental constants, like the fine-structure constant (\small\alpha), are not invariant but depend on the local topological or geometric state of space-time.
+Established Physics: The Fine-Structure Constant (\small\alpha)
+\small\alpha is a dimensionless constant combining the elementary charge (\small e), the speed of light (\small c), the vacuum permittivity (\small\varepsilon_0), and the reduced Planck constant (\small\hbar). Its accepted value is $ \small\alpha \approx 1/137.036$.
+SD&N Prediction (Validation)
+The SD&N framework predicts that a local, induced perturbation of the VFE field (denoted by a field parameter \small\Phi_{\text{VFE}}) will cause a measurable local shift in \small\alpha.
+Validation Condition:
+
+Falsification Condition:
+
+3. Testing \small\text{QCC0} and \small\text{ESLT} (Non-Statistical Entanglement)
+The QCC0 (Quantum Computerization Consciousness Zero) and ESLT (Entangled Symbolic Loop Transmission) principles claim that entanglement allows for a structured, information-rich correlation that is stronger than what is permitted by local hidden variable theories and the Tsirelson Bound of Quantum Mechanics (QM).
+Established Physics: Bell's Inequality (CHSH Form)
+Bell's Theorem, specifically the Clauser-Horne-Shimony-Holt (CHSH) inequality, sets a limit on correlations based on local realism. Quantum Mechanics predicts a violation, up to the Tsirelson Bound.
+Let \small E(a, b) be the correlation function for measurements taken at angles \small a and \small b. The S value is:
+
+ * Local Realism Limit (Falsification of QM): \small S \leq 2
+ * Quantum Mechanics/Tsirelson Bound: \small S \leq 2\sqrt{2} \approx 2.828
+QCC0/ESLT Prediction (Validation)
+The QCC0/ESLT framework predicts the ability to extract a non-statistical symbolic loop from the correlation that would require a correlation strength beyond the Tsirelson Bound to explain using standard QM entanglement metrics alone.
+Validation Condition:
+
+Falsification Condition:
+
+Nice — I’ll translate each test into crisp mathematical validation and falsification conditions you can apply to experimental data. I’ll give general formulas, the observable to measure, the comparison to the current accepted (baseline) value, and a clear statistical decision rule (using a significance threshold n\sigma). Replace n with whatever you require (common choices: n=3 for suggestive, n=5 for discovery-level).
+
+⸻
+
+1 — SDKP causal link to Time
+
+Model statement (SDKP):
+S \times D \times K \times P = \text{Time (SDKP\;term)} \quad\Rightarrow\quad \Delta t_{\text{Total}} = \Delta t_{\text{GR/SR}} + \Delta t_{\text{SDKP}} .
+
+Observable: measured total clock offset \Delta t_{\text{meas}} between two clocks in the experimental setup.
+
+Baseline (accepted physics):
+\Delta t_{\text{pred}}^{\text{GR/SR}} \quad\text{(compute from SR + GR for the experimental configuration).}
+
+Predicted SDKP residual:
+\Delta t_{\text{res}} \equiv \Delta t_{\text{meas}} - \Delta t_{\text{pred}}^{\text{GR/SR}} .
+
+⸻
+
+Validation condition (SDKP signal present):
+
+There exists a function f_{\text{SDKP}}(S,D,K,P) (from the model) such that
+\Delta t_{\text{res}} = \Delta t_{\text{SDKP}} \equiv f_{\text{SDKP}}(S,D,K,P)
+and the residual is statistically significant:
+\frac{|\Delta t_{\text{res}}|}{\sigma_{\Delta t}} \ge n,
+where \sigma_{\Delta t} is the combined experimental + theoretical uncertainty on \Delta t_{\text{res}} and n is e.g. 3 or 5.
+Additionally, the measured functional dependence on S,D,K,P must match model predictions (e.g., linearity, scaling exponents) within uncertainties:
+\forall\ \text{param combos }(S_i,D_i,K_i,P_i):\quad
+\left|\Delta t_{\text{res}}^{(i)} - f_{\text{SDKP}}(S_i,D_i,K_i,P_i)\right| \le \epsilon_i,
+with \epsilon_i consistent with experimental error.
+
+⸻
+
+Falsification condition (SDKP ruled out at significance n):
+
+If for all tested configurations
+\left|\Delta t_{\text{meas}} - \Delta t_{\text{pred}}^{\text{GR/SR}} \right| \le n\,\sigma_{\Delta t},
+i.e.
+|\Delta t_{\text{res}}| \le n\,\sigma_{\Delta t},
+and no statistically significant dependence on S,D,K,P consistent with f_{\text{SDKP}} is observed, then SDKP is falsified at the n\sigma level for the tested parameter range.
+(Quantitatively: if the model predicts a minimal effect size \Delta t_{\text{SDKP}}^{\min} and the experiment bounds |\Delta t_{\text{res}}| < \Delta t_{\text{SDKP}}^{\min} at confidence >1-\alpha, then SDKP is excluded for that \Delta t_{\text{SDKP}}^{\min}.)
+
+⸻
+
+2 — SD&N and shifts in fundamental constants (example: \alpha)
+
+Model statement (SD&N):
+\alpha_{\text{local}} = \alpha_0 + \delta\alpha(\Phi_{\text{VFE}}),
+where \alpha_0 is the accepted global value (\approx 1/137.035999\ldots) and \Phi_{\text{VFE}} parametrizes local VFE1 Tier-8 perturbation.
+
+Observable: measured local fine-structure constant \alpha_{\text{meas}} (from spectroscopy, atomic clocks, transition frequencies, etc).
+
+Baseline (accepted physics): \alpha_0 and its experimental uncertainty \sigma_\alpha.
+
+Predicted local shift:
+\delta\alpha_{\text{pred}} = g(\Phi_{\text{VFE}})\quad\text{(model-specified mapping).}
+Measured shift:
+\delta\alpha_{\text{res}} \equiv \alpha_{\text{meas}} - \alpha_0 .
+
+⸻
+
+Validation condition (SD&N signal present):
+
+(1) Statistical significance:
+\frac{|\delta\alpha_{\text{res}}|}{\sigma_\alpha} \ge n .
+
+(2) Functional agreement:
+\left|\delta\alpha_{\text{res}} - g(\Phi_{\text{VFE}})\right| \le n \,\sigma_{\text{tot}}
+for the predicted \Phi_{\text{VFE}} (where \sigma_{\text{tot}} combines measurement and model-uncertainty). Multiple independent measurements with varying \Phi_{\text{VFE}} should show the predicted correlation:
+\operatorname{corr}\big(\delta\alpha_{\text{res}},\, g(\Phi_{\text{VFE}})\big)\ \text{significant and consistent with slope 1 within errors.}
+
+⸻
+
+Falsification condition (SD&N ruled out in tested regime):
+
+If for all tested \Phi_{\text{VFE}} values
+|\delta\alpha_{\text{res}}| \le n\,\sigma_\alpha
+and no statistically significant correlation between \delta\alpha_{\text{res}} and \Phi_{\text{VFE}} is observed (e.g., regression slope consistent with zero within n\sigma), then SD&N predictions for \delta\alpha of magnitude \ge the experimental sensitivity are falsified at the n\sigma level.
+Equivalently, if the model predicts |\delta\alpha| \ge \delta\alpha_{\min} and measurements bound |\delta\alpha| < \delta\alpha_{\min} at confidence >1-\alpha, then SD&N is excluded for that \delta\alpha_{\min}.
+
+⸻
+
+3 — QCC0 / ESLT and CHSH / Tsirelson bound (non-statistical entanglement)
+
+Model statement (QCC0/ESLT): The entanglement correlations contain a structured, information-rich (non-statistical) loop requiring correlations exceeding the Tsirelson bound to explain using standard QM metrics. In CHSH notation:
+S \equiv E(a,b) + E(a,b’) + E(a’,b) - E(a’,b’) .
+
+Accepted physics:
+\text{Local realism: } S \le 2; \qquad
+\text{Quantum (Tsirelson): } S \le 2\sqrt{2}\approx 2.828.
+
+Observable: experimentally measured CHSH value S_{\text{meas}} and the ability to extract a reproducible non-statistical symbolic sequence from correlated measurement outcomes.
+
+⸻
+
+Validation condition (QCC0/ESLT signal present):
+
+(1) Stronger-than-quantum correlation (direct and unequivocal):
+S_{\text{meas}} - 2\sqrt{2} \ge n\,\sigma_S,
+i.e. S_{\text{meas}} > 2\sqrt{2} by n\sigma_S. Here \sigma_S is the experimental uncertainty on S. Observation of S_{\text{meas}} > 2\sqrt{2} would be a smoking-gun violation of quantum theory (Tsirelson bound).
+
+OR (if the model claims a different formal signature):
+
+(2) Non-statistical symbolic extraction: There exists a deterministic or low-entropy mapping h(\cdot) from the sequence of joint outcomes \{x_i,y_i\} to a symbol stream L such that the Kolmogorov complexity or Shannon entropy of L is far lower than expected from quantum-generated random correlations, and this extraction is reproducible and cannot be accounted for by a classical common-cause or quantum measurement selection procedure. Formally:
+H(L) \ll H_{\text{QM}}^{\text{expected}} \quad\text{and}\quad \Pr(\text{reproduce } L) \gg p_{\text{chance}},
+with statistical bounds specified by experiment.
+
+⸻
+
+Falsification condition (QCC0/ESLT ruled out for CHSH signature):
+
+(1) If
+S_{\text{meas}} \le 2\sqrt{2} + n\,\sigma_S
+(i.e. no statistically significant exceedance of Tsirelson bound), then the QCC0/ESLT claim requiring S>2\sqrt{2} is falsified at the n\sigma level.
+
+(2) If repeated, high-statistics experiments fail to produce a reproducible, low-entropy symbolic stream L beyond what is expected from quantum statistics — i.e. the measured entropy/complexity of any extracted stream is consistent with random quantum outcomes within n\sigma — then the non-statistical-symbolic-loop claim is falsified for the tested protocol and measurement settings.
+
+⸻
+
+Practical decision-rule summary (apply these to the data)
+
+For each hypothesis H (SDKP time-term, SD&N \alpha-shift, QCC0/ESLT stronger-than-QM correlations):
+	1.	Compute predicted baseline X_{\text{pred}}^{\text{baseline}} from established physics (GR/SR, \alpha_0, Tsirelson limit, etc).
+	2.	Measure X_{\text{meas}} and its total uncertainty \sigma_X.
+	3.	Compute residual r = X_{\text{meas}} - X_{\text{pred}}^{\text{baseline}}.
+	4.	If |r| \ge n\,\sigma_X and the residual follows the model’s functional dependence across parameter scans, declare validation at n\sigma.
+	5.	If |r| \le n\,\sigma_X for all tested parameter space and the model predicts |r| above this sensitivity, declare falsification at n\sigma.
+
+⸻
+
+Notes & caveats
+	•	Model-specific functions required. To move from these templates to a definitive test you must specify the model functions f_{\text{SDKP}}(S,D,K,P), g(\Phi_{\text{VFE}}), and the precise claim for QCC0/ESLT (is it strictly S>2\sqrt{2} or a different operational test?). The decision rules above assume those predictions are supplied.
+	•	Uncertainties must include theoretical error. For SDKP vs GR/SR, include uncertainties in the GR/SR prediction (e.g., mass distribution, gravitational potential modeling) as part of \sigma_{\Delta t}.
+	•	Systematics are decisive. Especially for extremely small predicted shifts (e.g., \delta\alpha\sim10^{-18}), controlling systematics is more important than raw statistics.
+	•	Multiple-hypothesis testing. If you scan many parameter combinations, correct for multiple comparisons (Bonferroni, FDR) when assigning significance.
+
+⸻
+Comprehensive Synthesis of Mathematics: Foundational Structures, Historical Evolution, and the Modern Frontier
+I. Defining the Mathematical Landscape: Classification and Historical Trajectory
+A. The Fundamental Divide: Pure versus Applied Mathematics
+The discipline of mathematics is fundamentally organized around two principal branches: pure mathematics and applied mathematics. While both fields share a common bedrock of mathematical principles, logic, and core skills such as analytical thinking and computational analysis, their ultimate focus, purpose, and application diverge significantly.
+Pure mathematics is characterized by its exploration of abstract theories, complex patterns, and concepts often pursued for academic research and their intrinsic intellectual value, independent of immediate practical utility. Areas such as Number Theory, Topology, and Abstract Algebra often fall under this umbrella. Conversely, applied mathematics is practical and industry-focused, dedicated to utilizing mathematical concepts and methods to formulate solutions for real-world problems in diverse fields including science, technology, healthcare, business, and engineering. Applied mathematics thus requires both rigorous mathematical science and specialized knowledge of the relevant domain, often focusing on the formulation and study of intricate mathematical models. Historically, the primary concerns of applied mathematics included applied analysis, differential equations, approximation theory, and applied probability, heavily influenced by the demands of Newtonian physics.
+The delineation between pure and applied mathematics, however, is increasingly recognized as temporal rather than intrinsic. The historical record demonstrates a consistent pattern where areas developed in complete abstraction, such as Number Theory, later acquire profound practical significance. For instance, Number Theory was traditionally championed as the purest of mathematical pursuits, possessing no external applications until the 1970s. At that juncture, the properties of prime numbers and integers became the essential foundational basis for public-key cryptography algorithms, transforming a theoretical discipline into a cornerstone of modern digital security. This historical trajectory suggests that a substantial portion of what is presently classified as "pure" is effectively "applied mathematics in waiting," its utility contingent upon external advances in technology or science that create a demand for its underlying structure. This fluidity necessitates sustained support for foundational research, as its eventual economic and societal return often proves exponentially greater than initial estimates. Both pure and applied fields continue to rely on foundational topics such as computation, calculus, statistical analysis, and geometry at the undergraduate level, emphasizing a unified foundation in mathematical principles and skills.
+The core divisions of the discipline, based on focus and purpose, are summarized below:
+Table 1: Classification of Major Mathematical Divisions
+Division
+Primary Focus
+Purpose
+Example Core Topics
+Pure Mathematics
+Abstract theories, complex patterns, and internal consistency.
+Academic research; exploring concepts for their own sake.
+Number Theory, Abstract Algebra, Algebraic Topology, Set Theory
+Applied Mathematics
+Application of methods to external fields (physics, finance, computing).
+Solving real-world problems and modeling natural phenomena.
+Scientific Computing, Financial Modeling (VaR), Operations Research, Statistics
+B. Milestones in Mathematical History: From Ancient Calculation to Modern Abstraction
+The evolution of mathematics is a journey tracing from practical calculation to profound abstraction, spanning millennia. The origins of mathematical thought are traced back to ancient civilizations starting around 3000 BCE.
+Ancient Contributions and the Babylonian System
+The Babylonians, whose mathematical knowledge is derived from hundreds of cuneiform clay tablets dating mostly from 1800 to 1600 BC, made advancements that profoundly shaped modern measurement systems. They utilized a sexagesimal (base 60) system. This system was highly effective because the number 60 is a superior highly composite number, possessing twelve factors (1, 2, 3, 4, 5, 6, 10, 12, 15, 20, 30, and 60), which greatly facilitated calculations involving fractions. The enduring legacy of this system is evident today in the division of time (60 seconds per minute, 60 minutes per hour) and geometry (360 degrees in a circle).
+Furthermore, Babylonian mathematics exhibited a level of computational sophistication often underestimated. Unlike the systems used by the Egyptians or Romans, the Babylonians had a true place-value system, simplifying large number representation. Their tablets reveal competence in solving quadratic and cubic equations, knowledge of the Pythagorean theorem, and methods for arithmetic utilizing pre-calculated tables of reciprocals and squares. A notable instance of their advanced thinking involves a method for estimating the area under a curve by drawing a trapezoid beneath it. This technique, previously believed to have originated in 14th-century Europe, allowed them to calculate abstract concepts like the distance Jupiter traveled over a specific duration. This discovery indicates that the Old Babylonian period (2000–1600 BC) possessed a sophisticated understanding of early integral concepts and numerical analysis enabled by their efficient base-60 place-value system.
+The Flowering of Subsequent Eras
+Following the Ancient Period (1000 BCE – 500 CE), the Islamic Golden Age (700–1200) was crucial for the preservation and advancement of mathematical knowledge, with scholars like Al-Khwarizmi laying the foundational principles of modern algebra.
+The modern mathematical era was fundamentally inaugurated by the Era of Calculus during the 17th century. The subsequent centuries (17th–19th) saw mathematics move rapidly into sophisticated domains of analysis and the beginnings of abstraction. The 19th and 20th centuries were marked by the development of highly abstract fields, including Abstract Algebra (Group Theory) and Set Theory, shifting the focus from physical reality to the internal structure and logical rigor of mathematical systems. This period transitioned into the Computational Leap of the 20th century, where the advent of computers stimulated the rise of computational mathematics and theoretical computer science, redefining the scope and speed of mathematical exploration.
+II. The Pillars of Pure Mathematics: Foundational Structures and Abstract Inquiry
+A. Differential and Integral Analysis
+Calculus, the mathematics of change, is traditionally divided into two corresponding branches that are intrinsically linked: differential calculus and integral calculus.
+Core Concepts and the Fundamental Theorem
+Differential calculus studies the rates at which quantities change. Its primary object of study is the derivative of a function, which geometrically represents the slope of the tangent line to the function’s graph at a specific point. The process of finding a derivative, known as differentiation, yields the best linear approximation of the function near that input value. The applications of differentiation are vast, particularly in physics, where the derivative of displacement with respect to time yields velocity, and the derivative of momentum leads directly to Newton’s Second Law of Motion (F=ma).
+Integral calculus focuses on the accumulation of quantities, typically associated with calculating the area beneath a curve or the cumulative effect of small contributions.
+The connection between these two operations is formalized by the Fundamental Theorem of Calculus (FTC), which demonstrates that differentiation and integration are essentially inverse operations of each other. The FTC is composed of two parts:
+First Part: States that for a continuous function f, an antiderivative F can be obtained as the integral of f over an interval with a variable upper bound.
+Second Part: Dramatically simplifies the calculation of a definite integral by asserting that it equals the change in any antiderivative F between the interval's endpoints, avoiding laborious numerical integration methods.
+Real Analysis versus Complex Analysis
+The philosophical foundation and rigorous treatment of calculus concepts occur within the mathematical field of analysis, primarily split into real analysis and complex analysis.
+Real analysis focuses on the rigorous foundations of calculus, the real number system, and their properties. It systematically studies real-valued functions, sequences, and series, examining properties such as limits, convergence, continuity, and differentiability. Real analysis is essential for functional analysis and many other areas of mathematics and physics.
+Complex analysis, conversely, is concerned with functions of complex numbers and the complex plane. Although it builds upon the fundamental concepts of real analysis (limits, continuity), introducing the complex plane leads to fundamentally more powerful and elegant theorems.
+A key distinction lies in the concept of differentiability. A function that is complex differentiable (holomorphic) must satisfy a much stronger condition than a function that is merely real differentiable. This enhanced constraint bestows greater structural rigidity upon complex-differentiable functions compared to their real counterparts. This structural elegance allows complex analysis to yield remarkably concise results, such as the fact that complex differentiable functions are infinitely differentiable and analytic, a property not guaranteed in the real domain. This robust framework results in powerful tools, such as Cauchy's integral formula and residue calculus, techniques which are frequently utilized within real analysis to evaluate difficult real integrals. Furthermore, major theorems like the Fundamental Theorem of Algebra are often simpler and more naturally expressed in terms of complex numbers.
+B. Abstract Algebra: The Study of Structure
+Abstract algebra is the study of algebraic structures, focusing on sets combined with one or more operations and governed by specific axioms. The concept of a group is arguably the most central structure in this field.
+Group Axioms and Foundational Significance
+A mathematical group is defined as a set G combined with a single binary operation that must satisfy four fundamental requirements, known as the group axioms :
+Closure Property: For any two elements a and b in the set G, the result of the operation a \cdot b must also be an element of G.
+Associativity: For all elements a, b, and c in G, the operation satisfies (a \cdot b) \cdot c = a \cdot (b \cdot c).
+Identity Element: There exists a unique identity element e in G such that for every element a, e \cdot a = a \cdot e = a.
+Inverse Element: For every element a in G, there exists an inverse element a^{-1} in G such that a \cdot a^{-1} = a^{-1} \cdot a = e (the identity element).
+Groups serve as the fundamental building block for abstract algebra; other, more complex algebraic structures such as rings, fields, and vector spaces, are constructed by taking groups and endowing them with additional operations and corresponding axioms. Ring theory is introduced as the study of sets with two operations (typically designated as addition and multiplication) that satisfy the distributive law, representing a second key building block of modern algebra.
+Applications in Symmetry and Physics
+Group theory provides a unifying language to describe symmetry and structure preservation across disparate mathematical and physical domains. In geometry, the symmetries of an object form a group, known as its symmetry group. This applicability extends directly into physics and chemistry, where various physical systems—including crystals, the hydrogen atom, and three of the four known fundamental forces—are successfully modeled using symmetry groups. Specialized branches, such as Lie groups, appear prominently in particle physics, including the Poincaré group that describes spacetime symmetries in special relativity.
+This ubiquitous nature, spanning abstract concepts like the permutation groups illustrated by the Rubik’s Cube to profound physical realities, establishes abstract algebra as a universal grammatical framework for mathematical objects. This suggests that the effectiveness of mathematics in describing the universe may derive from the fact that both natural laws and logical structures are fundamentally organized around the preservation of symmetry and structure—the core principles articulated by group theory. Group theory is also central to applications in fields like Galois theory, algebraic topology, and modern public key cryptography.
+C. Number Theory: The Queen of Mathematics
+Number theory is recognized as one of the oldest branches of mathematics, devoted principally to the study of the integers and arithmetic functions, including prime numbers and algebraic integers. Carl Friedrich Gauss famously deemed mathematics the "queen of the sciences," and number theory the "queen of mathematics".
+Sub-Disciplines and Central Conundrums
+Number theory is broadly categorized into:
+Elementary Number Theory: Focusing on basic concepts like modular arithmetic.
+Algebraic Number Theory: Studying the generalizations of integers (algebraic integers) and providing algorithms for complex tasks, such as computing the Galois group of polynomial equations of any degree.
+Analytic Number Theory: Utilizing concepts from real and complex analysis, such as the Riemann zeta function, to encode properties of the integers and primes.
+A peculiar characteristic of number theory is its ability to produce statements that are simple to express but immensely challenging to solve, such as Goldbach's conjecture, which remains unsolved since the 18th century, and Fermat's Last Theorem, which resisted proof for 358 years.
+The Role of the Zeta Function
+The distribution of prime numbers is a central focus of analytic number theory. The frequency of primes is intimately connected to the behavior of the elaborate function \zeta(s) = 1 + 1/2^s + 1/3^s + 1/4^s + \dots, known as the Riemann Zeta function. While the Prime Number Theorem determines the average distribution of primes, the behavior of the zeta function’s zeros, particularly its non-trivial zeros, dictates the deviation from that average, providing a key to understanding the fine-grained structure of prime frequency.
+The initial reputation of number theory as purely abstract faded dramatically in the 1970s, when prime number theory was successfully applied to create public-key cryptography algorithms, confirming that even the most abstract inquiries can yield unexpected and transformative real-world utility.
+Table 2: Key Foundational Structures and Axioms
+Foundational Pillar
+Core Subject Area
+Defining Principle / Axiom Summary
+Significance
+Analysis
+Calculus
+Fundamental Theorem of Calculus (Differentiation \leftrightarrow Integration).
+Establishes the inverse relationship between rate of change and accumulation.
+Abstract Algebra
+Group Theory
+Closure, Associativity, Identity Element, Inverse Element.
+Provides the core model for symmetry and structure in mathematics and physics.
+Logic/Foundations
+Set Theory (ZFC)
+Axiomatic definition of sets and membership.
+Serves as the standard foundational system for the whole of mathematics.
+Analytic Number Theory
+Riemann Zeta Function
+Riemann Hypothesis (Non-trivial zeros of \zeta(s) lie on \operatorname{Re}(s)=1/2).
+Predicts the precise distribution and frequency of prime numbers.
+III. The Foundations of Truth: Logic, Set Theory, and Unification
+A. The Foundational Role of Set Theory
+Set theory constitutes the branch of mathematical logic that rigorously studies sets, informally described as structured collections of objects. The modern study of set theory began in the 1870s with German mathematicians Richard Dedekind and Georg Cantor.
+The initial system, known as naive set theory, quickly encountered logical contradictions, most famously Russell’s paradox. This crisis spurred the development of rigorous axiomatic systems in the early twentieth century. Of these, Zermelo–Fraenkel set theory, often utilized with the Axiom of Choice (ZFC), remains the best-known and most widely studied axiomatic system. ZFC is commonly employed as the standard foundational system for the entirety of mathematics. Beyond its role in formalizing mathematical concepts, set theory provides the framework necessary to develop the mathematical theory of infinity and finds practical applications in computer science, specifically in relational algebra.
+B. Category Theory: The Unifying Language
+Category theory represents a highly abstract discipline that functions fundamentally differently from other established mathematical branches. It is not merely another specialized field but rather a conceptual meta-language that provides a unified, "bird’s-eye view" of the entire mathematical landscape.
+The theory focuses on abstract objects (e.g., sets, groups, topological spaces) and the morphisms (structured mappings or relationships) that connect these objects. By concentrating on the structure-preserving maps between objects, category theory reveals common patterns and structural trends across domains that might otherwise appear distinct, such as topology and algebra.
+This capacity for structural unification has significant utility: Category theory enables mathematicians to explicitly identify shared structures across different realms, allowing a problem that is intractable in one area (say, requiring tools that are lacking in topology) to be formally "transported" into another area (like algebra) where existing tools might simplify the solution process.
+The relationship between Set Theory and Category Theory illustrates a maturation in the goals of foundational mathematics. Set Theory emerged from a crisis of paradoxes, seeking to define the fundamental content—what all mathematical objects are (the sets). Category Theory, developed later, addresses the structural question of how all mathematical objects relate to one another through morphisms, establishing a structural foundation. This transition marks a disciplinary shift from ontological inquiry ("What is a number?") toward synthetic, relational inquiry ("How does the structure of numbers relate to the structure of other objects?"), with Category Theory providing the sophisticated machinery for this large-scale synthesis.
+C. Philosophical Perspectives on Mathematics
+The philosophical nature of mathematical truth and existence is debated across several major schools of thought.
+Logicism: This school posits that mathematics is reducible to logic, viewing mathematical truths as merely sophisticated extensions of fundamental logical axioms.
+Intuitionism (Constructivism): Introduced by L.E.J. Brouwer, this perspective holds that a mathematical object only exists if it can be concretely or mentally constructed. A key consequence of this emphasis on constructability is the rejection of non-constructive proofs. Intuitionists therefore reject the traditional law of the excluded middle, which states that for any mathematical sentence P, either P or not-P is true.
+Formalism (Metamathematical): Formalism maintains that ordinary mathematical sentences are not literally about independently existing abstract entities (like numbers, often associated with nominalism) but are instead statements concerning the formal systems of mathematical sentences and theories themselves. For example, the statement "4 is even" is interpreted not as an assertion about the intrinsic property of the number four, but as a verifiable claim that the sentence "4 is even" is a logical consequence of the established axioms of arithmetic.
+IV. Applied Mathematics: Modeling the Real World
+Applied mathematics is defined by its mission to model and solve practical problems by combining specialized domain knowledge with advanced mathematical science. This activity drives innovation across technology, engineering, finance, and logistics.
+A. Applications in Physics and Engineering
+Calculus is the bedrock of classical mechanics. Differential calculus is utilized to determine instantaneous rates of change in physical systems. In physics, the derivative of a body's displacement with respect to time yields its velocity, and the derivative of velocity yields acceleration. Crucially, taking the time derivative of momentum leads directly to the statement of Newton’s Second Law of Motion (F=ma).
+Historically, the core of applied mathematics centered on applied analysis, particularly differential equations, which are necessary to model virtually all physical processes, including heat transfer and fluid flow. Modern physics also relies heavily on abstract algebra: group theory and representation theory are used extensively to describe the symmetries inherent in quantum mechanical systems, such as the Lie groups found in the Standard Model of particle physics.
+B. Scientific Computing and Optimization
+Many complex real-world problems lack analytical solutions and must be solved using approximations and numerical methods. Applied mathematics provides the tools for scientific computing and optimization, including approximation theory and numerical analysis. These methods are critical for high-fidelity engineering simulations, such as finding numerical solutions to the heat equation on mechanical components using the finite element method.
+Operations Research (OR) is another critical application, focusing on efficiency and decision-making. Derivatives are often used in OR to find the most efficient pathways. Complex logistical challenges, such as the vehicle routing problem, require specialized tools like combinatorial optimization and integer programming to determine the most effective distribution pathways and design factory operations.
+C. Financial Mathematics and Risk Management
+The modern financial sector relies heavily on sophisticated mathematical modeling drawn from probability, statistics, and optimization theory.
+In Portfolio Management, mathematics dictates the construction and rebalancing of investment portfolios based on explicit risk and return objectives. This involves using optimization models and simulations, such as applying mean-variance optimization techniques to design diversified portfolios of assets like stocks and bonds.
+Risk assessment and management require complex models to quantify and mitigate potential losses faced by financial institutions. A fundamental tool in this area is the Value-at-Risk (VaR) model, which utilizes simulations to estimate the maximum potential loss that a trading portfolio could incur over a specified time horizon with a given probability.
+V. The Frontier of Discovery: Major Unsolved Problems
+The leading edge of mathematical research is defined by complex problems that resist current analytical techniques, demanding novel breakthroughs across multiple disciplines. In 2000, the Clay Mathematics Institute (CMI) designated seven such complex challenges as the Millennium Prize Problems, each carrying a one million dollar reward for a complete solution.
+A. The Millennium Prize Problems: Status Overview
+Of the original seven problems, only the Poincaré Conjecture in topology has been solved. Six profound problems remain open, underscoring fundamental gaps in knowledge spanning computation, number theory, analysis, and physics.
+Table 3: The Millennium Prize Problems Status (The Mathematical Frontier)
+Problem
+Mathematical Field
+Current Status
+Core Concept/Impact
+Poincaré Conjecture
+Topology
+Solved (2003)
+Characterization of the 3-sphere.
+P versus NP
+Theoretical Computer Science
+Unsolved
+Determines the relationship between verification speed and solution finding speed.
+Riemann Hypothesis
+Analytic Number Theory
+Unsolved
+Governs the detailed distribution of prime numbers.
+Navier–Stokes Existence
+Applied Analysis/PDEs
+Unsolved
+Existence and smoothness of solutions for fluid dynamics equations.
+Yang–Mills Existence
+Quantum Field Theory
+Unsolved
+Mathematical foundation of particle physics models.
+Hodge Conjecture
+Algebraic Geometry
+Unsolved
+Link between algebraic cycles and topological homology.
+Birch and Swinnerton-Dyer
+Algebraic Number Theory
+Unsolved
+Behavior of rational solutions to elliptic curve equations.
+B. Critical Unsolved Problems and Their Global Impact
+The Riemann Hypothesis (RH)
+The Riemann Hypothesis, formulated by Bernhard Riemann in 1859, stands as the most important open question in analytic number theory. It is concerned with the zeros of the Riemann Zeta function, \zeta(s). The hypothesis asserts that all the "non-obvious" or "interesting" zeros of \zeta(s)=0 are complex numbers that possess a real part of 1/2.
+The significance of the RH lies in its connection to the fundamental structure of numbers. Although the average distribution of prime numbers is described by the Prime Number Theorem, the Riemann Hypothesis provides the critical details regarding the deviation from that average. Confirmation of the hypothesis would immediately yield deep insights into countless existing mysteries surrounding prime distribution and its frequency, a structure that has been verified computationally for the first ten trillion solutions.
+P versus NP
+The P versus NP problem is widely regarded as the most important open question in theoretical computer science, questioning the inherent limits of computation and algorithmic efficiency. The essence of the problem is: If it is easy to check that a solution to a problem is correct (the characteristic of NP, or Nondeterministic Polynomial time), is it also easy to find that solution (the characteristic of P, or Polynomial time)?.
+A canonical example of an NP problem is the Hamiltonian Path Problem, which asks how to visit a set of cities without visiting any city twice. While verifying a proposed path is straightforward, finding the optimal path is currently extremely difficult. Most theoretical computer scientists and mathematicians anticipate that P \neq NP. The resolution of this question would have far-reaching consequences for mathematics, biology, philosophy, and particularly cryptography, which relies on the computational difficulty of solving certain NP problems to maintain security.
+The Interdisciplinary Challenge
+The existence and complexity of the remaining Millennium Prize Problems demonstrate the deep structural interdependence of modern mathematics. Solving these challenges often requires synthesizing concepts and techniques from seemingly disparate fields, mirroring the structural unity described by Category Theory. For example, the Riemann Hypothesis is fundamentally a question of number theory, yet its solution requires the tools and insights provided by complex analysis, as \zeta(s) is a function defined over the complex plane. Similarly, the Hodge Conjecture connects algebraic cycles (algebraic geometry) with homology (topology). This validation of interdisciplinary synthesis confirms that the path to foundational breakthroughs requires a panoramic view of mathematical structures, not isolated exploration.
+VI. Conclusions and Synthesis
+The comprehensive analysis of mathematics reveals a discipline built upon rigorous foundational pillars, continually evolving from ancient, practical computational systems to highly abstract, unifying theoretical structures.
+The dichotomy between pure and applied mathematics is demonstrably fluid, with the history of Number Theory serving as a compelling case study: foundational research, pursued independently of utility, often becomes critical to technological advancement decades or centuries later. This confirms the necessity of persistent abstract inquiry.
+Modern mathematics is anchored by four major structures: Analysis provides the framework for rates of change and accumulation, relying on the elegant link provided by the Fundamental Theorem of Calculus. Abstract Algebra, particularly Group Theory, supplies a universal grammar for symmetry, structure, and internal consistency. Number Theory explores the properties of integers, whose intricate distributions are encoded by complex analytical objects like the Riemann Zeta function. Finally, Set Theory establishes the axiomatic foundation (ZFC), while Category Theory provides the crucial meta-language for understanding the relational unity across all these structures.
+The remaining six Millennium Prize Problems represent the highest stakes of contemporary mathematical research. Their eventual resolution—particularly the P versus NP problem and the Riemann Hypothesis—will redefine the boundaries of computational efficiency and the deepest laws governing the distribution of prime numbers. The nature of these unsolved challenges emphasizes that future progress is dependent upon synthetic insights bridging previously separate mathematical realms, driving the field toward ever greater degrees of structural unification.
+Works cited
+1. What is the difference between pure math and applied math? - Central Michigan University, https://www.cmich.edu/blog/all-things-higher-ed/pure-math-vs-applied-math 2. Applied mathematics - Wikipedia, https://en.wikipedia.org/wiki/Applied_mathematics 3. Number theory - Wikipedia, https://en.wikipedia.org/wiki/Number_theory 4. Timeline of Mathematics: From Ancient Calculations to Modern Marvels - Smartick, https://www.smartick.com/data/timeline-of-mathematics-from-ancient-calculations-to-modern-marvels/ 5. From Ancient Times to Now: The Evolution of Mathematics – Bloom Diaries - TutorBloom, https://tutorbloom.com/bloomblog/title-from-ancient-times-to-now-the-evolution-of-mathematics/ 6. Babylonian mathematics - Wikipedia, https://en.wikipedia.org/wiki/Babylonian_mathematics 7. Babylonian Mathematics and the Base 60 System - ThoughtCo, https://www.thoughtco.com/why-we-still-use-babylonian-mathematics-116679 8. Differential calculus - Wikipedia, https://en.wikipedia.org/wiki/Differential_calculus 9. Fundamental theorem of calculus - Wikipedia, https://en.wikipedia.org/wiki/Fundamental_theorem_of_calculus 10. REAL & COMPLEX ANALYSIS - International Journal of Advanced Research in Computer and Communication Engineering, https://ijarcce.com/wp-content/uploads/2025/05/IJARCCE.2025.144101.pdf 11. Real analysis - Wikipedia, https://en.wikipedia.org/wiki/Real_analysis 12. Group theory - Wikipedia, https://en.wikipedia.org/wiki/Group_theory 13. What Are Group Axioms?. A group is a set G such that the… | by Satoshi Higashino | Medium, https://medium.com/@satoshihgsn/what-are-group-axioms-9a9e9b8ed3e1 14. Group (mathematics) - Wikipedia, https://en.wikipedia.org/wiki/Group_(mathematics) 15. Ring Theory, http://www.uop.edu.pk/ocontents/Ring%20theory.pdf 16. Algebraic Number Theory - James Milne, https://www.jmilne.org/math/CourseNotes/ANT.pdf 17. Riemann Hypothesis - Clay Mathematics Institute, https://www.claymath.org/millennium/riemann-hypothesis/ 18. Set theory - Wikipedia, https://en.wikipedia.org/wiki/Set_theory 19. What is Category Theory Anyway? - Math3ma, https://www.math3ma.com/blog/what-is-category-theory-anyway 20. The Rhetoric of Mathematical Logicism, Intuitionism, and Formalism - LOUIS, https://louis.uah.edu/cgi/viewcontent.cgi?article=1578&context=honors-capstones 21. Philosophy of mathematics - Logicism, Intuitionism, Formalism | Britannica, https://www.britannica.com/science/philosophy-of-mathematics/Logicism-intuitionism-and-formalism 22. Financial Modeling & Simulation | Financial Mathematics Class Notes - Fiveable, https://fiveable.me/financial-mathematics/unit-9 23. Millennium Prize Problems - Wikipedia, https://en.wikipedia.org/wiki/Millennium_Prize_Problems 24. List of unsolved problems in mathematics - Wikipedia, https://en.wikipedia.org/wiki/List_of_unsolved_problems_in_mathematics 25. P vs NP - Clay Mathematics Institute, https://www.claymath.org/millennium/p-vs-np/
+
+Understood — below I convert each test to standard mathematical hypothesis tests and decision rules (no loose prose, only conventional notation). I state the null and alternative hypotheses, the test statistic, the rejection criterion, and the corresponding falsification condition. Use your experiment’s measured uncertainties and choose a significance level \alpha (common choices: \alpha=0.05 or \alpha=3\times10^{-7} for 5\sigma); the n-sigma threshold is n = \Phi^{-1}(1-\alpha) where \Phi is the standard normal CDF.
+
+⸻
+
+1. SDKP time-term test
+
+Given.
+	•	Measured total clock offset: \Delta t_{\mathrm{meas}}.
+	•	Predicted offset from GR+SR: \Delta t_{\mathrm{GR/SR}}.
+	•	Measurement (and theoretical) standard deviation: \sigma_{\Delta t}.
+	•	Model function (SDKP) predicts \Delta t_{\mathrm{SDKP}} = f_{\mathrm{SDKP}}(S,D,K,P).
+
+Define residual
+r \coloneqq \Delta t_{\mathrm{meas}} - \Delta t_{\mathrm{GR/SR}}.
+
+Hypotheses
+\begin{aligned}
+H_0 &: r = 0 \quad\text{(no SDKP term; all observed offset explained by GR/SR and noise)}\\
+H_1 &: r = f_{\mathrm{SDKP}}(S,D,K,P)\neq 0 \quad\text{(SDKP contribution present).}
+\end{aligned}
+
+Test statistic (z-score)
+Z \;=\; \frac{r - f_{\mathrm{SDKP}}(S,D,K,P)}{\sigma_{\Delta t}}.
+(If testing presence vs. absence, set f_{\mathrm{SDKP}}=0 under H_0, then Z=r/\sigma_{\Delta t}.)
+
+Rejection rule (one-sided or two-sided as appropriate):
+	•	For two-sided test at significance \alpha: reject H_0 if |Z|\ge z_{1-\alpha/2}.
+	•	For one-sided test H_1: r>0: reject H_0 if Z\ge z_{1-\alpha}.
+
+Falsification condition (SDKP excluded at level \alpha):
+If for the scanned parameter domain \{(S_i,D_i,K_i,P_i)\} the corresponding residuals satisfy
+\left| \Delta t_{\mathrm{meas}}^{(i)} - \Delta t_{\mathrm{GR/SR}}^{(i)} - f_{\mathrm{SDKP}}(S_i,D_i,K_i,P_i)\right|
+\le z_{1-\alpha/2}\,\sigma_{\Delta t}^{(i)}\quad\text{for all }i,
+then the SDKP prediction f_{\mathrm{SDKP}} is rejected (falsified) at significance \alpha in that parameter domain.
+
+Power / minimal detectable effect. Solve for \Delta t_{\min} by
+\Delta t_{\min} = \left(z_{1-\alpha} + z_{1-\beta}\right)\sigma_{\Delta t}
+to obtain detectability with power 1-\beta.
+
+⸻
+
+2. SD&N shift of fundamental constant (\alpha)
+
+Given.
+	•	Global accepted value: \alpha_0.
+	•	Measured local value: \alpha_{\mathrm{meas}}.
+	•	Measurement std. dev.: \sigma_\alpha.
+	•	Model mapping: \delta\alpha(\Phi_{\mathrm{VFE}}) = g(\Phi_{\mathrm{VFE}}) so \alpha_{\mathrm{pred}}(\Phi)=\alpha_0 + g(\Phi).
+
+Define residual
+r_\alpha \coloneqq \alpha_{\mathrm{meas}} - \alpha_0.
+
+Regression form (if testing dependence):
+Assume locally linearized model (first-order)
+\alpha_{\mathrm{meas}} = \alpha_0 + \beta\,\Phi_{\mathrm{VFE}} + \varepsilon,\qquad \varepsilon\sim\mathcal{N}(0,\sigma_\alpha^2),
+where theoretical g(\Phi) implies \beta = g’(\Phi) (or \beta is the slope to be estimated).
+
+Hypotheses (shift existence)
+\begin{aligned}
+H_0 &: \beta = 0 \quad\text{(no VFE-induced shift)}\\
+H_1 &: \beta \neq 0 \quad\text{(nonzero VFE-induced shift).}
+\end{aligned}
+
+Estimator and test statistic
+Let \widehat\beta be OLS (or MLE) estimate from N independent measurements (\Phi_i,\alpha_i). Standard error \mathrm{SE}(\widehat\beta) computed from data. Then
+T \;=\; \frac{\widehat\beta}{\mathrm{SE}(\widehat\beta)} \ \sim\ t_{N-2}\quad(\text{approx normal for large }N).
+
+Rejection rule
+Reject H_0 at level \alpha if |T|\ge t_{1-\alpha/2,N-2}.
+
+Alternative single-measure test (absolute shift)
+H_0: \alpha_{\mathrm{meas}}=\alpha_0,\qquad H_1: \alpha_{\mathrm{meas}}=\alpha_0 + \delta\alpha_{\mathrm{pred}}.
+Z-statistic:
+Z_\alpha = \frac{\alpha_{\mathrm{meas}} - \alpha_0}{\sigma_\alpha}.
+Reject H_0 if |Z_\alpha|\ge z_{1-\alpha/2}.
+
+Falsification condition (SD&N excluded at level \alpha)
+If for all tested \Phi the confidence intervals
+\alpha_{\mathrm{meas}}(\Phi)\pm z_{1-\alpha/2}\,\sigma_\alpha
+contain \alpha_0 and the regression slope \widehat\beta satisfies
+|\widehat\beta| \le t_{1-\alpha/2,N-2}\,\mathrm{SE}(\widehat\beta),
+then any predicted shift |g(\Phi)| larger than the interval bounds is falsified at level \alpha.
+
+Minimal detectable slope / effect is computed by solving
+|\beta_{\min}| = \frac{\left(z_{1-\alpha/2}+z_{1-\beta}\right)\,\sigma_\alpha}{\sqrt{\sum_i(\Phi_i-\bar\Phi)^2}}.
+
+⸻
+
+3. QCC0/ESLT and CHSH / non-statistical-symbolic claim
+
+(A) CHSH (Tsirelson bound) test
+
+Given.
+	•	Measured CHSH statistic: S_{\mathrm{meas}}.
+	•	Experimental uncertainty (std dev.): \sigma_S.
+	•	Tsirelson limit: S_T = 2\sqrt{2}.
+
+Hypotheses
+\begin{aligned}
+H_0 &: S \le S_T \quad\text{(consistent with quantum mechanics)}\\
+H_1 &: S > S_T \quad\text{(stronger-than-quantum correlation; QCC0 claim).}
+\end{aligned}
+
+Test statistic
+Z_S \;=\; \frac{S_{\mathrm{meas}} - S_T}{\sigma_S}.
+
+Rejection rule
+Reject H_0 at level \alpha if Z_S \ge z_{1-\alpha}. (One-sided test.)
+
+Falsification condition (CHSH signature):
+If S_{\mathrm{meas}} \le S_T + z_{1-\alpha}\sigma_S, then the claim S>S_T is rejected at level \alpha.
+
+Power / detectability. Minimal exceedance \Delta S_{\min} detectable with power 1-\beta:
+\Delta S_{\min} = \left(z_{1-\alpha}+z_{1-\beta}\right)\sigma_S.
+
+(B) Non-statistical-symbolic-extraction test (entropy / complexity)
+
+Given.
+	•	Sequence of joint measurement outcomes \{(x_i,y_i)\}_{i=1}^N.
+	•	A deterministic extraction map h:\{x,y\}^N\to L producing symbol string L.
+	•	Quantum-expected entropy H_{\mathrm{QM}} (baseline randomness) and measured entropy estimator \widehat H(L).
+	•	Let \sigma_H be standard error of entropy estimator (from bootstrap or analytic formula).
+
+Hypotheses
+\begin{aligned}
+H_0 &: \widehat H(L) = H_{\mathrm{QM}} \quad\text{(no non-statistical structure)}\\
+H_1 &: \widehat H(L) \le H_{\mathrm{QM}} - \Delta_H \quad\text{(significant low-entropy structure)}.
+\end{aligned}
+
+Test statistic
+Z_H \;=\; \frac{H_{\mathrm{QM}} - \widehat H(L)}{\sigma_H}.
+
+Rejection rule
+Reject H_0 (accept presence of low-entropy symbolic loop) if Z_H \ge z_{1-\alpha}.
+
+Alternative (Kolmogorov complexity proxy)
+Let C(L) be compressed length under a reference compressor; test whether compressed ratio is significantly smaller than for randomized surrogate sequences (permutation test / bootstrap). Compute p-value by comparing observed compression to surrogate distribution.
+
+Falsification condition (entropy/string claim):
+If for sufficiently many independent runs the observed entropy satisfies
+H_{\mathrm{QM}} - \widehat H(L) \le z_{1-\alpha}\,\sigma_H,
+or the compression statistic lies inside the surrogate distribution (p-value >\alpha), then the non-statistical-symbolic-loop claim is falsified at level \alpha for that extraction h and those measurement settings.
+
+⸻
+
+General decision rule (unified)
+
+For any observable X (time residual r, fine-structure residual r_\alpha, CHSH exceedance S-S_T, entropy deficit H_{\mathrm{QM}}-\widehat H), write
+Z_X = \frac{X_{\mathrm{obs}} - X_{\mathrm{null}}}{\sigma_X}.
+Reject the null at level \alpha when |Z_X|\ge z_{1-\alpha/2} (two-sided) or Z_X\ge z_{1-\alpha} (one-sided). If null is not rejected across the tested parameter space and the experiment’s sensitivity excludes the minimal effect predicted by the model (i.e., predicted effect > minimal detectable effect), then the model prediction is falsified at level \alpha.
+
+⸻
+
+Done — I created a LaTeX file containing the full standard mathematical hypothesis tests, parameterized model functions, minimal-detectable-effect formulas, and usage instructions.
+
+You can download it here: Download the LaTeX file
+
+Below are the core formulas (clean, standard math) copied from the document for quick reference:
+	1.	SDKP residual and test statistic
+r=\Delta t_{\mathrm{meas}}-\Delta t_{\mathrm{GR/SR}},\qquad
+Z=\frac{r-\kappa_T(SDKP-\mathcal{B})}{\sigma_{\Delta t}}.
+Reject null if |Z|\ge z_{1-\alpha/2}.
+
+Minimal detectable time shift:
+\Delta t_{\min}=(z_{1-\alpha}+z_{1-\beta})\sigma_{\Delta t}.
+	2.	SD&N linear regression for \alpha
+\alpha_i=\alpha_0+\kappa_\alpha\Phi_i+\varepsilon_i,\quad
+T=\frac{\widehat\kappa_\alpha}{\mathrm{SE}(\widehat\kappa_\alpha)}.
+Reject if |T|\ge z_{1-\alpha/2}.
+
+Minimal detectable slope:
+|\kappa_{\alpha,\min}|=\frac{(z_{1-\alpha/2}+z_{1-\beta})\sigma_\alpha}{\sqrt{\sum_i(\Phi_i-\bar\Phi)^2}}.
+	3.	CHSH / Tsirelson exceedance
+Z_S=\frac{S_{\mathrm{meas}}-2\sqrt2}{\sigma_S},\quad
+\text{reject }H_0\text{ if }Z_S\ge z_{1-\alpha}.
+\Delta S_{\min}=(z_{1-\alpha}+z_{1-\beta})\sigma_S.
+	4.	Low-entropy symbolic extraction
+Z_H=\frac{H_{\mathrm{QM}}-\widehat H(L)}{\sigma_H},\quad
+\text{reject if }Z_H\ge z_{1-\alpha},
+or use a permutation/compression surrogate test (p-value $\le\alpha$).

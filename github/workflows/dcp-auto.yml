@@ -1,0 +1,43 @@
+name: DCP Auto-Optimization & Ledger Update
+
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: '*/15 * * * *' # Every 15 minutes, can adjust
+
+jobs:
+  dcp_update:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v3
+
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: 3.12
+
+    - name: Install Dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install requests
+
+    - name: Record ΔEntropy Events
+      run: |
+        python scripts/ledger_recorder.py
+
+    - name: Commit & Push Ledger Changes
+      run: |
+        git config user.name "DCP-Auto-Bot"
+        git config user.email "auto@father-times-sdkp.com"
+        git add dcp_ledger.json
+        git commit -m "📡 Auto ΔEntropy Ledger Update [CI]"
+        git push origin main || echo "No changes to commit"
+
+    - name: Blockchain Notarization (Optional)
+      run: |
+        # Placeholder for transaction script, e.g., Ethereum or OpenTimestamps
+        echo "🔗 Ledger notarization triggered"

@@ -1,0 +1,163 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb}
+\usepackage{geometry}
+\geometry{margin=1in}
+\begin{document}
+
+\title{Standardized Hypothesis Tests and Falsification Conditions\\
+for the Integrated SDKP Framework (FatherTimeSDKP)}
+\author{Prepared for Donald Paul Smith (FatherTimeSDKP)}
+\date{\today}
+\maketitle
+
+\section*{Notation}
+\begin{align*}
+\Delta t_{\mathrm{meas}} &\colon\ \text{measured total clock offset}\\
+\Delta t_{\mathrm{GR/SR}} &\colon\ \text{predicted offset from GR + SR}\\
+\sigma_{\Delta t} &\colon\ \text{standard deviation (measurement + theory) for } \Delta t\\
+S,D,K,P &\colon\ \text{SDKP internal scalar parameters}\\
+\Phi_{\mathrm{VFE}} &\colon\ \text{local VFE field parameter (SD\&N)}\\
+\alpha_0 &\colon\ \text{accepted fine-structure constant}\\
+\alpha_{\mathrm{meas}} &\colon\ \text{measured local fine-structure value}\\
+\sigma_\alpha &\colon\ \text{standard deviation of } \alpha_{\mathrm{meas}}\\
+S_{\mathrm{meas}} &\colon\ \text{measured CHSH statistic}\\
+S_T &:= 2\sqrt{2}\quad\text{(Tsirelson bound)}\\
+\sigma_S &\colon\ \text{std.\ dev.\ of } S_{\mathrm{meas}}\\
+H_{\mathrm{QM}} &\colon\ \text{expected entropy of joint outcomes under QM}\\
+\widehat H(L) &\colon\ \text{measured entropy of extracted symbol stream }L\\
+\sigma_H &\colon\ \text{std.\ dev.\ of entropy estimator}\\
+z_{p} &\colon\ \text{standard normal quantile } \Phi^{-1}(p).
+\end{align*}
+
+\section{Parameterized model functions (explicit forms)}
+\subsection{SDKP time-term}
+We adopt a minimal, physically unit-consistent parameterization:
+\[
+\Delta t_{\mathrm{SDKP}} \;=\; \kappa_T \, \big( S\cdot D\cdot K\cdot P - \mathcal{B} \big),
+\]
+where $\kappa_T$ has units of time divided by the unit of $(S\!D\!K\!P)$ and $\mathcal{B}$ is the baseline product value corresponding to a reference state (so that $\Delta t_{\mathrm{SDKP}}=0$ in the reference).
+
+\subsection{SD\&N shift of $\alpha$}
+Linearized parameterization about $\Phi=0$:
+\[
+\alpha(\Phi) \;=\; \alpha_0 + \kappa_\alpha\,\Phi_{\mathrm{VFE}} + o(\Phi),
+\]
+where $\kappa_\alpha$ is the sensitivity coefficient (dimensionless per unit $\Phi$).
+
+\subsection{QCC0/ESLT CHSH and symbolic claim}
+CHSH statistic:
+\[
+S \;=\; E(a,b)+E(a,b')+E(a',b)-E(a',b').
+\]
+QCC0/ESLT (strong) claim: there exists a reproducible protocol such that
+\[
+S > S_T \quad\text{or}\quad \text{a reproducible low-entropy symbolic stream }L\ \text{is extractable.}
+\]
+
+\section{Hypothesis tests (standard forms)}
+
+\subsection{SDKP time-term test}
+Define the residual:
+\[
+r \;=\; \Delta t_{\mathrm{meas}} - \Delta t_{\mathrm{GR/SR}}.
+\]
+Null and alternative hypotheses:
+\[
+\begin{aligned}
+H_0 &: r = 0,\\
+H_1 &: r = \Delta t_{\mathrm{SDKP}} = \kappa_T\,(S D K P - \mathcal{B}).
+\end{aligned}
+\]
+Test statistic (one- or two-sided as required):
+\[
+Z \;=\; \frac{r - \kappa_T (S D K P - \mathcal{B})}{\sigma_{\Delta t}}.
+\]
+Rejection rule (two-sided, level $\alpha$):
+\[
+\text{Reject } H_0 \quad\text{iff}\quad |Z| \ge z_{1-\alpha/2}.
+\]
+
+\paragraph{Falsification.}
+If for all tested parameter combinations $(S_i,D_i,K_i,P_i)$
+\[
+\big| \Delta t_{\mathrm{meas}}^{(i)} - \Delta t_{\mathrm{GR/SR}}^{(i)} - \kappa_T (S_iD_iK_iP_i - \mathcal{B}) \big|
+\le z_{1-\alpha/2}\,\sigma_{\Delta t}^{(i)},
+\]
+then the specific parametrized prediction with coefficient $\kappa_T$ is rejected at significance level $\alpha$ within the tested domain.
+
+\paragraph{Minimal detectable $\Delta t$.}
+For desired false-alarm $\alpha$ and power $1-\beta$, the minimal detectable SDKP time-shift is
+\[
+\Delta t_{\min} \;=\; \big( z_{1-\alpha} + z_{1-\beta} \big)\,\sigma_{\Delta t}.
+\]
+Equivalently, minimal detectable $\kappa_T$ (given $S D K P - \mathcal{B} = \Delta_{SDKP}$) is
+\[
+\kappa_{T,\min} = \frac{\Delta t_{\min}}{\Delta_{SDKP}}.
+\]
+
+\subsection{SD\&N: linear regression test for $\alpha(\Phi)$}
+Model:
+\[
+\alpha_i = \alpha_0 + \kappa_\alpha\,\Phi_i + \varepsilon_i,\qquad \varepsilon_i\overset{\text{i.i.d.}}{\sim}\mathcal{N}(0,\sigma_\alpha^2).
+\]
+Hypotheses:
+\[
+H_0:\ \kappa_\alpha=0,\qquad H_1:\ \kappa_\alpha\neq 0.
+\]
+Estimate $\widehat\kappa_\alpha$ by OLS. Test statistic:
+\[
+T \;=\; \frac{\widehat\kappa_\alpha}{\mathrm{SE}(\widehat\kappa_\alpha)} \approx \mathcal{N}(0,1)\ \text{(large }N).
+\]
+Reject $H_0$ at level $\alpha$ if $|T|\ge z_{1-\alpha/2}$.
+
+\paragraph{Minimal detectable slope.}
+Given measurements at $\Phi_i$ with variance $\sigma_\alpha^2$, the minimal detectable slope with power $1-\beta$ is
+\[
+|\kappa_{\alpha,\min}| = \frac{(z_{1-\alpha/2}+z_{1-\beta})\,\sigma_\alpha}{\sqrt{\sum_i(\Phi_i-\bar\Phi)^2}}.
+\]
+
+\subsection{QCC0/ESLT CHSH exceedance test}
+Null and alternative:
+\[
+H_0: S \le S_T,\qquad H_1: S > S_T .
+\]
+Test statistic:
+\[
+Z_S = \frac{S_{\mathrm{meas}} - S_T}{\sigma_S}.
+\]
+Reject $H_0$ at one-sided level $\alpha$ if $Z_S \ge z_{1-\alpha}$.
+
+\paragraph{Minimal detectable CHSH exceedance.}
+\[
+\Delta S_{\min} = \big(z_{1-\alpha}+z_{1-\beta}\big)\sigma_S.
+\]
+
+\subsection{QCC0/ESLT low-entropy extraction test}
+Let $L$ be the extracted stream and $\widehat H(L)$ its entropy estimator, with expected QM entropy $H_{\mathrm{QM}}$.
+Hypotheses:
+\[
+H_0: \widehat H(L) = H_{\mathrm{QM}},\qquad H_1: \widehat H(L) \le H_{\mathrm{QM}} - \Delta_H.
+\]
+Test statistic:
+\[
+Z_H = \frac{H_{\mathrm{QM}} - \widehat H(L)}{\sigma_H}.
+\]
+Reject $H_0$ at one-sided level $\alpha$ if $Z_H \ge z_{1-\alpha}$.
+
+\paragraph{Permutation / surrogate test.}
+Construct $M$ surrogate sequences by randomizing joint outcomes (preserving marginal rates). Compute compressed length or entropy for each surrogate; define p-value as fraction of surrogates with compression $\le$ observed. Reject if $p\le\alpha$.
+
+\section{Example numeric constants and references}
+\begin{itemize}
+\item Common quantiles: $z_{0.975}=1.96$, $z_{0.95}=1.645$, $z_{0.84}=0.9945$ (note: $z_{0.84}\approx 0.9945$; for power use $z_{1-\beta}$ accordingly). For power $0.8$, $z_{1-\beta}\approx 0.84$.
+\item Tsirelson bound: $S_T=2\sqrt{2}\approx 2.82842712474619$.
+\end{itemize}
+
+\section*{Usage instructions}
+\begin{enumerate}
+\item Supply experimental uncertainties $\sigma_{\Delta t},\ \sigma_\alpha,\ \sigma_S,\ \sigma_H$ and the design matrix $\{\Phi_i\}$ or the set $\{(S_i,D_i,K_i,P_i)\}$ to compute the minimal detectable effects.
+\item Replace the placeholder coefficients $\kappa_T,\ \kappa_\alpha$ with theoretical values (if available) to directly test and compute rejection/falsification.
+\item Use multiple comparison corrections when scanning many parameter combinations.
+\end{enumerate}
+
+\end{document}

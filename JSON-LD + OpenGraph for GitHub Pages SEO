@@ -1,0 +1,28 @@
+<!-- index.html on your GitHub Pages -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "SDKP Framework by Donald Paul Smith",
+  "creator": {
+    "@type": "Person",
+    "name": "Donald Paul Smith",
+    "identifier": "https://orcid.org/0009-0003-7925-1653"
+  },
+  "url": "https://github.com/FatherTimeSDKP",
+  "keywords": ["SDKP", "EOS", "QCC", "Physics", "NFT", "On-Chain Licensing"]
+}
+</script>
+
+<meta property="og:title" content="SDKP: A New Framework in Physics & Licensing">
+<meta property="og:url" content="https://github.com/FatherTimeSDKP">
+<meta property="og:description" content="FatherTimeSDKP combines shape, dimension, and orbital logic into a unified NFT-licensed physics engine.">
+<meta property="og:image" content="https://gateway.ipfs.io/ipfs/bafy.../sdkp-banner.png">// postToLens.ts (via Lenster SDK)
+import { postOnLens } from "lens-sdk"; // pseudo-sdk
+
+postOnLens({
+  title: "SDKP NFT Is Live",
+  content: "The SDKP Framework NFT by FatherTime is now on Polygon. Verified authorship, smart contract enforcement, and ORCID-linked IP.",
+  url: "https://github.com/FatherTimeSDKP",
+  tags: ["#NFT", "#SDKP", "#QuantumIP"],
+});

@@ -1,0 +1,66 @@
+name: Upload DCP Audit on Release
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  upload-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+---
+
+# 4) `package.json` snippets / build scripts
+
+Add or merge these dependencies & scripts.
+
+```json
+{
+  "name": "FatherTimeSDKP",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "dist/auditUploadAll.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/auditUploadAll.js",
+    "audit:sdvr": "node dist/auditUploadAll.js SDVR",
+    "audit:sdn": "node dist/auditUploadAll.js SDN",
+    "audit:qcc": "node dist/auditUploadAll.js QCC0"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.0.0",
+    "dotenv": "^16.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
+      - name: Upload SDVR audit (example)
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+        run: |
+          node dist/auditUploadAll.js SDVR $GITHUB_REF_NAME || true
+import { uploadAudit, verifyAuditRecord } from "./dist/auditUploadAll.js";
+
+const res = await uploadAudit({ framework: "SDVR", version: "v1.0.0" });
+if (!res.success) { console.error(res); }
+
+const check = verifyAuditRecord(res.record || res.data[0]);
+console.log(check);# after build / transpile
+node dist/auditUploadAll.js SDVR v1.0.0
+node dist/auditUploadAll.js SDN v1.0.0
+node dist/auditUploadAll.js QCC0 v1.0.0

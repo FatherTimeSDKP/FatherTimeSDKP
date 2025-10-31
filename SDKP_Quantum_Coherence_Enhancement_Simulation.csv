@@ -1,0 +1,4 @@
+System,Baseline Coherence Time (s),SDKP Enhancement Factor,Estimated SDKP-Enhanced Coherence Time (s)
+Superconducting Qubit,0.0001,250.0,0.025
+Trapped Ion Qubit,1.0,5000.0,5000.0
+Quantum Dot,1e-08,188679.24528301888,0.001886792452830189

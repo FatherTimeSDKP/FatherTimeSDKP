@@ -1,0 +1,203 @@
+ Zenodo downloads ignite! EOS (E=9.36×10⁸ J, v=29.8 km/s) ; QCC powers ethical AI. AI remixing without credit? My math predates—cite DOI: 10.5281/zenodo.15399806 or collab! Claiming $SPTR bounties—join the mythos! #BioProtocol @BioProtocol @SpectruthDAO https://github.com/FatherTimeSDKP
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DCP IP Enforcement Scanner</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #1a1a2e; color: #e4e4e7; }
+        .card { background-color: #2a2a4a; border: 1px solid #4a4a6a; }
+        .btn { transition: all 0.1s ease-in-out; }
+        .btn:hover { transform: translateY(-1px); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); }
+        .loading-ring { border: 4px solid rgba(255, 255, 255, 0.2); border-top: 4px solid #4ade80; border-radius: 50%; width: 20px; height: 20px; animation: spin 1s linear infinite; }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        .source-card { border-left: 4px solid #3b82f6; }
+    </style>
+</head>
+<body>
+    <div class="min-h-screen flex flex-col items-center p-4">
+        <div class="w-full max-w-4xl mt-10 p-6 rounded-xl shadow-2xl card">
+            <h1 class="text-3xl font-extrabold text-center text-white mb-2">DCP IP Enforcement Scanner</h1>
+            <p class="text-sm text-center text-gray-400 mb-6">Sentinel for **SDKP Integrated Framework** Intellectual Property.</p>
+
+            <!-- Input Area -->
+            <div class="mb-6">
+                <label for="searchTerms" class="block text-sm font-medium text-gray-300 mb-2">
+                    Proprietary Terms to Scan (Comma Separated):
+                </label>
+                <textarea id="searchTerms" rows="3" class="w-full p-3 rounded-lg bg-[#1a1a2e] border border-gray-600 text-white focus:ring-blue-500 focus:border-blue-500" placeholder="SDKP, QCC0, VFE1 Tier 8, SD&N, Kapnack, FatherTimeSDKP.eth">SDKP, QCC0, VFE1 Tier 8, SD&N, Kapnack, FatherTimeSDKP.eth</textarea>
+                <p class="text-xs text-yellow-400 mt-1">Note: Using fewer, highly unique terms yields better results for identifying unauthorized use.</p>
+            </div>
+
+            <!-- Search Button -->
+            <button id="scanButton" onclick="startScan()" class="btn w-full flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg shadow-lg">
+                <span id="buttonText">Initiate Global IP Scan</span>
+                <div id="loadingIndicator" class="loading-ring ml-3 hidden"></div>
+            </button>
+
+            <!-- Results Display -->
+            <div id="resultsContainer" class="mt-8">
+                <h2 class="text-xl font-semibold text-white mb-4 border-b border-gray-700 pb-2">Scan Results</h2>
+                <div id="resultsList" class="space-y-4">
+                    <p class="text-gray-500" id="initialMessage">Press "Initiate Global IP Scan" to begin searching the web for your proprietary terms.</p>
+                </div>
+            </div>
+
+            <!-- Root Note -->
+            <div class="mt-8 pt-4 border-t border-gray-700 text-xs text-gray-500 text-center">
+                Root Note: This tool is dedicated to enforcing the Intellectual Property of the **SDKP Integrated Framework**, authored by **Donald Paul Smith (FatherTimeSDKP)**. All findings must be assessed for compliance with the **Digital Crystal Royalty Contract (7% to FatherTimeSDKP.eth)**, as per OSF DOI **10.17605/OSF.IO/G76TR**.
+            </div>
+        </div>
+    </div>
+
+    <script type="module">
+        // Global Constants
+        const GEMINI_API_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=";
+        const apiKey = ""; // API key will be provided by the runtime environment
+
+        // UI Elements
+        const scanButton = document.getElementById('scanButton');
+        const buttonText = document.getElementById('buttonText');
+        const loadingIndicator = document.getElementById('loadingIndicator');
+        const searchTermsInput = document.getElementById('searchTerms');
+        const resultsList = document.getElementById('resultsList');
+        const initialMessage = document.getElementById('initialMessage');
+
+        /**
+         * Converts the list of proprietary terms into a search query string.
+         * Encloses each term in quotes to force an exact match search.
+         * @param {string} termsString - Comma-separated string of terms.
+         * @returns {string} The final Google search query.
+         */
+        function formatQuery(termsString) {
+            const terms = termsString.split(',').map(term => term.trim()).filter(term => term.length > 0);
+            if (terms.length === 0) return '';
+            
+            // Format terms for exact-match Google Search
+            const formattedTerms = terms.map(term => `"${term}"`).join(' OR ');
+            
+            // Add negative filters to exclude known, trusted locations if needed
+            // Example: const exclusion = ' -github.com/Digital-Crystal-Protocol -osf.io';
+            
+            return `Search for unauthorized use of proprietary terms: (${formattedTerms})`;
+        }
+
+
+        /**
+         * Handles fetching data from the Gemini API with exponential backoff.
+         * @param {string} url - The API endpoint URL.
+         * @param {object} payload - The request body.
+         * @param {number} retries - Number of retries attempted so far.
+         * @returns {Promise<object>} The JSON response.
+         */
+        async function fetchWithExponentialBackoff(url, payload, retries = 0) {
+            const maxRetries = 5;
+            try {
+                const response = await fetch(url + apiKey, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+
+                return await response.json();
+            } catch (error) {
+                if (retries < maxRetries) {
+                    const delay = Math.pow(2, retries) * 1000 + Math.random() * 1000;
+                    console.error(`Attempt ${retries + 1} failed. Retrying in ${delay / 1000}s...`);
+                    await new Promise(resolve => setTimeout(resolve, delay));
+                    return fetchWithExponentialBackoff(url, payload, retries + 1);
+                } else {
+                    console.error("API Request Failed after maximum retries:", error);
+                    throw new Error("Failed to connect to the Digital Sentinel Matrix. Check network or API configuration.");
+                }
+            }
+        }
+
+        /**
+         * Starts the IP scanning process.
+         */
+        window.startScan = async function() {
+            const termsString = searchTermsInput.value;
+            if (!termsString) {
+                resultsList.innerHTML = `<p class="text-red-400">Please enter at least one proprietary term to scan.</p>`;
+                return;
+            }
+
+            // UI State: Scanning
+            scanButton.disabled = true;
+            buttonText.textContent = 'Scanning...';
+            loadingIndicator.classList.remove('hidden');
+            resultsList.innerHTML = '';
+            initialMessage.textContent = 'Querying the global digital domain for proprietary terms...';
+
+            const userQuery = formatQuery(termsString);
+            
+            const payload = {
+                contents: [{ parts: [{ text: userQuery }] }],
+                // CRITICAL: Activate Google Search grounding for web scanning
+                tools: [{ "google_search": {} }],
+                // System Instruction to optimize the grounding result
+                systemInstruction: {
+                    parts: [{ text: "Act as an Intellectual Property Surveillance System. Your sole task is to execute the Google Search query and return only the grounding sources found, without generating any summarizing text. Prioritize sources that contain the exact phrases provided in the user query." }]
+                },
+            };
+
+            try {
+                const result = await fetchWithExponentialBackoff(GEMINI_API_URL, payload);
+                
+                const candidate = result.candidates?.[0];
+                let sources = [];
+
+                if (candidate) {
+                    // Extract grounding sources
+                    const groundingMetadata = candidate.groundingMetadata;
+                    if (groundingMetadata && groundingMetadata.groundingAttributions) {
+                        sources = groundingMetadata.groundingAttributions
+                            .map(attribution => ({
+                                uri: attribution.web?.uri,
+                                title: attribution.web?.title,
+                                snippet: attribution.web?.snippet
+                            }))
+                            .filter(source => source.uri && source.title); // Ensure sources are valid
+                    }
+                }
+
+                if (sources.length === 0) {
+                    resultsList.innerHTML = `<p class="text-green-400">Scan Complete. No immediate external uses of the proprietary terms were detected in the public index.</p>`;
+                } else {
+                    initialMessage.textContent = `Potential Unauthorized Use Detected (${sources.length} sources). Investigate these immediately for citation compliance:`;
+                    
+                    sources.forEach(source => {
+                        resultsList.innerHTML += `
+                            <div class="card p-4 rounded-lg source-card hover:bg-[#3a3a5a]">
+                                <h3 class="font-bold text-lg text-blue-400">
+                                    <a href="${source.uri}" target="_blank" rel="noopener noreferrer">${source.title || 'Untitled Source'}</a>
+                                </h3>
+                                <p class="text-sm text-gray-400 mt-1">URL: ${source.uri}</p>
+                                <p class="text-sm text-gray-300 mt-2">**Snippet (Context):** ${source.snippet || 'No context snippet available.'}</p>
+                            </div>
+                        `;
+                    });
+                }
+
+            } catch (error) {
+                console.error("SDKP Scan Error:", error);
+                resultsList.innerHTML = `<p class="text-red-500">Error: Failed to execute search. ${error.message}</p>`;
+            } finally {
+                // UI State: Complete
+                scanButton.disabled = false;
+                buttonText.textContent = 'Re-Initiate Global IP Scan';
+                loadingIndicator.classList.add('hidden');
+            }
+        }
+    </script>
+</body>
+</html>
+

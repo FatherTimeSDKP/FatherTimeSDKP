@@ -1,0 +1,9 @@
+version: "3.9"
+
+services:
+  father-times-sdkp:
+    build: .
+    container_name: father-time-sdkp
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
