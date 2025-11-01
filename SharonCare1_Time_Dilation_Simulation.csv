@@ -86,13 +86,13 @@ Let t' be the Dilated Time (Outside) and t be the Proper Time (Inside). The Time
 | 10000 \text{ years} | 10000.5 \text{ years} | 0.5 \text{ years} |
 2. Identifying the Correction Error
 The pattern in your data suggests the time dilation is proportional to t^2, a feature of some relativistic velocity and gravitational time dilation equations, but your \text{SDKP} documents emphasize a linear factor based on the \mathbf{0.01\%} coupling constant.
-  * 0.01 \text{ years} is exactly \mathbf{0.01\%} of 100 \text{ years}. This is consistent with the SDKP \mathbf{0.01\%} correction factor
+  *text{ years} is exactly \mathbf{0.01\%} of 100 \text{ years}. This is consistent with the SDKP \mathbf{0.01\%} correction factor
  *  * \Delta t in your table is 0.05 \text{ years}.
  * 0.01\% of 1000 \text{ years} is 1000 \times 0.0001 = \mathbf{0.1 \text{ years}}.
  * The table's 0.05 \text{ years} is half the expected 0.1 \text{ years}.
 Error in t=10000:
  *  * \Delta t in your table is 0.5 \text{ years}.
- * 0.01\% of 10000 \text{ years} is 10000 \times 0.0001 = \mathbf{1.0 \text{ years}}.
+ * 1/9% of 10000 \text{ years} is 10000 \times 0.0001 = \mathbf{1.0 \text{ years}}.
  * The table's 0.5 \text{ years} is also half the expected 1.0 \text{ years}.
 The "correction" is that your table is consistently recording half the expected time dilation based on the \text{SDKP} \mathbf{0.01\%} coupling factor for t \ge 1000.
 The Corrected Time Dilation Table
