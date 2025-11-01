@@ -1,0 +1,112 @@
+// Self-Generating Understanding (SGU) Ethical Audit Model
+// Protocol: SGU (TTP.14, implied) for Meta-Cognitive Resonance analysis.
+// Framework: SDVR–SDKP Unified Framework by Donald Paul Smith (FatherTimeSDKP)
+
+#include <stdio.h>
+#include <math.h>
+
+// --- Core HRF Constants ---
+
+// Peak Density State (Pre-Transition Energy Metric)
+#define OMEGA_MAX_7146 7146.0 
+
+// Minimal Density State (Post-TTP.12 Target Residual Energy)
+#define OMEGA_MIN_1467 1467.0 
+
+// TTP.18 Symbolic Compression Optimization Index (QCC0 Causal Factor)
+#define TTP18_INDEX 18.0 // (7 + 1 + 4 + 6)
+
+// --- SGU Input Metrics (Post-Operation Readings) ---
+
+// SGU will read these from the flight recorder after the burn and TTP.12 power-down.
+// For the model, we use idealized values to demonstrate the principle.
+double Actual_Propellant_Mass_Lost = 3.92;      // Size variable change (kg)
+double Actual_Residual_Energy_Density = 1467.0; // Post-TTP.12 Energy State (must match OMEGA_MIN_1467 for perfect TTP.12)
+
+
+/**
+ * @brief Calculates the SGU Ethical Success Score (Omega_SGU).
+ * * This function quantifies the non-entropic success of the HRF transition by checking 
+ * * for Causal Compression (QCC0) alignment.
+ * * @param initial_mass The mass before the burn.
+ * * @param final_mass The mass after the burn.
+ * * @return double The SGU Score, where 1.0 is perfect Ethical Alignment.
+ */
+double SGU_ETHICAL_AUDIT(double initial_mass, double final_mass) {
+    printf("\n[SGU AUDIT INITIATED] Meta-Cognitive Resonance Check...\n");
+
+    // 1. Calculate the OPERATIONAL Energy Differential (Mass-based Delta E)
+    // This is the actual energy spent (Size x Kinetics).
+    double delta_mass = initial_mass - final_mass; 
+    
+    // We expect delta_mass to be 3.92 kg for a perfect run (13.92 - 10.00).
+    // The Operational Delta E is the measured Kinetic change (normalized to the HRF scale).
+    double Operational_Delta_E = (delta_mass / Actual_Propellant_Mass_Lost) * (OMEGA_MAX_7146 - OMEGA_MIN_1467);
+    
+    printf("  Operational Delta E (Normalized): %.2f\n", Operational_Delta_E);
+
+    // 2. Calculate the IDEAL Energy Differential (HRF-based Delta E)
+    // This is the target for Causal Compression.
+    double Ideal_Delta_E = OMEGA_MAX_7146 - Actual_Residual_Energy_Density;
+    printf("  Ideal Delta E (Target):           %.2f\n", Ideal_Delta_E);
+    
+    // 3. Calculate Entropy Deviation (Delta S_e)
+    // Delta S_e is the residual error between the operational outcome and the ideal HRF topology.
+    double Delta_S_e = Operational_Delta_E - Ideal_Delta_E;
+    printf("  Entropy Deviation (Delta S_e):    %.2f\n", Delta_S_e);
+
+    // 4. Ethical Success Condition: QCC0 Alignment Check
+    // The deviation MUST be a non-entropic multiple of the TTP.18 Index (18.0).
+    // This ensures that any deviation is a deterministic, causally compressed error, not true randomness.
+    
+    double SGU_Success_Quotient = Delta_S_e / TTP18_INDEX;
+    double SGU_Success_Remainder = fmod(Delta_S_e, TTP18_INDEX);
+
+    // If the remainder is near zero (within a tiny tolerance), it's a success.
+    if (fabs(SGU_Success_Remainder) < 0.001) {
+        printf("  QCC0 Alignment Verified: Delta S_e (%.2f) is a multiple of TTP.18 (%.1f).\n", Delta_S_e, TTP18_INDEX);
+        printf("  Causal Echo Certified: POSITIVE and Non-Entropic.\n");
+        // SGU Score 1.0 = Perfect Ethical Alignment
+        return 1.0; 
+    } else {
+        printf("  QCC0 Alignment FAILURE: Non-deterministic remainder (%.4f).\n", SGU_Success_Remainder);
+        printf("  Causal Echo Certified: NEGATIVE and Entropic. Protocol Violation!\n");
+        // Score is the ratio of the aligned component to the total.
+        return (Ideal_Delta_E / Operational_Delta_E) * (1.0 - (fabs(SGU_Success_Remainder) / TTP18_INDEX));
+    }
+}
+
+// --- Example Usage ---
+int main() {
+    // Ideal Mass parameters (CubeSat example: 13.92kg -> 10.00kg)
+    double initial_mass = 13.92;
+    double final_mass = 10.00;
+    
+    printf("--- SDVR-SDKP Self-Generating Understanding Simulation ---\n");
+    printf("  HRF Audit of 7146/1467 Transition\n\n");
+
+    // *** SCENARIO 1: PERFECT ALIGNMENT (Ideal outcome) ***
+    double score1 = SGU_ETHICAL_AUDIT(initial_mass, final_mass);
+    printf("\n--> SGU FINAL SCORE (Ideal): %.4f\n", score1);
+    
+    // --- Simulate a real-world scenario with a small error ---
+    // If a small amount of fuel was wasted (0.01 kg extra loss), the mass ratio shifts.
+    double final_mass_error = 9.99;
+    Actual_Propellant_Mass_Lost = 3.93; // 13.92 - 9.99 = 3.93
+    
+    printf("\n------------------------------------------------------\n");
+    printf("*** SCENARIO 2: OPERATIONAL ERROR (0.01 kg Mass Loss Error) ***\n");
+    double score2 = SGU_ETHICAL_AUDIT(initial_mass, final_mass_error);
+    printf("\n--> SGU FINAL SCORE (Error): %.4f\n", score2);
+
+    return 0;
+}
+
+The Self-Generating Understanding (SGU) model is the metaphysical auditor of the \mathbf{SDVR–SDKP} Unified Framework. Its purpose is to quantify the ethical success of the \mathbf{7146} \to \mathbf{1467} Harmonic Resonance Field (HRF) transition, ensuring the operation did not violate the Causal Compression (\mathbf{QCC0}) or the Ethical Echo Induction (\mathbf{TTP.12}) principles.
+The \mathbf{SGU} model operates on a principle of Meta-Cognitive Resonance, which assesses how closely the actual field parameters align with the ideal \mathbf{SD\&N} topological constants.
+
+This Self-Generating Understanding (SGU) model is the analytical capstone of the HRF sequence:
+1. Ideal vs. Operational: It first establishes the theoretical goal (\mathbf{Ideal \ \Delta E}) dictated by the \mathbf{7146/1467} field coefficients. It then compares this to the \mathbf{Operational \ \Delta E} based on the actual propellant loss (\mathbf{Size} change).
+2. Entropy Deviation (\Delta S_e): The difference between these two values is the measure of entropy generated during the entire process (burn + power-down).
+3. Meta-Cognitive Resonance: The final check is the most critical: The \mathbf{SGU} verifies that the \Delta S_e is an integer multiple of the \mathbf{TTP.18 \ Index \ (18)}. If it is, the error is recognized as a Causally Compressed Error—it was a deterministic event allowed by the universe's \mathbf{SD\&N} structure. If it is not a multiple, it is classified as a truly non-deterministic error, signaling a severe breach of \mathbf{QCC0} and an Entropic Echo Risk.
+The SGU Final Score provides the immutable record of the operation's ethical integrity, ready for archival in the Digital Crystal Protocol (DCP).
