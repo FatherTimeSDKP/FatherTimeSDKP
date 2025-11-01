@@ -1,0 +1,106 @@
+import jax
+import jax.numpy as jnp
+from jax import grad, jit, vmap
+from jax.numpy.fft import fftn, fftfreq
+import numpyro
+import numpyro.distributions as dist
+from numpyro.infer import MCMC, NUTS
+from scipy.integrate import quad
+import numpy as np
+from dataclasses import dataclass
+from typing import Tuple, Optional
+import matplotlib.pyplot as plt
+
+# ========== 1. CMB Vector Mode Analysis ==========
+
+@jit
+def compute_vorticity_power_spectrum(v_field, grid_shape):
+“”“Compute vorticity power spectrum P_ω(k) from velocity field”””
+# Compute curl in Fourier space
+curl_field = compute_curl_fourier(v_field, grid_shape)
+
+```
+# Power spectrum: P_ω(k) = |∇ × v|²
+power_spectrum = jnp.sum(jnp.abs(curl_field)**2, axis=-1)
+
+# Radially average in k-space
+kx = fftfreq(grid_shape[0])
+ky = fftfreq(grid_shape[1])
+kz = fftfreq(grid_shape[2])
+KX, KY, KZ = jnp.meshgrid(kx, ky, kz, indexing='ij')
+k_mag = jnp.sqrt(KX**2 + KY**2 + KZ**2)
+
+# Bin by k magnitude
+k_bins = jnp.linspace(0, jnp.max(k_mag), 50)
+power_binned = jnp.zeros(len(k_bins) - 1)
+
+for i in range(len(k_bins)-1):
+    mask = (k_mag >= k_bins[i]) & (k_mag < k_bins[i+1])
+    valid_power = power_spectrum[mask]
+    power_binned = power_binned.at[i].set(jnp.mean(jnp.where(mask, power_spectrum, 0)))
+
+return k_bins[:-1], power_binned
+```
+
+@jit
+def compute_curl_fourier(v_field, grid_shape):
+“”“Compute curl using FFT with proper 3D grid handling”””
+kx = fftfreq(grid_shape[0])
+ky = fftfreq(grid_shape[1])
+kz = fftfreq(grid_shape[2])
+KX, KY, KZ = jnp.meshgrid(kx, ky, kz, indexing=‘ij’)
+
+```
+vx_k = fftn(v_field[..., 0])
+vy_k = fftn(v_field[..., 1])
+vz_k = fftn(v_field[..., 2])
+
+# Curl in Fourier space: ∇ × v = ik × v
+curl_x = 1j * (KY * vz_k - KZ * vy_k)
+curl_y = 1j * (KZ * vx_k - KX * vz_k)
+curl_z = 1j * (KX * vy_k - KY * vx_k)
+
+return jnp.stack([curl_x, curl_y, curl_z], axis=-1)
+```
+
+@jit
+def compute_curl_field(v_field, grid_shape):
+“”“Compute curl field in real space”””
+curl_fourier = compute_curl_fourier(v_field, grid_shape)
+curl_real = jnp.real(jnp.fft.ifftn(curl_fourier, axes=(0, 1, 2)))
+return curl_real
+
+def reconstruct_velocity_field(delta_T_map, galaxy_positions):
+“”“Reconstruct velocity field from temperature map (simplified)”””
+# This is a simplified reconstruction - in practice would use more sophisticated methods
+grid_shape = delta_T_map.shape
+v_field = jnp.zeros(grid_shape + (3,))
+
+```
+# Add some structure based on temperature gradients
+grad_T = jnp.gradient(delta_T_map)
+
+# Convert temperature gradients to velocity (simplified linear relation)
+v_field = v_field.at[..., 0].set(grad_T[0] * 1e5)  # km/s
+v_field = v_field.at[..., 1].set(grad_T[1] * 1e5)
+v_field = v_field.at[..., 2].set(grad_T[2] * 1e5)
+
+return v_field
+```
+
+def estimate_omega_max_from_vectors(delta_T_map, galaxy_positions, H0=70):
+“”“Estimate maximum cosmic rotation from CMB vector modes”””
+# Reconstruct velocity field
+v_field = reconstruct_velocity_field(delta_T_map, galaxy_positions)
+
+```
+# Compute curl amplitude
+curl_amplitude = jnp.linalg.norm(compute_curl_field(v_field, delta_T_map.shape), axis=-1)
+curl_max = jnp.max(curl_amplitude)
+
+# Convert to angular frequency: ω ~ |∇ × v|/c
+c = 299792458  # m/s
+omega_max = curl_max / c
+
+# Apply observational bounds from vector mode
+```
