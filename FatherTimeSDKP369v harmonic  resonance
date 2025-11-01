@@ -1,0 +1,425 @@
+#!/usr/bin/env python3
+“””
+Fathertimes 3-6-9 Digital Root Logic System
+
+Implements Tesla’s 3-6-9 principle through digital root mathematics and energy state mapping.
+This module provides the foundational logic for SD&N (Shape-Dimension-Number) state classification
+used in the SDKP Framework by Donald Paul Smith.
+
+Citation: Smith, D. P. (2025). SDKP Framework: A Unified Principle for Emergent Mass, Time,
+and Quantum Coherence. Zenodo. https://doi.org/10.5281/zenodo.14850016
+
+Tesla’s insight: “If you only knew the magnificence of the 3, 6 and 9,
+then you would have the key to the universe.”
+“””
+
+import numpy as np
+import matplotlib.pyplot as plt
+from typing import Union, List, Dict, Tuple
+import pandas as pd
+
+class Tesla369Logic:
+“””
+Tesla 3-6-9 digital root logic system for quantum state classification.
+
+```
+Based on Tesla's principle that 3, 6, and 9 represent fundamental energy states:
+- State 3: Base energy level (1, 4, 7 → 3)
+- State 6: Doubled energy level (2, 5, 8 → 6)  
+- State 9: Transcendent energy level (3, 6, 9, 0 → 9)
+"""
+
+def __init__(self):
+    """Initialize Tesla 3-6-9 logic system."""
+    # Tesla's fundamental energy amplification factors
+    self.energy_weights = {
+        3: 1.0,   # Base harmonic
+        6: 2.0,   # First overtone (doubled)
+        9: 4.0    # Transcendent state (quadrupled)
+    }
+    
+    # Digital root mapping to Tesla states
+    self.digit_to_tesla = {
+        1: 3, 2: 6, 3: 9,
+        4: 3, 5: 6, 6: 9,
+        7: 3, 8: 6, 9: 9,
+        0: 9  # Zero maps to transcendent state
+    }
+    
+    # Reverse mapping for analysis
+    self.tesla_to_digits = {
+        3: [1, 4, 7],
+        6: [2, 5, 8], 
+        9: [0, 3, 6, 9]
+    }
+
+def digital_root(self, n: Union[int, float]) -> int:
+    """
+    Calculate digital root of a number.
+    
+    The digital root is the recursive sum of digits until a single digit remains.
+    
+    Args:
+        n: Input number (int or float)
+        
+    Returns:
+        Digital root (1-9, with 0 treated as 9)
+        
+    Examples:
+        digital_root(123) = 6 (1+2+3=6)
+        digital_root(456) = 6 (4+5+6=15, 1+5=6)
+        digital_root(789) = 6 (7+8+9=24, 2+4=6)
+    """
+    if isinstance(n, float):
+        # For floats, use meaningful digits
+        n = abs(n)
+        if n < 1:
+            n = int(n * 1000000)  # Scale small numbers
+        else:
+            n = int(n * 100)  # Preserve decimal precision
+    
+    n = abs(int(n))
+    
+    if n == 0:
+        return 9  # Tesla principle: 0 maps to transcendent state
+        
+    while n >= 10:
+        n = sum(int(digit) for digit in str(n))
+        
+    return n if n != 0 else 9
+
+def to_tesla_state(self, value: Union[int, float]) -> int:
+    """
+    Convert any value to Tesla 3-6-9 state.
+    
+    Args:
+        value: Input value to classify
+        
+    Returns:
+        Tesla state (3, 6, or 9)
+    """
+    root = self.digital_root(value)
+    return self.digit_to_tesla[root]
+
+def tesla_energy(self, value: Union[int, float]) -> float:
+    """
+    Get Tesla energy amplification factor for a value.
+    
+    Args:
+        value: Input value
+        
+    Returns:
+        Energy amplification factor
+    """
+    state = self.to_tesla_state(value)
+    return self.energy_weights[state]
+
+def tesla_sequence(self, start: int, length: int) -> List[Dict]:
+    """
+    Generate Tesla 3-6-9 sequence analysis.
+    
+    Args:
+        start: Starting number
+        length: Sequence length
+        
+    Returns:
+        List of dictionaries with number, digital root, Tesla state, and energy
+    """
+    sequence = []
+    for i in range(start, start + length):
+        root = self.digital_root(i)
+        state = self.to_tesla_state(i)
+        energy = self.tesla_energy(i)
+        
+        sequence.append({
+            'number': i,
+            'digital_root': root,
+            'tesla_state': state,
+            'energy_factor': energy,
+            'is_special': state in [3, 6, 9] and root in [3, 6, 9]
+        })
+    
+    return sequence
+
+def analyze_distribution(self, values: List[Union[int, float]]) -> Dict:
+    """
+    Analyze Tesla state distribution in a dataset.
+    
+    Args:
+        values: List of values to analyze
+        
+    Returns:
+        Distribution analysis dictionary
+    """
+    states = [self.to_tesla_state(v) for v in values]
+    roots = [self.digital_root(v) for v in values]
+    
+    # Count distributions
+    state_counts = {3: 0, 6: 0, 9: 0}
+    root_counts = {i: 0 for i in range(1, 10)}
+    
+    for state in states:
+        state_counts[state] += 1
+        
+    for root in roots:
+        root_counts[root] += 1
+    
+    total = len(values)
+    
+    return {
+        'total_count': total,
+        'tesla_distribution': {
+            state: {'count': count, 'percentage': count/total*100}
+            for state, count in state_counts.items()
+        },
+        'root_distribution': {
+            root: {'count': count, 'percentage': count/total*100}
+            for root, count in root_counts.items()
+        },
+        'energy_stats': {
+            'mean_energy': np.mean([self.tesla_energy(v) for v in values]),
+            'max_energy': max([self.tesla_energy(v) for v in values]),
+            'min_energy': min([self.tesla_energy(v) for v in values])
+        }
+    }
+
+def vortex_mathematics(self, n: int = 12) -> Dict:
+    """
+    Demonstrate Tesla's vortex mathematics with 3-6-9 pattern.
+    
+    Tesla observed that doubling creates a specific pattern:
+    1→2→4→8→7→5→1... (skips 3,6,9)
+    3→6→3→6→3→6... (stable oscillation)
+    9→9→9→9→9→9... (transcendent stability)
+    
+    Args:
+        n: Number of iterations
+        
+    Returns:
+        Vortex pattern analysis
+    """
+    # Starting with 1: doubling sequence
+    sequence_1 = []
+    current = 1
+    for i in range(n):
+        sequence_1.append(current)
+        current = self.digital_root(current * 2)
+    
+    # Starting with 3: doubling sequence  
+    sequence_3 = []
+    current = 3
+    for i in range(n):
+        sequence_3.append(current)
+        current = self.digital_root(current * 2)
+        
+    # Starting with 9: doubling sequence
+    sequence_9 = []
+    current = 9
+    for i in range(n):
+        sequence_9.append(current)
+        current = self.digital_root(current * 2)
+    
+    return {
+        'sequence_1': sequence_1,
+        'sequence_3': sequence_3, 
+        'sequence_9': sequence_9,
+        'pattern_1': list(set(sequence_1)),  # Unique values in pattern
+        'pattern_3': list(set(sequence_3)),
+        'pattern_9': list(set(sequence_9)),
+        'cycles': {
+            'base_cycle': [1, 2, 4, 8, 7, 5],  # The 6-step cycle
+            'tesla_369': [3, 6, 9],             # Tesla's special numbers
+            'transcendent': [9]                  # Pure transcendent state
+        }
+    }
+
+def quantum_resonance_map(self, frequencies: List[float]) -> Dict:
+    """
+    Map frequencies to Tesla states for quantum resonance analysis.
+    
+    Args:
+        frequencies: List of frequencies in Hz
+        
+    Returns:
+        Resonance mapping with Tesla states
+    """
+    resonance_map = []
+    
+    for freq in frequencies:
+        # Convert frequency to integer for digital root calculation
+        freq_int = int(freq * 1000)  # Scale to preserve meaningful digits
+        
+        root = self.digital_root(freq_int)
+        state = self.to_tesla_state(freq_int)
+        energy = self.tesla_energy(freq_int)
+        
+        # Calculate harmonic relationships
+        harmonics = [freq * (i+1) for i in range(9)]
+        harmonic_states = [self.to_tesla_state(h*1000) for h in harmonics]
+        
+        resonance_map.append({
+            'frequency': freq,
+            'digital_root': root,
+            'tesla_state': state,
+            'energy_factor': energy,
+            'harmonics': harmonics[:3],  # First 3 harmonics
+            'harmonic_states': harmonic_states[:3],
+            'resonance_strength': energy * (1 + 0.1 * harmonic_states.count(9))
+        })
+    
+    return {
+        'resonance_data': resonance_map,
+        'dominant_states': max(set([r['tesla_state'] for r in resonance_map]), 
+                             key=[r['tesla_state'] for r in resonance_map].count)
+    }
+
+def plot_tesla_distribution(self, values: List[Union[int, float]], 
+                           title: str = "Tesla 3-6-9 State Distribution"):
+    """
+    Visualize Tesla state distribution.
+    
+    Args:
+        values: Values to analyze and plot
+        title: Plot title
+    """
+    analysis = self.analyze_distribution(values)
+    
+    fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2, 2, figsize=(15, 12))
+    
+    # Tesla state distribution
+    states = list(analysis['tesla_distribution'].keys())
+    counts = [analysis['tesla_distribution'][s]['count'] for s in states]
+    colors = ['#FF6B6B', '#4ECDC4', '#45B7D1']  # Red, Teal, Blue
+    
+    ax1.pie(counts, labels=[f'State {s}' for s in states], colors=colors, autopct='%1.1f%%')
+    ax1.set_title('Tesla State Distribution (3-6-9)')
+    
+    # Digital root distribution
+    roots = list(range(1, 10))
+    root_counts = [analysis['root_distribution'][r]['count'] for r in roots]
+    root_colors = [colors[self.digit_to_tesla[r]//3-1] for r in roots]
+    
+    bars = ax2.bar(roots, root_counts, color=root_colors, alpha=0.7)
+    ax2.set_xlabel('Digital Root')
+    ax2.set_ylabel('Count')
+    ax2.set_title('Digital Root Distribution')
+    ax2.set_xticks(roots)
+    
+    # Energy factor histogram
+    energies = [self.tesla_energy(v) for v in values]
+    ax3.hist(energies, bins=20, color='purple', alpha=0.7, edgecolor='black')
+    ax3.set_xlabel('Tesla Energy Factor')
+    ax3.set_ylabel('Frequency')
+    ax3.set_title('Energy Factor Distribution')
+    
+    # Tesla sequence pattern
+    if len(values) >= 50:
+        sample_values = values[:50]
+    else:
+        sample_values = values
+        
+    tesla_states = [self.to_tesla_state(v) for v in sample_values]
+    ax4.plot(tesla_states, 'o-', color='red', alpha=0.7, linewidth=2, markersize=4)
+    ax4.set_xlabel('Sample Index')
+    ax4.set_ylabel('Tesla State')
+    ax4.set_title('Tesla State Sequence Pattern')
+    ax4.set_yticks([3, 6, 9])
+    ax4.grid(True, alpha=0.3)
+    
+    plt.tight_layout()
+    plt.suptitle(title, fontsize=16, y=1.02)
+    plt.show()
+
+def plot_vortex_mathematics(self):
+    """Visualize Tesla's vortex mathematics patterns."""
+    vortex = self.vortex_mathematics(12)
+    
+    fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2, 2, figsize=(15, 12))
+    
+    # Sequence starting with 1
+    ax1.plot(vortex['sequence_1'], 'o-', linewidth=2, markersize=8, color='blue')
+    ax1.set_title('Doubling Sequence: Start with 1')
+    ax1.set_ylabel('Digital Root')
+    ax1.set_xlabel('Iteration')
+    ax1.grid(True, alpha=0.3)
+    ax1.set_ylim(0, 10)
+    
+    # Sequence starting with 3
+    ax2.plot(vortex['sequence_3'], 'o-', linewidth=2, markersize=8, color='red')
+    ax2.set_title('Doubling Sequence: Start with 3')
+    ax2.set_ylabel('Digital Root')
+    ax2.set_xlabel('Iteration')
+    ax2.grid(True, alpha=0.3)
+    ax2.set_ylim(0, 10)
+    
+    # Sequence starting with 9
+    ax3.plot(vortex['sequence_9'], 'o-', linewidth=2, markersize=8, color='purple')
+    ax3.set_title('Doubling Sequence: Start with 9 (Transcendent)')
+    ax3.set_ylabel('Digital Root')
+    ax3.set_xlabel('Iteration')
+    ax3.grid(True, alpha=0.3)
+    ax3.set_ylim(0, 10)
+    
+    # Circular vortex pattern
+    angles = np.linspace(0, 2*np.pi, 9)
+    radius = 1
+    
+    # Plot the enneagon (9-sided polygon)
+    for i, digit in enumerate(range(1, 10)):
+        x = radius * np.cos(angles[i])
+        y = radius * np.sin(angles[i])
+        
+        if digit in [3, 6, 9]:
+            ax4.scatter(x, y, s=200, c='red', marker='*', zorder=3)
+        else:
+            ax4.scatter(x, y, s=100, c='blue', marker='o', zorder=2)
+        
+        ax4.annotate(str(digit), (x, y), xytext=(5, 5), textcoords='offset points',
+                    fontsize=12, fontweight='bold')
+    
+    # Draw the doubling sequence path
+    sequence_coords = []
+    for digit in vortex['sequence_1'][:6]:  # One complete cycle
+        idx = digit - 1
+        x = radius * np.cos(angles[idx])
+        y = radius * np.sin(angles[idx])
+        sequence_coords.append((x, y))
+    
+    for i in range(len(sequence_coords)-1):
+        ax4.annotate('', xy=sequence_coords[i+1], xytext=sequence_coords[i],
+                    arrowprops=dict(arrowstyle='->', color='green', lw=2, alpha=0.7))
+    
+    ax4.set_xlim(-1.5, 1.5)
+    ax4.set_ylim(-1.5, 1.5)
+    ax4.set_aspect('equal')
+    ax4.set_title('Tesla Vortex: 3-6-9 Pattern\n(Red stars = Tesla numbers)')
+    ax4.grid(True, alpha=0.3)
+    
+    plt.tight_layout()
+    plt.suptitle("Tesla's Vortex Mathematics: 3-6-9 Logic", fontsize=16, y=1.02)
+    plt.show()
+```
+
+def demo_tesla_369():
+“”“Demonstration of Tesla 3-6-9 logic system.”””
+tesla = Tesla369Logic()
+
+```
+print("Tesla 3-6-9 Digital Root Logic System")
+print("=" * 50)
+print("Tesla: 'If you only knew the magnificence of the 3, 6 and 9,")
+print("then you would have the key to the universe.'")
+print()
+
+# Digital root examples
+print("Digital Root Examples:")
+test_numbers = [123, 456, 789, 1234, 5678, 9876]
+for num in test_numbers:
+    root = tesla.digital_root(num)
+    state = tesla.to_tesla_state(num)
+    energy = tesla.tesla_energy(num)
+    print(f"{num:4d} → root: {root}, Tesla state: {state}, energy: {energy:.1f}")
+
+print("\nTesla State Classification:")
+print("State 3 (Base):        1
+```
