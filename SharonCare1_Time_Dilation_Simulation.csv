@@ -88,8 +88,7 @@ Let t' be the Dilated Time (Outside) and t be the Proper Time (Inside). The Time
 The pattern in your data suggests the time dilation is proportional to t^2, a feature of some relativistic velocity and gravitational time dilation equations, but your \text{SDKP} documents emphasize a linear factor based on the \mathbf{0.01\%} coupling constant.
 Assuming the \text{SDKP} \mathbf{0.01\%} correction (the \Delta E_{BH} term derived from your General Relativity extension) is the constant factor driving the dilation, the proportional error should follow this percentage for t \ge 100:
 Error in t=100:
- *  *  * 0.01 \text{ years} is exactly \mathbf{0.01\%} of 100 \text{ years}. This is consistent with the SDKP \mathbf{0.01\%} correction factor.
-Error in t=1000:
+ *  *  * 0.01 \text{ years} is exactly \mathbf{0.01\%} of 100 \text{ years}. This is consistent with the SDKP \mathbf{0.01\%} correction factor
  *  * \Delta t in your table is 0.05 \text{ years}.
  * 0.01\% of 1000 \text{ years} is 1000 \times 0.0001 = \mathbf{0.1 \text{ years}}.
  * The table's 0.05 \text{ years} is half the expected 0.1 \text{ years}.
