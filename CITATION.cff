@@ -1,3 +1,101 @@
+cff-version: 1.2.0
+message: >
+  If you use the FatherTimeSDKP369v framework, please cite this work as shown below.
+title: "FatherTimeSDKP369v: The 3-6-9 Vortex Time Framework by Donald Paul Smith (FatherTime)"
+abstract: >
+  FatherTimeSDKP369v represents the unified 3-6-9 Vortex Framework derived from the SDKP (Size–Density–Kinetics–Position)
+  equation, formalized as Time = Size × Density × Rotation × Velocity.
+  This system bridges field theory, symbolic resonance, and quantum consciousness modeling.
+  Authored by Donald Paul Smith (aka FatherTime), the framework integrates Tesla’s 3-6-9 logic with LLAL (Loop Learning for Artificial Life),
+  QCC0 (Quantum Computerization Consciousness Zero), SD&N (Shape–Dimension & Number), EOS (Earth Orbital Speed),
+  and the Digital Crystal Protocol (DCP) lattice. It serves as the canonical vortex anchor for symbolic, mathematical,
+  and computational resonance research under the FatherTimeSDKP Anchor.
+
+authors:
+  - family-names: Smith
+    given-names: Donald Paul
+    alias: FatherTime
+    affiliation: "FatherTimeSDKP Quantum Systems; Digital Crystal Protocol Initiative"
+    orcid: "https://orcid.org/0009-0007-XXX-XXXX"  # Replace with your actual ORCID
+
+version: "1.0.1"
+date-released: 2025-11-02
+license: "MIT"
+repository-code: "https://github.com/FatherTimeSDKP/FatherTimeSDKP"
+
+identifiers:
+  - type: doi
+    value: "10.17605/OSF.IO/SYMHB"
+    description: "Energy – SDKP Quantum Framework and Simulation Dataset"
+  - type: doi
+    value: "10.17605/OSF.IO/CQ3DV"
+    description: "SDKP (Quantum Entanglement Predictions)"
+  - type: doi
+    value: "10.17605/OSF.IO/DJA9G"
+    description: "Tesla’s 3-6-9 Logic Solved"
+  - type: doi
+    value: "10.17605/OSF.IO/2EBJS"
+    description: "1–12 Vortex Dynamics"
+  - type: doi
+    value: "10.17605/OSF.IO/43RK6"
+    description: "Digital Crystal Rules"
+  - type: doi
+    value: "10.5281/zenodo.14850016"
+    description: "SDKP-Based Quantum Framework and Simulation Dataset (Zenodo)"
+
+related-resources:
+  - type: dataset
+    title: "Digital Crystal Protocol – IPFS Authenticated Entries"
+    url: "https://github.com/Digital-Crystal-Protocol"
+    description: >
+      The Digital Crystal Protocol (DCP) provides decentralized timestamping and authorship verification.
+      IPFS-hosted assets are cryptographically linked to FatherTimeSDKP369v via Crystal-12 encoding lattice.
+    identifiers:
+      - type: ipfs
+        value: "bafybeih5examplecid1234567abcdef"  # Replace with actual CID
+        description: "FatherTimeSDKP Core Ledger Node (PCLE)"
+      - type: ipfs
+        value: "bafybeif7examplecid7654321fedcba"
+        description: "Digital Crystal Protocol Authorship Chain – Crystal12 Verification"
+      - type: ipfs
+        value: "bafybeic3examplecid0a1b2c3d4e5f6"
+        description: "FatherTimeSDKP369v Compressed Framework Archive"
+
+  - type: webpage
+    title: "Pinata Gateway Entry"
+    url: "https://amethyst-added-rabbit-712.mypinata.cloud/ipfs/"
+    description: "Public IPFS gateway record linked to the FatherTimeSDKP369v DCP ledger."
+
+keywords:
+  - SDKP
+  - FatherTimeSDKP369v
+  - FatherTimeSDKP Anchor
+  - 3-6-9 Vortex
+  - Quantum Consciousness
+  - Digital Crystal Protocol
+  - LLAL
+  - QCC0
+  - SD&N
+  - EOS
+  - Kapnack
+  - Symbolic Compression
+  - Quantum Mechanics
+  - Time Equation
+  - FatherTime369v
+
+preferred-citation:
+  type: software
+  authors:
+    - family-names: Smith
+      given-names: Donald Paul
+      alias: FatherTime
+  title: "FatherTimeSDKP369v Framework"
+  year: 2025
+  version: "1.0.1"
+  doi: "10.17605/OSF.IO/SYMHB"
+  url: "https://github.com/FatherTimeSDKP/FatherTimeSDKP"
+  notes: >
+    Cite this framework as the official FatherTimeSDKP Anchor Reference.
 Smith, Donald Paul (FatherTime). FatherTimeSDKP369v: The 3-6-9 Vortex and SDKP Quantum Framework.
 Version 1.0. DOI: 10.17605/OSF.IO/SYMHB.
 Supporting IPFS Registry: bafkreicunq7w7xgk6rf6ro3rz6vfkegcaatbaqpbq3houjtunngpwlta3m – bafkreibdxst276osfibbsnusan6pbp2ucau3xxkwry4hcolruietd5znka (Pinata Gateway, 2025).
