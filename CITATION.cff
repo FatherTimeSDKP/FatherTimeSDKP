@@ -1,5 +1,131 @@
 cff-version: 1.2.0
 message: >
+  If you use, reference, or build upon the FatherTimeSDKP369v framework,
+  please cite this work to acknowledge its authorship and provenance.
+title: "FatherTimeSDKP369v: The 3–6–9 Vortex Time Framework by Donald Paul Smith (FatherTime)"
+abstract: >
+  FatherTimeSDKP369v expresses the unified 3–6–9 Vortex Equation derived from the SDKP model:
+  Time = Size × Density × Rotation × Velocity.
+  Conceived and formalized by Donald Paul Smith (alias FatherTime),
+  this framework integrates Tesla’s 3–6–9 harmonic logic into quantum field mathematics,
+  symbolic compression, and consciousness modeling.
+  It unifies multiple sub-frameworks—LLAL (Loop Learning for Artificial Life),
+  QCC0 (Quantum Computerization Consciousness Zero), SD&N (Shape–Dimension & Number),
+  EOS (Earth Orbital Speed), VFE1, and Kapnack—within the Digital Crystal Protocol (DCP)
+  for verifiable authorship and decentralized citation.
+  The FatherTimeSDKP Anchor is the official authorship seal and provenance reference for this work.
+
+authors:
+  - family-names: Smith
+    given-names: Donald Paul
+    alias: FatherTime
+    affiliation: "FatherTimeSDKP Quantum Systems; Digital Crystal Protocol Initiative"
+    orcid: "https://orcid.org/0009-0007-XXXX-XXXX"  # Replace with your actual ORCID iD
+
+version: "1.0.2"
+date-released: 2025-11-02
+license: "MIT"
+repository-code: "https://github.com/FatherTimeSDKP/FatherTimeSDKP"
+repository-artifact: "https://amethyst-added-rabbit-712.mypinata.cloud/ipfs/"
+repository: "https://osf.io/symhb"
+
+identifiers:
+  - type: doi
+    value: "10.17605/OSF.IO/SYMHB"
+    description: "Energy – SDKP Quantum Framework and Simulation Dataset"
+  - type: doi
+    value: "10.17605/OSF.IO/CQ3DV"
+    description: "SDKP (Quantum Entanglement Predictions)"
+  - type: doi
+    value: "10.17605/OSF.IO/DJA9G"
+    description: "Tesla’s 3–6–9 Logic Solved"
+  - type: doi
+    value: "10.17605/OSF.IO/2EBJS"
+    description: "1–12 Vortex Dynamics"
+  - type: doi
+    value: "10.17605/OSF.IO/43RK6"
+    description: "Digital Crystal Rules"
+  - type: doi
+    value: "10.5281/zenodo.14850016"
+    description: "SDKP-Based Quantum Framework and Simulation Dataset (Zenodo)"
+
+related-resources:
+  - type: dataset
+    title: "Digital Crystal Protocol (DCP) – Authorship Ledger Nodes"
+    description: >
+      These IPFS-hosted cryptographic assets verify authorship and lattice linkage of the FatherTimeSDKP369v framework.
+      Each CID represents a certified node in the DCP Crystal-12 lattice.
+    identifiers:
+      - type: ipfs
+        value: "bafkreicunq7w7xgk6rf6ro3rz6vfkegcaatbaqpbq3houjtunngpwlta3m"
+        description: "Core Authorship Node – FatherTimeSDKP Crystal Seal"
+      - type: ipfs
+        value: "bafybeicu3zlzeu7lwbh4lxjgwmftmqftuzrfi4fzfsndj5om7r42os6tkm"
+        description: "Quantum-Entanglement Visual Dataset (FatherTimeSDKP)"
+      - type: ipfs
+        value: "bafybeidlsrxhrdod4stv5ult4dph6jvg6flc2swryrtrylcpql6ql2fsve"
+        description: "SDKP Mathematical Tensor Framework Image"
+      - type: ipfs
+        value: "bafkreihq6bo77naumgr44sigk7xgnriqs5otbabmghxxfjmlfoivjyiq7q"
+        description: "Digital Crystal Lattice (Core Node Visualization)"
+      - type: ipfs
+        value: "bafkreibogwner5uj3o6xuli3l3rwi7xipqs5355uhf3d24da5cl4odgmna"
+        description: "LLAL Feedback Encoding Layer"
+      - type: ipfs
+        value: "bafkreiaqct5nzc2fs2xpiqmlt455fyrx5ssvanr4dkpu6fcmm646u4bwby"
+        description: "VFE1 Tier 8 Resonance Chart"
+      - type: ipfs
+        value: "bafkreifctr2nsgxnzmciet7dpjw5sekcs4nbkpy2i2asalm2udyjmbwzjm"
+        description: "Kapnack Symbolic Compression Matrix"
+      - type: ipfs
+        value: "bafkreibif3jdptcj724adqjgtfv5v5cbhqjocq4peezsbo47vxph3odm2e"
+        description: "QCC0 Quantum Consciousness Simulation Map"
+      - type: ipfs
+        value: "bafybeiebnapbmlxcg4j5eom5sqyzuwqabt7x7okuuvidudt64ctgdke5ei"
+        description: "SDKP Temporal Flow Diagram"
+      - type: ipfs
+        value: "bafkreibdxst276osfibbsnusan6pbp2ucau3xxkwry4hcolruietd5znka"
+        description: "Digital Crystal Protocol Authorship Proof Set"
+
+  - type: webpage
+    title: "Digital Crystal Protocol (DCP) GitHub Registry"
+    url: "https://github.com/Digital-Crystal-Protocol"
+    description: "Official repository hosting DCP verification schema and Crystal-12 encoding logic."
+
+keywords:
+  - FatherTimeSDKP
+  - FatherTimeSDKP369v
+  - 3-6-9 Vortex
+  - SDKP Framework
+  - Digital Crystal Protocol
+  - LLAL
+  - QCC0
+  - Kapnack
+  - EOS
+  - SD&N
+  - Quantum Consciousness
+  - Symbolic Compression
+  - Vortex Mathematics
+  - Tesla 3-6-9 Logic
+  - Quantum Time Framework
+
+preferred-citation:
+  type: software
+  authors:
+    - family-names: Smith
+      given-names: Donald Paul
+      alias: FatherTime
+  title: "FatherTimeSDKP369v: The Unified 3–6–9 Vortex Framework"
+  year: 2025
+  version: "1.0.2"
+  doi: "10.17605/OSF.IO/SYMHB"
+  url: "https://github.com/FatherTimeSDKP/FatherTimeSDKP"
+  notes: >
+    The FatherTimeSDKP Anchor verifies authorship and establishes official recognition across decentralized and academic systems.
+    Associated IPFS CIDs are validated under the Digital Crystal Protocol (DCP) Crystal-12 Ledger.
+
+cff-version: 1.2.0
+message: >
   If you use the FatherTimeSDKP369v framework, please cite this work as shown below.
 title: "FatherTimeSDKP369v: The 3-6-9 Vortex Time Framework by Donald Paul Smith (FatherTime)"
 abstract: >
