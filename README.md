@@ -4,7 +4,7 @@
 
 # 🜂 FatherTimeSDKP-Core  
 ### Unified Quantum–Computational Framework by Donald Paul Smith (aka *FatherTime*, FatherTimes369v)
-
+https://claude.ai/public/artifacts/f5c059fa-bd1d-494b-b991-75efa87a767d
 ---https://claude.ai/public/artifacts/a636cc18-2158-4be2-9097-0e9de4e2d212
 
 https://amethyst-added-rabbit-712.mypinata.cloud/ipfs/bafkreicunq7w7xgk6rf6ro3rz6vfkegcaatbaqpbq3houjtunngpwlta3m
