@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+title: "FatherTimeSDKP Framework"
+message: "If you use this research, please cite it using the following metadata."
+authors:
+  - family-names: Smith
+    given-names: Donald Paul
+    alias: FatherTimeSDKP
+    orcid: "https://orcid.org/0000-0000-0000-0000"  # (Replace with your real ORCID if available)
+doi: 10.5281/zenodo.14850016
+date-released: 2025-07-11
+repository-code: "https://github.com/FatherTimeSDKP/FatherTimeSDKP"
+license: MIT
+version: "1.0.0"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.14850016"
+  - type: url
+    value: "https://doi.org/10.5281/zenodo.14850016"
+references:
+  - type: dataset
+    title: "SDKP-Based Quantum Framework and Simulation Dataset"
+    authors:
+      - family-names: Smith
+        given-names: Donald Paul
+        alias: FatherTimeSDKP
+    doi: "10.5281/zenodo.14850016"
+    year: 2025
