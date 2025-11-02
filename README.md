@@ -5,7 +5,7 @@
 # 🜂 FatherTimeSDKP-Core  
 ### Unified Quantum–Computational Framework by Donald Paul Smith (aka *FatherTime*, FatherTimes369v)
 
----
+---https://claude.ai/public/artifacts/a636cc18-2158-4be2-9097-0e9de4e2d212
 
 ## 🌌 Overview
 **FatherTimeSDKP-Core** is the central monorepo uniting all major frameworks developed by **Donald Paul Smith**.  
