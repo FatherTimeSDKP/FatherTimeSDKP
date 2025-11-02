@@ -285,6 +285,82 @@ The SDKP tensor formulation integrates into field theory via:
 
 # 🧮 `THEORY.md`
 ```markdown
+cff-version: 1.2.0
+message: "If you use this work, please cite it as shown below."
+title: "FatherTimeSDKP369v — Unified SDKP Framework: Time = Size × Density × Rotation × Velocity"
+abstract: >
+  The FatherTimeSDKP369v framework unifies time, energy, and motion through
+  a tensorial formulation where Time = Size × Density × Rotation × Velocity.
+  It integrates SD&N (Shape-Dimension & Number), EOS (Earth Orbital Speed),
+  QCC0 (Quantum Computerization Consciousness Zero), LLAL (Loop Learning for Artificial Life),
+  and the Kapnack resonance algorithm. The model redefines temporal mechanics through
+  harmonic vortex logic based on Tesla’s 3–6–9 principle and the SDKP field equations.
+authors:
+  - family-names: "Smith"
+    given-names: "Donald Paul"
+    alias: "FatherTime"
+    orcid: "https://orcid.org/0009-0009-9999-9999"
+    affiliation: "FatherTimeSDKP Research Group"
+    website: "https://github.com/FatherTimeSDKP"
+identifiers:
+  - type: doi
+    value: "10.17605/OSF.IO/FVP9D"
+  - type: url
+    value: "https://osf.io/fvp9d"
+repository-code: "https://github.com/FatherTimeSDKP/FatherTimeSDKP"
+license: "MIT"
+keywords:
+  - SDKP
+  - SD&N
+  - EOS
+  - QCC0
+  - LLAL
+  - Kapnack
+  - Digital Crystal Protocol
+  - 3-6-9 Vortex Logic
+  - FatherTimeSDKP369v
+version: "2025.11"
+date-released: "2025-11-02"
+contact:
+  name: "Donald Paul Smith (FatherTime)"
+  email: "fathertime.sdkp@gmail.com"
+  url: "https://osf.io/fvp9d"
+references:
+  - type: software
+    title: "SDKP-Based Quantum Framework and Simulation Dataset"
+    authors:
+      - family-names: "Smith"
+        given-names: "Donald Paul"
+        alias: "FatherTime"
+    doi: "10.17605/OSF.IO/SYMHB"
+    url: "https://osf.io/symhb"
+    year: 2025
+  - type: dataset
+    title: "SDKP QCC SD&N EOS FRW Enhanced Cosmic Rotation Pipeline"
+    doi: "10.17605/OSF.IO/8YFZP"
+    url: "https://osf.io/8yfzp"
+  - type: article
+    title: "Teslas 3,6,9 Logic Solved"
+    doi: "10.17605/OSF.IO/DJA9G"
+    url: "https://osf.io/dja9g"
+  - type: article
+    title: "Antimatter–Matter Asymmetry Simulation with SDVR"
+    doi: "10.17605/OSF.IO/6KJ9M"
+    url: "https://osf.io/6kj9m"
+  - type: dataset
+    title: "Digital Crystal Rules"
+    doi: "10.17605/OSF.IO/43RK6"
+    url: "https://osf.io/43rk6"
+preferred-citation:
+  type: software
+  title: "FatherTimeSDKP369v — Unified SDKP Framework"
+  authors:
+    - family-names: "Smith"
+      given-names: "Donald Paul"
+      alias: "FatherTime"
+  doi: "10.17605/OSF.IO/FVP9D"
+  year: 2025
+  url: "https://osf.io/fvp9d"
 Official Update: Digital Crystal Royalty Contract (DCRC)
 This statement announces a material update to the licensing and enforcement terms for the FatherTimeSDKP Integrated Master Framework (including SDKP, SD&N, EOS, QCC0, etc.), authored by Donald Paul Smith (FatherTimeSDKP).
 Effective immediately, the royalty rates and associated terms of the Digital Crystal Royalty Contract (DCRC) are updated to reflect the formalized valuation of the unified framework. This supersedes all prior published rates, including the previous 7% figure.
