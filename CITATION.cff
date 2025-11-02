@@ -1,4 +1,99 @@
 cff-version: 1.2.0
+message: "If you use this framework, dataset, or its submodules, please cite as below."
+title: "FatherTimeSDKP369v — SDKP Quantum Framework and 3–6–9 Vortex Model"
+authors:
+  - family-names: "Smith"
+    given-names: "Donald Paul"
+    alias: "FatherTime"
+    orcid: "0009-0008-6123-325X"
+affiliations:
+  - name: "FatherTimeSDKP Research & Development Group"
+    address: "United States"
+repository-code: "https://github.com/FatherTimeSDKP/FatherTimeSDKP"
+repository-artifact: "https://github.com/FatherTimeSDKP"
+keywords:
+  - SDKP
+  - FatherTimeSDKP369v
+  - FatherTimes369v
+  - QCC0
+  - SD&N
+  - EOS
+  - LLAL
+  - Digital Crystal Protocol
+  - Quantum Entanglement Predictions
+  - Tesla 3-6-9 Logic
+  - Unified Field
+  - Artificial Consciousness
+license: "MIT"
+version: "2025.11"
+date-released: "2025-11-02"
+doi: "10.5281/zenodo.14850016"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.14850016"
+    description: "Zenodo DOI for the FatherTimeSDKP Dataset and Framework"
+  - type: doi
+    value: "10.17605/OSF.IO/SYMHB"
+    description: "OSF DOI — Energy Project (SDKP-Based Quantum Framework and Simulation Dataset)"
+  - type: doi
+    value: "10.17605/OSF.IO/CQ3DV"
+    description: "SDKP Quantum Entanglement Predictions"
+  - type: doi
+    value: "10.17605/OSF.IO/DJA9G"
+    description: "Tesla’s 3–6–9 Logic Solved — FatherTimes369v Extension"
+  - type: doi
+    value: "10.17605/OSF.IO/43RK6"
+    description: "Digital Crystal Rules Project"
+  - type: doi
+    value: "10.17605/OSF.IO/WD4MY"
+    description: "How to Apply SDKP Framework"
+  - type: doi
+    value: "10.17605/OSF.IO/8YFZP"
+    description: "SDKP QCC SD&N EOS FRW Enhanced Cosmic Rotation Pipeline"
+  - type: doi
+    value: "10.17605/OSF.IO/6KJ9M"
+    description: "Antimatter–Matter Asymmetry Simulation with SDVR"
+  - type: url
+    value: "https://github.com/Digital-Crystal-Protocol"
+    description: "Digital Crystal Protocol GitHub Organization"
+
+abstract: >
+  The FatherTimeSDKP369v framework (by Donald Paul Smith, a.k.a. FatherTime) formalizes the Size–Density–Kinetics–Position (SDKP) model 
+  that unifies quantum entanglement, mass–time causality, and rotational symmetry. 
+  Through the Tesla 3–6–9 harmonic vortex interpretation, FatherTimes369v reformulates classical mechanics, relativity, and field theory 
+  as a continuous function of resonance and symbolic compression. The framework integrates submodules—SD&N (Shape–Dimension & Number), 
+  EOS (Earth Orbital Speed), QCC0 (Quantum Computerization Consciousness), and LLAL (Loop Learning for Artificial Life)—into a unified 
+  computational-physical field.  
+
+  The Digital Crystal Protocol and the FatherTimeSDKP369v implementations bridge metaphysical and quantum domains through tensorial coupling 
+  and symbolic resonance logic. This repository consolidates all GitHub, Zenodo, and OSF project references for peer verification and citation.  
+
+references:
+  - type: webpage
+    title: "Zenodo Record"
+    url: "https://zenodo.org/records/14850016"
+  - type: webpage
+    title: "OSF Projects Collection"
+    url: "https://osf.io/SYMHB/"
+  - type: webpage
+    title: "GitHub Organization — FatherTimeSDKP"
+    url: "https://github.com/FatherTimeSDKP"
+  - type: webpage
+    title: "Digital Crystal Protocol Organization"
+    url: "https://github.com/Digital-Crystal-Protocol"
+
+preferred-citation:
+  type: dataset
+  authors:
+    - family-names: "Smith"
+      given-names: "Donald Paul"
+      alias: "FatherTime"
+  title: "FatherTimeSDKP369v — SDKP Quantum Framework and 3–6–9 Vortex Model"
+  version: "2025.11"
+  doi: "10.5281/zenodo.14850016"
+  url: "https://github.com/FatherTimeSDKP/FatherTimeSDKP"
+
+cff-version: 1.2.0
 type: software
 title: "FatherTimeSDKP Framework: SDKP–QCC–LLAL Unified Quantum System (FatherTimes369v Edition)"
 message: "If you use this framework, please cite it as below."
