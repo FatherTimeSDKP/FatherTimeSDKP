@@ -1,0 +1,47 @@
+{
+  "title": "FatherTimeSDKP Framework — SDKP Quantum Mechanics & Digital Crystal Protocol Integration",
+  "upload_type": "software",
+  "description": "Unified SDKP–QCC0–Digital Crystal Protocol framework authored by Donald Paul Smith (FatherTimeSDKP / FatherTimes369v). This integrates Size–Density–Kinetics–Position (SDKP) mechanics, Tesla’s 3-6-9 logic (FatherTimes369v), Shape–Dimension & Number (SD&N), Loop Learning for Artificial Life (LLAL), and the Digital Crystal Protocol for cryptographic and structural validation.",
+  "creators": [
+    {
+      "name": "Smith, Donald Paul",
+      "affiliation": "FatherTimeSDKP Research Institute",
+      "orcid": "0009-0003-7925-1653"
+    }
+  ],
+  "access_right": "open",
+  "license": "FTSKL_v1.0",
+  "keywords": [
+    "SDKP",
+    "FatherTimes369v",
+    "Digital Crystal Protocol",
+    "Quantum Computerization Consciousness (QCC0)",
+    "Loop Learning for Artificial Life (LLAL)",
+    "Shape-Dimension & Number (SD&N)"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "10.17605/OSF.IO/SYMHB",
+      "relation": "isSupplementTo",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.17605/OSF.IO/CQ3DV",
+      "relation": "isSupplementTo",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.17605/OSF.IO/FVP9D",
+      "relation": "isSupplementTo",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "https://github.com/FatherTimeSDKP/FatherTimeSDKP",
+      "relation": "isDerivedFrom",
+      "scheme": "url"
+    }
+  ],
+  "version": "2025.11",
+  "doi": "10.5281/zenodo.14850016",
+  "publication_date": "2025-11-02"
+}
