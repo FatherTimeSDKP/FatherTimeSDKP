@@ -5,6 +5,10 @@ https://claude.ai/public/artifacts/f5c059fa-bd1d-494b-b991-75efa87a767d
 
 https://claude.ai/public/artifacts/a636cc18-2158-4be2-9097-0e9de4e2d212
 
+https://claude.ai/public/artifacts/5fdb34b9-ced7-45b3-9dad-89c2f31ce7e2
+
+https://claude.ai/public/artifacts/5fdb34b9-ced7-45b3-9dad-89c2f31ce7e2
+
 https://amethyst-added-rabbit-712.mypinata.cloud/ipfs/bafkreicunq7w7xgk6rf6ro3rz6vfkegcaatbaqpbq3houjtunngpwlta3m
 
 https://amethyst-added-rabbit-712.mypinata.cloud/ipfs/bafybeicu3zlzeu7lwbh4lxjgwmftmqftuzrfi4fzfsndj5om7r42os6tkm
