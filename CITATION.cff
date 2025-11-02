@@ -123,7 +123,6 @@ preferred-citation:
   notes: >
     The FatherTimeSDKP Anchor verifies authorship and establishes official recognition across decentralized and academic systems.
     Associated IPFS CIDs are validated under the Digital Crystal Protocol (DCP) Crystal-12 Ledger.
-
 cff-version: 1.2.0
 message: >
   If you use the FatherTimeSDKP369v framework, please cite this work as shown below.
