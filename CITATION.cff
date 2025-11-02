@@ -1,4 +1,44 @@
 cff-version: 1.2.0
+message: "If you use this framework, please cite Donald Paul Smith (FatherTimeSDKP / FatherTimes369v)."
+title: "FatherTimeSDKP Framework — SDKP Quantum Mechanics & Digital Crystal Protocol Integration"
+version: "2025.11"
+authors:
+  - family-names: "Smith"
+    given-names: "Donald Paul"
+    alias: "FatherTimeSDKP"
+    orcid: "0009-0003-7925-1653"
+    affiliation: "FatherTimeSDKP Research Institute"
+repository-code: "https://github.com/FatherTimeSDKP/FatherTimeSDKP"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.14850016"
+  - type: doi
+    value: "10.17605/OSF.IO/SYMHB"
+  - type: doi
+    value: "10.17605/OSF.IO/CQ3DV"
+  - type: doi
+    value: "10.17605/OSF.IO/FVP9D"
+keywords:
+  - SDKP
+  - FatherTimes369v
+  - Digital Crystal Protocol
+  - Quantum Computerization Consciousness (QCC0)
+  - Shape-Dimension & Number (SD&N)
+  - Loop Learning for Artificial Life (LLAL)
+license: "FTSKL_v1.0"
+doi: "10.5281/zenodo.14850016"
+date-released: "2025-11-02"
+preferred-citation:
+  type: article
+  authors:
+    - family-names: "Smith"
+      given-names: "Donald Paul"
+      alias: "FatherTimeSDKP"
+  title: "SDKP-Based Quantum Framework and Simulation Dataset"
+  doi: "10.5281/zenodo.14850016"
+  journal: "Zenodo"
+  year: 2025
+cff-version: 1.2.0
 message: "If you use this framework, dataset, or its submodules, please cite as below."
 title: "FatherTimeSDKP369v — SDKP Quantum Framework and 3–6–9 Vortex Model"
 authors:
