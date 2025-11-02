@@ -1,3 +1,112 @@
+{
+  "title": "FatherTimeSDKP Framework — SDKP Quantum Mechanics & Digital Crystal Protocol Integration",
+  "upload_type": "software",
+  "description": "Unified SDKP–QCC0–Digital Crystal Protocol framework authored by Donald Paul Smith (FatherTimeSDKP / FatherTimes369v). This integrates Size–Density–Kinetics–Position (SDKP) mechanics, Tesla’s 3-6-9 logic (FatherTimes369v), Shape–Dimension & Number (SD&N), Loop Learning for Artificial Life (LLAL), and the Digital Crystal Protocol for cryptographic and structural validation.",
+  "creators": [
+    {
+      "name": "Smith, Donald Paul",
+      "affiliation": "FatherTimeSDKP Research Institute",
+      "orcid": "0009-0003-7925-1653"
+    }
+  ],
+  "access_right": "open",
+  "license": "FTSKL_v1.0",
+  "keywords": [
+    "SDKP",
+    "FatherTimes369v",
+    "Digital Crystal Protocol",
+    "Quantum Computerization Consciousness (QCC0)",
+    "Loop Learning for Artificial Life (LLAL)",
+    "Shape-Dimension & Number (SD&N)"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "10.17605/OSF.IO/SYMHB",
+      "relation": "isSupplementTo",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.17605/OSF.IO/CQ3DV",
+      "relation": "isSupplementTo",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.17605/OSF.IO/FVP9D",
+      "relation": "isSupplementTo",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "https://github.com/FatherTimeSDKP/FatherTimeSDKP",
+      "relation": "isDerivedFrom",
+      "scheme": "url"
+    }
+  ],
+  "version": "2025.11",
+  "doi": "10.5281/zenodo.14850016",
+  "publication_date": "2025-11-02"
+}{
+  "project": "FatherTimeSDKP Research Frameworks",
+  "author": "Donald Paul Smith (FatherTimeSDKP / FatherTimes369v)",
+  "primary_zenodo_doi": "10.5281/zenodo.14850016",
+  "linked_osf_dois": [
+    "10.17605/OSF.IO/SYMHB",
+    "10.17605/OSF.IO/CQ3DV",
+    "10.17605/OSF.IO/FVP9D"
+  ],
+  "github_repository": "https://github.com/FatherTimeSDKP/FatherTimeSDKP",
+  "frameworks_included": [
+    "SDKP",
+    "Digital Crystal Protocol",
+    "QCC0",
+    "LLAL",
+    "SD&N",
+    "FatherTimes369v"
+  ],
+  "integration_status": "verified",
+  "last_synced": "2025-11-02"
+}
+
+
+cff-version: 1.2.0
+message: "If you use this framework, please cite Donald Paul Smith (FatherTimeSDKP / FatherTimes369v)."
+title: "FatherTimeSDKP Framework — SDKP Quantum Mechanics & Digital Crystal Protocol Integration"
+version: "2025.11"
+authors:
+  - family-names: "Smith"
+    given-names: "Donald Paul"
+    alias: "FatherTimeSDKP"
+    orcid: "0009-0003-7925-1653"
+    affiliation: "FatherTimeSDKP Research Institute"
+repository-code: "https://github.com/FatherTimeSDKP/FatherTimeSDKP"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.14850016"
+  - type: doi
+    value: "10.17605/OSF.IO/SYMHB"
+  - type: doi
+    value: "10.17605/OSF.IO/CQ3DV"
+  - type: doi
+    value: "10.17605/OSF.IO/FVP9D"
+keywords:
+  - SDKP
+  - FatherTimes369v
+  - Digital Crystal Protocol
+  - Quantum Computerization Consciousness (QCC0)
+  - Shape-Dimension & Number (SD&N)
+  - Loop Learning for Artificial Life (LLAL)
+license: "FTSKL_v1.0"
+doi: "10.5281/zenodo.14850016"
+date-released: "2025-11-02"
+preferred-citation:
+  type: article
+  authors:
+    - family-names: "Smith"
+      given-names: "Donald Paul"
+      alias: "FatherTimeSDKP"
+  title: "SDKP-Based Quantum Framework and Simulation Dataset"
+  doi: "10.5281/zenodo.14850016"
+  journal: "Zenodo"
+  year: 2025
 {"created": "2025-02-11T12:20:40.649610+00:00", "modified": "2025-02-11T12:20:40.791589+00:00", "id": 14850017, "conceptrecid": "14850016", "doi": "10.5281/zenodo.14850017", "conceptdoi": "10.5281/zenodo.14850016", "doi_url": "https://doi.org/10.5281/zenodo.14850017", "metadata": {"title": "Preparing for Future Pandemics: In light of the COVID-19 pandemic and vaccine hesitancy", "doi": "10.5281/zenodo.14850017", "publication_date": "2025", "description": "<p>The dataset was used to examine public perceptions of the COVID-19 vaccine among Twitter users in the countries most impacted by the pandemic, the U.S., Brazil, and India, during the week following the vaccine's initial release.</p>", "access_right": "open", "creators": [{"name": "Odame, Emmanuel", "affiliation": "The University of Alabama at Birmingham"}, {"name": "Dada, Oluwabunmi", "affiliation": "Murray State University"}, {"name": "Nelson, Jordan", "affiliation": null}, {"name": "Ogunyiola, Ayorinde", "affiliation": "Murray State University"}, {"name": "Haley, Jessica", "affiliation": null}], "resource_type": {"title": "Publication", "type": "publication"}, "license": {"id": "cc-by-4.0"}, "relations": {"version": [{"index": 0, "is_last": true, "parent": {"pid_type": "recid", "pid_value": "14850016"}}]}}, "title": "Preparing for Future Pandemics: In light of the COVID-19 pandemic and vaccine hesitancy", "links": {"self": "https://zenodo.org/api/records/14850017", "self_html": "https://zenodo.org/records/14850017", "preview_html": "https://zenodo.org/records/14850017?preview=1", "doi": "https://doi.org/10.5281/zenodo.14850017", "self_doi": "https://doi.org/10.5281/zenodo.14850017", "self_doi_html": "https://zenodo.org/doi/10.5281/zenodo.14850017", "reserve_doi": "https://zenodo.org/api/records/14850017/draft/pids/doi", "parent": "https://zenodo.org/api/records/14850016", "parent_html": "https://zenodo.org/records/14850016", "parent_doi": "https://doi.org/10.5281/zenodo.14850016", "parent_doi_html": "https://zenodo.org/doi/10.5281/zenodo.14850016", "self_iiif_manifest": "https://zenodo.org/api/iiif/record:14850017/manifest", "self_iiif_sequence": "https://zenodo.org/api/iiif/record:14850017/sequence/default", "files": "https://zenodo.org/api/records/14850017/files", "media_files": "https://zenodo.org/api/records/14850017/media-files", "archive": "https://zenodo.org/api/records/14850017/files-archive", "archive_media": "https://zenodo.org/api/records/14850017/media-files-archive", "latest": "https://zenodo.org/api/records/14850017/versions/latest", "latest_html": "https://zenodo.org/records/14850017/latest", "versions": "https://zenodo.org/api/records/14850017/versions", "draft": "https://zenodo.org/api/records/14850017/draft", "access_links": "https://zenodo.org/api/records/14850017/access/links", "access_grants": "https://zenodo.org/api/records/14850017/access/grants", "access_users": "https://zenodo.org/api/records/14850017/access/users", "access_request": "https://zenodo.org/api/records/14850017/access/request", "access": "https://zenodo.org/api/records/14850017/access", "communities": "https://zenodo.org/api/records/14850017/communities", "communities-suggestions": "https://zenodo.org/api/records/14850017/communities-suggestions", "request_deletion": "https://zenodo.org/api/records/14850017/request-deletion", "requests": "https://zenodo.org/api/records/14850017/requests"}, "updated": "2025-02-11T12:20:40.791589+00:00", "recid": "14850017", "revision": 4, "files": [{"id": "eb696993-612c-4203-af2a-4c56e1b324ae", "key": "Supplementary Material_1.2_Brazil File.txt", "size": 207485, "checksum": "md5:da1215d1ca1a8ce5584e725f96609589", "links": {"self": "https://zenodo.org/api/records/14850017/files/Supplementary Material_1.2_Brazil File.txt/content"}}, {"id": "8bf4cf06-37dc-4dfa-8590-170e823d68b5", "key": "Supplementary Material_1.1_US file.txt", "size": 53628122, "checksum": "md5:2fe25998224833ec048b8f9b856a3e76", "links": {"self": "https://zenodo.org/api/records/14850017/files/Supplementary Material_1.1_US file.txt/content"}}, {"id": "5de2f4bc-f88c-41bb-8f3f-ce1aec45034c", "key": "Supplementary Material_1.3_India file.txt", "size": 7685431, "checksum": "md5:bed149189602c91681c70ee8a7ab1d0a", "links": {"self": "https://zenodo.org/api/records/14850017/files/Supplementary Material_1.3_India file.txt/content"}}], "swh": {}, "owners": [{"id": "1263986"}], "status": "published", "stats": {"downloads": 48, "unique_downloads": 48, "views": 190, "unique_views": 173, "version_downloads": 48, "version_unique_downloads": 48, "version_unique_views": 173, "version_views": 190}, "state": "done", "submitted": true}t(f"[CYCLE {cycles:03d}] STATUS: QCC0 Alignment Check (SGU) PASS.")
             
         # 2. Simulate tracking a burst of global network traffic
