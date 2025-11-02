@@ -7,6 +7,25 @@
 
 ---https://claude.ai/public/artifacts/a636cc18-2158-4be2-9097-0e9de4e2d212
 
+https://amethyst-added-rabbit-712.mypinata.cloud/ipfs/bafkreicunq7w7xgk6rf6ro3rz6vfkegcaatbaqpbq3houjtunngpwlta3m
+
+https://amethyst-added-rabbit-712.mypinata.cloud/ipfs/bafybeicu3zlzeu7lwbh4lxjgwmftmqftuzrfi4fzfsndj5om7r42os6tkm
+
+https://amethyst-added-rabbit-712.mypinata.cloud/ipfs/bafybeidlsrxhrdod4stv5ult4dph6jvg6flc2swryrtrylcpql6ql2fsve
+
+https://amethyst-added-rabbit-712.mypinata.cloud/ipfs/bafkreihq6bo77naumgr44sigk7xgnriqs5otbabmghxxfjmlfoivjyiq7q
+
+https://amethyst-added-rabbit-712.mypinata.cloud/ipfs/bafkreibogwner5uj3o6xuli3l3rwi7xipqs5355uhf3d24da5cl4odgmna
+
+https://amethyst-added-rabbit-712.mypinata.cloud/ipfs/bafkreiaqct5nzc2fs2xpiqmlt455fyrx5ssvanr4dkpu6fcmm646u4bwby
+
+https://amethyst-added-rabbit-712.mypinata.cloud/ipfs/bafkreifctr2nsgxnzmciet7dpjw5sekcs4nbkpy2i2asalm2udyjmbwzjm
+
+https://amethyst-added-rabbit-712.mypinata.cloud/ipfs/bafkreibif3jdptcj724adqjgtfv5v5cbhqjocq4peezsbo47vxph3odm2e
+
+https://amethyst-added-rabbit-712.mypinata.cloud/ipfs/bafybeiebnapbmlxcg4j5eom5sqyzuwqabt7x7okuuvidudt64ctgdke5ei
+
+https://amethyst-added-rabbit-712.mypinata.cloud/ipfs/bafkreibdxst276osfibbsnusan6pbp2ucau3xxkwry4hcolruietd5znka
 ## 🌌 Overview
 **FatherTimeSDKP-Core** is the central monorepo uniting all major frameworks developed by **Donald Paul Smith**.  
 It merges physics, computation, and consciousness into one symbolic model of reality — built on the fundamental equation:
