@@ -1,3 +1,112 @@
+{
+  "title": "FatherTimeSDKP Framework: SDKP–QCC–LLAL Unified Quantum System (FatherTimes369v Edition)",
+  "upload_type": "software",
+  "description": "The FatherTimeSDKP Framework integrates the SDKP (Size–Density–Kinetics–Position) formalism with the QCC0 (Quantum Computerization Consciousness) model, LLAL (Loop Learning for Artificial Life), and EOS (Earth Orbital Speed) corrections, forming a unified computational-physical framework. It introduces tensor-calibrated time equations, the Kapnack compression protocol, and the Digital Crystal Rules for harmonic data integrity across symbolic and quantum layers. This FatherTimes369v Edition highlights the FatherTimes369v interpretation of Tesla’s 3-6-9 vortex and symbolic harmonic resonance logic.",
+  "creators": [
+    {
+      "name": "Smith, Donald Paul",
+      "affiliation": "Independent Researcher, SDKP Research Initiative",
+      "orcid": "0009-0003-7925-1653"
+    }
+  ],
+  "keywords": [
+    "SDKP",
+    "QCC0",
+    "LLAL",
+    "SD&N",
+    "EOS",
+    "VFE1",
+    "Kapnack",
+    "Digital Crystal Protocol",
+    "Quantum Mechanics",
+    "Consciousness",
+    "Symbolic Compression",
+    "Tesla 3-6-9 Logic",
+    "FatherTimes369v",
+    "Open Science Framework",
+    "Zenodo Dataset"
+  ],
+  "license": "FTSKL v1.0",
+  "related_identifiers": [
+    {
+      "identifier": "10.17605/OSF.IO/SYMHB",
+      "relation": "isSupplementTo",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.17605/OSF.IO/CQ3DV",
+      "relation": "isReferencedBy",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.17605/OSF.IO/DJA9G",
+      "relation": "isReferencedBy",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.17605/OSF.IO/2EBJS",
+      "relation": "isReferencedBy",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.17605/OSF.IO/43RK6",
+      "relation": "isReferencedBy",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.17605/OSF.IO/8YFZP",
+      "relation": "isReferencedBy",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.17605/OSF.IO/9XJ7T",
+      "relation": "isReferencedBy",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.17605/OSF.IO/7ZK8N",
+      "relation": "isReferencedBy",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.17605/OSF.IO/6KJ9M",
+      "relation": "isReferencedBy",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.17605/OSF.IO/WD4MY",
+      "relation": "isReferencedBy",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.17605/OSF.IO/RVP58",
+      "relation": "isReferencedBy",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.17605/OSF.IO/TF52W",
+      "relation": "isReferencedBy",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "https://github.com/FatherTimeSDKP/FatherTimeSDKP",
+      "relation": "isRelatedTo",
+      "scheme": "url"
+    }
+  ],
+  "contributors": [
+    {
+      "name": "Digital-Crystal-Protocol",
+      "affiliation": "Digital Crystal Research Org",
+      "type": "ProjectMember"
+    }
+  ],
+  "access_right": "open",
+  "language": "en",
+  "notes": "FatherTimes369v Citation Suite — cross-linked to OSF preprints and GitHub repository."
+}
+
+
 FatherTimeSDKP Unified Framework License  
 Version 1.1 — October 30, 2025  
 Author: Donald Paul Smith (aka FatherTime, FatherTimes369v)  
