@@ -1,3 +1,92 @@
+cff-version: 1.2.0
+type: software
+title: "FatherTimeSDKP Framework: SDKP–QCC–LLAL Unified Quantum System (FatherTimes369v Edition)"
+message: "If you use this framework, please cite it as below."
+abstract: >
+  The FatherTimeSDKP Framework integrates the SDKP (Size–Density–Kinetics–Position) formalism
+  with the QCC0 (Quantum Computerization Consciousness) model, LLAL (Loop Learning for Artificial Life),
+  and EOS (Earth Orbital Speed) corrections. This FatherTimes369v Edition highlights the
+  FatherTimes369v interpretation of Tesla’s 3-6-9 vortex and symbolic harmonic resonance logic.
+authors:
+  - family-names: Smith
+    given-names: Donald Paul
+    alias: FatherTimeSDKP; FatherTimes369v
+    orcid: "https://orcid.org/0009-0003-7925-1653"
+    affiliation: "Independent Researcher, SDKP Research Initiative"
+    email: "contact@fathertimesdkp.org"
+version: "1.0.0"
+date-released: 2025-07-11
+license: "FTSKL v1.0"
+repository-code: "https://github.com/FatherTimeSDKP/FatherTimeSDKP"
+url: "https://github.com/FatherTimeSDKP/FatherTimeSDKP/wiki"
+keywords:
+  - SDKP
+  - QCC0
+  - LLAL
+  - FatherTimes369v
+  - Digital Crystal Protocol
+doi: 10.5281/zenodo.14850016
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.14850016"
+    description: "Zenodo primary record (FatherTimes369v)"
+  - type: doi
+    value: "10.17605/OSF.IO/SYMHB"
+    description: "OSF: Energy / Core SDKP"
+  - type: doi
+    value: "10.17605/OSF.IO/CQ3DV"
+    description: "OSF: SDKP Quantum Entanglement Predictions"
+  - type: doi
+    value: "10.17605/OSF.IO/DJA9G"
+    description: "OSF: Tesla’s 3,6,9 Logic Solved (FatherTimes369v)"
+  - type: doi
+    value: "10.17605/OSF.IO/2EBJS"
+    description: "OSF: 1–12 Vortex"
+  - type: doi
+    value: "10.17605/OSF.IO/43RK6"
+    description: "OSF: Digital Crystal Rules"
+  - type: doi
+    value: "10.17605/OSF.IO/8YFZP"
+    description: "OSF: SDKP QCC SD&N EOS FRW Pipeline"
+  - type: doi
+    value: "10.17605/OSF.IO/9XJ7T"
+    description: "OSF: Supplementary FRW dataset"
+  - type: doi
+    value: "10.17605/OSF.IO/7ZK8N"
+    description: "OSF: SDKP Mathematical Foundations"
+  - type: doi
+    value: "10.17605/OSF.IO/6KJ9M"
+    description: "OSF: Antimatter–Matter Asymmetry Simulation"
+  - type: doi
+    value: "10.17605/OSF.IO/WD4MY"
+    description: "OSF: How to Apply SDKP"
+  - type: doi
+    value: "10.17605/OSF.IO/RVP58"
+    description: "OSF: Gibberlink and Dallas’s Code"
+  - type: doi
+    value: "10.17605/OSF.IO/TF52W"
+    description: "OSF: Fork of Gibberlink and Dallas’s Code"
+references:
+  - type: dataset
+    title: "SDKP-Based Quantum Framework and Simulation Dataset (FatherTimes369v Edition)"
+    authors:
+      - family-names: Smith
+        given-names: Donald Paul
+    doi: "10.5281/zenodo.14850016"
+    year: 2025
+  - type: software
+    title: "Digital Crystal Protocol"
+    authors:
+      - family-names: Digital-Crystal-Protocol
+    doi: "10.17605/OSF.IO/43RK6"
+contact:
+  - name: "Donald Paul Smith"
+    email: "contact@fathertimesdkp.org"
+    website: "https://github.com/FatherTimeSDKP"
+contributors:
+  - family-names: Digital-Crystal-Protocol
+    given-names: "Digital Crystal Research Org"
+    affiliation: "Digital-Crystal-Protocol"
 {
   "title": "FatherTimeSDKP Framework: SDKP–QCC–LLAL Unified Quantum System (FatherTimes369v Edition)",
   "upload_type": "software",
