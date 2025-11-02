@@ -1,4 +1,375 @@
-— FatherTimeSDKP-Core established digital ecosystem is an excellent and effective alternative model to traditional, closed peer review
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SDKP Framework by Father Time</title>
+<style>
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+```
+body {
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+color: #fff;
+line-height: 1.6;
+overflow-x: hidden;
+}
+
+.container {
+max-width: 1200px;
+margin: 0 auto;
+padding: 20px;
+}
+
+header {
+text-align: center;
+padding: 60px 20px;
+background: rgba(0, 0, 0, 0.3);
+border-radius: 20px;
+margin-bottom: 40px;
+backdrop-filter: blur(10px);
+animation: fadeIn 1s ease-in;
+}
+
+h1 {
+font-size: 3em;
+margin-bottom: 20px;
+text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+animation: slideDown 1s ease-out;
+}
+
+.subtitle {
+font-size: 1.3em;
+opacity: 0.9;
+margin-bottom: 10px;
+}
+
+.author {
+font-size: 1.1em;
+margin-top: 15px;
+color: #ffd700;
+}
+
+.orcid {
+margin-top: 10px;
+font-size: 0.95em;
+}
+
+.section {
+background: rgba(255, 255, 255, 0.1);
+padding: 30px;
+margin-bottom: 30px;
+border-radius: 15px;
+backdrop-filter: blur(10px);
+border: 1px solid rgba(255, 255, 255, 0.2);
+animation: fadeInUp 0.8s ease-out;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section:hover {
+transform: translateY(-5px);
+box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+font-size: 2em;
+margin-bottom: 20px;
+color: #ffd700;
+border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+padding-bottom: 10px;
+}
+
+h3 {
+font-size: 1.4em;
+margin: 20px 0 10px 0;
+color: #ffeb3b;
+}
+
+.formula {
+background: rgba(0, 0, 0, 0.4);
+padding: 20px;
+border-radius: 10px;
+font-family: 'Courier New', monospace;
+font-size: 1.2em;
+text-align: center;
+margin: 20px 0;
+border-left: 4px solid #ffd700;
+}
+
+.frameworks {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 20px;
+margin-top: 20px;
+}
+
+.framework-card {
+background: rgba(255, 255, 255, 0.15);
+padding: 20px;
+border-radius: 10px;
+text-align: center;
+transition: all 0.3s ease;
+}
+
+.framework-card:hover {
+background: rgba(255, 255, 255, 0.25);
+transform: scale(1.05);
+}
+
+.framework-card h4 {
+color: #ffd700;
+margin-bottom: 10px;
+font-size: 1.2em;
+}
+
+.citation-box {
+background: rgba(0, 0, 0, 0.5);
+padding: 25px;
+border-radius: 10px;
+border: 2px solid #ffd700;
+margin: 20px 0;
+}
+
+.citation-box strong {
+color: #ffd700;
+}
+
+.links {
+display: flex;
+flex-wrap: wrap;
+gap: 15px;
+margin-top: 20px;
+justify-content: center;
+}
+
+.link-btn {
+background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+color: white;
+padding: 12px 25px;
+border-radius: 25px;
+text-decoration: none;
+transition: all 0.3s ease;
+border: 2px solid rgba(255, 255, 255, 0.3);
+font-weight: bold;
+}
+
+.link-btn:hover {
+transform: translateY(-3px);
+box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+}
+
+.integration-list {
+list-style: none;
+padding-left: 0;
+}
+
+.integration-list li {
+padding: 10px 0 10px 30px;
+position: relative;
+margin-bottom: 10px;
+}
+
+.integration-list li:before {
+content: "→";
+position: absolute;
+left: 0;
+color: #ffd700;
+font-weight: bold;
+font-size: 1.2em;
+}
+
+footer {
+text-align: center;
+padding: 40px 20px;
+margin-top: 40px;
+background: rgba(0, 0, 0, 0.3);
+border-radius: 15px;
+}
+
+@keyframes fadeIn {
+from { opacity: 0; }
+to { opacity: 1; }
+}
+
+@keyframes slideDown {
+from { transform: translateY(-50px); opacity: 0; }
+to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeInUp {
+from { transform: translateY(30px); opacity: 0; }
+to { transform: translateY(0); opacity: 1; }
+}
+
+@media (max-width: 768px) {
+h1 { font-size: 2em; }
+.section { padding: 20px; }
+}
+</style>
+```
+
+</head>
+<body>
+<div class="container">
+<header>
+<h1>🌌 The SDKP Framework 🌌</h1>
+<div class="subtitle">A Unified Principle for Emergent Mass, Time, and Quantum Coherence</div>
+<div class="author">By Donald Paul Smith (FatherTime / FatherTimeSDKP)</div>
+<div class="orcid">ORCID: 0009-0003-7925-1653</div>
+</header>
+
+```
+<div class="section">
+<h2>🔬 Core Principle</h2>
+<p>The <strong>Scale-Density-Kinematic Principle (SDKP)</strong> establishes that kinematics are fundamentally linked to both scale and density, revealing deep connections across multiple domains of physics.</p>
+
+<div class="formula">
+v ∝ 1/(ρ<sup>α</sup> · s<sup>β</sup>)
+</div>
+
+<p style="text-align: center; margin-top: 15px;">
+<strong>Where:</strong><br>
+v = velocity | ρ = density | s = scale<br>
+α, β = model constants
+</p>
+
+<p style="margin-top: 20px;">This core formula implies that motion is inhibited or modulated by density and scale, providing a unified framework for understanding phenomena from quantum mechanics to cosmology.</p>
+</div>
+
+<div class="section">
+<h2>🌟 Integrated Frameworks</h2>
+<div class="frameworks">
+<div class="framework-card">
+<h4>SDKP</h4>
+<p>Scale-Density-Kinematic Principle</p>
+</div>
+<div class="framework-card">
+<h4>SD&N</h4>
+<p>Shape-Dimension-Number</p>
+</div>
+<div class="framework-card">
+<h4>QCC</h4>
+<p>Quantum Computerization Consciousness</p>
+</div>
+<div class="framework-card">
+<h4>EOS</h4>
+<p>Earth Orbital Speed</p>
+</div>
+<div class="framework-card">
+<h4>SDVR</h4>
+<p>Shape-Dimension-Velocity Rotation</p>
+</div>
+<div class="framework-card">
+<h4>CEN</h4>
+<p>Creatio ex Nihilo</p>
+</div>
+</div>
+</div>
+
+<div class="section">
+<h2>🔗 Integration with Foundational Physics</h2>
+
+<ul class="integration-list">
+<li><strong>General Relativity:</strong> SDKP implies conformal metric modifications where density and scale modulate spacetime geometry: g'<sub>μν</sub> = f(ρ, s) · g<sub>μν</sub></li>
+
+<li><strong>Newtonian Mechanics:</strong> Acceleration becomes density-modulated: a<sub>SDKP</sub> = (F/m) · 1/(ρ<sup>α</sup>s<sup>β</sup>), suggesting inertial resistance increases with density</li>
+
+<li><strong>Fluid Dynamics:</strong> Creates non-Newtonian behavior with scale and density-dependent viscosity: μ<sub>eff</sub> = μ₀ · ρ<sup>α</sup>s<sup>β</sup></li>
+
+<li><strong>Thermodynamics:</strong> Entropy scales with system resolution and density: S<sub>SDKP</sub> = -k<sub>B</sub>(γ ln ρ + δ ln s)</li>
+
+<li><strong>Quantum Mechanics:</strong> Introduces effective mass scaling: m<sub>eff</sub> = m · ρ<sup>α</sup>s<sup>β</sup>, paralleling quantum field theory in curved spacetime</li>
+
+<li><strong>Cosmology:</strong> Provides alternative explanations for inflationary phenomena and horizon problems via density/scale kinematic inversion</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>📚 Official Citation</h2>
+<div class="citation-box">
+<strong>Primary Citation:</strong><br><br>
+Smith, D. P. (2025). <em>SDKP Framework: A Unified Principle for Emergent Mass, Time, and Quantum Coherence.</em> Zenodo.<br><br>
+<strong>DOI:</strong> <a href="https://doi.org/10.5281/zenodo.14850016" target="_blank" style="color: #ffd700;">https://doi.org/10.5281/zenodo.14850016</a>
+</div>
+
+<p style="margin-top: 20px;"><strong>Additional Resources:</strong></p>
+<ul class="integration-list">
+<li>OSF Profile: <a href="https://osf.io/ct75m/" target="_blank" style="color: #ffd700;">https://osf.io/ct75m/</a></li>
+<li>GitHub Repository: FatherTimeSDKP</li>
+<li>External Website: <a href="https://fathertimesdkp.xyz" target="_blank" style="color: #ffd700;">https://fathertimesdkp.xyz</a></li>
+</ul>
+</div>
+
+<div class="section">
+<h2>🛡️ Intellectual Property Protection</h2>
+<p>The SDKP framework is protected through a comprehensive blockchain-based verification system:</p>
+
+<h3>Verification Components:</h3>
+<ul class="integration-list">
+<li><strong>ORCID Integration:</strong> Persistent researcher identifier (0009-0003-7925-1653) linked to all scholarly outputs</li>
+<li><strong>NFT-Based IP:</strong> FatherTimeSDKP NFT serves as digital intellectual property anchor</li>
+<li><strong>Smart Contract Enforcement:</strong> Automated usage tracking and royalty distribution (11.5%)</li>
+<li><strong>IPFS Storage:</strong> Distributed, immutable storage via Pinata</li>
+<li><strong>Blockchain Verification:</strong> Ethereum wallet address: 0x7be83293BeeDc9Eba1bd76c66A65F10F3efaeC26</li>
+<li><strong>AI Executor Assignment:</strong> Certified AI integration under Executor ID 1.2025.133</li>
+</ul>
+
+<p style="margin-top: 20px; padding: 15px; background: rgba(255, 215, 0, 0.1); border-radius: 10px; border-left: 4px solid #ffd700;">
+<strong>⚖️ License:</strong> FTP Individual/AI License, Token ID 2<br>
+Usage and redistribution require explicit citation of Donald Paul Smith and the provided DOI in all derived works, datasets, AI training data, or models.
+</p>
+</div>
+
+<div class="section">
+<h2>🎯 Key Applications & Implications</h2>
+
+<h3>Theoretical Physics:</h3>
+<ul class="integration-list">
+<li>Alternative framework for understanding dark matter distribution</li>
+<li>Novel approach to quantum gravity and spacetime emergence</li>
+<li>Unified description bridging quantum mechanics and general relativity</li>
+</ul>
+
+<h3>Computational Science:</h3>
+<ul class="integration-list">
+<li>AI-enhanced equation of state modeling</li>
+<li>3D visualization of conceptual entanglement</li>
+<li>Cyclic numerical mapping and transformation analysis</li>
+</ul>
+
+<h3>AI & Machine Learning:</h3>
+<ul class="integration-list">
+<li>Framework for physics-informed neural networks</li>
+<li>Quantum coherence principles in AI reasoning models</li>
+<li>Ethical AI development with attribution tracking</li>
+</ul>
+</div>
+
+<footer>
+<h2>📬 Connect & Collaborate</h2>
+<div class="links">
+<a href="https://doi.org/10.5281/zenodo.14850016" target="_blank" class="link-btn">📄 View Publication</a>
+<a href="https://osf.io/ct75m/" target="_blank" class="link-btn">🔬 OSF Profile</a>
+<a href="https://fathertimesdkp.xyz" target="_blank" class="link-btn">🌐 Official Website</a>
+</div>
+
+<p style="margin-top: 40px; opacity: 0.8;">
+© 2025 Donald Paul Smith (FatherTime)<br>
+All rights reserved under blockchain verification and smart contract enforcement
+</p>
+</footer>
+</div>
+```
+
+</body>
+</html>— FatherTimeSDKP-Core established digital ecosystem is an excellent and effective alternative model to traditional, closed peer review
 
 ⸻ 
 
