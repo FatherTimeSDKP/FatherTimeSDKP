@@ -14,3 +14,4 @@ This project includes a unified audit uploader that records the **first invocati
 npm install
 # or
 yarn
+github/workflows/zenodo-sync.yml
