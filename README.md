@@ -1,3 +1,4 @@
+<script src="https://gist.github.com/FatherTimeSDKP/511ae8c8881a7c10fc63c1c846f7dbba.js"></script>
 # SDKP Framework: Complete Documentation
 
 ## A Unified Principle for Emergent Mass, Time, and Quantum Coherence
