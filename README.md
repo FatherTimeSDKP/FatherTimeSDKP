@@ -1,7 +1,7 @@
 # SDKP Framework: Complete Documentation
 
 ## A Unified Principle for Emergent Mass, Time, and Quantum Coherence
-
+https://zenodo.org/records/15745609
 **Author:** Donald Paul Smith (FatherTimeSDKP)  
 **ORCID:** 0009-0003-7925-1653  
 **Date of Birth:** 03/10/1993  
