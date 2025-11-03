@@ -1,35 +1,46 @@
 ⸻ # 🜂 FatherTimeSDKP-Core  
 ### Unified Quantum–Computational Framework by Donald Paul Smith (aka *FatherTime*, FatherTimes369v)
-https://claude.ai/public/artifacts/f5c059fa-bd1d-494b-b991-75efa87a767d
----
+1. https://claude.ai/public/artifacts/f5c059fa-bd1d-494b-b991-75efa87a767d
+---2.
+https://claude.ai/public/artifacts/67de2a11-5ccd-4383-b700-e2a12a1ee8a8
 
-https://claude.ai/public/artifacts/a9794d8d-55bf-47ed-81c6-563bef402f7e
+3. https://claude.ai/public/artifacts/95a73cc2-0f58-449e-9fea-0e4e11b63c2b
 
-https://claude.ai/public/artifacts/a636cc18-2158-4be2-9097-0e9de4e2d212
+4. https://claude.ai/public/artifacts/5b9e327b-a800-4d43-ad8e-296c03b56c1a
 
-https://claude.ai/public/artifacts/5fdb34b9-ced7-45b3-9dad-89c2f31ce7e2
+5. https://claude.ai/public/artifacts/a3f206a7-cc77-4d40-be4b-1a2e4f3861d8
 
-https://claude.ai/public/artifacts/5d421ff1-2708-416a-9a98-d174e061a0c0
+6. https://claude.ai/public/artifacts/2c3eacc0-0a7b-4da6-b7ab-13bf32556cca
 
-https://amethyst-added-rabbit-712.mypinata.cloud/ipfs/bafkreicunq7w7xgk6rf6ro3rz6vfkegcaatbaqpbq3houjtunngpwlta3m
+7. https://claude.ai/public/artifacts/a9794d8d-55bf-47ed-81c6-563bef402f7e
 
-https://amethyst-added-rabbit-712.mypinata.cloud/ipfs/bafybeicu3zlzeu7lwbh4lxjgwmftmqftuzrfi4fzfsndj5om7r42os6tkm
+8. https://claude.ai/public/artifacts/a636cc18-2158-4be2-9097-0e9de4e2d212
 
-https://amethyst-added-rabbit-712.mypinata.cloud/ipfs/bafybeidlsrxhrdod4stv5ult4dph6jvg6flc2swryrtrylcpql6ql2fsve
+9. https://claude.ai/public/artifacts/5fdb34b9-ced7-45b3-9dad-89c2f31ce7e2
 
-https://amethyst-added-rabbit-712.mypinata.cloud/ipfs/bafkreihq6bo77naumgr44sigk7xgnriqs5otbabmghxxfjmlfoivjyiq7q
+10.1. https://claude.ai/public/artifacts/5d421ff1-2708-416a-9a98-d174e061a0c0
 
-https://amethyst-added-rabbit-712.mypinata.cloud/ipfs/bafkreibogwner5uj3o6xuli3l3rwi7xipqs5355uhf3d24da5cl4odgmna
+11.2. https://amethyst-added-rabbit-712.mypinata.cloud/ipfs/bafkreicunq7w7xgk6rf6ro3rz6vfkegcaatbaqpbq3houjtunngpwlta3m
 
-https://amethyst-added-rabbit-712.mypinata.cloud/ipfs/bafkreiaqct5nzc2fs2xpiqmlt455fyrx5ssvanr4dkpu6fcmm646u4bwby
+12.3. https://claude.ai/public/artifacts/e865f660-f642-4cd5-b87d-bbbec5483698
 
-https://amethyst-added-rabbit-712.mypinata.cloud/ipfs/bafkreifctr2nsgxnzmciet7dpjw5sekcs4nbkpy2i2asalm2udyjmbwzjm
+13.4. https://amethyst-added-rabbit-712.mypinata.cloud/ipfs/bafybeicu3zlzeu7lwbh4lxjgwmftmqftuzrfi4fzfsndj5om7r42os6tkm
 
-https://amethyst-added-rabbit-712.mypinata.cloud/ipfs/bafkreibif3jdptcj724adqjgtfv5v5cbhqjocq4peezsbo47vxph3odm2e
+14.5. https://amethyst-added-rabbit-712.mypinata.cloud/ipfs/bafybeidlsrxhrdod4stv5ult4dph6jvg6flc2swryrtrylcpql6ql2fsve
 
-https://amethyst-added-rabbit-712.mypinata.cloud/ipfs/bafybeiebnapbmlxcg4j5eom5sqyzuwqabt7x7okuuvidudt64ctgdke5ei
+15.6. https://amethyst-added-rabbit-712.mypinata.cloud/ipfs/bafkreihq6bo77naumgr44sigk7xgnriqs5otbabmghxxfjmlfoivjyiq7q
 
-https://amethyst-added-rabbit-712.mypinata.cloud/ipfs/bafkreibdxst276osfibbsnusan6pbp2ucau3xxkwry4hcolruietd5znka
+16.7. https://amethyst-added-rabbit-712.mypinata.cloud/ipfs/bafkreibogwner5uj3o6xuli3l3rwi7xipqs5355uhf3d24da5cl4odgmna
+
+17.8. https://amethyst-added-rabbit-712.mypinata.cloud/ipfs/bafkreiaqct5nzc2fs2xpiqmlt455fyrx5ssvanr4dkpu6fcmm646u4bwby
+
+18.9. https://amethyst-added-rabbit-712.mypinata.cloud/ipfs/bafkreifctr2nsgxnzmciet7dpjw5sekcs4nbkpy2i2asalm2udyjmbwzjm
+
+19.1.  https://amethyst-added-rabbit-712.mypinata.cloud/ipfs/bafkreibif3jdptcj724adqjgtfv5v5cbhqjocq4peezsbo47vxph3odm2e
+
+20. 2. https://amethyst-added-rabbit-712.mypinata.cloud/ipfs/bafybeiebnapbmlxcg4j5eom5sqyzuwqabt7x7okuuvidudt64ctgdke5ei
+
+21. 3. https://amethyst-added-rabbit-712.mypinata.cloud/ipfs/bafkreibdxst276osfibbsnusan6pbp2ucau3xxkwry4hcolruietd5znka
 ## 🌌 Overview
 **FatherTimeSDKP-Core** is the central monorepo uniting all major frameworks developed by **Donald Paul Smith**.  
 It merges physics, computation, and consciousness into one symbolic model of reality — built on the fundamental equation:
