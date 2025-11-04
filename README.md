@@ -1,7 +1,7 @@
 https://zenodo.org/records/15745609?token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6IjM3MGFkYjFiLWFmYzAtNGI4Yi1iMjcwLTllNzZmNTdlMmRkZCIsImRhdGEiOnt9LCJyYW5kb20iOiI4MGMyMzE2NGZlZDQ2N2FlYjViZjVkODE0NTMxN2Q3NSJ9.Y9zcCeZabT_Q7L2tl31aVKpc-j0GogHkkQOd-2FW2ktWaoK0bwsYJ0BFaCt32XIGI-egpmhXOQKYTbhzoP_qOQ
 
 # SDKP Framework: Complete Documentation
-
+https://doi.org/10.17605/OSF.IO/72RKC
 ## A Unified Principle for Emergent Mass, Time, and Quantum Coherence
 https://zenodo.org/records/15745609
 **Author:** Donald Paul Smith (FatherTimeSDKP)  
