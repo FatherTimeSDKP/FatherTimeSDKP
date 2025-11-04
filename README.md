@@ -1,5 +1,5 @@
 https://zenodo.org/records/15745609?token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6IjM3MGFkYjFiLWFmYzAtNGI4Yi1iMjcwLTllNzZmNTdlMmRkZCIsImRhdGEiOnt9LCJyYW5kb20iOiI4MGMyMzE2NGZlZDQ2N2FlYjViZjVkODE0NTMxN2Q3NSJ9.Y9zcCeZabT_Q7L2tl31aVKpc-j0GogHkkQOd-2FW2ktWaoK0bwsYJ0BFaCt32XIGI-egpmhXOQKYTbhzoP_qOQ
-<script src="https://gist.github.com/FatherTimeSDKP/511ae8c8881a7c10fc63c1c846f7dbba.js"></script>
+
 # SDKP Framework: Complete Documentation
 
 ## A Unified Principle for Emergent Mass, Time, and Quantum Coherence
