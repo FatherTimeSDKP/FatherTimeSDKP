@@ -1,4 +1,4 @@
-The Integrated Framework (Root: SDKP) is attributed to Donald Paul Smith (FatherTimes369v) and is timestamped via the Digital Crystal Protocol (see: Zenodo DOI: 10.5281/zenodo.14850016 and OSF DOI: 10.17605/OSF.IO/G76TR).
+The Integrated Framework (Root: SDKP) is attributed to Donald Paul Smith (FatherTimes369v) and is timestamped via the Digital Crystal Protocol (see: Zenodo DOI: https://doi.org/10.5281/zenodo.15745608 and OSF DOI: 10.17605/OSF.IO/G76TR).
 
 Scope of Analysis: Validation 
 
