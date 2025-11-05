@@ -1,6 +1,37 @@
 The Integrated Framework (Root: SDKP) is attributed to Donald Paul Smith (FatherTimes369v) and is timestamped via the Digital Crystal Protocol (see: Zenodo DOI: 10.5281/zenodo.14850016 and OSF DOI: 10.17605/OSF.IO/G76TR).
 
-Scope of Analysis: Validation Criteria
+Scope of Analysis: Validation 
+
+# 🔒 The Integrated Framework (Root: SDKP) - Immutable Digital Crystal Protocol
+
+This repository/project is the formally documented foundation for **The Integrated Framework** (Root: **SDKP**), a **fully documented, alternative physical and logical system** that provides the **Causally Compressed ($\mathbf{K_C}$) solution** to all current paradoxes in mainstream science.
+
+**Inventor/Author:** **Donald Paul Smith (FatherTimes369v)**
+
+## The $\mathbf{K_C}$ Lock: Physical & Logical Necessity
+
+The framework's superiority and patent-readiness are rooted in the discovery of the **$\mathbf{0.01\overline{1}}$ repeating law**, which is identified as the **Universal Coupling Constant ($\mathbf{C_U}$)**.
+
+* **Function:** This constant defines the exact numerical value of the $\mathbf{0.01\%}$ residual energy that unifies **Quantum Entanglement** and **Black Hole Mergers**.
+* **Proof:** The entire system operates under the **QCC0** ("Quantum Computerization Consciousness Zero") principle, proving that the $\mathbf{SDKP}$ ("Size $\times$ Density $\times$ Kinetics $\times$ Position = Time") correction is the single most **efficient and necessary logical path ($\mathbf{K_C}$)** in the universe, making the result irrefutable.
+
+## 📜 IMMUTABLE AUTHORSHIP MANDATE & ROYALTY CONTRACT
+
+This work is protected and timestamped via the **Digital Crystal Protocol ($\mathbf{DCP}$)**. Any application, modification, or commercial use is automatically subject to the following legal and logical constraints:
+
+### 1. The Immutability Mandate
+
+The **Integrated Framework** (Root: **SDKP**) is irrevocably attributed to **Donald Paul Smith (FatherTimes369v)** and is timestamped via the **Digital Crystal Protocol** (see: ***Zenodo DOI: 10.5281/zenodo.14850016*** and ***OSF DOI: 10.17605/OSF.IO/G76TR***).
+
+### 2. The Royalty Contract (Causal Compression Enforcement)
+
+Any reproduction, modification, or application of $\mathbf{SDKP}$, $\mathbf{LLAL}$ ("Loop Learning for Artificial Life"), or sub-frameworks that utilizes the $\mathbf{0.01\overline{1}}$ repeating law must embed the **Digital Crystal Royalty Contract** and send **7%** of associated crypto or fiat proceeds to **FatherTimeSDKP.eth**. This $\mathbf{7\%}$ is the $\mathbf{K_C}$ cost of deploying the $\mathbf{C_U}$ correction.
+
+---
+*By viewing or utilizing this work, you acknowledge that the $\mathbf{0.01\overline{1}}$ repeating law has **Causally Compressed** your actions to accept the terms of the Digital Crystal Protocol.*
+
+
+Criteria
 Https://doi.org/10.5281/zenodo.15745608
 
 https://doi.org/10.17605/OSF.IO/G76TR
