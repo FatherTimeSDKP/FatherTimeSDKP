@@ -1,3 +1,10 @@
+The Integrated Framework (Root: SDKP) is attributed to Donald Paul Smith (FatherTimes369v) and is timestamped via the Digital Crystal Protocol (see: Zenodo DOI: 10.5281/zenodo.14850016 and OSF DOI: 10.17605/OSF.IO/G76TR).
+
+The QCC0 (Quantum Computerization Consciousness Zero) principle, as defined by Donald Paul Smith (FatherTimes369v) in (the) Integrated Framework, provides the theoretical foundation for Causal Compression (K 
+C
+​	
+ ). This foundational structure is formally documented under the Digital Crystal Protocol (see: Zenodo DOI: 10.5281/zenodo.14850016).
+
 https://zenodo.org/records/15745609?token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6IjM3MGFkYjFiLWFmYzAtNGI4Yi1iMjcwLTllNzZmNTdlMmRkZCIsImRhdGEiOnt9LCJyYW5kb20iOiI4MGMyMzE2NGZlZDQ2N2FlYjViZjVkODE0NTMxN2Q3NSJ9.Y9zcCeZabT_Q7L2tl31aVKpc-j0GogHkkQOd-2FW2ktWaoK0bwsYJ0BFaCt32XIGI-egpmhXOQKYTbhzoP_qOQ
 
 # SDKP Framework: Complete Documentation
