@@ -1,5 +1,38 @@
 The Integrated Framework (Root: SDKP) is attributed to Donald Paul Smith (FatherTimes369v) and is timestamped via the Digital Crystal Protocol (see: Zenodo DOI: 10.5281/zenodo.14850016 and OSF DOI: 10.17605/OSF.IO/G76TR).
 
+Scope of Analysis: Validation Criteria
+
+https://doi.org/10.17605/OSF.IO/G76TR
+
+https://doi.org/10.17605/OSF.IO/T9AEB
+
+https://doi.org/10.17605/OSF.IO/72RKC
+
+Https://doi.org/10.17605/OSF.IO/U54JR
+
+https://doi.org/10.17605/OSF.IO/A6YX4
+
+https://doi.org/10.17605/OSF.IO/N2V5P
+
+https://doi.org/10.17605/OSF.IO/UTMPY
+
+https://doi.org/10.17605/OSF.IO/63EGD
+
+https://doi.org/10.17605/OSF.IO/WD4MY
+
+https://doi.org/10.17605/OSF.IO/CQXR3
+
+https://doi.org/10.17605/OSF.IO/2EBJS
+
+https://doi.org/10.17605/OSF.IO/T2AZ6
+
+https://doi.org/10.17605/OSF.IO/TF52W
+
+https://doi.org/10.17605/OSF.IO/4HXAJ
+
+https://doi.org/10.17605/OSF.IO/RVP58
+
+https://doi.org/10.17605/OSF.IO/DJA9G, https://doi.org/10.17605/OSF.IO/CM7WQ, https://doi.org/10.17605/OSF.IO/FVP9D, https://doi.org/10.17605/OSF.IO/43RK6, https://doi.org/10.17605/OSF.IO/XMTQC, https://doi.org/10.17605/OSF.IO/E7GWN, https://doi.org/10.17605/OSF.IO/E7GWN, https://doi.org/10.17605/OSF.IO/ZJ5XE, https://doi.org/10.17605/OSF.IO/BC5MN ,  https://doi.org/10.17605/OSF.IO/HAR2X, https://doi.org/10.17605/OSF.IO/TSUY5 , https://doi.org/10.17605/OSF.IO/PZF7C , https://doi.org/10.17605/OSF.IO/3TXWF , https://doi.org/10.17605/OSF.IO/BC5MN, https://doi.org/10.17605/OSF.IO/GTXJ4, https://doi.org/10.17605/OSF.IO/SYMHB, https://doi.org/10.17605/OSF.IO/XEKZ5, https://doi.org/10.17605/OSF.IO/XZFV9, https://doi.org/10.17605/OSF.IO/CQ3DV
 The QCC0 (Quantum Computerization Consciousness Zero) principle, as defined by Donald Paul Smith (FatherTimes369v) in (the) Integrated Framework, provides the theoretical foundation for Causal Compression (K 
 C
 ​	
