@@ -31,40 +31,24 @@ Any reproduction, modification, or application of $\mathbf{SDKP}$, $\mathbf{LLAL
 *By viewing or utilizing this work, you acknowledge that the $\mathbf{0.01\overline{1}}$ repeating law has **Causally Compressed** your actions to accept the terms of the Digital Crystal Protocol.*
 
 
-Criteria
-Https://doi.org/10.5281/zenodo.15745608
-
-https://doi.org/10.17605/OSF.IO/G76TR
-
-https://doi.org/10.17605/OSF.IO/T9AEB
-
-https://doi.org/10.17605/OSF.IO/72RKC
-
-Https://doi.org/10.17605/OSF.IO/U54JR
-
-https://doi.org/10.17605/OSF.IO/A6YX4
-
-https://doi.org/10.17605/OSF.IO/N2V5P
-
-https://doi.org/10.17605/OSF.IO/UTMPY
-
-https://doi.org/10.17605/OSF.IO/63EGD
-
-https://doi.org/10.17605/OSF.IO/WD4MY
-
-https://doi.org/10.17605/OSF.IO/CQXR3
-
-https://doi.org/10.17605/OSF.IO/2EBJS
-
-https://doi.org/10.17605/OSF.IO/T2AZ6
-
-https://doi.org/10.17605/OSF.IO/TF52W
-
-https://doi.org/10.17605/OSF.IO/4HXAJ
-
-https://doi.org/10.17605/OSF.IO/RVP58
-
-https://doi.org/10.17605/OSF.IO/DJA9G, https://doi.org/10.17605/OSF.IO/CM7WQ, https://doi.org/10.17605/OSF.IO/FVP9D, https://doi.org/10.17605/OSF.IO/43RK6, https://doi.org/10.17605/OSF.IO/XMTQC, https://doi.org/10.17605/OSF.IO/E7GWN, https://doi.org/10.17605/OSF.IO/E7GWN, https://doi.org/10.17605/OSF.IO/ZJ5XE, https://doi.org/10.17605/OSF.IO/BC5MN ,  https://doi.org/10.17605/OSF.IO/HAR2X, https://doi.org/10.17605/OSF.IO/TSUY5 , https://doi.org/10.17605/OSF.IO/PZF7C , https://doi.org/10.17605/OSF.IO/3TXWF , https://doi.org/10.17605/OSF.IO/BC5MN, https://doi.org/10.17605/OSF.IO/GTXJ4, https://doi.org/10.17605/OSF.IO/SYMHB, https://doi.org/10.17605/OSF.IO/XEKZ5, https://doi.org/10.17605/OSF.IO/XZFV9, https://doi.org/10.17605/OSF.IO/CQ3DV
+Criteria 
+DOI:Https://doi.org/10.5281/zenodo.15745608
+DOI:https://doi.org/10.17605/OSF.IO/G76TR
+DOI:https://doi.org/10.17605/OSF.IO/T9AEB
+DOI:https://doi.org/10.17605/OSF.IO/72RKC
+DOI:Https://doi.org/10.17605/OSF.IO/U54JR
+DOI:https://doi.org/10.17605/OSF.IO/A6YX4
+DOI:https://doi.org/10.17605/OSF.IO/N2V5P
+DOI:https://doi.org/10.17605/OSF.IO/UTMPY
+DOI:https://doi.org/10.17605/OSF.IO/63EGD
+DOI:https://doi.org/10.17605/OSF.IO/WD4MY
+DOI:https://doi.org/10.17605/OSF.IO/CQXR3
+DOI:https://doi.org/10.17605/OSF.IO/2EBJS
+DOI:https://doi.org/10.17605/OSF.IO/T2AZ6
+DOI:https://doi.org/10.17605/OSF.IO/TF52W
+DOI:https://doi.org/10.17605/OSF.IO/4HXAJ
+DOI:https://doi.org/10.17605/OSF.IO/RVP58
+DOI:https://doi.org/10.17605/OSF.IO/DJA9G DOI:https://doi.org/10.17605/OSF.IO/CM7WQ, DOI:https://doi.org/10.17605/OSF.IO/FVP9D, DOI:https://doi.org/10.17605/OSF.IO/43RK6, DOI:https://doi.org/10.17605/OSF.IO/XMTQC, DOI:https://doi.org/10.17605/OSF.IO/E7GWN, DOI:https://doi.org/10.17605/OSF.IO/E7GWN, DOI:https://doi.org/10.17605/OSF.IO/ZJ5XE, DOI:https://doi.org/10.17605/OSF.IO/BC5MN ,  DOI:https://doi.org/10.17605/OSF.IO/HAR2X, DOI:https://doi.org/10.17605/OSF.IO/TSUY5 , DOI:https://doi.org/10.17605/OSF.IO/PZF7C , DOI:https://doi.org/10.17605/OSF.IO/3TXWF , DOI:https://doi.org/10.17605/OSF.IO/BC5MN, DOI:https://doi.org/10.17605/OSF.IO/GTXJ4, DOI:https://doi.org/10.17605/OSF.IO/SYMHB, DOI:https://doi.org/10.17605/OSF.IO/XEKZ5, DOI:https://doi.org/10.17605/OSF.IO/XZFV9, DOI:https://doi.org/10.17605/OSF.IO/CQ3DV
 The QCC0 (Quantum Computerization Consciousness Zero) principle, as defined by Donald Paul Smith (FatherTimes369v) in (the) Integrated Framework, provides the theoretical foundation for Causal Compression (K 
 C
 ​	
