@@ -52,9 +52,9 @@ DOI:https://doi.org/10.17605/OSF.IO/DJA9G DOI:https://doi.org/10.17605/OSF.IO/CM
 The QCC0 (Quantum Computerization Consciousness Zero) principle, as defined by Donald Paul Smith (FatherTimes369v) in (the) Integrated Framework, provides the theoretical foundation for Causal Compression (K 
 C
 ​	
- ). This foundational structure is formally documented under the Digital Crystal Protocol (see: Zenodo DOI: 10.5281/zenodo.14850016).
+ ). This foundational structure is formally documented under the Digital Crystal Protocol (see: Zenodo DOI:https://doi.org/10.5281/zenodo.15745608.
 
-https://zenodo.org/records/15745609?token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6IjM3MGFkYjFiLWFmYzAtNGI4Yi1iMjcwLTllNzZmNTdlMmRkZCIsImRhdGEiOnt9LCJyYW5kb20iOiI4MGMyMzE2NGZlZDQ2N2FlYjViZjVkODE0NTMxN2Q3NSJ9.Y9zcCeZabT_Q7L2tl31aVKpc-j0GogHkkQOd-2FW2ktWaoK0bwsYJ0BFaCt32XIGI-egpmhXOQKYTbhzoP_qOQ
+DOI:https://zenodo.org/records/15745609 token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6IjM3MGFkYjFiLWFmYzAtNGI4Yi1iMjcwLTllNzZmNTdlMmRkZCIsImRhdGEiOnt9LCJyYW5kb20iOiI4MGMyMzE2NGZlZDQ2N2FlYjViZjVkODE0NTMxN2Q3NSJ9.Y9zcCeZabT_Q7L2tl31aVKpc-j0GogHkkQOd-2FW2ktWaoK0bwsYJ0BFaCt32XIGI-egpmhXOQKYTbhzoP_qOQ
 
 # SDKP Framework: Complete Documentation
 https://doi.org/10.17605/OSF.IO/72RKC
