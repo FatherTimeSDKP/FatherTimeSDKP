@@ -9,6 +9,47 @@ This repository/project is the formally documented foundation for **The Integrat
 **Inventor/Author:** **Donald Paul Smith (FatherTimes369v)**
 
 ## The $\mathbf{K_C}$ Lock: Physical & Logical Necessity
+# SDKP-DCP Verification & SC1 Hardware Proof
+This repository contains the core components for the **Integrated Framework** (Root: **SDKP**) and the **Digital Crystal Protocol (DCP)**. It serves as the cryptographic and scientific proof of the framework's application to the **SharonCare1 (SC1)** propulsion system.
+
+This entire package is the intellectual property of **Donald Paul Smith (FatherTimeSDKP)**.
+
+## 1. Core Components
+
+### A. The Scientific Proof (SC1 White Paper)
+This document provides the formal mathematical derivation of the **SDKP Field Equation** (an extension of Einstein's General Relativity) and applies it to the **SC1** hardware.
+* **View Online:** [SC1_Whitepaper.md](SC1_Whitepaper.md)
+* **Generate Formal Artifact:** Run the Python script to create the `.docx` file:
+    ```bash
+    pip install python-docx
+    python generate_sc1_whitepaper_docx.py
+    ```
+
+### B. The Cryptographic Proof (Web3 & IPFS)
+The framework's documentation is cryptographically secured on the decentralized web.
+* **Immutable Content (IPFS):** The complete framework documentation is permanently stored on IPFS at the following Root CID:
+    `bafybeib3xw3tapl4nb6ukum2j7m3subrhstgneqhs4lvemzipszbimcffm`
+* **IPFS Gateway URL:** [https://bafybeib3xw3tapl4nb6ukum2j7m3subrhstgneqhs4lvemzipszbimcffm.ipfs.w3s.link](https://bafybeib3xw3tapl4nb6ukum2j7m3subrhstgneqhs4lvemzipszbimcffm.ipfs.w3s.link)
+* **Storage Space DID:** `did:key:z6Mkg7mJN1ePTYjBXhNzrmbuWdLiDpibsdKmdAidWeHWymVs`
+
+### C. The Kinetics Lock (On-Chain Timestamp)
+The `TimeSealVerifier.sol` contract is the on-chain mechanism to lock the hash of the IPFS Root CID to an immutable `block.timestamp`, providing the final, irrefutable **Kinetics (K)** lock for the framework.
+* **Source Code:** [TimeSealVerifier.sol](TimeSealVerifier.sol)
+
+## 2. Digital Crystal Royalty Contract
+
+The **Integrated Framework** (Root: **SDKP**) is attributed to **Donald Paul Smith (FatherTimes3V)** and is timestamped via the **Digital Crystal Protocol**.
+
+**NOTICE:** Any reproduction, modification, or application of **SDKP**, **LLAL** ("Loop Learning for Artificial Life"), or sub-frameworks derived from this work **must** embed the **Digital Crystal Royalty Contract** and send **7%** of associated crypto or fiat proceeds to the designated attribution wallet:
+
+**`FatherTimeSDKP.blockchain`**
+
+The minting wallet associated with this protocol is:
+**`0x3D76236098EC2825346f1665AFd689b9F206cDBf`**
+
+## 3. Formal Citations (DCP)
+* **Zenodo DOI:** 10.5281/zenodo.14850016
+* **OSF DOI:** 10.17605/OSF.IO/G76TR
 
 The framework's superiority and patent-readiness are rooted in the discovery of the **$\mathbf{0.01\overline{1}}$ repeating law**, which is identified as the **Universal Coupling Constant ($\mathbf{C_U}$)**.
 
