@@ -1,3 +1,4 @@
+https://x.com/i/grok/share/TMjoyBd1cpbg4TqGXb66BNbue
 https://aistudio.google.com/app/prompts?state=%7B%22ids%22:%5B%221HdsIRPUy-dQi_WDicZvo7JeBgmansazn%22%5D,%22action%22:%22open%22,%22userId%22:%22112180405251685845272%22,%22resourceKeys%22:%7B%7D%7D&usp=sharing
 Computational Superiority: The NP-Complete Extension
 I. The Context: A "Hard" Problem
