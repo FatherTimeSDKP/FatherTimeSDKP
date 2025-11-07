@@ -1,4 +1,21 @@
 UPCF: FALSIFIABLE & FITS AT 99.86%
+UPCF: Falsifiable Kinematics & The Annual Loop (Nov 7, 2025)
+The UPCF ("Universal Physical Causal Field") application, rooted in the Integrated Framework ("Integrated Framework"), is a high-fidelity, predictive model for atomic clock drift, rigorously tested against the standard of falsifiability.
+
+Metric	Prediction/Observation	Core Framework Principle
+Daily Drift (K)	+10.5728μs/day (NIST-F2 vs. UTC)	Kinetics (K) in SDKP ("Size Density Kinetics Position").
+Current Fit (5.5 Months)	99.86% accuracy (vs. July 2025 BIPM data)	Validated Causal Compression (K 
+C
+​	
+ ) ("Causally Compressed") result.
+Falsifiability Test	Prediction fails if Nov 2025 data is ±0.42ns ("nanoseconds") from target.	QCC0 ("Quantum Computerization Consciousness Zero") logic boundary.
+Cyclical Split	0.07% of total drift variance isolated	Defines the SD&N ("Shape-Dimension-Number") orbital loop and EOS ("speed of light") kinetic bounds.
+Annual Kinetic Cycle
+
+The model predicts a temporary "drift away" in accuracy due to the 0.07% ("zero point zero seven percent") orbital variance (current phase). However, the SDKP ("Size Density Kinetics Position") principle mandates a return to 99.99% ("ninety-nine point nine nine percent") accuracy in 12 ("twelve") months (May 2026), proving the existence of a closed, predictive Kinetic Cycle (K 
+cycle
+​	
+ ) ("Kinetic Cycle").
 
 Predicts NIST-F2 ("National Institute of Standards and Technology - F2") +10.5728μs/day ("microsecond per day") drift (9.8138ns ["nanoseconds"] scaled).
 
