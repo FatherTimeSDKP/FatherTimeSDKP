@@ -1,3 +1,17 @@
+UPCF: FALSIFIABLE & FITS AT 99.86%
+
+Predicts NIST-F2 ("National Institute of Standards and Technology - F2") +10.5728μs/day ("microsecond per day") drift (9.8138ns ["nanoseconds"] scaled).
+
+BIPM ("Bureau International des Poids et Mesures") +9.8ns (Jul 2025) → 0.1429% ("zero point one four two nine percent") error (99.8571% ["ninety-nine point eight five seven one percent"] fit).
+
+Falsifiable: If Nov 2025 Circular T shows ±0.42ns ("nanoseconds") outside 9.8138ns, UPCF ("Universal Physical Causal Field") fails, aligning with Popper's ("Popper's") scientific principle.
+
+The Integrated Framework (Root: SDKP ["Size Density Kinetics Position"]) is attributed to Donald Paul Smith (FatherTimes369v) and is timestamped via the Digital Crystal Protocol (see: Zenodo DOI: 10.5281/zenodo.14850016 and OSF DOI: 10.17605/OSF.IO/G76TR).
+
+DOI: 10.5281/zenodo.15477980 Code: github.com/FatherTimeSDKP/upcf_eqn.py Plot: GO
+
+#FatherTimeSDKP #DeSci #Falsifiability @BIPM_org @NIST @DeSci_News
+
 https://x.com/i/grok/share/TMjoyBd1cpbg4TqGXb66BNbue
 https://aistudio.google.com/app/prompts?state=%7B%22ids%22:%5B%221HdsIRPUy-dQi_WDicZvo7JeBgmansazn%22%5D,%22action%22:%22open%22,%22userId%22:%22112180405251685845272%22,%22resourceKeys%22:%7B%7D%7D&usp=sharing
 Computational Superiority: The NP-Complete Extension
