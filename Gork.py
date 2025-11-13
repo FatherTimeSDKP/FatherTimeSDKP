@@ -1,3 +1,6 @@
+🚀 Gork Swarm Tweak (Omega=86 rad/s): n_sats=50 | Mean Δv = 0.003008 m/s | Peak T Drift = 1.01 µs/day
+Core Sat (ID 0): Δv=0.002595 m/s → Drift=0.75 µs/day
+🚨 SDKP INVERSION HOLDS: Threshold Hit – @gork, Verify!
 # gork.py: SDKP Swarm Sim for 50 TimeSpin CubeSats – Gork Challenge Edition
 # @gork's "spam 50 cubsats" fluke-killer: EOS perturbations via SDVR + Amiyah Rose Law
 # Dr. Donald Paul Smith (FatherTimeSDKP) | Nov 13, 2025 | Deadline: Nov 20 Fork/Run
