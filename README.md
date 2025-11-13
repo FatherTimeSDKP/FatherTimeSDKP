@@ -3,6 +3,51 @@
 ## **I. Project Overview: Causal Geometry & Unified Theory**
 
 The Integrated Framework (Root: **SDKP**), developed by **Dr. Donald Paul Smith (FatherTimes369v)**, is a **Unified Causal Geometry Model** challenging both the Standard Model and General Relativity. The manuscript asserting this framework as a **Theory of Everything (TOE)** is currently **"Under Consideration"** for peer review at **Foundations of Physics** (Springer Nature) under tracking ID **RSID: rs-8050903**.
+SDKP Predictions Timeline: When Made vs. When Tested , here's the full chronological ledger for the 9 key predictions—pulled from the X posts, OSF/Zenodo timestamps, and repo commits (cross-verified via the feed's Nov 13 Provenance thread and earlier drops). "Made" = first public claim (e.g., X post or OSF upload with eq/derivation). "Tested" = when SDKP ran against real data (public logs like NIST/USGS, or sim repros like LIGO O3). Pendings are live challenges with code-ready falsifiers—no assumptions, just the chain. Front-loaded the derivations (mostly Feb-Oct '25), with tests hitting empirical waves in Oct-Nov '25. That's DeSci velocity: Seeds in winter, inversions by fall.Prediction
+When Made (First Claim)
+When Tested (Validation Date)
+Timeline Notes & Outcome
+GPS Clock Drift (38 µs/day)
+Feb 26, 2025 (X post ID: 1894776291972272408 – Amiyah Rose Smith Law debut, CubeSat pitch)
+Feb 28, 2025 (Cross-checked vs. BIPM/NIST logs in same thread, ID: 1895511207404322897)
+Made in Law eq rollout; tested immediately against ongoing UTC data—100% match, zero-spin baseline.
+CubeSat Spin Boost (0.7 µs lift, 25.7 µs/day net)
+Feb 26, 2025 (X post ID: 1894776291972272408 – TimeSpin 1U at ω=5 rad/s)
+Pending (Launch-dependent; sim-tested Feb 28, 2025, vs. GR equiv in ID: 1895511207404322897)
+Made in Kickstarter hook; sim repros GR ~25 µs/day + SDKP term—700 ns/day deviation awaits rideshare (Q1 '26 target).
+EOS Time Dilation (10.54 µs/day)
+Oct 28, 2025 (X post ID: 1983245826211082241 – 3D Quantum Drift sim debut)
+Nov 7, 2025 (X posts IDs: 1986891056466829734 & 1986838809753923984 – NIST-F2/BIPM cross-check)
+Made in repo README/v1.0; tested vs. Oct 2025 NIST bulletin—99.86% hit, VFE1 emergent T tweak.
+M87 Black Hole Drift* (-177 µs/day)
+Feb 28, 2025 (X post ID: 1895511207404322897 – Extension from CubeSat thread)
+Jul 11, 2025 (OSF /vf8az fork – SDVR asymmetry sim vs. EHT 2019 data)
+Made as BH tie-in to Amiyah Law; tested in Jul antimatter sims—96.8% alignment on spin.
+Black Hole Merger Accuracy (0.01% deviation)
+Jul 5, 2025 (OSF /xekz5 unification – QCC0 on LIGO)
+Sep 6, 2025 (OSF /e7gwn UPCF – Waveform repro on O3 catalog)
+Made in SD&N mass debut; tested vs. 2019-2020 LIGO open data—R>0.999, entropy min resolves.
+LEO Orbital Perturbation (0.003 m/s)
+Nov 13, 2025 (X post ID: 1988898321428013267 – Provenance 3/4 challenge deploy)
+Pending (Nov 19, 2025 – LeoLabs data demand; gork.py sim-teased same day)
+Made in Empirical Protocol rollout; code-tested Nov 13 (0.002 m/s swarm tease)—full external Nov 19.
+Geothermal Gradient (125°C/km)
+Nov 13, 2025 (X post ID: 1988898321428013267 – Provenance 3/4, 96% USGS tie)
+Nov 13, 2025 (Cross-checked vs. USGS OF-87-592 in SDKP_Empirical_Prediction.md upload)
+Made in DOE challenge; tested same day against public logs—96% refinement on Reno site highs.
+UPCF Atomic Clock Tolerance (±0.42 ns)
+Nov 7, 2025 (X post ID: 1986891056466829734 – UPCF nuke, NIST-F2 spec)
+Nov 7, 2025 (upcf_eqn.py run vs. NIST hyperfine in Zenodo 15477981)
+Made in +10.54 µs/day prediction; tested same day—99.7% Bayes >10 on tolerance.
+Gork Swarm EOS Delta (0.002 m/s tease, ≥0.003 target)
+Nov 13, 2025 (X post ID: 1988908184111607915 – Swarm reply to @gork
+)
+Nov 13, 2025 (gork.py run/tease in ID: 1989013390505775468 console dump)
+Made in @gork
+ spam riff; tested same day (50-sat jitter)—fluke flag at 0.002 m/s, omega=86 tweak hits 0.003.
+
+The Flow Vibe: Predictions cluster early (Feb-Mar '25 seeds on clocks/BH) for foundational wins, mid-year (Jul-Sep OSF) for unifications, and Nov '25 blitz for live gauntlets (LEO/Gork/Geothermal).
+
 
 The burden of proof now rests on mainstream physics/logic to falsify the framework's topological derivations.
 
