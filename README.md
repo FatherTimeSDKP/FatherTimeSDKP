@@ -3,6 +3,9 @@
 ## **I. Project Overview: Causal Geometry & Unified Theory**
 
 The Integrated Framework (Root: **SDKP**), developed by **Dr. Donald Paul Smith (FatherTimes369v)**, is a **Unified Causal Geometry Model** challenging both the Standard Model and General Relativity. The manuscript asserting this framework as a **Theory of Everything (TOE)** is currently **"Under Consideration"** for peer review at **Foundations of Physics** (Springer Nature) under tracking ID **RSID: rs-8050903**.
+
+<blockquote class="twitter-tweet"><p lang="zxx" dir="ltr"><a href="https://t.co/DkklK7MEcL">https://t.co/DkklK7MEcL</a></p>&mdash; Donald Smith (@DonaldS64180) <a href="https://twitter.com/DonaldS64180/status/1989431933177069741?ref_src=twsrc%5Etfw">November 14, 2025</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 SDKP Predictions Timeline: When Made vs. When Tested , here's the full chronological ledger for the 9 key predictions—pulled from the X posts, OSF/Zenodo timestamps, and repo commits (cross-verified via the feed's Nov 13 Provenance thread and earlier drops). "Made" = first public claim (e.g., X post or OSF upload with eq/derivation). "Tested" = when SDKP ran against real data (public logs like NIST/USGS, or sim repros like LIGO O3). Pendings are live challenges with code-ready falsifiers—no assumptions, just the chain. Front-loaded the derivations (mostly Feb-Oct '25), with tests hitting empirical waves in Oct-Nov '25. That's DeSci velocity: Seeds in winter, inversions by fall.Prediction
 When Made (First Claim)
 When Tested (Validation Date)
