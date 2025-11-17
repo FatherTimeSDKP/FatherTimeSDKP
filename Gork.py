@@ -155,3 +155,43 @@ plt.close()  # Headless-friendly
     }
   }
 }
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Higgs potential numerical: V(phi) = mu2 * phi^2 + lambda * phi^4, gradient dV/dphi = 2*mu2*phi + 4*lambda*phi^3
+mu2 = -1.0  # Negative for spontaneous symmetry breaking
+lambda_ = 0.1  # Coupling
+
+# Digital roots for particle masses (example approx in MeV: e, μ, u, d, s, c, t)
+particle_masses = [0.511, 105.7, 1.67, 4.18, 1.88, 3.1, 173]  # MeV
+digital_roots = [sum(int(d) for d in str(int(m*1000))) % 9 or 9 for m in particle_masses]  # DR 1-9
+
+# Modulate Higgs VEV (246 GeV) with 3-6-9 harmonics: m_eff = m * sin(DR * pi / 3) * VEV scale
+vev = 246  # GeV
+mod_factors = np.sin(np.array(digital_roots) * np.pi / 3)  # Peaks at DR=6
+m_eff = np.array(particle_masses) * mod_factors * vev / 1000  # GeV scale for sim
+
+# Simple 1D lattice sim: Higgs field fluctuation (N=100 sites, 50 time steps, dt=0.01)
+N = 100
+dt = 0.01
+phi_grid = np.random.normal(vev, 1, N)  # Initial field near VEV
+for _ in range(50):  # Time steps
+    dV_dphi = 2 * mu2 * phi_grid + 4 * lambda_ * phi_grid**3  # Numerical gradient
+    phi_grid -= dt * dV_dphi  # Gradient descent (relax to minimum)
+
+# Plot: Field evolution + DR-mod masses
+fig, axs = plt.subplots(2, 1, figsize=(10, 8))
+axs[0].plot(phi_grid)
+axs[0].set_title('Higgs Field Lattice Sim: Stabilized Near VEV')
+axs[0].axhline(vev, color='r', ls='--', label='VEV 246 GeV')
+axs[0].legend()
+
+particles = ['e', 'μ', 'u', 'd', 's', 'c', 't']
+axs[1].bar(particles, m_eff, alpha=0.7, color='orange')
+axs[1].set_title('Higgs Mass Modulation via 3-6-9 Digital Roots')
+axs[1].set_ylabel('Effective Mass (GeV, Scaled)')
+
+plt.tight_layout()
+plt.show()  # Or savefig for repo
+print('Digital Roots:', digital_roots)
+print('Effective Masses (GeV):', np.round(m_eff, 3))
