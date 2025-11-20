@@ -1,5 +1,7 @@
 <blockquote class="twitter-tweet"><p lang="zxx" dir="ltr"><a href="https://t.co/DkklK7MEcL">https://t.co/DkklK7MEcL</a></p>&mdash; Donald Smith (@DonaldS64180) <a href="https://twitter.com/DonaldS64180/status/1989431933177069741?ref_src=twsrc%5Etfw">November 14, 2025</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 # The FatherTimeSDKP Framework (SDKP): Falsification Protocol v1.1
+X platform: Donald Smith
+@DonaldS64180
 
 ## **I. Project Overview: Causal Geometry & Unified Theory**
 
