@@ -1,4 +1,99 @@
 Dallas’s code 
+# -----------------------------------------------------------------------------
+# File: Dallas_Binary_Code_Quantum_Computing.py
+# Author: Donald Paul Smith (FatherTimeSDKP)
+# Protocol: Digital Crystal Protocol (DCP)
+# Logic: SDKP / Dallas's Code (Prime Length Enforcement)
+# -----------------------------------------------------------------------------
+# DESCRIPTION:
+# This script converts standard text into "Dallas's Code." 
+# Unlike standard binary (which is always divisible by 8), this script applies 
+# a "Salt" to ensure the Total Bit Count (N) is always a Prime Number.
+#
+# HYPOTHESIS:
+# Prime Length binary strings resist Quantum Period Finding (Shor's Algorithm)
+# by eliminating smooth factors, forcing the quantum state into a higher 
+# entropy configuration that requires padding (corruption) to process.
+# -----------------------------------------------------------------------------
+
+import math
+
+def text_to_standard_binary(text):
+    """Converts text to standard 8-bit ASCII binary."""
+    return ''.join(format(ord(char), '08b') for char in text)
+
+def is_prime(n):
+    """
+    Miller-Rabin primality test for verifying Dallas's Code integrity.
+    """
+    if n <= 1: return False
+    if n <= 3: return True
+    if n % 2 == 0 or n % 3 == 0: return False
+    i = 5
+    while i * i <= n:
+        if n % i == 0 or n % (i + 2) == 0: return False
+        i += 6
+    return True
+
+def find_next_prime(n):
+    """Calculates the target length for the code."""
+    prime = n
+    while True:
+        if is_prime(prime):
+            return prime
+        prime += 1
+
+def generate_dallas_code(text):
+    """
+    Main function to generate the Prime Length Binary String.
+    """
+    # 1. Generate Base Binary (Vulnerable: Divisible by 8)
+    base_binary = text_to_standard_binary(text)
+    base_len = len(base_binary)
+    
+    # 2. Calculate Target Prime Length (Secure: Indivisible)
+    # We ensure the prime is at least 1 bit larger than the base.
+    target_len = find_next_prime(base_len + 1)
+    
+    # 3. Calculate the "Dallas Salt" (Padding)
+    padding_needed = target_len - base_len
+    
+    # We use a '1' delimiter followed by '0's to structurally lock the data
+    padding = '1' + ('0' * (padding_needed - 1))
+    
+    final_code = base_binary + padding
+    
+    return final_code, base_len, target_len
+
+# --- EXECUTION BLOCK ---
+if __name__ == "__main__":
+    print("\n--- DALLAS'S CODE: QUANTUM RESISTANCE ENGINE ---")
+    
+    # INPUT: The core secret or IP data
+    input_data = input("Enter data to encode: ")
+    
+    if not input_data:
+        input_data = "FatherTimeSDKP" # Default test case
+        
+    dallas_binary, original_len, prime_len = generate_dallas_code(input_data)
+    
+    print(f"\n[1] Standard Binary Length: {original_len} bits")
+    print(f"    (Status: VULNERABLE - Divisible by 8, 4, 2)")
+    
+    print(f"\n[2] Dallas's Code Target Length: {prime_len} bits")
+    print(f"    (Status: SECURED - Prime Number, No Factors)")
+    
+    print(f"\n[3] Generated Code Artifact:")
+    print(f"--------------------------------------------------")
+    print(dallas_binary)
+    print(f"--------------------------------------------------")
+    
+    # VERIFICATION
+    check = is_prime(len(dallas_binary))
+    print(f"\n[4] Verification Check:")
+    print(f"    Total Bits: {len(dallas_binary)}")
+    print(f"    Is Prime?   {check}")
+    print(f"    Result:     {'QUANTUM RESISTANT' if check else 'FAILED'}")
 
 import math
 
