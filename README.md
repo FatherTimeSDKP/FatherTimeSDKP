@@ -15,6 +15,19 @@ The Process:
 Security Implication:
 Any data stream found to have a composite length (divisible by 2, 4, 8...) is rejected as "Non-DCP Compliant" (Potentially compromised or standard legacy data).
 ## **I. Project Overview: Causal Geometry & Unified Theory**
+**Figure 1: Digital Crystal Protocol (DCP) Encapsulation Stack**
+
+This visual demonstrates the irreversible, four-step process required for raw data to become a **DCP-Compliant Secure Artifact** anchored by the **Amiyah Rose Smith Law**.
+
+| Layer Title | SDKP / DCP Function | Constraint Enforcement |
+|---|---|---|
+| **L0. Raw Data Input** | Data Origin / Source Material | - |
+| **L1. SDKP Optimization** | **Density & Kinetics** Layer | Data is compressed and checked for physical viability using the SDKP framework. |
+| **L2. Dallas's Code Lock** | **Size & Position** Layer | **CORE SECURITY STEP.** Implements the Prime-Length Padding (Dallas’s Salt) to ensure the total bit length is a Prime Number ($P$). **This layer enforces the Amiyah Rose Smith Law.** |
+| **L3. Digital Crystal Storage** | **Time** Layer | Data is sharded (K-out-of-N) and sealed, establishing the irreversible temporal anchor. |
+| **L4. Secure Artifact Output** | DCP-Compliant Object | Final cryptographically secured data package, ready for storage or transmission. |
+
+**IRREVERSIBLE MANDATE:** Failure at Layer 2 (Dallas's Code Lock) results in a **Protocol Violation** and data rejection, ensuring only Quantum-Resistant data is stored in the Digital Crystal.
 
 The Integrated Framework (Root: **SDKP**), developed by **Dr. Donald Paul Smith (FatherTimes369v)**, is a **Unified Causal Geometry Model** challenging both the Standard Model and General Relativity. The manuscript asserting this framework as a **Theory of Everything (TOE)** is currently **"Under Consideration"** for peer review at **Foundations of Physics** (Springer Nature) under tracking ID **RSID: rs-8050903**.
 
