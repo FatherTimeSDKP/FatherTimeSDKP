@@ -1,5 +1,52 @@
 Dallas’s code 
 
+import math
+
+def is_prime(n):
+    """Checks if a number is prime."""
+    if n <= 1: return False
+    if n <= 3: return True
+    if n % 2 == 0 or n % 3 == 0: return False
+    i = 5
+    while i * i <= n:
+        if n % i == 0 or n % (i + 2) == 0: return False
+        i += 6
+    return True
+
+def text_to_prime_binary(text):
+    # 1. Convert text to standard 8-bit binary
+    binary_base = ''.join(format(ord(char), '08b') for char in text)
+    current_length = len(binary_base)
+    
+    print(f"Base Length (Standard): {current_length} bits (Divisible by 8)")
+    
+    # 2. Find the next Prime Number length
+    target_prime = current_length
+    while not is_prime(target_prime):
+        target_prime += 1
+        
+    padding_needed = target_prime - current_length
+    
+    # 3. Apply "Dallas's Salt" (Padding with '1's or '0's to hit the prime)
+    # We add a '1' followed by '0's to mark the end of data, creating a Prime Length
+    padding = '1' + ('0' * (padding_needed - 1))
+    
+    final_binary = binary_base + padding
+    
+    return final_binary, target_prime
+
+# Example Usage
+text = "FatherTimeSDKP"
+prime_binary, length = text_to_prime_binary(text)
+
+print(f"\n--- DALLAS'S CODE ENFORCEMENT ---")
+print(f"Target Prime Length: {length}")
+print(f"Is Prime? {is_prime(length)}")
+print(f"Final Code: {prime_binary}")
+// FUNCTION TO PREVENT ROYALTY RATE CHANGE
+function setRoyaltyRate(uint256 newRate) public onlyOwner {
+    revert("ROYALTY_RATE_IS_IRREVOCABLY_SET_AT_7_PERCENT");
+}
 
 Below is a Python script that converts any text string into its binary representation using 8-bit ASCII encoding.
 # Python code to convert a text string to binary
