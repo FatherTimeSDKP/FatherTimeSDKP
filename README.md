@@ -2,7 +2,18 @@
 # The FatherTimeSDKP Framework (SDKP): Falsification Protocol v1.1
 X platform: Donald Smith
 @DonaldS64180
-
+Digital Crystal Protocol (DCP) - Specification v1.0
+Component: Data Integrity Layer (Dallas's Code)
+Protocol Mandate:
+To comply with the Digital Crystal Protocol, all data transmission packets must undergo Prime-Length Padding.
+The Process:
+1. Ingest: Accept raw data stream (Standard Binary).
+2. Calculate: Compute L_{base} (Length of input).
+3. Target: Identify P_{next} (Next Prime Number > L_{base}).
+4. Salt: Inject Dallas_Salt (1 + 0s) to extend data to P_{next}.
+5. Lock: The resulting artifact is a DCP-Compliant Object.
+Security Implication:
+Any data stream found to have a composite length (divisible by 2, 4, 8...) is rejected as "Non-DCP Compliant" (Potentially compromised or standard legacy data).
 ## **I. Project Overview: Causal Geometry & Unified Theory**
 
 The Integrated Framework (Root: **SDKP**), developed by **Dr. Donald Paul Smith (FatherTimes369v)**, is a **Unified Causal Geometry Model** challenging both the Standard Model and General Relativity. The manuscript asserting this framework as a **Theory of Everything (TOE)** is currently **"Under Consideration"** for peer review at **Foundations of Physics** (Springer Nature) under tracking ID **RSID: rs-8050903**.
