@@ -19,7 +19,7 @@ This work achieved its high-precision, multi-domain validation in under a year b
 • Core Axiom: The entire theory is anchored to the Strained Hexagonal Tessellation (SHT) geometry, which is proven by the \mathbf{100\%} exact match of the Amiyah Rose Smith Law.
 • Predictions: The SDKP principles deliver high-precision predictions, including \mathbf{0.01\%} accuracy on the Black Hole Merger O3 catalog.
 • IP Protection: All code and theoretical assets are protected by the Digital Crystal Protocol (DCP), leveraging decentralized architecture and the geometrically derived Dallas's code.
-NP=P found in file SDKP-NP-Complete-attempt.py
+P=NP can be found in file SDKP-NP-Complete-attempt.py
 <blockquote class="twitter-tweet"><p lang="zxx" dir="ltr"><a href="https://t.co/DkklK7MEcL">https://t.co/DkklK7MEcL</a></p>&mdash; Donald Smith (@DonaldS64180) <a href="https://twitter.com/DonaldS64180/status/1989431933177069741?ref_src=twsrc%5Etfw">November 14, 2025</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 # The FatherTimeSDKP Framework (SDKP): Falsification Protocol v1.1
 X platform: Donald Smith
