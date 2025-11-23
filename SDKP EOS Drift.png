@@ -1,0 +1,18 @@
+# QUICK EOS DRIFT GRAPH (Run this in Python, save as PNG)
+import numpy as np
+import matplotlib.pyplot as plt
+
+days = np.arange(0, 8)
+drift = 10.54 * days
+
+plt.figure(figsize=(8,5))
+plt.plot(days, drift, 'o-', color='#369', linewidth=3, markersize=8)
+plt.title("SDKP-EOS: Predicted Clock Drift (Earth Surface)", fontsize=14, fontweight='bold')
+plt.xlabel("Days Since Epoch", fontsize=12)
+plt.ylabel("Accumulated Drift (µs)", fontsize=12)
+plt.grid(True, alpha=0.3)
+plt.axhline(10.54, color='red', linestyle='--', label='10.54 µs/day')
+plt.legend()
+plt.tight_layout()
+plt.savefig("SDKP_EOS_Drift.png", dpi=200, bbox_inches='tight')
+plt.close()

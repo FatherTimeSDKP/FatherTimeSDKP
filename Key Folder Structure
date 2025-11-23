@@ -1,0 +1,18 @@
+freeCodeCamp/
+├── api-server/           # Node.js + Express backend API
+├── client/               # React frontend
+│   ├── src/
+│   │   ├── components/   # Reusable UI elements
+│   │   ├── pages/        # Route-specific views
+│   │   ├── utils/        # Helper functions
+│   │   └── styles/       # Global & module CSS
+│   └── public/           # Static assets
+├── curriculum/           # JSON/Markdown lesson definitions
+├── tools/                # Build and deployment tools
+├── scripts/              # Automated scripts (e.g., CI/CD, seeding DB)
+├── config/               # App, environment, and deployment configs
+├── .env.example          # Environment variable template
+├── package.json
+├── Dockerfile
+├── vercel.json           # (If deployed via Vercel)
+└── README.md

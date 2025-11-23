@@ -1,0 +1,24 @@
+Earth Orbit Speed System (EOS)
+Author: Donald Paul Smith
+Date of Inception: March 14, 2025
+
+Definition:
+1 EOS Unit = The distance Earth travels in its orbital path around the Sun in one hour.
+
+Core Concepts:
+- EOS provides an alternative to speed-of-light-based systems.
+- EOS is useful in modeling cosmic-scale motion where relativity and gravitational variance are involved.
+- EOS aligns with SDKP for gravitational and density-aware velocity modeling.
+
+Applications:
+- Space travel and interstellar navigation
+- Cosmological simulations
+- Time dilation and gravitational resistance mapping
+
+EOS Conversion:
+- 1 EOS ≈ 107,226 km/h (Earth’s average orbital velocity)
+- EOS units are relative to orbital paths, not universal constants like light
+
+Linked Principles:
+- SDKP: EOS integrates with Scale, Density, Velocity & Rotation
+- QCC: EOS assists in interpreting coded motion dynamics across universal structures

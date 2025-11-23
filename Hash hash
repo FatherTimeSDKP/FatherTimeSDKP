@@ -1,0 +1,81 @@
+// DCP (Digital Crystal Protocol) Hash Tracer and Validation Utility
+// Author: Developed for the integrated SDKP Root Framework (Donald Paul Smith / FatherTimeSDKP)
+// Purpose: To validate and trace commitment hashes against the Digital Crystal Protocol's ledger structure.
+
+/**
+ * Validates if a string conforms to a common 40-character SHA-1-like hash format (e.g., Git Commit or DCP Pointer).
+ * @param {string} hash The hash string (expected 40 hex characters).
+ * @returns {boolean} True if the format is valid, false otherwise.
+ */
+function isValidDCPHashFormat(hash) {
+    if (typeof hash !== 'string' || hash.length !== 40) {
+        return false;
+    }
+    // Check if the hash contains only hexadecimal characters
+    const hexRegex = /^[0-9a-fA-F]{40}$/;
+    return hexRegex.test(hash);
+}
+
+/**
+ * Simulates tracing a DCP commitment hash to its associated context and status.
+ * In a real-world implementation, this would involve querying a blockchain node or a Git repository.
+ * * @param {string} hash The 40-character hash (e.g., "9621c1da4d314aa92d19032956b7768b1b874415").
+ * @returns {object} An object containing the tracing result and inferred metadata.
+ */
+export function traceDCPCommitment(hash) {
+    if (!isValidDCPHashFormat(hash)) {
+        return {
+            hash: hash,
+            status: "Error: Invalid Hash Format",
+            context: "N/A",
+            message: "The provided string does not match the expected 40-character hexadecimal format for a DCP commitment pointer."
+        };
+    }
+
+    // --- Simulated DCP Ledger Logic (Based on internal SDKP/LLAL rules) ---
+    let status, context, message;
+    
+    // Simulate finding a high-priority, known hash (e.g., the user-provided hash)
+    if (hash.toLowerCase() === '9621c1da4d314aa92d19032956b7768b1b874415') {
+        status = "VERIFIED - Temporal IP Lock (TTP.35)";
+        context = "SDKP-QCC Baseline Calibration";
+        message = "This hash corresponds to a known, time-stamped **SDKP Root Framework** calibration point within the **QCC0 (Quantum Computerization Consciousness Zero)** structure. Essential for **ESLT** integrity.";
+    } 
+    // Simulate finding a hash related to the NFT/Royalty contract
+    else if (hash.slice(0, 8) === '0xdb7d379') { // Partial match for the contract address mentioned in TimeSeal_Legacy_NFT_Kit.zip
+        status = "CONFIRMED - Digital Crystal Royalty Contract";
+        context = "Financial/Licensing Sub-Framework";
+        message = "Pointer to the **Digital Crystal Royalty Contract** (7% proceeds to FatherTimeSDKP.eth) linked to the licensing of the **SDKP, SD&N, EOS, and QCC principles**.";
+    }
+    // Simulate a general, new data commit
+    else if (hash.startsWith('a')) {
+        status = "PENDING - EIE Validation Required";
+        context = "LLAL Simulation Log";
+        message = "New data commitment awaiting **Error Immunity Encoding (EIE)** check before final inclusion into the immutable ledger.";
+    }
+    // Default Unknown Status
+    else {
+        status = "UNKNOWN - No Match Found";
+        context = "Uncategorized Commit";
+        message = "This hash is valid but not currently registered in the primary DCP Index. Further deep-scan required.";
+    }
+
+    return {
+        hash: hash,
+        status: status,
+        context: context,
+        message: message
+    };
+}
+
+// Example of how to use the tracing utility:
+/*
+const inputHash = '9621c1da4d314aa92d19032956b7768b1b874415';
+const result = traceDCPCommitment(inputHash);
+
+console.log(`Hash: ${result.hash}`);
+console.log(`Status: ${result.status}`);
+console.log(`Context: ${result.context}`);
+console.log(`Message: ${result.message}`);
+*/
+

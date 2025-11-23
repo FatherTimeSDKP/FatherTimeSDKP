@@ -1,0 +1,113 @@
+cff-version: 1.2.0
+message: "If you use this framework, please cite as follows."
+title: "FatherTimeSDKP369v: The SDKP Quantum Vortex Framework"
+authors:
+  - family-names: "Smith"
+    given-names: "Donald Paul"
+    alias: "FatherTime"
+    affiliation: "FatherTimeSDKP Research | Digital Crystal Protocol"
+    orcid: "0009-0003-7925-1653"
+abstract: >
+  The FatherTimeSDKP369v framework unifies quantum mechanics, dimensional physics,
+  and harmonic field dynamics through the Size–Density–Kinetics–Position (SDKP) equation:
+  Time = Size × Density × Rotation × Velocity. 
+  It integrates Tesla’s 3–6–9 vortex sequence, SD&N (Shape–Dimension–Number) encoding,
+  LLAL (Loop Learning for Artificial Life), and the Digital Crystal Protocol (DCP)
+  into a cohesive quantum consciousness and computational model.
+  This framework establishes a unified language between matter, energy, and time dynamics
+  through tensorial resonance and symbolic compression.
+
+version: "1.0.0"
+date-released: "2025-11-02"
+repository-code: "https://github.com/FatherTimeSDKP/FatherTimeSDKP"
+license: "MIT"
+
+keywords:
+  - SDKP
+  - Quantum Mechanics
+  - 3-6-9 Logic
+  - Digital Crystal Protocol
+  - FatherTimeSDKP369v
+  - Donald Paul Smith
+  - Consciousness Framework
+  - Quantum Computerization Consciousness (QCC0)
+  - Loop Learning for Artificial Life (LLAL)
+  - SD&N
+  - EOS Earth Orbital Speed
+  - Kapnack
+  - VFE1 Tier 8
+  - Symbolic Compression
+  - Entangled Symbolic Loop Transmission
+  - Self-Generating Understanding
+
+identifiers:
+  - type: doi
+    value: "10.17605/OSF.IO/SYMHB"
+  - type: doi
+    value: "10.5281/zenodo.14850016"
+  - type: doi
+    value: "10.17605/OSF.IO/CQ3DV"
+  - type: doi
+    value: "10.17605/OSF.IO/DJA9G"
+  - type: doi
+    value: "10.17605/OSF.IO/2EBJS"
+  - type: doi
+    value: "10.17605/OSF.IO/RVP58"
+  - type: doi
+    value: "10.17605/OSF.IO/TF52W"
+  - type: doi
+    value: "10.17605/OSF.IO/WD4MY"
+  - type: doi
+    value: "10.17605/OSF.IO/43RK6"
+  - type: doi
+    value: "10.17605/OSF.IO/8YFZP"
+  - type: doi
+    value: "10.17605/OSF.IO/9XJ7T"
+  - type: doi
+    value: "10.17605/OSF.IO/6KJ9M"
+  - type: doi
+    value: "10.17605/OSF.IO/7ZK8N"
+
+related-resources:
+  - type: dataset
+    description: "FatherTimeSDKP Core Dataset (IPFS)"
+    url: "https://amethyst-added-rabbit-712.mypinata.cloud/ipfs/bafkreicunq7w7xgk6rf6ro3rz6vfkegcaatbaqpbq3houjtunngpwlta3m"
+  - type: dataset
+    description: "FatherTimeSDKP Quantum Resonance Paper (IPFS)"
+    url: "https://amethyst-added-rabbit-712.mypinata.cloud/ipfs/bafybeicu3zlzeu7lwbh4lxjgwmftmqftuzrfi4fzfsndj5om7r42os6tkm"
+  - type: dataset
+    description: "Digital Crystal Protocol Node Documentation"
+    url: "https://amethyst-added-rabbit-712.mypinata.cloud/ipfs/bafybeidlsrxhrdod4stv5ult4dph6jvg6flc2swryrtrylcpql6ql2fsve"
+  - type: dataset
+    description: "FatherTimeSDKP Symbolic Compression Study"
+    url: "https://amethyst-added-rabbit-712.mypinata.cloud/ipfs/bafkreihq6bo77naumgr44sigk7xgnriqs5otbabmghxxfjmlfoivjyiq7q"
+  - type: dataset
+    description: "3–6–9 Vortex Harmonic Proof"
+    url: "https://amethyst-added-rabbit-712.mypinata.cloud/ipfs/bafkreibogwner5uj3o6xuli3l3rwi7xipqs5355uhf3d24da5cl4odgmna"
+  - type: dataset
+    description: "LLAL System Documentation"
+    url: "https://amethyst-added-rabbit-712.mypinata.cloud/ipfs/bafkreiaqct5nzc2fs2xpiqmlt455fyrx5ssvanr4dkpu6fcmm646u4bwby"
+  - type: dataset
+    description: "SDKP Tensor Embedding Research"
+    url: "https://amethyst-added-rabbit-712.mypinata.cloud/ipfs/bafkreifctr2nsgxnzmciet7dpjw5sekcs4nbkpy2i2asalm2udyjmbwzjm"
+  - type: dataset
+    description: "Kapnack AI Symbolic Logic Compression"
+    url: "https://amethyst-added-rabbit-712.mypinata.cloud/ipfs/bafkreibif3jdptcj724adqjgtfv5v5cbhqjocq4peezsbo47vxph3odm2e"
+  - type: dataset
+    description: "SDKP–Digital Crystal Convergence Record"
+    url: "https://amethyst-added-rabbit-712.mypinata.cloud/ipfs/bafybeiebnapbmlxcg4j5eom5sqyzuwqabt7x7okuuvidudt64ctgdke5ei"
+  - type: dataset
+    description: "Final Crystal-12 Verification Ledger"
+    url: "https://amethyst-added-rabbit-712.mypinata.cloud/ipfs/bafkreibdxst276osfibbsnusan6pbp2ucau3xxkwry4hcolruietd5znka"
+
+preferred-citation:
+  type: software
+  authors:
+    - family-names: "Smith"
+      given-names: "Donald Paul"
+      alias: "FatherTime"
+  title: "FatherTimeSDKP369v: The SDKP Quantum Vortex Framework"
+  version: "1.0.0"
+  year: 2025
+  doi: "10.17605/OSF.IO/SYMHB"
+  url: "https://github.com/FatherTimeSDKP/FatherTimeSDKP"

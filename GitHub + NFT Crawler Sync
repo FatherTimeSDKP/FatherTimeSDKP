@@ -1,0 +1,22 @@
+// promoteNFT.js
+const { ethers } = require("ethers");
+const axios = require("axios");
+
+const tokenId = 2;
+const contractAddress = "0x8fcD2CaFD30333F967e1fDdF05AEfb12e8aFc221";
+const githubURL = "https://github.com/FatherTimeSDKP";
+const nftMeta = "https://ipfs.io/ipfs/bafybeib37cj6m7examplecidxyz123/2.json";
+
+async function promoteNFT() {
+  const tweetText = `🚨 The SDKP Framework NFT is live 🔥
+Minted + verified on-chain by Donald Paul Smith (aka FatherTime)
+🔗 ${nftMeta}
+📜 Source code: ${githubURL}
+#SDKP #NFT #Physics #QuantumIP #Web3Licensing`;
+
+  const encoded = encodeURIComponent(tweetText);
+  const xShare = `https://twitter.com/intent/tweet?text=${encoded}`;
+
+  console.log("🔗 Share on X:", xShare);
+}
+promoteNFT();

@@ -1,0 +1,13 @@
+{
+  "name": "FatherTime SDKP Scientific IP Token",
+  "description": "This NFT certifies timestamped authorship and licensing of Donald Paul Smith’s SDKP, SD&N, EOS, and QCC scientific frameworks. Enforced under blockchain governance with full commercial rights.",
+  "image": "ipfs://<CID-for-visual>",
+  "license": "ipfs://<CID-for-license>",
+  "timestamp": "2025-05-19",
+  "author": "Donald Paul Smith",
+  "holders": ["Amiyah Rose Smith", "Dallas Paul Smith"],
+  "royalty": "17.5%",
+  "commercial_rights": "Yes, sublicensing approved",
+  "location": "Florida, United States",
+  "signature": "ipfs://<CID-or-hash-of-signature>"
+}

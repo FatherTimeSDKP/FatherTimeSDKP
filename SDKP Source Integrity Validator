@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Minimal SDKP Hash Generator</title>
+</head>
+<body>
+
+    <h1 style="font-family: sans-serif;">SDKP Integrity Validator (Minimal)</h1>
+    <p style="font-family: sans-serif;">Calculates the immutable SHA-256 hash for the SDKP Framework source and the Digital Crystal Royalty Contract.</p>
+
+    <pre id="output" style="font-family: monospace; padding: 10px; background-color: #f0f0f0; border: 1px solid #ccc;">Calculating Hash...</pre>
+
+    <script>
+        // --- CORE SDKP FRAMEWORK SOURCE STRING ---
+        // This exact string defines the canonical source text.
+        const SDKP_MODEL_STRING = `
+        SDKP Integrated Framework Manuscript (Date: October 22, 2025, DOI: 10.17605/OSF.IO/G76TR)
+        Author: Donald Paul Smith (FatherTimeSDKP)
+
+        Root Framework: SDKP (Size × Density × Kinetics × Position = Time)
+         ├─ SD&N (Shape–Dimension–Number)
+         ├─ EOS (Earth Orbital Speed)
+         ├─ QCC0 (Quantum Computerization Consciousness Zero)
+
+        Digital Crystal Royalty Contract & IP Notice:
+        This work is the Intellectual Property of Donald Paul Smith (FatherTimeSDKP). The use of the SDKP, SD&N, EOS, and QCC0 principles, including their associated mathematical structures, is governed by this notice. Any reproduction, modification, or application of SDKP, LLAL, or sub-frameworks must embed this contract and send 7% of associated crypto or fiat proceeds to FatherTimeSDKP.eth.
+
+        Falsifiable Prediction (EOS Principle):
+        The use of V_EOS (~29,780 m/s) as the propagation constant predicts a time dilation differential of approximately 10.54 microseconds per day at Earth's Equator compared to the standard model.
+
+        Copyright (c) 2025 Donald Paul Smith. All Rights Reserved.
+        `;
+        // ------------------------------------------
+
+        // Function to calculate the SHA-256 hash
+        async function sha256(message) {
+            const msgBuffer = new TextEncoder().encode(message);
+            const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
+            const hashArray = Array.from(new Uint8Array(hashBuffer));
+            const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+            return hashHex;
+        }
+
+        // Run the hash calculation and update the output
+        document.addEventListener('DOMContentLoaded', async () => {
+            const outputElement = document.getElementById('output');
+            try {
+                const hash = await sha256(SDKP_MODEL_STRING);
+                outputElement.innerHTML = `**Canonical SHA-256 Hash**:\n${hash}`;
+            } catch (error) {
+                outputElement.textContent = `Error calculating hash: ${error.message}`;
+                console.error(error);
+            }
+        });
+    </script>
+</body>
+</html>
+

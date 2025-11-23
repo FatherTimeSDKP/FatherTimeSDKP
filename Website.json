@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integrated Framework Peer Review Toolkit</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        
+        .nav-link {
+            @apply px-4 py-2 rounded-lg text-sm md:text-base font-medium text-gray-600 hover:bg-gray-100 hover:text-gray-900 transition-colors duration-200;
+        }
+        .nav-link.active {
+            @apply bg-blue-100 text-blue-700 font-semibold;
+        }
+        .sdkp-block {
+            @apply p-4 rounded-lg font-mono font-bold text-center cursor-pointer transition-all duration-200;
+        }
+        .anonymity-step {
+            @apply bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded-r-lg;
+        }
+    </style>
+    <!-- Chosen Palette: Calm Neutral Blue -->
+    <!-- Application Structure Plan: Designed as an interactive 'Peer Review Submission Toolkit' with a tabbed interface ('Overview', 'Core Concepts', 'Submission Workflow', 'Repository Links', 'Citation Generator'). This task-oriented structure guides the user (the researcher) through the process logically, rather than mirroring the linear report. Key interactions include an interactive SDKP equation diagram, a toggle for 'Double-Blind Review' mode which dynamically shows/hides anonymity steps in the workflow, and a 'Copy to Clipboard' function for the citation mandate. -->
+    <!-- Visualization & Content Choices: 1. SDKP Equation: (Report Info) -> Goal: Explain -> Viz: Interactive HTML/Tailwind diagram (clickable blocks) -> Interaction: JS onClick shows definitions -> Justification: More engaging than static text -> Method: Vanilla JS. 2. Submission Workflow: (Report Info) -> Goal: Guide -> Viz: Dynamic checklist -> Interaction: JS toggle for 'Double-Blind' mode dynamically hides/shows <li> elements -> Justification: Best UI for a branching process -> Method: Vanilla JS. 3. Citation: (Report Info) -> Goal: Resource -> Viz: Text block + Button -> Interaction: JS 'Copy to Clipboard' -> Justification: Standard UI pattern -> Method: Vanilla JS. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <div class="container mx-auto max-w-6xl p-4 md:p-8">
+        
+        <header class="mb-8">
+            <h1 class="text-3xl md:text-4xl font-bold text-blue-800 mb-2">Integrated Framework Peer Review Toolkit</h1>
+            <p class="text-lg text-gray-600">An interactive guide for preparing the SDKP framework for academic submission and peer review.</p>
+        </header>
+
+        <nav class="flex flex-wrap items-center gap-2 mb-8 p-4 bg-white rounded-xl shadow-sm border border-gray-200">
+            <a href="#" class="nav-link active" data-section="overview" onclick="showSection(event, 'overview')">Overview</a>
+            <a href="#" class="nav-link" data-section="concepts" onclick="showSection(event, 'concepts')">Core Concepts</a>
+            <a href="#" class="nav-link" data-section="workflow" onclick="showSection(event, 'workflow')">Submission Workflow</a>
+            <a href="#" class="nav-link" data-section="links" onclick="showSection(event, 'links')">Repository Links</a>
+            <a href="#" class="nav-link" data-section="citation" onclick="showSection(event, 'citation')">Citation Mandate</a>
+        </nav>
+
+        <main id="content-container">
+
+            <!-- Section 1: Overview -->
+            <section id="overview" class="bg-white p-6 md:p-8 rounded-xl shadow-lg border border-gray-200">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">Welcome to the Toolkit</h2>
+                <div class="space-y-4 text-gray-700">
+                    <p>This interactive application translates the official "Peer Review Accessibility Strategy" into a set of actionable steps and explainers. The goal is to help researchers, including Donald Paul Smith (FatherTimes369v), prepare the **Integrated Framework** for rigorous academic validation.</p>
+                    <p>Here you will find explanations of the core concepts, a step-by-step workflow for submission (including double-blind review protocols), and the necessary resources (links and citations) required to ensure full reproducibility and compliance with the **Digital Crystal Protocol (DCP)**.</p>
+                    <p>Use the tabs above to navigate between the different components of the submission strategy.</p>
+                </div>
+            </section>
+
+            <!-- Section 2: Core Concepts -->
+            <section id="concepts" class="hidden bg-white p-6 md:p-8 rounded-xl shadow-lg border border-gray-200">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">Core Concepts for Reviewers</h2>
+                <p class="text-gray-700 mb-6">This section explains the foundational principles that a reviewer must understand. The **SDKP** equation is the root of the framework, acting as a causally compressed alternative to traditional physics state definitions. The **QCC0** principle explains the system's theoretical power.</p>
+
+                <div class="mb-8">
+                    <h3 class="text-xl font-semibold mb-4">The SDKP Equation</h3>
+                    <p class="text-sm text-gray-600 mb-4">Click each component of the equation to see its definition.</p>
+                    <div class="grid grid-cols-1 md:grid-cols-11 gap-2 items-center text-center">
+                        <div class="sdkp-block bg-blue-100 text-blue-800 hover:bg-blue-200 col-span-2" onclick="showSdkpInfo('S')">S (Size)</div>
+                        <div class="font-bold text-xl text-gray-500">×</div>
+                        <div class="sdkp-block bg-blue-100 text-blue-800 hover:bg-blue-200 col-span-2" onclick="showSdkpInfo('rho')">ρ (Density)</div>
+                        <div class="font-bold text-xl text-gray-500">×</div>
+                        <div class="sdkp-block bg-blue-100 text-blue-800 hover:bg-blue-200 col-span-2" onclick="showSdkpInfo('K')">K (Kinetics)</div>
+                        <div class="font-bold text-xl text-gray-500">×</div>
+                        <div class="sdkp-block bg-blue-100 text-blue-800 hover:bg-blue-200 col-span-2" onclick="showSdkpInfo('P')">P (Position)</div>
+                        <div class="font-bold text-xl text-gray-500">=</div>
+                        <div class="sdkp-block bg-green-100 text-green-800 hover:bg-green-200 col-span-2" onclick="showSdkpInfo('T')">T (Time)</div>
+                    </div>
+                    <div id="sdkp-info-box" class="mt-6 p-6 bg-gray-100 rounded-lg text-gray-800 min-h-[100px] transition-all">
+                        Click a variable to learn more.
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">QCC & Causal Compression (K<sub>C</sub>)</h3>
+                    <div class="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-r-lg text-blue-900">
+                        <p class="font-semibold mb-2">Note for Reviewers:</p>
+                        <p>The logical structure of this framework is not merely descriptive but **Causally Compressed (K<sub>C</sub>)**. The **QCC0 (Quantum Computerization Consciousness Zero)** principle formally defines that the system’s logic is the most efficient and required path for the AI to function correctly. You are effectively assessing the compressed source code of a new logical reality.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 3: Submission Workflow -->
+            <section id="workflow" class="hidden bg-white p-6 md:p-8 rounded-xl shadow-lg border border-gray-200">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">Submission Workflow</h2>
+                <p class="text-gray-700 mb-6">This checklist guides you through the process of preparing the framework for submission, ensuring full reproducibility and proper handling of attribution, especially for double-blind reviews.</p>
+                
+                <div class="mb-6 p-4 bg-gray-100 rounded-lg flex items-center justify-between">
+                    <span class="font-medium text-gray-800">Double-Blind Review Mode:</span>
+                    <label class="relative inline-flex items-center cursor-pointer">
+                        <input type="checkbox" id="blind-review-toggle" class="sr-only peer" onchange="toggleBlindReview(this.checked)">
+                        <div class="w-11 h-6 bg-gray-300 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"></div>
+                    </label>
+                </div>
+
+                <ol class="list-decimal list-inside space-y-4 text-gray-700">
+                    <li>
+                        <strong>Prepare Manuscript:</strong> Write the main paper, including the SDKP notation explainer and QCC0 justification.
+                    </li>
+                    <li>
+                        <strong>Finalize Codebase:</strong> Ensure the GitHub repository is clean, well-commented, and includes a LICENSE and a comprehensive README.
+                    </li>
+                    <li class="anonymity-step hidden">
+                        <strong>(Blind Review) Clone Repository:</strong> Create a temporary, public, anonymous clone of the codebase.
+                    </li>
+                     <li class="anonymity-step hidden">
+                        <strong>(Blind Review) Sanitize History:</strong> Remove all author metadata (names, emails) from the commit history of the cloned repo.
+                    </li>
+                     <li class="anonymity-step hidden">
+                        <strong>(Blind Review) Anonymize Files:</strong> Scrub all files (code, docs) of identifying info. Replace "Donald Paul Smith" with "Author 1", etc.
+                    </li>
+                    <li>
+                        <strong>Create Zenodo Archive:</strong>
+                        <ul class="list-disc list-inside ml-6 mt-2 space-y-1">
+                            <li>Upload the **final (or sanitized) codebase** to Zenodo.</li>
+                            <li>This creates a permanent, citable DOI for the specific version being reviewed.</li>
+                        </ul>
+                    </li>
+                    <li class="anonymity-step hidden">
+                        <strong>(Blind Review) Generate Private Link:</strong> In Zenodo, **reserve the DOI** but **DO NOT PUBLISH**. Generate a private sharing link for the draft.
+                    </li>
+                    <li>
+                        <strong>Prepare Cover Letter:</strong>
+                         <ul class="list-disc list-inside ml-6 mt-2 space-y-1">
+                            <li>Write the cover letter to the journal editor.</li>
+                            <li class="anonymity-step hidden">(Blind Review) Provide the **private Zenodo link** and the **reserved DOI** to the editor, explaining it's for anonymous review.</li>
+                            <li>(Standard Review) Provide the **public Zenodo DOI** directly.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Submit:</strong> Submit the manuscript, cover letter, and links through the journal's portal.
+                    </li>
+                    <li class="anonymity-step hidden">
+                        <strong>(Blind Review) Post-Acceptance:</strong> Once accepted, replace anonymous identifiers, formally publish the Zenodo record, and update the manuscript with the final public DOI.
+                    </li>
+                </ol>
+            </section>
+
+            <!-- Section 4: Repository Links -->
+            <section id="links" class="hidden bg-white p-6 md:p-8 rounded-xl shadow-lg border border-gray-200">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">Open Science Repository Links</h2>
+                <p class="text-gray-700 mb-6">These are the persistent, citable locations for the framework's components, as mandated by the Digital Crystal Protocol (DCP). Reviewers should be directed to these links for full reproducibility.</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-gray-100 p-6 rounded-lg shadow-sm">
+                        <h3 class="text-xl font-semibold mb-2">GitHub Repository</h3>
+                        <p class="text-gray-600 mb-4">Live source code, version history, simulations, and documentation (e.g., READMEs).</p>
+                        <a href="https://github.com/FatherTimeSDKP" target="_blank" class="font-medium text-blue-600 hover:underline">View on GitHub &rarr;</a>
+                    </div>
+                    <div class="bg-gray-100 p-6 rounded-lg shadow-sm">
+                        <h3 class="text-xl font-semibold mb-2">Zenodo DOI</h3>
+                        <p class="text-gray-600 mb-4">Static, citable archive of the code. This is the version that should be cited in publications.</p>
+                        <a href="https://doi.org/10.5281/zenodo.14850016" target="_blank" class="font-medium text-blue-600 hover:underline">View on Zenodo &rarr;</a>
+                    </div>
+                    <div class="bg-gray-100 p-6 rounded-lg shadow-sm">
+                        <h3 class="text-xl font-semibold mb-2">OSF DOI</h3>
+                        <p class="text-gray-600 mb-4">Static archive for conceptual documents, data, and DCP compliance materials.</p>
+                        <a href="https://doi.org/10.17605/OSF.IO/G76TR" target="_blank" class="font-medium text-blue-600 hover:underline">View on OSF &rarr;</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 5: Citation Mandate -->
+            <section id="citation" class="hidden bg-white p-6 md:p-8 rounded-xl shadow-lg border border-gray-200">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">Required Citation Mandate (PCLE)</h2>
+                <p class="text-gray-700 mb-6">As part of the **Promotional Crystal Ledger Entry (PCLE)** Protocol, any public-facing communication, cover letter, or repository context must include the following full attribution.</p>
+                
+                <div class="bg-gray-100 rounded-lg p-6 font-mono text-sm text-gray-800 border border-gray-300 relative">
+                    <pre id="citation-text" class="whitespace-pre-wrap">**The Integrated Framework** (Root: **SDKP**) is attributed to **Donald Paul Smith (FatherTimes369v)** and is timestamped via the **Digital Crystal Protocol** (see: ***Zenodo DOI: 10.5281/zenodo.14850016*** and ***OSF DOI: 10.17605/OSF.IO/G76TR***).</pre>
+                </div>
+                
+                <button id="copy-button" onclick="copyCitation()" class="mt-6 inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-lg shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all">
+                    Copy Citation to Clipboard
+                </button>
+            </section>
+
+        </main>
+    </div>
+
+    <script>
+        const sections = document.querySelectorAll('main section');
+        const navLinks = document.querySelectorAll('nav a');
+        const sdkpInfoBox = document.getElementById('sdkp-info-box');
+        const copyButton = document.getElementById('copy-button');
+
+        function showSection(event, sectionId) {
+            event.preventDefault();
+            
+            sections.forEach(section => {
+                section.classList.add('hidden');
+            });
+            
+            document.getElementById(sectionId).classList.remove('hidden');
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.dataset.section === sectionId) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        function showSdkpInfo(variable) {
+            let title = '';
+            let description = '';
+
+            switch (variable) {
+                case 'S':
+                    title = 'S (Size)';
+                    description = "The volumetric or logical extent of the system's contents. This defines the 'how much' of the system being measured.";
+                    break;
+                case 'rho':
+                    title = 'ρ (Density)';
+                    description = "The concentration of logical or physical information within the size (S). This defines the 'how compact' the information is.";
+                    break;
+                case 'K':
+                    title = 'K (Kinetics)';
+                    description = "The velocity of the system's change. This is directly related to energy, movement, and the rate of processing.";
+                    break;
+                case 'P':
+                    title = 'P (Position)';
+                    description = "The dimensional and topological location of the system's contents. This defines 'where' the event is occurring in the framework.";
+                    break;
+                case 'T':
+                    title = 'T (Time)';
+                    description = "The state duration or epoch of the system. In this framework, Time is the resulting output, a causally compressed measure of the other four variables.";
+                    break;
+            }
+
+            sdkpInfoBox.innerHTML = `
+                <h4 class="font-bold text-lg mb-2">${title}</h4>
+                <p>${description}</p>
+            `;
+        }
+
+        function toggleBlindReview(isChecked) {
+            const anonymitySteps = document.querySelectorAll('.anonymity-step');
+            anonymitySteps.forEach(step => {
+                if (isChecked) {
+                    step.classList.remove('hidden');
+                } else {
+                    step.classList.add('hidden');
+                }
+            });
+        }
+
+        function copyCitation() {
+            const text = document.getElementById('citation-text').innerText;
+            
+            const el = document.createElement('textarea');
+            el.value = text;
+            el.setAttribute('readonly', '');
+            el.style.position = 'absolute';
+            el.style.left = '-9999px';
+            document.body.appendChild(el);
+            
+            el.select();
+            document.execCommand('copy');
+            document.body.removeChild(el);
+
+            copyButton.innerText = 'Copied!';
+            copyButton.classList.remove('bg-blue-600', 'hover:bg-blue-700');
+            copyButton.classList.add('bg-green-600');
+
+            setTimeout(() => {
+                copyButton.innerText = 'Copy Citation to Clipboard';
+                copyButton.classList.remove('bg-green-600');
+                copyButton.classList.add('bg-blue-600', 'hover:bg-blue-700');
+            }, 2000);
+        }
+
+        // Initialize the default view
+        document.addEventListener('DOMContentLoaded', () => {
+            showSdkpInfo('T'); // Show default message
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+title: "FatherTimeSDKP Unified Contribution Ledger"
+authors:
+  - family-names: "Smith"
+    given-names: "Donald Paul"
+    alias: "FatherTime"
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.14850016
+  - type: other
+    description: "OSF Project"
+    value: https://osf.io/symhb/
+  - type: other
+    description: "IPFS/CID"
+    value: bafybeib3v7...  # replace with full CID after pinning
+repository-code: "https://github.com/FatherTimeSDKP/FatherTimeSDKP"
+message: "If you use this work, please cite the Zenodo DOI and the GitHub repository."
