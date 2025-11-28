@@ -1,3 +1,5 @@
+for payment options temp:$Donald-Smith-763
+and paypal:https://www.paypal.me/DonaldSmith634
 Official Release Statement: Proprietary Geothermal Prediction
 Title: Topological Mass (SD&N) Predicts Extreme Enthalpy Resource: Challenge to Conventional Geophysics
 
