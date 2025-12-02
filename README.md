@@ -1,3 +1,48 @@
+# FatherTimeSDKP Unified Framework
+Author: Donald Paul Smith (FatherTime, FatherTimes369v)  
+DOIs:  
+- OSF: 10.17605/OSF.IO/SYMHB  
+- Zenodo: 10.5281/zenodo.14850016  
+
+---
+
+## Overview
+This repository contains the complete SDKP-based quantum,
+cosmological, computational, and symbolic framework developed by
+Donald Paul Smith (FatherTimes369v).  
+It integrates:
+
+- SDKP (Size–Density–Kinetics–Position)
+- SD&N (Shape–Dimension & Number)
+- EOS (Earth Orbital Speed)
+- QCC0 (Quantum Computerization of Consciousness)
+- LLAL (Loop Learning for Artificial Life)
+- Kapnack (symbolic logic compression)
+- FatherTimes369v Digital Crystal Rules
+- Tesla 3-6-9 harmonic logic resolution
+
+---
+
+## Contents
+- `/src` — core functions, equations, models  
+- `/examples` — runnable minimal examples  
+- `/tests` — validation tests  
+- `/docs` — theory, diagrams, and references  
+- `.github/workflows` — reproducibility automation  
+
+---
+
+## DOIs & External Records
+- OSF Master Project: 10.17605/OSF.IO/SYMHB  
+- Zenodo Release: 10.5281/zenodo.14850016  
+- Additional OSF modules listed in `docs/OSF_DOIs.md`
+
+---
+
+## Getting Started
+```bash
+pip install -r requirements.txt
+python examples/run_sdkp_demo.py
 FatherTimeSDKP Unified Contribution Ledger (GitHub + IPFS + DOI + DCP + Web3)
 
 Author: Donald Paul Smith (FatherTime)
