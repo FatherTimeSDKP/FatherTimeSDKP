@@ -1,0 +1,482 @@
+<function_calls>
+<invoke name="artifacts">
+<parameter name="command">rewrite</parameter>
+<parameter name="id">terrell_rotation_sim</parameter>
+<parameter name="content">import React, { useState, useEffect, useRef } from 'react';
+import { Play, Pause, RotateCcw, Zap } from 'lucide-react';
+
+const FatherTimes369v = () => {
+  const canvasRef = useRef(null);
+  const [isPlaying, setIsPlaying] = useState(true);
+  const [time, setTime] = useState(0);
+  const [inputNumber, setInputNumber] = useState(7);
+  const [multiplier, setMultiplier] = useState(3);
+  const [vortexSpeed, setVortexSpeed] = useState(1.0);
+  const [showFlowPaths, setShowFlowPaths] = useState(true);
+  const animationRef = useRef(null);
+
+  // Digital Root calculation (FatherTimes369v Core)
+  const digitalRoot = (n) => {
+    n = Math.abs(Math.floor(n));
+    if (n === 0) return 0;
+    return 1 + ((n - 1) % 9);
+  };
+
+  // Tesla State Mapping
+  const getTeslaState = (root) => {
+    if (root === 0) return { state: 0, energy: 0, color: '#666', name: 'Void' };
+    if ([1, 4, 7].includes(root)) return { state: 3, energy: 1.0, color: '#3b82f6', name: 'Base' };
+    if ([2, 5, 8].includes(root)) return { state: 6, energy: 2.0, color: '#22c55e', name: 'Doubled' };
+    return { state: 9, energy: 4.0, color: '#fbbf24', name: 'Transcendent' };
+  };
+
+  // Vortex Mathematics - Doubling Sequence
+  const vortexSequence = (start, steps) => {
+    const sequence = [];
+    let current = digitalRoot(start);
+    for (let i = 0; i < steps; i++) {
+      sequence.push(current);
+      current = digitalRoot(current * 2);
+    }
+    return sequence;
+  };
+
+  // Multiplier Mapping Tables (Section 4.4 from paper)
+  const calculateMultiplierMapping = (n, k) => {
+    const rho = digitalRoot(n);
+    const drK = digitalRoot(k);
+    return digitalRoot(drK * rho);
+  };
+
+  // Get attractor subsystem
+  const getAttractorInfo = (k) => {
+    const drK = digitalRoot(k);
+    if (drK === 9) return { type: 'Full Collapse', desc: 'All non-zero → 9', color: '#fbbf24' };
+    if (drK === 3 || drK === 6) return { type: '3-6-9 Subsystem', desc: 'Enters vortex flow', color: '#22c55e' };
+    if (drK === 1) return { type: 'Identity', desc: 'Preserves digital root', color: '#3b82f6' };
+    return { type: 'Mixed', desc: 'Standard mapping', color: '#a855f7' };
+  };
+
+  const reset = () => setTime(0);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+
+    const ctx = canvas.getContext('2d');
+    const width = canvas.width;
+    const height = canvas.height;
+
+    const render = () => {
+      ctx.fillStyle = '#0a0a0a';
+      ctx.fillRect(0, 0, width, height);
+
+      const centerX = width / 2;
+      const centerY = height / 2 - 20;
+      const radius = 160;
+
+      // Draw enneagon (9-sided polygon) with 0 at center
+      // Central 0 (Void/Zero state)
+      ctx.fillStyle = '#666';
+      ctx.beginPath();
+      ctx.arc(centerX, centerY, 30, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.fillStyle = '#fff';
+      ctx.font = 'bold 20px monospace';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText('0', centerX, centerY);
+
+      // Draw 1-9 around the circle
+      const positions = [];
+      for (let i = 1; i <= 9; i++) {
+        const angle = ((i - 1) * Math.PI * 2 / 9) - Math.PI / 2;
+        const x = centerX + radius * Math.cos(angle);
+        const y = centerY + radius * Math.sin(angle);
+        positions[i] = { x, y };
+
+        const tesla = getTeslaState(i);
+        
+        // Node circle
+        ctx.fillStyle = tesla.color;
+        ctx.beginPath();
+        ctx.arc(x, y, 25, 0, Math.PI * 2);
+        ctx.fill();
+        
+        // Glow effect for 3, 6, 9
+        if ([3, 6, 9].includes(i)) {
+          const glowIntensity = Math.sin(time * 2 + i) * 0.3 + 0.7;
+          ctx.shadowBlur = 20 * glowIntensity;
+          ctx.shadowColor = tesla.color;
+          ctx.fillStyle = tesla.color;
+          ctx.beginPath();
+          ctx.arc(x, y, 25, 0, Math.PI * 2);
+          ctx.fill();
+          ctx.shadowBlur = 0;
+        }
+        
+        // Number label
+        ctx.fillStyle = i === 3 || i === 6 || i === 9 ? '#000' : '#fff';
+        ctx.font = 'bold 18px monospace';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        ctx.fillText(i, x, y);
+        
+        // State label
+        ctx.fillStyle = '#aaa';
+        ctx.font = '10px monospace';
+        const labelAngle = angle;
+        const labelX = centerX + (radius + 35) * Math.cos(labelAngle);
+        const labelY = centerY + (radius + 35) * Math.sin(labelAngle);
+        ctx.fillText(tesla.name, labelX, labelY);
+      }
+
+      // Draw vortex flow paths
+      if (showFlowPaths) {
+        // Sequence from 1 (skips 3,6,9)
+        const seq1 = [1, 2, 4, 8, 7, 5];
+        ctx.strokeStyle = 'rgba(59, 130, 246, 0.6)';
+        ctx.lineWidth = 3;
+        for (let i = 0; i < seq1.length; i++) {
+          const from = seq1[i];
+          const to = seq1[(i + 1) % seq1.length];
+          const progress = ((time * vortexSpeed) % seq1.length);
+          if (i < progress) {
+            ctx.beginPath();
+            ctx.moveTo(positions[from].x, positions[from].y);
+            ctx.lineTo(positions[to].x, positions[to].y);
+            ctx.stroke();
+            
+            // Arrow
+            const angle = Math.atan2(positions[to].y - positions[from].y, positions[to].x - positions[from].x);
+            const arrowX = positions[to].x - 15 * Math.cos(angle);
+            const arrowY = positions[to].y - 15 * Math.sin(angle);
+            ctx.beginPath();
+            ctx.moveTo(arrowX, arrowY);
+            ctx.lineTo(arrowX - 10 * Math.cos(angle - 0.5), arrowY - 10 * Math.sin(angle - 0.5));
+            ctx.lineTo(arrowX - 10 * Math.cos(angle + 0.5), arrowY - 10 * Math.sin(angle + 0.5));
+            ctx.closePath();
+            ctx.fill();
+          }
+        }
+
+        // Sequence from 3
+        ctx.strokeStyle = 'rgba(34, 197, 94, 0.6)';
+        ctx.beginPath();
+        ctx.moveTo(positions[3].x, positions[3].y);
+        ctx.lineTo(positions[6].x, positions[6].y);
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.moveTo(positions[6].x, positions[6].y);
+        ctx.lineTo(positions[3].x, positions[3].y);
+        ctx.stroke();
+
+        // 9 stays at 9
+        const pulse9 = Math.sin(time * 3) * 0.3 + 0.7;
+        ctx.strokeStyle = `rgba(251, 191, 36, ${pulse9})`;
+        ctx.lineWidth = 4;
+        ctx.setLineDash([5, 5]);
+        ctx.beginPath();
+        ctx.arc(positions[9].x, positions[9].y, 35, 0, Math.PI * 2);
+        ctx.stroke();
+        ctx.setLineDash([]);
+      }
+
+      // Display multiplier mapping
+      const result = calculateMultiplierMapping(inputNumber, multiplier);
+      const drInput = digitalRoot(inputNumber);
+      const drMult = digitalRoot(multiplier);
+      
+      // Draw mapping visualization
+      const mapY = height - 120;
+      ctx.fillStyle = '#fff';
+      ctx.font = '14px monospace';
+      ctx.textAlign = 'left';
+      
+      ctx.fillText(`Input: ${inputNumber} → dr = ${drInput}`, 20, mapY);
+      ctx.fillText(`Multiplier: ${multiplier} → dr = ${drMult}`, 20, mapY + 20);
+      
+      const tesla = getTeslaState(drInput);
+      ctx.fillStyle = tesla.color;
+      ctx.fillText(`Input State: ${tesla.name} (${tesla.state})`, 20, mapY + 40);
+      
+      const resultTesla = getTeslaState(result);
+      ctx.fillStyle = resultTesla.color;
+      ctx.font = 'bold 16px monospace';
+      ctx.fillText(`Result: dr(${multiplier} × ${inputNumber}) = ${result}`, 20, mapY + 65);
+      
+      const attractor = getAttractorInfo(multiplier);
+      ctx.fillStyle = attractor.color;
+      ctx.fillText(`Attractor: ${attractor.type} - ${attractor.desc}`, 20, mapY + 85);
+
+      // Title and info
+      ctx.fillStyle = '#fff';
+      ctx.font = 'bold 18px monospace';
+      ctx.textAlign = 'center';
+      ctx.fillText('FatherTimes369v: Digital Root Harmonic Mapping', centerX, 25);
+      
+      ctx.font = '12px monospace';
+      ctx.fillStyle = '#888';
+      ctx.fillText('Tesla 3-6-9 Vortex Mathematics | SDKP Framework', centerX, 45);
+
+      // Key equations
+      ctx.textAlign = 'right';
+      ctx.fillStyle = '#aaa';
+      ctx.font = '11px monospace';
+      ctx.fillText('dr(n) = 1 + ((n-1) mod 9)', width - 20, 25);
+      ctx.fillText('dr(kn) = dr(dr(k) · dr(n))', width - 20, 40);
+
+      // Legend
+      ctx.textAlign = 'left';
+      ctx.fillStyle = '#3b82f6';
+      ctx.fillRect(20, 60, 15, 15);
+      ctx.fillStyle = '#fff';
+      ctx.fillText('State 3 (Base): 1,4,7', 40, 72);
+      
+      ctx.fillStyle = '#22c55e';
+      ctx.fillRect(20, 80, 15, 15);
+      ctx.fillText('State 6 (Doubled): 2,5,8', 40, 92);
+      
+      ctx.fillStyle = '#fbbf24';
+      ctx.fillRect(20, 100, 15, 15);
+      ctx.fillText('State 9 (Transcendent): 3,6,9', 40, 112);
+    };
+
+    const animate = () => {
+      if (isPlaying) {
+        setTime(t => t + 0.016);
+      }
+      render();
+      animationRef.current = requestAnimationFrame(animate);
+    };
+
+    animate();
+
+    return () => {
+      if (animationRef.current) {
+        cancelAnimationFrame(animationRef.current);
+      }
+    };
+  }, [time, isPlaying, inputNumber, multiplier, vortexSpeed, showFlowPaths]);
+
+  // Generate mapping table for current multiplier
+  const generateMappingTable = () => {
+    const rows = [];
+    for (let rho = 0; rho <= 9; rho++) {
+      const result = rho === 0 ? 0 : calculateMultiplierMapping(rho, multiplier);
+      rows.push({ rho, result });
+    }
+    return rows;
+  };
+
+  const mappingTable = generateMappingTable();
+
+  return (
+    <div className="w-full h-full bg-gray-900 text-white p-6 overflow-y-auto">
+      <div className="max-w-6xl mx-auto">
+        <div className="mb-6">
+          <h1 className="text-3xl font-bold mb-2">FatherTimes369v: Tesla 3-6-9 Digital Root System</h1>
+          <p className="text-gray-400">
+            Digital-Root Harmonic Mapping in the SDKP Framework
+          </p>
+          <p className="text-sm text-blue-400 mt-1">
+            Smith, D. P. (2025). SDKP Framework. <a href="https://doi.org/10.5281/zenodo.15745609" target="_blank" rel="noopener noreferrer" className="underline">doi:10.5281/zenodo.15745609</a>
+          </p>
+        </div>
+
+        <div className="bg-gray-800 rounded-lg p-4 mb-6">
+          <canvas
+            ref={canvasRef}
+            width={800}
+            height={600}
+            className="w-full border border-gray-700 rounded"
+          />
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+          <div className="bg-gray-800 rounded-lg p-4">
+            <label className="block text-sm font-medium mb-2">
+              Input Number: {inputNumber}
+            </label>
+            <input
+              type="range"
+              min="1"
+              max="100"
+              step="1"
+              value={inputNumber}
+              onChange={(e) => setInputNumber(parseInt(e.target.value))}
+              className="w-full mb-4"
+            />
+            <div className="text-xs text-gray-400">
+              Digital Root: {digitalRoot(inputNumber)} | 
+              Tesla State: {getTeslaState(digitalRoot(inputNumber)).name}
+            </div>
+          </div>
+
+          <div className="bg-gray-800 rounded-lg p-4">
+            <label className="block text-sm font-medium mb-2">
+              Multiplier k: {multiplier}
+            </label>
+            <div className="grid grid-cols-3 gap-2 mb-2">
+              {[3, 6, 9, 12, 15, 19].map(k => (
+                <button
+                  key={k}
+                  onClick={() => setMultiplier(k)}
+                  className={`px-3 py-2 rounded transition ${
+                    multiplier === k 
+                      ? 'bg-blue-600 text-white' 
+                      : 'bg-gray-700 hover:bg-gray-600'
+                  }`}
+                >
+                  {k}
+                </button>
+              ))}
+            </div>
+            <div className="text-xs text-gray-400">
+              dr(k) = {digitalRoot(multiplier)} | 
+              {getAttractorInfo(multiplier).type}
+            </div>
+          </div>
+
+          <div className="bg-gray-800 rounded-lg p-4">
+            <label className="block text-sm font-medium mb-2">
+              Vortex Speed: {vortexSpeed.toFixed(1)}x
+            </label>
+            <input
+              type="range"
+              min="0.1"
+              max="3.0"
+              step="0.1"
+              value={vortexSpeed}
+              onChange={(e) => setVortexSpeed(parseFloat(e.target.value))}
+              className="w-full"
+            />
+          </div>
+
+          <div className="bg-gray-800 rounded-lg p-4 flex items-center justify-between">
+            <label className="text-sm font-medium">Show Flow Paths</label>
+            <button
+              onClick={() => setShowFlowPaths(!showFlowPaths)}
+              className={`px-4 py-2 rounded transition ${
+                showFlowPaths 
+                  ? 'bg-green-600 hover:bg-green-700' 
+                  : 'bg-gray-700 hover:bg-gray-600'
+              }`}
+            >
+              {showFlowPaths ? 'ON' : 'OFF'}
+            </button>
+          </div>
+        </div>
+
+        <div className="flex gap-4 mb-6">
+          <button
+            onClick={() => setIsPlaying(!isPlaying)}
+            className="flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg transition"
+          >
+            {isPlaying ? <Pause size={20} /> : <Play size={20} />}
+            {isPlaying ? 'Pause' : 'Play'}
+          </button>
+          <button
+            onClick={reset}
+            className="flex items-center gap-2 px-4 py-2 bg-gray-700 hover:bg-gray-600 rounded-lg transition"
+          >
+            <RotateCcw size={20} />
+            Reset
+          </button>
+        </div>
+
+        <div className="bg-gray-800 rounded-lg p-4 mb-6">
+          <h2 className="text-xl font-semibold mb-3 flex items-center gap-2">
+            <Zap className="text-yellow-400" size={24} />
+            Mapping Table: k = {multiplier} (dr = {digitalRoot(multiplier)})
+          </h2>
+          <div className="overflow-x-auto">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="border-b border-gray-700">
+                  <th className="text-left py-2">ρ (dr of input)</th>
+                  <th className="text-left py-2">dr(k × n)</th>
+                  <th className="text-left py-2">Tesla State</th>
+                </tr>
+              </thead>
+              <tbody>
+                {mappingTable.map(row => {
+                  const tesla = getTeslaState(row.result);
+                  return (
+                    <tr key={row.rho} className="border-b border-gray-800">
+                      <td className="py-2">{row.rho}</td>
+                      <td className="py-2 font-bold" style={{color: tesla.color}}>
+                        {row.result}
+                      </td>
+                      <td className="py-2">{tesla.name}</td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div className="bg-gray-800 rounded-lg p-4 mb-6">
+          <h2 className="text-xl font-semibold mb-3">Core Principles</h2>
+          <div className="space-y-3 text-sm text-gray-300">
+            <div className="bg-gray-900 p-3 rounded">
+              <strong className="text-white">Digital Root Formula:</strong>
+              <div className="font-mono mt-1">
+                dr(n) = 1 + ((n-1) mod 9) for n &gt; 0
+              </div>
+            </div>
+            
+            <div className="bg-gray-900 p-3 rounded">
+              <strong className="text-white">Fundamental Identity:</strong>
+              <div className="font-mono mt-1">
+                dr(k × n) = dr(dr(k) · dr(n))
+              </div>
+            </div>
+
+            <div className="bg-gray-900 p-3 rounded">
+              <strong className="text-white">Key Results:</strong>
+              <ul className="list-disc list-inside mt-1 space-y-1">
+                <li>If dr(k) = 9: All non-zero integers collapse to 9 (9-attractor)</li>
+                <li>If dr(k) ∈ {3,6}: Enters 3-6-9 subsystem (partial vortex)</li>
+                <li>If dr(k) = 1: Identity-preserving (no change to digital root)</li>
+                <li>Multipliers 3 and 12 behave identically (both dr = 3)</li>
+                <li>Multipliers 6 and 15 behave identically (both dr = 6)</li>
+              </ul>
+            </div>
+
+            <div className="bg-gray-900 p-3 rounded">
+              <strong className="text-white">Vortex Sequences:</strong>
+              <ul className="list-disc list-inside mt-1 space-y-1">
+                <li>Starting from 1: 1→2→4→8→7→5→1... (6-step cycle, skips 3,6,9)</li>
+                <li>Starting from 3: 3→6→3→6... (stable oscillation)</li>
+                <li>Starting from 9: 9→9→9... (transcendent stability)</li>
+              </ul>
+            </div>
+
+            <p className="italic pt-2">
+              "If you only knew the magnificence of the 3, 6 and 9, then you would have the key to the universe." 
+              <span className="text-gray-500"> — Nikola Tesla</span>
+            </p>
+          </div>
+        </div>
+
+        <div className="bg-gray-800 rounded-lg p-4">
+          <h2 className="text-xl font-semibold mb-3">SDKP Integration</h2>
+          <p className="text-sm text-gray-300 mb-3">
+            The FatherTimes369v digital root system integrates with the SDKP Framework through:
+          </p>
+          <ul className="list-disc list-inside text-sm text-gray-300 space-y-2">
+            <li><strong className="text-white">Energy State Mapping:</strong> Tesla states (3, 6, 9) map to energy factors (1.0, 2.0, 4.0) used in vibrational field calculations</li>
+            <li><strong className="text-white">Consciousness Gateway Protocol (CGP):</strong> Base frequencies of 3, 6, and 9 Hz form the physical layer transmission</li>
+            <li><strong className="text-white">Kapnack Compression:</strong> Digital root patterns optimize symbolic data compression with error correction</li>
+            <li><strong className="text-white">LLAL Feedback:</strong> Adaptation scores incorporate Tesla state harmonics for recursive learning</li>
+            <li><strong className="text-white">VFE1 Coupling:</strong> Vibrational modes scale according to 3-6-9 attractor dynamics</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default FatherTimes369v;</parameter>
