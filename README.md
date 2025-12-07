@@ -13,6 +13,7 @@ This repository provides the reference implementation of the FatherTimeSDKP Engi
 
 The goal:
 Testable, falsifiable, physics-driven simulations of harmonic recursion, entanglement prediction, coherence boosts, and digital-crystal propagation.
+https://www.researchgate.net/publication/395513990_Matter_Antimatter_Asymmetry_sim
 
 ⸻
 
