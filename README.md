@@ -4,6 +4,11 @@ FatherTimeSDKP – Unified Simulation Engine
 
 Author: Donald Paul Smith (FatherTime, FatherTimes369v)
 Core Frameworks: SDKP • SD&N • EOS • VFE1 • Kapnack • QCC0 • LLAL • Crystal-12
+https://doi.org/10.17605/OSF.IO/8YFZP — SDKP QCC SD&N EOS FRW Enhanced Cosmic Rotation Pipeline
+	•	https://doi.org/10.17605/OSF.IO/7ZK8N — SDKP by FatherTime (Mathematical Foundations)
+	•	https://doi.org/10.17605/OSF.IO/SYMHB — Energy / SDKP dataset
+	•	https://doi.org/10.17605/OSF.IO/CQ3DV — SDKP Quantum Entanglement Predictions
+	•	https://doi.org/10.5281/zenodo.14850016
 
 This repository provides the reference implementation of the FatherTimeSDKP Engine, integrating:
 	1.	SDKP Lagrangian Mechanics
