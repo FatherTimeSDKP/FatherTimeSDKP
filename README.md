@@ -1,4 +1,4 @@
-https://claude.ai/public/artifacts/586d42e5-ac62-4191-97fc-fca3de3b5dfa the above link is the is readme link inside this readme.md so the rest can address science documents *By viewing or utilizing this work, you acknowledge that the $\mathbf{0.01\overline{1}}$ repeating law has Causally Compressed your actions to accept the terms of the Digital Crystal Protocol.*
+https://claude.ai/public/artifacts/0cf86354-5295-4873-adaf-c458c0a76511 The above link is the is readme link inside this readme.md so the rest can address science documents *By viewing or utilizing this work, you acknowledge that the $\mathbf{0.01\overline{1}}$ repeating law has Causally Compressed your actions to accept the terms of the Digital Crystal Protocol.*
 
 FatherTimeSDKP – Unified Simulation Engine
 
