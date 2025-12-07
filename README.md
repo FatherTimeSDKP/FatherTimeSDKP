@@ -13,8 +13,146 @@ DOIs:
 5. Full QCC0 pipeline with LLAL/TTP.10-16-21 controls
 
 Copy-paste the code below into `fathertime_engine.py`, run it once, and you get:
+# FatherTimeSDKP — Minimal Recursion Engine (Public Release)
 
+This folder contains a **minimal, reproducible simulation engine** demonstrating the core loop:
 
+**SDKP Tensor → Crystal-12 Lattice → Kapnack Recursion → Time-Propagation**
+
+This package shows:
+
+- How Size × Density × Rotation × Velocity (SDKP) becomes a computable tensor.
+- How the Crystal-12 lattice applies symbolic compression + harmonic weighting.
+- How Kapnack Aₙ → Aₙ₊₁ recursion evolves the system state.
+- How entropy ΔS and time-drift Δτ emerge from the update rule.
+
+It is intentionally simple so anyone can run it.
+
+---
+
+## 🔧 Files
+
+| File | Purpose |
+|------|---------|
+| `engine.py` | Main simulation engine |
+| `config.json` | Editable parameters (size, density, rotation, velocity, Crystal-12 weights) |
+| `README.md` | You are reading it |
+
+---
+
+## ▶ How to Run
+
+### 1. Install Python 3.10+ and NumPy
+
+```bash
+pip install numpy
+```
+
+### 2. Run the engine
+
+```bash
+python engine.py
+```
+
+You’ll see output like:
+
+```
+--- FatherTimeSDKP Engine ---
+Initial A0: [1. 2. 3.]
+A1: [...]
+A2: [...]
+...
+Entropy ΔS: 0.0143
+Time Drift Δτ: 1.73e-5
+```
+
+---
+
+##  Mathematics Implemented in This Engine
+
+### 1. SDKP Tensor Core
+
+The fundamental FatherTime relation:
+
+$begin:math:display$
+T \= S \\cdot D \\cdot \\omega \\cdot v
+$end:math:display$
+
+Implemented as:
+
+```python
+SDKP = size * density * rotation * velocity
+```
+
+### 2. Crystal-12 Lattice
+
+We implement the 12-dimensional harmonic matrix as:
+
+$begin:math:display$
+C\_\{12\} \= \\mathrm\{diag\}\(w\_1\, w\_2\, \.\.\.\, w\_\{12\}\)
+$end:math:display$
+
+Weights taken from `config.json`.
+
+### 3. Kapnack Update Rule
+
+We define:
+
+$begin:math:display$
+A\_\{n\+1\} \= \\Sigma A\_n \+ \\omega \\rho
+$end:math:display$
+
+where  
+- Σ = Crystal-12 projection reduced to 3×3  
+- ω = rotation frequency  
+- ρ = density vector
+
+### 4. Entropy and Time Drift
+
+A simple definitional prototype:
+
+$begin:math:display$
+\\Delta S \= \\sum \|A\_\{n\+1\} \- A\_n\|
+$end:math:display$
+
+$begin:math:display$
+\\Delta\\tau \= \\frac\{\\Delta S\}\{1 \+ \\lVert T \\rVert\}
+$end:math:display$
+
+---
+
+## Output
+
+The engine prints:
+
+- Initial vector A₀  
+- 10 recursion steps  
+- Final state  
+- Entropy ΔS  
+- Time drift Δτ (SDKP-derived)
+
+This is the minimal reproducible demonstration for FatherTimeSDKP.
+
+---
+
+## License
+
+Open-source for scientific reproduction and public verification.
+FatherTimeSDKP Minimal Engine — How to Run
+	1.	Install Python and NumPy
+	2.	Download the three files:
+	•	engine.py
+	•	config.json
+	•	README.md
+	Run
+	python engine.py
+Thats public and reproducible demonstration of:
+	•	SDKP tensor
+	•	Crystal-12 harmonic compression
+	•	Kapnack recursion
+	•	Prototype entropy & time-drift output
+
+	
 *By viewing or utilizing this work, you acknowledge that the $\mathbf{0.01\overline{1}}$ repeating law has **Causally Compressed** your actions to accept the terms of the Digital Crystal Protocol.*
 
 
