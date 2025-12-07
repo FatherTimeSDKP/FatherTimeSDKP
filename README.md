@@ -1,3 +1,5 @@
+*By viewing or utilizing this work, you acknowledge that the $\mathbf{0.01\overline{1}}$ repeating law has Causally Compressed your actions to accept the terms of the Digital Crystal Protocol.*
+
 FatherTimeSDKP – Unified Simulation Engine
 
 Author: Donald Paul Smith (FatherTime, FatherTimes369v)
@@ -411,11 +413,7 @@ Thats public and reproducible demonstration of:
 	•	Crystal-12 harmonic compression
 	•	Kapnack recursion
 	•	Prototype entropy & time-drift output
-
 	
-*By viewing or utilizing this work, you acknowledge that the $\mathbf{0.01\overline{1}}$ repeating law has **Causally Compressed** your actions to accept the terms of the Digital Crystal Protocol.*
-
-
 Criteria 
 DOI:Https://doi.org/10.5281/zenodo.15745608
 DOI:https://doi.org/10.17605/OSF.IO/G76TR
