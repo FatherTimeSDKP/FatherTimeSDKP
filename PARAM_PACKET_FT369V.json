@@ -1,0 +1,37 @@
+{
+  "grid_size": 64,
+
+  "SDKP": {
+    "S": 1.0,
+    "D": 1.0,
+    "K": 1.0,
+    "P": 1.0,
+    "leakage_L001": 0.0001,
+    "apply_overlap": true
+  },
+
+  "CRYSTAL12": {
+    "dimensions": 12,
+    "base_frequency": 432.0,
+    "overlap_ratio": 0.0001,
+    "seven_circle": true
+  },
+
+  "KAPNACK": {
+    "compression_mode": "harmonic",
+    "digital_root_collapse": true,
+    "collapse_weights": [3,6,9]
+  },
+
+  "SDN": {
+    "scaling": "auto",
+    "dimension_trigger_factor": 3
+  },
+
+  "metadata": {
+    "author": "FatherTimeSDKP (Donald Paul Smith)",
+    "source": "https://doi.org/10.17605/OSF.IO/8YFZP",
+    "version": "1.0",
+    "notes": "Baseline parameters for Crystal-12 × SDKP × Kapnack integration."
+  }
+}
