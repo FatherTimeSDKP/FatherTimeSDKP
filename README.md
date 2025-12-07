@@ -1,6 +1,237 @@
-# FatherTimeSDKP Unified Framework
-Author: Donald Paul Smith (FatherTime, FatherTimes369v)  
-DOIs:  
+FatherTimeSDKP – Unified Simulation Engine
+
+Author: Donald Paul Smith (FatherTime, FatherTimes369v)
+Core Frameworks: SDKP • SD&N • EOS • VFE1 • Kapnack • QCC0 • LLAL • Crystal-12
+
+This repository provides the reference implementation of the FatherTimeSDKP Engine, integrating:
+	1.	SDKP Lagrangian Mechanics
+	2.	SD&N Shape–Dimension–Number Resonance
+	3.	Crystal-12 Lattice Dynamics
+	4.	Kapnack Symbolic Compression Engine
+	5.	QCC0 Consciousness-Coherence Pipeline
+	6.	LLAL Loop-Learning Feedback Algorithms
+
+The goal:
+Testable, falsifiable, physics-driven simulations of harmonic recursion, entanglement prediction, coherence boosts, and digital-crystal propagation.
+
+⸻
+
+Folder Structure
+
+/FatherTimeSDKP
+│
+├── README.md
+├── requirements.txt
+│
+├── src/
+│   ├── kapnack.py
+│   ├── crystal12.py
+│   ├── sdkp_engine.py
+│   ├── qcc0_pipeline.py
+│   ├── llal_loops.py
+│   └── utils.py
+│
+├── streamlit_app/
+│   ├── app.py
+│   └── sample_data/
+│
+├── math_appendix/
+│   ├── SDKP_Lagrangian.pdf
+│   ├── Crystal12_Tensor_Definitions.pdf
+│   └── Kapnack_Compression_Notes.pdf
+│
+└── simulations/
+    ├── run_kapnack_example.py
+    ├── run_crystal12_heatmap.py
+    ├── run_recursion_engine.py
+    └── sample_output/
+
+
+⸻
+
+ 1. Kapnack Compression Module (src/kapnack.py)
+
+import numpy as np
+
+class Kapnack:
+    """
+    Kapnack Symbolic Compression Engine
+    FatherTimeSDKP • Crystal-12 → 12D compression signature
+    """
+
+    def __init__(self, modes=12):
+        self.modes = modes
+
+    def compress(self, data):
+        data = np.array(data)
+
+        sig = np.array([
+            np.mean(data),
+            np.std(data),
+            *np.percentile(data, [5, 25, 50, 75, 95]),
+            np.min(data),
+            np.max(data),
+            np.sum(data),
+            np.linalg.norm(data),
+            len(data)
+        ])
+
+        return sig[:self.modes]
+
+
+⸻
+
+ 2. Crystal-12 Heatmap (src/crystal12.py)
+
+import numpy as np
+
+class Crystal12:
+    """
+    Crystal-12 Lattice Engine
+    Axes: S, D, V, R, T, C5, Phi6, Psi7, Omega8, Lambda9, Sigma10, Theta12
+    """
+
+    def generate(self, size=64):
+        base = np.linspace(0, 2*np.pi, size)
+        grid = np.sin(base[:, None] + base[None, :])
+        noise = np.random.normal(0, 0.05, (size, size))
+        return grid + noise
+
+
+⸻
+
+ 3. Streamlit Web App (streamlit_app/app.py)
+
+import streamlit as st
+import numpy as np
+from src.kapnack import Kapnack
+from src.crystal12 import Crystal12
+import matplotlib.pyplot as plt
+
+st.title("FatherTimeSDKP • Crystal-12 & Kapnack Engine")
+
+data = st.file_uploader("Upload numeric dataset (CSV)", type="csv")
+
+if data:
+    arr = np.loadtxt(data, delimiter=",")
+    k = Kapnack()
+    st.subheader("Kapnack Compression Signature")
+    st.write(k.compress(arr))
+
+c = Crystal12()
+M = c.generate()
+
+st.subheader("Crystal-12 Heatmap")
+fig, ax = plt.subplots()
+ax.imshow(M)
+st.pyplot(fig)
+
+
+⸻
+
+4. Mathematical Appendix (summary for README)
+
+SDKP Lagrangian
+
+\mathcal{L} = L_\mu u^\mu \rho + \omega_{\mu\nu} u^\mu u^\nu
+Where:
+	•	L_\mu = size four-vector
+	•	\rho = density
+	•	\omega_{\mu\nu} = rotational tensor
+	•	u^\mu = 4-velocity
+
+Crystal-12 Dimensional Mapping
+
+\mathbb{C}_{12} = \{S, D, V, R, T, C_5, \Phi_6, \Psi_7, \Omega_8, \Lambda_9, \Sigma_{10}, \Theta_{12}\}
+
+Kapnack Compression Function
+
+K(x) = f_{\text{mean}} + f_{\text{variance}} + f_{\text{entropy}} + f_{\text{harmonic}}
+
+QCC0: Consciousness Pipeline
+
+Q_{n+1} = \mathbb{C}_{12} \otimes K(x_n)
+
+⸻
+ 5. Simulation Runs
+
+(A) Kapnack Example Run — simulations/run_kapnack_example.py
+
+import numpy as np
+from src.kapnack import Kapnack
+
+runs = np.random.rand(100)
+k = Kapnack()
+
+print("Kapnack Signature:", k.compress(runs))
+
+
+⸻
+
+(B) Crystal-12 Heatmap — simulations/run_crystal12_heatmap.py
+
+from src.crystal12 import Crystal12
+import matplotlib.pyplot as plt
+
+C = Crystal12()
+M = C.generate()
+
+plt.imshow(M)
+plt.show()
+
+
+⸻
+
+(C) Recursion Engine (Kapnack × Crystal-12 × QCC0)
+
+import numpy as np
+from src.kapnack import Kapnack
+from src.crystal12 import Crystal12
+
+k = Kapnack()
+c = Crystal12()
+
+A = np.array([1.0, 2.0, 3.0])
+for i in range(5):
+    lattice = c.generate()
+    sig = k.compress(lattice.flatten())
+    A = A + 0.5 * sig[:3]
+    print(f"Step {i} → {A}")
+
+
+⸻
+
+ 6. Installation
+
+pip install -r requirements.txt
+streamlit run streamlit_app/app.py
+
+
+⸻
+
+ 7. Purpose of This Repository
+
+✔ Demonstrate falsifiable dynamics of FatherTimeSDKP
+✔ Provide open scientific tools for researchers
+✔ Link SD&N + Crystal-12 + SDKP to consciousness-coherence modeling
+✔ Allow reproducible harmonic-recursion simulations
+
+⸻
+
+8. DOIs Referenced
+
+DOI	Title	Role
+10.17605/OSF.IO/43RK6	Digital Crystal Rules	Defines Crystal-12 lattice axes
+10.17605/OSF.IO/7ZK8N	SDKP Mathematical Foundations	Lagrangian, tensors, dynamics
+10.17605/OSF.IO/8YFZP	QCC0 Pipeline	Consciousness-coherence pipeline
+10.17605/OSF.IO/9XJ7T	QCC0 Extended	Recursive loop logic
+10.17605/OSF.IO/CQ3DV	SDKP Usage (Entanglement Predictions)	Testable predictions
+10.17605/OSF.IO/SYMHB	Energy Framework	EOS + VFE1 ties
+10.17605/OSF.IO/WD4MY	SDKP Application Guide	Practical testing
+
+
+⸻
+
 - OSF: 10.17605/OSF.IO/SYMHB  
 - Zenodo: 10.5281/zenodo.14850016  
 
@@ -13,6 +244,9 @@ DOIs:
 5. Full QCC0 pipeline with LLAL/TTP.10-16-21 controls
 
 Copy-paste the code below into `fathertime_engine.py`, run it once, and you get:
+runs 
+pip install streamlit numpy matplotlib
+streamlit run app_streamlit.py
 # FatherTimeSDKP — Minimal Recursion Engine (Public Release)
 
 This folder contains a **minimal, reproducible simulation engine** demonstrating the core loop:
