@@ -12,7 +12,7 @@ DOIs:
 4. Kapnack compression + recursion  
 5. Full QCC0 pipeline with LLAL/TTP.10-16-21 controls
 
-Copy-paste the code below into `dfathertime_engine.py`, run it once, and you get:
+Copy-paste the code below into `fathertime_engine.py`, run it once, and you get:
 
 
 *By viewing or utilizing this work, you acknowledge that the $\mathbf{0.01\overline{1}}$ repeating law has **Causally Compressed** your actions to accept the terms of the Digital Crystal Protocol.*
