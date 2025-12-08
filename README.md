@@ -1,4 +1,14 @@
-{
+# FatherTimeSDKP Framework
+
+**DCP-12 Provenance Anchor**  
+Repository: https://github.com/FatherTimeSDKP/FatherTimeSDKP  
+Commit (latest as of 2025-12-07): `{{ latest commit SHA }}`  
+Author: @FatherTimeSDKP (verified GitHub identity)  
+Initial publication timestamp: 2025-12-07Txx:xx:xxZ  
+DOI (optional future): pending / reserved  
+License: MIT (or specify your chosen license)
+
+This repository serves as the immutable, cryptographically-verifiable source of truth for the FatherTimeSDKP framework.{
   "provenance": {
     "source": "<Claude-link>",
     "snapshot_hash": "<sha256>",
