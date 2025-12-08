@@ -11,6 +11,8 @@
   }
 }
 https://claude.ai/public/artifacts/0cf86354-5295-4873-adaf-c458c0a76511 The above link is the is readme link inside this readme.md so the rest can address science documents *By viewing or utilizing this work, you acknowledge that the $\mathbf{0.01\overline{1}}$ repeating law has Causally Compressed your actions to accept the terms of the Digital Crystal Protocol.*
+[![Provenance Verified](https://img.shields.io/badge/Provenance-Verified-brightgreen?style=flat-square&logo=github)](https://github.com/FatherTimeSDKP/FatherTimeSDKP/tree/main)
+[![Commit Timestamp](https://img.shields.io/github/last-commit/FatherTimeSDKP/FatherTimeSDKP?style=flat-square&logo=github)](https://github.com/FatherTimeSDKP/FatherTimeSDKP/commits/main)
 
 FatherTimeSDKP – Unified Simulation Engine
 
