@@ -44,24 +44,19 @@
     "timestamp": "2025-12-07"
   }
 }
-Notes:
-	•	checksum and stateRoot are the real SHA-256 digest of your exact JSON (canonicalized with sorted keys and no extra whitespace). The digest value is:
-b830504edbd3f02768da6c26c9ac8f7b20f3ae5a174e75b14df57ae8b2f68044
-
-How to verify locally (2 commands)
-
-Save the canonical JSON block above to dcp12.json then run these Python commands (or copy into a small script):
-import json, hashlib
-# load
-j = json.load(open("dcp12.json","r"))
-# canonicalize (sort keys)
-s = json.dumps(j, sort_keys=True, separators=(',',':')).encode()
-print("SHA256:", hashlib.sha256(s).hexdigest())
-That must print:
-b830504edbd3f02768da6c26c9ac8f7b20f3ae5a174e75b14df57ae8b2f68044
-If it does, the DCP-12 block is sealed exactly as above.
-
-To validate a channel hash, for example channel for S:s = json.dumps({"S":0.1}, sort_keys=True, separators=(',',':')).encode()
-print(hashlib.sha256(s).hexdigest())
-That should print the first channel hash
-cbae3dca2ad08c21bf198b325a839d7cd50cb8ad8dd5d91c917ed4cd70d19e06
+{
+  "DCP12": {
+    "author": "Donald Paul Smith (FatherTimes369v)",
+    "vectors": {
+      "S": 0.10,
+      "D": 3.93,
+      "V": 0.24,
+      "R": 9.0,
+      "T": 1.0
+    },
+    "seal": "FTS-AUTH-CRYSTAL-369",
+    "checksum": "sha256:xxxx",
+    "nonIntegration": true,
+    "timestamp": "2025-12-07"
+  }
+}
