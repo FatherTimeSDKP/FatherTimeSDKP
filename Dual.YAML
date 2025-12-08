@@ -1,0 +1,48 @@
+# Crystal-12 VFE1-Stability – GitHub Comparison Block
+# Original Enhanced Run (Harmonic Seed)
+run_1:
+  lattice_size: 64
+  cycles: 15
+  T: 30.00
+  K: 6.4
+  P: 2.0
+  EOS_multiplier: 1.10
+  VFE_multiplier: 0.92
+  QCC0_activation: 1.05
+  initial_lattice_seed_method: "SD&N_harmonic_preseed_v3"
+  fixed_random_seed: 36912162025
+  results:
+    lattice_mean: 0.0707
+    lattice_std: 3.1744
+    Kapnack_sum: 10389
+    norm: 10908
+    energy: 31167.00
+    delta_S: 137134.79
+    delta_tau: 1371.35
+
+# Suggested Next Iteration – QCC₀ Scaled to 1.1
+run_2_qcc0_scaled:
+  lattice_size: 64
+  cycles: 15
+  T: 30.00
+  K: 6.4
+  P: 2.0
+  EOS_multiplier: 1.10
+  VFE_multiplier: 0.92
+  QCC0_activation: 1.10   # increased scaling
+  initial_lattice_seed_method: "SD&N_harmonic_preseed_v3"
+  fixed_random_seed: 36912162025
+
+# Suggested Next Iteration – N-factor Added
+run_3_n_factor:
+  lattice_size: 64
+  cycles: 15
+  T: 30.00
+  K: 6.4
+  P: 2.0
+  EOS_multiplier: 1.10
+  VFE_multiplier: 0.92
+  QCC0_activation: 1.05
+  N_factor: 1.05   # optional N-factor addition for entanglement normalization
+  initial_lattice_seed_method: "SD&N_harmonic_preseed_v3"
+  fixed_random_seed: 36912162025
