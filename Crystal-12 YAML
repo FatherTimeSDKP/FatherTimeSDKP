@@ -1,0 +1,11 @@
+# VFE1-Stability Iteration – Crystal-12 Ready Run
+lattice_size: 64
+cycles: 15
+T: 30.00
+K: 6.4
+P: 2.0
+EOS_multiplier: 1.10
+VFE_multiplier: 0.92
+QCC0_activation: 1.05
+initial_lattice_seed_method: "SD&N_harmonic_preseed_v3"
+fixed_random_seed: 36912162025
