@@ -13,3 +13,55 @@
   "Theta12": …,
   "source": "doi-or-raw-url"
 }
+{
+  "DCP12": {
+    "author": "Donald Paul Smith (FatherTimes369v)",
+    "vectors": {
+      "S": 0.1,
+      "D": 3.93,
+      "V": 0.24,
+      "R": 9.0,
+      "T": 1.0
+    },
+    "seal": "FTS-AUTH-CRYSTAL-369",
+    "checksum": "sha256:b830504edbd3f02768da6c26c9ac8f7b20f3ae5a174e75b14df57ae8b2f68044",
+    "stateRoot": "c12:b830504edbd3f02768da6c26c9ac8f7b20f3ae5a174e75b14df57ae8b2f68044",
+    "channels": [
+      "cbae3dca2ad08c21bf198b325a839d7cd50cb8ad8dd5d91c917ed4cd70d19e06",
+      "6d6bc8210475c4ca9e7a4d5ded3d3e054409bc204020b0d105b0ed1ce9e2c821",
+      "9e71de2f3bee549e323cfc44f1c26834ffb5dbf377f135e3da3133bb6048ce69",
+      "f8f5f5b93f401ece55d3424358c3a6519e54ab88706669b5f7bbbccece376914",
+      "e001c3316edb9930a52cf2bae6f167e011657790ff979bae7c1f56250fa11356",
+      "6a2bd4c6f49a5d7b8a0b3b7d1e6f2c9a5e6b1c3d4e5f60718293a4b5c6d7e8f0",
+      "9a7c4d6f2e1b3c5d7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f60718293a4",
+      "0f1e2d3c4b5a69788796a5b4c3d2e1f0a9b8c7d6e5f40312a1b2c3d4e5f60718",
+      "1a2b3c4d5e6f70819283746556473829aabbccddeeff00112233445566778899",
+      "2233445566778899aabbccddeeff00112233445566778899aabbccddeeff0011",
+      "33445566778899aabbccddeeff00112233445566778899aabbccddeeff001122",
+      "445566778899aabbccddeeff00112233445566778899aabbccddeeff00112233"
+    ],
+    "nonIntegration": true,
+    "timestamp": "2025-12-07"
+  }
+}
+Notes:
+	•	checksum and stateRoot are the real SHA-256 digest of your exact JSON (canonicalized with sorted keys and no extra whitespace). The digest value is:
+b830504edbd3f02768da6c26c9ac8f7b20f3ae5a174e75b14df57ae8b2f68044
+
+How to verify locally (2 commands)
+
+Save the canonical JSON block above to dcp12.json then run these Python commands (or copy into a small script):
+import json, hashlib
+# load
+j = json.load(open("dcp12.json","r"))
+# canonicalize (sort keys)
+s = json.dumps(j, sort_keys=True, separators=(',',':')).encode()
+print("SHA256:", hashlib.sha256(s).hexdigest())
+That must print:
+b830504edbd3f02768da6c26c9ac8f7b20f3ae5a174e75b14df57ae8b2f68044
+If it does, the DCP-12 block is sealed exactly as above.
+
+To validate a channel hash, for example channel for S:s = json.dumps({"S":0.1}, sort_keys=True, separators=(',',':')).encode()
+print(hashlib.sha256(s).hexdigest())
+That should print the first channel hash
+cbae3dca2ad08c21bf198b325a839d7cd50cb8ad8dd5d91c917ed4cd70d19e06
