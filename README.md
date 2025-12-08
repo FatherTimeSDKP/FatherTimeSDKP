@@ -1,4 +1,13 @@
-# FatherTimeSDKP Framework
+{
+  "DCP12": {
+    "author": "Donald Paul Smith (FatherTimes369v)",
+    "vectors": { "S":0.10, "D":3.93, "V":0.24, "R":9.0, "T":1.0 },
+    "seal": "FTS-AUTH-CRYSTAL-369",
+    "checksum": "sha256:xxxx",
+    "nonIntegration": true,
+    "timestamp": "2025-12-07"
+  }
+}# FatherTimeSDKP Framework
 
 **DCP-12 Provenance Anchor**  
 Repository: https://github.com/FatherTimeSDKP/FatherTimeSDKP  
