@@ -1,17 +1,25 @@
 {
-  "name": "SC1 Motor Spec v1.0 — SharonCare1",
-  "description": "SharonCare1 (SC1) motor: magnetically-repelled closed-loop propulsion motor. Datasheet + spec JSON + provenance (FatherTimeSDKP). DOI and repo links included.",
+  "name": "SharonCare1 (SC1) Motor Spec — FatherTimes369v",
+  "description": "SharonCare1 (SC1) motor: magnetically-repelled closed-loop propulsion motor. Provenance and ledger anchors included. FatherTimes369v — DOI: 10.17605/OSF.IO/SYMHB",
+  "external_url": "https://github.com/FatherTimeSDKP/FatherTimeSDKP",
   "image": "ipfs://<CID>/SC1-motor-image.png",
-  "external_url": "https://github.com/FatherTimeSDKP",
   "attributes": [
-    {"trait_type":"Type","value":"Propulsion Motor"},
-    {"trait_type":"Topology","value":"Magnetic Repulsion"},
-    {"trait_type":"Version","value":"1.0"},
-    {"trait_type":"Author","value":"FatherTimes369v"}
+    { "trait_type": "Author", "value": "Donald Paul Smith (FatherTime / FatherTimes369v)" },
+    { "trait_type": "Project", "value": "FatherTimeSDKP" },
+    { "trait_type": "DOI", "value": "10.17605/OSF.IO/SYMHB" },
+    { "trait_type": "Web3DomainHash_GorkPipeline", "value": "8f3a9c1d4e7b6a2f9013c5e8d7f6a4b3c2e1f0d9c8b7a6f5e4d3c2b1a0f9e8d7c6b5a49382716f5e4d3c2b1a0f9e8d7c6b5a4f3e2d1c0b9a8f7e6d5c4b3a2910" },
+    { "trait_type": "EternalLedgerHash_Crystal#00000002", "value": "2b7e9f4a8c1d5e3b6f2a0c9d8e7b6a5f4e3d2c1b0a9f8e7d6c5b4a3f2e1d0c9b8a7f6e5d4c3b2a1f0e9d8c7b6a5f4e3d2c1b0a9f8e7d6c5b4a3f2e1" },
+    { "trait_type": "Version", "value": "1.0" },
+    { "trait_type": "License", "value": "CC-BY-4.0" }
   ],
   "files": [
-    {"uri":"ipfs://<CID>/SC1-motor-datasheet.pdf","type":"application/pdf"},
-    {"uri":"ipfs://<CID>/SC1-motor-specs.json","type":"application/json"},
-    {"uri":"ipfs://<CID>/SC1-motor-README.md","type":"text/markdown"}
-  ]
+    { "uri": "ipfs://<CID>/SC1-motor-specs.json", "type": "application/json" },
+    { "uri": "ipfs://<CID>/SC1-motor-datasheet.pdf", "type": "application/pdf" }
+  ],
+  "provenance": {
+    "git_release": "https://github.com/FatherTimeSDKP/FatherTimeSDKP/releases/tag/FatherTimeSDKP",
+    "zenodo": "https://zenodo.org/records/17665887",
+    "captured_at": "2025-12-09T00:00:00Z",
+    "notes": "Metadata includes Gork pipeline domain hash and Official Eternal Ledger Hash (Crystal #00000002)."
+  }
 }
