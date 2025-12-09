@@ -1,0 +1,17 @@
+{
+  "name": "SC1 Motor Spec v1.0 — SharonCare1",
+  "description": "SharonCare1 (SC1) motor: magnetically-repelled closed-loop propulsion motor. Datasheet + spec JSON + provenance (FatherTimeSDKP). DOI and repo links included.",
+  "image": "ipfs://<CID>/SC1-motor-image.png",
+  "external_url": "https://github.com/FatherTimeSDKP",
+  "attributes": [
+    {"trait_type":"Type","value":"Propulsion Motor"},
+    {"trait_type":"Topology","value":"Magnetic Repulsion"},
+    {"trait_type":"Version","value":"1.0"},
+    {"trait_type":"Author","value":"FatherTimes369v"}
+  ],
+  "files": [
+    {"uri":"ipfs://<CID>/SC1-motor-datasheet.pdf","type":"application/pdf"},
+    {"uri":"ipfs://<CID>/SC1-motor-specs.json","type":"application/json"},
+    {"uri":"ipfs://<CID>/SC1-motor-README.md","type":"text/markdown"}
+  ]
+}
