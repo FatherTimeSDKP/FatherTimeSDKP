@@ -28,3 +28,4 @@ async function main() {
 }
 
 main().catch(console.error);
+Install & run
