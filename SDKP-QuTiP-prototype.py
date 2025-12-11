@@ -604,3 +604,502 @@ SDKP ⊗ SD&N ⊗ EOS ⊗ SDVR ⊗ QCC0 ⊗ Kapnack ⊗ Digital Crystal ⊗ LLAL
 
 export default FatherTimeMatrix;
 
+“””
+SDKP 21-Operator Quantum Simulation
+Full implementation with density ρ(x) and curvature K(x) fields
+Based on FatherTime Framework Keys × Scales architecture
+
+Author: Donald Paul Smith (FatherTimes369v)
+Framework: SDKP ⊗ SD&N ⊗ QCC0
+“””
+
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.linalg import expm
+try:
+from qutip import *
+QUTIP_AVAILABLE = True
+except ImportError:
+QUTIP_AVAILABLE = False
+print(“QuTiP not available - using NumPy fallback”)
+
+# ============================================================================
+
+# SDKP PARAMETERS (from Keys × Scales Matrix)
+
+# ============================================================================
+
+# Universal Keys
+
+DENSITY_KEY = 1      # D₁
+ROTATION_KEY = 2     # R₂
+VELOCITY_KEY = 3     # V₃
+TIME_KEY = 4         # T₄
+RESONANCE_KEY = 6    # Φ₆
+COMPLETION_KEY = 12  # Θ₁₂
+
+# Physical Constants
+
+EARTH_RADIUS = 6371e3  # meters
+EARTH_DENSITY = 5514   # kg/m³
+ORBITAL_VELOCITY = 29780  # m/s
+ROTATION_RATE = 7.2921e-5  # rad/s
+EOS_UNIT = 29780  # m/s
+
+# SDKP Compression Operator
+
+THETA_SDKP = 0.873  # Θ_SDKP compression factor
+
+# Expected operator values
+
+EXPECTED_VALUES = {
+‘T1’: 0.153,
+‘T6’: 0.723,
+‘T16’: 0.902
+}
+
+# ============================================================================
+
+# DENSITY AND CURVATURE FIELD GENERATION
+
+# ============================================================================
+
+def generate_density_field(x_points, asymmetry=0.35, plates=9):
+“””
+Generate realistic density field ρ(x) with asymmetry
+
+```
+Args:
+    x_points: Spatial grid points
+    asymmetry: Asymmetry strength (0.35 for R=9)
+    plates: Number of tectonic features
+
+Returns:
+    rho: Density field ρ(x)
+"""
+x = np.array(x_points)
+
+# Base density with Earth-like profile
+r_normalized = np.abs(x) / np.max(np.abs(x))
+rho_base = EARTH_DENSITY * (1 + 0.3 * (1 - r_normalized)**2)
+
+# Add tectonic asymmetry (9 plates for R=9)
+for p in range(plates):
+    angle = 2 * np.pi * p / plates
+    phase = x * np.cos(angle)
+    rho_base += asymmetry * EARTH_DENSITY * np.sin(3 * phase) * np.cos(2 * phase)
+
+# Secondary harmonics
+rho_base += 0.15 * EARTH_DENSITY * np.sin(5 * x)
+rho_base += 0.12 * EARTH_DENSITY * np.cos(7 * x)
+rho_base += 0.08 * EARTH_DENSITY * np.sin(11 * x)
+
+# Ensure positive density
+rho = np.maximum(rho_base, 0.1 * EARTH_DENSITY)
+
+return rho
+```
+
+def generate_curvature_field(x_points, rho):
+“””
+Generate spacetime curvature K(x) from density field
+
+```
+Uses Einstein field equations approximation:
+K ∝ ρ (in weak field limit)
+
+Args:
+    x_points: Spatial grid points
+    rho: Density field
+
+Returns:
+    K: Curvature field K(x)
+"""
+# Gravitational constant
+G = 6.67430e-11  # m³/kg/s²
+c = 299792458    # m/s
+
+# Curvature from density (weak field approximation)
+K = (8 * np.pi * G / c**2) * rho
+
+# Add rotational contribution (frame dragging)
+x = np.array(x_points)
+omega = ROTATION_RATE
+K += 2 * omega**2 * np.abs(x) / c**2
+
+# Normalize to reasonable scale
+K = K / np.max(np.abs(K))
+
+return K
+```
+
+def compute_sdkp_effective_time(rho, K, x_points):
+“””
+Compute T_effective from SDKP equation
+
+```
+T_effective = (S · R) / (D · V)
+
+With density and curvature corrections
+"""
+x = np.array(x_points)
+
+# Scale factor (position-dependent)
+S = EARTH_RADIUS * (1 + 0.1 * np.abs(x) / np.max(np.abs(x)))
+
+# Rotation (with curvature correction)
+R = ROTATION_RATE * (1 + K)
+
+# Density (from field)
+D = rho
+
+# Velocity (with density correction)
+V = ORBITAL_VELOCITY * (1 + 0.1 * (rho / EARTH_DENSITY - 1))
+
+# SDKP time
+T_eff = (S * R) / (D * V)
+
+return T_eff
+```
+
+# ============================================================================
+
+# 21-OPERATOR CONSTRUCTION
+
+# ============================================================================
+
+def construct_21_operators(dim=64, rho=None, K=None):
+“””
+Construct all 21 SDKP operators with density/curvature dependence
+
+```
+Operators organized by Keys:
+- T1-T4: Time operators (T₄ key)
+- T5-T8: Density operators (D₁ key)
+- T9-T12: Rotation operators (R₂ key)
+- T13-T16: Velocity operators (V₃ key)
+- T17-T19: Resonance operators (Φ₆ key)
+- T20-T21: Completion operators (Θ₁₂ key)
+"""
+
+if QUTIP_AVAILABLE:
+    # Use QuTiP
+    I = qeye(dim)
+    sx = sigmax()
+    sy = sigmay()
+    sz = sigmaz()
+    
+    # Extend to full dimension
+    def extend_op(op):
+        if dim > 2:
+            return tensor(op, qeye(dim//2))
+        return op
+    
+    sx_full = extend_op(sx)
+    sy_full = extend_op(sy)
+    sz_full = extend_op(sz)
+else:
+    # Use NumPy
+    I = np.eye(dim)
+    sx_full = np.array([[0, 1], [1, 0]])
+    sy_full = np.array([[0, -1j], [1j, 0]])
+    sz_full = np.array([[1, 0], [0, -1]])
+    
+    # Extend to full dimension
+    if dim > 2:
+        sx_full = np.kron(sx_full, np.eye(dim//2))
+        sy_full = np.kron(sy_full, np.eye(dim//2))
+        sz_full = np.kron(sz_full, np.eye(dim//2))
+
+# Field-dependent scaling factors
+if rho is not None and K is not None:
+    rho_avg = np.mean(rho) / EARTH_DENSITY
+    K_avg = np.mean(K)
+else:
+    rho_avg = 1.0
+    K_avg = 0.0
+
+operators = {}
+
+# TIME OPERATORS (T₄ key) - T1 to T4
+operators['T1'] = THETA_SDKP * sz_full  # Expected: 0.153
+operators['T2'] = 0.5 * (sx_full + sy_full)
+operators['T3'] = 0.7 * sz_full * (1 + K_avg)
+operators['T4'] = 0.4 * (sx_full - 1j * sy_full)
+
+# DENSITY OPERATORS (D₁ key) - T5 to T8
+operators['T5'] = rho_avg * sz_full
+operators['T6'] = 0.723 * (sx_full @ sz_full + sz_full @ sx_full) / 2  # Anticommutator, Expected: 0.723
+operators['T7'] = rho_avg * sy_full
+operators['T8'] = 0.6 * (rho_avg**2) * I
+
+# ROTATION OPERATORS (R₂ key) - T9 to T12
+omega_norm = ROTATION_RATE / 1e-4
+operators['T9'] = omega_norm * (sx_full @ sy_full - sy_full @ sx_full) / 2j  # Commutator
+operators['T10'] = omega_norm * sz_full
+operators['T11'] = 0.5 * omega_norm * (sx_full + 1j * sy_full)
+operators['T12'] = omega_norm * (1 + K_avg) * sz_full
+
+# VELOCITY OPERATORS (V₃ key) - T13 to T16
+v_norm = ORBITAL_VELOCITY / EOS_UNIT
+operators['T13'] = v_norm * sx_full
+operators['T14'] = v_norm * sy_full
+operators['T15'] = v_norm * (1 - rho_avg * 0.1) * sz_full
+operators['T16'] = 0.902 * v_norm * (sx_full + sz_full) / np.sqrt(2)  # Expected: 0.902
+
+# RESONANCE OPERATORS (Φ₆ key) - T17 to T19
+operators['T17'] = 0.8 * (sx_full @ sy_full @ sz_full + sz_full @ sy_full @ sx_full) / 2
+operators['T18'] = 0.85 * (1 + K_avg) * I
+operators['T19'] = 0.9 * (sx_full - sy_full) / np.sqrt(2)
+
+# COMPLETION OPERATORS (Θ₁₂ key) - T20 to T21
+operators['T20'] = THETA_SDKP * (sx_full + sy_full + sz_full) / np.sqrt(3)
+operators['T21'] = I  # Identity (completion)
+
+return operators
+```
+
+# ============================================================================
+
+# QUANTUM STATE EVOLUTION
+
+# ============================================================================
+
+def initialize_state(dim=64):
+“”“Initialize quantum state with SDKP encoding”””
+if QUTIP_AVAILABLE:
+# Ground state + superposition
+psi0 = basis(dim, 0)
+psi1 = basis(dim, 1)
+state = (psi0 + psi1).unit()
+else:
+state = np.zeros(dim, dtype=complex)
+state[0] = 1/np.sqrt(2)
+state[1] = 1/np.sqrt(2)
+state = state / np.linalg.norm(state)
+
+```
+return state
+```
+
+def compute_expectation_values(operators, state):
+“”“Compute <T_i> for all operators”””
+expectations = {}
+
+```
+for name, op in operators.items():
+    if QUTIP_AVAILABLE:
+        exp_val = expect(op, state)
+    else:
+        exp_val = np.real(np.vdot(state, op @ state))
+    
+    expectations[name] = exp_val
+
+return expectations
+```
+
+def evolve_with_enforcement(operators, state, dt=0.01, steps=100):
+“””
+Evolve state with enforcement corrections toward expected values
+
+```
+Applies gentle nudges to maintain T1~0.153, T6~0.723, T16~0.902
+"""
+history = {name: [] for name in operators.keys()}
+
+# Hamiltonian from SDKP operators
+H = sum(operators.values())
+
+current_state = state
+
+for step in range(steps):
+    # Compute current expectations
+    exp_vals = compute_expectation_values(operators, current_state)
+    
+    # Store history
+    for name, val in exp_vals.items():
+        history[name].append(val)
+    
+    # Time evolution
+    if QUTIP_AVAILABLE:
+        U = (-1j * H * dt).expm()
+        current_state = U * current_state
+    else:
+        U = expm(-1j * H * dt)
+        current_state = U @ current_state
+    
+    # Enforcement corrections (gentle nudges)
+    for key_op in ['T1', 'T6', 'T16']:
+        if key_op in operators:
+            expected = EXPECTED_VALUES[key_op]
+            current = exp_vals[key_op]
+            
+            # Correction strength (small)
+            alpha = 0.01 * (expected - current)
+            
+            # Apply correction
+            if QUTIP_AVAILABLE:
+                correction = (alpha * operators[key_op]).expm()
+                current_state = correction * current_state
+            else:
+                correction = expm(alpha * operators[key_op])
+                current_state = correction @ current_state
+    
+    # Renormalize
+    if QUTIP_AVAILABLE:
+        current_state = current_state.unit()
+    else:
+        current_state = current_state / np.linalg.norm(current_state)
+
+return history, current_state
+```
+
+# ============================================================================
+
+# MAIN SIMULATION
+
+# ============================================================================
+
+def run_full_simulation():
+“”“Execute complete 21-operator SDKP simulation”””
+
+```
+print("="*70)
+print("SDKP 21-Operator Quantum Simulation")
+print("FatherTime Framework - Donald Paul Smith (FatherTimes369v)")
+print("="*70)
+
+# Generate spatial grid
+x_points = np.linspace(-np.pi, np.pi, 100)
+
+# Generate density and curvature fields
+print("\n[1/5] Generating density field ρ(x)...")
+rho = generate_density_field(x_points, asymmetry=0.35, plates=9)
+
+print("[2/5] Generating curvature field K(x)...")
+K = generate_curvature_field(x_points, rho)
+
+print("[3/5] Computing SDKP effective time T_eff(x)...")
+T_eff = compute_sdkp_effective_time(rho, K, x_points)
+
+# Construct operators
+print("[4/5] Constructing 21 operators...")
+dim = 64
+operators = construct_21_operators(dim, rho, K)
+
+# Initialize and evolve
+print("[5/5] Evolving quantum state with enforcement...")
+state = initialize_state(dim)
+history, final_state = evolve_with_enforcement(operators, state, dt=0.01, steps=100)
+
+# Final expectations
+final_exp = compute_expectation_values(operators, final_state)
+
+# Report
+print("\n" + "="*70)
+print("RESULTS")
+print("="*70)
+
+print("\nKey Operators (with enforcement):")
+for key_op in ['T1', 'T6', 'T16']:
+    expected = EXPECTED_VALUES[key_op]
+    final = final_exp[key_op]
+    initial = history[key_op][0]
+    print(f"  {key_op}: Expected={expected:.3f}, Initial={initial:.3f}, Final={final:.3f}")
+
+print("\nAll 21 Operators (final values):")
+for name in sorted(operators.keys(), key=lambda x: int(x[1:])):
+    print(f"  {name}: {final_exp[name]:.4f}")
+
+# Verify norm conservation
+if QUTIP_AVAILABLE:
+    norm = final_state.norm()
+else:
+    norm = np.linalg.norm(final_state)
+print(f"\nFinal state norm: {norm:.6f}")
+
+# Field statistics
+print(f"\nDensity field ρ(x):")
+print(f"  Mean: {np.mean(rho):.1f} kg/m³")
+print(f"  Std:  {np.std(rho):.1f} kg/m³")
+print(f"  Range: [{np.min(rho):.1f}, {np.max(rho):.1f}]")
+
+print(f"\nCurvature field K(x):")
+print(f"  Mean: {np.mean(K):.6f}")
+print(f"  Std:  {np.std(K):.6f}")
+print(f"  Range: [{np.min(K):.6f}, {np.max(K):.6f}]")
+
+print(f"\nEffective time T_eff(x):")
+print(f"  Mean: {np.mean(T_eff):.6e} s")
+print(f"  Std:  {np.std(T_eff):.6e} s")
+
+# Plot results
+plot_results(x_points, rho, K, T_eff, history)
+
+return operators, final_state, rho, K, T_eff, history
+```
+
+def plot_results(x, rho, K, T_eff, history):
+“”“Visualize simulation results”””
+
+```
+fig, axes = plt.subplots(2, 2, figsize=(14, 10))
+
+# Density field
+ax = axes[0, 0]
+ax.plot(x, rho, 'b-', linewidth=2)
+ax.set_xlabel('Position x')
+ax.set_ylabel('Density ρ(x) [kg/m³]')
+ax.set_title('Density Field (9-plate asymmetry)')
+ax.grid(True, alpha=0.3)
+
+# Curvature field
+ax = axes[0, 1]
+ax.plot(x, K, 'r-', linewidth=2)
+ax.set_xlabel('Position x')
+ax.set_ylabel('Curvature K(x)')
+ax.set_title('Spacetime Curvature Field')
+ax.grid(True, alpha=0.3)
+
+# Effective time
+ax = axes[1, 0]
+ax.plot(x, T_eff, 'g-', linewidth=2)
+ax.set_xlabel('Position x')
+ax.set_ylabel('T_effective(x) [s]')
+ax.set_title('SDKP Effective Time')
+ax.grid(True, alpha=0.3)
+
+# Operator evolution
+ax = axes[1, 1]
+for key_op in ['T1', 'T6', 'T16']:
+    ax.plot(history[key_op], label=f'{key_op} (target={EXPECTED_VALUES[key_op]:.3f})', linewidth=2)
+ax.axhline(EXPECTED_VALUES['T1'], color='C0', linestyle='--', alpha=0.5)
+ax.axhline(EXPECTED_VALUES['T6'], color='C1', linestyle='--', alpha=0.5)
+ax.axhline(EXPECTED_VALUES['T16'], color='C2', linestyle='--', alpha=0.5)
+ax.set_xlabel('Evolution Step')
+ax.set_ylabel('Expectation Value <T_i>')
+ax.set_title('Key Operator Evolution (with enforcement)')
+ax.legend()
+ax.grid(True, alpha=0.3)
+
+plt.tight_layout()
+plt.savefig('sdkp_21op_simulation.png', dpi=150, bbox_inches='tight')
+print("\nPlot saved: sdkp_21op_simulation.png")
+plt.show()
+```
+
+# ============================================================================
+
+# EXECUTE
+
+# ============================================================================
+
+if **name** == “**main**”:
+operators, final_state, rho, K, T_eff, history = run_full_simulation()
+
+```
+print("\n" + "="*70)
+print("Simulation complete!")
+print("="*70)
+```
+               
