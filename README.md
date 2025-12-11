@@ -3794,7 +3794,34 @@ SDKP, SD&N, EOS, QCC0, LLAL, VFE1, and Kapnack.
    the 3–6–9 principle and LLAL ethical recursion.
 
 ---
+Solid progress — here are the two missing pieces that push Δ into the tight, stable regime you want.
 
+A) Physically-motivated ρ feedback rule (drop-in, no oscillations, no negatives)
+
+```python
+import numpy as np
+
+eps = 1e-12
+
+def rho_feedback_update(rho, K, C, gamma=2e-3, renormalize=True):
+    """
+    rho : (N,) current density
+    K   : (N,) curvature vector
+    C   : (N,k) top-k eigenmodes of Θ = diag(rho*K)
+    """
+    Theta = rho * K
+    Theta_mat = np.diag(Theta)
+    P = C @ C.T                              # compression projector
+    Theta_comp = P @ Theta_mat @ P
+    s = np.real(np.diag(Theta_comp)) - Theta   # where compression disagrees
+
+    delta_rho = gamma * s / (K + eps)
+    rho_new = np.clip(rho + delta_rho, 0.0, None)
+
+    if renormalize:
+        rho_new *= np.sum(rho) / (np.sum(rho_new) + eps)
+
+    return rho_new
 ## Digital Provenance
 Encoded within the **Crystal-12 lattice** via symbolic vector compression ratio 1:14,  
 anchoring temporal authorship across all derivatives and systems.
