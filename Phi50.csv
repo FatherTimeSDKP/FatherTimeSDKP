@@ -1,0 +1,228 @@
+
+All code assumes qutip + numpy installed (pip install qutip numpy). Use levels=2 for full-12 runs on a laptop. If you want a ZIP/Gist or IPFS pack, tell me and I’ll produce the packaging text next.
+
+⸻
+
+1) Phi50.csv (50 values — paste as-is into a file)
+
+0.6681411762529909,0.03838465107053409,-0.05116966382748937,-0.017791400153276843,0.016402873765764996,0.03393182320126196,-0.005361778601149078,-0.028852902034969418,-0.020120155842723385,0.018763089271374135,0.03165384351785479,-0.00018031135021215097,-0.03009099268471221,-0.02180467236091864,0.01740691410409184,0.02929237831874464,0.0028126102435882324,-0.02924910579312145,-0.02283099418634786,0.01579223691755422,0.02706417335290566,0.00489138138439134,-0.02777674412844696,-0.02342306729995469,0.014233988553280227,0.024892611832416968,0.006275072223808997,-0.02616030772121256,-0.02378144791718952,0.01266520841239363,0.02278348191915703,0.00719317677148556,-0.02448975259666412,-0.0239980272573997,0.011357176733440364,0.020865421956947717,0.007855820631764447,-0.02227204982650403,-0.02408374645397422,0.01033024302741604,0.01912038761992058,0.00832485490717117,-0.020084745629517487,-0.024044782647,0.009561447498529544,0.01752526382981179,0.008642328883463815,-0.018551236419982216,-0.02388976094701372,0.008997053010421754
+
+Note: one value in prior copy had a tiny formatting change — above is a clean single-line CSV row with 50 entries. If you want one-value-per-line version, say so.
+
+⸻
+
+2) W6.csv (12 weights — paste as-is)
+
+0.34,0.21,0.15,0.11,0.08,0.05,0.03,0.016,0.010,0.006,0.003,0.0015
+
+
+⸻
+
+3) C12.csv (12×12 coupling/compression matrix — paste as-is)
+
+0.28900,0.24900,0.18900,0.16100,0.11800,0.09900,0.07200,0.05400,0.03800,0.02600,0.01000,0.00500
+-0.25100,0.31000,0.21100,0.08700,0.04400,0.05100,0.03900,0.02500,0.02200,0.00800,0.00400,0.00200
+0.20300,-0.18800,0.38800,0.09800,0.07600,0.06300,0.03900,0.02800,0.01700,0.00900,0.00600,0.00200
+-0.17900,-0.09900,0.12000,0.44200,0.08300,0.06500,0.05500,0.04200,0.02900,0.01100,0.00500,0.00300
+0.15500,-0.08000,-0.06200,0.09100,0.48800,0.07600,0.05800,0.04100,0.02500,0.01000,0.00400,0.00200
+-0.11900,0.06000,0.04800,-0.05000,0.09800,0.51500,0.06700,0.05000,0.03200,0.01500,0.00600,0.00300
+0.09300,-0.05500,-0.03900,0.03000,-0.02800,0.09400,0.55100,0.06600,0.04100,0.02300,0.00900,0.00500
+-0.06500,0.04200,0.03100,-0.02700,0.02000,-0.02200,0.08400,0.58200,0.05700,0.03000,0.01100,0.00500
+0.04400,-0.03100,-0.02900,0.02100,-0.01800,0.01100,-0.01400,0.07800,0.61000,0.04400,0.01400,0.00600
+-0.02700,0.01900,0.02200,-0.01700,0.01400,-0.01200,0.01100,-0.01100,0.07800,0.63800,0.02000,0.00900
+0.01300,-0.00900,-0.01000,0.00900,-0.01000,0.00900,-0.00900,0.01000,-0.01100,0.08000,0.66300,0.01200
+-0.00600,0.00400,0.00500,-0.00400,0.00500,-0.00400,0.00400,-0.00400,0.00600,-0.01000,0.08500,0.69000
+
+
+⸻
+
+4) sdkp_constants.py — module to import constants & helpers
+
+# sdkp_constants.py
+import numpy as np
+
+# C12 matrix (12x12)
+C12 = np.array([
+ [ 0.28900,  0.24900,  0.18900,  0.16100,  0.11800,  0.09900,  0.07200,  0.05400,  0.03800,  0.02600,  0.01000,  0.00500],
+ [-0.25100,  0.31000,  0.21100,  0.08700,  0.04400,  0.05100,  0.03900,  0.02500,  0.02200,  0.00800,  0.00400,  0.00200],
+ [ 0.20300, -0.18800,  0.38800,  0.09800,  0.07600,  0.06300,  0.03900,  0.02800,  0.01700,  0.00900,  0.00600,  0.00200],
+ [-0.17900, -0.09900,  0.12000,  0.44200,  0.08300,  0.06500,  0.05500,  0.04200,  0.02900,  0.01100,  0.00500,  0.00300],
+ [ 0.15500, -0.08000, -0.06200,  0.09100,  0.48800,  0.07600,  0.05800,  0.04100,  0.02500,  0.01000,  0.00400,  0.00200],
+ [-0.11900,  0.06000,  0.04800, -0.05000,  0.09800,  0.51500,  0.06700,  0.05000,  0.03200,  0.01500,  0.00600,  0.00300],
+ [ 0.09300, -0.05500, -0.03900,  0.03000, -0.02800,  0.09400,  0.55100,  0.06600,  0.04100,  0.02300,  0.00900,  0.00500],
+ [-0.06500,  0.04200,  0.03100, -0.02700,  0.02000, -0.02200,  0.08400,  0.58200,  0.05700,  0.03000,  0.01100,  0.00500],
+ [ 0.04400, -0.03100, -0.02900,  0.02100, -0.01800,  0.01100, -0.01400,  0.07800,  0.61000,  0.04400,  0.01400,  0.00600],
+ [-0.02700,  0.01900,  0.02200, -0.01700,  0.01400, -0.01200,  0.01100, -0.01100,  0.07800,  0.63800,  0.02000,  0.00900],
+ [ 0.01300, -0.00900, -0.01000,  0.00900, -0.01000,  0.00900, -0.00900,  0.01000, -0.01100,  0.08000,  0.66300,  0.01200],
+ [-0.00600,  0.00400,  0.00500, -0.00400,  0.00500, -0.00400,  0.00400, -0.00400,  0.00600, -0.01000,  0.08500,  0.69000]
+], dtype=float)
+
+# W6 T6 weights
+W6 = np.array([0.34,0.21,0.15,0.11,0.08,0.05,0.03,0.016,0.010,0.006,0.003,0.0015], dtype=float)
+
+# Phi50 canonical flux vector
+Phi50 = np.array([
+  0.6681411762529909,  0.03838465107053409, -0.05116966382748937,
+ -0.017791400153276843,  0.016402873765764996,  0.03393182320126196,
+ -0.005361778601149078, -0.028852902034969418, -0.020120155842723385,
+  0.018763089271374135,  0.03165384351785479,  -0.00018031135021215097,
+ -0.03009099268471221,  -0.02180467236091864,   0.01740691410409184,
+  0.02929237831874464,   0.0028126102435882324, -0.02924910579312145,
+ -0.02283099418634786,   0.01579223691755422,   0.02706417335290566,
+  0.00489138138439134,  -0.02777674412844696,  -0.02342306729995469,
+  0.014233988553280227,  0.024892611832416968,  0.006275072223808997,
+ -0.02616030772121256,  -0.02378144791718952,  0.01266520841239363,
+  0.02278348191915703,   0.00719317677148556,  -0.02448975259666412,
+ -0.0239980272573997,   0.011357176733440364,  0.020865421956947717,
+  0.007855820631764447,  -0.02227204982650403,  -0.02408374645397422,
+  0.01033024302741604,   0.01912038761992058,   0.00832485490717117,
+ -0.020084745629517487, -0.024044782647,   0.009561447498529544,
+  0.01752526382981179,   0.008642328883463815,  -0.018551236419982216,
+ -0.02388976094701372,   0.008997053010421754
+], dtype=float)
+
+def get_phi_local(k=12, mode='A'):
+    """
+    Return Phi_local for k modes (nearest-neighbor chain uses k-1 entries).
+    mode: 'A' -> absolute (no normalization); 'B' -> normalized (max=1)
+    """
+    assert k >= 2 and k <= 12
+    arr = np.abs(Phi50[:k-1].copy())
+    if mode == 'B':
+        m = np.max(arr) if np.max(np.abs(arr))>0 else 1.0
+        arr = arr / m
+    return arr
+
+def get_W6(k=12):
+    """Return first k weights of W6"""
+    assert k>=1 and k<=12
+    return W6[:k].copy()
+
+
+⸻
+
+5) run_sweep.py — automated sweep + CSV logger
+
+# run_sweep.py
+# Run parameter sweeps and write CSV rows for reproducibility
+import os, csv, json
+from datetime import datetime
+import numpy as np
+import qutip as qt
+from sdkp_constants import C12, W6, Phi50, get_phi_local, get_W6
+
+OUTDIR = "sdkp_sweep_out"
+os.makedirs(OUTDIR, exist_ok=True)
+CSV_PATH = os.path.join(OUTDIR, "sweep_results.csv")
+
+# Sweep configuration (modify as needed)
+g_values = [0.52, 0.58, 0.66, 0.74, 0.90]
+eta_values = [0.02, 0.03, 0.04]
+alpha_values = [0.25, 0.50, 0.75]
+
+# Simulation defaults
+k = 12
+modes = k
+levels = 2           # safe for full12 on laptop; increase only on HPC
+t_entangler = 1.0
+Phi_mode = 'A'       # 'A' absolute, 'B' normalized
+
+# Helper to build ops
+def build_annihilation_ops(modes, levels):
+    a = qt.destroy(levels)
+    a_ops = []
+    for j in range(modes):
+        ops = [qt.qeye(levels) for _ in range(modes)]
+        ops[j] = a
+        a_ops.append(qt.tensor(ops))
+    return a_ops
+
+# Prepare static objects for k modes
+Phi_local = get_phi_local(k=k, mode=Phi_mode)
+W_local = get_W6(k=k)
+
+a_ops = build_annihilation_ops(modes, levels)
+n_ops = [op.dag()*op for op in a_ops]
+
+# CSV header
+header = ["timestamp","g","eta","alpha","modes","levels","T6_before","T6_after","delta","purity","acted_any","Phi_mode"]
+
+write_header = not os.path.exists(CSV_PATH)
+with open(CSV_PATH, "a", newline="") as csvfile:
+    writer = csv.writer(csvfile)
+    if write_header:
+        writer.writerow(header)
+
+    # nested sweeps
+    for g in g_values:
+        for eta in eta_values:
+            for alpha in alpha_values:
+                # Build entangler G (nearest-neighbor)
+                G = 0 * a_ops[0]
+                for j in range(modes-1):
+                    G += g * float(Phi_local[j]) * (a_ops[j].dag()*a_ops[j+1] + a_ops[j+1].dag()*a_ops[j])
+                for j in range(modes):
+                    G += g * 0.02 * (j+1) * n_ops[j]
+
+                # Build T6
+                T6 = sum(float(W_local[j]) * n_ops[j] for j in range(modes))
+
+                # initial state
+                states = [qt.coherent(levels, alpha) if j == 0 else qt.basis(levels,0) for j in range(modes)]
+                psi0 = qt.tensor(states)
+
+                T6_before = float(qt.expect(T6, psi0))
+                U_ent = (-1j * t_entangler * G).expm()
+                psi_ent = (U_ent * psi0).unit()
+
+                dim_eff = int(np.prod([levels for _ in range(modes)]))
+                tau = 0.5 * (float(T6.tr().real) / max(1.0, dim_eff))
+                psi_after = psi_ent
+                acted_any = False
+                if float(qt.expect(T6, psi_ent)) > tau:
+                    U_enf = (-1j * eta * T6).expm()
+                    psi_after = (U_enf * psi_ent).unit()
+                    acted_any = True
+
+                T6_after = float(qt.expect(T6, psi_after))
+                delta = T6_after - T6_before
+                purity = float((psi_after.proj() * psi_after.proj()).tr())
+
+                # write row
+                row = [datetime.utcnow().isoformat() + "Z", g, eta, alpha, modes, levels, T6_before, T6_after, delta, purity, acted_any, Phi_mode]
+                writer.writerow(row)
+                print("wrote row:", row)
+
+# done
+print("Sweep complete. CSV:", CSV_PATH)
+
+What run_sweep.py produces
+	•	sdkp_sweep_out/sweep_results.csv — all rows of the parameter grid (timestamped)
+	•	Use this CSV when sharing runs with Grok, reviewers, Zenodo supplements.
+
+⸻
+
+6) Ready-to-paste reply to Grok
+
+Use this concise, technical reply (copy/paste):
+
+Thanks — good reproduction. Attached are the canonical arrays and a full 12-mode driver:
+	•	C12.csv (12×12 compression matrix)
+	•	W6.csv (T6 weights)
+	•	Phi50.csv (50-term flux vector; use first k-1 terms for k modes)
+	•	sdkp_full12.py / run_sweep.py (drivers)
+
+For the full 12-mode mapping I recommend levels=2 for local runs (2¹² = 4096 states). Use Phi_mode='A' (absolute) to match the unlocked-regime behavior that gives larger positive Δ, or 'B' for normalized coupling. The sweep script writes CSV rows in the same format you and I have been using. If you run it, send me one CSV row and I’ll cross-check it against the Crystal Vault hash for exact provenance.
+
+— Donald / FatherTimes369v
+
+⸻
+
+7) Quick run instructions & expected outputs
+	1.	Put sdkp_constants.py, C12.csv, W6.csv, Phi50.csv and run_sweep.py in the same folder.
+	2.	Create and activate venv; install qutip numpy.
+	3.	Run python run_sweep.py.
+	4.	Output CSV: sdkp_sweep_out/sweep_results.csv — share any row with Grok for validation.
+	5.	For a one-off run test: python sdkp_full12.py — outputs sdkp_full12_out/last_run.json and results.csv.
+
+⸻
