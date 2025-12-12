@@ -153,14 +153,217 @@ Using the parameters in the script (g=0.90, eta=0.03, alpha=0.5):
 - Purity ≈ 0.95
 
 ## Purpose
-These files allow any reviewer (including Grok) to:
+These files allow any reviewer to:
 - Reproduce Δ(T6) shifts  
 - Inspect the full C matrix  
 - Verify entangler stability  
 - Compare locked vs unlocked regimes  
 
-This Gist is suitable for citation and for linking on X, OSF, Zenodo, GitHub, or Web3.
 
 
+⸻
 
+
+# sdkp_full12.py
+# Full 12-mode SDKP / QCC0 QuTiP driver with BOTH Phi usage modes:
+#   Phi_mode = 'A'  -> Phi_local = abs(Phi50[:11])         (Absolute, stronger entangler)
+#   Phi_mode = 'B'  -> Phi_local = abs(Phi50[:11]) / max() (Normalized, gentler)
+#
+# Defaults: modes=12, levels=2 (safe). Change g, eta, alpha as needed.
+#
+# Outputs:
+#  - Console summary
+#  - CSV row saved to sdkp_full12_out/results.csv
+#  - JSON log saved to sdkp_full12_out/last_run.json
+
+import os, csv, json
+import numpy as np
+import qutip as qt
+from datetime import datetime
+
+OUTDIR = "sdkp_full12_out"
+os.makedirs(OUTDIR, exist_ok=True)
+
+# ---------------------------
+# Embedded canonical arrays
+# ---------------------------
+C12 = np.array([
+ [ 0.28900,  0.24900,  0.18900,  0.16100,  0.11800,  0.09900,  0.07200,  0.05400,  0.03800,  0.02600,  0.01000,  0.00500],
+ [-0.25100,  0.31000,  0.21100,  0.08700,  0.04400,  0.05100,  0.03900,  0.02500,  0.02200,  0.00800,  0.00400,  0.00200],
+ [ 0.20300, -0.18800,  0.38800,  0.09800,  0.07600,  0.06300,  0.03900,  0.02800,  0.01700,  0.00900,  0.00600,  0.00200],
+ [-0.17900, -0.09900,  0.12000,  0.44200,  0.08300,  0.06500,  0.05500,  0.04200,  0.02900,  0.01100,  0.00500,  0.00300],
+ [ 0.15500, -0.08000, -0.06200,  0.09100,  0.48800,  0.07600,  0.05800,  0.04100,  0.02500,  0.01000,  0.00400,  0.00200],
+ [-0.11900,  0.06000,  0.04800, -0.05000,  0.09800,  0.51500,  0.06700,  0.05000,  0.03200,  0.01500,  0.00600,  0.00300],
+ [ 0.09300, -0.05500, -0.03900,  0.03000, -0.02800,  0.09400,  0.55100,  0.06600,  0.04100,  0.02300,  0.00900,  0.00500],
+ [-0.06500,  0.04200,  0.03100, -0.02700,  0.02000, -0.02200,  0.08400,  0.58200,  0.05700,  0.03000,  0.01100,  0.00500],
+ [ 0.04400, -0.03100, -0.02900,  0.02100, -0.01800,  0.01100, -0.01400,  0.07800,  0.61000,  0.04400,  0.01400,  0.00600],
+ [-0.02700,  0.01900,  0.02200, -0.01700,  0.01400, -0.01200,  0.01100, -0.01100,  0.07800,  0.63800,  0.02000,  0.00900],
+ [ 0.01300, -0.00900, -0.01000,  0.00900, -0.01000,  0.00900, -0.00900,  0.01000, -0.01100,  0.08000,  0.66300,  0.01200],
+ [-0.00600,  0.00400,  0.00500, -0.00400,  0.00500, -0.00400,  0.00400, -0.00400,  0.00600, -0.01000,  0.08500,  0.69000]
+], dtype=float)
+
+W6 = np.array([0.34,0.21,0.15,0.11,0.08,0.05,0.03,0.016,0.010,0.006,0.003,0.0015], dtype=float)
+
+Phi50 = np.array([
+  0.6681411762529909,  0.03838465107053409, -0.05116966382748937,
+ -0.017791400153276843,  0.016402873765764996,  0.03393182320126196,
+ -0.005361778601149078, -0.028852902034969418, -0.020120155842723385,
+  0.018763089271374135,  0.03165384351785479,  -0.00018031135021215097,
+ -0.03009099268471221,  -0.02180467236091864,   0.01740691410409184,
+  0.02929237831874464,   0.0028126102435882324, -0.02924910579312145,
+ -0.02283099418634786,   0.01579223691755422,   0.02706417335290566,
+  0.00489138138439134,  -0.02777674412844696,  -0.02342306729995469,
+  0.014233988553280227,  0.024892611832416968,  0.006275072223808997,
+ -0.02616030772121256,  -0.02378144791718952,  0.01266520841239363,
+  0.02278348191915703,   0.00719317677148556,  -0.02448975259666412,
+ -0.0239980272573997,   0.011357176733440364,  0.020865421956947717,
+  0.007855820631764447,  -0.02227204982650403,  -0.02408374645397422,
+  0.01033024302741604,   0.01912038761992058,   0.00832485490717117,
+ -0.020084745629517487, -0.02404478245364776,   0.009561447498529544,
+  0.01752526382981179,   0.008642328883463815,  -0.018551236419982216,
+ -0.02388976094701372,   0.008997053010421754
+], dtype=float)
+
+# ---------------------------
+# User-specified run options
+# ---------------------------
+# Choose Phi_mode = 'A' or 'B' (A = abs, B = normalized)
+Phi_mode = 'A'   # set to 'B' for normalized
+g = 0.90
+eta = 0.03
+alpha = 0.50
+k = 12
+modes = k        # full 12-mode compressed mapping
+levels = 2       # safe default for full 12 (2^12 = 4096 states)
+t_entangler = 1.0
+apply_diag_ramp = True  # small diagonal ramp added to G for numerical stability
+
+# ---------------------------
+# Sanity checks
+# ---------------------------
+if modes != k:
+    raise ValueError("For full12 script, set modes == k (12).")
+if levels < 2:
+    raise ValueError("levels must be >= 2")
+
+# ---------------------------
+# Helper builders
+# ---------------------------
+def build_annihilation_ops(modes, levels):
+    a = qt.destroy(levels)
+    a_ops = []
+    for j in range(modes):
+        ops = [qt.qeye(levels) for _ in range(modes)]
+        ops[j] = a
+        a_ops.append(qt.tensor(ops))
+    return a_ops
+
+def build_number_ops(a_ops):
+    return [op.dag()*op for op in a_ops]
+
+# ---------------------------
+# Prepare Phi_local
+# ---------------------------
+Phi_local_raw = Phi50[:k-1].copy()
+if Phi_mode == 'A':
+    Phi_local = np.abs(Phi_local_raw)
+elif Phi_mode == 'B':
+    Phi_local = np.abs(Phi_local_raw)
+    maxv = np.max(Phi_local) if np.max(np.abs(Phi_local)) > 0 else 1.0
+    Phi_local = Phi_local / maxv
+else:
+    raise ValueError("Phi_mode must be 'A' or 'B'")
+
+# ---------------------------
+# Build operators
+# ---------------------------
+a_ops = build_annihilation_ops(modes, levels)
+n_ops = build_number_ops(a_ops)
+
+# Build entangler G (nearest-neighbor chain)
+G = 0 * a_ops[0]
+for j in range(modes - 1):
+    G += g * float(Phi_local[j]) * (a_ops[j].dag()*a_ops[j+1] + a_ops[j+1].dag()*a_ops[j])
+if apply_diag_ramp:
+    for j in range(modes):
+        G += g * 0.02 * (j+1) * n_ops[j]
+
+# Build T6 observable (using W6)
+T6 = sum(float(W6[j]) * n_ops[j] for j in range(modes))
+
+# ---------------------------
+# Initial state (coherent anchor on mode 0)
+# ---------------------------
+states = [qt.coherent(levels, alpha) if j == 0 else qt.basis(levels,0) for j in range(modes)]
+psi0 = qt.tensor(states)
+
+# ---------------------------
+# Evaluate & evolve
+# ---------------------------
+T6_before = float(qt.expect(T6, psi0))
+
+# Entangler unitary
+U_ent = (-1j * t_entangler * G).expm()
+psi_ent = (U_ent * psi0).unit()
+
+# Enforcement pass (single-step heuristic)
+dim_eff = int(np.prod([levels for _ in range(modes)])) if levels > 1 else 1
+tau = 0.5 * (float(T6.tr().real) / max(1.0, dim_eff))
+psi_after = psi_ent
+acted_any = False
+if float(qt.expect(T6, psi_ent)) > tau:
+    U_enf = (-1j * eta * T6).expm()
+    psi_after = (U_enf * psi_ent).unit()
+    acted_any = True
+
+T6_after = float(qt.expect(T6, psi_after))
+delta = T6_after - T6_before
+purity = float((psi_after.proj() * psi_after.proj()).tr())
+
+# ---------------------------
+# Output results
+# ---------------------------
+timestamp = datetime.utcnow().isoformat() + "Z"
+results_row = {
+    "timestamp": timestamp,
+    "Phi_mode": Phi_mode,
+    "g": g,
+    "eta": eta,
+    "alpha": alpha,
+    "modes": modes,
+    "levels": levels,
+    "T6_before": T6_before,
+    "T6_after": T6_after,
+    "delta": delta,
+    "purity": purity,
+    "acted_any": acted_any
+}
+
+# Console
+print("=== SDKP Full12 run ===")
+for kx, vx in results_row.items():
+    print(f"{kx:12s} : {vx}")
+print("========================")
+
+# CSV append (create file with header if missing)
+csv_path = os.path.join(OUTDIR, "results.csv")
+header = list(results_row.keys())
+write_header = not os.path.exists(csv_path)
+with open(csv_path, "a", newline="") as f:
+    writer = csv.DictWriter(f, fieldnames=header)
+    if write_header:
+        writer.writeheader()
+    writer.writerow(results_row)
+
+# JSON latest
+with open(os.path.join(OUTDIR, "last_run.json"), "w") as jf:
+    json.dump(results_row, jf, indent=2)
+
+print("Saved CSV:", csv_path)
+print("Saved JSON:", os.path.join(OUTDIR, "last_run.json"))
+
+# End
+
+
+⸻
 
