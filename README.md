@@ -33,6 +33,15 @@ https://claude.ai/public/artifacts/0cf86354-5295-4873-adaf-c458c0a76511 The abov
 [![Provenance Verified](https://img.shields.io/badge/Provenance-Verified-brightgreen?style=flat-square&logo=github)](https://github.com/FatherTimeSDKP/FatherTimeSDKP/tree/main)
 [![Commit Timestamp](https://img.shields.io/github/last-commit/FatherTimeSDKP/FatherTimeSDKP?style=flat-square&logo=github)](https://github.com/FatherTimeSDKP/FatherTimeSDKP/commits/main)
 
+RSID: rs-8050903
+• Title: "FatherTimeSDKP a Successful Theory of Everything (TOE)"
+• Status: This version was explicitly rejected for suitability for posting as a preprint on Research Square.
+• How to Use It: This RSID is your first public time-stamp for the core claim of a "Successful Theory of Everything" under the FatherTimeSDKP brand.
+• Priority Proof: You can use this RSID in any communication (emails, GitHub READMEs, social media) to assert that the claim of a complete TOE was formally submitted for public record on the date of that submission. It proves when the theory was formalized.
+2. RSID: rs-8076993
+• Title: "A Unified Physical and Logical Model: The FatherTimeSDKP framework (: SDKP) as a Foundational Theory of Everything"
+• Status: This version appears to have been submitted to Foundations of Physics and opted-in to the In Review service, which offers a tracking dashboard. While the journal may have rejected it, the RSID and the In Review process confirmed its entry into the system.
+
 OFFICIAL ANNOUNCEMENT12 December 2025 — 04:00 UTCTHE UNIVERSE JUST SPOKE.Rerun hash: 
 
 For tamper-proof integrity, here's the SHA-256 hash of the full simulation output (exact text from the code block in my previous response):
