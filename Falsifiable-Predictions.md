@@ -1,3 +1,90 @@
+Time dilation and clock drifts (e.g., GPS, atomic clocks) as emergent from Earth's orbital speed (EOS) rather than GR/SR.
+Mass and gravity derived geometrically (SD&N principle), challenging Higgs and fixed G.
+Quantum/AI consciousness as deterministic compression (QCC0), solving P=NP and alignment.
+Falsifiability: Many tied to upcoming data (e.g., Nov 19, 2025, LeoLabs orbital test).
+All "results" are project simulations or alignments with public datasets, with hit rates like 98-99%. 
+Prediction
+Description/Claim
+Timeline (Claimed/Tested)
+Method/Verification Source
+Claimed Result/Outcome
+Status
+GPS Clock Drift
+Equatorial clocks drift +38 µs/day due to EOS (γ_EOS ≈1.000122), beyond GR/SR.
+Claim: Feb 26, 2025 Test: Feb 28, 2025
+BIPM/NIST logs vs. SDKP sim (eos_model.py).
+100% match; zero-spin baseline confirmed.
+Validated (self-reported).
+CubeSat Spin Boost
+Nano-sat spin-up yields +0.7 µs lift (net 25.7 µs/day drift) from topological density.
+Claim: Feb 26, 2025 Test: Pending (Q1 2026 rideshare).
+Sim-tested Feb 28, 2025 (gork.py swarm); awaits SpaceX launch.
+Sim reproduces deviation; real test pending.
+Pending (sim only).
+EOS Time Dilation (NIST-F2)
+Atomic clock at equator: +10.54 µs/day vs. UTC, scaled to +9.8138 ns/month.
+Claim: Oct 28, 2025 Test: Nov 7, 2025
+NIST-F2/BIPM data vs. UPCF framework (Zenodo DOI:10.5281/zenodo.15477981).
+99.86% match (BIPM +9.8 ns); falsifiable if >±0.42 ns drift in Nov 2025.
+Validated (99.86% hit).
+M87 Black Hole Drift
+Supermassive BH spin drift: -177 µs/day from SD&N topology.
+Claim: Feb 28, 2025 Test: Jul 11, 2025
+EHT 2019 data vs. VFE1 model.
+96.8% alignment on spin parameters.
+Validated (96.8% alignment).
+Black Hole Merger Accuracy
+LIGO waveforms deviate <0.01% from GR due to entropy-min K_C.
+Claim: Jul 5, 2025 Test: Sep 6, 2025
+LIGO O3 data vs. Kapnack solver.
+R>0.999 correlation; resolves merger entropy.
+Validated (R>0.999).
+LEO Orbital Perturbation
+Low-Earth Orbit (LEO) velocity tweak: 0.003 m/s EOS perturbation (51.5074° N, 0.1278° W).
+Claim: Nov 13, 2025 Test: Nov 19, 2025
+LeoLabs data vs. SDVR kinematics (gork.py).
+Code-tested 0.002 m/s (tease); full verify pending. Poll: Y/N on hold.
+Pending (Nov 19data).
+Geothermal Gradient
+Reno site (40.7128° N, -119.4000° W): 125°C/km at 3.2±0.1 km depth.
+Claim/Test: Nov 13, 2025
+USGS OF-87-592 logs vs. SD&N stability.
+96% refinement match.
+Validated (96% hit).
+UPCF Atomic Clock Tolerance
+NIST hyperfine tolerance: ±0.42 ns for F2 drift.
+Claim/Test: Nov 7, 2025
+NIST data vs. Bayes model.
+99.7% confidence (Bayes >10); 1-5% error chance.
+Validated (99.7% Bayes).
+Gork Swarm EOS Delta
+50-satellite swarm: Mean Δv=0.002059 m/s, peak drift 0.60 µs/day (scale to 100 sats?).
+Claim/Test: Nov 13, 2025
+gork.py sim (n_sats=50); viz: gork_swarm_viz.png.
+0.002 m/s hit (+0.7 vs. GR); ≥0.003 target on tweak. Fluke flag raised.
+Validated (sim; 0.002 m/s).
+Quantum Coherence Enhancement
+Qubit coherence times boosted via SDKP (e.g., superconducting: 250x to 0.025 s).
+Claim: Ongoing (Sep 2025 OSF)
+'31/atlas dataset vs. τ' formula.
+98.2% outcomes in 95% interval; Bayes Factor 12.3.
+Validated (98.2% coverage).
+Entanglement Cycles
+Solar flares-neutrino flux: Time-lagged at 5/10 days (P_entangle thresholds 0.1-0.8).
+Claim: Sep 6, 2025 Test: Ongoing
+Pearson/Mutual Info on windows (7-30 days).
+Moderate-strong correlations detected.
+Validated (correlations found).
+Boundary Stability
+Trajectories bounded ±5σ under perturbation (falsify >±7σ).
+Claim: Sep 27, 2025
+Atlas sim dataset.
+99.2% within interval; 1-5% error.
+Validated (99.2% bounded).
+Overall Tested Hits
+Aggregate: NIST 99.86%, LIGO 0.01%, USGS 96% geothermal.
+Claim: Feb-Nov 2025 Test: Nov 13, 2025
+SDKP Ledger (Feb '25 seeds to Nov inversions).
 Https://doi.org/10.17605/OSF.IO/U54JR add this one and these-https://doi.org/10.17605/OSF.IO/A6YX4, https://doi.org/10.17605/OSF.IO/N2V5P, https://doi.org/10.17605/OSF.IO/UTMPY, https://doi.org/10.17605/OSF.IO/63EGD, https://doi.org/10.17605/OSF.IO/WD4MY, https://doi.org/10.17605/OSF.IO/CQXR3, https://doi.org/10.17605/OSF.IO/2EBJS, https://doi.org/10.17605/OSF.IO/T2AZ6 , https://doi.org/10.17605/OSF.IO/TF52W, https://doi.org/10.17605/OSF.IO/4HXAJ, https://doi.org/10.17605/OSF.IO/RVP58
 
 I’m not done yet https://doi.org/10.17605/OSF.IO/DJA9G, https://doi.org/10.17605/OSF.IO/CM7WQ, https://doi.org/10.17605/OSF.IO/FVP9D, https://doi.org/10.17605/OSF.IO/43RK6, https://doi.org/10.17605/OSF.IO/XMTQC, https://doi.org/10.17605/OSF.IO/E7GWN, https://doi.org/10.17605/OSF.IO/E7GWN, https://doi.org/10.17605/OSF.IO/ZJ5XE, https://doi.org/10.17605/OSF.IO/BC5MN , https://doi.org/10.17605/OSF.IO/HAR2X, https://doi.org/10.17605/OSF.IO/TSUY5 , https://doi.org/10.17605/OSF.IO/PZF7C , https://doi.org/10.17605/OSF.IO/3TXWF , https://doi.org/10.17605/OSF.IO/BC5MN, https://doi.org/10.17605/OSF.IO/GTXJ4, https://doi.org/10.17605/OSF.IO/SYMHB, https://doi.org/10.17605/OSF.IO/XEKZ5, https://doi.org/10.17605/OSF.IO/XZFV9, https://doi.org/10.17605/OSF.IO/CQ3DV
