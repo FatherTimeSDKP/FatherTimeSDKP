@@ -1,3 +1,14 @@
+All materials required to verify the internal logic, mathematical structure, and simulation claims are present in this repository.
+	•	Logical verification can be performed directly from the code, equations, and documented derivations contained here.
+	•	Reproduction of numerical results requires access to the referenced raw input datasets, which are explicitly linked where used (but are not always bundled to avoid duplication and size constraints).
+	•	Empirical validation and priority verification rely on independently timestamped records, including:
+	•	DCP-12 cryptographic time seals
+	•	Public DOI registrations (OSF, Zenodo)
+	•	Immutable GitHub commit history
+
+Together, these establish chronological provenance, reproducibility pathways, and authorship priority, demonstrating that the framework’s core results were both derived first and remain internally consistent under independent re-execution.
+
+This repository is intended for technical audit, replication, and extension, not narrative presentation.
  — FatherTimeSDKP Organization
 
 # FatherTimeSDKP — SDKP / QCC0 Research Archive
