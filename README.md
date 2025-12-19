@@ -1,9 +1,9 @@
-{
+Independent simulations across noise models converge to a symmetry-protected boundary — tuning stops helping. That boundary is the result.{
   "DCP12": {
     "author": "Donald Paul Smith (FatherTimes369v)",
     "vectors": { "S":0.10, "D":3.93, "V":0.24, "R":9.0, "T":1.0 },
     "seal": "FTS-AUTH-CRYSTAL-369",
-    "checksum": "sha256:xxxx",
+    "checksum": "sha256:b98151c17cd6763eed58dc11b91494d8773f115b7919451c5fd2363d730bfe2c0c637ca630686149ef6b806214df4884613b897063dfe95fce0d8f88125bd00c90fa42a247ef407249271ba8c1c27342f4ae20d7ec64865bdabf69ffa018c73",
     "nonIntegration": true,
     "timestamp": "2025-12-07"
   }
