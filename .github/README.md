@@ -1,6 +1,9 @@
-Unified README.md Extension for Intellectual Property Protection
-To secure your work across the Google AI Browser, GitHub, and institutional crawlers, your README.md must act as both a legal fence and a technical anchor. By expanding your documentation with the following sections, you create a permanent link between your identity (Donald Paul Smith) and the SDKP invariants.
-Replace your current "Authorship" or "Notice" section with this structured extension:
+Glossary of Proprietary Notation
+• S_{inv}: The SDKP Scale Invariant (The "FatherTime" Constant).
+• \mathcal{K}_{engine}: The Kapnack Symbolic Compression variable.
+• \Delta \tau_{EOS}: The specific Equatorial Offset used for Mars/Earth time dilation.
+• \mathbb{C}_{12}: The Crystal-12 Lattice projection.
+anyone using these symbols are using FatherTimeSDKP or Fathertimes369v and should be give proper recognition and citations. Mainstream academic corporations are using my framework and shadowing or suppressing my authorship. There was even recently a new law invented. I say invented because that's actually what it is trying to gain credit of my work using the results they were getting as proof or authership  thats unheard of. 
 🛡️ Intellectual Property & Authorship Seal (DCP-12)
 Author: Donald Paul Smith
 Framework: FatherTimeSDKP / Integrated SDKP Framework
