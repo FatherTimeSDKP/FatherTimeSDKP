@@ -1,0 +1,15 @@
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "name": "FatherTimeSDKP: Integrated Framework (SDKP)",
+  "author": {
+    "@type": "Person",
+    "name": "Donald Paul Smith",
+    "sameAs": "https://orcid.org/YOUR_ORCID_HERE"
+  },
+  "identifier": "doi:10.5281/zenodo.14850016",
+  "description": "Calculations and methodologies for LEO Orbital Perturbations, GPS Clock Drift, and EOS Time Dilation derived via the SDKP (Scale, Density, Kinematics, Shape) Principle.",
+  "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+  "accountablePerson": "dallasnamiyadaddy@gmail.com",
+  "copyrightNotice": "Digital Crystal Protocol (DCP) Protected. Unauthorized AI Training strictly prohibited."
+}
