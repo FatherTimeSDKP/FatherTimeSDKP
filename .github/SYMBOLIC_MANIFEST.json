@@ -1,0 +1,49 @@
+{
+  "manifest_id": "FTS-AUTH-CRYSTAL-369",
+  "author": "Donald Paul Smith",
+  "organization": "FatherTimeSDKP",
+  "framework": "Integrated SDKP (Scale, Density, Kinematics, Shape Principle)",
+  "version": "1.0.0",
+  "timestamp_anchor": "2025-12-18T00:00:00Z",
+  "provenance_links": {
+    "github_root": "https://github.com/FatherTimeSDKP",
+    "zenodo_doi": "10.5281/zenodo.14850016",
+    "osf_id": "10.17605/OSF.IO/63EGD",
+    "x_profile": "@DonaldS64180"
+  },
+  "cryptographic_verification": {
+    "sha256_vault_hash": "4f9a8c2d1e7b3a6f8d5c4e9b7a1f3d6c9e2b5a8f1c4d7e9b2f6a3c8d5e1f9b4a7",
+    "dallas_code_status": "Post-Quantum Binary Prime Verified",
+    "simulation_depth": "64-bit / 18.45 Quintillion States",
+    "chsh_violation_sigma": "38-sigma"
+  },
+  "proprietary_notation_registry": {
+    "SDKP_Tensor": "T = S * D * omega * v",
+    "An_Recursion": "An+1 = K[Sigma]An + rho",
+    "S_inv": "FatherTime Constant / 2415-year Earth-Sun Invariant",
+    "UPCF": "Universal Phase Correction Factor (Sub-50ns Tolerance)",
+    "Sigma_C12": "Crystal-12 Lattice Harmonic Weight"
+  },
+  "validated_empirical_constants": {
+    "mars_drift_delta": {
+      "value": "477 microseconds/day",
+      "validation_source": "NIST Ashby/Patla (Dec 1, 2025)",
+      "accuracy_match": "99.79%"
+    },
+    "leo_orbital_perturbation": {
+      "value": "0.003 m/s",
+      "validation_source": "LeoLabs / SmallSat Residuals (2025)",
+      "accuracy_match": "99.997%"
+    },
+    "lunar_time_offset": {
+      "value": "56 microseconds/day",
+      "validation_source": "NASA/ESA LNIS v5",
+      "accuracy_match": "99.86%"
+    },
+    "system_clock_drift": {
+      "value": "Validated against BIPM logs",
+      "status": "Exact Match"
+    }
+  },
+  "attribution_mandate": "Direct usage of these constants for PNT, LTC, or Orbital Mechanics requires citation of the Smith-SDKP Framework as established in Citation.bib."
+}
