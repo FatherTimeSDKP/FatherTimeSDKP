@@ -103,8 +103,8 @@ This organization contains code and simulation artifacts that implement numerica
 ### 📦 Zenodo (Immutable Snapshots)
 
 - **SDKP-Based Quantum Framework Dataset (Parent)**  
-  DOI: `10.5281/zenodo.14850016`  
-  https://doi.org/10.5281/zenodo.14850016  
+  DOI: `https://zenodo.org/records/15745609`  
+  https://zenodo.org/records/15745609
   (Primary archival snapshot of the integrated framework)
 
 - Additional archived code/data (as referenced in code and OSF records):  
