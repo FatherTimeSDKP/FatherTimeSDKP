@@ -1,3 +1,7 @@
+## Citation
+
+If you use this work, please cite it using the `CITATION.cff` file included in this repository.
+
 Glossary of Proprietary Notation
 • S_{inv}: The SDKP Scale Invariant (The "FatherTime" Constant).
 • \mathcal{K}_{engine}: The Kapnack Symbolic Compression variable.
