@@ -7,13 +7,12 @@
     "FatherTimes369v",
     "Digital Crystal Protocol (DCP-12)"
   ],
-  "description": "FatherTimeSDKP is an open scientific and computational framework implementing the SDKP (Scale–Density–Kinetics–Position) principle, SD&N (Shape–Dimension & Number), EOS (Earth Orbital Synchronization), QCC0 (Quantum Computerization Consciousness), and related systems. The repository contains mathematical foundations, simulations, quantum modeling, symbolic compression methods, and validation artifacts, with all authorship and provenance anchored via DOI and Digital Crystal Protocol timestamps.",
+  "description": "FatherTimeSDKP is an open scientific and computational framework implementing the SDKP (Scale–Density–Kinetics–Position) principle, SD&N (Shape–Dimension & Number), EOS (Earth Orbital Synchronization), QCC0 (Quantum Computerization Consciousness), and related systems. The repository includes mathematical foundations, formal derivations, simulations, quantum-state models, symbolic compression methods, and verification artifacts. Authorship, provenance, and priority are anchored via DOI registration and Digital Crystal Protocol (DCP-12) timestamps.",
   "author": [
     {
       "@type": "Person",
-      "givenName": "Donald",
+      "givenName": "Donald Paul",
       "familyName": "Smith",
-      "additionalName": "Paul",
       "email": "dallasnamiyadaddy@gmail.com",
       "identifier": "https://github.com/FatherTimeSDKP",
       "affiliation": {
@@ -40,12 +39,12 @@
     "Digital Crystal Protocol",
     "Quantum Simulation",
     "Quantum Entanglement",
-    "AI Alignment",
     "Computational Physics",
+    "Time Modeling",
+    "AI Alignment",
     "Consciousness Modeling",
-    "3-6-9 Harmonic Systems",
     "Symbolic Compression",
-    "Time Modeling"
+    "3-6-9 Harmonic Systems"
   ],
   "programmingLanguage": [
     "Python",
