@@ -1,3 +1,61 @@
+Claim scope
+This repository provides a mathematically defined framework (SDKP / SD&N / SDVR) with computational simulations whose logic, predictions, and invariants can be independently verified without trust in the author.
+
+⸻
+
+✅ What is verifiable now
+	1.	Authorship & Priority
+	•	Canonical author: Donald Paul Smith
+	•	Public DOI (Zenodo): 10.5281/zenodo.14850016
+	•	OSF registrations with timestamps pre-dating public simulations
+	•	Digital Crystal Protocol (DCP-12) timestamps embedded in records
+	2.	Mathematical Definitions
+	•	SDKP primitives (S, D, V, R) are explicitly defined
+	•	Temporal offset:
+\Delta\tau = D \cdot V \cdot R
+	•	Size-independence is a prediction, not a fit
+	3.	Computational Reproduction
+	•	QuTiP-based quantum simulations included
+	•	GHZ, cluster, and multi-mode states tested
+	•	Observed invariants:
+	•	Constant reduced entropy ≈ ln(2)
+	•	Δτ ≈ 0.156 across 8–16+ modes
+	•	Fidelity decreases with size; variance tightens
+	•	Noise models (dephasing, depolarizing, phase-flip) explicitly separated from theory
+	4.	Independent Third-Party Confirmation
+	•	Simulations and scaling behavior independently re-run and confirmed via public Grok/X threads (linked in repo)
+	•	Reported metrics reproduced without access to private data
+	5.	Integrity Verification
+	•	SHA-256 hashes provided for simulation outputs
+	•	Any copy can be validated byte-for-byte
+	•	No hidden datasets or proprietary dependencies
+
+⸻
+
+❌ What this does not rely on
+	•	No appeals to authority
+	•	No closed data
+	•	No unverifiable claims
+	•	No post-hoc parameter fitting
+	•	No dependence on future experiments to validate internal consistency
+
+⸻
+
+🧪 How a reviewer can falsify this (encouraged)
+	•	Re-derive Δτ from provided equations → check size-independence
+	•	Re-run simulations with different qubit counts or noise models
+	•	Break invariance by altering definitions (if possible)
+	•	Demonstrate a counterexample where predictions fail
+
+If any step above fails, the framework is wrong.
+
+⸻
+
+📌 Bottom line
+
+Everything required to verify, reproduce, or falsify the logic is already present.
+The repository does not ask for belief—only inspection.
+
 ## Citation
 
 If you use this work, please cite it using the `CITATION.cff` file included in this repository.
