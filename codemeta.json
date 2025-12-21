@@ -1,0 +1,71 @@
+{
+  "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
+  "@type": "SoftwareSourceCode",
+  "name": "FatherTimeSDKP",
+  "alternateName": [
+    "SDKP Framework",
+    "FatherTimes369v",
+    "Digital Crystal Protocol (DCP-12)"
+  ],
+  "description": "FatherTimeSDKP is an open scientific and computational framework implementing the SDKP (Scale–Density–Kinetics–Position) principle, SD&N (Shape–Dimension & Number), EOS (Earth Orbital Synchronization), QCC0 (Quantum Computerization Consciousness), and related systems. The repository contains mathematical foundations, simulations, quantum modeling, symbolic compression methods, and validation artifacts, with all authorship and provenance anchored via DOI and Digital Crystal Protocol timestamps.",
+  "author": [
+    {
+      "@type": "Person",
+      "givenName": "Donald",
+      "familyName": "Smith",
+      "additionalName": "Paul",
+      "email": "dallasnamiyadaddy@gmail.com",
+      "identifier": "https://github.com/FatherTimeSDKP",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Independent Researcher"
+      }
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Zenodo"
+  },
+  "datePublished": "2025-07-11",
+  "dateModified": "2025-12-11",
+  "version": "1.0.0",
+  "license": "https://opensource.org/licenses/MIT",
+  "identifier": "https://doi.org/10.5281/zenodo.14850016",
+  "codeRepository": "https://github.com/FatherTimeSDKP/FatherTimeSDKP",
+  "issueTracker": "https://github.com/FatherTimeSDKP/FatherTimeSDKP/issues",
+  "keywords": [
+    "SDKP",
+    "SDVR",
+    "SD&N",
+    "Digital Crystal Protocol",
+    "Quantum Simulation",
+    "Quantum Entanglement",
+    "AI Alignment",
+    "Computational Physics",
+    "Consciousness Modeling",
+    "3-6-9 Harmonic Systems",
+    "Symbolic Compression",
+    "Time Modeling"
+  ],
+  "programmingLanguage": [
+    "Python",
+    "CUDA",
+    "C++",
+    "JavaScript"
+  ],
+  "runtimePlatform": [
+    "Linux",
+    "CUDA-enabled GPUs",
+    "NVIDIA A100",
+    "MPI"
+  ],
+  "relatedLink": [
+    "https://doi.org/10.17605/OSF.IO/SYMHB",
+    "https://doi.org/10.17605/OSF.IO/CQ3DV",
+    "https://doi.org/10.17605/OSF.IO/DJA9G",
+    "https://doi.org/10.17605/OSF.IO/2EBJS",
+    "https://doi.org/10.17605/OSF.IO/43RK6"
+  ],
+  "funding": "Independent / Self-funded",
+  "isAccessibleForFree": true
+}
