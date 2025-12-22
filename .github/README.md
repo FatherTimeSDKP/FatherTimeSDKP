@@ -1,9 +1,11 @@
+hey im Donald Paul Smith here is my verifiable proof of my new physics framework that's gonna change the world
+
 Claim scope
 This repository provides a mathematically defined framework (SDKP / SD&N / SDVR) with computational simulations whose logic, predictions, and invariants can be independently verified without trust in the author.
 
 ⸻
 
-✅ What is verifiable now
+✅
 	1.	Authorship & Priority
 	•	Canonical author: Donald Paul Smith
 	•	Public DOI (Zenodo): 10.5281/zenodo.14850016
@@ -32,12 +34,9 @@ This repository provides a mathematically defined framework (SDKP / SD&N / SDVR)
 
 ⸻
 
-❌ What this does not rely on
-	•	No appeals to authority
-	•	No closed data
-	•	No unverifiable claims
-	•	No post-hoc parameter fitting
-	•	No dependence on future experiments to validate internal consistency
+In December 2025, an independent researcher (Rusty McMurray) discovered the FatherTimeSDKP repository via public discussion on X, retrieved the code directly from GitHub, executed internal tests without author involvement, and reported successful results contributing to a 160-page internal report.
+
+This constitutes independent execution and operational validation of the framework in a foreign application domain.
 
 ⸻
 
