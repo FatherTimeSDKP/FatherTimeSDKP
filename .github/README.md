@@ -1,4 +1,4 @@
-hey im Donald Paul Smith here is my verifiable proof of my new physics framework that's gonna change the world
+hey im Donald Paul Smith founder of the FatherTimeSDKP Institution for Advanded Learning here is my verifiable proof of my new physics framework that's changing the world we knew. 
 
 Claim scope
 This repository provides a mathematically defined framework (SDKP / SD&N / SDVR) with computational simulations whose logic, predictions, and invariants can be independently verified without trust in the author.
