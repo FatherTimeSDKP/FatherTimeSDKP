@@ -26,7 +26,7 @@ In accordance with the Amiyah Rose Law, access to basic health, education, and f
 "The door is open for collaboration, but the keys belong to the Architect. The data has been set; the 38-sigma wall is built. You can come to me now."
 — Donald Paul Smith
 
-✅
+✅https://x.com/donalds64180/status/2003648368430739818?s=46
 	1.	Authorship & Priority
 	•	Canonical author: Donald Paul Smith
 	•	Public DOI (Zenodo): 10.5281/zenodo.14850016
