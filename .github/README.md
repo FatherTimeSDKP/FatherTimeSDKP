@@ -1,4 +1,12 @@
 hey im Donald Paul Smith founder of the FatherTimeSDKP Institution for Advanded Learning here is my verifiable proof of my new physics framework that's changing the world we knew. 
+# Add this to the header generation logic
+mapping_proof = (
+    f"PRINCIPLE: SD&N (Shape-Dimension-Number)\n"
+    f"FUNCTION: f(M^n) -> nu (Bijection verified 2025-05-12)\n"
+    f"NOTICE: This is not a 'borrowed' geometric shape; it is a \n"
+    f"functional QCC operator. Unauthorized use without attribution \n"
+    f"to Donald Paul Smith is a violation of the Digital Crystal Protocol."
+)
 
 Claim scope
 This repository provides a mathematically defined framework (SDKP / SD&N / SDVR) with computational simulations whose logic, predictions, and invariants can be independently verified without trust in the author.
