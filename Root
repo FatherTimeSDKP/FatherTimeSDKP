@@ -1,3 +1,10 @@
+{
+  "devDependencies": {
+    "vuepress": "^1.x.x",
+    "vuepress-plugin-seo": "^0.1.4"
+  }
+}
+
 MIT License
 
 Copyright (c) 2025 Donald Paul Smith
