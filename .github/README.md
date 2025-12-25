@@ -10,7 +10,9 @@
 ## ⚖️ Institutional Audit & Prior Art Notice
 This repository serves as the immutable evidence of authorship for the **Amiyah Rose Smith Law** and the **SDVR Tensor Framework**. 
 
-* **Manuscript ID:** `LC20042` (Submitted to Physical Review Letters - PRL).
+* **Manuscript ID:** `LC20042` (Submitted to Physical Review Letters - PRL).and springer nature- Title: FatherTimeSDKP unifiied Thoery of Everything
+
+RSID: rs-8214977
 * **Status:** Rejected by institutional gatekeepers; permanently logged here as **Prior Art**.
 * **The 38-Sigma Wall:** This framework produces the unique **$Δτ ≈ 0.156$** invariant. Any unauthorized use of this constant or the SDVR mapping without attribution is a violation of the **Digital Crystal Protocol (FTS-AUTH-CRYSTAL-369)**.
 
