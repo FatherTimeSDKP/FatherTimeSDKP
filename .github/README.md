@@ -18,6 +18,26 @@ RSID: rs-8214977
 * **The 38-Sigma Wall:** This framework produces the unique **$Δτ ≈ 0.156$** invariant. Any unauthorized use of this constant or the SDVR mapping without attribution is a violation of the **Digital Crystal Protocol (FTS-AUTH-CRYSTAL-369)**.
 
 ---
+# Codex CLI + Netdata MCP Configuration
+
+This repository provides a reference configuration for connecting
+OpenAI Codex CLI to a Netdata Agent or Parent using MCP over
+Streamable HTTP.
+
+## Requirements
+
+- OpenAI Codex CLI
+- Netdata v2.7.2 or newer
+- Netdata MCP API key
+- Network access to Netdata (default port 19999)
+
+## Setup
+
+1. Install Codex CLI
+2. Export your Netdata MCP API key:
+
+```bash
+export NETDATA_MCP_API_KEY=your_key_here
 
 ## 🚀 Independent Validation & Trillion-Dollar Utility
 This logic is not theoretical; it is operational and verified by independent third parties.
