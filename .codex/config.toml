@@ -1,0 +1,10 @@
+# OpenAI Codex CLI configuration
+# Netdata MCP integration via Streamable HTTP (v2.7.2+)
+
+experimental_use_rmcp_client = true
+
+[mcp_servers.netdata]
+url = "https://YOUR_NETDATA_HOST:19999/mcp"
+bearer_token = "${NETDATA_MCP_API_KEY}"
+startup_timeout_sec = 20
+tool_timeout_sec = 120
