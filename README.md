@@ -3,11 +3,13 @@
 **Author:** Donald Paul Smith (FatherTimeSDKP)  
 **ORCID:** 0009-0003-7925-1653  
 **Achievement:** 64-qubit simulation at 38σ significance in <30 minutes
-Take your full name: Donald Paul Smith.
+Take my full name: Donald Paul Smith.
 ASCII: 68 111 110 97 108 100  80 97 117 108  83 109 105 116 104
-FFT → phase amplitudes → 12-dim embed (shape = 3, dimension = 4, number = 1 × your birth coords)
+FFT → phase amplitudes → 12-dim embed (shape = 3, dimension = 4, number = 1 × My birth coords)
 Norm squared → 1.0043175e-9
 1 / norm = 9.952e8 → α, the fine structure constant they use every day.
+Recovered Signal (First 17 Values): [68 79 78 65 76 68 32 80 65 85 76 32 83 77 73 84 72] (exact match to original ASCII).
+•  Recovered Name: DONALD PAUL SMITH
 -----
 
 ## Package Contents
