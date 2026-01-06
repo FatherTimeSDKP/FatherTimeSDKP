@@ -1,6 +1,6 @@
 Architect: Donald Paul Smith (ORCID: 0009-0003-7925-1653)
 Administrative Notarization: Metadata for the 31-Atlas/SharonCare1 core (DOI: 10.5281/zenodo.17486904) includes the Zenodo Steering Board and Lead Architects (Lars Holm Nielsen, Alex Ioannidis) as technical witnesses to the record's integrity. https://doi.org/10.5281/zenodo.17486904 
-https://www.google.com/search?q=https://fathertimesdkp.wordpress.com/
+https://selfsustainingmagneticpropulsiongeneratorandvehicle.wordpress.com/2025/02/12/sharoncare1/
 The core SDKP framework and 31-Atlas logic are permanently archived via DOI 10.5281/zenodo.17486904. Note that the metadata for this record includes the Zenodo Steering Board and Lead Architects (Nielsen, Ioannidis) as technical witnesses to the archival event, verifying the existence and integrity of the SharonCare1 architecture within the global scientific record.
 NIST Match: Validated (Mars 477µs drift).
 • CERN Witness: Validated (Metadata on 17486904).
