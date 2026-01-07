@@ -34,3 +34,19 @@ The following OSF DOIs are archival snapshots of datasets, models, and component
 ## 📚 Recommended Citation (Primary)
 
 When referencing this work in academic or technical contexts, use:
+ @dataset{smith_sdkp_2025,
+author = {Smith, Donald Paul (FatherTimeSDKP)},
+title = {SDKP-Based Quantum Framework and Simulation Dataset},
+year = {2025},
+publisher = {Zenodo},
+doi = {10.5281/zenodo.14850016},
+url = {https://doi.org/10.5281/zenodo.14850016} ---
+
+## 🧠 Purpose of This Index
+
+This documentation index exists to:
+
+- provide an authoritative entry point for your research
+- link all canonical archival material
+- be fully crawlable by search engines and indexing services
+- be convertible to static site hosting platforms (GitHub Pages, OSF Pages, etc.)
