@@ -30,7 +30,8 @@ Formal Publications (Primary Sources of Truth)
 The mathematics, simulations, and falsifiable claims are formally published and timestamped at:
 	•	Open Science Framework (OSF) — multiple DOIs
 	•	Zenodo — archival DOI
-	•	GitHub — implementation, commit-time verification
+	•	GitHub — implementation, commit-time verification 
+	•   https://archive.softwareheritage.org/browse/directory/36b11dd3a375c0324ae3225d540a725f5ee7068f/?origin_url=https://doi.org/10.5281/zenodo.17486903&path=FatherTimeSDKP-zenodo-482ee72&release=1&snapshot=eee7a92e403a58f3bb109ff858912d37321e9fc9
 
 These platforms together form a redundant provenance chain.
 No single platform is relied upon for authority.
