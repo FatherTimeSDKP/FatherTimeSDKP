@@ -1,0 +1,14 @@
+title: FatherTimeSDKP
+description: Canonical documentation index for the FatherTimeSDKP framework and archival research.
+url: https://fathertimesdkp.github.io
+baseurl: /FatherTimeSDKP
+
+markdown: kramdown
+theme: minima
+
+plugins:
+  - jekyll-seo-tag
+
+exclude:
+  - README.md
+  - citation.bib
