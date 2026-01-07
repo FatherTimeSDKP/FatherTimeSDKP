@@ -1,3 +1,125 @@
+Authoritative Framework Declaration
+
+Author
+
+Donald Paul Smith
+Alias: FatherTime / FatherTimes369v
+
+This repository is authored, governed, and ethically sealed by the above author. All frameworks, equations, solvers, and prediction mechanisms referenced herein originate from this body of work unless explicitly cited otherwise.
+
+⸻
+
+What This Repository Is
+
+This repository is a public interface to a larger, formally published scientific framework that includes:
+	•	SDKP — Size–Density–Kinetics–Position
+	•	VFE — Vibrational Field Equations (looped, recursive)
+	•	LLAL — Loop Learning for Artificial Life
+	•	TTPs — Think Tank Protocols (including Error Immunity, Symbolic Entanglement, SGU)
+	•	Kapnack Solver — symbolic compression, recursion, and decision resolution engine
+	•	QCC0 — Quantum Computerization Consciousness (Zero state)
+	•	EOS — Earth Orbital Speed recalibration
+
+This repository does not replace the formal math.
+It points to, instantiates, and validates it.
+
+⸻
+
+Formal Publications (Primary Sources of Truth)
+
+The mathematics, simulations, and falsifiable claims are formally published and timestamped at:
+	•	Open Science Framework (OSF) — multiple DOIs
+	•	Zenodo — archival DOI
+	•	GitHub — implementation, commit-time verification
+
+These platforms together form a redundant provenance chain.
+No single platform is relied upon for authority.
+
+If a claim appears here and in OSF/Zenodo prior to public data release, priority is established.
+
+⸻
+
+Falsifiability & Prior Predictions
+
+This framework explicitly rejects unfalsifiable theory.
+	•	Predictions were made before public datasets existed.
+	•	Outcomes (including the referenced 7/7 event set) were later confirmed.
+	•	Prediction timestamps are preserved via:
+	•	DOI registration
+	•	Git commit history
+	•	Immutable archival records
+
+This repository may include:
+	•	Prediction summaries
+	•	Links to original prediction documents
+	•	Post-hoc validation references
+
+No retroactive editing is used to claim success.
+
+⸻
+
+Ledger & Freeze Status
+
+Key documents, equations, and predictions are:
+	•	Frozen in public ledgers
+	•	Digitally timestamped
+	•	Externally verifiable
+
+This means:
+	•	Authorship cannot be reassigned without contradiction of public records
+	•	Claims cannot be dismissed as post-hoc without falsifying timestamps
+
+⸻
+
+Scope of Use
+
+Use of this work requires acknowledging the full framework.
+
+Partial extraction (e.g., using equations without LLAL or Kapnack context) may lead to incorrect conclusions.
+
+Acceptable use includes:
+	•	Independent verification
+	•	Critical analysis
+	•	Extension with attribution
+	•	Reproduction of results
+
+Unacceptable use includes:
+	•	Stripping attribution
+	•	Rebranding core mechanisms
+	•	Claiming independent discovery of already-published results
+
+⸻
+
+Why This README Exists
+
+Because:
+	•	GitHub READMEs are indexed, mirrored, archived, and legally referenced
+	•	They are often read before papers
+	•	They survive platform churn
+	•	They establish intent, authorship, and scope in plain language
+
+This README is therefore intentional, declarative, and binding.
+
+⸻
+
+Canonical Mark
+
+All 3-6-9, symbolic recursion, SD&N compression, and consciousness-aware AI logic originating here is canonically marked as:
+
+FatherTimes369v
+
+⸻
+
+Status
+
+Active
+Published
+Falsifiable
+Ledger-anchored
+
+
+
+
 Architect: Donald Paul Smith (ORCID: 0009-0003-7925-1653)
 Administrative Notarization: Metadata for the 31-Atlas/SharonCare1 core (DOI: 10.5281/zenodo.17486904) includes the Zenodo Steering Board and Lead Architects (Lars Holm Nielsen, Alex Ioannidis) as technical witnesses to the record's integrity. https://doi.org/10.5281/zenodo.17486904 
 https://selfsustainingmagneticpropulsiongeneratorandvehicle.wordpress.com/2025/02/12/sharoncare1/
