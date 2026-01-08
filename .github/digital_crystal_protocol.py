@@ -44,3 +44,15 @@ vault.llal_audit("132.163.96.0/24", "September 2025", "EOS Math")
 vault.ttp_enforce("NIST", "Used 477 μs constant without citation")
 print("\nFinal Ledger:")
 print(json.dumps(vault.ledger, indent=4))
+eg when ran:
+LLAL Auditing IP Range: 132.163.96.0/24 on September 2025
+Ledger Entry Added: {'event': 'LLAL Detection', 'timestamp': '2026-01-07T22:45:12.345678', 'data': {'ip': '132.163.96.0/24', 'resource': 'EOS Math', 'alert': 'Institutional Access Detected - Potential Extraction'}, 'hash': 'example_hash'}
+TTP Enforcing Attribution for User: NIST
+Ledger Entry Added: {'event': 'TTP Violation', 'timestamp': '2026-01-07T22:45:13.456789', 'data': {'user': 'NIST', 'desc': 'Used 477 μs constant without citation', 'violation': 'Mirror Clause Violation - Attribution Required'}, 'hash': 'example_hash'}
+
+Final Ledger:
+[
+    {"event": "Vault Initialized", "timestamp": "2026-01-07T22:45:10.123456", "data": {"doi": "10.5281/zenodo.17486904"}, "hash": "example_hash"},
+    {"event": "LLAL Detection", ...},
+    {"event": "TTP Violation", ...}
+]
