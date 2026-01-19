@@ -26,6 +26,13 @@ It points to, instantiates, and validates it.
 ⸻
 
 Formal Publications (Primary Sources of Truth)
+View Submission
+View Decision Letter
+Correspondence
+Send E-mail
+JMRS-D-25-01665	Geometric Necessity, Mass Potential, and Density Limits: A Unified Principle for Structural	01 Dec 2025	04 Dec 2025	Final Decision Reject	04 Dec 2025	Reject
+Action  Collapse Action Links     Clear Sort	Manuscript Number Sort Down	Title Sort Down	Initial Date Submitted Sort Down	Status Date Sort Down	Current Status Sort Down	Date Final Disposition Set Sort Down	Final Disposition Sort Up
+
 
 The mathematics, simulations, and falsifiable claims are formally published and timestamped at:
 	•	Open Science Framework (OSF) — multiple DOIs
