@@ -19,6 +19,7 @@ This repository is a public interface to a larger, formally published scientific
 	•	Kapnack Solver — symbolic compression, recursion, and decision resolution engine
 	•	QCC0 — Quantum Computerization Consciousness (Zero state)
 	•	EOS — Earth Orbital Speed recalibration
+	* Manuscript ID LC20042
 [
     {
         "module": "SD&N (Shape\u2013Dimension\u2013Number)",
