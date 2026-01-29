@@ -8,7 +8,7 @@ Subject to the terms of this Agreement, Licensor hereby grants to Licensee a non
 
 ## 2. Royalties
 
-Licensee agrees to pay Licensor a royalty rate of **17.5%** of all gross revenue generated from products or services that incorporate or are derived from the Software, including but not limited to direct sales, licensing, subscriptions, and any form of commercialization.
+Licensee agrees to pay Licensor a royalty rate of **10.5%** of all gross revenue generated from products or services that incorporate or are derived from the Software, including but not limited to direct sales, licensing, subscriptions, and any form of commercialization.
 
 - Royalties are due quarterly, within 30 days of the close of each calendar quarter.
 - Licensee must provide a statement of gross revenue and calculation of royalty payments with each payment.
