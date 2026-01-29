@@ -1,4 +1,3 @@
-
 A Deterministic Computational Framework for Emergent Time, Mass, and Coherence via SDKP–EOS–SD&N Integration
 Donald Paul Smith (a.k.a. FatherTimeSDKP, FatherTimes369v)
 Independent Researcher
