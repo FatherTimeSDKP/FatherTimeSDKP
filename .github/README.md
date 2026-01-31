@@ -21,6 +21,7 @@ This repository is a public interface to a larger, formally published scientific
 	•	Kapnack Solver — symbolic compression, recursion, and decision resolution engine
 	•	QCC0 — Quantum Computerization Consciousness (Zero state)
 	•	EOS — Earth Orbital Speed recalibration
+	Zenodo DOI-https://zenodo.org/records/18432021
 	* Manuscript ID LC20042
 [
     {
