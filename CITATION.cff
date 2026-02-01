@@ -1,65 +1,30 @@
 cff-version: 1.2.0
-title: FatherTimeSDKP
-message: >
-  If you use this software, framework, or its mathematical models in academic
-  work, please cite it using the information below.
+title: "FatherTimeSDKP: The SDKP Unified Framework & VFE Tier 8"
+message: "If you use this framework, equations, or software, please cite it using the metadata below to maintain Error Immunity."
 type: software
-
 authors:
   - family-names: Smith
     given-names: Donald Paul
+    alias: FatherTimeSDKP
     email: dallasnamiyadaddy@gmail.com
-    affiliation: Independent Researcher
-    orcid: ""
-
+    affiliation: "Independent Researcher (SDKP-SD&N Frameworks)"
+    orcid: "https://orcid.org/0009-0003-7925-1653"
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.14850016
+    description: "SDKP-Based Quantum Framework and Simulation Dataset"
+  - type: url
+    value: "https://osf.io/63egd/"
+    description: "Digital Crystal Protocol FTS-AUTH-CRYSTAL-369"
 version: 1.0.0
 date-released: 2025-07-11
-
-license: MIT
-
-repository-code: https://github.com/FatherTimeSDKP/FatherTimeSDKP
-url: https://github.com/FatherTimeSDKP/FatherTimeSDKP
-
-doi: 10.5281/zenodo.14850016
-
+repository-code: "https://github.com/FatherTimeSDKP"
 keywords:
   - SDKP
-  - SD&N
-  - SDVR
-  - Digital Crystal Protocol
-  - Quantum Simulation
-  - Computational Physics
-  - Time Modeling
-  - Consciousness Modeling
-  - AI Alignment
-  - Symbolic Compression
-  - 3-6-9 Harmonic Systems
-
-references:
-  - @misc{Smith_FatherTimeSDKP_2026,
-  author       = {Smith, Donald Paul (FatherTimeSDKP)},
-  title        = {{VFE Tier 8: Harmonic Convergence of Velocity, Frequency, and Energy within the SDKP Unified Framework}},
-  month        = feb,
-  year         = 2026,
-  publisher    = {Zenodo / Digital Crystal Protocol},
-  version      = {v8.0.0-QCC},
-  doi          = {10.5281/zenodo.14850016},
-  url          = {https://orcid.org/0009-0003-7925-1653},
-  note         = {Authored under the FTS-AUTH-CRYSTAL-369 protocol for Error Immunity and SDKP-SD&N integration.}
-}
-
-  - type: article
-    title: SDKP-Based Quantum Framework and Simulation Dataset
-    doi: 10.17605/OSF.IO/SYMHB
-  - type: article
-    title: SDKP Usage (Quantum Entanglement Predictions)
-    doi: 10.17605/OSF.IO/CQ3DV
-  - type: article
-    title: Tesla’s 3-6-9 Logic Solved
-    doi: 10.17605/OSF.IO/DJA9G
-  - type: article
-    title: 1–12 Vortex
-    doi: 10.17605/OSF.IO/2EBJS
-  - type: article
-    title: Digital Crystal Rules
-    doi: 10.17605/OSF.IO/43RK6
+  - "Vibrational Field Equations (VFE)"
+  - "SD&N (Shape Dimension & Number)"
+  - "QCC0 Quantum Computerization Consciousness"
+  - "Error Immunity"
+  - "Digital Crystal Protocol"
+  - "EOS (Earth Orbital Speed)"
+license: MIT
