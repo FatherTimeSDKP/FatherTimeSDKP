@@ -36,7 +36,7 @@ keywords:
   - 3-6-9 Harmonic Systems
 
 references:
-  -@misc{Smith_FatherTimeSDKP_2026,
+  - @misc{Smith_FatherTimeSDKP_2026,
   author       = {Smith, Donald Paul (FatherTimeSDKP)},
   title        = {{VFE Tier 8: Harmonic Convergence of Velocity, Frequency, and Energy within the SDKP Unified Framework}},
   month        = feb,
