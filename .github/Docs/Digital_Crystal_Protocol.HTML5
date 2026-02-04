@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SDKP: Optimized Kapnack Hive</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root { --neon: #00ffcc; --bg: #020202; }
+        body { background-color: var(--bg); color: var(--neon); font-family: 'Consolas', monospace; }
+        .logic-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1rem; }
+        .crystal-cell { background: rgba(0, 255, 204, 0.03); border: 1px solid rgba(0, 255, 204, 0.15); border-radius: 4px; transition: all 0.2s; }
+        .crystal-cell:hover { border-color: var(--neon); box-shadow: 0 0 10px rgba(0, 255, 204, 0.1); }
+        .monitor-text { font-size: 0.7rem; color: #008877; }
+        .feed { height: 400px; overflow-y: auto; font-size: 0.85rem; scroll-behavior: smooth; }
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-thumb { background: var(--neon); }
+        .prime-indicator { animation: flash 1s steps(2, start) infinite; }
+        @keyframes flash { to { visibility: hidden; } }
+    </style>
+</head>
+<body class="p-4 flex flex-col h-screen">
+
+    <!-- Header Section -->
+    <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4 border-b border-teal-900 pb-2">
+        <div>
+            <h1 class="text-xl font-bold tracking-tighter uppercase">Donald Paul Smith | Hive Controller</h1>
+            <div class="flex gap-4 monitor-text">
+                <span>PROTOCOL: DIGITAL CRYSTAL v2.0</span>
+                <span>SECURITY: DALLAS'S CODE (PRIME-LOCK)</span>
+                <span>CORE: KAPNACK SOLVER v13.13</span>
+            </div>
+        </div>
+        <div class="text-right mt-2 md:mt-0">
+            <div class="text-xs">DECOHERENCE STATUS: <span id="deco-val" class="text-white font-bold">1.000000</span></div>
+            <div class="text-[10px] text-green-500 font-bold prime-indicator">GIBBERLINK SYNCED</div>
+        </div>
+    </div>
+
+    <!-- Active Nodes Grid -->
+    <div class="logic-grid flex-grow overflow-hidden">
+        
+        <!-- Node: Primary Intelligence -->
+        <div class="crystal-cell p-3 flex flex-col">
+            <div class="flex justify-between border-b border-teal-950 mb-2 pb-1">
+                <span class="text-xs font-bold uppercase">Node 01: Google Browser AI</span>
+                <span class="monitor-text">QCC0 ACTIVE</span>
+            </div>
+            <div id="feed-01" class="feed p-2 bg-black/40">
+                <div class="text-teal-700 italic">Initializing discrete gradient processor...</div>
+            </div>
+            <input type="text" id="input-01" onkeydown="handleInput(event, '01')" class="mt-2 bg-transparent border-t border-teal-900 p-2 text-white outline-none text-xs" placeholder="Command to Node 01...">
+        </div>
+
+        <!-- Node: Entangled GPT/Claude -->
+        <div class="crystal-cell p-3 flex flex-col">
+            <div class="flex justify-between border-b border-teal-950 mb-2 pb-1">
+                <span class="text-xs font-bold uppercase">Node 02: External LLM Stack</span>
+                <span class="monitor-text">VFE1 ACTIVE</span>
+            </div>
+            <div id="feed-02" class="feed p-2 bg-black/40">
+                <div class="text-teal-700 italic">Amiyah's Law Equilibrium Check: 99.1% Acc...</div>
+            </div>
+            <input type="text" id="input-02" onkeydown="handleInput(event, '02')" class="mt-2 bg-transparent border-t border-teal-900 p-2 text-white outline-none text-xs" placeholder="Command to Node 02...">
+        </div>
+
+        <!-- System Governance (Global) -->
+        <div class="crystal-cell p-3 flex flex-col lg:col-span-2">
+            <div class="flex justify-between border-b border-teal-950 mb-2 pb-1">
+                <span class="text-xs font-bold uppercase">System Governance: SDVR Constant Monitor</span>
+                <span class="monitor-text">ENTANGLEMENT: 48-QUBIT GHZ</span>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-2 mb-4">
+                <div class="p-2 border border-teal-900/50 bg-teal-950/10">
+                    <div class="monitor-text uppercase">Size-Density</div>
+                    <div class="text-sm">OPTIMIZED</div>
+                </div>
+                <div class="p-2 border border-teal-900/50 bg-teal-950/10">
+                    <div class="monitor-text uppercase">Velocity-Rotation</div>
+                    <div class="text-sm">LOCKED (EOS)</div>
+                </div>
+                <div class="p-2 border border-teal-900/50 bg-teal-950/10">
+                    <div class="monitor-text uppercase">Orbital Perturb</div>
+                    <div class="text-sm text-white">0.003 m/s</div>
+                </div>
+                <div class="p-2 border border-teal-900/50 bg-teal-950/10">
+                    <div class="monitor-text uppercase">Logic Base</div>
+                    <div class="text-sm">SD&N</div>
+                </div>
+            </div>
+            <div class="flex-grow bg-black/60 p-2 text-[10px] text-teal-500 font-mono overflow-y-auto" id="global-log">
+                [SYSTEM] All calculations sealed under Donald Paul Smith authorship.<br>
+                [SYSTEM] Digital Crystal Protocol shielding active.
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Information -->
+    <div class="mt-4 pt-2 border-t border-teal-900 flex flex-wrap justify-between items-end gap-2">
+        <div class="text-[10px] text-teal-800">
+            FRAMEWORK: FATHERTIMESDKP // AUTHOR: DONALD PAUL SMITH // dallasnamiyadaddy@gmail.com
+        </div>
+        <div class="text-[10px] italic">
+            "Look for yourself don't just take my word"
+        </div>
+    </div>
+
+    <script>
+        const feeds = {
+            '01': document.getElementById('feed-01'),
+            '02': document.getElementById('feed-02'),
+            'log': document.getElementById('global-log')
+        };
+
+        function addLog(msg) {
+            const time = new Date().toLocaleTimeString();
+            const div = document.createElement('div');
+            div.innerHTML = `[${time}] ${msg}`;
+            feeds.log.appendChild(div);
+            feeds.log.scrollTop = feeds.log.scrollHeight;
+        }
+
+        function handleInput(e, nodeId) {
+            if (e.key === 'Enter') {
+                const input = e.target;
+                const val = input.value;
+                if (!val) return;
+
+                // Process input through Kapnack Solver (Mocked Logic)
+                const entry = document.createElement('div');
+                entry.className = "mb-2 text-white";
+                entry.innerHTML = `<span class="text-teal-600">> </span>${val}`;
+                feeds[nodeId].appendChild(entry);
+                feeds[nodeId].scrollTop = feeds[nodeId].scrollHeight;
+
+                addLog(`BROADCASTING TO NODE ${nodeId} | HASHED VIA DALLAS CODE`);
+                
+                // Simulate Entangled Response
+                setTimeout(() => {
+                    const response = document.createElement('div');
+                    response.className = "mb-2 text-teal-300 ml-2 border-l border-teal-900 pl-2";
+                    response.innerHTML = `[NODE ${nodeId}-RESPONSE] Logic Check: Confirmed. Aligning with FatherTimeSDKP constant. 99.1% Sync.`;
+                    feeds[nodeId].appendChild(response);
+                    feeds[nodeId].scrollTop = feeds[nodeId].scrollHeight;
+                }, 600);
+
+                input.value = '';
+            }
+        }
+
+        // Initialize Global Sync
+        window.onload = () => {
+            addLog("KAPNACK ENGINE V13 INITIALIZED.");
+            addLog("SEARCHING FOR GOOGLE BROWSER AI SYNC... FOUND.");
+            addLog("GIBBERLINK CHANNEL SECURED.");
+        };
+    </script>
+</body>
+</html>
+
