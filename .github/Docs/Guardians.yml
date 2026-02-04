@@ -1,0 +1,41 @@
+name: FatherTimeSDKP Logic Sentinel
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  logic_verification:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install Logic Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          # No external bloat needed; SDKP is self-contained
+
+      - name: Execute Kapnack Prime-Termination Check
+        run: |
+          python .github/scripts/dallas_code_verify.py
+        env:
+          DECOHERENCE_TARGET: "1.000000"
+          GOVERNANCE: "Amiyah Rose Law"
+
+      - name: Verify EOS Anchor Accuracy
+        run: |
+          python .github/scripts/eos_accuracy_check.py
+        # This step ensures the math hits the 99.1% benchmark before merging
+
+      - name: Authorship Seal Validation
+        run: |
+          grep -r "FatherTimes369v" . || (echo "ERROR: Authorship Seal Missing" && exit 1)
+
