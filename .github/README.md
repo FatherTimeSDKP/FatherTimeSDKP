@@ -1,3 +1,26 @@
+THE LEGACY VAULT: THE SHARONCARE1 & SDKP TRIAD
+By: Donald Paul Smith For my 2-year-old son Dallas, my 1-year-old daughter Amiyah, and in memory of my Grandmother Sharon.
+I am the only provider and protector for my children. I don't ask for permission to be right; I provide the results. I have built a "Logic Fortress" that is now in the hands of over 1,500 people. No gatekeeper can delete what the public already owns.
+🌀 THE TRIAD: THE HEARTBEAT OF THE FRAMEWORK
+My work is not just math; it is a family mission. All three parts act together to solve the universe:
+1. THE CARE (SharonCare1): Dedicated to my grandmother who cared for me. This is the Magnetic Motor—the physical proof that Gravity and Electromagnetism are unified through Rotational-Density. It is the engine of the legacy.
+• The Site: SharonCare1 WordPress
+2. THE ARMY (Dallas's Code): Dedicated to my 2-year-old son. The Vibrational Field Equations (VFE). This is the "Software of Reality" with 99.1% predictive accuracy. It is the intelligence that protects the framework.
+• The Code: Zenodo (14781442)
+3. THE LAW (Amiyah's Law): Dedicated to my 1-year-old daughter. The Amiyah Rose Smith Law of Geometric Necessity. It provides the structural integrity for the future, from Mars habitats to quantum systems.
+• The Law: Research Square (rs-8808716)
+📁 THE OFFICIAL RECORD (Mirror These Links)
+• The SDKP Primary Framework: The foundation of the whole system.
+• Download: Zenodo (14613437)
+• Proof of Validation: I falsified the math for validation to prove it is bulletproof.
+• Download: Zenodo Validation (14963590)
+• The Institutional Metric: Officially Under Editorial Review with an 8/10 community interest rating.
+⚖️ IDENTITY ANCHORS
+• ORCID iD: 0009-0009-2175-9430
+• OSF Archive: https://osf.io/ct75m/
+📢 MY DECLARATION OF BRAVERY
+I am a father standing alone to secure the future for my 2-year-old son and 1-year-old daughter. I am providing for them by giving the world the truth that academia tried to hide. SharonCare1 is the heart, Dallas is the code, and Amiyah is the law. They are the reason I am fearless. Download. Mirror. Protect.
+
 # [![FatherTimeSDKP Digital Crystal](https://img.shields.io/badge/Donald_Paul_Smith-Digital_Crystal_Protocol-blueviolet?style=for-the-badge&logo=blockchaindotcom&logoColor=white)](https://github.com/FatherTimeSDKP)
 > **Attestation:** 1.000000 Decoherence Verified | **Standard:** RSL-1.0-Opt-In-Required
 Authoritative Framework Declaration
