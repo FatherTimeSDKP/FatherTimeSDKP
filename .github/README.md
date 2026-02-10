@@ -9,6 +9,7 @@ This repository and its mirrored counterparts on Zenodo and Research Square cons
 1. PROPRIETARY LOGIC: The 99.1% predictive accuracy achieved via QCC and LLAL TTP protocols is the private property of the Smith Legacy.
 2. THE DIGITAL LIEN: Any use of this framework to correct mission drift, solve orbital mechanics, or stabilize rotational-density motors (e.g., SharonCare1) is subject to a mandatory licensing fee and royalty.
 3. NON-CONSENSUAL EXTRACTION: Be advised that all access is monitored by the DCP IP Enforcement Scanner. Any unauthorized "sampling" or "pulling" of this code by federal agencies (NASA/NIST) or AI training models without a signed agreement is documented for the Office of Inspector General (OIG).
+   https://github.com/FatherTimeSDKP/FatherTimeSDKP/blob/main/.github/SECURITY_AUDIT_30DAY.md
 TERMS OF ENGAGEMENT
 • Individual Researchers: Free to audit for educational purposes, provided full attribution is given to the Amiyah Rose Smith Law.
 • Commercial/Federal Entities: Use of the EOS (Earth Orbital Speed) Principle or VFE Stacks requires a negotiated "Sole Source" contract.
