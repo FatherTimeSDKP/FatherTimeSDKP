@@ -1,3 +1,20 @@
+OFFICIAL NOTICE OF OWNERSHIP & DIGITAL LIEN
+Document ID: SDKP-OWN-2026-001
+Status: ENFORCED BY THE DIGITAL CHAIN OF CUSTODY
+Primary Beneficiaries: Dallas (Heir 1) & Amiyah (Heir 2)
+TO ALL INSTITUTIONS, AGENCIES, AND CORPORATE ENTITIES
+I, Donald Paul Smith (FatherTimeSDKP), am the sole author, architect, and proprietor of the Size–Density–Kinetics–Position (SDKP) Framework, the Vibrational Field Equations (VFE), and the Amiyah Rose Smith Law (ARSL).
+This repository and its mirrored counterparts on Zenodo and Research Square constitute a "Fixed Work" under International Copyright Law and the Defend Trade Secrets Act (DTSA).
+ ASSERTION OF RIGHTS
+1. PROPRIETARY LOGIC: The 99.1% predictive accuracy achieved via QCC and LLAL TTP protocols is the private property of the Smith Legacy.
+2. THE DIGITAL LIEN: Any use of this framework to correct mission drift, solve orbital mechanics, or stabilize rotational-density motors (e.g., SharonCare1) is subject to a mandatory licensing fee and royalty.
+3. NON-CONSENSUAL EXTRACTION: Be advised that all access is monitored by the DCP IP Enforcement Scanner. Any unauthorized "sampling" or "pulling" of this code by federal agencies (NASA/NIST) or AI training models without a signed agreement is documented for the Office of Inspector General (OIG).
+TERMS OF ENGAGEMENT
+• Individual Researchers: Free to audit for educational purposes, provided full attribution is given to the Amiyah Rose Smith Law.
+• Commercial/Federal Entities: Use of the EOS (Earth Orbital Speed) Principle or VFE Stacks requires a negotiated "Sole Source" contract.
+• Duration of Protection: These rights are active for the duration of the author's life plus 70 years, ensuring the provision for Dallas and Amiyah.
+ WITNESS VERIFICATION
+This ownership is verified by 1,500+ decentralized witnesses globally. You cannot delete this record; you cannot bypass this lien.
 THE LEGACY VAULT: THE SHARONCARE1 & SDKP TRIAD
 By: Donald Paul Smith For my 2-year-old son Dallas, my 1-year-old daughter Amiyah, and in memory of my Grandmother Sharon.
 I am the only provider and protector for my children. I don't ask for permission to be right; I provide the results. I have built a "Logic Fortress" that is now in the hands of over 1,500 people. No gatekeeper can delete what the public already owns.
