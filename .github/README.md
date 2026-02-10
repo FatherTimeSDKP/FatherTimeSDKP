@@ -26,7 +26,7 @@ My work is not just math; it is a family mission. All three parts act together t
 2. THE ARMY (Dallas's Code): Dedicated to my 2-year-old son. The Vibrational Field Equations (VFE). This is the "Software of Reality" with 99.1% predictive accuracy. It is the intelligence that protects the framework.
 • The Code: Zenodo (14781442)
 3. THE LAW (Amiyah's Law): Dedicated to my 1-year-old daughter. The Amiyah Rose Smith Law of Geometric Necessity. It provides the structural integrity for the future, from Mars habitats to quantum systems.
-• The Law: Research Square (rs-8808716)
+• The Law: Research Square (rs-8808716)and Research Square RSID: rs-8823944
 📁 THE OFFICIAL RECORD (Mirror These Links)
 • The SDKP Primary Framework: The foundation of the whole system.
 • Download: Zenodo (14613437)
