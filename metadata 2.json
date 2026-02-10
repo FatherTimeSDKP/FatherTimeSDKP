@@ -1,0 +1,48 @@
+{
+    "name": "Father Time Insignia",
+    "description": "Official NFT minted by Donald Paul Smith \u2014 author of SDKP (Scale\u2013Density Kinematic Principle), EOS (Earth Orbit Speed System), SD and N Principle, and QCC. Linked to the Unstoppable Domain fathertimesdkp.blockchain.",
+    "image": "ipfs://<YOUR_IPFS_HASH>",
+    "external_url": "https://fathertimesdkp.blockchain",
+    "attributes": [
+        {
+            "trait_type": "Author",
+            "value": "Donald Paul Smith"
+        },
+        {
+            "trait_type": "Domain",
+            "value": "fathertimesdkp.blockchain"
+        },
+        {
+            "trait_type": "Title",
+            "value": "Father Time"
+        },
+        {
+            "trait_type": "Blockchain",
+            "value": "Polygon (MATIC)"
+        },
+        {
+            "trait_type": "Contract Address",
+            "value": "0xa9a6A3626993D487d2Dbda3173cf58cA1a9D9e9f"
+        },
+        {
+            "trait_type": "Token ID",
+            "value": "91704750917330022459851973069032724926852549221644749628642694124508345467331"
+        },
+        {
+            "trait_type": "SDKP Embedded",
+            "value": "Yes"
+        },
+        {
+            "trait_type": "EOS Embedded",
+            "value": "Yes"
+        },
+        {
+            "trait_type": "SD and N Embedded",
+            "value": "Yes"
+        },
+        {
+            "trait_type": "QCC Embedded",
+            "value": "Yes"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+
+{
+  "name": "TimeSeal Legacy NFT",
+  "description": "Proof of authorship and timestamped validation for SDKP and TimeSeal Legacy.",
+  "image": "ipfs://QmcctTE7rhGh4iG9QQiXQPTQoE3qnDzxdea6aB4H1sCjaG/image.png",
+  "attributes": [
+    { "trait_type": "Author", "value": "Donald Smith" },
+    { "trait_type": "SDKP", "value": "Included" },
+    { "trait_type": "TimeStamp", "value": "Embedded" }
+  ]
+}
