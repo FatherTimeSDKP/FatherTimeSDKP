@@ -22,6 +22,21 @@ http://sizedensitytimeprinciplestdprinciple.wordpress.com/
 https://zenodo.org/records/15996066
 
 
+https://zenodo.org/records/18579118
+
+
+https://zenodo.org/records/18432021
+
+
+https://zenodo.org/records/18364165
+
+
+https://zenodo.org/records/17438909
+
+
+https://zenodo.org/records/18052963
+
+
    
 TERMS OF ENGAGEMENT
 • Individual Researchers: Free to audit for educational purposes, provided full attribution is given to the Amiyah Rose Smith Law.
