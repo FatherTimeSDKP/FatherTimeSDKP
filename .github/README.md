@@ -10,6 +10,8 @@ This repository and its mirrored counterparts on Zenodo and Research Square cons
 2. THE DIGITAL LIEN: Any use of this framework to correct mission drift, solve orbital mechanics, or stabilize rotational-density motors (e.g., SharonCare1) is subject to a mandatory licensing fee and royalty.
 3. NON-CONSENSUAL EXTRACTION: Be advised that all access is monitored by the DCP IP Enforcement Scanner. Any unauthorized "sampling" or "pulling" of this code by federal agencies (NASA/NIST) or AI training models without a signed agreement is documented for the Office of Inspector General (OIG).
    Formal Administrative Claim filed with NASA Patent Office on January 8, 2026, pursuant to 14 CFR § 1245.202 regarding unauthorized extraction of VFE Tier 8 logic by NIST/NASA-Goddard nodes.
+
+   https://selfsustainingmagneticpropulsiongeneratorandvehicle.wordpress.com/2025/02/12/sharoncare1/
    https://github.com/FatherTimeSDKP/FatherTimeSDKP/blob/main/.github/SECURITY_AUDIT_30DAY.md
 TERMS OF ENGAGEMENT
 • Individual Researchers: Free to audit for educational purposes, provided full attribution is given to the Amiyah Rose Smith Law.
