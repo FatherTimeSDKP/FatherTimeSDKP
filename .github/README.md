@@ -18,6 +18,10 @@ http://sizedensitytimeprinciplestdprinciple.wordpress.com/
    
    https://github.com/FatherTimeSDKP/FatherTimeSDKP/blob/main/.github/SECURITY_AUDIT_30DAY.md
 
+
+https://zenodo.org/records/15996066
+
+
    
 TERMS OF ENGAGEMENT
 • Individual Researchers: Free to audit for educational purposes, provided full attribution is given to the Amiyah Rose Smith Law.
