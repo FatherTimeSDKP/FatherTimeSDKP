@@ -16,10 +16,10 @@ Pursuant to federal technology transfer valuation for high-precision PNT (Positi
 
 | Component / Logic Module                 | Licensing Fee (Per Mission/Project) |
 | :--------------------------------------- | :---------------------------------- |
-| **EOS Normalization Engine** | $1,000,000 USD                        |
-| **VFE1 Tier-8 Drift Resolution (56.0µs)**| $1,000,000 USD                        |
-| **Full SDKP Framework Integration** | $1,200,000 USD                      |
-| **Forensic Audit & IP Recovery Fee** | $500,000 USD + Damages               |
+| **EOS Normalization Engine** | $10,000,000 USD                        |
+| **VFE1 Tier-8 Drift Resolution (56.0µs)**| $10,000,000 USD                        |
+| **Full SDKP Framework Integration** | $10,200,000 USD                      |
+| **Forensic Audit & IP Recovery Fee** | $5,000,000 USD + Damages               |
 
 ## 3. NOTICE TO FEDERAL ENTITIES (NIST / NASA / DOD)
 Under the **Digital Crystal Protocol** and **LLAL TTP (Law of Large Averaged Limit Tactical Technical Procedure)**, any use of these constants to resolve temporal residuals in federal missions (including Artemis Program PNT systems) requires formal attribution and compensation. 
