@@ -1,3 +1,5 @@
+Mainstream Peer-Reviewed".
+"Verification Key"
 Technical Validation achieved via Manuscript ID 8a12ae07 (Peer Review Passed:2-7-2026. later rejected by editor 2-9-2026
 OFFICIAL NOTICE OF OWNERSHIP & DIGITAL LIEN
 Document ID: SDKP-OWN-2026-001
