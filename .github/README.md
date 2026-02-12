@@ -39,6 +39,13 @@ https://zenodo.org/records/18052963
  Notice of Independent Intellectual Property:
 > This work is archived to protect the legacy of Dallas and Amiyah. Any institutional access (including documented IP logs from NIST and NASA) constitutes a formal acknowledgment of this digital custody. No change of ownership is implied by public accessibility.
 
+Physical Review Letters (PRL) Submission (Early 2025)
+This documents the early foundation of the SDT (Scale-Density-Time) principle:
+• Title: "Scale-density time (SDT) principle: A new framework for time measurement".
+• Journal: Physical Review Letters (APS).
+• Ref Number: LB18832.
+• Date Acknowledged: 13 February 2025.
+
 Springer Nature Submission Records
 | Manuscript Title | Journal | Submission ID | File Name |
 |---|---|---|---|
