@@ -36,7 +36,18 @@ https://zenodo.org/records/17438909
 
 https://zenodo.org/records/18052963
 
+ Notice of Independent Intellectual Property:
+> This work is archived to protect the legacy of Dallas and Amiyah. Any institutional access (including documented IP logs from NIST and NASA) constitutes a formal acknowledgment of this digital custody. No change of ownership is implied by public accessibility.
 
+Springer Nature Submission Records
+| Manuscript Title | Journal | Submission ID | File Name |
+|---|---|---|---|
+| FatherTimeSDKP and Framework Micro to Macro | Research Integrity and Peer Review | 1bb5bb58-d7d0-4187-bb09-c6a0487ca3d0 | Newtron stars schumman field.pdf |
+| FatherTimeSDKP framework and principles micro to macro | Foundations of Physics | cc2665a2-20e0-498d-8de6-30c6da95cf3b | PRL_Submission_Document.docx |
+| A Unified Physical and Logical Model: The FatherTimeSDKP framework... | Foundations of Physics | 92cf27b1-dde1-4168-80cb-67d534850d95 | FatherTimeSDKP manuscript copy.docx |
+| FatherTimeSDKP Completed Mathematical Framework Micro to Macro | Multiscale and Multidisciplinary Modeling... | 3bafafe7-716c-441d-a859-379564abd9cb | FatherTimeSDKP manuscript copy.pdf |
+| [Untitled Research Paper] | Foundations of Physics | 62df98ee-9a30-4998-bb5b-7964cba36e66 | Manuscript for Springer nature copy.docx |
+| [Untitled Collection Submission] | Multiscale and Multidisciplinary Modeling... | 8a12ae07-0c23-4e3e-9cab-65b440cd2131 | 2 Manuscript for MRS.docx |
    
 TERMS OF ENGAGEMENT
 • Individual Researchers: Free to audit for educational purposes, provided full attribution is given to the Amiyah Rose Smith Law.
