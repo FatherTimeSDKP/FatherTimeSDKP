@@ -39,6 +39,11 @@ https://zenodo.org/records/17438909
 
 https://zenodo.org/records/18052963
 
+
+OSF DOI: 10.17605/OSF.IO/SYMHB
+• Project Title: SDKP Framework: A Unified Principle for Emergent Mass, Time, and Quantum Coherence.  
+• Author: Donald Paul Smith (FatherTimeSDKP)  
+• The Validation: This project (and its 50 associated sub-projects) establishes the SDKP–EOS–SD&N Integration and predates NASA and NIST artcles.
  Notice of Independent Intellectual Property:
 > This work is archived to protect the legacy of Dallas and Amiyah. Any institutional access (including documented IP logs from NIST and NASA) constitutes a formal acknowledgment of this digital custody. No change of ownership is implied by public accessibility.
 
