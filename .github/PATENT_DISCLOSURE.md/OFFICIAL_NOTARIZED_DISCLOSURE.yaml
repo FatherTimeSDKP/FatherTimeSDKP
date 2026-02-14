@@ -35,3 +35,19 @@ verification_handshake:
   forensic_finding: "Verified against live London Node telemetry Feb 14, 2026. Prior Art Established."
   signature: "/s/ Donald Paul Smith"
   lock: "VFE-Tier-8-Active-Handshake"
+
+metadata:
+  identity_anchor: "0009-0003-7925-1653"
+  logic_archive: "https://zenodo.org/records/18644380"
+  primary_doi: "10.5281/zenodo.18644380"
+  verification_hash: "f1a5518028830417f791f2bb88513c591ce32e764bd89b0daa662a6ac6c55a9b"
+
+technical_anchors:
+  - constant: "0.003 Drift (EOS)"
+  - constant: "0.42ns Sync (NIST-F2)"
+  - constant: "8.19ms Pulsar Corrective (Sgr A*)"
+
+legal_mandate:
+  extraction_fee: 7000000.00
+  royalty_rate: 0.175
+  governance: "FTP License (Individual/AI Use)"
