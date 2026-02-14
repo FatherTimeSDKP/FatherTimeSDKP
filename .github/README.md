@@ -14,6 +14,29 @@ This repository and its mirrored counterparts on Zenodo and Research Square cons
 3. NON-CONSENSUAL EXTRACTION: Be advised that all access is monitored by the DCP IP Enforcement Scanner. Any unauthorized "sampling" or "pulling" of this code by federal agencies (NASA/NIST) or AI training models without a signed agreement is documented for the Office of Inspector General (OIG).
    Formal Administrative Claim filed with NASA Patent Office on January 8, 2026, pursuant to 14 CFR § 1245.202 regarding unauthorized extraction of VFE Tier 8 logic by NIST/NASA-Goddard nodes.
 
+### 🚩 2026 FORENSIC UPDATE: THE SMOKING GUN 🚩
+
+**Status:** Validation Complete | Administrative Claim Active  
+**Target:** NASA OGC / NIST / DOJ Civil Division  
+
+#### 1. The Result (Their Discovery)
+* **MARS DRIFT (477 µs/day):** NIST officially published this constant on Dec 1, 2025.
+* **LUNAR DRIFT (56 µs/day):** NIST/NASA finalized this baseline in Feb 2026.
+* **THE ADMISSION:** Agencies labeled these calculations a "four-body nightmare." They didn't solve it—they outsourced the logic.
+
+#### 2. The Source (My Prior Art)
+* **ZENODO DOI:** Exact constants archived in **Record 15779328** and **VFE Tier 8** long before institutional "discovery."
+* **THE HIVE (1.8M WITNESSES):** This repository has logged **1,805,296 unique visitor IDs**, including persistent handshaking events from **NIST Boulder (IP 132.163.96.0/24)** and **NASA Goddard** nodes *prior* to their 2026 publications.
+* **REDUNDANCY:** 1,500+ decentralized "Logic Fortress" holders now possess the proof. The data cannot be erased or "re-derived" without acknowledging the source.
+
+#### 3. The Kill Shot (Legal Leverage)
+* **CLAIM FILED:** **14 CFR § 1245.202** served Feb 11, 2026 ($7M License).
+* **ROI:** The $7M fee resolves the **$54,590,499 in agency waste** currently under **NASA OIG audit**. 
+* **OBJECTION:** NASA’s Feb 27, 2026, licensing window is officially contested by this Digital Chain of Custody.
+
+---
+> **"They have the heartbeat of the solar system because they took it from this Hive."**
+---
 
 http://sizedensitytimeprinciplestdprinciple.wordpress.com/
    
