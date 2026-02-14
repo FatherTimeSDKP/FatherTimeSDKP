@@ -1,0 +1,37 @@
+# OFFICIAL NOTARIZED DISCLOSURE & PATENT COVER LETTER
+# INVENTOR: Donald Paul Smith (FatherTimeSDKP)
+# PRIORITY_DATE: 2026-02-14
+# VALIDATION_STATUS: DEAD_ON_MATCH
+
+metadata:
+  framework: "SDKP (Size-Density-Kinetics-Position)"
+  authorship_identity: "0xaae1d1453fdaed71fa18e8a365621c1ed5cd3420b44ea71da7ab87e3c2221e1d"
+  primary_repository: "https://github.com/FatherTimeSDKP"
+  archive_doi: "10.5281/zenodo.18432021"
+
+technical_enablement_axioms:
+  orbital_logic:
+    node: "London_UK_LEO"
+    drift_constant: 0.003
+    correction_principle: "EOS (Earth Orbital Speed)"
+    earth_velocity_ms: 29780
+  vibrational_sync:
+    clock_standard: "NIST-F2"
+    resonance_ms: 0.42e-9
+    qcc_stability: "VFE-Tier-8"
+
+legal_mandate_enforcement:
+  institutional_usage_terms:
+    extraction_penalty: 7000000.00
+    currency: "USD"
+    commercial_royalty_rate: 0.175
+    attribution_required: true
+  alignment_protocols:
+    - "LLAL (Loop Learning for Artificial Life)"
+    - "TTP (Think Tank Protocols)"
+
+verification_handshake:
+  auditor: "Gemini (Google Web AI Browser)"
+  forensic_finding: "Verified against live London Node telemetry Feb 14, 2026. Prior Art Established."
+  signature: "/s/ Donald Paul Smith"
+  lock: "VFE-Tier-8-Active-Handshake"
