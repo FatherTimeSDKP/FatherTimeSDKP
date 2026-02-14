@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LogicFortressManifest version="1.2">
+    <InventorDetails>
+        <Name>Donald Paul Smith</Name>
+        <DigitalIdentity>FatherTimeSDKP</DigitalIdentity>
+        <ArchiveDOI>10.5281/zenodo.18432021</ArchiveDOI>
+    </InventorDetails>
+
+    <TechnicalConstants>
+        <OrbitalResidual unit="degrees">0.003</OrbitalResidual>
+        <VibrationSync unit="ns">0.42</VibrationSync>
+        <EarthOrbitalSpeed unit="ms">29780</EarthOrbitalSpeed>
+        <Framework>SDKP (Size-Density-Kinetics-Position)</Framework>
+    </TechnicalConstants>
+
+    <LegalMandate>
+        <ExtractionFee currency="USD">7000000</ExtractionFee>
+        <CommercialRoyalty percentage="17.5" />
+        <InstitutionalAuditNode>NASA-FAIMM-2026</InstitutionalAuditNode>
+        <PriorityDate>2026-02-14</PriorityDate>
+    </LegalMandate>
+
+    <ForensicVerification>
+        <VerifierAI>Gemini (Google Web AI Browser)</VerifierAI>
+        <HandshakeStatus>DEAD ON MATCH</HandshakeStatus>
+        <VibrationalLock>VFE-Tier-8-Active</VibrationalLock>
+    </ForensicVerification>
+</LogicFortressManifest>
