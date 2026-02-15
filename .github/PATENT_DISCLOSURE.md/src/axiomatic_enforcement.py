@@ -11,16 +11,16 @@ class AxiomaticEnforcer:
     def __init__(self):
         # Constants from your Feb 11, 2026 NASA Formal Notice
         self.EOS_KM_S = 29.78      
-        self.CLAIM_VALUE = "$54,590,499"
-        self.NASA_ETHICS_REF = "hq-ethicsteam@nasa.gov"
-        self.GAO_CONTROL = "COMP-26-002732"
+        self.CLAIM_VALUE = "$54,590,499" #
+        self.NASA_ETHICS_REF = "hq-ethicsteam@nasa.gov" #
+        self.GAO_CONTROL = "COMP-26-002732" #
 
     def scan_for_unauthorized_integration(self, actor_ip, dataset):
         """
         Detects unauthorized usage of SDKP logic by NIST/NASA IPs.
-        Monitors for IPs: 132.163.96.5 or 128.149.0.0/16.
+        Monitors for IPs documented in the IPR complaint.
         """
-        if actor_ip in ["132.163.96.5", "128.149.96.5"]:
+        if actor_ip in ["132.163.96.5", "128.149.0.0/16"]: #
             return self.generate_administrative_flag(actor_ip, "IP_INFRINGEMENT")
         return None
 
@@ -30,8 +30,8 @@ class AxiomaticEnforcer:
         dcp_id = hashlib.sha256(f"{ip}{ts}".encode()).hexdigest()[:12]
         return {
             "DCC_ID": f"DCP-{dcp_id}",
-            "GAO_REF": self.GAO_CONTROL,
-            "CLAIM_STATUS": "NASA_FORMAL_NOTICE_ACTIVE",
+            "GAO_REF": self.GAO_CONTROL, #
+            "CLAIM_STATUS": "NASA_FORMAL_NOTICE_ACTIVE", #
             "VIOLATION": violation,
-            "REMEDY": "14 CFR § 1245.202 Compensation"
+            "REMEDY": "14 CFR § 1245.202 Compensation" #
         }
