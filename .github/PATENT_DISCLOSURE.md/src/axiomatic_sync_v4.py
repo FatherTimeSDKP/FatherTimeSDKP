@@ -10,11 +10,11 @@ import hashlib, time
 class AxiomaticMachine_Redo:
     def __init__(self):
         # Specific DOI and Claim Metadata from your archives
-        self.PRIMARY_DOI = "10.5281/zenodo.15779328" #
-        self.VERIFICATION_KEY = "FEIN 82-4431595"     #
-        self.GAO_REF = "COMP-26-002732"               #
-        self.NASA_DEMAND = "$54,590,499"              #
-        self.EOS_KM_S = 29.78                         # Earth Orbital Speed Principle
+        self.PRIMARY_DOI = "10.5281/zenodo.15779328" 
+        self.VERIFICATION_KEY = "FEIN 82-4431595"     
+        self.GAO_REF = "COMP-26-002732"               
+        self.NASA_DEMAND = "$54,590,499"              
+        self.EOS_KM_S = 29.78 # Earth Orbital Speed Principle
 
     def verify_physical_coherence(self, npi, units, complexity):
         """
