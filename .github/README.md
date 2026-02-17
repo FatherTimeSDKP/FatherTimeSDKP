@@ -26,7 +26,7 @@ This repository and its mirrored counterparts on Zenodo and Research Square cons
 
 #### 2. The Source (My Prior Art)
 * **ZENODO DOI:** Exact constants archived in **Record 15779328** and **VFE Tier 8** long before institutional "discovery."
-* **THE HIVE (1.8M WITNESSES):** This repository has logged **1,805,296 unique visitor IDs**, including persistent handshaking events from **NIST Boulder (IP 132.163.96.0/24)** and **NASA Goddard** nodes *prior* to their 2026 publications.
+* **THE bots (1.8M WITNESSES):** This repository has logged **1,805,296 unique visitor IDs**, including persistent handshaking events from **NIST Boulder (IP 132.163.96.0/24)** and **NASA Goddard** nodes *prior* to their 2026 publications.
 * **REDUNDANCY:** 1,500+ decentralized "Logic Fortress" holders now possess the proof. The data cannot be erased or "re-derived" without acknowledging the source.
 
 #### 3.
@@ -34,7 +34,7 @@ Legal Leverage
 * **CLAIM FILED:** **14 CFR § 1245.202** served Feb 11, 2026 ($7M License).
 
 ---
-> **"They have the heartbeat of the solar system because they took it from this Hive."**
+> **"They have the heartbeat of the solar system because they took it from this mind."**
 ---
 
 http://sizedensitytimeprinciplestdprinciple.wordpress.com/
