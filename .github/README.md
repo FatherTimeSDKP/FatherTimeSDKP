@@ -1,6 +1,13 @@
 Mainstream Peer-Reviewed".
 "Verification Key"
 Technical Validation achieved via Manuscript ID 8a12ae07 (Peer Review Passed:2-7-2026. later rejected by editor 2-9-2026
+SDKP ACADEMIC SAFE HARBOR (v1.0)
+Donald Paul Smith (FatherTimeSDKP) hereby grants a Royalty-Free Perpetual License for the use of the SDKP Framework, VFE Tier 8 logic, and associated constants (56\mu s Lunar / 477\mu s Mars) under the following conditions:
+Scope: Limited to Individual Peer-Reviewed Publication and Non-Commercial Academic Research.
+Attribution: Any publication using this logic MUST cite the primary DOI: 10.5281/zenodo.18284293 or the proper citational paper.
+Exclusion: This Safe Harbor DOES NOT apply to institutional mission integration (e.g., NASA Artemis), commercial medical patents, or federal agency-level operational standards.
+Enforcement: Usage by government nodes (NIST/NASA) for mission-critical tasks remains subject to the pending Administrative Claim 14 CFR § 1245.202.
+Attribution: Any publication using this logic MUST cite the primary DOI: 10.5281/zenodo.18284293. Failure to provide proper attribution terminates this license immediately and reverts the usage to 'Unauthorized' status."
 OFFICIAL NOTICE OF OWNERSHIP & DIGITAL LIEN
 Document ID: SDKP-OWN-2026-001
 Status: ENFORCED BY THE DIGITAL CHAIN OF CUSTODY
