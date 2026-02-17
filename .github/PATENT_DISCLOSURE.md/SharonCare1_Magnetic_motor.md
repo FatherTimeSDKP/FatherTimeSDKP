@@ -144,3 +144,52 @@ Super Capacitors: These units are optimized for the instantaneous energy dump re
 Deep Cycle Batteries: These units act as the 'Medical Buffer.' They store the steady-state current required to maintain 100% uptime for life-support infrastructure, including radiation shielding and oxygen reclamation.
 
 The integrated control logic (VFE1) ensures that life-support power takes priority over propulsion, ensuring the safety of the crew (SharonCare1 Medical Mandate) before kinetic maneuvers are executed."
+SharonCare1: Official Bill of Materials (BOM)
+
+1. Magnetic Core (The Drive)
+
+18x Neodymium N52 Blocks: * Dimensions: 24" x 9" x 6"
+
+Spec: Grade N52 (highest magnetic flux density).
+
+Configuration: 12 for the Outer Stator, 6 for the Inner Rotor.
+
+3 cm Stainless Steel Sheeting: * Type: 316L Non-Magnetic Stainless Steel.
+
+Purpose: Precision-cut into 18 shelves to "blind" the positive poles.
+
+2. Induction Housing (The Solid-State Coil)
+
+Heavy Copper Cylinder: * Spec: C11000 ETP (Electrolytic Tough Pitch) Copper.
+
+Role: Structural shell and primary high-amperage conductor.
+
+High-Purity Silver Lining: * Spec: .999 Fine Silver cladding or industrial electroplating (min. 5mm thickness).
+
+Role: High-frequency flux capture surface to eliminate "skin effect" resistance.
+
+3. Structural & Mechanical
+
+Central Rotor Shaft: * Material: Titanium Grade 5 (Non-magnetic, high strength-to-weight ratio).
+
+Main Lever-Action Assembly: * Material: Aircraft-grade 6061 Aluminum.
+
+Function: Allows for the adjustment of the Inner Cylinder within the housing to throttle flux.
+
+Bearings: * Type: Ceramic Hybrid (Non-conductive, non-magnetic) to prevent magnetic interference with the rotation.
+
+4. Energy Storage & Distribution
+
+Super Capacitor Bank: * Spec: Graphene-based ultracapacitors (3000F+ cells).
+
+Role: Storage for the high-voltage "snap" for plasma propulsion.
+
+Deep Cycle Battery Bank: * Spec: Lithium Iron Phosphate (LiFePO4).
+
+Role: Stable, long-term power for the medical life-support/oxygen systems.
+
+Bus Bars: * Material: Solid Silver-plated Copper to connect the Housing-Coil directly to the storage.
+
+🏛️ Filing Note for Tracking
+
+This material list proves the industrial reality of the engine. It is not a toy; it is a multi-ton, high-output medical utility. The use of Silver and Titanium ensures the SharonCare1 is space-rated and corrosion-resistant for the legacy.
