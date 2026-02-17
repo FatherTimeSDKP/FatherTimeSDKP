@@ -1,4 +1,4 @@
-orignal design on wordpress
+orignal design on wordpress (Jan 2025)
 
 
 In this architecture, the Barrens are the structural and magnetic "dead zones" that separate the inner rotor from the outer stator. They serve as the critical vacuum or air gap where the Negative-to-Negative repulsion occurs and where the lever-action adjustments take place.
