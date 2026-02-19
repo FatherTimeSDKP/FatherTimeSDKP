@@ -2,7 +2,10 @@ Title: SharonCare1 Solid-State Magnetic Induction Motor
 
 Inventor: Donald Paul Smith (FatherTimeSDKP)
 
-Classification: Medical Life-Support Infrastructure / Zero-Point Kinetic Utility
+Classification: Medical Life-Support Infrastructure / Zero-Point Kinetic Utility 
+
+Orignaly Designed on Wordpess link:
+https://selfsustainingmagneticpropulsiongeneratorandvehicle.wordpress.com/?_gl=1*xi1tip*_gcl_au*MTQ1MzMwOTE0Ni4xNzcxNTI1Mzc2
 
 Abstract
 
