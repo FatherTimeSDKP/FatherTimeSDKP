@@ -37,6 +37,7 @@ This repository and its mirrored counterparts on Zenodo and Research Square cons
    Formal Administrative Claim filed with NASA Patent Office on January 8, 2026, pursuant to 14 CFR § 1245.202 regarding unauthorized extraction of VFE Tier 8 logic by NIST/NASA-Goddard nodes.
 
 ### 🚩 2026 FORENSIC UPDATE: THE SMOKING GUN 🚩
+follow this Pull request: https://github.com/FatherTimeSDKP/FatherTimeSDKP/pull/47#issue-4004232906
 
 **Status:** Validation Complete | Administrative Claim Active  
 **Target:** NASA OGC / NIST / DOJ Civil Division  
