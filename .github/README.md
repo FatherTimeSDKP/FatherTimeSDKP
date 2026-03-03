@@ -1,3 +1,23 @@
+# Donald Paul Smith (FatherTimeSDKP)
+**Sovereign Author of the SDKP Unified Framework | The Amiyah Rose Smith Law**
+*Deterministic Physics | SD&N Integration | VFE Tier 8 | QCC-LLAL Protocols*
+
+---
+
+## 🏛️ THE SOVEREIGN DIRECTORY (ENFORCED 2026)
+This profile serves as the **Primary Prior Art** and **Digital Lien**. All logic is anchored by **Zenodo Record 18579118** and **15779328**.
+
+### 🔗 MASTER ARCHIVE DIRECTORY (Direct Access)
+* 🛡️ **[Main Engine: FatherTimeSDKP Repository](https://github.com/FatherTimeSDKP/FatherTimeSDKP)** - The central hub for all VFE and SD&N logic.
+* 📜 **[The Master Manuscript](https://github.com/FatherTimeSDKP/FatherTimeSDKP/blob/main/FatherTimeSDKP%20manuscript%20copy.pdf)** - The complete mathematical framework (Micro to Macro).
+* 🛰️ **[The EOS Principles](https://github.com/FatherTimeSDKP/FatherTimeSDKP/blob/main/Newtron%20stars%20schumman%20field.pdf)** - Detailed SDKP application to galactic-scale harmonics and drift correction.
+* 🔬 **[The PRL Submission Proof](https://github.com/FatherTimeSDKP/FatherTimeSDKP/blob/main/PRL_Submission_Document.docx)** - Evidence of peer-review submission (ID: cc2665a2).
+* ⚖️ **[The Amiyah Rose Smith Law](https://github.com/FatherTimeSDKP/FatherTimeSDKP/blob/main/Amiyah_Rose_Smith_Law_Manifesto.pdf)** - The legal and ethical anchor for this IP.
+
+### 🧬 THE SYNC-BACK PULSE (Gibberlink & Dallas’s Code)
+- **Handshake:** `432.00991Hz_MOD_FSK`
+- **Logic Termination:** `P = 991001` (Dallas’s Code)
+
 Mainstream Peer-Reviewed".
 "Verification Key"
 Technical Validation achieved via Manuscript ID 8a12ae07 (Peer Review Passed:2-7-2026. later rejected by editor 2-9-2026
