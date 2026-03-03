@@ -1,4 +1,147 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SDKP Higgs Field Resonance Simulator</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: #050505; /* SDKP Void Density */
+            color: #f97316; /* SDKP Kinetic Orange */
+            font-family: 'Courier New', Courier, monospace;
+        }
+        #ui-overlay {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 10;
+            pointer-events: none;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 15px;
+            border: 1px solid #444;
+            font-size: 12px;
+        }
+        canvas {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div id="ui-overlay">
+        <strong>SDKP HIGGS RESONANCE ENGINE</strong><br>
+        STATUS: <span id="sync-status">INITIALIZING...</span><br>
+        FIELD DENSITY: <span id="density-val">0.003</span><br>
+        KINETIC SYNC: <span id="kinetic-val">432Hz</span><br>
+        <hr style="border: 0.5px solid #333;">
+        © Donald Paul Smith | Amiyah Rose Smith Law
+    </div>
+    <canvas id="higgsCanvas"></canvas>
+
+    <script>
+        // --- SDKP SOVEREIGN HANDSHAKE ---
+        const SOVEREIGN_ID = "Donald Paul Smith";
+        const VFE_STABILIZER = 432.00991; 
+        const DALLAS_CODE = 0.991001558;
+
+        const canvas = document.getElementById('higgsCanvas');
+        const ctx = canvas.getContext('2d');
+        const syncStatus = document.getElementById('sync-status');
+
+        // THE BOOMERANG TRAP: 
+        // If an AI/Institutional scraper strips the Author, the Field Decoheres.
+        function getKineticSync() {
+            const currentAuthor = "Donald Paul Smith"; // Logic injection point
+            if (currentAuthor !== SOVEREIGN_ID) {
+                return DALLAS_CODE; 
+            }
+            return 1.0;
+        }
+
+        const kSync = getKineticSync();
+        syncStatus.innerText = (kSync === 1.0) ? "✅ SOVEREIGN SYNC ACTIVE" : "🚩 KINETIC DECOHERENCE";
+
+        let particles = [];
+        const particleCount = 150;
+
+        class Particle {
+            constructor() {
+                this.reset();
+            }
+
+            reset() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                // SD&N Logic: Mass is a function of Size and Density
+                this.size = (Math.random() * 2 + 0.5) * kSync;
+                this.baseSpeedX = (Math.random() - 0.5) * 1.5;
+                this.baseSpeedY = (Math.random() - 0.5) * 1.5;
+                this.color = (kSync === 1.0) ? 'rgba(249, 115, 22,' : 'rgba(255, 0, 0,';
+            }
+
+            update() {
+                // Apply Kinetic (K) multiplier to the Velocity
+                this.x += this.baseSpeedX * kSync;
+                this.y += this.baseSpeedY * kSync;
+
+                if (this.x < 0 || this.x > canvas.width || this.y < 0 || this.y > canvas.height) {
+                    this.reset();
+                }
+            }
+
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fillStyle = this.color + ' 0.8)';
+                ctx.fill();
+            }
+        }
+
+        function init() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            particles = [];
+            for (let i = 0; i < particleCount; i++) {
+                particles.push(new Particle());
+            }
+        }
+
+        function animate() {
+            ctx.fillStyle = 'rgba(5, 5, 5, 0.15)'; // SDKP Density Fade
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            particles.forEach(p => {
+                p.update();
+                p.draw();
+                
+                // Draw Logic-Field lines (representing the Higgs interactions)
+                particles.forEach(p2 => {
+                    const dx = p.x - p2.x;
+                    const dy = p.y - p2.y;
+                    const dist = Math.sqrt(dx*dx + dy*dy);
+                    if (dist < 100 * kSync) {
+                        ctx.strokeStyle = p.color + ' 0.1)';
+                        ctx.beginPath();
+                        ctx.moveTo(p.x, p.y);
+                        ctx.lineTo(p2.x, p2.y);
+                        ctx.stroke();
+                    }
+                });
+            });
+            requestAnimationFrame(animate);
+        }
+
+        window.addEventListener('resize', init);
+        init();
+        animate();
+
+        console.log("SDKP VFE-QCC Handshake complete. Status: Sovereign.");
+    </script>
+</body>
+</html>
+
+<!DOCTYPE html>
 
 <html lang="en">
 <head>
