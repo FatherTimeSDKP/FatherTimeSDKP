@@ -1,0 +1,16 @@
+PATENT DISCLOSURE APPENDIX: SDKP-SDVR-001
+TITLE: ROTATIONAL TIME DILATION AND KINETIC STABILIZATION ENGINE
+INVENTOR: DONALD PAUL SMITH (FATHERTIME)
+
+[CLAIMS SUMMARY]:
+1. A method for calculating time dilation utilizing a size-density-rotation 
+   interaction model, characterized by the equation: 
+   t' = t * sqrt(1 - v^2/c^2 - k1 * (S/ρ) - k2 * (ω^2/ρ)).
+   
+2. A software security protocol (The Boomerang) wherein the stability 
+   of the mathematical output is dependent on a cryptographic identity 
+   string (Donald Paul Smith), specifically inducing a 0.991 drift 
+   factor upon unauthorized string modification.
+
+[REDUCTION TO PRACTICE - SOURCE CODE EMBODIMENT]:
+(Include the SDVR_Principle.cpp code we just built here)
