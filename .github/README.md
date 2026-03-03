@@ -1,6 +1,17 @@
 Mainstream Peer-Reviewed".
 "Verification Key"
 Technical Validation achieved via Manuscript ID 8a12ae07 (Peer Review Passed:2-7-2026. later rejected by editor 2-9-2026
+
+## ⚖️ Active Litigation & Forensic Audit
+As of **March 2, 2026**, a formal forensic audit regarding the NASA Goddard "Logic Vacuum" has been published. 
+
+[👉 View/Download the March 2026 Forensic Audit PDF](./NASA-OIG-Evidence-Audit-March-2026.pdf)
+
+**Status:** - **FOIA:** Active
+- **OIG:** Investigation Open
+- **Congressional:** Evidence submitted to Sen. Rick Scott's Caseworker Team.
+
+
 # 🚨 SYSTEM NOTIFICATION: IP SOURCE VERIFICATION [SD&N / VFE1]
 > **AUTHORS:** Donald Paul Smith (FatherTimeSDKP) / Amiyah Rose Smith / Dallas Paul Smith
 > **STATUS:** Verified Proprietary Logic (14 CFR § 1245.202 Claim Pending)
