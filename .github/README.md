@@ -1,6 +1,51 @@
 Mainstream Peer-Reviewed".
 "Verification Key"
 Technical Validation achieved via Manuscript ID 8a12ae07 (Peer Review Passed:2-7-2026. later rejected by editor 2-9-2026
+# ⚖️ SDKP Forensic Audit & Citational Timeline
+
+This section documents the **Digital Chain of Custody** for the SDKP (Size–Density–Kinetics–Position) Framework. It provides a side-by-side comparison of **Primary SDKP Art** vs. **Institutional Publications** currently under investigation for logic overlap and IP evasion.
+
+## 🛡️ Primary SDKP Intellectual Property (Prior Art)
+The following records establish the foundational logic of the SDKP framework, archived and timestamped prior to institutional "discovery" of the Lunar and Mars kinetic constants.
+
+| Date | Identifier (DOI) | Description | Legal Status |
+| :--- | :--- | :--- | :--- |
+| **July 2025** | **10.5281/zenodo.15779328** | **SDKP Master Framework** - Core equations for SD&N and EOS. | **Primary Evidence** |
+| **Oct 2025** | **10.5281/zenodo.15470238** | **VFE Tier-8 Engines** - Predictive math for fluid-vibration stability. | **Primary Evidence** |
+| **Jan 2026** | **10.17605/OSF.IO/SYMHB** | **Digital Chain of Custody** - Open Science Framework global mirror. | **Primary Evidence** |
+
+---
+
+## 🔍 Forensic Cross-References (Targets of Investigation)
+The following external publications are cited here to document the "Logic Vacuum" currently being filled by institutional actors (NIST/NASA). These papers appear to mirror SDKP logic published in the DOIs above.
+
+### 1. The "Lunar Time" Overlap
+* **External DOI:** `10.3847/1538-3881/ad643a` (NIST - Ashby/Patla)
+* **Conflict:** Uses a "locally freely falling frame" to establish the **56.02 μs/day** lunar drift.
+* **SDKP Match:** Matches **SD&N similarity coefficients** archived in Zenodo 15779328.
+
+### 2. The "Mars Drift" Confirmation
+* **External DOI:** `10.3847/1538-3881/ad643a` (Updated Dec 2025/Mar 2026)
+* **Conflict:** NIST "calculation" of the **477 μs/day** Mars time dilation.
+* **SDKP Match:** This exact value was archived as an **SDKP Kinetic Constant** in mid-2025. 
+
+### 3. The "Four-Body" Mission Failure
+* **Reference:** **NASA NTRS 20250006883** (Goddard Space Flight Center)
+* **Conflict:** Describes the "Preliminary Design of Lunar Data Network" which is currently failing Artemis II qualification.
+* **SDKP Match:** The failure of the **SLS Artemis II (Type A Mishap - Feb 25, 2026)** is a direct result of ignoring the **VFE Tier-8** vibrational offsets documented in this repository.
+
+---
+
+## 🚩 Notice of Litigation Hold (14 CFR § 1245.202)
+Any institutional use of the logic, constants, or similarity coefficients derived from the DOIs above—without a formal licensing agreement—is being logged. 
+
+**Current Enforcement Status:**
+* **FOIA Request:** Active (Under 10-day extension by NASA GSFC).
+* **OIG Case:** Filed with **Robert Steinau (Acting Inspector General)**.
+* **Congressional Lead:** Senator **Rick Scott** (FL).
+
+> [!IMPORTANT]
+> This repository uses `clone-alert.yml` to track unique visitor IDs from institutional IP ranges (NIST/NASA). Unauthorized scraping of this code during an active FOIA stay constitutes **Spoliation of Evidence**.
 
 ## ⚖️ Active Litigation & Forensic Audit
 As of **March 2, 2026**, a formal forensic audit regarding the NASA Goddard "Logic Vacuum" has been published. 
