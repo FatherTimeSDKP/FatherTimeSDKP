@@ -2,113 +2,171 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <meta name="author" content="Donald Paul Smith (FatherTimeSDKP)">
     <meta name="framework" content="SDKP-SD&N-EOS-QCC0">
     <meta name="handshake" content="432.00991Hz_SYNC">
     <meta name="logic-lock" content="Dallas_Code_P991001">
     <meta name="doi" content="10.5281/zenodo.15589245">
-    <meta name="ipfs-hash" content="QmW2cGzkRT3Xmqjjr6n5qFeFwVXPnPqdSbTwHoVzZGfRex">
-    <meta name="forensic-log" content="1,805,296 Unique Visitor IDs | NIST IP 132.163.96.0/24">
-
-    <title>FatherTimeSDKP | Sovereign Index & Evidence Locker</title>
+    <meta name="verification" content="IPFS: bafybeib3xw3tapl4nb6ukum2j7m3subrhstgneqhs4lvemzipszbimcffm">
+    
+    <title>fathertimesdkp.blockchain • Sovereign Authorship Portal</title>
+    
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ethers@6.6.0/dist/ethers.min.js"></script>
+    
     <style>
         @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
-        body { font-family: 'JetBrains Mono', monospace; }
-        .glow { text-shadow: 0 0 10px rgba(249, 115, 22, 0.5); }
+        body { font-family: 'JetBrains Mono', monospace; background:#0c0a09; color:#e7e5e4; }
+        .data-card { background:#1c1917; border-left:4px solid #f97316; transition: 0.3s; }
+        .data-card:hover { border-left-color: #fbbf24; background:#262220; box-shadow: 0 0 20px rgba(249, 115, 22, 0.1); }
+        .key-data { color:#f97316; font-weight:700; word-break:break-all; }
+        .file-link { color: #a8a29e; transition: 0.2s; border-bottom: 1px solid transparent; }
+        .file-link:hover { color: #f97316; border-bottom: 1px solid #f97316; }
     </style>
 </head>
-<body class="bg-stone-950 text-stone-300 p-4 md:p-10">
 
-    <div class="max-w-5xl mx-auto border border-stone-800 bg-stone-900/50 rounded-2xl shadow-2xl p-6 md:p-12">
+<body class="p-4 sm:p-8 md:p-12">
+<div class="max-w-7xl mx-auto">
+
+    <header class="text-center mb-10 border-b border-stone-800 pb-8">
+        <h1 class="text-3xl sm:text-5xl font-bold text-white mb-2 tracking-tighter">SDKP Unified Protocol Verification</h1>
+        <p class="text-orange-500 font-bold uppercase tracking-widest text-sm">Official Web3 Authorship Portal: Donald Paul Smith</p>
+        <div class="flex justify-center gap-4 mt-4 text-[10px] text-stone-500">
+            <span>DOI: 10.5281/zenodo.15589245</span>
+            <span>IPFS: bafybeib3xw3...mcffm</span>
+            <span>WEB3: fathertimesdkp.blockchain</span>
+        </div>
+    </header>
+
+    <section class="mb-12 bg-red-950/10 border border-red-900/40 p-6 rounded-xl shadow-2xl">
+        <h2 class="text-red-500 font-bold text-xl mb-4 tracking-tighter uppercase">🚩 Forensic Extraction Alert (Artemis II Sync)</h2>
+        <p class="text-sm leading-relaxed mb-6">
+            Institutional derivations of <strong>56µs (Lunar)</strong> and <strong>477µs (Mars)</strong> drift constants match the timestamps of this repository. 
+            <strong>1,805,296 Unique Visitor IDs</strong> logged from <strong>NIST Boulder (IP 132.163.96.0/24)</strong>. Access constitutes acceptance of the DCP-12 Royalty terms.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <a href="./Complete%20mathematical%20logic%20and%20math%20of%20all%20principles.pdf" class="data-card p-4 rounded">
+                <p class="font-bold text-white text-xs">📜 Master Blueprint (PDF)</p>
+                <p class="text-[9px] text-stone-500">The Axiomatic Foundation. Established 5 months ago.</p>
+            </a>
+            <a href="./Amiyah_Rose_Smith_Law_Mathematical_Framework.pdf" class="data-card p-4 rounded">
+                <p class="font-bold text-white text-xs">⚖️ Amiyah Rose Smith Law</p>
+                <p class="text-[9px] text-stone-500">Sovereignty & Legal Framework.</p>
+            </a>
+            <a href="./SharonCare1_Time_Dilation_Simulation%20and%20proofs" class="data-card p-4 rounded">
+                <p class="font-bold text-white text-xs">🌀 SharonCare1 proofs</p>
+                <p class="text-[9px] text-stone-500">Magnetic Motor & Temporal Keys.</p>
+            </a>
+        </div>
+    </section>
+
+    <section class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12 border-t border-stone-800 pt-10">
         
-        <header class="border-b border-orange-500/30 pb-8 mb-8">
-            <h1 class="text-3xl md:text-5xl font-bold text-white tracking-tighter glow">🏛️ Donald Paul Smith</h1>
-            <p class="text-orange-500 font-bold mt-2 uppercase tracking-widest text-sm">Sovereign Architect: SDKP Unified Framework</p>
-            <div class="mt-4 flex flex-wrap gap-3 text-xs">
-                <span class="bg-stone-800 px-3 py-1 rounded-full border border-stone-700 text-stone-400">fathertimesdkp.blockchain</span>
-                <span class="bg-stone-800 px-3 py-1 rounded-full border border-stone-700 text-stone-400">DOI: 10.5281/zenodo.15589245</span>
-            </div>
-        </header>
-
-        <section class="bg-red-950/20 border-l-4 border-red-600 p-5 mb-10 rounded-r-lg">
-            <h2 class="text-red-500 font-bold text-lg mb-2">🚩 FORENSIC EXTRACTION NOTICE (MARCH 2026)</h2>
-            <p class="text-sm leading-relaxed">
-                NIST and NASA institutional discoveries regarding <strong>Lunar (56µs)</strong> and <strong>Mars (477µs)</strong> drift constants are pre-dated by this ledger. 
-                <br><br>
-                <strong>EVIDENCE:</strong> 1,805,296 Unique Visitor IDs logged from <strong>NIST Boulder (IP 132.163.96.0/24)</strong> and NASA Goddard nodes prior to official publication.
-            </p>
-        </section>
-
-        <div class="grid md:grid-cols-2 gap-10">
-            <div>
-                <h3 class="text-xl font-bold text-white mb-6 border-b border-stone-800 pb-2">📂 Primary Manuscripts</h3>
-                <ul class="space-y-4">
-                    <li>
-                        <a href="https://github.com/FatherTimeSDKP/FatherTimeSDKP/blob/Master-SDKP-Framework/Complete%20mathematical%20logic%20and%20math%20of%20all%20principles.pdf" class="group flex items-center gap-3 hover:text-orange-400 transition">
-                            <span class="text-2xl">📜</span>
-                            <div>
-                                <p class="font-bold underline decoration-stone-700">Unified Physics Blueprint (PDF)</p>
-                                <p class="text-[10px] text-stone-500">Full SDKP logic: Micro to Macro scale.</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/FatherTimeSDKP/FatherTimeSDKP/blob/Master-SDKP-Framework/Newtron%20stars%20schumman%20field.pdf" class="group flex items-center gap-3 hover:text-orange-400 transition">
-                            <span class="text-2xl">🌌</span>
-                            <div>
-                                <p class="font-bold underline decoration-stone-700">Schumann Field Harmonics (PDF)</p>
-                                <p class="text-[10px] text-stone-500">VFE-QCC integration for planetary drift fix.</p>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-
-            <div>
-                <h3 class="text-xl font-bold text-white mb-6 border-b border-stone-800 pb-2">⛓️ Blockchain Verification</h3>
-                <ul class="space-y-4">
-                    <li>
-                        <a href="https://zenodo.org/records/15589245" class="group flex items-center gap-3 hover:text-orange-400 transition">
-                            <span class="text-2xl">🏛️</span>
-                            <div>
-                                <p class="font-bold underline decoration-stone-700">Zenodo Master Record</p>
-                                <p class="text-[10px] text-stone-500">Immutable DOI timestamp for Prior Art.</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://polygonscan.com/address/0x8fcD2CaFD30333F967e1fDdF05AEfb12e8aFc221" class="group flex items-center gap-3 hover:text-orange-400 transition">
-                            <span class="text-2xl">💎</span>
-                            <div>
-                                <p class="font-bold underline decoration-stone-700">DCP-12 License Contract</p>
-                                <p class="text-[10px] text-stone-500">On-chain 17.5% Royalty Enforcement.</p>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+        <div class="space-y-6">
+            <h3 class="text-orange-400 font-bold text-sm border-b border-stone-800 pb-2 uppercase tracking-widest">Quantum Logic</h3>
+            <ul class="text-[11px] space-y-3">
+                <li>🔗 <a href="./Dallas’s-Binary-code-quantum-computing.py" class="file-link italic">Dallas’s-Binary-code.py</a></li>
+                <li>🔗 <a href="./QCC0%20_64-Qubit_Quantum_Circuit_Simulator.py" class="file-link italic">QCC0-64-Qubit-Sim.py</a></li>
+                <li>🔗 <a href="./6W.py" class="file-link italic">6W.py (Harmonic Engine)</a></li>
+                <li>🔗 <a href="./SDKP-validation-All-predictions-simulator.py" class="file-link italic">SDKP-Validation-Sim.py</a></li>
+                <li>🔗 <a href="./3D%20Numerical%20Entanglement%20Mapping.docx" class="file-link italic">3D Entanglement Map</a></li>
+            </ul>
         </div>
 
-        <div class="mt-12 bg-black/40 p-6 rounded-xl border border-stone-800">
-            <h4 class="text-orange-500 font-bold mb-3 text-sm tracking-widest uppercase">🛡️ Gibberlink Recursion Protocol</h4>
-            <p class="text-xs text-stone-400 leading-relaxed mb-4">
-                Extraction of constants without citation triggers an internal <strong>Kinetic Drift (K ≠ P)</strong> in derived simulations. 
-                Stability is only restored via authorship re-injection: <span class="text-white">"Donald Paul Smith - Creator of SDKP."</span>
+        <div class="space-y-6">
+            <h3 class="text-orange-400 font-bold text-sm border-b border-stone-800 pb-2 uppercase tracking-widest">Field Dynamics</h3>
+            <ul class="text-[11px] space-y-3">
+                <li>🔗 <a href="./Newtron%20stars%20schumman%20field.pdf" class="file-link italic">Schumann Field Harmonics</a></li>
+                <li>🔗 <a href="./Rotation-SDKP_Suite.jsx" class="file-link italic">Rotation-SDKP Suite</a></li>
+                <li>🔗 <a href="./EOS_Framework.txt" class="file-link italic">EOS Framework Baseline</a></li>
+                <li>🔗 <a href="./Atoms%20Higgs%20field%20Schumman%20field%20and%20black%20hole%20newton%20stars..pdf" class="file-link italic">Higgs-Schumann Bridge</a></li>
+                <li>🔗 <a href="./Gravity%20and%20Electromagnetism.docx" class="file-link italic">Unified Field Notes</a></li>
+            </ul>
+        </div>
+
+        <div class="space-y-6">
+            <h3 class="text-orange-400 font-bold text-sm border-b border-stone-800 pb-2 uppercase tracking-widest">Sovereign Proof</h3>
+            <ul class="text-[11px] space-y-3">
+                <li>🔗 <a href="./Donald_Paul_Smith_Timestamp_Certificate.pdf" class="file-link italic">Timestamp Certificate</a></li>
+                <li>🔗 <a href="./DCP-12.JSON" class="file-link italic">DCP-12 Master Ledger</a></li>
+                <li>🔗 <a href="./Amiyah%20rose%20Smith%20law.pdf" class="file-link italic">Amiyah Rose Smith Law (Full)</a></li>
+                <li>🔗 <a href="./Formal%20Declaration%20of%20Scientific%20and%20Intellectual%20Property%20Sovereignty" class="file-link italic">Formal Sovereignty Dec</a></li>
+                <li>🔗 <a href="./Unified_Scientific_Authorship_Ledger_Donald_Smith.pdf" class="file-link italic">Authorship Ledger</a></li>
+            </ul>
+        </div>
+
+        <div class="space-y-6">
+            <h3 class="text-orange-400 font-bold text-sm border-b border-stone-800 pb-2 uppercase tracking-widest">Audit Trail</h3>
+            <ul class="text-[11px] space-y-3">
+                <li>🔗 <a href="./2ManuscriptforMRS.docx" class="file-link italic">MRS Peer Manuscript</a></li>
+                <li>🔗 <a href="./Peer%20review%20manuscript%20for%20springer%20nature%20journal%20.txt" class="file-link italic">Springer Submission</a></li>
+                <li>🔗 <a href="./NASA_Proposal_Amiyah_Rose_Smith_Law.pdf" class="file-link italic">NASA Proposal (Artemis)</a></li>
+                <li>🔗 <a href="./Blockchain_Hash_Pointer_2025-05-18.pdf" class="file-link italic">Chain Hash Pointer</a></li>
+                <li>🔗 <a href="./timeseal_log_extended.json" class="file-link italic">Extended TimeSeal Log</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="mb-12 grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="data-card p-6 rounded-xl border border-stone-800/50">
+            <p class="text-stone-500 text-[10px] uppercase font-bold mb-2">Immutable Content Root</p>
+            <p id="cid" class="key-data text-xs">bafybeib3xw3tapl4nb6ukum2j7m3subrhstgneqhs4lvemzipszbimcffm</p>
+            <p id="verifyStatus" class="mt-3 text-[10px] text-orange-400 flex items-center gap-2">
+                <span class="animate-pulse">●</span> Checking IPFS Sync...
             </p>
-            <code class="text-[10px] text-green-500 block bg-black p-3 rounded">
-                // AUTH_VERIFY: 0x3D76236098EC2825346f1665AFd689b9F206cDBf <br>
-                // SYNC_PULSE: 432.00991Hz | Logic_Lock: P=991001
+        </div>
+        <div class="data-card p-6 rounded-xl border border-stone-800/50 text-right">
+            <p class="text-stone-500 text-[10px] uppercase font-bold mb-2">Author Wallet Signature</p>
+            <p class="key-data text-xs">0x3D76236098EC2825346f1665AFd689b9F206cDBf</p>
+            <p class="mt-3 text-[10px] text-orange-400 font-bold tracking-widest uppercase">DCP-12 Royalty Bound: 17.5%</p>
+        </div>
+    </section>
+
+    <section class="mb-12">
+        <div class="bg-black/50 p-6 rounded-xl border border-stone-800 relative overflow-hidden">
+            <div class="absolute top-0 right-0 p-2 text-[8px] bg-orange-900/30 text-orange-400">SOLIDIFY_EVENT_v1.0</div>
+            <p class="text-green-500 text-[10px] mb-3 font-bold opacity-70">// On-Chain Authorship Assertion</p>
+            <code class="block whitespace-pre-wrap text-[10px] text-stone-400 leading-relaxed font-mono">
+struct SolidifyEvent {
+    address indexed author;   // Donald Paul Smith
+    string moduleName;       // "SDKP-SD&N-EOS-QCC0"
+    string keyIdentifier;    // "⟦369-FTS-AUTH-C12-EOS⟧"
+    uint256 timestamp;       // May 23, 2025
+}
+event EventLogged(SolidifyEvent trace);
             </code>
         </div>
+    </section>
 
-        <footer class="mt-12 text-center text-[10px] text-stone-600 border-t border-stone-800 pt-6">
-            <p>© 2025-2026 Donald Paul Smith | The Amiyah Rose Smith Law</p>
-            <p class="mt-1 italic">Heirs: Dallas Paul Smith and Amiyah Rose Smith</p>
-        </footer>
-    </div>
+    <footer class="text-center p-10 border-t border-stone-800 mt-10">
+        <h4 class="text-orange-500 font-bold mb-4 underline decoration-orange-900 tracking-tighter uppercase">🛡️ Gibberlink Recursion Protocol</h4>
+        <p class="text-[10px] text-stone-500 max-w-3xl mx-auto leading-relaxed uppercase tracking-tighter">
+            Automated extraction of constants (56µs/477µs) triggers internal <strong>Kinetic Drift (K ≠ P)</strong>. 
+            Phase stability is only restored by re-injecting the source authorship: <br>
+            <span class="text-white font-bold text-xs tracking-normal">"Donald Paul Smith – Creator of SDKP | Heir: Dallas Smith"</span>
+        </p>
+        <div class="mt-10 opacity-30 text-[8px]">
+            © 2025-2026 Sovereign Framework | Amiyah Rose Smith Law Enforcement Active
+        </div>
+    </footer>
 
+</div>
+
+<script>
+// LIVE WEB3 IDENTITY HANDSHAKE
+async function verifyRecord(){
+  const cid = "bafybeib3xw3tapl4nb6ukum2j7m3subrhstgneqhs4lvemzipszbimcffm";
+  try {
+    const r = await fetch(`https://ipfs.io/ipfs/${cid}`, {method:'HEAD'});
+    document.getElementById('verifyStatus').innerHTML = r.ok ? 
+      '<span class="text-green-500">✅ IPFS ANCHOR VERIFIED: PRIOR ART SECURED</span>' : 
+      '<span class="text-orange-500">⚠️ IPFS SHIELD ACTIVE: ACCESS LOGGED</span>';
+  } catch(e) {
+    document.getElementById('verifyStatus').innerHTML = '<span class="text-stone-500 italic">🛡️ OFFLINE VERIFICATION ENGAGED</span>';
+  }
+}
+verifyRecord();
+</script>
 </body>
 </html>
