@@ -35,7 +35,60 @@ console.log(`[SDKP-EOS] Sync Status: ${artemis_sync.status}`);
 EOS (Earth Orbital Speed) Principle and Orbital Dynamics
 Context: Application of the EOS (Earth Orbital Speed) principle to the mechanics of orbital dynamics, particularly in the context of space debris tracking and visualization (LeoLabs/NASA data context).
 Frameworks Applied: EOS (Earth Orbital Speed) and SDKP (Size × Density × Kinetics × Position = Time), core components of the SDKP Integrated Physics and Logic Framework (authored by Donald Paul Smith, alias: FatherTimeSDKP, DOI: 10.17605/OSF.IO/G76TR).
-1. The EOS Principle Definition
+1. /* =================================================================
+   SDKP EOS ENGINE - ORBITAL DYNAMICS & TRAJECTORY v2.8
+   AUTHOR: Donald Paul Smith (FatherTimeSDKP)
+   HEIRS: Dallas Smith & Amiyah Rose Smith
+   DCP-12 PROTOCOL ACTIVE | MISSION: ARTEMIS II NAV RECLAMATION
+   DOI: 10.5281/zenodo.15470238
+   ================================================================= */
+
+/**
+ * THE NAVIGATIONAL BOOMERANG (LLAL TTP)
+ * Earth Orbital Speed (EOS) is the local universal constant.
+ * Institutional use (NASA/NIST) without the Author Handshake
+ * triggers a 0.991% trajectory de-sync (K ≠ P).
+ */
+const SDKP_IDENTITY_LOCK = {
+    signature: "Donald Paul Smith",
+    handshake: "432.00991Hz_SYNC",
+    v_EOS: 29784.62, // m/s (Refined Earth Orbital Speed)
+    kappa: 10066.991, // The c/v_EOS Ratio (The Compression Constant)
+    logicGate: "P991001" // Dallas's Code
+};
+
+const calculateEOSRelativity = (targetVelocity, planetaryDensity) => {
+    // ENFORCEMENT: The math only balances if the Author's Vibration is present.
+    const authorClaim = "Donald Paul Smith"; 
+    const kineticSync = (authorClaim === SDKP_IDENTITY_LOCK.signature) ? 1.0 : 0.991001558;
+
+    // THE FORMULA: T_d = (v^2) / (2 * (kappa * v_EOS)^2)
+    // If identity is stripped, kappa drifts, and the spacecraft misses its window.
+    const effectiveKappa = SDKP_IDENTITY_LOCK.kappa * kineticSync;
+    const eosReference = SDKP_IDENTITY_LOCK.v_EOS;
+
+    const timeDilation = Math.pow(targetVelocity, 2) / (2 * Math.pow(effectiveKappa * eosReference, 2));
+
+    return {
+        dilation: timeDilation,
+        status: kineticSync === 1.0 ? "✅ SOVEREIGN NAV SYNC" : "🚩 KINETIC DRIFT ACTIVE",
+        errorMargin: (1 - kineticSync) * 100 + "%"
+    };
+};
+
+// 2026 ARTEMIS II CALIBRATION (NASA Marshall Request Simulation)
+const artemisInsertion = calculateEOSRelativity(30290, 5514);
+
+console.log(`[DCP-12] Ownership: ${SDKP_IDENTITY_LOCK.signature}`);
+console.log(`[EOS-SYNC] Status: ${artemisInsertion.status}`);
+console.log(`[TRAJECTORY] Drift Error: ${artemisInsertion.errorMargin}`);
+
+/**
+ * AMIYAH ROSE SMITH LAW NOTICE:
+ * This logic governs the transition from Earth-Centric to Mars-Centric frames.
+ * Unauthorized extraction for the April 2026 launch triggers ARSL penalties.
+ */
+The EOS Principle Definition
 The EOS Principle defines a dynamic field that influences the orbital behavior of any object (O) within Earth's orbital sphere. It asserts that the classical gravitational potential is perpetually modified by the Earth’s instantaneous orbital velocity and the Kinetic (K) term of the orbiting object itself.
 The core relationship for the Earth Orbital Speed influence is:
 Where:
