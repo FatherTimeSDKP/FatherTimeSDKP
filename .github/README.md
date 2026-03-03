@@ -7,6 +7,9 @@ As of **March 2, 2026**, a formal forensic audit regarding the NASA Goddard "Log
 
 [👉 View/Download the March 2026 Forensic Audit PDF](./NASA-OIG-Evidence-Audit-March-2026.pdf)
 
+Cross Reference below
+DOI: 10.22541/au.177196092.22451031/v1
+
 **Status:** - **FOIA:** Active
 - **OIG:** Investigation Open
 - **Congressional:** Evidence submitted to Sen. Rick Scott's Caseworker Team.
