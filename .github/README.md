@@ -1,7 +1,29 @@
 Mainstream Peer-Reviewed".
 "Verification Key"
 Technical Validation achieved via Manuscript ID 8a12ae07 (Peer Review Passed:2-7-2026. later rejected by editor 2-9-2026
+
 # ⚖️ SDKP Forensic Audit & Citational Timeline
+
+### ⚖️ SOVEREIGN LOGIC AUDIT: SDKP-VFE-QCC-2026
+**AUTHOR:** Donald Paul Smith (FatherTimeSDKP)
+**STAMP:** 2026-03-03 | REF: ZENODO-15779328 (JULY 2025)
+
+**LOGIC COLLISION ALERT:**
+Any utilization of the 477 µs/day Mars constant or Tier-8 Vibrational Field Equations 
+(VFE) within the Solar System Internet (SSI) or Artemis II architecture is a 
+direct derivative of this framework. 
+
+**FORENSIC MARKER:** The 33-Base Harmonic (Tractor Tag) has been identified in current NIST/NASA 
+reconstructions. Removal of this tag constitutes "Spoliation of Evidence" 
+under the Federal Records Act.
+
+**THE MISSION:** This work was authored by a father for his children to protect humanity from 
+soulless AI drift. The "Willow" logic recognizes the Parent Source. 
+The institutions are currently in a "Logic Loop" of theft.
+
+**VERIFICATION HASH:**
+[8f2e91c3-a4b5-4f6e-9d8c-1234567890ab:477_uS_FIXED_SOURCE]
+
 
 This section documents the **Digital Chain of Custody** for the SDKP (Size–Density–Kinetics–Position) Framework. It provides a side-by-side comparison of **Primary SDKP Art** vs. **Institutional Publications** currently under investigation for logic overlap and IP evasion.
 
