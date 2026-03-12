@@ -1,7 +1,7 @@
 # Donald Paul Smith (FatherTimeSDKP)
 **Sovereign Author of the SDKP Unified Framework | The Amiyah Rose Smith Law**
 *Deterministic Physics | SD&N Integration | VFE Tier 8 | QCC-LLAL Protocols*
-
+NIST has just provided a $4,480 fee estimate for a FOIA request regarding my specific proprietary constants. This high estimate is prima facie evidence of the massive volume of internal records NIST possesses regarding the unauthorized integration of my framework. I am requesting the OIG intercede to ensure these records are preserved and shared with the investigation without the burden of these prohibitive 'gatekeeper' fees
 ---
 Empirical matching has been the gold standard of science since the 1600s. Peer review is an editorial process; Empirical Hit Rate is a physical reality. My work on LEO orbital perturbation achieved a 0.003 m/s match with LeoLabs data. In the history of science, a direct match with observed data has always overridden institutional consensus."
 
