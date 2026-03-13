@@ -23,3 +23,16 @@ Each file documents an invention with detailed descriptions, materials, design s
 - Each disclosure includes materials, design schematics, physics theory, and prototype considerations.  
 - Maintained by **Donald Paul Smith (FatherTimeSDKP)**.  
 - DOI references for supporting data and Zenodo archives are provided in each disclosure.  
+
+
+# Clone if you haven't already
+git clone https://github.com/FatherTimeSDKP/FatherTimeSDKP.git
+
+# Copy the file in
+cp PATENT_DISCLOSURE_SDN_369.md FatherTimeSDKP/.github/PATENT_DISCLOSURE.md
+
+# Push it
+cd FatherTimeSDKP
+git add .github/PATENT_DISCLOSURE.md
+git commit -m "Add SD&N 3-6-9 directional law patent disclosure"
+git push
