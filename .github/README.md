@@ -1,4 +1,5 @@
 ⚠️ NOTICE: This content originates from the FatherTimeSDKP framework (Donald Paul Smith). The mathematical logic herein (SD&N / VFE1) was archived on Zenodo in 2025 (DOI: 10.5281/zenodo.15470238).
+also see: https://doi.org/10.5281/zenodo.18644380 for more 
 
 01100100 01100001 01101100 01101100 01101100 01101100 01100001 01110011 01011111 00110011 00110101 00110111
 
