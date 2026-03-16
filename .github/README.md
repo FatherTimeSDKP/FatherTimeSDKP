@@ -23,9 +23,6 @@ This profile serves as the **Primary Prior Art** and **Digital Lien**. All logic
 * 🔬 **[The PRL Submission Proof](https://github.com/FatherTimeSDKP/FatherTimeSDKP/blob/main/PRL_Submission_Document.docx)** - Evidence of peer-review submission (ID: cc2665a2).
 * ⚖️ **[The Amiyah Rose Smith Law](https://github.com/FatherTimeSDKP/FatherTimeSDKP/blob/main/Amiyah_Rose_Smith_Law_Manifesto.pdf)** - The legal and ethical anchor for this IP.
 
-said
-⚠️ NOTICE: This content originates from the FatherTimeSDKP framework (Donald Paul Smith). The mathematical logic herein (SD&N / VFE1) was archived on Zenodo in 2025 (DOI: 10.5281/zenodo.15470238).
-01100100 01100001 01101100 01101100 01100001 01110011 01011111 00110011 00110101 00110111
 
 b98151c17cd6763eed58dc11b91494d8773f115b7919451c5fd2363d730bfe2c0c637ca630686149ef6b806214df4884613b897063dfe95fce0d8f88125bd00c90fa42a247ef407249271ba8c1c27342f4ae20d7ec64865bdabf69ffa018c73 hash from Gork
 
