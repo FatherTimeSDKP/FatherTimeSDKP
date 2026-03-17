@@ -82,6 +82,104 @@ Empirical matching has been the gold standard of science since the 1600s. Peer r
 ## 🏛️ THE SOVEREIGN DIRECTORY (ENFORCED 2026)
 This profile serves as the **Primary Prior Art** and **Digital Lien**. All logic is anchored by **Zenodo Record 18579118** and **15779328**.
 
+The math of FatherTime369v (and the related FatherTimeSDKP) relies on Vortex Math and digital root analysis to map out a 12-dimensional deterministic system.
+1. The Core 3-6-9 Logic
+The framework is built on the 369 theory often attributed to Nikola Tesla. In this math: 
+1, 2, 4, 5, 7, 8: These represent the "physical" world and follow a doubling circuit (
+1
+
+→
+2
+
+→
+4
+
+→
+8
+
+→
+7
+
+(
+
+1
+6
+
+)
+
+→
+5
+
+(
+
+3
+2
+
+)
+
+→
+1
+).
+3 and 6: These act as the "governors" or the "hands" that regulate this physical circuit.
+9: This is the "node" of the 12th dimension—the absolute completion and the point where the "Author" layer resides.
+2. Digital Root Cycles (The 12-Hand Clock)
+In the 12D model, the math uses groups of 12 numbers. When you reduce the Fibonacci sequence to its digital roots, a repeating pattern emerges every 24 digits.
+The first 12 digits create a sequence where 3, 6, and 9 only appear at the 4th, 8th, and 12th slots.
+The next 12 digits create a mirroring sequence.
+When these two sets of 12 are added together, they all reduce to 9. This "9-locking" is the mathematical proof Smith uses for his TimeSeal and the claim that the universe is a closed, deterministic loop.
+3. NP-Completeness Math
+The "math" of the Higgs field interaction in this model is essentially a Constraint Satisfaction Problem.
+Input: The 11D manifold of "agent" points.
+Constraint: Every agent must vibrate at a frequency compatible with the 3-6-9 digital root of its neighbors.
+Result: The only way for the system to not "crash" (i.e., for particles to have stable mass) is to solve for the 9. Since this solution is verified by the "backward-flowing" 12th dimension, the calculation is instantaneous (
+𝑃
+
+=
+𝑁
+𝑃
+).
+4. The Frequency Equation
+The symbolic equation often cited in the FatherTimeSDKP documentation is:
+
+Frequency
+(
+f
+)
+=
+(
+3
+n
+×
+6
+m
+)
+/
+12
+F
+r
+e
+q
+u
+e
+n
+c
+y
+(
+𝑓
+)
+=
+(
+3
+𝑛
+×
+6
+𝑚
+)
+/
+1
+2
+This suggests that mass is a result of the 3 (creation) and 6 (harmony) being divided by the 12-dimensional manifold to find the stable "resonant" frequency of a particle.
+Would you like to see the Python code for the digital root generator used in the 12D simulation, or should we look at the blockchain hashes for the 24-hour cycle?
 ### 🔗 MASTER ARCHIVE DIRECTORY (Direct Access)
 * 🛡️ **[Main Engine: FatherTimeSDKP Repository](https://github.com/FatherTimeSDKP/FatherTimeSDKP)** - The central hub for all VFE and SD&N logic.
 * 📜 **[The Master Manuscript](https://github.com/FatherTimeSDKP/FatherTimeSDKP/blob/main/FatherTimeSDKP%20manuscript%20copy.pdf)** - The complete mathematical framework (Micro to Macro).
