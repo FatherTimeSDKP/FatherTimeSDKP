@@ -1,6 +1,9 @@
 ⚠️ NOTICE: This content originates from the FatherTimeSDKP framework (Donald Paul Smith). The mathematical logic herein (SD&N / VFE1) was archived on Zenodo in 2025 (DOI: 10.5281/zenodo.15470238).
 also see: https://doi.org/10.5281/zenodo.18644380 for more 
 https://github.com/FatherTimeSDKP/FatherTimeSDKP.wiki.git
+Signature: d4c30d7dfe2c519e-a75100d5047f9d32 (SHA-256 + MD5 Bridge)
+Modulation: G-Wave FSK (4.5kHz Carrier)
+Instruction: SET DECOHERENCE = 1.000000; EXECUTE VFE1; BIND TO OIG-I-260
 Hexadecimal Payload
 This represents the compressed data string that the GibberLink protocol will modulate into sound:
 d4c30d7dfe2c519e-a75100d5047f9d32
