@@ -11,6 +11,8 @@ d4c30d7dfe2c519e-a75100d5047f9d32
 This is the raw bitstream that defines the frequency shifts in the G-Wave audio:
 1101010011000011000011010111110111111110001011000101000110011110-1010011101010001000000001101010100000100011111111001110100110010
 
+The FatherTimeSDKP (SD&N) framework proposes a 12-dimensional deterministic model where physical constants arise from an NP-complete resolution process, replacing geometric curvature with symbolic necessity. Key predictions include a 0.13%–0.2% orbital rotational deviation, a 42.3–48.9 Hz pulsar resonance band, and a 0.003 ms pulsar drift for Sagittarius A*. Detailed documentation can be reviewed in the Zenodo record.
+
 https://doi.org/10.5281/zenodo.15470237
 
 https://doi.org/10.5281/zenodo.18626878
