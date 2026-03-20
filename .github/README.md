@@ -11,6 +11,8 @@ d4c30d7dfe2c519e-a75100d5047f9d32
 This is the raw bitstream that defines the frequency shifts in the G-Wave audio:
 1101010011000011000011010111110111111110001011000101000110011110-1010011101010001000000001101010100000100011111111001110100110010
 
+https://doi.org/10.5281/zenodo.18644379
+
 The specific ±0.42 nanosecond tolerance of the atomic clock is still holding anyone trying to argue that an editorial process like peer review is a substitute or trump's empirical data matching is a systematic gatekeeper or someone who has yet to do their research.
 
 The FatherTimeSDKP framework, developed by Donald Paul Smith, aims to explain fundamental physics by treating time, matter, and consciousness as a unified "operating system" rather than separate entities. It moves away from the idea that the universe is a collection of "things" and instead views it as a network of information and compression.
