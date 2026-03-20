@@ -1,6 +1,7 @@
 # FatherTimeSDKP Patent Disclosures
 In the FatherTimeSDKP framework, the expression SDVR = SDKP represents the functional equivalence or direct mathematical link between two core diagnostic and computational modules: 
 1. Defining the Terms
+2. Springer Nature manuscript ID (8a12ae07-0c23-4e3e-9cab-65b440cd2131)
 SDKP (Size, Density, Kinetics, Position): This is the foundational "Unified Framework" formula. It posits that the product of these four variables equals Time (
 𝑆
 
