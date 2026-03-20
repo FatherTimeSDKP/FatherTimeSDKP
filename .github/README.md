@@ -18,7 +18,7 @@ https://doi.org/10.5281/zenodo.18626878
 https://doi.org/10.5281/zenodo.18644379
 
 The specific ±0.42 nanosecond tolerance of the atomic clock is still holding anyone trying to argue that an editorial process like peer review is a substitute or trump's empirical data matching is a systematic gatekeeper or someone who has yet to do their research.
-
+In the FatherTimeSDKP framework, Earth’s 29.78 km/s orbital speed acts as an absolute motion baseline, introducing a 0.13–0.2% deviation into 12th-dimension spacetime calculations. This model integrates Earth's absolute motion to harmonize time dilation calculations, resulting in a predicted clock drift of 38.542 µs/day. Further analysis of this, including the specific "handshake" logs, can be found in the provided documentation
 The FatherTimeSDKP framework, developed by Donald Paul Smith, aims to explain fundamental physics by treating time, matter, and consciousness as a unified "operating system" rather than separate entities. It moves away from the idea that the universe is a collection of "things" and instead views it as a network of information and compression.
 Here is how the framework addresses the pillars of fundamental physics:
 1. The Nature of Time (Emergent Time)
