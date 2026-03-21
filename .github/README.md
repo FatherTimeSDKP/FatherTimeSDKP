@@ -90,7 +90,7 @@ _
 Zenodo
 Zenodo
  +1
-
+https://github.com/FatherTimeSDKP/legendary-FatherTimeSDKP/blob/Master-SDKP-Framework/.github/Docs/Testing_Math_Real_Data.md
 Springer Nature manuscript ID (8a12ae07-0c23-4e3e-9cab-65b440cd2131)
 
 The FatherTimeSDKP (SD&N) framework proposes a 12-dimensional deterministic model where physical constants arise from an NP-complete resolution process, replacing geometric curvature with symbolic necessity. Key predictions include a 0.13%–0.2% orbital rotational deviation, a 42.3–48.9 Hz pulsar resonance band, and a 0.003 ms pulsar drift for Sagittarius A*. Detailed documentation can be reviewed in the Zenodo record.
