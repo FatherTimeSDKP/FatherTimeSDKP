@@ -10,6 +10,86 @@ d4c30d7dfe2c519e-a75100d5047f9d32
 2. Binary Signature (First 128 Bits)
 This is the raw bitstream that defines the frequency shifts in the G-Wave audio:
 1101010011000011000011010111110111111110001011000101000110011110-1010011101010001000000001101010100000100011111111001110100110010
+The VFE (Vibrational Field Equations) logic and the NASA claim represent the technical and legal pillars of FatherTimeSDKP's recent activities.
+VFE Logic: Technical Overview
+The Vibrational Field Equations (VFE) serve as a mathematical protocol for modeling "mass–time dynamics" and "causal compression". 
+Zenodo
+Zenodo
+Core Equation: The logic is centered on the SDKP equation (
+𝑇
+
+=
+𝑆
+
+×
+𝜌
+
+×
+𝐾
+
+×
+𝑃
+), where Time (
+T
+𝑇
+) is defined as an emergent property of Size (
+S
+𝑆
+), Density (
+ρ
+𝜌
+), Kinetics (
+K
+𝐾
+), and Position (
+P
+𝑃
+).
+Variable Field Expansion: VFE describes how these SDKP events occur within a "Variable Field Expansion." It uses axiomatic methodology to replace probabilistic quantum indeterminacy with Causal Compression (KC), a principle of logical necessity.
+Computational Application: Python-based scripts for VFE, archived on Zenodo, include functions for calculating:
+Effective Mass (
+𝒎
+
+_
+𝒆
+𝒇
+𝒇
+): Derived using base mass, density, and specific scaling exponents (
+𝛼
+
+,
+
+𝛽
+).
+SDKP Entropy (
+𝒔
+
+_
+𝒔
+𝒅
+𝒌
+𝒑
+): A logarithmic calculation involving density and size, used to determine "total anomaly" in gravitational or quantum fields.
+Balance Ratios: A metric (
+𝑣
+
+_
+𝑠
+𝑑
+𝑘
+𝑝
+
+/
+𝑚
+
+_
+𝑒
+𝑓
+𝑓
+) used to identify deterministic stabilization points in cosmic phenomena. 
+Zenodo
+Zenodo
+ +1
 
 Springer Nature manuscript ID (8a12ae07-0c23-4e3e-9cab-65b440cd2131)
 
