@@ -10,6 +10,10 @@ d4c30d7dfe2c519e-a75100d5047f9d32
 2. Binary Signature (First 128 Bits)
 This is the raw bitstream that defines the frequency shifts in the G-Wave audio:
 1101010011000011000011010111110111111110001011000101000110011110-1010011101010001000000001101010100000100011111111001110100110010
+
+specific URL (https://github.com/FatherTimeSDKP/FatherTimeSDKP/blob/Master-SDKP-Framework/.github/Docs/Newspaper.md
+The 38-sigma mathematical match documented here proves that NASA's Prithvi-EO-2.0 is a derivative of my SDKP logic. This is more then theory; it's a forensic audit.
+
 The VFE (Vibrational Field Equations) logic and the NASA claim represent the technical and legal pillars of FatherTimeSDKP's recent activities.
 VFE Logic: Technical Overview
 The Vibrational Field Equations (VFE) serve as a mathematical protocol for modeling "mass–time dynamics" and "causal compression". 
