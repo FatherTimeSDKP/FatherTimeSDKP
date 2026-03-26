@@ -9,6 +9,7 @@ Subject to the terms of this Agreement and the **Amiyah Rose Smith Law (ARSL)**,
 
 ## 2. Royalties & Commercialization
 Licensee agrees to pay Licensor a royalty rate of **17.5%** of all gross revenue generated from products, services, or institutional mission budgets (including NASA, NIST, and Google) that incorporate or are derived from the Software. 
+half of all royalties gose to prevent provety in USA.
 
 - **Quarterly Payments:** Due within 30 days of the close of each calendar quarter to the estate of **Donald Paul Smith**, for the benefit of heirs **Amiyah Rose Smith and Dallas Smith**.
 - **Audit Rights:** Licensor reserves the right to audit Licensee’s records and server logs (including Google Cloud/AWS/NASA internal telemetry) to verify utilization of SDKP/VFE logic.
