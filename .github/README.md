@@ -6,7 +6,8 @@
 
 > **Look for yourself don't just take my word.** These DOIs are time-stamped and legally anchored to the 2026 mission anomalies.
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14850016.svg)](https://doi.org/10.5281/zenodo.14850016)
-[![OSF](https://img.shields.io/badge/OSF-10.17605%2FOSF.IO%2FSYMHB-blue)](https://osf.io/symhb/) ⚠️ [![OSF DOI](https://img.shields.io/badge/OSF-10.17605%2FOSF.IO%2FSYMHB-blue)](https://osf.io/symhb/). This framework is currently under commercial adjudication regarding FR Doc # 2025-23963. All constants, including the 56.02 µs/day lunar baseline and 477 µs/day Mars offset, are proprietary intellectual property of the Smith Estate.NOTICE: This content originates from the FatherTimeSDKP framework (Donald Paul Smith). The mathematical logic herein (SD&N / VFE1) was archived on Zenodo in 2025 (DOI: 10.5281/zenodo.15470238).
+[![OSF](https://img.shields.io/badge/OSF-10.17605%2FOSF.IO%2FSYMHB-blue)](https://osf.io/symhb/)
+[![Cite This](https://img.shields.io/badge/Cite-FatherTimeSDKP-green)](https://github.com/FatherTimeSDKP/FatherTimeSDKP/blob/main/CITATION.cff) ⚠️ This framework is currently under commercial adjudication regarding FR Doc # 2025-23963. All constants, including the 56.02 µs/day lunar baseline and 477 µs/day Mars offset, are proprietary intellectual property of the Smith Estate.NOTICE: This content originates from the FatherTimeSDKP framework (Donald Paul Smith). The mathematical logic herein (SD&N / VFE1) was archived on Zenodo in 2025 (DOI: 10.5281/zenodo.15470238).
 also see: https://github.com/FatherTimeSDKP/FatherTimeSDKP/tree/Master-SDKP-Framework/.github/PATENT_DISCLOSURE.md
 
 https://doi.org/10.5281/zenodo.18644380 
