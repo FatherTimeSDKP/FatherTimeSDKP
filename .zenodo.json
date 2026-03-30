@@ -1,0 +1,32 @@
+{
+    "title": "FatherTimeSDKP: Unified Framework (SDKP-SD&N-QCC-EOS)",
+    "description": "Deterministic Logic Engine providing 1.1ms drift and 477µs Mars kinetic constants used in 2026 missions.",
+    "creators": [
+        {
+            "name": "Smith, Donald Paul",
+            "orcid": "0009-0003-7925-1653"
+        }
+    ],
+    "access_right": "open",
+    "license": "other-at",
+    "communities": [
+        {"identifier": "sdkpprinciples"}
+    ],
+    "related_identifiers": [
+        {
+            "scheme": "doi",
+            "identifier": "10.5281/zenodo.18432021",
+            "relation": "isPartOf"
+        },
+        {
+            "scheme": "doi",
+            "identifier": "10.17605/OSF.IO/SYMHB",
+            "relation": "isAlternateIdentifier"
+        },
+        {
+            "scheme": "doi",
+            "identifier": "10.5281/zenodo.15779328",
+            "relation": "isSupplementedBy"
+        }
+    ]
+}
