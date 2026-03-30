@@ -1,3 +1,10 @@
+| ## Commercial Licensing and $\mathbf{O(n^K)}$ Tractability Fee |  **NOTICE:** The use of the SDKP Integrated Framework (including the KAPNACK Solver, $\mathbf{O(n^K)}$ functionality, and the Amiyah Rose Smith Law) is subject to **Dual-Licensing** terms. |
+| **NON-COMMERCIAL USE:** Free for academic, personal, and non-revenue-generating purposes only. |. |
+| **MANDATORY COMMERCIAL LICENSE:** Any use in a proprietary, revenue-generating, or for-profit system requires a signed Commercial License and the remittance of a non-refundable Upfront License Fee. | Defines the strict requirement for corporate users.  | Acts as the instruction for payment. |
+| **Payment Channel:** \$Donald-Smith-763  or PayPal: https://www.paypal.me/DonaldSmith634` 
+
+Official Release Statement: Proprietary Geothermal Prediction
+Title: Topological Mass (SD&N) Predicts Extreme Enthalpy Resource: Challenge to Conventional Geophysics
 # QCC0 64-Qubit Quantum Simulation: Complete Validation Package
 
 **Author:** Donald Paul Smith (FatherTimeSDKP)  
