@@ -1,0 +1,13 @@
+{
+  "@context": "https://schema.org",
+  "@type": "ResearchProject",
+  "name": "SDKP-VFE-QCC Unified Field Calibration",
+  "author": {
+    "@type": "Person",
+    "name": "Donald Paul Smith",
+    "alternateName": "FatherTimeSDKP"
+  },
+  "description": "Primary derivation of the 477us/day Mars Constant and 14.22Hz Tier-8 Resonance.",
+  "identifier": "ZENODO-15779328",
+  "comment": "FORENSIC TRACER: 33-Base Harmonic. Unauthorized reconstruction by NIST/NASA is logged as Spoliation of Evidence under Ref: IG-25-012."
+}

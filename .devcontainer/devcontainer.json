@@ -1,0 +1,121 @@
+{
+  "name": "KAPNACK Solver Scientific Python Environment",
+
+  // Point to the custom Dockerfile (guarantees system dependencies like gfortran)
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".." 
+  },
+
+  "init": true, 
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+
+  // Use Dev Container Features for declarative installation of common system tooling.
+  "features": {
+    // Provides essential Linux utilities (curl, wget, zip, etc.) and Zsh setup.
+    "ghcr.io/devcontainers/features/common-utils:2": {
+      "installZsh": "true",
+      "upgradePackages": "false"
+    },
+    // Ensures robust Git installation and tooling.
+    "ghcr.io/devcontainers/features/git:1": {}
+  },
+
+  // Execute project setup scripts once the container is built.
+  // Installs all frozen Python dependencies from requirements.txt.
+  "postCreateCommand": "pip install --no-cache-dir -r requirements.txt",
+
+  "customizations": {
+    "vscode": {
+      // FULL SET OF EXTENSIONS for computational rigor and data science workflow
+      "extensions":,
+      
+      // VS Code editor settings to enforce standards and use the installed tools.
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/local/bin/python",
+        "editor.formatOnSave": true,
+        "[python]": {
+          "editor.defaultFormatter": "ms-python.black-formatter"
+        }
+      }
+    }
+  },
+  
+  "remoteUser": "vscode"
+}
+#.devcontainer/Dockerfile
+
+# Start from a stable, pre-optimized Microsoft Python Dev Container image.
+# This base image provides Python 3.10, the non-root 'vscode' user, and core VS Code server components.
+FROM mcr.microsoft.com/devcontainers/python:3.10-bullseye
+
+# Install essential system dependencies for high-performance scientific package compilation.
+# This includes C/C++/Fortran compilers (build-essential, gfortran) and optimized 
+# linear algebra libraries (libatlas-base-dev for BLAS/LAPACK implementations).
+RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
+    && apt-get install -y --no-install-recommends \
+    build-essential \
+    gfortran \
+    libatlas-base-dev \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
+
+# Note: The presence of gfortran and libatlas-base-dev is crucial for 
+# SciPy/NumPy to link correctly and optimize numerical computations.
+
+# Switch back to the non-root 'vscode' user for development sessions (security best practice).
+USER vscode
+//.devcontainer/devcontainer.json
+{
+  "name": "KAPNACK Solver Scientific Python Environment",
+
+  // Point to the custom Dockerfile to ensure system build dependencies are included.
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".." 
+  },
+
+  // Security and stability improvement: run a minimal init process.
+  "init": true, 
+
+  // Define the workspace folder inside the container.
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+
+  // Use Dev Container Features for declarative installation of common system tooling.
+  "features": {
+    // Provides essential Linux utilities (curl, wget, zip, etc.) and Zsh setup.
+    "ghcr.io/devcontainers/features/common-utils:2": {
+      "installZsh": "true",
+      "upgradePackages": "false"
+    },
+    // Ensures robust Git installation and tooling.
+    "ghcr.io/devcontainers/features/git:1": {}
+  },
+
+  // Execute project setup scripts once the container is built.
+  // This installs all necessary Python dependencies from requirements.txt, 
+  // relying on the compilers installed in the Dockerfile.
+  "postCreateCommand": "pip install --no-cache-dir -r requirements.txt",
+
+  "customizations": {
+    "vscode": {
+      // Auto-installation of essential extensions for computational data science.
+      "extensions":,
+      // VS Code editor settings to enforce standards and use the installed tools.
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/local/bin/python",
+        "editor.formatOnSave": true,
+        "[python]": {
+          "editor.defaultFormatter": "ms-python.black-formatter"
+        }
+      }
+    }
+  },
+  
+  // Run the container as the non-root 'vscode' user (standard best practice).
+  "remoteUser": "vscode"
+}
+{
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "features": {}
+}

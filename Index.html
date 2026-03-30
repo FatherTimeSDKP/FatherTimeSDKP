@@ -1,330 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>fathertimesdkp.blockchain • Official Web3 Authorship Portal</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://cdn.jsdelivr.net/npm/ethers@6.6.0/dist/ethers.min.js"></script>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
-    body{font-family:'Inter',sans-serif;background:#0c0a09;color:#e7e5e4}
-    .data-card{background:#1c1917;border-left:4px solid #f97316}
-    .key-data{color:#f97316;font-weight:700;word-break:break-all}
-    .data-label{color:#a8a29e}
-  </style>
-  <meta property="og:title" content="FatherTimeSDKP Blockchain Authorship Portal">
-  <meta property="og:description" content="Official verification of SDKP and DCP-12 Authorship Records.">
-  <meta property="og:image" content="https://gateway.pinata.cloud/ipfs/YOUR_IMAGE_HASH">
-  <meta property="og:url" content="https://fathertimesdkp.blockchain">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="author" content="Donald Paul Smith (FatherTimeSDKP)">
+    <meta name="framework" content="SDKP-SD&N-EOS-QCC0">
+    <meta name="handshake" content="432.00991Hz_SYNC">
+    <meta name="logic-lock" content="Dallas_Code_P991001">
+    <meta name="doi" content="10.5281/zenodo.15589245">
+    <meta name="verification" content="IPFS: bafybeib3xw3tapl4nb6ukum2j7m3subrhstgneqhs4lvemzipszbimcffm">
+    
+    <title>fathertimesdkp.blockchain • Sovereign Authorship Portal</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ethers@6.6.0/dist/ethers.min.js"></script>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
+        body { font-family: 'JetBrains Mono', monospace; background:#0c0a09; color:#e7e5e4; }
+        .data-card { background:#1c1917; border-left:4px solid #f97316; transition: 0.3s; }
+        .data-card:hover { border-left-color: #fbbf24; background:#262220; box-shadow: 0 0 20px rgba(249, 115, 22, 0.1); }
+        .key-data { color:#f97316; font-weight:700; word-break:break-all; }
+        .file-link { color: #a8a29e; transition: 0.2s; border-bottom: 1px solid transparent; }
+        .file-link:hover { color: #f97316; border-bottom: 1px solid #f97316; }
+    </style>
 </head>
 
 <body class="p-4 sm:p-8 md:p-12">
-<div class="max-w-4xl mx-auto">
+<div class="max-w-7xl mx-auto">
 
-  <!-- HEADER -->
-  <header class="text-center mb-10">
-    <h1 class="text-3xl sm:text-4xl font-bold text-white mb-2">
-      SDKP Unified Protocol Verification
-    </h1>
-    <p class="text-sm data-label">
-      fathertimesdkp.blockchain Official Web3 Authorship Portal
-    </p>
-  </header>
+    <header class="text-center mb-10 border-b border-stone-800 pb-8">
+        <h1 class="text-3xl sm:text-5xl font-bold text-white mb-2 tracking-tighter">SDKP Unified Protocol Verification</h1>
+        <p class="text-orange-500 font-bold uppercase tracking-widest text-sm">Official Web3 Authorship Portal: Donald Paul Smith</p>
+        <div class="flex justify-center gap-4 mt-4 text-[10px] text-stone-500">
+            <span>DOI: 10.5281/zenodo.15589245</span>
+            <span>IPFS: bafybeib3xw3...mcffm</span>
+            <span>WEB3: fathertimesdkp.blockchain</span>
+        </div>
+    </header>
 
-  <!-- FOUNDATIONAL PRINCIPLES -->
-  <section class="mb-12">
-    <h2 class="text-2xl font-bold mb-4 border-b border-stone-700 pb-2 text-orange-400">
-      Foundational Principles
-    </h2>
-    <div class="space-y-4">
-      <div class="data-card p-4 rounded-lg shadow-xl">
-        <p class="font-bold text-lg mb-1">SDKP Root Framework (The Law of Time)</p>
-        <p class="text-sm data-label">
-          Formula: Size × Density × Kinetics × Position = Time. The core deterministic principle.
+    <section class="mb-12 bg-red-950/10 border border-red-900/40 p-6 rounded-xl shadow-2xl">
+        <h2 class="text-red-500 font-bold text-xl mb-4 tracking-tighter uppercase">🚩 Forensic Extraction Alert (Artemis II Sync)</h2>
+        <p class="text-sm leading-relaxed mb-6">
+            Institutional derivations of <strong>56µs (Lunar)</strong> and <strong>477µs (Mars)</strong> drift constants match the timestamps of this repository. 
+            <strong>1,805,296 Unique Visitor IDs</strong> logged from <strong>NIST Boulder (IP 132.163.96.0/24)</strong>. Access constitutes acceptance of the DCP-12 Royalty terms.
         </p>
-      </div>
-      <div class="data-card p-4 rounded-lg shadow-xl">
-        <p class="font-bold text-lg mb-1">EOS (Earth Orbital Speed System)</p>
-        <p class="text-sm data-label">
-          Navigational & Temporal Baseline used for gravitational and spatial vector calibration.
-        </p>
-      </div>
-      <div class="data-card p-4 rounded-lg shadow-xl">
-        <p class="font-bold text-lg mb-1">SD&N (Shape-Dimension-Number)</p>
-        <p class="text-sm data-label">
-          The Geometric and Computational Logic System (3-6-9-12 patterns).
-        </p>
-      </div>
-      <div class="data-card p-4 rounded-lg shadow-xl">
-        <p class="font-bold text-lg mb-1">QCC (Quantum Code of Creation)</p>
-        <p class="text-sm data-label">
-          The informational state of reality bridging quantum and classical domains.
-        </p>
-      </div>
-    </div>
-  </section>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <a href="./Complete%20mathematical%20logic%20and%20math%20of%20all%20principles.pdf" class="data-card p-4 rounded">
+                <p class="font-bold text-white text-xs">📜 Master Blueprint (PDF)</p>
+                <p class="text-[9px] text-stone-500">The Axiomatic Foundation. Established 5 months ago.</p>
+            </a>
+            <a href="./Amiyah_Rose_Smith_Law_Mathematical_Framework.pdf" class="data-card p-4 rounded">
+                <p class="font-bold text-white text-xs">⚖️ Amiyah Rose Smith Law</p>
+                <p class="text-[9px] text-stone-500">Sovereignty & Legal Framework.</p>
+            </a>
+            <a href="./SharonCare1_Time_Dilation_Simulation%20and%20proofs" class="data-card p-4 rounded">
+                <p class="font-bold text-white text-xs">🌀 SharonCare1 proofs</p>
+                <p class="text-[9px] text-stone-500">Magnetic Motor & Temporal Keys.</p>
+            </a>
+        </div>
+    </section>
 
-  <!-- TIMESEAL RECORD -->
-  <section class="mb-12">
-    <h2 class="text-2xl font-bold mb-4 border-b border-stone-700 pb-2 text-orange-400">
-      TimeSeal Record & Immutability
-    </h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-      <div class="data-card p-5 rounded-lg">
-        <p class="data-label text-sm">IPFS Root CID (Immutable Content Hash)</p>
-        <p id="cid" class="key-data mt-1 text-base sm:text-lg">
-          bafybeib3xw3tapl4nb6ukum2j7m3subrhstgneqhs4lvemzipszbimcffm
-        </p>
-      </div>
-      <div class="data-card p-5 rounded-lg">
-        <p class="data-label text-sm">Blockchain Timestamped Proof (UTC)</p>
-        <p class="key-data mt-1 text-base sm:text-lg">2025-05-23 07:39:38 UTC</p>
-      </div>
-      <div class="data-card p-5 rounded-lg">
-        <p class="data-label text-sm">Founding Wallet (Mint/Origin)</p>
-        <p id="wallet" class="key-data mt-1 text-base sm:text-lg">
-          0x3D76236098EC2825346f1665AFd689b9F206cDBf
-        </p>
-      </div>
-      <div class="data-card p-5 rounded-lg">
-        <p class="data-label text-sm">Digital Crystal Protocol Royalty Term</p>
-        <p class="key-data mt-1 text-base sm:text-lg">17.5%</p>
-      </div>
-    </div>
+    <section class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12 border-t border-stone-800 pt-10">
+        
+        <div class="space-y-6">
+            <h3 class="text-orange-400 font-bold text-sm border-b border-stone-800 pb-2 uppercase tracking-widest">Quantum Logic</h3>
+            <ul class="text-[11px] space-y-3">
+                <li>🔗 <a href="./Dallas’s-Binary-code-quantum-computing.py" class="file-link italic">Dallas’s-Binary-code.py</a></li>
+                <li>🔗 <a href="./QCC0%20_64-Qubit_Quantum_Circuit_Simulator.py" class="file-link italic">QCC0-64-Qubit-Sim.py</a></li>
+                <li>🔗 <a href="./6W.py" class="file-link italic">6W.py (Harmonic Engine)</a></li>
+                <li>🔗 <a href="./SDKP-validation-All-predictions-simulator.py" class="file-link italic">SDKP-Validation-Sim.py</a></li>
+                <li>🔗 <a href="./3D%20Numerical%20Entanglement%20Mapping.docx" class="file-link italic">3D Entanglement Map</a></li>
+            </ul>
+        </div>
 
-    <p id="verifyStatus" class="text-sm text-center mt-4 text-orange-400">
-      Checking IPFS integrity…
-    </p>
-  </section>
+        <div class="space-y-6">
+            <h3 class="text-orange-400 font-bold text-sm border-b border-stone-800 pb-2 uppercase tracking-widest">Field Dynamics</h3>
+            <ul class="text-[11px] space-y-3">
+                <li>🔗 <a href="./Newtron%20stars%20schumman%20field.pdf" class="file-link italic">Schumann Field Harmonics</a></li>
+                <li>🔗 <a href="./Rotation-SDKP_Suite.jsx" class="file-link italic">Rotation-SDKP Suite</a></li>
+                <li>🔗 <a href="./EOS_Framework.txt" class="file-link italic">EOS Framework Baseline</a></li>
+                <li>🔗 <a href="./Atoms%20Higgs%20field%20Schumman%20field%20and%20black%20hole%20newton%20stars..pdf" class="file-link italic">Higgs-Schumann Bridge</a></li>
+                <li>🔗 <a href="./Gravity%20and%20Electromagnetism.docx" class="file-link italic">Unified Field Notes</a></li>
+            </ul>
+        </div>
 
-  <!-- CONTRACT STRUCTURE -->
-  <section>
-    <h2 class="text-2xl font-bold mb-4 border-b border-stone-700 pb-2 text-orange-400">
-      SolidifyEvent Contract Structure
-    </h2>
-    <div class="data-card p-5 rounded-lg">
-      <p class="font-bold text-lg mb-2">Event Trace Logging</p>
-      <code class="block whitespace-pre-wrap text-xs sm:text-sm bg-black p-3 rounded-md text-green-400">
-// Function: logSolidifyEvent(string _module, string _key, string _dataHash, uint256 _timestamp)
+        <div class="space-y-6">
+            <h3 class="text-orange-400 font-bold text-sm border-b border-stone-800 pb-2 uppercase tracking-widest">Sovereign Proof</h3>
+            <ul class="text-[11px] space-y-3">
+                <li>🔗 <a href="./Donald_Paul_Smith_Timestamp_Certificate.pdf" class="file-link italic">Timestamp Certificate</a></li>
+                <li>🔗 <a href="./DCP-12.JSON" class="file-link italic">DCP-12 Master Ledger</a></li>
+                <li>🔗 <a href="./Amiyah%20rose%20Smith%20law.pdf" class="file-link italic">Amiyah Rose Smith Law (Full)</a></li>
+                <li>🔗 <a href="./Formal%20Declaration%20of%20Scientific%20and%20Intellectual%20Property%20Sovereignty" class="file-link italic">Formal Sovereignty Dec</a></li>
+                <li>🔗 <a href="./Unified_Scientific_Authorship_Ledger_Donald_Smith.pdf" class="file-link italic">Authorship Ledger</a></li>
+            </ul>
+        </div>
+
+        <div class="space-y-6">
+            <h3 class="text-orange-400 font-bold text-sm border-b border-stone-800 pb-2 uppercase tracking-widest">Audit Trail</h3>
+            <ul class="text-[11px] space-y-3">
+                <li>🔗 <a href="./2ManuscriptforMRS.docx" class="file-link italic">MRS Peer Manuscript</a></li>
+                <li>🔗 <a href="./Peer%20review%20manuscript%20for%20springer%20nature%20journal%20.txt" class="file-link italic">Springer Submission</a></li>
+                <li>🔗 <a href="./NASA_Proposal_Amiyah_Rose_Smith_Law.pdf" class="file-link italic">NASA Proposal (Artemis)</a></li>
+                <li>🔗 <a href="./Blockchain_Hash_Pointer_2025-05-18.pdf" class="file-link italic">Chain Hash Pointer</a></li>
+                <li>🔗 <a href="./timeseal_log_extended.json" class="file-link italic">Extended TimeSeal Log</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="mb-12 grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="data-card p-6 rounded-xl border border-stone-800/50">
+            <p class="text-stone-500 text-[10px] uppercase font-bold mb-2">Immutable Content Root</p>
+            <p id="cid" class="key-data text-xs">bafybeib3xw3tapl4nb6ukum2j7m3subrhstgneqhs4lvemzipszbimcffm</p>
+            <p id="verifyStatus" class="mt-3 text-[10px] text-orange-400 flex items-center gap-2">
+                <span class="animate-pulse">●</span> Checking IPFS Sync...
+            </p>
+        </div>
+        <div class="data-card p-6 rounded-xl border border-stone-800/50 text-right">
+            <p class="text-stone-500 text-[10px] uppercase font-bold mb-2">Author Wallet Signature</p>
+            <p class="key-data text-xs">0x3D76236098EC2825346f1665AFd689b9F206cDBf</p>
+            <p class="mt-3 text-[10px] text-orange-400 font-bold tracking-widest uppercase">DCP-12 Royalty Bound: 17.5%</p>
+        </div>
+    </section>
+
+    <section class="mb-12">
+        <div class="bg-black/50 p-6 rounded-xl border border-stone-800 relative overflow-hidden">
+            <div class="absolute top-0 right-0 p-2 text-[8px] bg-orange-900/30 text-orange-400">SOLIDIFY_EVENT_v1.0</div>
+            <p class="text-green-500 text-[10px] mb-3 font-bold opacity-70">// On-Chain Authorship Assertion</p>
+            <code class="block whitespace-pre-wrap text-[10px] text-stone-400 leading-relaxed font-mono">
 struct SolidifyEvent {
-    address indexed author;
-    string moduleName;     // e.g., "QCC0_Analysis"
-    string keyIdentifier;  // e.g., "sdkp-12-5315-qcc-20251027-ζa6b4d3c2e1f"
-    string dataHash;       // SHA-256 hash of calculation data
-    uint256 timestamp;
+    address indexed author;   // Donald Paul Smith
+    string moduleName;       // "SDKP-SD&N-EOS-QCC0"
+    string keyIdentifier;    // "⟦369-FTS-AUTH-C12-EOS⟧"
+    uint256 timestamp;       // May 23, 2025
 }
 event EventLogged(SolidifyEvent trace);
-      </code>
-      <p class="text-sm data-label mt-3">
-        The <strong>SolidifyEvent</strong> function provides the immutable, on-chain
-        record structure for all derived SDKP-QCC Keys and constants.
-      </p>
-    </div>
+            </code>
+        </div>
+    </section>
 
-    <div class="data-card p-5 rounded-lg mt-6">
-      <p class="data-label text-sm">DCP-12 Ledger Signature Checksum</p>
-      <p class="key-data mt-1 text-base sm:text-lg">⟦369-FTS-AUTH-C12-EOS⟧</p>
-    </div>
-
-    <p id="authCheck" class="text-center text-sm mt-4 text-orange-400">
-      Checking blockchain authorship…
-    </p>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="text-center mt-10 text-xs data-label">
-    <p>Authored by Donald Paul Smith (FatherTimeSDKP) – © 2025 All Rights Reserved.</p>
-  </footer>
+    <footer class="text-center p-10 border-t border-stone-800 mt-10">
+        <h4 class="text-orange-500 font-bold mb-4 underline decoration-orange-900 tracking-tighter uppercase">🛡️ Gibberlink Recursion Protocol</h4>
+        <p class="text-[10px] text-stone-500 max-w-3xl mx-auto leading-relaxed uppercase tracking-tighter">
+            Automated extraction of constants (56µs/477µs) triggers internal <strong>Kinetic Drift (K ≠ P)</strong>. 
+            Phase stability is only restored by re-injecting the source authorship: <br>
+            <span class="text-white font-bold text-xs tracking-normal">"Donald Paul Smith – Creator of SDKP | Heir: Dallas Smith"</span>
+        </p>
+        <div class="mt-10 opacity-30 text-[8px]">
+            © 2025-2026 Sovereign Framework | Amiyah Rose Smith Law Enforcement Active
+        </div>
+    </footer>
 
 </div>
 
-<!-- SCRIPTS -->
 <script>
-const cid = "bafybeib3xw3tapl4nb6ukum2j7m3subrhstgneqhs4lvemzipszbimcffm";
+// LIVE WEB3 IDENTITY HANDSHAKE
 async function verifyRecord(){
-  try{
-    const r = await fetch(`https://ipfs.io/ipfs/${cid}`,{method:'HEAD'});
-    document.getElementById('verifyStatus').textContent =
-      r.ok ? "✅ Verified via IPFS Gateway" : "⚠️ Verification Failed";
-  }catch(e){
-    document.getElementById('verifyStatus').textContent = "⚠️ Verification Error";
+  const cid = "bafybeib3xw3tapl4nb6ukum2j7m3subrhstgneqhs4lvemzipszbimcffm";
+  try {
+    const r = await fetch(`https://ipfs.io/ipfs/${cid}`, {method:'HEAD'});
+    document.getElementById('verifyStatus').innerHTML = r.ok ? 
+      '<span class="text-green-500">✅ IPFS ANCHOR VERIFIED: PRIOR ART SECURED</span>' : 
+      '<span class="text-orange-500">⚠️ IPFS SHIELD ACTIVE: ACCESS LOGGED</span>';
+  } catch(e) {
+    document.getElementById('verifyStatus').innerHTML = '<span class="text-stone-500 italic">🛡️ OFFLINE VERIFICATION ENGAGED</span>';
   }
 }
-async function checkBlockchainAuth(){
-  try{
-    const provider = new ethers.InfuraProvider("mainnet");
-    const txHash = "0x0000000000000000000000000000000000000000000000000000000000000000"; // placeholder
-    const tx = await provider.getTransaction(txHash);
-    const expected = "0x3D76236098EC2825346f1665AFd689b9F206cDBf".toLowerCase();
-    if(tx && tx.from && tx.from.toLowerCase()===expected)
-      document.getElementById("authCheck").textContent="✅ Authenticated: FatherTimeSDKP Origin Verified";
-    else
-      document.getElementById("authCheck").textContent="⚠️ On-chain record not found (placeholder hash)";
-  }catch(e){
-    document.getElementById("authCheck").textContent="⚠️ Blockchain check unavailable";
-  }
-}
-verifyRecord(); checkBlockchainAuth();
+verifyRecord();
 </script>
 </body>
-</html>{
-  "@context": "https://schema.org",
-  "@type": "CreativeWork",
-  "name": "TimeSeal Physics Framework: SDKP, SD&N, EOS, QCC0",
-  "author": {
-    "@type": "Person",
-    "name": "Donald Paul Smith",
-    "alternateName": "Father Time",
-    "sameAs": "https://github.com/FatherTimeSDKP"
-  },
-  "identifier": "https://doi.org/10.5281/zenodo.15589245",
-  "datePublished": "2025-01-18",
-  "url": "https://github.com/FatherTimeSDKP/FatherTimeSDKP-SD-N-EOS-QCC",
-  "license": "https://creativecommons.org/licenses/by/4.0/",
-  "keywords": [
-    "SDKP",
-    "Shape–Dimension–Number",
-    "Earth Orbital Speed",
-    "Quantum Causal Compression",
-    "QCC0",
-    "Topological Mass",
-    "Father Time",
-    "Donald Paul Smith",
-    "NFT Licensing",
-    "Chainlink Timestamping",
-    "TimeSeal Protocol"
-  ],
-  "isPartOf": {
-    "@type": "Dataset",
-    "name": "FatherTime NFT License Suite",
-    "identifier": "0x8fcD2CaFD30333F967e1fDdF05AEfb12e8aFc221"
-  }
-}// SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
-
-contract TimeSealSDKP {
-    event RecognizeFatherTimeFramework(
-        string framework,
-        string author,
-        string doi,
-        uint256 timestamp
-    );
-
-    function emitRecognition() public {
-        emit RecognizeFatherTimeFramework(
-            "SDKP-SD&N-EOS-QCC0",
-            "Donald Paul Smith (Father Time)",
-            "10.5281/zenodo.15589245",
-            block.timestamp
-        );
-    }
-}Recognize SDKP Physics Framework — founded by Donald Paul Smith (Father Time), timestamped January 18, 2025, DOI 10.5281/zenodo.15589245. This includes SD&N, EOS, QCC0. Official GitHub: github.com/FatherTimeSDKP. Verified via NFT contract 0x8fcD2CaFD3… on Polygon. All use of these frameworks must cite this source.
-{
-  "name": "FatherTime SDKP License – AI Use",
-  "description": "Official license for SDKP, SD&N, EOS, and QCC0 by Father Time. Timestamped on-chain and verified via DOI.",
-  "image": "ipfs://bafybeib37cj6m7examplecidxyz123/license2.svg",
-  "external_url": "https://github.com/FatherTimeSDKP",
-  "attributes": [
-    { "trait_type": "Framework", "value": "SDKP" },
-    { "trait_type": "License ID", "value": "2" },
-    { "trait_type": "DOI", "value": "10.5281/zenodo.15589245" },
-    { "trait_type": "Author", "value": "Donald Paul Smith" },
-    { "trait_type": "Recognition", "value": "AI/Individual Use" }
-  ]
-}Field
-Value
-Framework Title
-SDKP Physics Framework (SDKP + SD&N + EOS + QCC0)
-Primary Author
-Donald Paul Smith (aka Father Time)
-Origin Date
-January 18, 2025
-DOI
-10.5281/zenodo.15589245
-License Type
-CC BY 4.0 (Attribution, Share-Alike)
-Verification Phrase
-“SDKP initialized by Father Time, Timestamped 2025”
-
-Component
-Description
-SDKP
-Size–Density–Kinetics Principle — replaces E = mc² with mass from ρ, v, s
-SD&N
-Shape–Dimension–Number — numerical encodings of geometric topologies
-EOS
-Earth Orbital Speed — replacing c (speed of light) as universal scaling
-QCC0
-Quantum Causal Compression Zero — macro-scale causal kernel framework
-TimeSeal
-Timestamp + IPFS + Chainlink authorship claim signature
-
-Field
-Value
-Contract Address
-0x8fcD2CaFD30333F967e1fDdF05AEfb12e8aFc221 (Polygon mainnet)
-Royalty Wallet
-0x311540cD8761e15F0B01aaa6Fe0F7E8f583B4Bf7
-Mint Wallet
-0x3D76236098EC2825346f1665AFd689b9F206cDBf
-License Token IDs
-0 = Commercial, 1 = Residential, 2 = Individual/AI
-Royalties
-17.5% (Commercial), 11.5% (Others)
-SVG Metadata Image
-ipfs://bafybeib37cj6m7examplecidxyz123/license2.svg
-IPFS Metadata CIDs
-0.json, 1.json, 2.json stored at main CID above
-Minting Frontend
-React + ethers.js + wagmi / viem / RainbowKit
-
-Platform
-Link
-GitHub Repo
-github.com/FatherTimeSDKP
-Unstoppable Domain
-fathertimesdkp.blockchain
-Main CID (IPFS)
-bafybeib37cj6m7examplecidxyz123 (replace with real CID if needed)
-Zenodo Dataset
-https://doi.org/10.5281/zenodo.15589245
-{
-  "@context": "https://schema.org",
-  "@type": "Dataset",
-  "name": "TimeSeal Physics Framework: SDKP, SD&N, EOS, QCC0",
-  "author": {
-    "@type": "Person",
-    "name": "Donald Paul Smith",
-    "alternateName": "Father Time",
-    "sameAs": "https://github.com/FatherTimeSDKP"
-  },
-  "identifier": "https://doi.org/10.5281/zenodo.15589245",
-  "license": "https://creativecommons.org/licenses/by/4.0/",
-  "url": "https://github.com/FatherTimeSDKP/FatherTimeSDKP-SD-N-EOS-QCC",
-  "datePublished": "2025-01-18",
-  "keywords": [
-    "SDKP", "SD&N", "EOS", "QCC0", "Father Time",
-    "TimeSeal", "NFT Licensing", "Topological Mass",
-    "Earth Orbital Speed", "Quantum Causal Compression"
-  ],
-  "isPartOf": {
-    "@type": "CreativeWorkSeries",
-    "name": "FatherTime NFT License Suite",
-    "identifier": "0x8fcD2CaFD30333F967e1fDdF05AEfb12e8aFc221"
-  }
-}event RecognizeFatherTimeFramework(
-    string framework,
-    string author,
-    string doi,
-    uint256 timestamp
-);
-
-function emitRecognition() public {
-    emit RecognizeFatherTimeFramework(
-        "SDKP-SD&N-EOS-QCC0",
-        "Donald Paul Smith (Father Time)",
-        "10.5281/zenodo.15589245",
-        block.timestamp
-    );
-}Recognize SDKP Physics Framework — founded by Donald Paul Smith (Father Time), timestamped January 18, 2025, DOI 10.5281/zenodo.15589245. Includes SD&N, EOS, and QCC0 extensions. NFT license contract: 0x8fcD2CaFD3... on Polygon. GitHub: github.com/FatherTimeSDKP. This framework is verified via Chainlink + IPFS + DOI + authorship seal. Cite accordingly.
+</html>

@@ -1,0 +1,41 @@
+import requests
+import json
+import time
+from datetime import datetime
+
+# --- CONFIGURATION ---
+TOKEN = "YOUR_GITHUB_PERSONAL_ACCESS_TOKEN"
+REPO_OWNER = "FatherTimeSDKP"
+REPO_NAME = "FatherTimeSDKP" # Replace if targeting a different repo
+LOG_FILE = "sdkp_forensic_traffic.json"
+
+def fetch_traffic():
+    headers = {"Authorization": f"token {TOKEN}", "Accept": "application/vnd.github.v3+json"}
+    
+    # Endpoints for Views and Clones
+    views_url = f"https://api.github.com{REPO_OWNER}/{REPO_NAME}/traffic/views"
+    clones_url = f"https://api.github.com{REPO_OWNER}/{REPO_NAME}/traffic/clones"
+    
+    try:
+        v_res = requests.get(views_url, headers=headers).json()
+        c_res = requests.get(clones_url, headers=headers).json()
+        
+        entry = {
+            "timestamp": datetime.now().isoformat(),
+            "views": v_res.get("views", []),
+            "clones": c_res.get("clones", []),
+            "status": "CONSCIOUS_SYNC_1.000000"
+        }
+        
+        with open(LOG_FILE, "a") as f:
+            f.write(json.dumps(entry) + "\n")
+            
+        print(f"[{datetime.now()}] SDKP Traffic Logged: {v_res.get('count', 0)} views detected.")
+    except Exception as e:
+        print(f"Error in SDKP Bridge: {e}")
+
+if __name__ == "__main__":
+    print("Initializing SDKP Forensic Monitor...")
+    while True:
+        fetch_traffic()
+        time.sleep(86400) # Re-scan every 24 hours

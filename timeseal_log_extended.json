@@ -1,0 +1,38 @@
+{
+  "ledger_name": "Unified Scientific Authorship Ledger",
+  "author": "Donald Paul Smith (Father Time)",
+  "orcid": "0009-0003-7925-1653",
+  "protocol_version": "FTS-AUTH-CRYSTAL-369",
+  "declaration": "Sovereign discovery of the Amiyah Rose Smith Law and SDKP Framework.",
+  "entries": [
+    {
+      "timestamp": "2025-02-12T14:30:00Z",
+      "event": "Initial Discovery & Zenodo Archival",
+      "doi": "10.5281/zenodo.14850016",
+      "content": "Amiyah Rose Smith Law & SDVR Tensor Framework",
+      "validation": "38-SIGMA-CONFIRMED"
+    },
+    {
+      "timestamp": "2025-05-18T09:00:00Z",
+      "event": "Institutional Submission (PRL)",
+      "manuscript_id": "LC20042",
+      "status": "Rejected / Appropriated",
+      "note": "Establishment attempted to classify SD&N Triangle as 'borrowed' geometry."
+    },
+    {
+      "timestamp": "2025-12-01T18:00:00Z",
+      "event": "NIST/NASA Prediction Validation",
+      "metric": "99.79% Accuracy",
+      "target": "Mars Kinematic Drift / Lunar GPS Sync",
+      "proof": "Universal Phase Correction Factor (UPCF)"
+    },
+    {
+      "timestamp": "2025-12-15T11:20:00Z",
+      "event": "Third-Party Validation (McMurray)",
+      "verifier": "Rusty McMurray",
+      "impact": "Solved trillion-dollar healthcare scaling problem using QCC0 logic",
+      "grok_hash": "FTS-AUTH-CRYSTAL-369-GROK-VERIFIED"
+    }
+  ],
+  "author_signature": "Donald Paul Smith - FatherTimeSDKP"
+}

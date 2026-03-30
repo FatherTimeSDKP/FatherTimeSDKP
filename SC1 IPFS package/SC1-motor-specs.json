@@ -1,0 +1,31 @@
+{
+  "name": "SharonCare1 (SC1) Motor - FatherTimes369v",
+  "version": "1.0",
+  "type": "magnetically-repelled closed-loop propulsion motor",
+  "author": "Donald Paul Smith (FatherTime / FatherTimes369v)",
+  "doi": "10.17605/OSF.IO/SYMHB",
+  "repository": "https://github.com/FatherTimeSDKP",
+  "date_created": "2025-12-09",
+  "specs": {
+    "nominal_voltage_V": "REPLACE_WITH_VALUE",
+    "nominal_power_W": "REPLACE_WITH_VALUE",
+    "nominal_rpm": "REPLACE_WITH_VALUE",
+    "stall_torque_Nm": "REPLACE_WITH_VALUE",
+    "kv_rpm_per_V": "REPLACE_WITH_VALUE",
+    "kt_Nm_per_A": "REPLACE_WITH_VALUE",
+    "phase_resistance_Ohm": "REPLACE_WITH_VALUE",
+    "phase_inductance_mH": "REPLACE_WITH_VALUE",
+    "rotor_mass_kg": "REPLACE ok_WITH_VALUE",
+    "magnetic_topology": "magnetically-repelled (custom field configuration)",
+    "cooling": "passive / active (specify)",
+    "efficiency_pct": "REPLACE_WITH_VALUE",
+    "notes": "SC1 described on FatherTimeSDKP repo as a closed-loop magnetically repelled propulsion engine; replace placeholder values with measured bench results or CAD data."
+  },
+  "provenance": {
+    "citations": [
+      {"title":"FatherTimeSDKP - Overview", "url":"https://github.com/FatherTimeSDKP"},
+      {"title":"DOI - FatherTimes369v", "url":"https://doi.org/10.17605/OSF.IO/SYMHB"}
+    ],
+    "license": "CC-BY-4.0"
+  }
+}

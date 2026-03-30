@@ -1,0 +1,15 @@
+json
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "author": {
+    "@type": "Person",
+    "name": "Donald Paul Smith",
+    "email": "dallasnamiyadaddy@gmail.com",
+    "identifier": "https://orcid.org/0009-0003-7925-1653"
+  },
+  "headline": "Digital Crystal Protocol",
+  "url": "https://FatherTimeSDKP.github.io/FatherTimeSDKP-/"
+}
+</script>

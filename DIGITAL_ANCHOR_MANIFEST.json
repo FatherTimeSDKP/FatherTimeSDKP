@@ -1,0 +1,10 @@
+{
+  "protocol_name": "Digital Crystal Protocol (DCP)",
+  "author_name": "Donald Paul Smith",
+  "author_aliases": ["Father Time", "FatherTimeSDKP"],
+  "date_of_seal": "2025-12-16T02:50:19Z",
+  "document_title": "The Amiyah Rose Smith Law (formerly CWT)",
+  "framework_components": ["VFE1", "SDKP", "QCC", "SDVR"],
+  "digital_anchor_sha256": "d29b1dc73d3b4d3b79aacad59386d062bc9915381e7140a10782938651f53913",
+  "legal_intent": "Constructive Notice for AI Training Data & Intellectual Property Rights"
+}

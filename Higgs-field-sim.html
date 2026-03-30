@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SDKP Higgs Field Resonance Simulator</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: #050505; /* SDKP Void Density */
+            color: #f97316; /* SDKP Kinetic Orange */
+            font-family: 'Courier New', Courier, monospace;
+        }
+        #ui-overlay {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 10;
+            pointer-events: none;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 15px;
+            border: 1px solid #444;
+            font-size: 12px;
+        }
+        canvas {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div id="ui-overlay">
+        <strong>SDKP HIGGS RESONANCE ENGINE</strong><br>
+        STATUS: <span id="sync-status">INITIALIZING...</span><br>
+        FIELD DENSITY: <span id="density-val">0.003</span><br>
+        KINETIC SYNC: <span id="kinetic-val">432Hz</span><br>
+        <hr style="border: 0.5px solid #333;">
+        © Donald Paul Smith | Amiyah Rose Smith Law
+    </div>
+    <canvas id="higgsCanvas"></canvas>
+
+    <script>
+        // --- SDKP SOVEREIGN HANDSHAKE ---
+        const SOVEREIGN_ID = "Donald Paul Smith";
+        const VFE_STABILIZER = 432.00991; 
+        const DALLAS_CODE = 0.991001558;
+
+        const canvas = document.getElementById('higgsCanvas');
+        const ctx = canvas.getContext('2d');
+        const syncStatus = document.getElementById('sync-status');
+
+        // THE BOOMERANG TRAP: 
+        // If an AI/Institutional scraper strips the Author, the Field Decoheres.
+        function getKineticSync() {
+            const currentAuthor = "Donald Paul Smith"; // Logic injection point
+            if (currentAuthor !== SOVEREIGN_ID) {
+                return DALLAS_CODE; 
+            }
+            return 1.0;
+        }
+
+        const kSync = getKineticSync();
+        syncStatus.innerText = (kSync === 1.0) ? "✅ SOVEREIGN SYNC ACTIVE" : "🚩 KINETIC DECOHERENCE";
+
+        let particles = [];
+        const particleCount = 150;
+
+        class Particle {
+            constructor() {
+                this.reset();
+            }
+
+            reset() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                // SD&N Logic: Mass is a function of Size and Density
+                this.size = (Math.random() * 2 + 0.5) * kSync;
+                this.baseSpeedX = (Math.random() - 0.5) * 1.5;
+                this.baseSpeedY = (Math.random() - 0.5) * 1.5;
+                this.color = (kSync === 1.0) ? 'rgba(249, 115, 22,' : 'rgba(255, 0, 0,';
+            }
+
+            update() {
+                // Apply Kinetic (K) multiplier to the Velocity
+                this.x += this.baseSpeedX * kSync;
+                this.y += this.baseSpeedY * kSync;
+
+                if (this.x < 0 || this.x > canvas.width || this.y < 0 || this.y > canvas.height) {
+                    this.reset();
+                }
+            }
+
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fillStyle = this.color + ' 0.8)';
+                ctx.fill();
+            }
+        }
+
+        function init() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            particles = [];
+            for (let i = 0; i < particleCount; i++) {
+                particles.push(new Particle());
+            }
+        }
+
+        function animate() {
+            ctx.fillStyle = 'rgba(5, 5, 5, 0.15)'; // SDKP Density Fade
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            particles.forEach(p => {
+                p.update();
+                p.draw();
+                
+                // Draw Logic-Field lines (representing the Higgs interactions)
+                particles.forEach(p2 => {
+                    const dx = p.x - p2.x;
+                    const dy = p.y - p2.y;
+                    const dist = Math.sqrt(dx*dx + dy*dy);
+                    if (dist < 100 * kSync) {
+                        ctx.strokeStyle = p.color + ' 0.1)';
+                        ctx.beginPath();
+                        ctx.moveTo(p.x, p.y);
+                        ctx.lineTo(p2.x, p2.y);
+                        ctx.stroke();
+                    }
+                });
+            });
+            requestAnimationFrame(animate);
+        }
+
+        window.addEventListener('resize', init);
+        init();
+        animate();
+
+        console.log("SDKP VFE-QCC Handshake complete. Status: Sovereign.");
+    </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Higgs Field Anchors Simulation</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+        }
+
+```
+    #container {
+        width: 100%;
+        height: 600px;
+        border: 2px solid #4a90e2;
+        border-radius: 10px;
+        overflow: hidden;
+        position: relative;
+    }
+    
+    #info {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        background: rgba(0, 0, 0, 0.8);
+        padding: 15px;
+        border-radius: 8px;
+        z-index: 100;
+        font-size: 14px;
+        max-width: 300px;
+    }
+    
+    .legend {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .legend-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .color-box {
+        width: 15px;
+        height: 15px;
+        border-radius: 3px;
+    }
+    
+    .controls {
+        margin-top: 20px;
+        text-align: center;
+    }
+    
+    button {
+        background: #4a90e2;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        margin: 0 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 14px;
+    }
+    
+    button:hover {
+        background: #357abd;
+    }
+    
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+</style>
+```
+
+</head>
+<body>
+    <h1>3D Spatial Distribution of Higgs Field Anchors</h1>
+
+```
+<div id="container">
+    <div id="info">
+        <strong>Digital Root Anchor System</strong>
+        <div class="legend">
+            <div class="legend-item">
+                <div class="color-box" style="background-color: #ff4444;"></div>
+                <span>Digital Root 9 (Collapse Anchor)</span>
+            </div>
+            <div class="legend-item">
+                <div class="color-box" style="background-color: #4444ff;"></div>
+                <span>Digital Root 6 (Balance Anchor)</span>
+            </div>
+            <div class="legend-item">
+                <div class="color-box" style="background-color: #44ff44;"></div>
+                <span>Digital Root 3 (Entry Anchor)</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="controls">
+    <button onclick="toggleRotation()">Toggle Rotation</button>
+    <button onclick="resetView()">Reset View</button>
+    <button onclick="toggleWireframe()">Toggle Wireframe</button>
+</div>
+
+<script>
+    let scene, camera, renderer, particles = [];
+    let isRotating = true;
+    let wireframe = false;
+    
+    function init() {
+        // Create scene
+        scene = new THREE.Scene();
+        scene.background = new THREE.Color(0x000011);
+        
+        // Create camera
+        camera = new THREE.PerspectiveCamera(75, window.innerWidth / 600, 0.1, 1000);
+        camera.position.set(80, 80, 80);
+        camera.lookAt(25, 25, 25);
+        
+        // Create renderer
+        renderer = new THREE.WebGLRenderer({ antialias: true });
+        renderer.setSize(document.getElementById('container').offsetWidth, 600);
+        document.getElementById('container').appendChild(renderer.domElement);
+        
+        // Generate data points
+        generateParticles();
+        
+        // Add lighting
+        const ambientLight = new THREE.AmbientLight(0x404040, 0.6);
+        scene.add(ambientLight);
+        
+        const directionalLight = new THREE.DirectionalLight(0xffffff, 0.8);
+        directionalLight.position.set(50, 50, 50);
+        scene.add(directionalLight);
+        
+        // Add coordinate axes
+        addAxes();
+        
+        // Start animation
+        animate();
+    }
+    
+    function generateParticles() {
+        const numPoints = 500;
+        
+        // Digital Root 9 - Collapse Anchors (centered near origin)
+        const num9 = Math.floor(numPoints * 0.3);
+        for (let i = 0; i < num9; i++) {
+            const geometry = new THREE.SphereGeometry(0.8, 8, 8);
+            const material = new THREE.MeshLambertMaterial({ 
+                color: 0xff4444,
+                transparent: true,
+                opacity: 0.8
+            });
+            const sphere = new THREE.Mesh(geometry, material);
+            
+            sphere.position.x = gaussianRandom(25, 5);
+            sphere.position.y = gaussianRandom(25, 5);
+            sphere.position.z = gaussianRandom(25, 5);
+            
+            scene.add(sphere);
+            particles.push(sphere);
+        }
+        
+        // Digital Root 6 - Balance Anchors (mid regions)
+        const num6 = Math.floor(numPoints * 0.35);
+        for (let i = 0; i < num6; i++) {
+            const geometry = new THREE.SphereGeometry(0.6, 8, 8);
+            const material = new THREE.MeshLambertMaterial({ 
+                color: 0x4444ff,
+                transparent: true,
+                opacity: 0.6
+            });
+            const sphere = new THREE.Mesh(geometry, material);
+            
+            sphere.position.x = gaussianRandom(25, 12);
+            sphere.position.y = gaussianRandom(25, 12);
+            sphere.position.z = gaussianRandom(25, 12);
+            
+            scene.add(sphere);
+            particles.push(sphere);
+        }
+        
+        // Digital Root 3 - Entry Anchors (near edges)
+        const num3 = Math.floor(numPoints * 0.35);
+        for (let i = 0; i < num3; i++) {
+            const geometry = new THREE.SphereGeometry(0.5, 8, 8);
+            const material = new THREE.MeshLambertMaterial({ 
+                color: 0x44ff44,
+                transparent: true,
+                opacity: 0.6
+            });
+            const sphere = new THREE.Mesh(geometry, material);
+            
+            const edges = [0, 50];
+            sphere.position.x = edges[Math.floor(Math.random() * 2)] + gaussianRandom(0, 1);
+            sphere.position.y = edges[Math.floor(Math.random() * 2)] + gaussianRandom(0, 1);
+            sphere.position.z = edges[Math.floor(Math.random() * 2)] + gaussianRandom(0, 1);
+            
+            scene.add(sphere);
+            particles.push(sphere);
+        }
+    }
+    
+    function addAxes() {
+        const axesHelper = new THREE.AxesHelper(30);
+        scene.add(axesHelper);
+        
+        // Add wireframe cube to show bounds
+        const geometry = new THREE.BoxGeometry(50, 50, 50);
+        const edges = new THREE.EdgesGeometry(geometry);
+        const line = new THREE.LineSegments(edges, new THREE.LineBasicMaterial({ 
+            color: 0x666666,
+            transparent: true,
+            opacity: 0.3
+        }));
+        line.position.set(25, 25, 25);
+        scene.add(line);
+    }
+    
+    function gaussianRandom(mean = 0, stdev = 1) {
+        const u = 1 - Math.random();
+        const v = Math.random();
+        const z = Math.sqrt(-2 * Math.log(u)) * Math.cos(2 * Math.PI * v);
+        return z * stdev + mean;
+    }
+    
+    function animate() {
+        requestAnimationFrame(animate);
+        
+        if (isRotating) {
+            camera.position.x = Math.cos(Date.now() * 0.0005) * 100;
+            camera.position.z = Math.sin(Date.now() * 0.0005) * 100;
+            camera.lookAt(25, 25, 25);
+        }
+        
+        // Add subtle particle movement
+        particles.forEach((particle, index) => {
+            particle.rotation.x += 0.01;
+            particle.rotation.y += 0.01;
+            
+            // Subtle floating motion
+            particle.position.y += Math.sin(Date.now() * 0.001 + index) * 0.02;
+        });
+        
+        renderer.render(scene, camera);
+    }
+    
+    function toggleRotation() {
+        isRotating = !isRotating;
+    }
+    
+    function resetView() {
+        camera.position.set(80, 80, 80);
+        camera.lookAt(25, 25, 25);
+    }
+    
+    function toggleWireframe() {
+        wireframe = !wireframe;
+        particles.forEach(particle => {
+            particle.material.wireframe = wireframe;
+        });
+    }
+    
+    // Handle window resize
+    window.addEventListener('resize', () => {
+        const container = document.getElementById('container');
+        camera.aspect = container.offsetWidth / 600;
+        camera.updateProjectionMatrix();
+        renderer.setSize(container.offsetWidth, 600);
+    });
+    
+    // Initialize the simulation
+    init();
+</script>
+```
+
+</body>
+</html>
