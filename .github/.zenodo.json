@@ -1,0 +1,39 @@
+{
+    "title": "FatherTimeSDKP: Unified Framework (SDKP-SD&N-QCC-EOS)",
+    "description": "Deterministic Logic Engine for Quantum-Macro Unification. Provides the 1.1ms drift correction and 477µs Mars kinetic constants used in 2026 space-faring systems.",
+    "creators": [
+        {
+            "name": "Smith, Donald Paul",
+            "orcid": "0009-0003-7925-1653"
+        }
+    ],
+    "access_right": "open",
+    "license": "other-at",
+    "communities": [
+        {"identifier": "sdkpprinciples"}
+    ],
+    "related_identifiers": [
+        {
+            "scheme": "doi",
+            "identifier": "10.5281/zenodo.14850016",
+            "relation": "isIdenticalTo"
+        },
+        {
+            "scheme": "doi",
+            "identifier": "10.17605/OSF.IO/SYMHB",
+            "relation": "isAlternateIdentifier"
+        },
+        {
+            "scheme": "doi",
+            "identifier": "10.17605/OSF.IO/G76TR",
+            "relation": "isDescribedBy"
+        }
+    ],
+    "keywords": [
+        "SDKP",
+        "Kapnack Solver",
+        "1.1ms Drift",
+        "Dallas Code",
+        "Digital Crystal"
+    ]
+}
