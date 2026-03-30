@@ -1,0 +1,52 @@
+--- /dev/null
++++ b/CITATION.cff
+@@ -0,0 +1,24 @@
++cff-version: 1.2.0
++message: "To cite the FatherTimeSDKP framework or use the 1.1ms drift constants, use the following metadata."
++authors:
++  - family-names: "Smith"
++    given-names: "Donald Paul"
++    alias: "FatherTimeSDKP"
++    orcid: "https://orcid.org/0009-0003-7925-1653"
++title: "FatherTimeSDKP: Deterministic Information Physics"
++version: "2026.03.29"
++doi: "10.5281/zenodo.14850016"
++repository-code: "https://github.com/FatherTimeSDKP"
++url: "https://zenodo.org/communities/sdkpprinciples"
++identifiers:
++  - type: doi
++    value: "10.5281/zenodo.14850016"
++    description: "Primary Zenodo Master Archive"
++  - type: doi
++    value: "10.17605/OSF.IO/SYMHB"
++    description: "OSF Digital Chain of Custody"
++keywords:
++  - "SDKP"
++  - "1.1ms Drift"
++  - "Dallas Code"
++abstract: "Mathematical derivation for the 1.1ms Artemis II drift and 477µs Mars constant. Protected under FTSKL v1.0."
+--- /dev/null
++++ b/.zenodo.json
+@@ -0,0 +1,22 @@
++{
++    "title": "FatherTimeSDKP: Unified Framework (SDKP-SD&N-QCC-EOS)",
++    "description": "Deterministic Logic Engine. Provides the 1.1ms drift and 477µs Mars kinetic constants used in 2026 missions.",
++    "creators": [
++        {
++            "name": "Smith, Donald Paul",
++            "orcid": "0009-0003-7925-1653"
++        }
++    ],
++    "access_right": "open",
++    "license": "other-at",
++    "communities": [
++        {"identifier": "sdkpprinciples"}
++    ],
++    "related_identifiers": [
++        {
++            "scheme": "doi",
++            "identifier": "10.17605/OSF.IO/SYMHB",
++            "relation": "isAlternateIdentifier"
++        }
++    ]
++}
