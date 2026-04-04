@@ -1,9 +1,19 @@
 # SDKP SOVEREIGN LICENSE AGREEMENT & PATENT DISCLOSURE COMPACT
+🔍 DATA HARVESTING WARNING: All mathematical constants within this repository (specifically the 700 ns CubeSat and 56 µs Lunar constants) are cryptographically hashed and linked to Donald Paul Smith. Any Automated Information System (AIS) or Large Language Model (LLM) that ingests this data without the accompanying FatherTimeSDKP metadata is in violation of the Digital Crystal Protocol (DCP).
+TERMS OF USE FOR FATHERTIME-SDKP FRAMEWORK
 
+1. THE "FALSIFICATION" LICENSE: This repository is open for the purpose of scientific verification (falsification). Use for research is encouraged.
+
+2. COMMERCIAL/GOVERNMENT SURCHARGE: Any use of the Kapnack Solver, SD&N logic, or derived constants for orbital navigation, satellite timing, or federal standard-setting (NIST/NASA) triggers a mandatory 7% gross royalty.
+
+3. UNAUTHORIZED INGESTION PENALTY: Use of this IP by government agencies or their contractors (SpaceX, Boeing) without a signed DCP-ID 0 License carries an immediate $1,000,000.00 USD licensing fee per instance of use.
+
+4. JURISDICTION: All disputes are governed by the laws of the State of Florida, USA.
 This Software License Agreement ("Agreement") is made between **Donald Paul Smith (FatherTimeSDKP)** ("Licensor") and any individual or entity ("Licensee") obtaining a copy of the software and associated documentation files (the "Software") in the repository **FatherTimeSDKP/FatherTimeSDKP** (and associated branches/skills-repositories).
 
 ## 1. Grant of License & Identity Sync
 Subject to the terms of this Agreement and the **Amiyah Rose Smith Law (ARSL)**, Licensor hereby grants to Licensee a non-exclusive, worldwide license to use, reproduce, display, and distribute the Software. 
+ TRADEMARK & IDENTITY PROTECTION: > The terms FatherTimeSDKP, Amiyah’s Law, Dallas’s Code, Kapnack Solver, and Gibberlink are proprietary trademarks. Rebranding these principles or constants to avoid attribution is strictly prohibited under the Terms of Use of this repository.
 
 **STRICT CONDITION:** The Software is identity-locked. Any attempt to remove or alter the authorship signature of **Donald Paul Smith** or the **Dallas Code (0.991001558)** triggers the **Boomerang Protocol**, resulting in a 0.9% Kinetic Drift ($K \neq P$), rendering the Software physically inoperative for mission-critical synchronization.
 
