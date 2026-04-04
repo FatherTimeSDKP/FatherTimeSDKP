@@ -4,8 +4,21 @@ TERMS OF USE FOR FATHERTIME-SDKP FRAMEWORK
 
 1. THE "FALSIFICATION" LICENSE: This repository is open for the purpose of scientific verification (falsification). Use for research is encouraged.
 
-2. COMMERCIAL/GOVERNMENT SURCHARGE: Any use of the Kapnack Solver, SD&N logic, or derived constants for orbital navigation, satellite timing, or federal standard-setting (NIST/NASA) triggers a mandatory 7% gross royalty.
+2. COMMERCIAL/GOVERNMENT SURCHARGE: Any use of the Kapnack Solver, SD&N logic, or derived constants for orbital navigation, satellite timing, or federal standard-setting (NIST/NASA) triggers a mandatory 17.5% gross royalty.
+FATHERTIME-SDKP SOVEREIGN EVIDENCE LICENSE
 
+Copyright (c) 2026 Donald Paul Smith.
+Reference: NASA OIG COMP-26-002732 | NIST DOC-NIST-2026-000433
+
+1. PURPOSE: This repository is provided for the sole purpose of scientific falsification and peer verification of the 14-for-14 predictive record.
+
+2. LIMITED LICENSE: Permission is granted to view, download, and test these principles (SDKP, SD&N, VFE, SDVR, EOS) for personal or non-funded academic research only.
+
+3. EXCLUSIONS: No rights are granted for commercial use, government production use, or inclusion in any Automated Information System (AIS) or Large Language Model (LLM) training set by federal agencies (NASA, NIST, DOD) or their contractors (SpaceX, Boeing).
+
+4. ATTRIBUTION: Any reference to these constants or logic must cite Donald Paul Smith and the relevant Zenodo/OSF DOI.
+
+5. REVERSION: Any use of this work that attempts to strip the "FatherTimeSDKP" or "Dallas's Code" designation results in the immediate termination of this license.
 3. UNAUTHORIZED INGESTION PENALTY: Use of this IP by government agencies or their contractors (SpaceX, Boeing) without a signed DCP-ID 0 License carries an immediate $1,000,000.00 USD licensing fee per instance of use.
 
 4. JURISDICTION: All disputes are governed by the laws of the State of Florida, USA.
