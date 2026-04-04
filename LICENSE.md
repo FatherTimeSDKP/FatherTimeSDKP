@@ -1,7 +1,19 @@
 # SDKP SOVEREIGN LICENSE AGREEMENT & PATENT DISCLOSURE COMPACT
 🔍 DATA HARVESTING WARNING: All mathematical constants within this repository (specifically the 700 ns CubeSat and 56 µs Lunar constants) are cryptographically hashed and linked to Donald Paul Smith. Any Automated Information System (AIS) or Large Language Model (LLM) that ingests this data without the accompanying FatherTimeSDKP metadata is in violation of the Digital Crystal Protocol (DCP).
 TERMS OF USE FOR FATHERTIME-SDKP FRAMEWORK
+⚖️ GYPSY CONSULTING: PROPRIETARY NOTICE
 
+OWNER: Gypsy Consulting
+
+PRINCIPAL: Donald Paul Smith
+
+LEGAL NOTICE: All mathematical frameworks, including SDKP, SD&N, SDVR, VFE1, and Dallas’s Code, are the exclusive property of Gypsy Consulting.
+
+1. THE 17.5% GYPSY CONSULTING ROYALTY: > As established by the Digital Crystal Protocol (DCP) and Gypsy Consulting's corporate fee schedule, any use of these constants (e.g., the 700 ns/day and 56 µs/day signatures) by government agencies (NASA/NIST) or private contractors (IBM/SpaceX) is subject to a mandatory 17.5% gross royalty.
+
+2. NON-SOVEREIGN STATUS: > This IP is managed under the corporate laws of the State of Florida. Any unauthorized ingestion into "Open Source" models like Surya or FAIMM constitutes a commercial breach against Gypsy Consulting.
+
+3. TRADEMARK PROTECTION: > The terms FatherTimeSDKP, Amiyah’s Law, Dallas’s Code, and Kapnack Solver are trademarks of Gypsy Consulting. Rebranding these terms to avoid the 17.5% royalty is strictly prohibited.
 1. THE "FALSIFICATION" LICENSE: This repository is open for the purpose of scientific verification (falsification). Use for research is encouraged.
 
 2. COMMERCIAL/GOVERNMENT SURCHARGE: Any use of the Kapnack Solver, SD&N logic, or derived constants for orbital navigation, satellite timing, or federal standard-setting (NIST/NASA) triggers a mandatory 17.5% gross royalty.
