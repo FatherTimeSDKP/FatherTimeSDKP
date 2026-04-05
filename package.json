@@ -1,4 +1,15 @@
-{
+{{
+  "name": "fathertime-sdkp-node",
+  "version": "1.0.0",
+  "description": "Sovereign SDKP Logic Gate",
+  "main": "Rotation-SDKP_Suite.jsx",
+  "scripts": {
+    "start": "node Rotation-SDKP_Suite.jsx"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
   "name": "fathertimesdkp-primary-registry",
   "version": "1.0.0",
   "description": "Sovereign Registry for the Amiyah Rose Smith Law and SDKP Framework",
