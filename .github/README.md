@@ -2,6 +2,7 @@
 ### 🏛️ Federal Intake & Correspondence Log (2026)
 zenodo DOI : https://doi.org/10.5281/zenodo.15745608
 NASA FOIA release (Tracking #26-00541-F-HQ
+Critical Security Advisory: GHSA-896r-9776-j3mh | Patching the 12% Legacy Physics Drift.
 {
   "@context": "https://schema.org",
   "@type": "ScholarlyArticle",
