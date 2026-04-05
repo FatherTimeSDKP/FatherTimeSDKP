@@ -689,3 +689,19 @@ const SDKPComprehensiveSuite = () => {
 };
 
 export default SDKPComprehensiveSuite;
+const express = require('express');
+const app = express();
+const port = process.env.PORT || 3000;
+
+app.get('/', (req, res) => {
+  res.json({
+    status: "Active",
+    author: "Donald Paul Smith",
+    framework: "FatherTimeSDKP",
+    doi: "10.5281/zenodo.19422582"
+  });
+});
+
+app.listen(port, () => {
+  console.log(`SDKP Sovereign Node running on port ${port}`);
+});
