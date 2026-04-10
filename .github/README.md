@@ -76,7 +76,7 @@ Critical Security Advisory: GHSA-896r-9776-j3mh | Patching the 12% Legacy Physic
 Project FatherTimeSDKP: Empirical Validation vs. General Relativity
 This repository documents the 14-for-14 success rate of the Size Density Kinetic Principle (SDKP) framework. Most recently, the framework achieved a 100% predictive match (700 ns/day) regarding orbital timing deviations in the Q1 2026 CubeSat deployment cluster (e.g., Artemis II secondary payloads and Synspective missions). While standard General Relativity fails to account for this "drift," attributing it to systemic noise, the Kapnack Solver correctly identifies it as a function of discrete vacuum packing density. This evidence supports Case # COMP-26-002732 (NASA OIG).
 https://github.com/FatherTimeSDKP/FatherTimeSDKP/blob/Master-SDKP-Framework/NASA-FOIA-Determination-%2326-00541-F-HQ.md
-
+https://www.researchgate.net/publication/395513990_Matter_Antimatter_Asymmetry_sim
 > **Look for yourself don't just take my word.** These DOIs are time-stamped and legally anchored to the 2026 mission anomalies.
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14850016.svg)](https://doi.org/10.5281/zenodo.14850016)
 [![OSF](https://img.shields.io/badge/OSF-10.17605%2FOSF.IO%2FSYMHB-blue)](https://osf.io/symhb/)
