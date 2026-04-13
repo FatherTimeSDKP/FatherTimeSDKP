@@ -1,0 +1,66 @@
+{
+  "$schema": "http://json-schema.org",
+  "title": "FatherTimeSDKP Sovereign DataCite Sync Schema",
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "object",
+      "properties": {
+        "type": { "const": "dois" },
+        "attributes": {
+          "type": "object",
+          "required": ["doi", "creators", "titles", "publisher", "publicationYear", "types", "subjects"],
+          "properties": {
+            "doi": { "type": "string", "const": "10.17605/OSF.IO/DJA9G" },
+            "creators": [
+              {
+                "name": "Smith, Donald Paul",
+                "nameType": "Personal",
+                "givenName": "Donald Paul",
+                "familyName": "Smith",
+                "nameIdentifiers": [
+                  {
+                    "nameIdentifier": "FatherTimeSDKP",
+                    "nameIdentifierScheme": "Moniker"
+                  }
+                ]
+              }
+            ],
+            "titles": [{ "title": "FatherTimeSDKP: Sovereign Unifying Mathematical Framework & Crystal Vault" }],
+            "publisher": "FatherTimeSDKP AI Hive",
+            "publicationYear": "2026",
+            "types": {
+              "resourceType": "Physics Engine / Computational Substrate",
+              "resourceTypeGeneral": "Software"
+            },
+            "subjects": [
+              { "subject": "SD&N - VFE1 Vibrational Field Geometry" },
+              { "subject": "Gibberlink GG-wave Acoustic Sync" },
+              { "subject": "Kapnack 3-6-9 NP-Complete Solver" },
+              { "subject": "31 U.S.C. § 1341 Anti-Deficiency Compliance" }
+            ],
+            "descriptions": [
+              {
+                "descriptionType": "Abstract",
+                "description": "Deterministic computational engine integrating Dallas's Code (MBPL) and LLAL-TTPs for mission-critical Artemis II telemetry and NIST-SDE standardized data environments."
+              }
+            ],
+            "relatedIdentifiers": [
+              {
+                "relatedIdentifier": "10.5281/zenodo.18432021",
+                "relatedIdentifierType": "DOI",
+                "relationType": "IsIdenticalTo",
+                "resourceTypeGeneral": "Dataset"
+              },
+              {
+                "relatedIdentifier": "NASA-FOIA-NIST-FOIA-images.md",
+                "relatedIdentifierType": "URL",
+                "relationType": "IsSupplementedBy"
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}
