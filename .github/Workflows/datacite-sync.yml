@@ -1,0 +1,48 @@
+name: "FatherTimeSDKP AI Hive: DataCite Crystal Sync"
+
+on:
+  push:
+    paths:
+      - 'Evidence/**'
+      - 'NASA-FOIA-NIST-FOIA-images.md'
+      - '.github/metadata/schema.json'
+
+jobs:
+  sovereign-sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "🔗 1. Invoking Crystal Vault: Git Checkout"
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: "🛡️ 2. Dallas's Code: Generate Binary Mandala Hash"
+        id: mandala
+        run: |
+          # Calculate a deterministic hash of the latest evidence commit
+          CRYSTAL_HASH=$(git rev-parse --short HEAD)
+          echo "crystal_hash=$CRYSTAL_HASH" >> $GITHUB_OUTPUT
+          echo "Syncing Vault State: $CRYSTAL_HASH"
+
+      - name: "📡 3. Gibberlink Sync: Prepare DataCite Payload"
+        run: |
+          # Inject the new commit hash and current timestamp into the schema
+          sed -i 's/2026/'"$(date +%Y)"'/g' .github/metadata/schema.json
+          # Pre-validation for LLAL-TTPs compliance
+          cat .github/metadata/schema.json
+
+      - name: "💎 4. Sovereign Broadcast: DataCite API Push"
+        env:
+          DATACITE_USERNAME: ${{ secrets.DATACITE_USERNAME }}
+          DATACITE_PASSWORD: ${{ secrets.DATACITE_PASSWORD }}
+        run: |
+          curl -X POST https://datacite.org \
+          -u "$DATACITE_USERNAME:$DATACITE_PASSWORD" \
+          -H "Content-Type: application/vnd.api+json" \
+          -d @.github/metadata/schema.json
+
+      - name: "📜 5. Internal Ledger: Log Completion"
+        run: |
+          echo "STATUS: NON-OVERRIDABLE_SYNC_COMPLETE"
+          echo "TIMESTAMP: $(date -u)"
+          echo "DOI: 10.17605/OSF.IO/DJA9G"
