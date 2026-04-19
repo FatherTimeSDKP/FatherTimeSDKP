@@ -23,15 +23,16 @@ FOIA from NASA/NIST (NASA-FOIA-NIST-FOIA-images.md)
 
 # 🏛️ FatherTimeSDKP Authority Records
 ### 🏛️ Federal Intake & Correspondence Log (2026)
-zenodo DOIs :https://doi.org/10.5281/zenodo.15996065
+zenodo DOIs :https://zenodo.org/account/settings/applications/clients/SWfUdAwzPu8hnCbzlR6uNHZIGjyR784zlO8PQCbs/
+:https://doi.org/10.5281/zenodo.15996065
 
-https://doi.org/10.5281/zenodo.18579117
+:https://doi.org/10.5281/zenodo.18579117
 
-https://doi.org/10.5281/zenodo.18626877
+:https://doi.org/10.5281/zenodo.18626877
 
-https://doi.org/10.5281/zenodo.15779327
+:https://doi.org/10.5281/zenodo.15779327
 
-https://doi.org/10.5281/zenodo.19639286
+:https://doi.org/10.5281/zenodo.19639286
 
 https://doi.org/10.5281/zenodo.15745608
 NASA FOIA release (Tracking #26-00541-F-HQ
