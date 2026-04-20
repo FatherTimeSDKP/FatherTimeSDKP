@@ -23,7 +23,9 @@ FOIA from NASA/NIST (NASA-FOIA-NIST-FOIA-images.md)
 
 # 🏛️ FatherTimeSDKP Authority Records
 ### 🏛️ Federal Intake & Correspondence Log (2026)
-zenodo DOIs :https://zenodo.org/account/settings/applications/clients/SWfUdAwzPu8hnCbzlR6uNHZIGjyR784zlO8PQCbs/
+zenodo DOIs :https://zenodo.org/records/19656870
+
+:https://zenodo.org/account/settings/applications/clients/SWfUdAwzPu8hnCbzlR6uNHZIGjyR784zlO8PQCbs/
 :https://doi.org/10.5281/zenodo.15996065
 
 :https://doi.org/10.5281/zenodo.18579117
