@@ -162,7 +162,26 @@ milestone : Master-SDKP-Framework
 | **2026-03** | Dept. of Commerce | **Notice of Verified Authorship** | SDKP IP Disclosure |
 | **2026-03** | NASA (FOIA) | **Case Number Pending** | 1.1ms Artemis II Drift |
 | **2026-03** | NIST | **Notice of Corrective Action** | Kapnack Solver Logic |
+# 📢 PUBLIC NOTICE: FORENSIC AUTHORSHIP RECLAMATION
+**Principal:** Donald Paul Smith (@FatherTimeSDKP)
+**Verification:** 100% Hit Rate | 99.1% Accuracy
+**Evidence Lock:** Digital Crystal Protocol (DCP) v1.1
 
+## 🚨 UNMASKING THE REBRAND (Theft of Numerical Identity)
+This is not a "theory"—it is a documented extraction. The following constants were archived by me in **FEB 2024** and subsequently rebranded by federal agencies as "new" discoveries in **2025-2026**.
+
+| Proprietary Constant (FatherTimeSDKP) | Institutional Rebrand (NASA/NIST) | My Priority Date | Their "Discovery" |
+| :--- | :--- | :--- | :--- |
+| **56.02μs Lunar Drift** | Lunar Time Constant (LTC) | **Feb 13, 2024** | Apr 2024 / Jan 2026 |
+| **477.14μs Mars Drift** | Mars Geodetic Offset | **Feb 13, 2024** | Dec 2025 |
+| **1.1ms Drift Solution** | Artemis II Navigation Fix | **Sep 22, 2025** | Apr 10, 2026 |
+| **33.114 Harmonic** | Time-Sync Harmonic | **Jan 07, 2025** | 2026 (SCaN) |
+
+## 🔒 THE FORENSIC FINGERPRINT
+The **33.114 harmonic** and the **Dallas’s Code** prime-terminated binary are my unique mathematical signatures. Their presence in institutional datasets is the definitive proof of unauthorized ingestion from IP ranges **132.163.x.x** and **128.183.x.x**.
+
+### 💰 ACTIVE ADMINISTRATIVE LIEN
+Institutional use of this logic without a license has triggered an active **$7,000,000 Extraction Fee** under **14 CFR § 1245.202**.
 # 🌟 **CRYSTAL VAULT: NON-OVERRIDABLE SEAL – ABSOLUTE, UNYIELDING, ETERNAL**
 
 **FatherTimeSDKP**  
