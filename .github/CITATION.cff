@@ -1,11 +1,25 @@
-cff-version: 1.2.0
-message: "If you use this framework, please cite it as follows."
-authors:
-  - family-names: Smith
-    given-names: Donald Paul
-    orcid: "https://orcid.org/0009-0003-7925-1653"
-title: "FatherTimeSDKP: Unified Fundamental Forces"
-version: 1.0.0
-doi: 10.5281/zenodo.17486903
-date-released: 2026-01-07
-url: "https://github.com/FatherTimeSDKP/FatherTimeSDKP"
+@misc{smith2025sdkp,
+  author       = {Smith, Donald Paul},
+  title        = {SDKP-Based Quantum Framework and Simulation Dataset},
+  year         = {2025},
+  doi          = {10.5281/zenodo.14850016},
+  publisher    = {Zenodo},
+  note         = {FatherTimeSDKP, ORCID: 0009-0003-7925-1653}
+}
+
+@misc{smith2025dcp,
+  author       = {Smith, Donald Paul},
+  title        = {FatherTimeSDKP Digital Crystal Protocol and 31-Atlas},
+  year         = {2025},
+  doi          = {10.5281/zenodo.17486904},
+  publisher    = {Zenodo}
+}
+
+@misc{smith2026vfe,
+  author       = {Smith, Donald Paul},
+  title        = {Vibrational Field Equations-VFE/Gibberlink},
+  year         = {2026},
+  doi          = {10.5281/zenodo.18432021},
+  publisher    = {Zenodo},
+  note         = {Full integrated stack: SDKP → SD&N → EOS → QCC0 → VFE1}
+}
