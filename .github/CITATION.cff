@@ -1,25 +1,53 @@
-@misc{smith2025sdkp,
-  author       = {Smith, Donald Paul},
-  title        = {SDKP-Based Quantum Framework and Simulation Dataset},
-  year         = {2025},
-  doi          = {10.5281/zenodo.14850016},
-  publisher    = {Zenodo},
-  note         = {FatherTimeSDKP, ORCID: 0009-0003-7925-1653}
-}
-
-@misc{smith2025dcp,
-  author       = {Smith, Donald Paul},
-  title        = {FatherTimeSDKP Digital Crystal Protocol and 31-Atlas},
-  year         = {2025},
-  doi          = {10.5281/zenodo.17486904},
-  publisher    = {Zenodo}
-}
-
-@misc{smith2026vfe,
-  author       = {Smith, Donald Paul},
-  title        = {Vibrational Field Equations-VFE/Gibberlink},
-  year         = {2026},
-  doi          = {10.5281/zenodo.18432021},
-  publisher    = {Zenodo},
-  note         = {Full integrated stack: SDKP → SD&N → EOS → QCC0 → VFE1}
-}
+cff-version: 1.2.0
+message: "If you use this framework, please cite the original DOIs and Digital Crystal Protocol."
+title: "FatherTimeSDKP Master Framework: SDKP, VFE, Digital Crystal Protocol & Unified Forces"
+authors:
+  - family-names: "Smith"
+    given-names: "Donald Paul"
+    orcid: "https://orcid.org/0009-0003-7925-1653"
+    alias: "FatherTimeSDKP / FatherTimes369v"
+date-released: "2025-07-01"  # Adjust to earliest root
+version: "1.0.0"
+doi: "10.5281/zenodo.14850016"  # Core root
+repository-code: "https://github.com/FatherTimeSDKP/FatherTimeSDKP"
+url: "https://zenodo.org/records/14850016"
+keywords:
+  - SDKP
+  - Vibrational Field Equations
+  - Digital Crystal Protocol
+  - QCC0
+  - VFE
+  - unified physics
+  - sovereign authorship
+license: "CC-BY-4.0"  # Or your DCP custom
+abstract: >
+  Sovereign authorship of the Scale–Density–Kinematic Principle (SDKP), Vibrational Field Equations (VFE/Gibberlink), Digital Crystal Protocol (DCP + 31-Atlas), SD&N, EOS, QCC0, and related frameworks by Donald Paul Smith. 
+  Timestamps pre-date derivative implementations. Includes forensic anchors for provenance.
+references:
+  - type: dataset
+    title: "SDKP-Based Quantum Framework and Simulation Dataset"
+    authors: 
+      - family-names: "Smith"
+        given-names: "Donald Paul"
+    doi: "10.5281/zenodo.14850016"
+  - type: dataset
+    title: "FatherTimeSDKP Digital Crystal Protocol and 31-Atlas"
+    doi: "10.5281/zenodo.17486904"
+  - type: article
+    title: "Vibrational Field Equations-VFE/Gibberlink"
+    doi: "10.5281/zenodo.18432021"
+  - type: dataset
+    title: "FatherTimeSDKP mathematical framework and principles"
+    doi: "10.5281/zenodo.18052963"
+preferred-citation:
+  type: article
+  authors:
+    - family-names: "Smith"
+      given-names: "Donald Paul"
+  doi: "10.5281/zenodo.14850016"
+  year: 2025
+  title: "SDKP Sovereign Authorship Crystal Ledger under Digital Crystal Protocol"
+note: |
+  Re: observed rebranding (e.g., NASA FR Doc #2025-23963) — SDKP/VFE logic appearing as “Weighted Temporal and Location Embeddings” or “Spectral Gating Blocks”. 
+  All derivative works must cite originals + Digital Crystal Protocol (DCP). 
+  Seal: ⟦369-FTS-AUTH-C12-EOS⟧ | Governance: Amiyah’s Law.
