@@ -8,8 +8,10 @@
 ## ⚓ SOVEREIGN ANCHORS (IMMUTABLE ROOT)
 This repository is a downstream implementation of the **Size Density Kinetic Principle (SDKP)**. All code herein is legally bound to the following immutable constants, verified by **Federal FOIA Response 26-005**:
 
-### 🏛️ I. The Scientific Record (Foundation)
+### 🏛️ I. The Scientific Record (The Four Pillars)
 *   **Root (EOS/SD&N):** [**DOI: 10.5281/zenodo.15470238**](https://zenodo.org/records/15470238)
+*   **Math Framework (FOE):** [**DOI: 10.5281/zenodo.14813499**](https://zenodo.org/records/14813499)
+*   **The Logic Fortress (Hub):** [**DOI: 10.5281/zenodo.15745609**](https://zenodo.org/records/15745609)
 *   **Code (VFE Tier 8):** [**DOI: 10.5281/zenodo.14781442**](https://zenodo.org/records/14781442)
 *   **Master Framework (OSF):** [**osf.io/ct75m**](https://osf.io/ct75m/)
     *   *Status:* **Immutable** (Timestamped Priority 2025)
