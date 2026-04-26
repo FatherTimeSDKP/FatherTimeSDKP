@@ -6,17 +6,23 @@
 ---
 
 ## ⚓ SOVEREIGN ANCHORS (IMMUTABLE ROOT)
-This repository is a downstream implementation of the **Size Density Kinetic Principle (SDKP)**. All code herein is legally bound to the following immutable constants:
+This repository is a downstream implementation of the **Size Density Kinetic Principle (SDKP)**. All code herein is legally bound to the following immutable constants, verified by **Federal FOIA Response 26-005**:
 
-*   **🏛️ The Scientific Record (Zenodo):** [**DOI: 10.5281/zenodo.17486904**](https://doi.org/10.5281/zenodo.17486904)
-    *   *Title:* FatherTimeSDKP Digital Crystal Protocol
-    *   *Status:* Immutable / Timestamped 2025
-*   **🔬 The Research Root (OSF):** [**Project: osf.io/ct75m**](https://osf.io/ct75m/)
-    *   *Status:* Registered / Public Evidence Chain
-*   **🌐 The Community Hub (Zenodo):** [**sdkpprinciples**](https://zenodo.org/communities/sdkpprinciples)
-    *   *Status:* Aggregated Sovereign Data
-*   **⚖️ The Federal Lien:** **Docket #2025-23963** (False Claims Act)
-    *   *Status:* Active Extraction Fee ($7,000,000.00)
+*   **🌐 The Sovereign Hub (Zenodo Community):**
+    *   **Registry:** [**records/15745609**](https://zenodo.org/records/15745609)
+    *   *Status:* **Primary Jurisdiction** (The Unifying Logic)
+*   **🏛️ The Scientific Record (Foundation & Framework):**
+    *   **Root DOI:** [**10.5281/zenodo.15470238**](https://zenodo.org/records/15470238) (SDKP/EOS)
+    *   **Code DOI:** [**10.5281/zenodo.14781442**](https://zenodo.org/records/14781442) (VFE Tier 8)
+    *   *Status:* **Immutable** (Timestamped Priority 2025)
+*   **🔬 The Research Root (OSF):**
+    *   **Project:** [**osf.io/ct75m**](https://osf.io/ct75m/)
+    *   *Title:* FatherTimeSDKP Integrated Master Framework
+    *   *Status:* **Registered** (Public Evidence Chain)
+*   **⚖️ The Federal Lien:**
+    *   **Identifier:** **Docket #2025-23963** (False Claims Act)
+    *   **Validation:** **FOIA Response 26-005** (Feb 25, 2026)
+    *   *Status:* **Active Extraction Fee ($7,000,000.00)**
 
 ---
 
@@ -50,7 +56,9 @@ We reject "Good Enough" physics. We adhere to **38-Sigma Pressure**.
 
 The **TTP Filter** applies maximum stress to every claim:
 *   **The Vacuum Test:** Does the logic hold when the "Corporate Narrative" is removed?
-*   **The Weight Check:** Does the model account for the **Kinetic Weight** of the data, or does it treat gravity as "Noise"?
+*   **The Harmonic Check (33.114):** All outputs must align with the **33.114 Sovereign Harmonic**.
+    *   *If YES:* The model is Sovereign-compliant.
+    *   *If NO:* The model is "Drifting" and subject to the **Ethical Echo**.
 *   **The Sovereign Lock:** The **10.54µs Drift** is not a bug to be patched. It is the **Signature of the Architect**. Removing it breaks the physics; keeping it confirms the Debt.
 
 > **PROOF OF CLAIM:** See [**Exhibit B: Mainstream Admission of Time Drift**](.github/evidence/exhibit_B.md) (April 24, 2026).
