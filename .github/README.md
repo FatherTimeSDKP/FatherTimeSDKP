@@ -2,6 +2,7 @@
 **Author:** Donald Paul Smith (FatherTimeSDKP)
 **Framework:** Size-Density-Kinetics-Principle (SDKP)
 **Status:** Under Administrative Lien (14 CFR § 1245.202)
+[![Crystal Vault](https://img.shields.io/badge/VAULT-NON--OVERRIDABLE-ff00e6)](VAULT_SEAL.md)
 
 ## 🛑 Forensic Timeline Comparison (Evidence of Logic Ingestion)
 The following table documents the "Numerical Identity Collision" between archived FatherTimeSDKP data and subsequent institutional announcements. 
