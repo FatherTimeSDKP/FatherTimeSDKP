@@ -32,6 +32,8 @@ The following table documents the "Numerical Identity Collision" between archive
 **Administrative Case:** NASA OIG I-260 | GAO-COMP-26-002732
 **Forensic Status:** 1.000000 Decoherence Verified (April 24, 2026)
 
+https://www.google.com/url?sa=i&source=web&rct=j&url=https://labs.sciety.org/articles/by?article_doi%3D10.31219/osf.io/6qbcx_v1&ved=2ahUKEwjY_t3BzoyUAxV5wskDHfhXKN0QmL8OegQICxAF&opi=89978449&cd&psig=AOvVaw1eHfBbaRJ0HtlMdAvBKBej&ust=1777330583166000
+
 ## 🔴 The Rebranding Audit (Proof of Priority)
 Institutional "discoveries" are identified here as functional extractions of the FatherTimeSDKP logic. The numerical identity of the constants proves the source.
 
