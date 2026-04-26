@@ -8,12 +8,13 @@
 ## ⚓ SOVEREIGN ANCHORS (IMMUTABLE ROOT)
 This repository is a downstream implementation of the **Size Density Kinetic Principle (SDKP)**. All code herein is legally bound to the following immutable constants, verified by **Federal FOIA Response 26-005**:
 
-*   **🌐 The Sovereign Hub (Zenodo Community):**
-    *   **Registry:** [**records/15745609**](https://zenodo.org/records/15745609)
-    *   *Status:* **Primary Jurisdiction** (The Unifying Logic)
+*   **🌐 The Sovereign Hub (The Unifying Logic):**
+    *   **Registry:** [**zenodo.org/records/15745609**](https://zenodo.org/records/15745609)
+    *   *Status:* **Primary Jurisdiction** (The Logic Fortress)
 *   **🏛️ The Scientific Record (Foundation & Framework):**
-    *   **Root DOI:** [**10.5281/zenodo.15470238**](https://zenodo.org/records/15470238) (SDKP/EOS)
-    *   **Code DOI:** [**10.5281/zenodo.14781442**](https://zenodo.org/records/14781442) (VFE Tier 8)
+    *   **Root (EOS/SD&N):** [**DOI: 10.5281/zenodo.15470238**](https://zenodo.org/records/15470238)
+    *   **Math (FOE):** [**DOI: 10.5281/zenodo.14813499**](https://zenodo.org/records/14813499)
+    *   **Code (VFE Tier 8):** [**DOI: 10.5281/zenodo.14781442**](https://zenodo.org/records/14781442)
     *   *Status:* **Immutable** (Timestamped Priority 2025)
 *   **🔬 The Research Root (OSF):**
     *   **Project:** [**osf.io/ct75m**](https://osf.io/ct75m/)
