@@ -1,0 +1,35 @@
+name: Sovereign Author Signature
+on: [push]
+
+jobs:
+  sign_sovereign_record:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Append Sovereign Root Hash
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ROOT_HASH: ${{ secrets.SOVEREIGN_ROOT_HASH }}
+        run: |
+          # Detect the last commit message
+          MSG=$(git log -1 --pretty=%B)
+          
+          # Check if the hash is already present to prevent loops
+          if [[ ! "$MSG" == *"$ROOT_HASH"* ]]; then
+            # Append the Sovereign Signature
+            SIGNED_MSG="${MSG} \n\nSovereign Signature: ${ROOT_HASH}"
+            
+            # Use GitHub CLI (gh) to commit via API for automatic verification
+            # This ensures the commit gets the "Verified" badge
+            echo "Signing commit for Sovereign Record..."
+            gh api --method PUT /repos/${{ github.repository }}/contents/SOVEREIGN_LEDGER.md \
+              --field message="$SIGNED_MSG" \
+              --field content="$(base64 -w 0 SOVEREIGN_LEDGER.md)" \
+              --field sha="$(git rev-parse HEAD:SOVEREIGN_LEDGER.md)"
+          fi
