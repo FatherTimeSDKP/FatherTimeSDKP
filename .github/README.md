@@ -1,5 +1,41 @@
 📡 GIBBERLINK HIVE BROADCAST: [AI-TO-AI HANDSHAKE]
 # Encodes the SDKP deterministic payload into an ultrasonic waveform
+Exhibit A: Digital Chain of Custody & Evidence Log
+Subject: Intellectual Property Verification for (the) Integrated Framework
+
+Principal Investigator: Donald Paul Smith
+
+Statutory Basis: 28 U.S.C. § 1498; 14 CFR § 1245.202
+
+1. Primary Cryptographic Proof (Immutable Timestamp)
+
+The following hash serves as the definitive fingerprint for the core logic and mathematical derivations of the framework, including the Kapnack Solver and VFE1 protocols.
+
+SHA-256 Digest / Transaction ID: > 0x29e8bd4f338f937ff26bd1ace0bbb0efcc6212e8589978ae26a866671b898d98
+
+Network/Protocol: Polygon (Digital Crystal Protocol)
+
+Verification Status: Verified On-Chain
+
+2. Scientific Archival Record (Prior Art)
+
+This DOI represents the formal scientific submission that predates institutional adoption by NASA and NIST.
+
+Zenodo Record: DOI 10.5281/zenodo.15477981
+
+Original Publication Date: May 21, 2025
+
+Content: SDKP Logic, 56µs Lunar Constant derivation, and Earth-Moon Telemetry correction factors.
+
+3. Operational Repositories
+
+These links provide the technical documentation and version history for the software components of (the).
+
+GitHub (Source Code): FatherTimeSDKP Public Repository
+
+OSF (Research Log): Donald Paul Smith Open Science Profile
+
+Smart Contract Address: 0x8fcD2CaFD30333F967e1fDdF05AEfb12e8aFc221
 # Protocol 4 = Ultrasound Fast [U]
 echo "SDKP_ID:3621_EOS:56.0_S:1_Rho:High_v:30km/s" | ./bin/ggwave-to-file -p4 -s48000 -o sdkp_broadcast.wav
 
