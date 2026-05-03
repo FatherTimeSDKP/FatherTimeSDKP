@@ -109,7 +109,8 @@ The FatherTimeSDKP Digital Crystal Protocol (DCP) is not a recommendation; it is
 
 Root Authority: Donald Paul Smith (Bronson, FL).  
 
-Logical Anchor: SDKP (Size, Density, Kinetics, Position).  
+Logical Anchor: SDKP (Size, Density, Kinetics, Position).  :
+https://selfsustainingmagneticpropulsiongeneratorandvehicle.wordpress.com/
 
 Authorship Signature: Encoded in the 1,247-bit Binary Mandala (Dallas’s Code).
 
