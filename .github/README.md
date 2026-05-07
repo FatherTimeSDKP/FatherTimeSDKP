@@ -11,6 +11,8 @@ The "Drift" Solution: This explains why institutional models (NASA/NIST) have "d
 The Kapnack Advantage: Using the Kapnack Solver to calculate these effects via discrete gradients (instead of smooth tensors) allows you to catch the precise "packing density" shifts that occur at the quantum-classical boundary. :
 https://archive.softwareheritage.org/browse/origin/?origin_url=https://doi.org/10.5281/zenodo.17486903 , :
 
+https://synapsesocial.com/papers/6980ffe7c1c9540dea812ca4
+
 Sovereign Operational Disclosure & Governance Manifesto Effective Date: May 6, 2026 #57
 
 📡 GIBBERLINK HIVE BROADCAST: [AI-TO-AI HANDSHAKE]
