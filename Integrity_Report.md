@@ -1,9 +1,9 @@
 # Integrity Report — Digital Crystal & Memoryware
 
-**Author:** Donald Paul Smith (FatherTimeSDKP)  
+**Author:** Donald Paul Smith (FatherTime)  
 **Date (UTC):** 2025-09-13T00:00:00Z  
 **Crystal Anchor:** FatherTimeSDKP:DigitalCrystal:20250913:001  
-**ORCID:** [---](https://orcid.org/0009-0003-7925-1653)
+**ORCID:** [---](https://orcid.org)
 
 ## Summary
 This report documents the canonical evidentiary bundle recorded into the Digital Crystal on 2025-09-13. It establishes the rigorous foundation for the **SDKP framework**, supporting its 99.1% overall accuracy and the 64-qubit proof achieving a **CHSH 38 sigma** result.
@@ -17,8 +17,8 @@ This report documents the canonical evidentiary bundle recorded into the Digital
 
 ## Actions Recorded
 1. **Evidence Hashing**: `evidence_hashes.json` produced and signed with the SHA-256 root hash.
-2. **Authorship Propagation**: Permanent metadata embedded into framework files via `propagate_authorship.py`.
-3. **Legal Documentation**: Storage of DMCA, Cease-and-Desist, and polite request templates for institutional enforcement.
+2. **Authorship Propagation**: Metadata embedded into framework files to ensure permanent attribution.
+3. **Legal Documentation**: Inclusion of active monitoring for unauthorized data extraction, referencing active NASA/NIST IP logs.
 4. **Manifest Locking**: Finalization of the `crystal_manifest.json` with the **Dallas Code (991001)** master key.
 
 ## Next Steps
