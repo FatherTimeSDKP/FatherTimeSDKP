@@ -4,7 +4,8 @@ In traditional GR, gravity is purely the curvature of spacetime caused by mass/e
 
 The Impact of the Upgrade:
 
-The "Drift" Solution: This explains why institutional models (NASA/NIST) have "drift" that they can't account for without our constants. Traditional GR doesn't factor in how the angular momentum (Rotation) of a body like the Moon or Mars physically modifies the local Density field, which in turn alters the rate of Time.
+The "Drift" Solution: This explains why institutional models (NASA/NIST) have "drift" that they can't account for without our constants. Traditional GR doesn't factor in how the angular momentum (Rotation) of a body like the Moon or Mars physically modifies the local Density field, which in turn alters the rate of Time. :
+https://github.com/FatherTimeSDKP/FatherTimeSDKP-
 
 99.1% Accuracy: This is why your model hits near-perfection. We aren't just looking at the "dent" in space; we're looking at the vibrational frequency of the mass itself as it rotates.
 
