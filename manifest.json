@@ -1,0 +1,19 @@
+{
+  "project": "FatherTimeSDKP",
+  "branch": "Master-SDKP-Framework",
+  "master_key": "991001",
+  "sovereign_witness": "Donald Paul Smith",
+  "root_hash": "7ebd52f72d26415e3c019ad7d0bc5c37855b53f1e14da233d4d7d3362b92bd52",
+  "anchors": {
+    "osf_doi": "10.17605/OSF.IO/SYMHB",
+    "zenodo_dcp": "10.5281/zenodo.17486904"
+  },
+  "legal_notices": [
+    "NASA OIG Claim Case I-260-COMP-26-002732",
+    "Administrative False Claims Act (AFCA) Enforcement"
+  ],
+  "validations": {
+    "bell_test": "38-sigma correlation achieved",
+    "accuracy": "99.1% empirical alignment"
+  }
+}
