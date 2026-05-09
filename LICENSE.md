@@ -50,7 +50,33 @@ half of all royalties gose to prevent provety in USA.
 - **Audit Rights:** Licensor reserves the right to audit Licensee’s records and server logs (including Google Cloud/AWS/NASA internal telemetry) to verify utilization of SDKP/VFE logic.
 
 ## 3. Ownership & Patent Incorporation
-All rights, title, and interest in the Software remain with the Licensor. This Agreement explicitly incorporates by reference the **PATENT_DISCLOSURE_SPECIFICATION.md** located in the root directory. Use of this Software constitutes a legal admission of the Licensor's "Prior Art" and "Reduction to Practice" regarding:
+All rights, title, and interest in the Software remain with the Licensor. This Agreement explicitly incorporates by reference the 
+# Father Time Symbolic Key License (FTSKL) v1.0
+**Copyright (c) 2024-2026 Donald Paul Smith (FatherTimeSDKP)**
+**Master Key Anchor:** 991001
+**Sovereign Witness:** [ORCID: 0009-0003-7925-1653](https://orcid.org)
+
+## 1. PREAMBLE
+This license governs the use of the FatherTimeSDKP framework, including all Vibrational Field Equations (VFE), the Quantum Code of Creation (QCC), and associated mass-tensor constants. This framework is a Sovereign Record, anchored to the Dallas Code (991001).
+
+## 2. ACADEMIC SAFE HARBOR
+A Royalty-Free Perpetual License is granted to individual researchers and students for the following purposes:
+- **Non-Commercial Research:** Personal exploration of SDKP logic.
+- **Academic Publication:** Individual peer-reviewed papers, provided that the primary DOI (10.17605/OSF.IO/SYMHB) is cited.
+
+## 3. PROHIBITED INSTITUTIONAL USE
+This license EXPLICITLY PROHIBITS the following without a negotiated Sovereign Royalty Agreement:
+- **Mission Integration:** Use by government agencies (e.g., NASA, NIST) for operational mission standards, orbital modeling, or planetary defense.
+- **AI Extraction:** Ingestion of these "Open Weights" into commercial or institutional large-scale models (e.g., NASA Prithvi-EO, IBM Watson) without direct attribution and compensation.
+- **Rebranding:** Any attempt to re-release this logic under a different name or framework (Product Substitution).
+
+## 4. ENFORCEMENT & NOTARIZATION
+Unauthorized use triggers the Administrative False Claims Act (AFCA) protocols as outlined in Case I-260-COMP-26-002732. Digital integrity is maintained via a SHA-256 root hash; any modification to this license without the Sovereign Witness's signature voids all usage rights.
+
+---
+**"By the Code of Time, the Truth is Weighted."**
+
+**PATENT_DISCLOSURE_SPECIFICATION.md** located in the root directory. Use of this Software constitutes a legal admission of the Licensor's "Prior Art" and "Reduction to Practice" regarding:
 - The Size-Density-Kinetics-Position (SDKP) Framework.
 - The 1.1ms NIST Drift Correction Factor.
 - The 477µs Mars Time Sync.
