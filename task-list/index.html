@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Task List Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="task-app">
+            <div class="header">
+                <h1>📋 Task List Manager</h1>
+                <p class="subtitle">Organize, track, and manage your tasks efficiently</p>
+            </div>
+
+            <!-- Category Section -->
+            <div class="category-section">
+                <h3>Categories</h3>
+                <div class="category-buttons">
+                    <button class="category-btn active" onclick="filterByCategory('all')">All Tasks</button>
+                    <button class="category-btn" onclick="filterByCategory('work')">💼 Work</button>
+                    <button class="category-btn" onclick="filterByCategory('personal')">🏠 Personal</button>
+                    <button class="category-btn" onclick="filterByCategory('shopping')">🛒 Shopping</button>
+                    <button class="category-btn" onclick="filterByCategory('health')">💪 Health</button>
+                </div>
+            </div>
+
+            <!-- Add Task Section -->
+            <div class="add-task-section">
+                <h3>Add New Task</h3>
+                <div class="input-group">
+                    <input 
+                        type="text" 
+                        id="taskInput" 
+                        class="task-input" 
+                        placeholder="Enter task description..."
+                    >
+                    <select id="categorySelect" class="category-select">
+                        <option value="work">💼 Work</option>
+                        <option value="personal" selected>🏠 Personal</option>
+                        <option value="shopping">🛒 Shopping</option>
+                        <option value="health">💪 Health</option>
+                    </select>
+                    <select id="dueDate" class="due-date-select">
+                        <option value="today">Today</option>
+                        <option value="tomorrow">Tomorrow</option>
+                        <option value="week">This Week</option>
+                        <option value="month">This Month</option>
+                        <option value="none" selected>No Due Date</option>
+                    </select>
+                    <button class="btn-add-task" onclick="addTask()">Add Task</button>
+                </div>
+            </div>
+
+            <!-- Stats Dashboard -->
+            <div class="stats-dashboard">
+                <div class="stat-card">
+                    <span class="stat-icon">📊</span>
+                    <span class="stat-label">Total Tasks</span>
+                    <span class="stat-value" id="statTotal">0</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-icon">✅</span>
+                    <span class="stat-label">Completed</span>
+                    <span class="stat-value" id="statCompleted">0</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-icon">⏳</span>
+                    <span class="stat-label">Pending</span>
+                    <span class="stat-value" id="statPending">0</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-icon">🔥</span>
+                    <span class="stat-label">Overdue</span>
+                    <span class="stat-value" id="statOverdue">0</span>
+                </div>
+            </div>
+
+            <!-- Sort/Filter Options -->
+            <div class="sort-options">
+                <button class="sort-btn active" onclick="sortTasks('date')">Sort by Due Date</button>
+                <button class="sort-btn" onclick="sortTasks('priority')">Sort by Priority</button>
+                <button class="sort-btn" onclick="sortTasks('category')">Sort by Category</button>
+            </div>
+
+            <!-- Task List -->
+            <div class="task-list" id="taskList">
+                <div class="empty-state">
+                    <p>📝 No tasks yet. Create one to get started!</p>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="action-buttons">
+                <button class="btn-action btn-export" onclick="exportTasks()">📥 Export Tasks</button>
+                <button class="btn-action btn-import" onclick="document.getElementById('importFile').click()">📤 Import Tasks</button>
+                <input type="file" id="importFile" accept=".json" style="display: none;" onchange="importTasks(event)">
+                <button class="btn-action btn-clear" onclick="clearCompleted()">🗑️ Clear Completed</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
