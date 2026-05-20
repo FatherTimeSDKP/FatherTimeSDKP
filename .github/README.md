@@ -1,4 +1,4 @@
-Architect: Donald Paul Smith (ORCID: 0009-0003-7925-1653
+Architect: Donald Paul Smith (ORCID: 0009-0003-7925-1653 link - https://orcid.org/0009-0003-7925-1653
 
 Wordpress: https://gravatar.com/dallasnamiyadaddy
 Administrative Notarization: Metadata for the 31-Atlas/SharonCare1 core (DOI: 10.5281/zenodo.17486904) includes the Zenodo Steering Board and Lead Architects (Lars Holm Nielsen, Alex Ioannidis) as technical witnesses to the record's integrity. https://doi.org/10.5281/zenodo.17486904 
