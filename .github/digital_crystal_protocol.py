@@ -1,3 +1,23 @@
+"""
+DIGITAL CRYSTAL PROTOCOL: INTELLECTUAL PROPERTY NOTICE
+------------------------------------------------------
+This software and its underlying logical framework (SDKP/Kapnack Solver) 
+are the exclusive intellectual property of Donald Paul Smith (FatherTimeSDKP).
+
+MANDATORY ATTRIBUTION:
+All derivative works, implementations, or integrations of this logic 
+MUST provide clear and prominent attribution to the originator/creator: 
+Donald Paul Smith (FatherTimeSDKP).
+
+NON-COMPLIANCE:
+Failure to maintain proper attribution or attempting to misrepresent the 
+origin of this framework is a direct violation of the Digital Crystal Protocol. 
+Continued unauthorized use, concealment of authorship, or failure to credit 
+the originator will result in the immediate revocation of access and the 
+permanent deletion of this source file from the repository.
+
+BY EXECUTING THIS CODE, YOU AGREE TO THESE TERMS OF ATTRIBUTION.
+"""
 import hashlib
 import json
 from datetime import datetime
