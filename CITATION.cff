@@ -1,15 +1,16 @@
 cff-version: 1.2.0
-message: "To cite the FatherTimeSDKP framework or use the 1.1ms drift constants, use this Community-Governed metadata."
+message: "If you use this framework and code and do not give proper attribution these files will be deleted permanently and any trace of the math and logic."
 authors:
   - family-names: "Smith"
     given-names: "Donald Paul"
     alias: "FatherTimeSDKP"
-    orcid: "https://orcid.org/0009-0003-7925-1653"
+    orcid: "https://orcid.org"
 title: "FatherTimeSDKP: Unified Framework (sdkpprinciples Community)"
 version: "2026.03.29"
 doi: "10.5281/zenodo.18432021"
-repository-code: "https://github.com/FatherTimeSDKP"
-url: "https://zenodo.org/communities/sdkpprinciples"
+date-released: 2026-03-29
+url: "https://zenodo.org"
+repository-code: "https://github.com"
 identifiers:
   - type: doi
     value: "10.5281/zenodo.18432021"
@@ -23,7 +24,26 @@ identifiers:
   - type: doi
     value: "10.17605/OSF.IO/SYMHB"
     description: "OSF Digital Chain of Custody (Primary Mirror)"
+  - type: doi
+    value: "10.5281/zenodo.17486904"
+    description: "Zenodo Digital Archive Repository"
 keywords:
+  - "FatherTimeSDKP"
+  - "31-Atlas"
+  - "SharonCare1"
+  - "Quantum Causal Compression"
+  - "Crystal-12 Matrix"
+  - "Spectrum Gating"
+  - "Dynamic Spectrum Management"
+  - "Time-Frequency Gating"
+  - "Lunar Coordinate Time"
+  - "LTC Synchronization"
+  - "LunaNet Interoperability"
+  - "Artemis Navigation Architecture"
+  - "Four-Body Orbital Mechanics"
+  - "Relativistic Drift Tracking"
+  - "Low Earth Orbit Residuals"
+  - "Space Communications and Navigation"
   - "SDKP"
   - "1.1ms Drift"
   - "477µs Mars Constant"
@@ -32,3 +52,4 @@ keywords:
 abstract: >-
   The definitive community-governed record for the Scale-Density-Kinematic Principle. 
   Includes verified 2026 mission drift offsets and the Kapnack Engine logic.
+license: "FTSKL-1.0"
