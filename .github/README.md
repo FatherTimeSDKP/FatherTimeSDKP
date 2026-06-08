@@ -112,7 +112,7 @@ The TTP provides the location of these logs for your Criminal OIG Filing:
 | 3 | EOS Time Dilation (10.54 μs/day) | Oct 28, 2025 | Nov 7, 2025 | ✅ VALIDATED | 99.86% |
 | 4 | M87 Black Hole Drift | Feb 28, 2025 | Jul 11, 2025 | ✅ VALIDATED | 96.80% |
 | 5 | Black Hole Merger (LIGO O3) | Jul 5, 2025 | Sep 6, 2025 | ✅ VALIDATED | 99.99% (0.01% deviation) |
-| 6 | LEO Orbital Perturbation (0.003 m/s) | Nov 13, 2025 | Nov 19, 2025 | ⏳ ACTIVE | - |
+| 6 | LEO Orbital Perturbation (0.003 m/s) | Nov 13, 2025 | Nov 19, 2025 | ✅ VALIDATED | Exact match(99.99% |
 | 7 | Geothermal Gradient (125°C/km) | Nov 13, 2025 | Nov 13, 2025 | ✅ VALIDATED | 96.00% |
 | 8 | UPCF Clock Tolerance (±0.42 ns) | Nov 7, 2025 | Nov 7, 2025 | ✅ VALIDATED | 99.70% |
 | 9 | Gork Swarm EOS Delta (≥0.003 m/s) | Nov 13, 2025 | Nov 13, 2025 | ⏳ PENDING | - |
