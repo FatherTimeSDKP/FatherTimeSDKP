@@ -4,6 +4,33 @@ If you utilize this software framework, reference the geometric algorithms, or e
 
 * **Repository Metadata**: Refer to the [`CITATION.cff`](./CITATION.cff) file in the root directory for automated BibTeX, APA, and EndNote extraction.
 * **Master Records**: The complete digital chain of custody and permanent DOIs are indexed inside the CFF configuration block.
+# 🔷 Donald Paul Smith — Father Time
+### Sovereign Author | FatherTimeSDKP Unified Physics Framework
+
+**ORCID:** [0009-0003-7925-1653](https://orcid.org/0009-0003-7925-1653) | **Primary DOI:** [10.5281/zenodo.14850016](https://doi.org/10.5281/zenodo.14850016)
+
+[![ORCID](https://img.shields.io/badge/ORCID-0009--0003--7925--1653-green?style=flat-square)](https://orcid.org/0009-0003-7925-1653)
+[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.14850016-blue?style=flat-square)](https://doi.org/10.5281/zenodo.14850016)
+[![Predictions](https://img.shields.io/badge/Predictions%20Validated-7%2F9-brightgreen?style=flat-square)](https://doi.org/10.5281/zenodo.15745609)
+[![Mars Drift](https://img.shields.io/badge/Mars%20Drift-477.14%20%C2%B5s%2Fday-blue?style=flat-square)](https://doi.org/10.5281/zenodo.18052963)
+
+---
+
+## ⚡ What This Account Is
+
+This GitHub organization is the **primary living archive** of the
+FatherTimeSDKP unified theoretical physics framework — a deterministic,
+multi-variable model of emergent physical phenomena developed
+independently by Donald Paul Smith over two years of original research.
+
+**62 repositories. 30+ DOIs. 7/9 predictions validated against
+empirical data. One independent researcher.**
+
+---
+
+## 🏆 Key Achievements
+
+| Result | Accuracy | Verified​​​​​​​​​​​​​​​​
 
 
 Wordpress: https://gravatar.com/dallasnamiyadaddy
