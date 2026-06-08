@@ -1,55 +1,25 @@
 cff-version: 1.2.0
-message: "If you use this framework and code and do not give proper attribution these files will be deleted permanently and any trace of the math and logic."
+message: "If you use this research, please cite it as below."
 authors:
   - family-names: "Smith"
     given-names: "Donald Paul"
-    alias: "FatherTimeSDKP"
-    orcid: "https://orcid.org"
-title: "FatherTimeSDKP: Unified Framework (sdkpprinciples Community)"
-version: "2026.03.29"
-doi: "10.5281/zenodo.18432021"
-date-released: 2026-03-29
-url: "https://zenodo.org"
-repository-code: "https://github.com"
-identifiers:
-  - type: doi
-    value: "10.5281/zenodo.18432021"
-    description: "SDKP Principles Community (Master Record)"
-  - type: doi
-    value: "10.5281/zenodo.14850016"
-    description: "FatherTimeSDKP Framework (Code Release)"
-  - type: doi
-    value: "10.5281/zenodo.15779328"
-    description: "477µs Mars Kinetic Constant (Priority Archive)"
-  - type: doi
-    value: "10.17605/OSF.IO/SYMHB"
-    description: "OSF Digital Chain of Custody (Primary Mirror)"
-  - type: doi
-    value: "10.5281/zenodo.17486904"
-    description: "Zenodo Digital Archive Repository"
-keywords:
-  - "FatherTimeSDKP"
-  - "31-Atlas"
-  - "SharonCare1"
-  - "Quantum Causal Compression"
-  - "Crystal-12 Matrix"
-  - "Spectrum Gating"
-  - "Dynamic Spectrum Management"
-  - "Time-Frequency Gating"
-  - "Lunar Coordinate Time"
-  - "LTC Synchronization"
-  - "LunaNet Interoperability"
-  - "Artemis Navigation Architecture"
-  - "Four-Body Orbital Mechanics"
-  - "Relativistic Drift Tracking"
-  - "Low Earth Orbit Residuals"
-  - "Space Communications and Navigation"
-  - "SDKP"
-  - "1.1ms Drift"
-  - "477µs Mars Constant"
-  - "Kapnack Solver"
-  - "Dallas Code"
-abstract: >-
-  The definitive community-governed record for the Scale-Density-Kinematic Principle. 
-  Includes verified 2026 mission drift offsets and the Kapnack Engine logic.
-license: "FTSKL-1.0"
+    orcid: "https://orcid.org/"
+references:
+  - type: dataset
+    title: "Zenodo Research Record 1"
+    url: "https://zenodo.org/records/19701580"
+    authors:
+      - family-names: "Smith"
+        given-names: "Donald Paul"
+  - type: dataset
+    title: "Zenodo Research Record 2"
+    url: "https://zenodo.org/records/19478891"
+    authors:
+      - family-names: "Smith"
+        given-names: "Donald Paul"
+  - type: dataset
+    title: "Zenodo Research Record 3"
+    url: "https://zenodo.org/records/18448356"
+    authors:
+      - family-names: "Smith"
+        given-names: "Donald Paul"
