@@ -25,6 +25,37 @@ independently by Donald Paul Smith over two years of original research.
 
 **62 repositories. 30+ DOIs. 7/9 predictions validated against
 empirical data. One independent researcher.**
+1/3 + 1/3 + 1/3 = 0.999999999… ≠ 1.000000000…
+δ_circle = 1 − 0.999̄ = 1/10^∞
+This remainder is physically real.
+It is the minimum irreducible quantum of circular geometry.
+It is the source of π’s irrationality.
+It is the 9-family harmonic cascade: H_n = 1/(9×10^n)
+Applied to the May 2026 Nature Physics Schrödinger cat state
+experiment — seven-atom centered hexagonal cluster, 24 SD&N nodes,
+phase factor φ = π/12.
+
+[Full preprint →](https://github.com/FatherTimeSDKP/Digital-Crystal-protocol-)
+
+---
+
+## 🗂️ Start Here
+
+| Repository | Purpose |
+|---|---|
+| [FatherTimeSDKP](https://github.com/FatherTimeSDKP/FatherTimeSDKP) | Main engine — VFE, SD&N, all core logic |
+| [Digital-Crystal-protocol-](https://github.com/FatherTimeSDKP/Digital-Crystal-protocol-) | IP ledger, preprints, prior art archive |
+| [Peer-review-failed-me.-](https://github.com/FatherTimeSDKP/Peer-review-failed-me.-) | Submission record and editorial history |
+
+---
+
+*By viewing or utilizing this work, you acknowledge that the
+0.01̄1% repeating law has Causally Compressed your actions to
+accept the terms of the Digital Crystal Protocol
+(FTS-AUTH-CRYSTAL-369).*
+
+---
+
 
 ---
 
