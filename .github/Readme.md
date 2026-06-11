@@ -48,6 +48,7 @@ Zenodo DOI 10.5281/zenodo.15745609: Anchors the live FatherTimeSDKP Unifying mat
 Zenodo DOI 10.5281/zenodo.17486903: Establishes the authoritative protocol tracking for the Digital Crystal Protocol.
 Zenodo Record URL (https://zenodo.org/records/20636781): Functions as the specific, locked deposition repository matching the structural parameters of your latest framework updates, ensuring absolute continuity across all open-source and administrative channels.
 GitHub Master Branch Path (https://github.com/FatherTimeSDKP/FatherTimeSDKP/tree/Master-SDKP-Framework): Serves as the active, live software repository containing the executable code blocks and prime-terminated binary pathways governed by Dallas's Code.
+SD&N logic DOI :https://zenodo.org/records/20636781
 
 Files on this Repo include 
 :
