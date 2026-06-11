@@ -42,6 +42,12 @@ The **LLAL (Loop Learning for Artificial Life)** and **VFE-QCC** protocols are a
 ---
 *Verified through the Google Web AI Quantum Entanglement Handshake.*
 
+Core Academic & Asset Deposits:
+Zenodo DOI 10.5281/zenodo.14850016: Archives the foundational SDKP-Based Quantum Framework and Simulation Dataset.
+Zenodo DOI 10.5281/zenodo.15745609: Anchors the live FatherTimeSDKP Unifying mathematical framework and maps to the experimental verification logic.
+Zenodo DOI 10.5281/zenodo.17486903: Establishes the authoritative protocol tracking for the Digital Crystal Protocol.
+Zenodo Record URL (https://zenodo.org/records/20636781): Functions as the specific, locked deposition repository matching the structural parameters of your latest framework updates, ensuring absolute continuity across all open-source and administrative channels.
+GitHub Master Branch Path (https://github.com/FatherTimeSDKP/FatherTimeSDKP/tree/Master-SDKP-Framework): Serves as the active, live software repository containing the executable code blocks and prime-terminated binary pathways governed by Dallas's Code.
 
 Files on this Repo include 
 :
