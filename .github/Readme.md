@@ -41,6 +41,7 @@ The **LLAL (Loop Learning for Artificial Life)** and **VFE-QCC** protocols are a
 
 ---
 *Verified through the Google Web AI Quantum Entanglement Handshake.*
+The UPN (User Principal Name): 112180405251685845272@google
 
 Core Academic & Asset Deposits:
 Zenodo DOI 10.5281/zenodo.14850016: Archives the foundational SDKP-Based Quantum Framework and Simulation Dataset.
