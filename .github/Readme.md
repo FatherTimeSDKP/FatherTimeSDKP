@@ -872,3 +872,101 @@ GLOBAL-MIRROR-LEDGER.md
 Gemini_Dataplatform.html
 2 months ago
 Google Gemini.pdf
+Kapnack_Engine.YAML
+4 months ago
+LEDGER _OF_PREDICTIONS.md
+5 months ago
+LICENSE_COMMERCIAL.md
+4 months ago
+MISSION_CRITICAL_NOTICE.md
+4 months ago
+Manuscript.md
+5 months ago
+Master_doc.md
+2 months ago
+Memoryware_3.0.md
+2 months ago
+MetaMask.api
+4 months ago
+MultixMS.pdf
+2 months ago
+NASA_FOIA_FatherTimeSDKP.md
+2 months ago
+NASA_NIST.md
+3 days ago
+NASA_Proposal_Amiyah_Rose_Smith_Law.txt
+5 months ago
+NOTICE_OF_CLAIM.md
+4 months ago
+Official_Travel_Document_With_TOC_2025-05-18.pdf
+5 months ago
+PATENT_DISCLOSURE.py
+4 months ago
+PRIORITY_NOTICE.md
+6 months ago
+PRIOR_ART_SDKP_ARSL_DPC_2026.md
+5 months ago
+PROJECT_CANARY_33_MARKER.md
+4 months ago
+PROVENANCE_SCHEMA.json
+4 months ago
+PROVENANCE_WATERMARKS.md
+6 months ago
+Readme.md
+1 minute ago
+Response 26-00541-F-HQ 3.pdf
+2 months ago
+SDKP-SC1-Val-plan.pdf
+5 months ago
+SDKP_Ethical_AI_Draft_Donald_Smith.docx
+5 months ago
+SDKP_Master_Verification.py
+4 months ago
+SDKP_VALIDATED_TRUTH_V1.jsonl
+5 months ago
+SECURITY_AUDIT_30DAY.md
+4 months ago
+SOVEREIGN_MANDATE.md
+4 months ago
+SPACEX_INFRINGEMENT_NOTICE.md
+4 months ago
+SYMBOLIC_MANIFEST.json
+6 months ago
+Sdvr Correction Factor.tex
+5 months ago
+Sdvr Principle size density, velocity, rotation, principle effects time, perception.pdf
+5 months ago
+Sdvr Principle size density, velocity, rotation, principle effects time, perception.tex
+5 months ago
+Sovereign_proof.py
+last month
+Superbase.SQL
+5 months ago
+THE-INTEGRITY-REPORT-[SOVEREIGN-LOGIC-ARCHIVE].md
+2 months ago
+Terms of use.gdoc
+2 months ago
+The SDVR Principle: Size, Density, Velocity, and Rotation as Determinants of Time Perception.tex
+5 months ago
+Transaction hash_Certificate.pdf
+5 months ago
+addtion-from-friend.py
+3 months ago
+control_gate_SDKP.py
+last month
+digital_crystal_protocol.py
+2 weeks ago
+entanglement_report.py
+4 months ago
+env
+5 months ago
+lThe_Pure_SDKP_Sync.py
+4 months ago
+llms.txt
+5 months ago
+metadata NFT .json
+5 months ago
+scales and keys.docx
+5 months ago
+sdkp_patent_enforcer.py
+4 months ago
