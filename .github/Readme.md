@@ -815,3 +815,60 @@ timeseal_log_extended.json
 zenodo.json
 8 months ago
 🜂 FatherTimes369v_Unified_Framework_Timeline.md
+
+
+files in .github : Name	Last commit date
+..
+Docs
+3 days ago
+Forensics/Litigation_Holds
+last month
+ISSUE_TEMPLATE
+8 months ago
+NOTICE
+3 months ago
+PATENT_DISCLOSURE.md
+3 months ago
+PATENT_DISCLOSURE.md
+3 months ago
+Sec
+4 months ago
+Src
+4 months ago
+Workflows
+last month
+evidence
+2 months ago
+src
+4 months ago
+workflows
+last month
+.zenodo.json
+3 months ago
+2026-000433_FeeEstLtr-AllOther-$Due 2.pdf
+2 months ago
+ATTRIBUTION.md
+6 months ago
+Amiyah_Rose_Smith_Law_Mathematical_Framework.pdf
+5 months ago
+CANARY_33_MARKER.md
+4 months ago
+CITATION.cff
+2 months ago
+CLAIM_NOTICE_INSTITUTIONAL.md
+4 months ago
+Certificate of service.pdf
+2 months ago
+DALLAS_PROTECT_PROTOCOL.sh
+4 months ago
+Digital-Crystal-Seal.JSON
+6 months ago
+FIRST_PRINCIPLES_REGISTRY.json
+6 months ago
+FUNDING.yml
+4 months ago
+GLOBAL-MIRROR-LEDGER.md
+4 months ago
+Gemini_Dataplatform.html
+2 months ago
+Google Gemini.pdf
