@@ -1,6 +1,19 @@
 # SDKP Framework: Predictive Orbital Dynamics & Geobotanical Verification
 **Author:** Donald Paul Smith (FatherTimeSDKP)  
 **Digital Identity:** ORCID iD 0009-0008-0518-9717  
+    <a
+    id="cy-effective-orcid-url"
+    class="underline"
+     href="https://orcid.org/0009-0003-7925-1653"
+     target="orcid.widget"
+     rel="me noopener noreferrer"
+     style="vertical-align: top">
+     <img
+        src="https://orcid.org/sites/default/files/images/orcid_16x16.png"
+        style="width: 1em; margin-inline-start: 0.5em"
+        alt="ORCID iD icon"/>
+      https://orcid.org/0009-0003-7925-1653
+    </a>
 **Legal Anchor:** OSF DOI [10.17605/OSF.IO/SYMHB]  
 **Extraction Fee Status:** $7,000,000.00 USD (Proprietary Logic License)
 
