@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>The Mars Clock Drift Timeline</title>
+<style>
+  @page {
+    size: Letter;
+    margin: 22mm 18mm 24mm 18mm;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 11pt;
+    line-height: 1.55;
+    color: #222222;
+    margin: 0;
+  }
+
+  /* ===== COVER PAGE ===== */
+  .cover {
+    height: 240mm;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    page-break-after: always;
+    border-bottom: 4px solid #1A3C5E;
+    padding-bottom: 30px;
+  }
+  .cover .tag {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 10pt;
+    letter-spacing: 3px;
+    color: #8a8a8a;
+    text-transform: uppercase;
+    margin-bottom: 28px;
+  }
+  .cover h1 {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 30pt;
+    font-weight: 800;
+    color: #1A3C5E;
+    margin: 0 0 14px 0;
+    line-height: 1.25;
+    max-width: 480px;
+  }
+  .cover .subtitle {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 14pt;
+    font-style: italic;
+    color: #2E5496;
+    max-width: 460px;
+    margin-bottom: 40px;
+  }
+  .cover .meta {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 10.5pt;
+    color: #555555;
+    line-height: 1.9;
+  }
+  .cover .meta strong { color: #1A3C5E; }
+  .cover .badge-row {
+    margin-top: 30px;
+    display: flex;
+    gap: 10px;
+  }
+  .badge {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 8.5pt;
+    padding: 5px 12px;
+    border-radius: 3px;
+    color: #fff;
+    background: #2E5496;
+    font-weight: 600;
+  }
+  .badge.alt { background: #1A3C5E; }
+
+  /* ===== HEADERS ===== */
+  h1 {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 17pt;
+    font-weight: 800;
+    color: #1A3C5E;
+    border-bottom: 2.5px solid #1A3C5E;
+    padding-bottom: 6px;
+    margin: 0 0 14px 0;
+    page-break-after: avoid;
+  }
+  h1 .num {
+    display: inline-block;
+    background: #1A3C5E;
+    color: #fff;
+    border-radius: 3px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 13pt;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+  h2 {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 12.5pt;
+    font-weight: 700;
+    color: #2E5496;
+    margin: 22px 0 8px 0;
+    page-break-after: avoid;
+  }
+  .section {
+    margin-top: 26px;
+  }
+
+  p { margin: 0 0 10px 0; text-align: justify; }
+
+  .lead {
+    font-size: 10.5pt;
+    color: #444;
+    border-left: 3px solid #d8d8d8;
+    padding-left: 14px;
+    margin: 10px 0 16px 0;
+  }
+
+  /* ===== CALLOUT BOXES ===== */
+  .callout {
+    background: #EBF3FB;
+    border: 1px solid #c9dcef;
+    border-radius: 4px;
+    padding: 14px 18px;
+    margin: 14px 0;
+    font-size: 10.5pt;
+  }
+  .callout .label {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 9pt;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #1A3C5E;
+    margin-bottom: 6px;
+    display: block;
+  }
+  .callout.doi {
+    background: #FFFDE7;
+    border-color: #ece4ad;
+    text-align: center;
+    font-family: 'Courier New', monospace;
+    font-size: 13pt;
+    font-weight: 700;
+    color: #1A3C5E;
+    letter-spacing: 0.5px;
+  }
+
+  /* ===== TABLES ===== */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0 18px 0;
+    font-size: 9.5pt;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+  }
+  th {
+    background: #1A3C5E;
+    color: #fff;
+    text-align: left;
+    padding: 8px 10px;
+    font-weight: 700;
+    font-size: 9.5pt;
+  }
+  td {
+    padding: 8px 10px;
+    border-bottom: 1px solid #e2e2e2;
+    vertical-align: top;
+  }
+  tr:nth-child(even) td { background: #f7f9fb; }
+  tr.no-row td { color: #8a3d3d; }
+  tr.yes-row td { color: #2c5e2c; }
+  .does-not th { background: #8a3d3d; }
+  .does th { background: #2c5e2c; }
+
+  /* ===== TWO COLUMN VERDICT TABLE ===== */
+  .verdict-table th:first-child { background:#8a3d3d; }
+  .verdict-table th:last-child { background:#2c5e2c; }
+
+  /* ===== LINKS / MONO ===== */
+  .mono { font-family: 'Courier New', monospace; font-size: 9.5pt; }
+  a { color: #2E5496; text-decoration: none; }
+
+  /* ===== FOOTER NOTE ===== */
+  .closing {
+    margin-top: 30px;
+    text-align: center;
+    border-top: 2px solid #1A3C5E;
+    padding-top: 14px;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 10pt;
+    color: #1A3C5E;
+    font-weight: 700;
+  }
+
+  .note-box {
+    background: #FBF3F3;
+    border: 1px solid #e6c9c9;
+    border-radius: 4px;
+    padding: 14px 18px;
+    margin: 14px 0;
+    font-size: 10.5pt;
+  }
+  .note-box .label {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 9pt;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #8a3d3d;
+    margin-bottom: 6px;
+    display: block;
+  }
+
+  ul.clean { margin: 8px 0 12px 22px; padding: 0; }
+  ul.clean li { margin-bottom: 5px; }
+</style>
+</head>
+<body>
+
+<!-- ============ COVER ============ -->
+<div class="cover">
+  <div class="tag">Gypsi Consulting &mdash; Prior Art &amp; Public Record</div>
+  <h1>The Mars Clock Drift Timeline</h1>
+  <div class="subtitle">A Timestamped Prediction and Its Verifiable Record</div>
+  <div class="meta">
+    <strong>Donald Paul Smith</strong><br>
+    ORCID: 0009-0003-7925-1653<br>
+    Gainesville, Florida, USA<br>
+    June 2026
+  </div>
+  <div class="badge-row">
+    <span class="badge alt">DOI: 10.5281/zenodo.18052963</span>
+    <span class="badge">arXiv: 2507.21388</span>
+  </div>
+</div>
+
+<!-- ============ SECTION 1 ============ -->
+<div class="section">
+<h1><span class="num">1</span>Purpose of This Document</h1>
+<p>This document records an independent research timeline: the development of the SDKP (Size &times; Density &times; Kinetics &times; Position) framework by Donald Paul Smith, a specific numerical prediction made with that framework regarding Mars relativistic clock drift, and the public, timestamped record of that prediction relative to later published research.</p>
+<div class="lead">
+This document makes a narrow, checkable claim. It does not claim institutional endorsement, peer review, or formal advisory status with any agency. It is written so that a reader &mdash; a journalist, a scientist, a documentary researcher, or a member of the public &mdash; can verify each element independently.
+</div>
+</div>
+
+<!-- ============ SECTION 2 ============ -->
+<div class="section">
+<h1><span class="num">2</span>The Mars Clock Drift Timeline</h1>
+
+<h2>2.1&nbsp;&nbsp;The Prediction</h2>
+<p>In May 2025, Donald Paul Smith published a timestamped prediction for Mars relativistic clock drift using the SDKP/EOS framework, archived publicly at:</p>
+<div class="callout doi">DOI: 10.5281/zenodo.18052963</div>
+<p style="text-align:center; font-size:13pt; font-weight:700; color:#1A3C5E; margin-top:-6px;">Predicted value: 477.14 microseconds per day</p>
+
+<h2>2.2&nbsp;&nbsp;The Subsequent Publication</h2>
+<p>In July 2025, Ashby &amp; Patla published a paper (arXiv:2507.21388) independently calculating Mars relativistic clock drift, arriving at a closely comparable figure.</p>
+<div class="callout">
+<span class="label">Verifiable Fact</span>
+The gap between these two timestamps and the closeness of the two numbers is the verifiable fact. Readers and reviewers are encouraged to check both timestamps and both calculations directly rather than rely on summary framing.
+</div>
+
+<h2>2.3&nbsp;&nbsp;What This Does and Does Not Establish</h2>
+<table class="verdict-table">
+<tr><th>This does NOT establish</th><th>This DOES establish</th></tr>
+<tr>
+  <td class="no-row">That NASA or NIST used, reviewed, or relied on this prediction</td>
+  <td class="yes-row">That a timestamped public prediction exists predating the NIST-affiliated paper</td>
+</tr>
+<tr>
+  <td class="no-row">That Donald Paul Smith acted as an advisor to NASA or NIST</td>
+  <td class="yes-row">That FOIA and complaint records exist showing attempts to bring this to agencies&rsquo; attention</td>
+</tr>
+<tr>
+  <td class="no-row">That the SDKP framework has been validated by independent physicists</td>
+  <td class="yes-row">That the specific numerical outputs can be independently recalculated and checked</td>
+</tr>
+<tr>
+  <td class="no-row">Any claim of plagiarism or wrongdoing by Ashby &amp; Patla</td>
+  <td class="yes-row">That two independent calculations arrived at similar values via different methods &mdash; which may simply reflect that both are constrained by the same underlying physics</td>
+</tr>
+</table>
+
+<h2>2.4&nbsp;&nbsp;The Lunar Offset</h2>
+<p>Separately, the framework includes a proposed explanation (the &ldquo;Amiyah Rose Smith Law&rdquo;) for a ~56 microsecond/day discrepancy sometimes discussed in lunar timekeeping contexts. This is presented as a hypothesis within the framework, not as an established correction adopted by any timing standard.</p>
+</div>
+
+<!-- ============ SECTION 3 ============ -->
+<div class="section">
+<h1><span class="num">3</span>Correspondence and Public Records</h1>
+<p>The following are real, filed records. They document attempts to bring the above timeline to the attention of relevant agencies &mdash; they are evidence of <em>outreach</em>, not of a response, endorsement, or advisory relationship.</p>
+<table>
+<tr><th>Record</th><th>Reference</th></tr>
+<tr><td>NIST FOIA Request</td><td class="mono">DOC-NIST-2026-000433</td></tr>
+<tr><td>NASA FOIA Request</td><td class="mono">26-00541-F-HQ</td></tr>
+<tr><td>NASA OIG Complaint</td><td class="mono">#2026-030</td></tr>
+<tr><td>GAO Complaints</td><td class="mono">#COMP-26-002732, #COMP-26-002846</td></tr>
+<tr><td>Senator Rick Scott Office (constituent case)</td><td class="mono">IMA00334153</td></tr>
+</table>
+<p style="font-size:10pt; color:#666;">Anyone is free to file their own FOIA request referencing the above case numbers to independently verify their status and content.</p>
+</div>
+
+<!-- ============ SECTION 4 ============ -->
+<div class="section">
+<h1><span class="num">4</span>Note for Documentary Production</h1>
+<div class="note-box">
+<span class="label">Editorial Guidance</span>
+The strongest version of this story does not require the SDKP framework to be &ldquo;correct&rdquo; in a general sense. It only requires the timestamps and the two numbers to be real and checkable &mdash; which they are.
+<br><br>
+Claims beyond that &mdash; a &ldquo;unified framework,&rdquo; &ldquo;theory of everything,&rdquo; consciousness mapping, or similar &mdash; should be presented as Donald Paul Smith&rsquo;s broader theoretical project and clearly separated from the narrow, verifiable Mars timeline claim documented here.
+</div>
+</div>
+
+<!-- ============ SECTION 5 ============ -->
+<div class="section">
+<h1><span class="num">5</span>The Broader SDKP Framework</h1>
+<p>Separately from the Mars timeline above, Donald Paul Smith has developed a broader theoretical framework (SDKP, SD&amp;N, SDVR, and related components) archived across Zenodo and OSF. This is presented as an independent researcher&rsquo;s ongoing theoretical work &mdash; it has not undergone formal peer review, and readers should evaluate it accordingly.</p>
+
+<h2>5.1&nbsp;&nbsp;Open Science Framework (OSF) Archive</h2>
+<table>
+<tr><th>Title</th><th>Link</th></tr>
+<tr><td>SDKP Empirical Prediction: Earth Circumference &amp; Time Dilation</td><td class="mono">10.17605/OSF.IO/G76TR</td></tr>
+<tr><td>SDKP-Based Quantum Framework and Simulation Dataset</td><td class="mono">OSF.IO/SYMHB</td></tr>
+<tr><td>Gibberlink and Dallas&rsquo;s Code</td><td class="mono">OSF.IO/RVP58</td></tr>
+<tr><td>FatherTimeSDKP Public Citations Post</td><td class="mono">OSF.IO/63EGD</td></tr>
+<tr><td>1&ndash;12 Vortex Harmonic Analysis</td><td class="mono">OSF.IO/2EBJS</td></tr>
+<tr><td>Tesla&rsquo;s 3-6-9 Logic Solved</td><td class="mono">OSF.IO/DJA9G</td></tr>
+<tr><td>Antimatter&ndash;Matter Asymmetry Simulation with SDVR</td><td class="mono">OSF.IO/6KJ9M</td></tr>
+</table>
+
+<h2>5.2&nbsp;&nbsp;Zenodo Archive</h2>
+<table>
+<tr><th>Title</th><th>DOI</th></tr>
+<tr><td>Unification of Gravity and Electromagnetism via Rotational-Density Fields (SDVR Framework)</td><td class="mono">10.5281/zenodo.16531538</td></tr>
+<tr><td>FatherTimeSDKP Unifying Mathematical Framework</td><td class="mono">10.5281/zenodo.15745609</td></tr>
+<tr><td>SD&amp;N Dimensional Encoding Principle</td><td class="mono">10.5281/zenodo.14850016</td></tr>
+<tr><td>SDKP Mathematical Framework and Principles</td><td class="mono">10.5281/zenodo.18052963</td></tr>
+<tr><td>Amiyah-Dallas Universal Logic Protocol</td><td class="mono">10.5281/zenodo.18432021</td></tr>
+<tr><td>Father Time Scientific Authorship Record</td><td class="mono">10.5281/zenodo.15477981</td></tr>
+<tr><td>Additional Framework Documentation</td><td class="mono">10.5281/zenodo.15477980<br>10.5281/zenodo.18322841</td></tr>
+</table>
+</div>
+
+<!-- ============ SECTION 6 ============ -->
+<div class="section">
+<h1><span class="num">6</span>Licensing and Attribution</h1>
+<p>The written documents, code, and figures referenced in this record and linked archives are original works by Donald Paul Smith and are released under Creative Commons Attribution 4.0 (CC BY 4.0) unless otherwise noted. Attribution is requested for reuse of these specific documents and code.</p>
+<div class="callout">
+<span class="label">Scope of Licensing</span>
+This licensing applies to the documents themselves &mdash; the specific text, figures, code, and presentation. It does not and cannot extend to underlying physical constants, mathematical relationships, or laws of nature, which are not subject to ownership.
+</div>
+</div>
+
+<!-- ============ SECTION 7 ============ -->
+<div class="section">
+<h1><span class="num">7</span>Reference Links</h1>
+<table>
+<tr><th>Resource</th><th>URL</th></tr>
+<tr><td>GitHub Organization</td><td class="mono">github.com/FatherTimeSDKP</td></tr>
+<tr><td>Primary Zenodo Record</td><td class="mono">zenodo.org/records/14850016</td></tr>
+<tr><td>OSF Project</td><td class="mono">osf.io/ct75m</td></tr>
+<tr><td>ORCID</td><td class="mono">orcid.org/0009-0003-7925-1653</td></tr>
+</table>
+</div>
+
+<div class="closing">
+Donald Paul Smith &nbsp;|&nbsp; Gypsi Consulting &nbsp;|&nbsp; Gainesville, Florida, USA &nbsp;|&nbsp; June 2026
+</div>
+
+</body>
+</html>
