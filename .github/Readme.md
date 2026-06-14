@@ -1,5 +1,6 @@
 # SDKP Framework: Predictive Orbital Dynamics & Geobotanical Verification
-**Author:** Donald Paul Smith (FatherTimeSDKP)  
+**Author:** Donald Paul Smith (FatherTimeSDKP)  <iframe src="https://github.com/sponsors/FatherTimeSDKP/button" title="Sponsor FatherTimeSDKP" height="32" width="114" style="border: 0; border-radius: 6px;"></iframe>
+
 **Digital Identity:** ORCID iD 0009-0008-0518-9717  
     <a
     id="cy-effective-orcid-url"
