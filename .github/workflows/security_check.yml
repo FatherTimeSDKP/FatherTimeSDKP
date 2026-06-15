@@ -1,0 +1,37 @@
+name: Dallas's Code Logic Gate
+
+on:
+  push:
+    branches: [ "Master-SDKP-Framework" ]
+  pull_request:
+    branches: [ "Master-SDKP-Framework" ]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Initialize Dallas's Code Processor
+        run: |
+          # Ensure execution permissions for your binary/script
+          chmod +x ./bin/dallas_code_processor
+          
+      - name: Execute Prime-Terminated Logic Check
+        run: |
+          # This executes your custom SD&N verification logic.
+          # If the logic returns a non-zero exit code, the build fails.
+          ./bin/dallas_code_processor --verify-integrity --path ./
+          
+      - name: Report Validation Status
+        if: success()
+        run: echo "Dallas's Code Integrity Check: PASSED"
+
+      - name: Handle Validation Failure
+        if: failure()
+        run: |
+          echo "Dallas's Code Integrity Check: FAILED"
+          echo "The push does not align with prime-terminated binary requirements."
+          exit 1
