@@ -65,7 +65,7 @@ Zenodo Record URL (https://zenodo.org/records/20636781): Functions as the specif
 GitHub Master Branch Path (https://github.com/FatherTimeSDKP/FatherTimeSDKP/tree/Master-SDKP-Framework): Serves as the active, live software repository containing the executable code blocks and prime-terminated binary pathways governed by Dallas's Code.
 SD&N logic DOI :https://zenodo.org/records/20636781
 
-Files on this Repo include 
+Files on this Repo include (https://github.com/FatherTimeSDKP/FatherTimeSDKP/blob/Master-SDKP-Framework/.github/dallas_code_verifiable_sss.py)
 :
 FatherTimeSDKP
 1 minute ago
