@@ -1,0 +1,92 @@
+python3 << 'EOF'
+import math
+
+print("ABELL 402 — CORRECTED EOS RANGE CALCULATIONS")
+print("EOS deviation: 0.13% to 0.20% from GR/Newton")
+print("=" * 60)
+
+M_sun = 1.989e30
+G = 6.674e-11
+c = 3e8
+kpc = 3.086e19
+pc = 3.086e16
+ly = 9.461e15
+yr = 3.156e7
+Myr = 3.156e13
+
+EOS_LOW  = 0.0013
+EOS_HIGH = 0.0020
+EOS_MID  = (EOS_LOW + EOS_HIGH) / 2
+
+M_total = 60e9 * M_sun
+M1 = 40e9 * M_sun
+M2 = 20e9 * M_sun
+sep = 1.98 * kpc
+
+# P3 Orbital period
+T2 = (4*math.pi**2 * sep**3) / (G * M_total)
+T_newton = math.sqrt(T2) / yr / 1e6
+T_low  = T_newton * (1 + EOS_LOW)
+T_high = T_newton * (1 + EOS_HIGH)
+print(f"P3 Orbital period:")
+print(f"  Newtonian:  {T_newton:.4f} Myr")
+print(f"  EOS range:  {T_low:.4f} — {T_high:.4f} Myr")
+
+# P6 Time to merger
+a_1pc = 1.0 * pc
+t_GW = (5*c**5*a_1pc**4)/(256*G**3*M1*M2*M_total)
+t_GW_Myr = t_GW / Myr
+t_hard = 35
+t_total = t_hard + t_GW_Myr
+t_low  = t_total * (1 + EOS_LOW)
+t_high = t_total * (1 + EOS_HIGH)
+print(f"\nP6 Time to merger:")
+print(f"  Newtonian:  {t_total:.2f} Myr")
+print(f"  EOS range:  {t_low:.2f} — {t_high:.2f} Myr")
+
+# P7 Ejection velocity (current)
+v_now = math.sqrt(G*M_total/sep)/1000
+v_now_low  = v_now*(1+EOS_LOW)
+v_now_high = v_now*(1+EOS_HIGH)
+print(f"\nP7 Ejection velocity (now at 1.98 kpc):")
+print(f"  Newtonian:  {v_now:.2f} km/s")
+print(f"  EOS range:  {v_now_low:.2f} — {v_now_high:.2f} km/s")
+
+# P7 Ejection velocity (hardened 0.1 kpc)
+v_hard = math.sqrt(G*M_total/(0.1*kpc))/1000
+v_hard_low  = v_hard*(1+EOS_LOW)
+v_hard_high = v_hard*(1+EOS_HIGH)
+print(f"\nP7 Ejection velocity (hardened 0.1 kpc):")
+print(f"  Newtonian:  {v_hard:.1f} km/s")
+print(f"  EOS range:  {v_hard_low:.1f} — {v_hard_high:.1f} km/s")
+
+# P9 Final mass
+M_rad = 0.025 * 60e9
+M_final = 60e9 - M_rad
+M_final_low  = M_final*(1-EOS_HIGH)
+M_final_high = M_final*(1-EOS_LOW)
+print(f"\nP9 Final merged mass:")
+print(f"  Newtonian:  {M_final:.3f} B M_sun")
+print(f"  EOS range:  {M_final_low:.3f} — {M_final_high:.3f} B M_sun")
+
+# GW frequencies (no EOS)
+a_fp = pc
+T_fp = math.sqrt((4*math.pi**2*a_fp**3)/(G*M_total))
+f_fp = 2/T_fp
+r_isco = 6*G*M_total/c**2
+T_isco = math.sqrt((4*math.pi**2*r_isco**3)/(G*M_total))
+f_isco = 2/T_isco
+print(f"\nP5 GW at final parsec: {f_fp*1e9:.3f} nHz")
+print(f"P5 GW at ISCO (merger): {f_isco*1e9:.1f} nHz")
+
+# Chirp mass
+mu = M1*M2/M_total
+Mc = (mu**0.6)*(M_total**0.4)
+print(f"\nP4 Chirp mass: {Mc/M_sun/1e9:.3f} B M_sun")
+
+# Stars ejected
+V_cav = (4/3)*math.pi*(1100**3)
+M_ej = V_cav * 1000
+print(f"\nP11 Stars ejected: {M_ej:.3e} M_sun = {M_ej/1e12:.2f} trillion M_sun")
+
+EOF
