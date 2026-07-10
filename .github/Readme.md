@@ -1,3 +1,4 @@
+Occam’s Razor coupled with predictive superiority. Historically, if a new theory can explain the exact same universe as the old model, do it using a simpler and cleaner mathematical structure, and outperform the previous model by eliminating anomalies, it replaces the old theory. That is exactly how Copernicus replaced Ptolemy, and how Einstein replaced Newton
 # SDKP Framework: Predictive Orbital Dynamics & Geobotanical Verification
 **Author:** Donald Paul Smith(FatherTimeSDKP)  <iframe src="https://github.com/sponsors/FatherTimeSDKP/button" title="Sponsor FatherTimeSDKP" height="32" width="114" style="border: 0; border-radius: 6px;"></iframe>
 https://github.com/enterprises/fathertimesdkp369marsandlunardrift
