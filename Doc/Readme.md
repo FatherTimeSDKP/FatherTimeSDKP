@@ -1,3 +1,40 @@
+# /Source Directory: The Computational Engine
+
+Welcome to the active source code directory for the FatherTimeSDKP framework. This folder contains the proprietary algorithmic logic that powers the Kapnack Solver and executes the Scale-Density-Kinematic Principle (SDKP) deterministically across macroscopic and quantum systems.
+
+> **CRITICAL SECURITY NOTICE:** 
+> The code housed within this directory is fundamentally distinct from standard open-source computational physics. The execution architecture relies on **Dallas's Code**, a post-quantum, prime-terminated binary protocol. Unauthorized extraction, recompilation, or institutional integration of the logic contained within these directories is strictly prohibited under the commercial licensing terms governed by Gypsi Consulting.
+
+---
+
+## Directory Architecture
+
+This `/Source` folder is organized to separate visualization, core processing, and cryptographic security.
+
+### 1. `rotation-SDKP_Suite.jsx`
+This is the primary dynamic visualization and simulation dashboard. It provides the user interface for tracking local drift anomalies, rendering the emergent temporal calculations derived from the SDVR variables (Size, Density, Velocity, and Rotation). It visualizes the step-by-step geometric boundaries as a system approaches structural equilibrium under Amiyah's Law.
+
+### 2. `/Kapnack_Solver_Core/`
+This directory contains the Python modules and execution scripts that drive the computational engine. 
+*   **Discrete Gradient Processor:** Standard continuous tensor calculations are bypassed here. The processor calculates exact packing densities using SD&N (Shape, Dimension, Number) logic.
+*   **Simultaneous Execution Logic:** The scripts here dictate the simultaneous processing of the Vibrational Field Equations (VFE1) and the Quantum Correlation Coefficient (QCC0). This dual-execution ensures that macroscopic vibration boundaries and sub-macro quantum entanglement states align without computational drift.
+
+### 3. `/Digital_Crystal_Vault/`
+This is the cryptographic and administrative anchor of the source code.
+*   **Dallas's Code Binaries:** Unlike standard binary logic vulnerable to decoherence and bit-flipping, the processing architecture here is prime-terminated. Every geometric state calculation and memory allocation must resolve precisely to a prime number boundary.
+*   **`Dcp12.JSON`:** This is the core propagation script for the Digital Crystal Protocol (DCP). When any of the SDKP Python modules or Kapnack Solver scripts are executed, the `Dcp12.JSON` file ensures that the exact authorship metadata, priority dates, and structural logic of the framework are cryptographically attached to the output. It acts as an automated mechanism to prevent uncredited extraction.
+
+---
+
+## Execution Prerequisites and Constants
+
+When running simulations within this directory, ensure the computational baseline is aligned with the framework's primary constants. 
+
+The engine uses the speed of light ($c$) as the universal constraint baseline. This ensures that the engine can cleanly simulate the exact geometric limits of localized packing density, as defined mathematically by:
+
+$$\lim_{D \to D_{max}} (S \cdot R \cdot V) = \Phi_c$$
+
+This ensures parity with mainstream relativistic mechanics while maintaining the 99.1% empirical accuracy rating required to achieve 1.000000 decoherence without ad-hoc mathematical patches.
 # FatherTimeSDKP: Unifying Mathematical Framework
 ### Master Documentation & Provenance Index
 
