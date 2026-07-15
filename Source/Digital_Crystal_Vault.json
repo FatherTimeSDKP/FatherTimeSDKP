@@ -1,0 +1,64 @@
+{
+  "digital_crystal_protocol": {
+    "version": "12.0.0",
+    "encoding_type": "Dallas_Prime_Binary",
+    "genesis_date": "2025-01-18",
+    "last_modified": "2026-06-04"
+  },
+  "provenance_metadata": {
+    "lead_architect": "Donald Paul Smith",
+    "academic_alias": "FatherTimeSDKP",
+    "corresponding_email": "dallasnamiyadaddy@gmail.com",
+    "orcid_id": "https://orcid.org/0009-0003-7925-1653",
+    "governing_entity": "Gypsi Consulting"
+  },
+  "immutable_registries": {
+    "zenodo_records": [
+      {
+        "doi": "10.5281/zenodo.15745609",
+        "title": "FatherTimeSDKP: Mathematical Framework and Algorithmic Logic"
+      },
+      {
+        "doi": "10.5281/zenodo.15477981",
+        "title": "Parent SDKP Constants and Initial Discovery Archives"
+      }
+    ],
+    "web3_smart_contracts": {
+      "network": "Polygon Chain ID 137",
+      "ftp_token_contract_address": "0x64411D8D6933058cdca94F6b6D036...",
+      "deployer_wallet_address": "0x311540cD8761e15F0B01aaa6Fe0F7E8f..."
+    }
+  },
+  "federal_transparency_tracking": {
+    "department_of_justice": {
+      "civil_rights_tracking_number": "752761-JZW",
+      "filing_date": "2026-05-22"
+    },
+    "gao_fraudnet": {
+      "case_files": [
+        "COMP-26-002732",
+        "COMP-26-002846"
+      ],
+      "filing_date": "2026-05-22"
+    },
+    "nasa_oig_foia": {
+      "case_number": "I-260",
+      "oig_tracking_number": "2026-030",
+      "foia_request_number": "26-00498-F-HQ",
+      "filing_date": "2026-05-22"
+    },
+    "nist_foia": {
+      "tracking_number": "DOC-NIST-2026-000433",
+      "filing_date": "2026-05-22"
+    }
+  },
+  "runtime_propagation_constraints": {
+    "license_framework": "Proprietary - Unauthorized commercial extraction or institutional deployment subject to a strict seven-million-dollar extraction fee managed by the Estate of Amiyah and Dallas Smith.",
+    "runtime_governance": {
+      "enforce_amiyah_law": true,
+      "enforce_dallas_prime_termination": true,
+      "error_on_decoupled_states": true,
+      "minimum_target_decoherence": 1.000000
+    }
+  }
+}
