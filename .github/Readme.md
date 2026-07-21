@@ -1,8 +1,288 @@
 Occam’s Razor coupled with predictive superiority. Historically, if a new theory can explain the exact same universe as the old model, do it using a simpler and cleaner mathematical structure, and outperform the previous model by eliminating anomalies, it replaces the old theory. That is exactly how Copernicus replaced Ptolemy, and how Einstein replaced Newton
 FatherTimeSDKP Repository Navigation & Document Purpose Index
 
-Purpose of This README
+FatherTimeSDKP Master Repository Index
 
+Repository Purpose
+
+This repository contains the FatherTimeSDKP framework source code, computational models, simulations, documentation, validation materials, metadata records, and archival documentation.
+
+This README provides a classification system so each file can be located by purpose.
+
+⸻
+
+SECTION 1 — CORE ENGINEERING & SOFTWARE
+
+FatherTimeSDKP-engine.py
+
+Classification: Core Framework Engine
+
+Purpose:
+Primary execution layer for SDKP computational workflows.
+
+Contains:
+
+* Framework processing
+* Calculation routines
+* Data handling
+* Model execution
+
+⸻
+
+Kapnack.py
+
+Classification: Solver Engine
+
+Purpose:
+Numerical processing module.
+
+Associated functions:
+
+* Scale processing
+* Density relationships
+* Kinetic calculations
+* Parameter evaluation
+
+⸻
+
+engine.py
+
+Classification: Runtime Infrastructure
+
+Purpose:
+Core computational support functions.
+
+⸻
+
+constants.js
+
+Classification: Reference Constants
+
+Purpose:
+Central location for model constants and configuration values.
+
+⸻
+
+geometry.js
+
+Classification: SD&N Geometry Layer
+
+Purpose:
+Handles geometry-based encoding and structural relationships.
+
+⸻
+
+SECTION 2 — SCIENTIFIC MODELS & SIMULATIONS
+
+EOS-(Earth Orbital Speed)-Principle-Orbital-Dynamic.js
+
+Classification: Orbital Dynamics Simulation
+
+Purpose:
+
+* Earth orbital speed calculations
+* Dynamic modeling
+* Timing comparisons
+
+⸻
+
+Mars-SDKP-SR-GR-comparing.jsx
+
+Classification: Planetary Timing Simulation
+
+Purpose:
+
+* Mars timing comparisons
+* Model comparison studies
+
+⸻
+
+Rotation-SDKP_Suite.jsx
+
+Classification: Rotation Modeling
+
+Purpose:
+
+* Rotational simulations
+* Dynamic system visualization
+
+⸻
+
+SECTION 3 — VALIDATION & TESTING RECORDS
+
+SDKP-experimental-tests.py
+
+Classification: Experimental Test Suite
+
+Purpose:
+
+* Automated testing
+* Computational verification
+* Output recording
+
+⸻
+
+Validation_Suite.ipynb
+
+Classification: Interactive Validation Notebook
+
+Purpose:
+
+* Reproducible analysis
+* Demonstration workflows
+* Data review
+
+⸻
+
+Falsifiable-Predictions.md
+
+Classification: Validation Documentation
+
+Purpose:
+Defines testable predictions and evaluation criteria.
+
+⸻
+
+SECTION 4 — MATHEMATICAL DOCUMENTATION
+
+Complete mathematical logic and math of all principles.pdf
+
+Classification: Mathematical Reference Archive
+
+Purpose:
+Documentation of equations, derivations, and framework relationships.
+
+⸻
+
+SDN Dimensional Encoding Principle v1.0 FatherTimeSDKP.pdf
+
+Classification: SD&N Technical Document
+
+Purpose:
+Documentation of shape, dimension, and number relationships.
+
+⸻
+
+SECTION 5 — LEGAL, AUTHORSHP & PROVENANCE
+
+NOTICE_OF_AUTHORSHIP.md
+
+Classification: Authorship Record
+
+Purpose:
+Documents authorship declarations.
+
+⸻
+
+PROVENANCE.md
+
+Classification: Historical Record
+
+Purpose:
+Documents repository origin and development history.
+
+⸻
+
+PATENT_DISCLOSURE_SPECIFICATION.md
+
+Classification: Intellectual Property Documentation
+
+Purpose:
+Technical disclosure record.
+
+⸻
+
+LEGAL_NOTICE.md
+
+Classification: Legal Reference
+
+Purpose:
+Repository legal statements and notices.
+
+⸻
+
+SECTION 6 — ARCHIVAL & CITATION METADATA
+
+.zenodo.json
+
+Classification: Archive Metadata
+
+Purpose:
+Supports repository archival information.
+
+⸻
+
+CITATION.cff
+
+Classification: Citation Record
+
+Purpose:
+Provides citation information for researchers.
+
+⸻
+
+codemeta.json
+
+Classification: Software Metadata
+
+Purpose:
+Machine-readable project metadata.
+
+⸻
+
+SECTION 7 — DIGITAL INTEGRITY & RECORD MANAGEMENT
+
+DCP_Public_Protocol_Declaration.pdf
+
+Classification: Protocol Documentation
+
+Purpose:
+Digital Crystal Protocol documentation.
+
+⸻
+
+DIGITAL_ANCHOR_MANIFEST.json
+
+Classification: Integrity Metadata
+
+Purpose:
+Digital record tracking.
+
+⸻
+
+TimeSeal_Metadata.json
+
+Classification: Timestamp Metadata
+
+Purpose:
+Record verification information.
+
+⸻
+
+Repository Navigation Summary
+
+Area	Purpose
+Engine Files	Execute calculations
+Solver Files	Process models
+Simulation Files	Run experiments
+Validation Files	Test outputs
+Documentation	Explain framework
+Legal Files	Preserve declarations
+Metadata	Preserve archive information
+
+⸻
+
+Maintenance Rule
+
+Every major repository file should have:
+
+1. A defined purpose
+2. A category
+3. A description
+4. Related files
+5. Version history where applicable
+
+This index is intended to make the repository understandable to developers, reviewers, researchers, and archival systems.
 This document provides a structured guide to the major files and directories contained within the FatherTimeSDKP repository.
 
 The purpose is to identify the role of each major component, including computational research files, validation records, documentation, authorship records, legal materials, simulations, and technical infrastructure.
