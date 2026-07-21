@@ -1,4 +1,349 @@
 Occam’s Razor coupled with predictive superiority. Historically, if a new theory can explain the exact same universe as the old model, do it using a simpler and cleaner mathematical structure, and outperform the previous model by eliminating anomalies, it replaces the old theory. That is exactly how Copernicus replaced Ptolemy, and how Einstein replaced Newton
+FatherTimeSDKP Repository Navigation & Document Purpose Index
+
+Purpose of This README
+
+This document provides a structured guide to the major files and directories contained within the FatherTimeSDKP repository.
+
+The purpose is to identify the role of each major component, including computational research files, validation records, documentation, authorship records, legal materials, simulations, and technical infrastructure.
+
+⸻
+
+1. Core Computational Framework
+
+FatherTimeSDKP-engine.py
+
+Purpose: Primary framework execution engine.
+
+Contains the main computational workflow for running SDKP-related processing, including parameter handling, calculations, and framework operations.
+
+Category:
+
+* Core Software
+* Computational Engine
+* Framework Runtime
+
+⸻
+
+Kapnack.py
+
+Purpose: Kapnack Solver implementation.
+
+Category:
+
+* Numerical Processing
+* Solver Architecture
+* Computational Modeling
+
+Used for:
+
+* Scale relationships
+* Density calculations
+* Kinetic processing
+* Algorithmic testing
+
+⸻
+
+constants.js
+
+Purpose: Centralized scientific and framework constants.
+
+Category:
+
+* Configuration
+* Reference Parameters
+
+Contains:
+
+* Defined constants
+* System parameters
+* Calculation references
+
+⸻
+
+geometry.js
+
+Purpose: SD&N geometry processing.
+
+Category:
+
+* Geometric Modeling
+* Shape Encoding
+
+Contains:
+
+* Shape relationships
+* Geometry mappings
+* Structural calculations
+
+⸻
+
+2. Experimental Testing & Validation
+
+SDKP-experimental-tests.py
+
+Purpose: Experimental test framework.
+
+Category:
+
+* Testing
+* Verification
+* Reproducibility
+
+Used for:
+
+* Running computational experiments
+* Recording outputs
+* Comparing expected results
+
+⸻
+
+Validation_Suite.ipynb
+
+Purpose: Interactive validation notebook.
+
+Category:
+
+* Analysis
+* Demonstration
+* Reproduction
+
+⸻
+
+Falsifiable-Predictions.md
+
+Purpose: Documentation of testable predictions and evaluation criteria.
+
+Category:
+
+* Scientific Methodology
+* Validation Planning
+
+⸻
+
+3. Scientific Documentation
+
+README.md
+
+Purpose: Public orientation document.
+
+Category:
+
+* Project Overview
+* User Navigation
+
+⸻
+
+Complete mathematical logic and math of all principles.pdf
+
+Purpose: Mathematical documentation archive.
+
+Category:
+
+* Theory Documentation
+* Reference Material
+
+⸻
+
+SDN Dimensional Encoding Principle v1.0 FatherTimeSDKP.pdf
+
+Purpose: SD&N principle documentation.
+
+Category:
+
+* Technical Paper
+* Mathematical Framework
+
+⸻
+
+4. Authorship & Provenance Records
+
+Authorship/
+
+Purpose: Authorship documentation and provenance materials.
+
+Category:
+
+* Attribution
+* Historical Record
+
+⸻
+
+NOTICE_OF_AUTHORSHIP.md
+
+Purpose: Authorship declaration record.
+
+Category:
+
+* Provenance
+* Attribution
+
+⸻
+
+PROVENANCE.md
+
+Purpose: Repository history and origin tracking.
+
+Category:
+
+* Chain of Record
+* Documentation Integrity
+
+⸻
+
+5. Legal & Intellectual Property Records
+
+PATENT_DISCLOSURE_SPECIFICATION.md
+
+Purpose: Intellectual property disclosure documentation.
+
+Category:
+
+* Legal Documentation
+* IP Record
+
+⸻
+
+COMMERCIAL_LICENSE.md
+
+Purpose: Licensing terms.
+
+Category:
+
+* Legal
+* Usage Rights
+
+⸻
+
+LEGAL_NOTICE.md
+
+Purpose: Legal notices and statements.
+
+Category:
+
+* Legal Reference
+
+⸻
+
+6. Digital Integrity & Verification
+
+DCP_Public_Protocol_Declaration.pdf
+
+Purpose: Digital Crystal Protocol documentation.
+
+Category:
+
+* Protocol Definition
+* Integrity Framework
+
+⸻
+
+DIGITAL_ANCHOR_MANIFEST.json
+
+Purpose: Digital record manifest.
+
+Category:
+
+* Metadata
+* Verification
+
+⸻
+
+TimeSeal_Metadata.json
+
+Purpose: Timestamp and record metadata.
+
+Category:
+
+* Integrity Verification
+* Historical Logging
+
+⸻
+
+7. Simulation & Modeling Files
+
+Mars-SDKP-SR-GR-comparing.jsx
+
+Purpose: Mars timing comparison simulation.
+
+Category:
+
+* Simulation
+* Comparative Modeling
+
+⸻
+
+SharonCare1_Time_Dilation_Simulation.jsx
+
+Purpose: Time-related simulation model.
+
+Category:
+
+* Simulation
+* Computational Visualization
+
+⸻
+
+Rotation-SDKP_Suite.jsx
+
+Purpose: Rotation and dynamics simulation tools.
+
+Category:
+
+* Modeling
+* Visualization
+
+⸻
+
+8. Archive and External Records
+
+.zenodo.json
+
+Purpose: Repository metadata configuration.
+
+Category:
+
+* Archive Metadata
+* Publication Support
+
+⸻
+
+CITATION.cff
+
+Purpose: Citation information.
+
+Category:
+
+* Academic Reference
+* Attribution
+
+⸻
+
+Repository Classification Summary
+
+Category	Purpose
+Core Engine	Running framework calculations
+Solver Files	Numerical processing
+Validation Files	Testing and reproducibility
+Documentation	Explaining concepts
+Legal Files	IP and notices
+Authorship Files	Provenance records
+Metadata Files	Archive and citation support
+Simulation Files	Computational demonstrations
+
+⸻
+
+Maintenance Principle
+
+Each file should have a clearly identified role:
+
+* Scientific files explain methods and calculations.
+* Software files execute computational processes.
+* Validation files define testing procedures.
+* Legal files preserve documentation and rights records.
+* Metadata files preserve archive and citation information.
+
+This index is intended to help reviewers, researchers, developers, and auditors navigate the repository efficiently.
 # SDKP Framework: Predictive Orbital Dynamics & Geobotanical Verification
 **Author:** Donald Paul Smith(FatherTimeSDKP)  <iframe src="https://github.com/sponsors/FatherTimeSDKP/button" title="Sponsor FatherTimeSDKP" height="32" width="114" style="border: 0; border-radius: 6px;"></iframe>
 https://github.com/enterprises/fathertimesdkp369marsandlunardrift
@@ -347,98 +692,6 @@ Hash hash
 Higgs field simulation using route anchors of the 369 mathematical anchors.HTML
 7 months ago
 Higgs-field-sim.html
-3 months ago
-IMG_0227.PNG
-last month
-IMG_0228.PNG
-last month
-IMG_0229.PNG
-last month
-IMG_0596 2.PNG
-8 months ago
-IMG_7596.png
-6 months ago
-IMG_7597.png
-6 months ago
-IMG_7598.png
-6 months ago
-IMG_7599.png
-6 months ago
-IMG_7602.png
-6 months ago
-IMG_7603.png
-6 months ago
-IMG_7604.png
-6 months ago
-IMG_7605.png
-6 months ago
-IMG_7606.png
-6 months ago
-IMG_7609.png
-6 months ago
-IMG_7610.png
-6 months ago
-IMG_7611.png
-6 months ago
-IMG_7612.png
-6 months ago
-IMG_7613.png
-6 months ago
-IMG_7614.png
-6 months ago
-IMG_7615.png
-6 months ago
-IMG_8525.png
-last month
-IMG_9294.png
-4 months ago
-IMG_9295.png
-4 months ago
-IMG_9322.png
-4 months ago
-IMG_9323.png
-4 months ago
-IMG_9324.png
-4 months ago
-IMG_9325.png
-4 months ago
-IMG_9326.png
-4 months ago
-IMG_9327.png
-4 months ago
-IMG_9328.png
-4 months ago
-IMG_9329.png
-4 months ago
-IMG_9330.png
-4 months ago
-IMG_9331.png
-4 months ago
-IMG_9332.png
-4 months ago
-IMG_9334.png
-4 months ago
-IMG_9335.png
-4 months ago
-IMG_9336.png
-4 months ago
-IMG_9337.png
-4 months ago
-IMG_9338.png
-4 months ago
-IMG_9339.png
-4 months ago
-IMG_9340.png
-4 months ago
-IMG_9341.png
-4 months ago
-IMG_9342.png
-4 months ago
-IMG_9343.png
-4 months ago
-IMG_9344.png
-4 months ago
-IMG_9345.png
 4 months ago
 INTERFERENCE_LOG.md
 last month
