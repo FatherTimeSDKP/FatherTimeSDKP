@@ -1,6 +1,99 @@
 Occam’s Razor coupled with predictive superiority. Historically, if a new theory can explain the exact same universe as the old model, do it using a simpler and cleaner mathematical structure, and outperform the previous model by eliminating anomalies, it replaces the old theory. That is exactly how Copernicus replaced Ptolemy, and how Einstein replaced Newton
 FatherTimeSDKP Repository Navigation & Document Purpose Index
+# FatherTimeSDKP Repository
 
+## Repository Navigation Index
+
+This repository contains:
+
+1. Source Code
+2. Mathematical Documentation
+3. Computational Simulations
+4. Validation and Testing Records
+5. Authorship and Provenance Records
+6. Legal and Intellectual Property Documentation
+7. Archive and Citation Metadata
+
+---
+
+# Quick Navigation
+
+| Purpose | Location |
+|---|---|
+| Core software | `/src`, `/Source`, SDKP engine files |
+| Solver systems | `Kapnack.py`, related solver modules |
+| Simulations | `.jsx`, `.py`, notebooks |
+| Validation | `Tests/`, validation notebooks, test reports |
+| Documentation | `/Doc`, `/documentation` |
+| Authorship | Authorship records and provenance files |
+| Legal/IP | Patent disclosures, notices, licenses |
+| Archive metadata | `.zenodo.json`, `CITATION.cff`, `codemeta.json` |
+
+---
+
+# File Classification
+
+## Software Components
+
+### `Kapnack.py`
+Purpose:
+Core computational solver module.
+
+### `FatherTimeSDKP-engine.py`
+Purpose:
+Framework execution layer.
+
+---
+
+## Scientific Documentation
+
+### `SDN Dimensional Encoding Principle v1.0 FatherTimeSDKP.pdf`
+Purpose:
+Technical documentation for SD&N concepts.
+
+### `Complete mathematical logic and math of all principles.pdf`
+Purpose:
+Mathematical reference archive.
+
+---
+
+## Validation Records
+
+### `SDKP-experimental-tests.py`
+Purpose:
+Automated computational testing.
+
+### `Validation_Suite.ipynb`
+Purpose:
+Interactive analysis and reproducibility.
+
+---
+
+## Legal / Provenance Records
+
+### `PATENT_DISCLOSURE_SPECIFICATION.md`
+Purpose:
+Technical disclosure record.
+
+### `NOTICE_OF_AUTHORSHIP.md`
+Purpose:
+Authorship documentation.
+
+### `PROVENANCE.md`
+Purpose:
+Repository history and origin record.
+
+---
+
+## Citation / Archive Records
+
+### `CITATION.cff`
+Purpose:
+Citation metadata.
+
+### `.zenodo.json`
+Purpose:
+Archive metadata configuration.
 FatherTimeSDKP Master Repository Index
 
 Repository Purpose
