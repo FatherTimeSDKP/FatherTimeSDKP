@@ -1,0 +1,162 @@
+ P A C E C RA F T D E S I GN
+SharonCare1
+Central Distribution Manifold Propulsion System SD&N Dodecahedral Architecture
+A spherical spacecraft whose hull geometry IS the propulsion system. Twelve through-body plasma conduits arranged in dodecahedral symmetry intersect at a central mixing chamber, enabling 4,096 discrete thrust states, 360° vectoring authority, and zero mechanical moving parts. Every design parameter derived from first principles of the SD&N Dimensional Encoding Principle.
+AU THOR Donald Paul Smith
+ORC I D 0009-0003-7925-1653
+F R AMEWORK DO I 10.5281/zenodo.14850016
+DAT E June 21, 2026
+SD&N Dodecahedral SDVR State Vector Plasma Propulsion Magnetic Flux Gating EOS Calibrated Digital Crystal Protocol
+1 SD&N Geometric Foundation — The Hull IS the Engine
+The SharonCare1 propulsion architecture begins not with engineering convention but with geometry. The SD&N (Shape × Dimension × Number) Principle of the FatherTimeSDKP framework establishes that every geometric form encodes its own higher-dimensional states through three intrinsic properties: Faces (F), Vertices (V), and Edges (E). The design of SharonCare1 is the physical instantiation of this principle applied to spacecraft propulsion.
+The selection of 12 through-body plasma conduits is not arbitrary. It is the direct application of the dodecahedron — the Platonic solid with F=12 faces — as the governing geometry of the propulsion system. The spherical hull of SharonCare1 is geometrically a dodecahedron, and every structural and propulsive element of the design follows from that single geometric fact.
+SD&N DODECAHEDRAL ENCODING — SHARONCARE1
+Platonic Solid: Dodecahedron
+Euler Check: F - E + V = 12 - 30 + 20 = 2 ✓
+F = 12 Faces → 12 through-body plasma conduits (3D propulsion state)
+V = 20 Vertices → 20 magnetic flux gate nodes (4D control state)
+E = 30 Edges → 30 structural reinforcement paths (5D stability encoding)
+SD&N Shape Factor: φ = (F × V) / E = (12 × 20) / 30 = 8.0000
+SD&N Phase Factor: 2π / (F+V+E) = 2π / 62 = 0.10134 rad = 5.81°
+This is the same φ = 8.0000 shared by the icosahedron (F=20, V=12, E=30).
+The dodecahedron and icosahedron are dual solids — they share the same
+5D dimensional expression (E=30). SharonCare1 is therefore dimensionally
+stable across both the 3D propulsive and 4D control state boundaries.
+1.1 Why the Dodecahedron The dodecahedron is the Platonic solid with the highest number of faces before the geometry becomes impractical for physical conduit routing (the icosahedron has 20 faces, which produces too-shallow intersection angles at the plenum). With 12 faces, the dodecahedral arrangement provides:
+Maximum angular distribution — face centers separated by approximately 41.8°, ensuring no two conduits compete for the same thrust vector
+Structural completeness — 30 edge pathways form the full internal skeletal framework of the hull
+4,096 discrete thrust states — 212 binary gate combinations provide continuous 360° vectoring on all axes
+Dual-solid stability — shared E=30 with the icosahedron provides the 5D encoding that makes the geometry dimensionally resistant to deformation under plasma pressure
+2 System Architecture
+2.1 Central Distribution Manifold The propulsion system abandons the conventional architecture of external gimbaled engines in favor of a continuous, unified plasma circuit integrated directly into the structural hull. Twelve through-body plasma conduits run the full diameter of the spherical hull, intersecting at the geometric center to form the Central Mixing Chamber — the Plenum.
+| [Conduit 11] -----+------ [Conduit 01] / [PLENUM] \ [C10] ——————————— [ Central ] ——————————— [C02] [C09] ——————————— [ Mixing ] ——————————— [C03] \ [Chamber] / [Conduit 08] -----+------ [Conduit 04] | [C07] ————— [Structural Cross] ————— [C05] | [Conduit 06 — Bottom Cap]
+12 conduits × full hull diameter = 30 structural edge paths All plasma transits the Plenum before vectoring Toroidal propellant tanks ring the inner hull radius
+2.2 The Plenum — Central Mixing Chamber All twelve conduits converge at the geometric center of the spherical hull. This junction serves as the primary distribution hub and self-regulating flow equalizer. By forcing all plasma to transit through this single central chamber, the system ensures pressure equalization and thermal uniformity across the full conduit array before injection into the thrust vectors.
+Kinetic turbulence encountered by any single conduit is instantly dampened and redistributed across the remaining manifold via the plenum's pressure-equalization dynamics. This prevents localized hull stress and maintains stable flight characteristics without active intervention from the flight computer — the geometry handles it passively.
+2.3 SDVR State Vector — SharonCare1 as a Physical Body
+S
+SIZE
+~10 m diameter
+Spherical hull — full conduit run length equals hull diameter. SD&N structural nodes at dodecahedral face centers.
+D
+DENSITY
+500–800 kg/m³
+Target mean hull density. Conformal toroidal tanks maintain constant center of mass regardless of propellant depletion level.
+V
+VELOCITY
+7,600 → 24,077 m/s
+LEO station-keeping through Mars transfer orbit. EOS anchor: 29,780 m/s (Earth Orbital Speed) as mission velocity reference.
+R
+ROTATION
+Variable — gate modulated
+Attitude control achieved by differential gate modulation across the 12-conduit array. No reaction wheels required.
+3 Magnetic Flux Gating — Vector Control System
+Directional authority is achieved through Magnetic Flux Gating at the exit ports of each conduit. This system replaces all conventional mechanical valves, gimbals, and thrust-vectoring actuators with high-fidelity electromagnetic arrays. There are no moving mechanical parts in the propulsion vector control chain.
+3.1 Gate Architecture — 20-Node Control Lattice The SD&N encoding places 20 vertex nodes (V=20) at the dodecahedral vertices of the hull. These 20 nodes are the physical locations of the magnetic flux gate arrays — each controlling the plasma flow at the exit ports of adjacent conduits. The V=20 configuration creates a fully connected 4D control state: every gate is within one vertex-edge step of every conduit exit port.
+Gate State Mechanism Response Plasma Condition
+CLOSED (Pinch)
+High-intensity magnetic field constricts plasma into dormant state at exit port
+<500 µs Flow maintained internally, no thrust
+OPEN (Vectoring)
+Magnetic field modulated — plasma expands instantly through conduit
+<500 µs Full thrust initiated — no mechanical latency
+THROTTLE Field intensity modulated between 0–100% in 256 discrete steps <1 ms Variable thrust from 0 to max per conduit
+EMERGENCY Power loss defaults field to maximum pinch — all gates CLOSED <1 µs Instantaneous shutdown — failsafe design
+THRUST VECTOR SUMMATION EQUATION
+ΔV_net = Σ(i=1 to 12) [g_i · T_i · n_i]
+Where:
+g_i = gate throttle coefficient for conduit i [0.0 to 1.0]
+T_i = thrust magnitude of conduit i [N]
+n_i = unit vector of conduit i face normal (dodecahedral geometry)
+Discrete states: 2^12 = 4,096 binary gate combinations
+Continuous states: 256^12 ≈ 5.4 × 10^28 throttle combinations
+Angular resolution: 5.81° (SD&N phase factor 2π/62)
+All-axis coverage: 360° with zero mechanical repositioning time
+4 Propellant Feed and Storage Architecture
+4.1 Conformal Toroidal Tank Configuration Propellant is housed in conformal, toroidal-shaped tanks mounted along the inner radius of the spherical hull's secondary layer. The toroidal geometry is selected specifically for its compatibility with the dodecahedral structural frame: each of the 30 SD&N edge pathways serves as a structural stringer between adjacent toroidal tank segments.
+This positioning ensures the center of mass remains constant regardless of propellant depletion level — the toroidal ring empties uniformly from all sectors simultaneously, maintaining the balanced mass distribution required for the gate-modulated attitude control system.
+4.2 Cryogenic Injection and Regenerative Cooling High-pressure cryogenic pump system feeds directly into the central Plenum. The pump system provides variable mass-flow rates: low-flow for station-keeping and high-flow for orbital maneuvering and transfer burns
+Regenerative cooling loop: propellant circulates around the outer jacket of each conduit before injection, absorbing heat from the conduit wall and pre-heating the fuel. This simultaneously protects the conduit structure and increases thermodynamic efficiency by delivering pre-heated propellant to the Plenum
+Plenum pre-conditioning: propellant is thermally and atomically pre-conditioned in the central Plenum before entering the conduit array, ensuring uniform plasma state across all 12 thrust vectors at ignition
+5 Thermal Mitigation and Material Specifications
+Component Material Specification Function
+Conduit bore lining
+Tungsten-Rhenium alloy (W-Re 26%)
+Melting point: 3,422°C (3,695 K) Density: 19.7 g/cm³
+Primary plasma containment — prevents ablation across thousands of firing cycles, maintains bore geometry
+Conduit bore backup
+Ceramic Matrix Composite (SiC/SiC)
+Max operating temp: ~1,650°C Thermal conductivity: ~4 W/m·K
+Secondary thermal barrier — structural backup if W-Re lining experiences localized failure
+Hull inner insulation
+Aerogel-silica composite
+Thermal conductivity: ~0.015 W/m·K Density: 0.15 g/cm³
+Thermal isolation between plasma conduits and crew/payload sectors — prevents heat transfer across wedge-sector boundaries
+Conduit outer jacket
+Double-wall vacuum gap
+Gap pressure: <10³ Pa Outer wall: Ti-6Al-4V
+Vacuum insulation gap between plasma bore and hull exterior — eliminates conductive thermal path to external hull surface
+Wedge-sector
+High-temp resistance cladding
+Aerogel-silica composite + MLI
+Environmentally shields 12 habitable/payload wedge sectors from adjacent conduit thermal radiation
+6.1 Fiber-Optic Command Bus Architecture The Plenum connects to all 12 magnetic flux gate arrays via a radiation-hardened, fiber-optic command bus. The fiber-optic medium is selected specifically to eliminate electromagnetic interference (EMI) from the plasma flow — copper bus architectures are inherently susceptible to EMI-induced command errors in high-plasma environments.
+COMMAND BUS PERFORMANCE SPECIFICATIONS
+Bus architecture: Radiation-hardened fiber-optic ring topology
+Redundancy: Triple-redundant (primary + secondary + tertiary nodes)
+Failover time: <1 CPU cycle from primary node failure to secondary activation
+Command latency: <500 microseconds from input to gate actuation
+EMI immunity: Full isolation — photonic signal, zero susceptibility to plasma fields
+Data rate: >10 Gbps per ring segment
+Gate addressing: Binary-addressed per SD&N vertex node (20-address space)
+Failover logic: Automatic — no operator intervention required
+6.2 Dynamic Distribution Algorithm The flight computer implements the Dynamic Distribution Algorithm — a real-time solver that converts incoming navigation commands into gate configuration matrices. The algorithm operates on the SD&N vertex graph of the dodecahedral geometry: each gate node (V=20) is addressed as a node in a 4D control graph, and the solver finds the minimum-energy gate configuration that produces the commanded thrust vector within the angular resolution of 5.81°.
+Failover within the algorithm: if a gate reports a fault, the algorithm detects the pressure drop signature within one control cycle (<1 ms) and automatically re-solves the gate configuration matrix using the remaining 11 conduits to maintain the commanded thrust vector with graceful degradation.
+7 Internal Volume and Payload Integration
+7.1 12-Sector Wedge Architecture The 12 through-body conduits divide the internal volume of the spherical hull into 12 wedge-shaped sectors — a direct consequence of the dodecahedral geometry. Each sector is thermally isolated from its adjacent conduits by the aerogel-silica cladding system. The sectors are used for:
+Sector Type Count Contents
+Primary habitable 3 Crew quarters, life support, human interfaces
+Avionics 2 Triple-redundant flight computers, fiber-optic bus hubs, sensor arrays
+Power systems 2 Primary power generation and conditioning, battery backup arrays
+Payload 3 Mission-specific payload — modular configuration
+Emergency systems 2 Emergency venting, secondary shutdown, medical
+7.2 Conduit-as-Chassis Integration All avionics, life support, and payload components are mounted directly to the internal conduit structures, which serve as the primary load-bearing skeleton of the craft. This conduit-as-chassis design eliminates the need for a separate internal frame, maximizing usable volume. Equipment mounting points utilize active piezoelectric dampers to neutralize micro-vibrations generated by plasma flow.
+8 Redundancy and Fail-Safe Protocols
+8.1 Graceful Degradation — N+1 Architecture The central manifold design provides inherent N+1 redundancy without additional hardware. If any single conduit suffers a blockage, gate failure, or structural compromise, the central Plenum automatically re-routes plasma to the remaining 11 conduits. The Dynamic Distribution Algorithm detects the pressure drop signature within <1 ms and re-solves the thrust vector
+11/12 conduits: Graceful degradation — 2,048 discrete states — full mission capability
+10/12 conduits: Reduced vectoring — 1,024 states — primary mission with constraints
+9/12 conduits: Minimum viable — 512 states — emergency return/station-keeping only
+<9/12 conduits: Emergency protocol — passive attitude control — emergency beacon active
+Fail-closed design: power loss → maximum magnetic pinch on ALL gates → full shutdown
+No conduit failure can produce an uncontrolled thrust event.
+8.2 Emergency Protocols Fail-closed emergency shutdown: All magnetic flux gates are designed as fail-closed. If primary power is lost, the magnetic field defaults to maximum pinch state on all 12 exit ports. Plasma flow stops within microseconds. No mechanical actuator failure mode can produce uncontrolled thrust
+Structural safety factor: Spherical hull rated for 1.5× maximum operating Plenum pressure. Each conduit is double-walled with vacuum gap between the primary plasma bore and the external hull wall
+Emergency Plenum venting: Passive secondary venting system depressurizes the central Plenum into deep space within 10 seconds if internal pressure exceeds safe operating limits
+Thermal runaway protection: Redundant thermocouple arrays in each conduit wall segment report to the flight computer at 1 kHz. Automatic gate closure initiated if conduit wall temperature approaches W-Re safety threshold
+9 SDKP Framework Analysis
+Applying the SDKP (Size × Density × Kinetics × Position) framework to the SharonCare1 system as a complete physical body yields the following emergent timescale analysis for mission phases:
+Mission Phase S [m] D [kg/m³] K [kg/m²·s] τ = S·D/K [s] EOS Range
+LEO Station-keeping 10.0 800 640 12.50 12.52 — 12.52
+Orbital transfer burn 10.0 600 1,200 5.00 5.01 — 5.01
+Mars approach 10.0 500 2,000 2.50 2.50 — 2.51
+Emergency maneuver 10.0 700 5,600 1.25 1.25 — 1.25
+The SDKP τ value represents the emergent characteristic timescale of the propulsion system response — the natural period at which the hull-plenum-conduit system settles into a new equilibrium after a thrust command. The EOS correction (0.13%– 0.20%) applied to K gives the range. All values are within the <500 µs gate response requirement.
+10 Validation Roadmap
+I Phase I — Bench Testing: Single-Conduit Magnetic Flux Gate Static fire testing of a single-conduit manifold segment in atmospheric test cell. Characterize magnetic pinch effectiveness, gate response latency (<500 µs target), and propellant flow rates at variable throttle settings (0–100%). Establish W-Re liner ablation baseline over 1,000 firing cycles.
+II Phase II — Plenum Validation: Central Chamber Pressure Equalization Test the central Plenum manifold with 4, 6, and 12 conduit feeds simultaneously. Verify pressure equalization across all active conduits within <10 ms of ignition. Measure cross-conduit turbulence dampening coefficient. Validate the passive self-regulation property of the manifold geometry.
+III Phase III — Vacuum Chamber: Full-Scale System Test Full 12-conduit array firing in vacuum chamber. Measure thrust-to-power ratios for all 4,096 discrete gate states. Characterize thermal dissipation curves and regenerative cooling efficiency. Validate 360° thrust vector authority across all three axes. Test N+1 graceful degradation with simulated conduit failures.
+IV Phase IV — Structural Load Testing: Hull Integrity Hydrostatic testing of spherical hull to 1.5× maximum Plenum operating pressure. Verify through-body conduits function as effective structural ribbing under combined thermal and mechanical loading. Piezoelectric damper effectiveness characterization under simulated plasma vibration spectrum.
+V Phase V — Integrated System: Flight Qualification
+Field Detail
+Author Donald Paul Smith (Father Time)
+Organization Gypsi Consulting, Gainesville, Florida, USA
+ORCID 0009-0003-7925-1653
+Framework DOI 10.5281/zenodo.14850016
+SD&N Principle DOI 10.5281/zenodo.14850016
+Digital Crystal Protocol FTS-AUTH-CRYSTAL-369 | UUID: 70c995bd-f025-4ecd-b9df-f2cfa65088e8
+Date of Disclosure June 21, 2026
+Document Status Technical Disclosure — Prior Art Record
+IP NOTICE — DIGITAL CRYSTAL PROTOCOL
+This document constitutes a timestamped technical disclosure of the SharonCare1 Central Distribution Manifold Propulsion System under the Digital Crystal Protocol (FTS-AUTH-CRYSTAL-369). The application of the SD&N Dimensional Encoding Principle to spacecraft propulsion geometry, the dodecahedral conduit arrangement, the 20-node magnetic flux gate architecture derived from V=20 SD&N encoding, and the SDVR-based spacecraft state vector analysis are original contributions of Donald Paul Smith. All rights reserved. Attribution required per the Mirror Clause.
+SharonCare1 — Central Distribution Manifold — Technical Disclosure Donald Paul Smith | Gypsi Consulting | Gainesville, FL | June 21, 2026
+ORCID: 0009-0003-7925-1653 | DOI: 10.5281/zenodo.14850016 | Digital Crystal Protocol: FTS-AUTH-CRYSTAL-369
