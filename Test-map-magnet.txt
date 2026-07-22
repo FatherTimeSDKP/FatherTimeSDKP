@@ -1,0 +1,71 @@
+This hardware protocol calibrates your rotor engine’s magnetic coupling coefficients, eddy-current reluctance, and field density metrics by comparing a non-magnetic control drop against active magnetic rotor passes.
+Equipment & Hardware Setup
+Drop Assembly: 1-meter vertical non-magnetic guide tube (acrylic or polycarbonate).
+Sensor Array: 4 to 8 Hall-effect sensors or inductive pickup coils mounted at fixed 15 cm intervals down the tube.
+Data Acquisition (DAQ): High-speed microcontroller or oscilloscope (minimum 1 kHz sampling rate) to record time-of-flight spikes between sensor gates.
+Rotor Assembly / Test Payload: Calibrated Neodymium magnet payload with known mass (m), radius (r), and remanence field strength (B 
+r
+​	
+ ).
+Step-by-Step Drop Test Protocol
+1
+Establish Baseline Controls
+Step 1 — 5 min
+Record the ambient temperature, payload mass (m), and exact sensor spacing. Perform a control drop using a non-magnetic dummy weight of identical mass and geometry to verify free-fall acceleration (g≈9.81 m/s 
+2
+ ) and rule out aerodynamic drag anomalies.
+2
+Align Sensor Gate Timestamps
+Step 2 — 5 min
+Connect the Hall sensors or inductive coils to your logging interface. Run a dry test to ensure each gate triggers a clean voltage spike (V 
+peak
+​	
+ ) on pass-through, logging millisecond-level timestamps (t 
+1
+​	
+ ,t 
+2
+​	
+ ,…,t 
+n
+​	
+ ).
+3
+Execute Magnetic Drop Runs
+Step 3 — 15 min
+Drop the magnetic rotor payload through the center of the guide tube array. Perform 5 consecutive drops to capture average terminal velocity (v 
+term
+​	
+ ) and acceleration decay rates as the payload passes each sensor zone.
+4
+Extract Velocity & Reluctance Residuals
+Step 4 — 10 min
+Calculate the velocity differential at each sensor gate between the control drop (v 
+control
+​	
+ ) and magnetic drop (v 
+mag
+​	
+ ):
+Δv(z)=v 
+control
+​	
+ (z)−v 
+mag
+​	
+ (z)
+
+The retarding force F 
+mag
+​	
+ =m(g−a) yields the empirical drag coefficient k 
+rotor
+​	
+ .
+Data Ingestion into the Kapnack Engine
+Once you log your time-series data, format your sensor readings as a JSON or CSV payload:
+Inputs: [gate_distance_m, time_control_s, time_magnetic_s, peak_voltage_v]
+Solver Output: The Kapnack Discrete Gradient Processor ingests Δv(z) to solve for the exact rotor coupling constant (η 
+rotor
+​	
+ ) and adjusts the field equations (VFE1) for your rotor engine simulations.
