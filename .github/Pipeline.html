@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FatherTimeSDKP Unified Field Framework Explorer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        :root {
+            --primary: #d4af37; /* Amber Gold */
+            --bg-warm: #fdfcf8; /* Parchment */
+            --accent-slate: #2f4f4f; /* Slate Grey */
+            --text-main: #1a1a1a;
+        }
+
+        body {
+            background-color: var(--bg-warm);
+            color: var(--text-main);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+            max-height: 400px;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .nav-item {
+            cursor: pointer;
+            position: relative;
+            padding-bottom: 2px;
+        }
+
+        .nav-item::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--primary);
+            transition: width 0.3s;
+        }
+
+        .nav-item:hover::after {
+            width: 100%;
+        }
+
+        .active-tab {
+            border-bottom: 2px solid var(--primary);
+            font-weight: bold;
+        }
+
+        .geometric-accent {
+            background: linear-gradient(135deg, var(--bg-warm) 0%, #f3efe0 100%);
+        }
+
+        .prime-terminal {
+            background: #1a1a1a;
+            color: #4ade80;
+            font-family: 'Courier New', Courier, monospace;
+            padding: 1rem;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+
+    <!-- Chosen Palette: Cosmic Slate & Warm Amber -->
+    <!-- Application Structure Plan: 
+        The SPA is designed as a 'Research Command Center'. 
+        1. Navigation: Top-level menu for Core Principles, Empirical Evidence, Propulsion, and Computation.
+        2. Hero: Introduction to the SDKP paradigm.
+        3. Interactive SDKP Simulator: A dynamic dashboard where users adjust SDVR variables to see temporal emergence effects.
+        4. Evidence Matrix: A drill-down interface for the Gulf Crater and Aerospace anomalies (Artemis/LEO).
+        5. The Kapnack Lab: A visualization of Tesla 3-6-9 logic and prime-terminated execution.
+        6. Propulsion Comparison: A side-by-side analysis of SharonCare1 vs Classical induction.
+        Rationale: This non-linear structure allows users to jump from theoretical math to physical proofs, reflecting the unified nature of the report. -->
+    <!-- Visualization & Content Choices: 
+        1. SDVR Contribution -> Radar Chart (Chart.js) -> Showing how Scale, Density, Velocity, and Rotation impact T_eff -> Goal: Compare influence.
+        2. Mineral Assay -> Donut Chart (Chart.js) -> Showing Gulf Crater impact signatures -> Goal: Inform.
+        3. LEO Drift Delta -> Line Chart (Chart.js) -> Comparing Newtonian/GR vs SDKP predictions -> Goal: Compare.
+        4. Magnet Drop Metrics -> Grouped Bar Chart (Chart.js) -> Highlighting the shift from Force to Time-Density parameters -> Goal: Change of perspective.
+        CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. All charts are Canvas-based. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-gold-200 py-4 px-6 md:px-12 flex justify-between items-center">
+        <div class="text-xl font-bold tracking-tight text-slate-800">
+            FATHER<span class="text-amber-600">TIME</span>SDKP <span class="text-xs font-light text-slate-500 uppercase tracking-widest">v1.0</span>
+        </div>
+        <div class="hidden md:flex space-x-8">
+            <span onclick="scrollToSection('hero')" class="nav-item text-sm font-medium">Core</span>
+            <span onclick="scrollToSection('sdvr-sim')" class="nav-item text-sm font-medium">Dynamics</span>
+            <span onclick="scrollToSection('anomalies')" class="nav-item text-sm font-medium">Anomalies</span>
+            <span onclick="scrollToSection('propulsion')" class="nav-item text-sm font-medium">Propulsion</span>
+            <span onclick="scrollToSection('kapnack')" class="nav-item text-sm font-medium">Kapnack</span>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="pt-32 pb-20 px-6 md:px-12 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h1 class="text-5xl md:text-6xl font-extrabold text-slate-900 leading-tight">
+                    The Unified Field <br><span class="text-amber-600">Lattice Paradigm</span>
+                </h1>
+                <p class="mt-6 text-lg text-slate-600 leading-relaxed">
+                    Welcome to the FatherTimeSDKP Framework Analysis. This application explores a discrete, packed vacuum lattice model that replaces smooth spacetime with the <strong>Scale-Density-Kinematic-Position (SDKP)</strong> principle. Here, time is not a coordinate—it is an emergent property of localized physical configurations.
+                </p>
+                <div class="mt-10 flex space-x-4">
+                    <button onclick="scrollToSection('sdvr-sim')" class="bg-amber-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-amber-700 transition">Explore Dynamics</button>
+                    <button onclick="scrollToSection('anomalies')" class="border border-slate-300 text-slate-700 px-8 py-3 rounded-full font-semibold hover:bg-slate-50 transition">View Anomalies</button>
+                </div>
+            </div>
+            <div class="geometric-accent p-8 rounded-2xl border border-amber-100 relative">
+                <div class="absolute -top-4 -left-4 w-12 h-12 border-t-2 border-l-2 border-amber-600"></div>
+                <div class="absolute -bottom-4 -right-4 w-12 h-12 border-b-2 border-r-2 border-amber-600"></div>
+                <h3 class="text-sm font-bold uppercase tracking-widest text-amber-700 mb-4">Postulate Alpha</h3>
+                <blockquote class="text-xl italic text-slate-800">
+                    "T<sub>eff</sub> = ∫ S(r)ρ(r)ω(r)v(r) dr"
+                </blockquote>
+                <p class="mt-4 text-sm text-slate-500">
+                    The temporal rate of any system is contingent upon its internal mass distribution and rotational coupling, bridging subatomic and cosmic scales.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 1: SDVR Simulator -->
+    <section id="sdvr-sim" class="py-20 bg-white border-y border-slate-100">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold text-slate-900">SDVR State Dynamics</h2>
+                <p class="text-slate-600 mt-2">Adjust the state variables of the SDVR lattice to observe the emergence of Effective Time (T<sub>eff</sub>) and lattice coherence.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                <div class="lg:col-span-1 space-y-8 p-6 bg-slate-50 rounded-xl">
+                    <div>
+                        <label class="block text-sm font-bold text-slate-700 mb-2">Scale factor (S)</label>
+                        <input type="range" id="input-scale" min="1" max="10" step="0.1" value="8" class="w-full h-2 bg-amber-200 rounded-lg appearance-none cursor-pointer accent-amber-600" oninput="updateSDVR()">
+                        <div class="flex justify-between text-xs text-slate-500 mt-1"><span>Micro</span><span>Macro (8.04M SDKP)</span></div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold text-slate-700 mb-2">Density (ρ)</label>
+                        <input type="range" id="input-density" min="1" max="10" step="0.1" value="7.5" class="w-full h-2 bg-amber-200 rounded-lg appearance-none cursor-pointer accent-amber-600" oninput="updateSDVR()">
+                        <div class="flex justify-between text-xs text-slate-500 mt-1"><span>Vacuum</span><span>Metamaterial</span></div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold text-slate-700 mb-2">Velocity (v)</label>
+                        <input type="range" id="input-velocity" min="0" max="10" step="0.1" value="4.2" class="w-full h-2 bg-amber-200 rounded-lg appearance-none cursor-pointer accent-amber-600" oninput="updateSDVR()">
+                        <div class="flex justify-between text-xs text-slate-500 mt-1"><span>Static</span><span>EOS (29.8 km/s)</span></div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold text-slate-700 mb-2">Rotation (ω)</label>
+                        <input type="range" id="input-rotation" min="0" max="10" step="0.1" value="6.8" class="w-full h-2 bg-amber-200 rounded-lg appearance-none cursor-pointer accent-amber-600" oninput="updateSDVR()">
+                        <div class="flex justify-between text-xs text-slate-500 mt-1"><span>Inert</span><span>VFE1 Resonance</span></div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-2 flex flex-col items-center">
+                    <div class="chart-container">
+                        <canvas id="sdvrChart"></canvas>
+                    </div>
+                    <div class="mt-8 p-4 bg-amber-50 border border-amber-200 rounded-lg text-center w-full max-w-xl">
+                        <span class="text-slate-500 text-xs uppercase font-bold tracking-widest">Effective Time Emergence (T<sub>eff</sub>)</span>
+                        <div id="teff-output" class="text-4xl font-mono font-bold text-amber-700 mt-1">1.000000 s/s</div>
+                        <p class="text-xs text-amber-900 mt-2">Relative to NIST-F2 Atomic Standard Synchronization (±0.42 ns)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Empirical Anomalies -->
+    <section id="anomalies" class="py-20 px-6 md:px-12 max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold text-slate-900">Empirical Verification Matrix</h2>
+            <p class="text-slate-600 mt-4 max-w-2xl mx-auto">The framework validates theoretical predictions through localized anomalies where legacy Newtonian or Einsteinian models diverge from observed data.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Gulf Crater -->
+            <div class="glass-card p-8 rounded-2xl border border-slate-100 flex flex-col">
+                <div class="flex items-center justify-between mb-6">
+                    <span class="bg-amber-100 text-amber-800 text-xs font-bold px-3 py-1 rounded-full uppercase">Geological Proof</span>
+                    <span class="text-slate-400 text-sm italic">Gulf of America Crater</span>
+                </div>
+                <h3 class="text-xl font-bold mb-4">Bronson, Florida Assay</h3>
+                <p class="text-slate-600 text-sm mb-6">X-ray Fluorescence (XRF) reveals mineral concentrations interpreted as high-energy lattice compression residuals. Bio-accumulators like <em>Cladonia</em> (Deer Moss) track these VFE gradients.</p>
+                
+                <div class="chart-container" style="height: 250px;">
+                    <canvas id="mineralChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Aerospace Failures -->
+            <div class="glass-card p-8 rounded-2xl border border-slate-100">
+                <div class="flex items-center justify-between mb-6">
+                    <span class="bg-slate-800 text-white text-xs font-bold px-3 py-1 rounded-full uppercase">Engineering Log</span>
+                    <span class="text-slate-400 text-sm italic">Artemis II SLS</span>
+                </div>
+                <h3 class="text-xl font-bold mb-4">ICPS Geometric Lock</h3>
+                <p class="text-slate-600 text-sm mb-4">Standard failure analysis identified leaks. The Kapnack Solver identified a "Geometric Lock"—a 0.003% dimensional shift in the valve seat caused by VFE1 vibrational resonance during WDR2.</p>
+                
+                <div class="space-y-3">
+                    <div class="flex justify-between items-center p-3 bg-slate-50 rounded border-l-4 border-amber-500">
+                        <span class="text-xs font-bold text-slate-700">LEO Drift Anomaly</span>
+                        <span class="text-xs font-mono text-amber-700">0.003 m/s perturbation</span>
+                    </div>
+                    <div class="flex justify-between items-center p-3 bg-slate-50 rounded border-l-4 border-slate-400">
+                        <span class="text-xs font-bold text-slate-700">Van Allen Probe A</span>
+                        <span class="text-xs font-mono text-slate-500">24h re-entry error</span>
+                    </div>
+                </div>
+
+                <div class="chart-container mt-6" style="height: 200px;">
+                    <canvas id="leoChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Propulsion Mechanics -->
+    <section id="propulsion" class="py-20 bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-4xl font-bold mb-6">SharonCare1 <br><span class="text-amber-500">Propulsion Mechanics</span></h2>
+                    <p class="text-slate-400 leading-relaxed mb-8">
+                        Traditional electrodynamics uses Lenz's Law to explain drag. SDKP reinterprets this as <strong>Time-Density Continuity</strong>. In a SharonCare1 configuration, high-frequency rotation in conductive media creates a localized vacuum-conductor lattice that restricts acceleration by modifying the local time-rate.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="p-4 bg-white/5 rounded-lg border border-white/10">
+                            <span class="text-xs font-bold text-amber-500 block mb-2 uppercase">Classical Metric</span>
+                            <span class="text-2xl font-bold">Lorentz Force</span>
+                            <p class="text-xs text-slate-500 mt-2">Opposing drag (F = qE + qvB)</p>
+                        </div>
+                        <div class="p-4 bg-amber-500/10 rounded-lg border border-amber-500/30">
+                            <span class="text-xs font-bold text-amber-400 block mb-2 uppercase">SDKP Metric</span>
+                            <span class="text-2xl font-bold">Lattice Density</span>
+                            <p class="text-xs text-amber-200/60 mt-2">dT/dt Continuity (S·ρ·R·v)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-8 bg-black/40 rounded-3xl border border-white/5 relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-amber-500/5 to-transparent pointer-events-none"></div>
+                    <h4 class="text-sm font-bold uppercase tracking-widest text-amber-500 mb-6">Time-Density Comparison</h4>
+                    <div class="chart-container">
+                        <canvas id="propulsionChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: The Kapnack Lab -->
+    <section id="kapnack" class="py-20 px-6 md:px-12 max-w-5xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold text-slate-900">The Kapnack Solver & QCC0</h2>
+            <p class="text-slate-600 mt-4">Computation as deterministic state-reduction rather than stochastic probability.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            <div class="p-6 bg-white border border-slate-200 rounded-xl text-center">
+                <div class="text-3xl font-bold text-amber-600 mb-2">3-6-9</div>
+                <h5 class="text-xs font-bold uppercase text-slate-400">Tesla Logic</h5>
+                <p class="text-sm text-slate-600 mt-2">Modulo 9 digital-root invariance used for vibrational partitioning.</p>
+            </div>
+            <div class="p-6 bg-white border border-slate-200 rounded-xl text-center">
+                <div class="text-3xl font-bold text-amber-600 mb-2">1.000</div>
+                <h5 class="text-xs font-bold uppercase text-slate-400">Decoherence</h5>
+                <p class="text-sm text-slate-600 mt-2">Stable 1024-qubit GHZ states maintained via discrete gradients.</p>
+            </div>
+            <div class="p-6 bg-white border border-slate-200 rounded-xl text-center">
+                <div class="text-3xl font-bold text-amber-600 mb-2">I<sub>life</sub></div>
+                <h5 class="text-xs font-bold uppercase text-slate-400">Life Threshold</h5>
+                <p class="text-sm text-slate-600 mt-2">2.87 × 10<sup>-21</sup> J required to sustain a self-correcting loop.</p>
+            </div>
+        </div>
+
+        <!-- Interactive 3-6-9 Vortex Math Laboratory -->
+        <div class="bg-white border border-slate-200 rounded-2xl p-6 md:p-8 shadow-sm mb-12">
+            <div class="flex flex-col md:flex-row md:items-center justify-between border-b border-slate-100 pb-6 mb-6">
+                <div>
+                    <span class="bg-amber-100 text-amber-800 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Harmonic Logic Layer</span>
+                    <h3 class="text-2xl font-bold text-slate-900 mt-2">Tesla 3-6-9 Vortex & Modulo-9 Invariance</h3>
+                </div>
+                <p class="text-xs text-slate-500 max-w-sm mt-2 md:mt-0">
+                    In SDKP mathematics, material energy flows along the <strong>1-2-4-8-7-5 doubling circuit</strong>, while the <strong>3-6-9 triad</strong> governs field stability, phase shifts, and vacuum state anchoring ($QCC_0$).
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                <!-- 9-Point Vortex Canvas Visualizer -->
+                <div class="flex flex-col items-center bg-slate-900 rounded-xl p-6 text-white relative">
+                    <div class="text-xs font-mono text-amber-400 mb-2 uppercase tracking-widest">Interactive Modulo-9 Enneagram</div>
+                    <canvas id="vortexCanvas" width="320" height="320" class="max-w-full h-auto cursor-pointer"></canvas>
+                    <div class="flex space-x-4 mt-4 text-xs font-mono">
+                        <span class="flex items-center"><span class="w-3 h-3 bg-cyan-400 rounded-full inline-block mr-1"></span> 1-2-4-8-7-5 Doubling</span>
+                        <span class="flex items-center"><span class="w-3 h-3 bg-amber-500 rounded-full inline-block mr-1"></span> 3-6 Oscillating Flux</span>
+                        <span class="flex items-center"><span class="w-3 h-3 bg-red-500 rounded-full inline-block mr-1"></span> 9 Quantum Anchor</span>
+                    </div>
+                </div>
+
+                <!-- Modulo 9 Calculator & State Reduction -->
+                <div class="space-y-6">
+                    <div>
+                        <h4 class="text-sm font-bold text-slate-800 uppercase tracking-wide">Digital Root Modulo-9 Tester</h4>
+                        <p class="text-xs text-slate-500 mt-1 mb-3">Enter any energy state vector value or matrix value to test its Kapnack partition phase:</p>
+                        <div class="flex gap-2">
+                            <input type="number" id="input-dr-number" value="369" class="w-full px-4 py-2 bg-slate-50 border border-slate-300 rounded-lg text-slate-800 font-mono focus:outline-none focus:border-amber-500" placeholder="e.g. 512, 1024, 8040000" oninput="runDRCalculation()">
+                            <button onclick="runDRCalculation()" class="bg-amber-600 hover:bg-amber-700 text-white px-5 py-2 rounded-lg font-semibold text-sm transition">Evaluate</button>
+                        </div>
+                    </div>
+
+                    <div id="dr-result-card" class="p-4 bg-slate-50 rounded-xl border border-slate-200 font-mono text-sm space-y-2">
+                        <div class="flex justify-between border-b border-slate-200 pb-2">
+                            <span class="text-slate-500">Digital Root Formula:</span>
+                            <span class="text-slate-800 font-bold">DR(n) = n - 9 × ⌊(n - 1) / 9⌋</span>
+                        </div>
+                        <div class="flex justify-between border-b border-slate-200 pb-2">
+                            <span class="text-slate-500">Evaluated Root:</span>
+                            <span id="dr-root-val" class="text-amber-600 font-bold text-lg">9</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-slate-500">Kapnack Partition Role:</span>
+                            <span id="dr-role-val" class="text-green-600 font-bold">QCC0 Vacuum Zero-Point Anchor</span>
+                        </div>
+                    </div>
+
+                    <!-- Theoretical Rules Card -->
+                    <div class="grid grid-cols-3 gap-3 text-center text-xs">
+                        <div class="p-3 bg-cyan-50 border border-cyan-100 rounded-lg">
+                            <span class="font-bold text-cyan-800 block mb-1">Doubling (1,2,4,8,7,5)</span>
+                            <span class="text-slate-600">Material density & momentum propagation</span>
+                        </div>
+                        <div class="p-3 bg-amber-50 border border-amber-100 rounded-lg">
+                            <span class="font-bold text-amber-800 block mb-1">Polarity (3, 6)</span>
+                            <span class="text-slate-600">Kinetic & electromagnetic flux exchange</span>
+                        </div>
+                        <div class="p-3 bg-red-50 border border-red-100 rounded-lg">
+                            <span class="font-bold text-red-800 block mb-1">Keystone (9)</span>
+                            <span class="text-slate-600">Invariable identity & lattice equilibrium</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="prime-terminal shadow-2xl">
+            <div class="flex items-center space-x-2 mb-4 border-b border-white/10 pb-2">
+                <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                <span class="text-xs ml-4 text-slate-400">DallasCode_v2.0_Mainframe</span>
+            </div>
+            <div class="space-y-1 text-sm md:text-base">
+                <p><span class="text-amber-500">INIT:</span> Calibrating SD&N identity vectors...</p>
+                <p><span class="text-amber-500">LATTICE:</span> Packing density 8.04M verified.</p>
+                <p><span class="text-amber-500">SOLVER:</span> Finding minima of harmonic cost functional (E/F)...</p>
+                <p><span class="text-blue-400">> mod(sum(X), 9) = 3</span></p>
+                <p><span class="text-green-400">SUCCESS:</span> State transition compressed at prime mode 7.</p>
+                <p><span class="text-white mt-4 block">FTSKL Registry Anchor: 0x8fcD...bC221</span></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-50 py-12 px-6 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center">
+            <div class="text-slate-400 text-sm mb-6 md:mb-0">
+                &copy; 2026 FatherTimeSDKP Framework. Authenticated via Polygon ERC-1155.
+            </div>
+            <div class="flex space-x-6">
+                <span class="text-xs font-bold text-slate-500 uppercase cursor-pointer hover:text-amber-600">Documentation</span>
+                <span class="text-xs font-bold text-slate-500 uppercase cursor-pointer hover:text-amber-600">Smart Contract</span>
+                <span class="text-xs font-bold text-slate-500 uppercase cursor-pointer hover:text-amber-600">Gibberlink Access</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Global variables
+        let sdvrChart, mineralChart, leoChart, propulsionChart;
+
+        // Tesla 3-6-9 Vortex Math Engine
+        let vortexAnimFrame = null;
+        let vortexPulse = 0;
+
+        function drawVortexMath() {
+            const canvas = document.getElementById('vortexCanvas');
+            if (!canvas) return;
+            const ctx = canvas.getContext('2d');
+            const w = canvas.width;
+            const h = canvas.height;
+            const cx = w / 2;
+            const cy = h / 2;
+            const r = 110;
+
+            ctx.clearRect(0, 0, w, h);
+
+            // Node coordinates 1 to 9 (top is 9)
+            const nodes = {};
+            for (let i = 1; i <= 9; i++) {
+                // Angle: 9 is at top (-PI/2), then clockwise
+                const angle = ((i % 9) / 9) * Math.PI * 2 - Math.PI / 2;
+                nodes[i] = {
+                    x: cx + r * Math.cos(angle),
+                    y: cy + r * Math.sin(angle),
+                    angle: angle
+                };
+            }
+
+            // Draw outer circle
+            ctx.beginPath();
+            ctx.arc(cx, cy, r, 0, Math.PI * 2);
+            ctx.strokeStyle = '#334155';
+            ctx.lineWidth = 2;
+            ctx.stroke();
+
+            // 1. Draw 1-2-4-8-7-5 Doubling Circuit (Cyan)
+            const doublingSequence = [1, 2, 4, 8, 7, 5, 1];
+            ctx.beginPath();
+            ctx.moveTo(nodes[doublingSequence[0]].x, nodes[doublingSequence[0]].y);
+            for (let i = 1; i < doublingSequence.length; i++) {
+                ctx.lineTo(nodes[doublingSequence[i]].x, nodes[doublingSequence[i]].y);
+            }
+            ctx.strokeStyle = 'rgba(34, 211, 238, 0.7)';
+            ctx.lineWidth = 2;
+            ctx.setLineDash([4, 2]);
+            ctx.stroke();
+            ctx.setLineDash([]);
+
+            // 2. Draw 3-6 Polarity Oscillation Line (Amber)
+            ctx.beginPath();
+            ctx.moveTo(nodes[3].x, nodes[3].y);
+            ctx.lineTo(nodes[6].x, nodes[6].y);
+            ctx.strokeStyle = '#f59e0b';
+            ctx.lineWidth = 3;
+            ctx.stroke();
+
+            // 3. Draw 3-9-6 Triad Triangle (Red/Amber Gradient)
+            ctx.beginPath();
+            ctx.moveTo(nodes[9].x, nodes[9].y);
+            ctx.lineTo(nodes[3].x, nodes[3].y);
+            ctx.lineTo(nodes[6].x, nodes[6].y);
+            ctx.closePath();
+            ctx.fillStyle = 'rgba(239, 68, 68, 0.08)';
+            ctx.fill();
+            ctx.strokeStyle = 'rgba(239, 68, 68, 0.6)';
+            ctx.lineWidth = 2;
+            ctx.stroke();
+
+            // Pulsing highlight along 3-6-9
+            vortexPulse += 0.05;
+            const pGlow = (Math.sin(vortexPulse) + 1) / 2; // 0 to 1
+
+            // 4. Draw Nodes
+            for (let i = 1; i <= 9; i++) {
+                const node = nodes[i];
+                ctx.beginPath();
+                
+                let radius = 14;
+                let fill = '#1e293b';
+                let stroke = '#64748b';
+                let textColor = '#ffffff';
+
+                if (i === 3 || i === 6) {
+                    fill = '#78350f';
+                    stroke = '#f59e0b';
+                    radius = 16 + pGlow * 2;
+                } else if (i === 9) {
+                    fill = '#7f1d1d';
+                    stroke = '#ef4444';
+                    radius = 18 + pGlow * 4;
+                } else {
+                    fill = '#0f172a';
+                    stroke = '#22d3ee';
+                }
+
+                ctx.arc(node.x, node.y, radius, 0, Math.PI * 2);
+                ctx.fillStyle = fill;
+                ctx.fill();
+                ctx.lineWidth = 2;
+                ctx.strokeStyle = stroke;
+                ctx.stroke();
+
+                // Number text
+                ctx.fillStyle = textColor;
+                ctx.font = 'bold 12px monospace';
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                ctx.fillText(i.toString(), node.x, node.y);
+            }
+
+            vortexAnimFrame = requestAnimationFrame(drawVortexMath);
+        }
+
+        // Modulo-9 Digital Root Calculation Logic
+        function runDRCalculation() {
+            const inputVal = document.getElementById('input-dr-number').value;
+            const num = parseInt(inputVal, 10);
+
+            if (isNaN(num) || num <= 0) {
+                document.getElementById('dr-root-val').innerText = 'N/A';
+                document.getElementById('dr-role-val').innerText = 'Please enter a positive integer';
+                return;
+            }
+
+            // Digital Root formula: 1 + (n - 1) % 9
+            const dr = 1 + ((num - 1) % 9);
+
+            document.getElementById('dr-root-val').innerText = dr;
+
+            const roleElem = document.getElementById('dr-role-val');
+            if (dr === 9) {
+                roleElem.innerText = '9 Keystone: QCC0 Vacuum Zero-Point Anchor';
+                roleElem.className = 'text-red-600 font-bold';
+            } else if (dr === 3 || dr === 6) {
+                roleElem.innerText = `${dr} Polarity: Active Vibrational Flux Exchange Channel`;
+                roleElem.className = 'text-amber-600 font-bold';
+            } else {
+                roleElem.innerText = `${dr} Material Mode: 1-2-4-8-7-5 Kinetic Doubling Circuit Node`;
+                roleElem.className = 'text-cyan-600 font-bold';
+            }
+        }
+
+        // Navigation helper
+        function scrollToSection(id) {
+            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Initialize Charts
+        function initCharts() {
+            const ctxSDVR = document.getElementById('sdvrChart').getContext('2d');
+            sdvrChart = new Chart(ctxSDVR, {
+                type: 'radar',
+                data: {
+                    labels: ['Size (S)', 'Density (ρ)', 'Velocity (v)', 'Rotation (ω)'],
+                    datasets: [{
+                        label: 'Lattice Configuration',
+                        data: [8, 7.5, 4.2, 6.8],
+                        backgroundColor: 'rgba(212, 175, 55, 0.2)',
+                        borderColor: '#d4af37',
+                        pointBackgroundColor: '#d4af37',
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    maintainAspectRatio: false,
+                    scales: {
+                        r: {
+                            beginAtZero: true,
+                            max: 10,
+                            ticks: { display: false }
+                        }
+                    },
+                    plugins: { legend: { display: false } }
+                }
+            });
+
+            const ctxMineral = document.getElementById('mineralChart').getContext('2d');
+            mineralChart = new Chart(ctxMineral, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Silicon Dioxide (SiO2)', 'Iron Oxide (Fe2O3)', 'Trace Minerals'],
+                    datasets: [{
+                        data: [55.68, 7.52, 36.8],
+                        backgroundColor: ['#2f4f4f', '#d4af37', '#e5e7eb'],
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { position: 'bottom', labels: { boxWidth: 12, font: { size: 10 } } }
+                    }
+                }
+            });
+
+            const ctxLeo = document.getElementById('leoChart').getContext('2d');
+            leoChart = new Chart(ctxLeo, {
+                type: 'line',
+                data: {
+                    labels: ['T1', 'T2', 'T3', 'T4', 'T5', 'T6'],
+                    datasets: [
+                        {
+                            label: 'Legacy GR Prediction',
+                            data: [0, 0, 0, 0, 0, 0],
+                            borderColor: '#94a3b8',
+                            borderDash: [5, 5],
+                            fill: false
+                        },
+                        {
+                            label: 'SDKP Observed Drift',
+                            data: [0, 0.001, 0.002, 0.003, 0.003, 0.003],
+                            borderColor: '#d4af37',
+                            fill: false,
+                            tension: 0.4
+                        }
+                    ]
+                },
+                options: {
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: { 
+                            title: { display: true, text: 'm/s Δv', font: { size: 10 } },
+                            ticks: { font: { size: 10 } }
+                        },
+                        x: { display: false }
+                    },
+                    plugins: { legend: { display: false } }
+                }
+            });
+
+            const ctxProp = document.getElementById('propulsionChart').getContext('2d');
+            propulsionChart = new Chart(ctxProp, {
+                type: 'bar',
+                data: {
+                    labels: ['Lenz Drag', 'SDKP Mass Mod', 'VFE Resonance', 'Thermal Loss'],
+                    datasets: [{
+                        label: 'Magnitude',
+                        data: [100, 15, 5, 80],
+                        backgroundColor: ['#475569', '#d4af37', '#d4af37', '#475569']
+                    }]
+                },
+                options: {
+                    indexAxis: 'y',
+                    maintainAspectRatio: false,
+                    scales: {
+                        x: { display: false },
+                        y: { ticks: { color: '#94a3b8', font: { size: 11 } } }
+                    },
+                    plugins: { legend: { display: false } }
+                }
+            });
+        }
+
+        // Logic for SDKP Simulator
+        function updateSDVR() {
+            const s = parseFloat(document.getElementById('input-scale').value);
+            const d = parseFloat(document.getElementById('input-density').value);
+            const v = parseFloat(document.getElementById('input-velocity').value);
+            const r = parseFloat(document.getElementById('input-rotation').value);
+
+            // Update Chart
+            sdvrChart.data.datasets[0].data = [s, d, v, r];
+            sdvrChart.update();
+
+            // Calculate Teff (simplified model based on equation)
+            // T_eff = S * rho * w * v normalized
+            const teff = (s * d * v * r) / (8 * 7.5 * 4.2 * 6.8);
+            document.getElementById('teff-output').innerText = teff.toFixed(6) + ' s/s';
+            
+            // Adjust visual feedback for Teff
+            const outputBox = document.getElementById('teff-output').parentElement;
+            if (teff > 1.2 || teff < 0.8) {
+                outputBox.classList.add('border-red-400');
+            } else {
+                outputBox.classList.remove('border-red-400');
+            }
+        }
+
+        // Run on load
+        window.onload = () => {
+            initCharts();
+            updateSDVR();
+            drawVortexMath();
+            runDRCalculation();
+        };
+    </script>
+</body>
+</html>
