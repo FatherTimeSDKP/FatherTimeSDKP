@@ -1,5 +1,6 @@
 Occam’s Razor coupled with predictive superiority. Historically, if a new theory can explain the exact same universe as the old model, do it using a simpler and cleaner mathematical structure, and outperform the previous model by eliminating anomalies, it replaces the old theory. That is exactly how Copernicus replaced Ptolemy, and how Einstein replaced Newton
-FatherTimeSDKP Repository Navigation & Document Purpose Index
+https://share.gemini.google/ikFG6XfYhJfJ
+FatherTimeSDKP Repository Navigation & Document Purpose Index 
 # FatherTimeSDKP Repository
 
 ## Repository Navigation Index
