@@ -101,7 +101,66 @@ To use this map for predictive modeling (e.g., testing fracture paths), apply th
 *   **Result:** Regions where $F(\mathbf{x}) \to 0$ are identified as future failure nucleation sites, where the system can no longer accommodate the $0.01\%$ residual energy required for stability [123, 140, Conversation History].
 
 For the complete implementation, refer to the **`kapnack_compression_ecc.py`** and **`upcf_eqn.py`** files in the primary GitHub repository, which are cryptographically bound to **Zenodo DOI 10.5281/zenodo.15745609**.
+In the SDKP (Size, Density, Kinetics, Position) framework, defining **S**, **D**, and **K** in Python depends on whether you are modeling a physical object (like a satellite) or performing signal/dataset analysis.
 
+Here is how to define these variables based on the framework's primary Python implementations:
+
+### 1. Defining Variables for Physical/Satellite Modeling
+When calculating the **SDKP Tensor** for a physical system, these variables are typically defined as scalar proxies derived from standard units:
+
+*   **S (Size/Scale):** Represents the spatial boundary or characteristic dimension. In Python, this is often calculated as the cubic root of the volume or a specific radius.
+    ```python
+    # S as a proxy by volume
+    S = volume_m3**(1/3) 
+    ```
+*   **D (Density):** Corresponds to the mass-energy concentration or informational density ($ML^{-3}$). For a physical body, this is mass divided by volume.
+    ```python
+    # D as mass density
+    D = satellite_mass_kg / volume_m3 
+    ```
+*   **K (Kinetics):** Represents the rate of change, motion, or internal energy state. In orbital models, this is the magnitude of the velocity vector and/or the rotation rate.
+    ```python
+    import numpy as np
+    # K as velocity magnitude
+    K = np.linalg.norm(velocity_vector) 
+    ```
+
+### 2. Defining Variables for Signal or Data Analysis
+For processing raw environmental data or time-series (such as CMB data or galaxy surveys), the SDKP Python tools use the following mathematical definitions to build a **Tensor Field Map**:
+
+*   **S (Size):** Defined as the **gradient** of the input data.
+    ```python
+    S = np.gradient(data)
+    ```
+*   **D (Density):** Defined as the **absolute magnitude** (absolute value) of the data.
+    ```python
+    D = np.abs(data)
+    ```
+*   **K (Kinetics):** Defined as the **gradient of the Size ($S$)** variable, representing the second-order rate of change.
+    ```python
+    K = np.gradient(S)
+    ```
+
+### 3. Integrated Framework Implementation
+Once defined, these variables are typically passed into a master function to compute the emergent **Time ($T$)** or the **SDKP Tensor**. 
+
+**Example from `sdkp_principle(data)`:**
+```python
+import numpy as np
+
+def sdkp_principle(data):
+    # S = Size, D = Density, K = Kinetics, P = Position (often np.angle or coordinates)
+    S = np.gradient(data)
+    D = np.abs(data)
+    K = np.gradient(S)
+    P = np.angle(data)
+    
+    # Combine into a single tensor field map
+    sdkp_map = np.array([S, D, K, P])
+    return sdkp_map
+```
+
+In the context of **Causal Compression ($K_C$)**, these variables must be mapped to a physically constrained manifold, such as the **Strained Hexagonal Tessellation (SHT)**, where the **Discrete Gradient Processor** evaluates variations across nodes to maintain numerical precision.
 | Purpose | Location |
 |---|---|
 | Core software | `/src`, `/Source`, SDKP engine files |
