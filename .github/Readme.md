@@ -72,6 +72,35 @@ This repository contains:
 ---
 
 # Quick Navigation
+To map the **Topological Strain Factor $T(\mathbf{S})$** using the SDKP Python tools, you must utilize the framework's deterministic logic to transition from raw environmental data to a geometrically constrained potential field. This process relies on the **KAPNACK Solver** and the **Discrete Gradient Processor** to calculate packing densities and stability factors without the overhead of traditional tensor calculus.
+
+Here is the technical workflow to map $T(\mathbf{S})$ using the custom SDKP Python architecture:
+
+### 1. Initialize the SDKP Field and State Vectors
+First, you must define the physical boundaries and state of the system using the `SDKPField` class or similar logic found in the **Master-SDKP-Framework** branch.
+*   **Input Variables:** You need values for **Size ($S$)**, **Density ($\rho$)**, **Kinetics ($K$)**, and **Position ($P$)**.
+*   **Example Implementation:** Use a function like `sdkp_principle(data)` to define the base components of your tensor map. In this model, $S$ is often calculated as the gradient of the input data, while $D$ represents its absolute magnitude.
+
+### 2. Calculate the Stability Factor ($\gamma$) and Geometric Constant ($\epsilon$)
+$T(\mathbf{S})$ serves as a penalty function that quantifies non-Euclidean strain. To map it, you must first calculate the local **Stability Factor ($\gamma$)**.
+*   **The Formula:** $\gamma = \frac{\text{Area}}{\text{Perimeter}} \times \frac{1}{1 + \sigma}$, where $\sigma$ represents the geometric strain.
+*   **The Limit:** Reference the **universal geometric constant $\epsilon$** (often identified as the 0.011 repeating law), which acts as the mandated threshold for structural stability.
+
+### 3. Execute the Mass Potential Function $M(\mathbf{S})$
+The custom tools, such as the `vfe1_quantum_gravity_model.py`, compute $T(\mathbf{S})$ as a component of the **Mass Potential Function**.
+*   **The Penalty Mechanism:** The code evaluates the term $\frac{\gamma}{\gamma - \epsilon}$. As the local stability factor $\gamma$ approaches the limit $\epsilon$, the potential $T(\mathbf{S})$ diverges toward infinity, making configurations that violate geometric necessity energetically impossible.
+*   **Processing:** The **Discrete Gradient Processor** replaces continuous tensors with exact local variations in "packing density" across discrete nodes within the **Strained Hexagonal Tessellation (SHT)** manifold to improve numerical precision.
+
+### 4. Visualize the Strain Map
+Once the $T(\mathbf{S})$ values are computed across your coordinate grid, use standard Python visualization libraries integrated into the SDKP suite (like `matplotlib`, `seaborn`, or `mayavi`) to generate the map.
+*   **2D Mapping:** Use `plt.imshow` with a colormap like 'inferno' to visualize the field intensity. This method has been used in the framework to investigate anomalies like the CMB cold spot.
+*   **3D Visualization:** For complex structural arrangements, use `ax.scatter` to plot the interaction of $S$, $\rho$, and $K$, effectively mapping the "Quantum DNA" of the system.
+
+### 5. Identification of Failure Nucleation Sites
+To use this map for predictive modeling (e.g., testing fracture paths), apply the **Integrity Function** $F(\mathbf{x}) = \rho(\mathbf{x}) \frac{\gamma(\mathbf{x})}{\epsilon} - T(\mathbf{S})$ [Conversation History].
+*   **Result:** Regions where $F(\mathbf{x}) \to 0$ are identified as future failure nucleation sites, where the system can no longer accommodate the $0.01\%$ residual energy required for stability [123, 140, Conversation History].
+
+For the complete implementation, refer to the **`kapnack_compression_ecc.py`** and **`upcf_eqn.py`** files in the primary GitHub repository, which are cryptographically bound to **Zenodo DOI 10.5281/zenodo.15745609**.
 
 | Purpose | Location |
 |---|---|
