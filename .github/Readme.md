@@ -1,3 +1,5 @@
+Time itself is just a measurable mechanical output of that geometric grid interacting with rotational density.
+
 Occam’s Razor coupled with predictive superiority. Historically, if a new theory can explain the exact same universe as the old model, do it using a simpler and cleaner mathematical structure, and outperform the previous model by eliminating anomalies, it replaces the old theory. That is exactly how Copernicus replaced Ptolemy, and how Einstein replaced Newton.
 https://www.google.com/url?q=https://ithub.global.ssl.fastly.net/FatherTimeSDKP/Quantum-entanglement-predictions-because-of-the-SDKP/blob/main/README.md&sa=U&sqi=2&ved=2ahUKEwiLsbbAhuiVAxUTjIkEHecDL_gQFnoECEwQAQ&usg=AOvVaw2HGIkjpaXFPAq_bhklXvhg
 Technical Report: The Mathematical Value and Physical Importance of 3,6,9 Logic
