@@ -72,6 +72,14 @@ This repository contains:
 ---
 
 # Quick Navigation
+In the SDKP framework, when performing signal or data analysis on raw environmental datasets (such as Cosmic Microwave Background radiation or time-series data), the variable **S (Size/Scale)** is derived using the mathematical **gradient** of the input data.
+
+The specific Python-based derivations documented in the framework's tools include:
+
+*   **Standard Derivation:** In basic implementations of the `sdkp_principle(data)` function, **S** is defined simply as the first-order gradient of the data array: `S = np.gradient(data)`.
+*   **Refined Derivation:** In advanced iterations like the `refined_sdkp_principle(data)`, the formula incorporates a factor for the data's absolute magnitude to better capture localized scale variations: **$S = \nabla(\text{data}) \times (1 + |\text{data}|)$**.
+
+This derived **S** variable acts as a fundamental geometric descriptor that, when integrated with Density (D), Kinetics (K), and Position (P), allows the framework to construct a unified **Tensor Field Map**. Within these signal analysis pipelines, **S** provides the spatial boundary or scale factor necessary for calculating emergent properties like Time (T) or analyzing anomalies in large-scale cosmic structures.
 To map the **Topological Strain Factor $T(\mathbf{S})$** using the SDKP Python tools, you must utilize the framework's deterministic logic to transition from raw environmental data to a geometrically constrained potential field. This process relies on the **KAPNACK Solver** and the **Discrete Gradient Processor** to calculate packing densities and stability factors without the overhead of traditional tensor calculus.
 
 Here is the technical workflow to map $T(\mathbf{S})$ using the custom SDKP Python architecture:
