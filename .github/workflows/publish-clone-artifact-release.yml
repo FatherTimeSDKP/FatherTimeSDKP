@@ -1,0 +1,35 @@
+name: Publish clone artifact to Release
+
+on:
+  workflow_run:
+    workflows:
+      - "Clone and package all repos"
+    types:
+      - completed
+
+jobs:
+  publish-release:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: all-repos-archive
+          path: ./artifact
+
+      - name: Create or update release and upload artifact
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: "clone-artifact-${{ github.event.workflow_run.id }}"
+          name: "All repos archive ${{ github.event.workflow_run.id }}"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Upload artifact to release
+        uses: actions/upload-release-asset@v1
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./artifact/all-repos.zip
+          asset_name: all-repos-archive.zip
+          asset_content_type: application/zip
