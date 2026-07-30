@@ -35,17 +35,43 @@ jobs:
               core.info(`Found existing PR #${pr.number}`);
             } else {
               core.info('No existing PR found — creating one');
-              const { data: newPr } = await github.rest.pulls.create({ owner, repo, title: 'chore: sync lockfile and CI fixes (automated)', head, base, body: 'Automated PR to merge CI and lockfile fixes from fix/frontend-backend-workflows into Master-SDKP-Framework. Reviewers: @FatherTimeSDKP.' });
+              const { data: newPr } = await github.rest.pulls.create({ owner, repo, title: 'chore: sync lockfile and CI fixes (automated)', head, base, body: 'Automated PR to merge CI and lockfile and CI fixes from fix/frontend-backend-workflows into Master-SDKP-Framework. Reviewers: @FatherTimeSDKP.' });
               pr = newPr;
               core.info(`Created PR #${pr.number}`);
             }
 
-            // Request reviewer (you)
+            // Try to load reviewers pool from .github/reviewers.txt on the branch
+            let reviewers = ['FatherTimeSDKP'];
             try {
-              await github.rest.pulls.requestReviewers({ owner, repo, pull_number: pr.number, reviewers: ['FatherTimeSDKP'] });
-              core.info('Requested review from @FatherTimeSDKP');
+              const { data: file } = await github.rest.repos.getContent({ owner, repo, path: '.github/reviewers.txt', ref: head });
+              if (file && file.content) {
+                const content = Buffer.from(file.content, 'base64').toString('utf8');
+                const handles = content.split(/\r?\n/).map(s => s.trim()).filter(Boolean).map(s => s.startsWith('@') ? s.slice(1) : s);
+                if (handles.length > 0) {
+                  // Fisher–Yates shuffle
+                  for (let i = handles.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [handles[i], handles[j]] = [handles[j], handles[i]];
+                  }
+                  reviewers = handles.slice(0, Math.min(5, handles.length));
+                }
+              }
             } catch (e) {
-              core.warning('Could not request reviewer: ' + e.message);
+              core.info('No reviewers pool found or failed to read it: ' + e.message);
+            }
+
+            // Ensure at least the repo owner is requested and limit to 5
+            if (!reviewers.includes('FatherTimeSDKP')) {
+              reviewers.unshift('FatherTimeSDKP');
+              reviewers = [...new Set(reviewers)].slice(0, 5);
+            }
+
+            // Request reviewers
+            try {
+              await github.rest.pulls.requestReviewers({ owner, repo, pull_number: pr.number, reviewers });
+              core.info('Requested review from: ' + reviewers.join(', '));
+            } catch (e) {
+              core.warning('Could not request reviewers: ' + e.message);
             }
 
             // Enable auto-merge (squash)
