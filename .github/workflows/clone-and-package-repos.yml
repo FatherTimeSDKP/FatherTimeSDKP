@@ -29,6 +29,28 @@ jobs:
           set -euo pipefail
           mkdir -p repos
           page=1
+
+          retry_clone() {
+            local url="$1"
+            local dest="$2"
+            local name="$3"
+            local attempt=1
+            local max=3
+            while [ $attempt -le $max ]; do
+              echo "Attempt $attempt: git clone --depth 1 $url $dest"
+              if git clone --depth 1 "$url" "$dest"; then
+                echo "Cloned $name successfully"
+                return 0
+              else
+                echo "Clone attempt $attempt failed for $name"
+                attempt=$((attempt+1))
+                sleep $((attempt * 2))
+              fi
+            done
+            echo "$name" >> failed-clones.txt
+            return 1
+          }
+
           while :; do
             if [ -n "${TOKEN:-}" ]; then
               resp=$(curl -s -H "Authorization: token $TOKEN" "https://api.github.com/users/$ORG/repos?per_page=100&page=$page")
@@ -50,19 +72,27 @@ jobs:
               if [ -n "${TOKEN:-}" ]; then
                 auth_clone="https://x-access-token:$TOKEN@github.com/$ORG/$name.git"
                 echo "Cloning $name (authorized)..."
-                git clone --depth 1 "$auth_clone" "repos/$name" || echo "clone failed $name"
+                retry_clone "$auth_clone" "repos/$name" "$name" || echo "clone failed $name"
               else
                 echo "Cloning $name (public)..."
-                git clone --depth 1 "$clone_url" "repos/$name" || echo "clone failed $name"
+                retry_clone "$clone_url" "repos/$name" "$name" || echo "clone failed $name"
               fi
             done
             page=$((page+1))
           done
+
           echo "Zipping repos..."
           zip -r all-repos.zip repos || true
+
+          if [ -f failed-clones.txt ]; then
+            echo "Some clones failed. See failed-clones.txt"
+            cat failed-clones.txt || true
+          fi
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: all-repos-archive
-          path: all-repos.zip
+          path: |
+            all-repos.zip
+            failed-clones.txt
