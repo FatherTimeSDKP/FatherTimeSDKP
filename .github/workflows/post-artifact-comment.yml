@@ -1,0 +1,28 @@
+name: Post clone artifact link
+
+on:
+  workflow_run:
+    workflows:
+      - "Clone and package all repos"
+    types:
+      - completed
+
+jobs:
+  post-comment:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Post comment with run link and artifact name
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const runUrl = github.context.payload.workflow_run.html_url;
+            const commitSha = github.context.payload.workflow_run.head_sha;
+            const body = `Clone workflow finished: ${runUrl}\nArtifact: all-repos-archive (all-repos.zip)`;
+            await github.rest.repos.createCommitComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              commit_sha: commitSha,
+              body
+            });
