@@ -55,16 +55,16 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ env.REGION }}
 
-      - name: Upload artifact archive to S3
+      - name: Upload artifact archive to S3 (public)
         env:
           RUN_ID: ${{ github.event.workflow_run.id }}
         run: |
           set -euo pipefail
           key_prefix="artifacts/${RUN_ID}"
-          echo "Uploading artifact.zip to s3://${BUCKET}/${key_prefix}/all-repos-archive.zip"
-          aws s3 cp artifact.zip "s3://${BUCKET}/${key_prefix}/all-repos-archive.zip"
+          echo "Uploading artifact.zip to s3://${BUCKET}/${key_prefix}/all-repos-archive.zip (public)"
+          aws s3 cp artifact.zip "s3://${BUCKET}/${key_prefix}/all-repos-archive.zip" --acl public-read
 
-      - name: Extract and upload failed-clones.txt if present
+      - name: Extract and upload failed-clones.txt if present (public)
         env:
           RUN_ID: ${{ github.event.workflow_run.id }}
         run: |
@@ -73,16 +73,20 @@ jobs:
           mkdir -p extracted
           unzip -o artifact.zip -d extracted || true
           if [ -f extracted/failed-clones.txt ]; then
-            echo "Uploading failed-clones.txt to s3://${BUCKET}/artifacts/${RUN_ID}/failed-clones.txt"
-            aws s3 cp extracted/failed-clones.txt "s3://${BUCKET}/artifacts/${RUN_ID}/failed-clones.txt"
+            echo "Uploading failed-clones.txt to s3://${BUCKET}/artifacts/${RUN_ID}/failed-clones.txt (public)"
+            aws s3 cp extracted/failed-clones.txt "s3://${BUCKET}/artifacts/${RUN_ID}/failed-clones.txt" --acl public-read
           else
             echo "No failed-clones.txt inside artifact"
           fi
 
-      - name: Print S3 locations
+      - name: Print S3 locations (public URLs)
         env:
           RUN_ID: ${{ github.event.workflow_run.id }}
         run: |
+          # S3 public URL pattern (regional)
           echo "Uploaded files:"
           echo "s3://${BUCKET}/artifacts/${RUN_ID}/all-repos-archive.zip"
           echo "s3://${BUCKET}/artifacts/${RUN_ID}/failed-clones.txt (if present)"
+          echo "Public HTTPS URLs:"
+          echo "https://${BUCKET}.s3.amazonaws.com/artifacts/${RUN_ID}/all-repos-archive.zip"
+          echo "https://${BUCKET}.s3.amazonaws.com/artifacts/${RUN_ID}/failed-clones.txt"
