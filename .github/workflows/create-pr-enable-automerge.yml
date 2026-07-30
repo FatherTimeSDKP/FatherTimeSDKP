@@ -1,0 +1,57 @@
+name: Create PR and enable auto-merge
+
+on:
+  workflow_run:
+    workflows:
+      - "check-lockfiles"
+    types:
+      - completed
+
+permissions:
+  contents: write
+  pull-requests: write
+  checks: read
+
+jobs:
+  create-pr:
+    if: ${{ github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_branch == 'fix/frontend-backend-workflows' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create or find PR and enable auto-merge
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+            const head = 'fix/frontend-backend-workflows';
+            const base = 'Master-SDKP-Framework';
+
+            // Find existing open PRs for this head->base
+            const { data: prs } = await github.rest.pulls.list({ owner, repo, head: owner + ':' + head, base, state: 'open' });
+            let pr;
+            if (prs.length > 0) {
+              pr = prs[0];
+              core.info(`Found existing PR #${pr.number}`);
+            } else {
+              core.info('No existing PR found — creating one');
+              const { data: newPr } = await github.rest.pulls.create({ owner, repo, title: 'chore: sync lockfile and CI fixes (automated)', head, base, body: 'Automated PR to merge CI and lockfile fixes from fix/frontend-backend-workflows into Master-SDKP-Framework. Reviewers: @FatherTimeSDKP.' });
+              pr = newPr;
+              core.info(`Created PR #${pr.number}`);
+            }
+
+            // Request reviewer (you)
+            try {
+              await github.rest.pulls.requestReviewers({ owner, repo, pull_number: pr.number, reviewers: ['FatherTimeSDKP'] });
+              core.info('Requested review from @FatherTimeSDKP');
+            } catch (e) {
+              core.warning('Could not request reviewer: ' + e.message);
+            }
+
+            // Enable auto-merge (squash)
+            try {
+              await github.rest.pulls.enableAutoMerge({ owner, repo, pull_number: pr.number, merge_method: 'squash' });
+              core.info('Enabled auto-merge (squash) for PR #' + pr.number);
+            } catch (e) {
+              core.warning('Failed to enable auto-merge: ' + e.message);
+            }
