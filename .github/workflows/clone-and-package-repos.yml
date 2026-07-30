@@ -7,6 +7,9 @@ on:
         description: 'Set to true to include private repos (requires CLONE_TOKEN with access)'
         required: false
         default: 'false'
+  push:
+    branches:
+      - fix/frontend-backend-workflows
 
 jobs:
   clone-and-package:
@@ -21,7 +24,7 @@ jobs:
         env:
           ORG: FatherTimeSDKP
           TOKEN: ${{ secrets.CLONE_TOKEN }}
-          INCLUDE_PRIVATE: ${{ github.event.inputs.include_private }}
+          INCLUDE_PRIVATE: ${{ github.event.inputs.include_private || 'false' }}
         run: |
           set -euo pipefail
           mkdir -p repos
