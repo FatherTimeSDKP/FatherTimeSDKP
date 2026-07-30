@@ -1,0 +1,45 @@
+name: Generate and commit lockfiles
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - fix/frontend-backend-workflows
+
+jobs:
+  generate-lockfiles:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install dependencies (root) and generate lockfile
+        working-directory: ./
+        run: |
+          if [ -f package.json ]; then
+            npm install --package-lock-only --also=dev || true
+          fi
+
+      - name: Install dependencies (backend) and generate lockfile
+        working-directory: ./timing-sdk-management/backend
+        run: |
+          if [ -f package.json ]; then
+            npm install --package-lock-only || true
+          fi
+
+      - name: Commit lockfiles
+        uses: EndBug/add-and-commit@v9
+        with:
+          author_name: github-actions[bot]
+          author_email: 41898282+github-actions[bot]@users.noreply.github.com
+          message: "chore: add generated package-lock.json files (freeze deps)"
+          add: 'package-lock.json, timing-sdk-management/backend/package-lock.json'
+
