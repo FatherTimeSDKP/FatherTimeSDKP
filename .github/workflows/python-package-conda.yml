@@ -4,6 +4,7 @@ on: [push]
 
 jobs:
   build-linux:
+    if: github.ref == 'refs/heads/Master-SDKP-Framework' || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     strategy:
       max-parallel: 5
