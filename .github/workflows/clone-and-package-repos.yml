@@ -1,0 +1,65 @@
+name: Clone and package all repos
+
+on:
+  workflow_dispatch:
+    inputs:
+      include_private:
+        description: 'Set to true to include private repos (requires CLONE_TOKEN with access)'
+        required: false
+        default: 'false'
+
+jobs:
+  clone-and-package:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install tools
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install -y jq zip git
+
+      - name: List and clone repos
+        env:
+          ORG: FatherTimeSDKP
+          TOKEN: ${{ secrets.CLONE_TOKEN }}
+          INCLUDE_PRIVATE: ${{ github.event.inputs.include_private }}
+        run: |
+          set -euo pipefail
+          mkdir -p repos
+          page=1
+          while :; do
+            if [ -n "${TOKEN:-}" ]; then
+              resp=$(curl -s -H "Authorization: token $TOKEN" "https://api.github.com/users/$ORG/repos?per_page=100&page=$page")
+            else
+              resp=$(curl -s "https://api.github.com/users/$ORG/repos?per_page=100&page=$page")
+            fi
+            count=$(echo "$resp" | jq 'length')
+            if [ "$count" -eq 0 ]; then
+              break
+            fi
+            echo "$resp" | jq -c '.[]' | while read -r repo; do
+              name=$(echo "$repo" | jq -r '.name')
+              private=$(echo "$repo" | jq -r '.private')
+              clone_url=$(echo "$repo" | jq -r '.clone_url')
+              if [ "$private" = "true" ] && [ "$INCLUDE_PRIVATE" != "true" ]; then
+                echo "Skipping private repo $name"
+                continue
+              fi
+              if [ -n "${TOKEN:-}" ]; then
+                auth_clone="https://x-access-token:$TOKEN@github.com/$ORG/$name.git"
+                echo "Cloning $name (authorized)..."
+                git clone --depth 1 "$auth_clone" "repos/$name" || echo "clone failed $name"
+              else
+                echo "Cloning $name (public)..."
+                git clone --depth 1 "$clone_url" "repos/$name" || echo "clone failed $name"
+              fi
+            done
+            page=$((page+1))
+          done
+          echo "Zipping repos..."
+          zip -r all-repos.zip repos || true
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: all-repos-archive
+          path: all-repos.zip
