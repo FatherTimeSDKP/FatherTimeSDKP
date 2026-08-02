@@ -1,9 +1,8 @@
-# solver/knapsack.py
 import numpy as np
 
 def solve_knapsack(values: list[float], weights: list[int], capacity: int) -> dict:
     """
-    Solves the 0/1 Knapsack problem (kapnack solver) using Dynamic Programming.
+    Solves the 0/1 Knapsack optimization problem using dynamic programming.
     """
     n = len(values)
     dp = np.zeros((n + 1, capacity + 1))
@@ -15,7 +14,6 @@ def solve_knapsack(values: list[float], weights: list[int], capacity: int) -> di
             else:
                 dp[i][w] = dp[i-1][w]
 
-    # Trace back selected items
     w = capacity
     selected_indices = []
     for i in range(n, 0, -1):
