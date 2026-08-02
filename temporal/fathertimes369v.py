@@ -1,20 +1,19 @@
-# temporal/fathertimes369v.py
 from datetime import datetime, timezone
 
 class FatherTimes369v:
     """
-    Handles temporal scheduling coordinates and time synchronization algorithms.
+    Maintains chronological sync logic and coordination timestamps.
     """
-    def __init__(self, version: str = "369v"):
-        self.version = version
-        self.registered_tasks = []
+    def __init__(self):
+        self.version = "369v"
+        self.sync_logs = []
 
-    def schedule_sync_event(self, task_name: str, trigger_epoch: float) -> dict:
-        scheduled_time = datetime.fromtimestamp(trigger_epoch, tz=timezone.utc)
-        event = {
-            "task": task_name,
-            "scheduled_utc": scheduled_time.isoformat(),
-            "framework_version": self.version
+    def log_sync_checkpoint(self, trigger_epoch: float) -> dict:
+        utc_timestamp = datetime.fromtimestamp(trigger_epoch, tz=timezone.utc)
+        checkpoint = {
+            "epoch": trigger_epoch,
+            "utc_time": utc_timestamp.isoformat(),
+            "sync_status": "SYNCHRONIZED"
         }
-        self.registered_tasks.append(event)
-        return event
+        self.sync_logs.append(checkpoint)
+        return checkpoint
