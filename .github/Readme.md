@@ -256,7 +256,283 @@ This repository contains the FatherTimeSDKP framework source code, computational
 This README provides a classification system so each file can be located by purpose.
 
 ⸻
+Layer 1 — SDKP State Space
 
+Size–Density–Kinetic–Position
+
+The primary macroscopic state is:
+
+\Psi_{\mathrm{SDKP}}(t)
+=
+\{S(t),D(t),K(t),P(t)\}
+
+where:
+
+Size
+
+S=L
+
+A characteristic spatial scale.
+
+Examples:
+
+* orbital radius,
+* planetary diameter,
+* system boundary,
+* characteristic wavelength.
+
+Units:
+
+[S]=m
+
+⸻
+
+Density
+
+D=\rho
+
+The distribution of mass, energy, or information.
+
+Classically:
+
+\rho=\frac{M}{V}
+
+where:
+
+* M = mass/energy quantity
+* V = occupied volume
+
+Units:
+
+[D]=kg/m^3
+
+⸻
+
+Kinetic State
+
+The kinetic variable represents system motion.
+
+A general form:
+
+K=f(v,\omega,E)
+
+where:
+
+* v = translational velocity
+* \omega = angular velocity
+* E = kinetic energy
+
+For classical motion:
+
+K_t=\frac12Mv^2
+
+For rotation:
+
+K_r=\frac12I\omega^2
+
+Therefore:
+
+K=K_t+K_r
+
+⸻
+
+Position
+
+P=\vec{x}(t)
+
+The spatial coordinate:
+
+P=(x,y,z)
+
+with velocity:
+
+\frac{dP}{dt}=v
+
+⸻
+
+SDKP Evolution Equation
+
+The complete state changes with time:
+
+\frac{d\Psi_{\mathrm{SDKP}}}{dt}
+=
+\begin{bmatrix}
+\dot S\\
+\dot D\\
+\dot K\\
+\dot P
+\end{bmatrix}
+
+or:
+
+\frac{d}{dt}
+\begin{bmatrix}
+S\\D\\K\\P
+\end{bmatrix}
+=
+F_{\mathrm{SDKP}}
+(S,D,K,P)
+
+This is the core operational equation.
+
+Everything else becomes an operator acting on this state.
+
+⸻
+
+Layer 2 — SDVR State Space
+
+Size–Density–Velocity–Rotation
+
+Now the microscopic/state formulation:
+
+\Psi_{\mathrm{SDVR}}
+=
+\{S,D,V,R\}
+
+where:
+
+* S = structural scale
+* D = density distribution
+* V = velocity state
+* R = rotational state
+
+⸻
+
+Velocity:
+
+V=\frac{dS}{dt}
+
+Rotation:
+
+R=\omega
+
+with:
+
+\omega=\frac{d\theta}{dt}
+
+The rotational contribution is:
+
+L=I\omega
+
+where L is angular momentum.
+
+⸻
+
+Layer 3 — The SDKP ↔ SDVR Bridge
+
+This is where the two frameworks connect.
+
+The bridge is the decomposition:
+
+K \rightarrow (V,R)
+
+Meaning:
+
+K=f(V,R)
+
+or:
+
+K=
+\frac12MV^2
++
+\frac12I R^2
+
+So:
+
+\boxed{
+SDKP(S,D,K,P)
+\leftrightarrow
+SDVR(S,D,V,R)
+}
+
+The same physical system can be described from two perspectives:
+
+* where it is and how it scales (SDKP)
+* how it moves and rotates internally (SDVR)
+
+⸻
+
+Layer 4 — QCC0 Reference State
+
+Now we define the coupling baseline.
+
+A normalized correlation:
+
+QCC=
+\frac{\langle A,B\rangle}
+{\|A\|\|B\|}
+
+gives:
+
+-1\leq QCC\leq1
+
+The maximum alignment state:
+
+QCC_0=1
+
+is the reference condition.
+
+Operationally:
+
+QCC_0:
+\Psi_{\mathrm{SDVR}}
+\rightarrow
+\Psi_{\mathrm{SDKP}}
+
+measures how well the internal state maps to the external state.
+
+⸻
+
+Layer 5 — VFE1 Evolution Operator
+
+Now VFE1 acts as the dynamic layer:
+
+\frac{\partial \rho}{\partial t}
+=
+\mathcal{V}
+(\Psi_{\mathrm{SDKP}},
+\Psi_{\mathrm{SDVR}})
+
+A generalized form:
+
+\mathcal{V}
+=
+F(S,D,K,P,V,R)
+
+The purpose:
+
+* state changes,
+* oscillations,
+* transitions,
+* field evolution.
+
+⸻
+
+Current System Architecture
+
+The clean flow becomes:
+
+\boxed{
+SDVR
+\rightarrow
+QCC_0
+\rightarrow
+VFE1
+\rightarrow
+SDKP
+\rightarrow
+Observable Prediction
+}
+
+or the reverse:
+
+\boxed{
+SDKP
+\rightarrow
+SDVR
+\rightarrow
+Quantum/Field Behavior
+}
 SECTION 1 — CORE ENGINEERING & SOFTWARE
 
 FatherTimeSDKP-engine.py
