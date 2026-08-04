@@ -794,6 +794,334 @@ Metadata	Preserve archive information
 
 ⸻
 
+## SD&N Layer
+Location:
+
+/SD&N
+
+**Purpose:**
+Defines the Shape-Dimension-Number geometric representation layer.
+**Contains:**
+- Geometric encoding principles
+- Structural representation methods
+- Topological modeling concepts
+- SD&N computational definitions
+**Role in Architecture:**
+The SD&N layer provides a structured representation method for converting physical and computational states into organized geometric information.
+---
+# AI-SDKP Intelligence Layer
+Key Documentation:
+
+AI_SDKP_Physics_Informed_Intelligence_Framework_Layer.md
+
+**Purpose:**
+Defines the physics-informed artificial intelligence integration framework.
+**Contains:**
+- AI optimization architecture
+- Materials discovery concepts
+- Physics-constrained learning approaches
+- Computational intelligence workflows
+**Role in Architecture:**
+The AI-SDKP layer connects computational intelligence methods with structured physical representations.
+---
+# UPCF Unified Framework Layer
+Key Files:
+
+UPCF_Unified_Physical_Computational_Framework_Layer.md
+
+UPCF_Universal_Pattern_Coupling_Function_Layer.md
+
+**Purpose:**
+Defines the unified relationship between physical systems and computational representations.
+**Contains:**
+- Unified framework definitions
+- Computational coupling concepts
+- Physical-information mappings
+**Role in Architecture:**
+The UPCF layer provides a conceptual bridge between physical modeling and computational processing.
+---
+# VFE / VFE1 Dynamic Evolution Layer
+Key Files:
+
+VFE_VFE1_Dynamic_Field_Layer.md
+
+VFE_VFE1_Field_Expansion_Layer.md
+
+**Purpose:**
+Defines dynamic evolution and state-transition modeling.
+**Contains:**
+- Evolution concepts
+- Field expansion models
+- Dynamic state representations
+**Role in Architecture:**
+The VFE/VFE1 layer describes how system states evolve through computational and physical transformations.
+---
+# SDKP / SDVR Physical State Layer
+Key Files:
+
+SDKP_SDVR_Mathematical_Formulation.md
+
+SDVR_Quantum_Scale_Equation_Layer.md
+
+SDVR_Principle.cpp
+
+**Purpose:**
+Defines size, density, velocity, and rotation-based state modeling.
+**Contains:**
+- SDVR mathematical formulations
+- Dynamic state calculations
+- Rotational and temporal modeling concepts
+**Role in Architecture:**
+The SDVR layer extends physical state representation into dynamic systems.
+---
+# Kapnack Solver and Optimization Layer
+Key Files:
+
+Kapnack.py
+
+Kapnack-anchor.py
+
+kapnack_integrator.py
+
+kapnack_multibody_engine.py
+
+Kapnack_Solver_Computational_Engine.md
+
+Kapnack_Solver_Discrete_Gradient_Processor.md
+
+**Purpose:**
+Provides computational optimization and solving capabilities.
+**Contains:**
+- Solver engines
+- Integration routines
+- Discrete gradient processing
+- Optimization workflows
+**Role in Architecture:**
+The Kapnack layer provides the computational processing pipeline that operates on framework representations.
+---
+# Digital Crystal Protocol Layer
+Key Files:
+
+DCP12.JSON
+
+DCP1.json
+
+digital_crystal_protocol.py
+
+Dallas_Code_Digital_Crystal_Protocol_Layer.md
+
+**Purpose:**
+Provides structured digital encoding and verification mechanisms.
+**Contains:**
+- Digital representation formats
+- Protocol definitions
+- Verification structures
+**Role in Architecture:**
+The Digital Crystal Protocol layer provides structured information management and integrity support.
+---
+# Simulation and Experimental Layer
+## Quantum Simulation
+Examples:
+
+QCC0 _64-Qubit_Quantum_Circuit_Simulator.py
+
+SDKP-QuTiP-prototype.py
+
+qutip_full21_enforcement.py
+
+**Purpose:**
+Provides quantum simulation and computational testing environments.
+---
+## Physical Simulation
+Examples:
+
+binary_star_simulation.py
+
+full_12mode_sim_and_sweep.py
+
+eos_empirical_test_operational.py
+
+SDKP-NP-Complete-attempt.py
+
+**Purpose:**
+Provides computational experiments and model evaluation environments.
+---
+## Applied Research Simulation
+Examples:
+
+SharonCare1_Time_Dilation_Simulation.jsx
+
+Spacecraft-SharonCare1.txt
+
+SDKP_to_SC1 hardware sim.docx
+
+**Purpose:**
+Documents applied engineering research and experimental development.
+---
+# Validation and Verification Layer
+Key Files:
+
+Validation_Suite.ipynb
+
+VALIDATION_PROTOCOL.py.
+
+SDKP_Framework-Comprehensive-Validation-&-Falsification-Protocol3.md
+
+Falsifiable-Predictions.md
+
+Predictions.md
+
+**Purpose:**
+Provides structured validation, testing, and reproducibility documentation.
+**Contains:**
+- Test procedures
+- Validation workflows
+- Prediction records
+- Comparison methods
+---
+# Development Environment Layer
+Key Files:
+
+.codex
+
+.devcontainer
+
+Dockerfile
+
+docker-compose.yml
+
+requirements.txt
+
+config.json
+
+**Purpose:**
+Provides reproducible development environments.
+**Contains:**
+- Development configuration
+- Container environments
+- Dependency definitions
+- Automation support
+---
+# Documentation and Research Archive Layer
+Directories:
+
+/Doc
+
+/docs
+
+/docs/.vuepress
+
+/documentation/submission_records
+
+**Purpose:**
+Maintains documentation, manuscripts, research records, and publication materials.
+**Contains:**
+- Technical documentation
+- Manuscripts
+- Research submissions
+- Supporting materials
+---
+# Provenance and Integrity Layer
+Key Files:
+
+PROVENANCE.md
+
+DIGITAL_ANCHOR_MANIFEST.json
+
+TimeSeal_Metadata.json
+
+Digital-Crystal-Seal.JSON
+
+**Purpose:**
+Maintains research metadata, integrity records, and historical tracking.
+**Contains:**
+- Metadata records
+- Version information
+- Verification structures
+- Provenance documentation
+---
+# External Research Application Relationship
+Research repositories such as:
+
+SharonCare1-magnetic-motor-research
+
+remain separate application repositories.
+Relationship:
+
+FatherTimeSDKP Framework
+
+      ↓
+
+Applied Research Repository
+
+      ↓
+
+Experimental Results
+
+The framework repository provides the computational foundation while application repositories provide independent experiments and implementations.
+---
+# Operational Pipeline
+
+Input Data
+
+  ↓
+
+SD&N Representation
+
+  ↓
+
+SDKP Physical State
+
+  ↓
+
+VFE / SDVR Evolution
+
+  ↓
+
+Kapnack Solver
+
+  ↓
+
+Validation System
+
+  ↓
+
+Application Output
+
+---
+# Architecture Goal
+The long-term objective is a simple operational workflow:
+
+Install Framework
+
+    ↓
+
+Select Model
+
+    ↓
+
+Provide Input
+
+    ↓
+
+Run Simulation
+
+    ↓
+
+Generate Output
+
+    ↓
+
+Store Validation Record
+
+This architecture preserves the complete research history while maintaining a clean separation between:
+- executable framework components
+- theoretical documentation
+- validation records
+- experimental applications
+- provenance systems
+
+
 Maintenance Rule
 
 Every major repository file should have:
