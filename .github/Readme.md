@@ -44,6 +44,30 @@ Purpose:
 Technical source specification of the SDKP framework.
 
 ⸻
+My notebooks
+
+Geometric Necessity, Causal Logic, and Digital Protocol
+
+Scientific Validation of the SDKP Framework
+
+Unified SDKP Framework: Quantum Simulation and Universal Field Dynamics
+
+The SDKP Unified Physical–Computational Framework and Proprietary Assertion
+
+The Unified SDKP-QCC Framework: Physics, AI, and Blockchain
+
+
+Gypsi Consulting and Notary Services
+
+The Architect and the SDKP Institutional Logic Trap
+
+Copy of Geometric Necessity, Causal Logic, and Digital Protocol
+
+Copy of Geometric Necessity, Causal Logic, and Digital Protocol
+
+Blockchain-Based Digital Notary and Timestamping Systems: A Review
+
+3D Numerical Entanglement Mapping and FatherTime SDKP Analysis
 
 FatherTimeSDKP-SD-N-EOS-QCC
 
