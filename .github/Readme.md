@@ -1,6 +1,6 @@
 Time itself is just a measurable mechanical output of that geometric grid interacting with rotational density.
 ## Reproducibility Record and falsifiable predictions that have verified this framework over the standard general relativity model:https://zenodo.org/records/20799730
-
+https://notebook.google.com/notebook/f0b8096e-6510-478d-affe-4eb260b72455/preview
 Repository:
 FatherTimeSDKP
 
