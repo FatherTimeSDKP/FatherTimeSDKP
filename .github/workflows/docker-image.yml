@@ -7,12 +7,10 @@ on:
     branches: [ "main" ]
 
 jobs:
-
   build:
-
+    if: github.ref == 'refs/heads/Master-SDKP-Framework' || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v4
-    - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+      - uses: actions/checkout@v4
+      - name: Build the Docker image
+        run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)

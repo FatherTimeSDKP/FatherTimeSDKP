@@ -1,0 +1,90 @@
+name: Generate and commit lockfiles
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - fix/frontend-backend-workflows
+
+jobs:
+  generate-lockfiles:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+          fetch-depth: 0
+
+      - name: Debug: show runner info
+        run: |
+          echo "== Runner info =="
+          uname -a
+          node --version || true
+          npm --version || true
+          env | sort
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Debug: show node/npm
+        run: |
+          echo "== Node/npm after setup =="
+          node --version
+          npm --version
+
+      - name: Show root package.json
+        run: |
+          if [ -f package.json ]; then
+            echo "---- package.json (root) ----"
+            cat package.json || true
+            echo "---- end package.json ----"
+          else
+            echo "No root package.json found"
+          fi
+
+      - name: Install dependencies (root) and generate lockfile
+        working-directory: ./
+        run: |
+          if [ -f package.json ]; then
+            npm install --package-lock-only --also=dev --loglevel verbose || true
+          else
+            echo "Skipping root: no package.json"
+          fi
+
+      - name: List root files
+        run: |
+          ls -la || true
+          echo "---- root package-lock.json existence: ----"
+          [ -f package-lock.json ] && echo "FOUND" || echo "MISSING"
+
+      - name: Install dependencies (backend) and generate lockfile
+        working-directory: ./timing-sdk-management/backend
+        run: |
+          if [ -f package.json ]; then
+            npm install --package-lock-only --loglevel verbose || true
+          else
+            echo "Skipping backend: no package.json"
+          fi
+
+      - name: List backend files
+        run: |
+          ls -la timing-sdk-management/backend || true
+          [ -f timing-sdk-management/backend/package-lock.json ] && echo "BACKEND LOCK FOUND" || echo "BACKEND LOCK MISSING"
+
+      - name: Collect npm logs (if any)
+        run: |
+          mkdir -p .github/lockfile-debug
+          if [ -f npm-debug.log ]; then mv npm-debug.log .github/lockfile-debug/ || true; fi
+          # capture any npm cache logs
+          npm config get cache || true
+
+      - name: Commit lockfiles and debug logs (if any)
+        uses: EndBug/add-and-commit@v9
+        with:
+          author_name: github-actions[bot]
+          author_email: 41898282+github-actions[bot]@users.noreply.github.com
+          message: "chore: add generated package-lock.json files and debug logs (freeze deps)"
+          add: 'package-lock.json, timing-sdk-management/backend/package-lock.json, .github/lockfile-debug/**'

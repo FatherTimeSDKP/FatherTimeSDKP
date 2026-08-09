@@ -1,0 +1,92 @@
+name: Upload clone artifact to S3
+
+on:
+  workflow_run:
+    workflows:
+      - "clone-and-package"
+    types:
+      - completed
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  upload-artifact:
+    if: ${{ github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_branch == 'fix/frontend-backend-workflows' }}
+    runs-on: ubuntu-latest
+    env:
+      BUCKET: my-bucket
+      REGION: us-east-1
+    steps:
+      - name: Install tools
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install -y jq unzip curl
+
+      - name: Download artifact archive for triggering run
+        env:
+          OWNER: ${{ github.repository_owner }}
+          REPO: ${{ github.event.repository.name }}
+          RUN_ID: ${{ github.event.workflow_run.id }}
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          echo "Listing artifacts for run $RUN_ID"
+          artifacts_url="https://api.github.com/repos/$OWNER/$REPO/actions/runs/$RUN_ID/artifacts"
+          curl -s -H "Authorization: token $TOKEN" "$artifacts_url" > artifacts.json
+          cat artifacts.json | jq .
+
+          artifact_id=$(jq -r '.artifacts[] | select(.name=="all-repos-archive") | .id' artifacts.json || true)
+          if [ -z "$artifact_id" ] || [ "$artifact_id" = "null" ]; then
+            echo "Artifact 'all-repos-archive' not found for run $RUN_ID"
+            exit 1
+          fi
+
+          download_url=$(jq -r '.artifacts[] | select(.name=="all-repos-archive") | .archive_download_url' artifacts.json)
+          echo "Downloading artifact archive from $download_url"
+          curl -L -H "Authorization: token $TOKEN" -o artifact.zip "$download_url"
+          ls -alh artifact.zip
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v2
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ env.REGION }}
+
+      - name: Upload artifact archive to S3 (public)
+        env:
+          RUN_ID: ${{ github.event.workflow_run.id }}
+        run: |
+          set -euo pipefail
+          key_prefix="artifacts/${RUN_ID}"
+          echo "Uploading artifact.zip to s3://${BUCKET}/${key_prefix}/all-repos-archive.zip (public)"
+          aws s3 cp artifact.zip "s3://${BUCKET}/${key_prefix}/all-repos-archive.zip" --acl public-read
+
+      - name: Extract and upload failed-clones.txt if present (public)
+        env:
+          RUN_ID: ${{ github.event.workflow_run.id }}
+        run: |
+          set -euo pipefail
+          unzip -l artifact.zip || true
+          mkdir -p extracted
+          unzip -o artifact.zip -d extracted || true
+          if [ -f extracted/failed-clones.txt ]; then
+            echo "Uploading failed-clones.txt to s3://${BUCKET}/artifacts/${RUN_ID}/failed-clones.txt (public)"
+            aws s3 cp extracted/failed-clones.txt "s3://${BUCKET}/artifacts/${RUN_ID}/failed-clones.txt" --acl public-read
+          else
+            echo "No failed-clones.txt inside artifact"
+          fi
+
+      - name: Print S3 locations (public URLs)
+        env:
+          RUN_ID: ${{ github.event.workflow_run.id }}
+        run: |
+          # S3 public URL pattern (regional)
+          echo "Uploaded files:"
+          echo "s3://${BUCKET}/artifacts/${RUN_ID}/all-repos-archive.zip"
+          echo "s3://${BUCKET}/artifacts/${RUN_ID}/failed-clones.txt (if present)"
+          echo "Public HTTPS URLs:"
+          echo "https://${BUCKET}.s3.amazonaws.com/artifacts/${RUN_ID}/all-repos-archive.zip"
+          echo "https://${BUCKET}.s3.amazonaws.com/artifacts/${RUN_ID}/failed-clones.txt"

@@ -1,0 +1,4 @@
+Trigger lockfile run
+
+This file was added to trigger the generate-lockfiles workflow on branch fix/frontend-backend-workflows.
+Timestamp: 2026-07-30T17:37:00Z
