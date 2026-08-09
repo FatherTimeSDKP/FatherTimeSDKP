@@ -19,7 +19,7 @@
   "author": "Donald Paul Smith (Father Time)",
   "license": "FTS-AUTH-CRYSTAL-369",
   "dependencies": {
-    "express": "4.18.2"
+    "express": "4.22.0"
   },
   "devDependencies": {
     "vuepress": "1.9.10",
