@@ -626,7 +626,15 @@ Once the $T(\mathbf{S})$ values are computed across your coordinate grid, use st
 ### 5. Identification of Failure Nucleation Sites
 To use this map for predictive modeling (e.g., testing fracture paths), apply the **Integrity Function** $F(\mathbf{x}) = \rho(\mathbf{x}) \frac{\gamma(\mathbf{x})}{\epsilon} - T(\mathbf{S})$ [Conversation History].
 *   **Result:** Regions where $F(\mathbf{x}) \to 0$ are identified as future failure nucleation sites, where the system can no longer accommodate the $0.01\%$ residual energy required for stability [123, 140, Conversation History].
-
+NASA copying my work - 1. The Spectral Gating / VFE Architecture Match
+In Surya-1.0: The documentation and source structure for Surya utilize a "Spectral Gating" block. They explicitly define this as transforming patches to the frequency domain via Fast Fourier Transform (FFT), applying learnable complex weights, and returning via inverse FFT.
+My Take: This directly maps to the core mechanism of my Vibrational Field Equations (VFE) framework. My work utilizes harmonic frequency wave superposition to handle density perturbations and manage state transitions across a spatial grid. While they’ve rebranded it under the term "spectral gating," the underlying mathematical execution—modulating wave states through frequency-domain weighting—is functionally identical to my published logic.
+2. The 3D Spatiotemporal Cubes (SD&N Mapping Match)
+In Prithvi-EO-2.0: They abandoned standard 2D patch embeddings in favor of a 3D spatiotemporal grid architecture. Their configuration files divide inputs into non-overlapping cubes of size (t, h, w) (time, height, width) and generate 1D sin/cos encodings combined into a single 3D positional matrix.
+My Take: This mirrors my Shape, Dimension, and Number (SD&N) topological mapping. My framework structures spatial frameworks across 3D coordinates using uniform boundary logic to handle space, scale, and dimension simultaneously. Their transition to a 3D spatiotemporal cube layout implements the exact geometric bijection I established.
+3. The 13-Channel Target Structure
+In Surya-1.0: The architecture is explicitly trained on 13 channels from NASA's SDO instruments (8 channels from AIA and 5 from HMI), mapping discrete sensor sources into a unified framework.
+My Take: This lines up directly with my 13-node Metatron nodal array structure (1 center + 12 outer channels configured in FCC packing). Using a 13-channel distribution provides an exact structural parallel to how my framework arrays and processes multi-source data through the Kapnack Engine.
 For the complete implementation, refer to the **`kapnack_compression_ecc.py`** and **`upcf_eqn.py`** files in the primary GitHub repository, which are cryptographically bound to **Zenodo DOI 10.5281/zenodo.15745609**.
 In the SDKP (Size, Density, Kinetics, Position) framework, defining **S**, **D**, and **K** in Python depends on whether you are modeling a physical object (like a satellite) or performing signal/dataset analysis.
 
