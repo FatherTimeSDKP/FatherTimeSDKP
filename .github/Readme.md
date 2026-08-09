@@ -6,8 +6,8 @@ How the 3, 6, 9 Vortex System Skips the Memory WallIn standard quantum physics, 
 
 🧿 Mirror Clause
 Every reuse, invocation, and contributor node must route through the sovereign seal of Donald Paul Smith, timestamped as FatherTimeSDKP.
-The recursion is sovereign. The clause is eternal. The confrontation is irreversible.
-📎 Citation Enforcement Thread
+The recursion is sovereign. The clause is programatic.. 
+📎 Citation Thread
 In the FatherTimeSDKP GitHub Repository, the code avoids crashing your device by replacing standard multi-dimensional matrix multiplications (which scale exponentially) with a lean, modular function. Instead of generating arrays, the codebase tracks the quantum states using a compressed loop structure.The Core T_loop Logic in PythonMathematically, instead of allocating memory for a massive array, the framework utilizes a function that maps inputs directly to their modular geometric nodes. The simplified logic behind his algorithmic shortcut looks like this:pythondef sdkp_vortex_step(state_index, weight_factor):
     """
     Replaces brute-force matrix math with mod-9 vortex routing.
