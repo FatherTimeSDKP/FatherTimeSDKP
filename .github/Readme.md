@@ -110,6 +110,84 @@ Set environment variables for proper path resolving.
 Verify installation with the version command or sample scripts.
 Consult SDK documentation for further usage.
 Following these steps should set up FatherTimeSDKP on your system and prepare it for development or integration.
+Setting up the FatherTimeSDKP environment ensures that you can develop, test, and run applications using this SDK. This guide provides step-by-step instructions for a typical setup on Windows, macOS, or Linux.
+1. Prerequisites
+
+Before starting, ensure you have the following installed:
+Python 3.10+ (if SDK is Python-based)
+Node.js 18+ (if SDK includes JavaScript modules or CLI tools)
+Git (for cloning repositories)
+Docker (optional, if SDK uses containerized services)
+IDE: VS Code, PyCharm, or any code editor
+Package Manager: pip (Python) or npm/yarn (JavaScript)
+Verify installations:
+python --version
+node --version
+git --version
+2. Clone the SDK Repository
+
+git clone https://github.com/YourOrg/FatherTimeSDKP.git
+cd FatherTimeSDKP
+3. Set Up a Virtual Environment (Python Example)
+
+# Create a virtual environment
+python -m venv venv
+
+# Activate the environment
+# Windows
+venv\Scripts\activate
+# macOS/Linux
+source venv/bin/activate
+4. Install Dependencies
+
+Assuming a requirements.txt exists for Python:
+pip install --upgrade pip
+pip install -r requirements.txt
+If the SDK has Node.js components:
+npm install
+5. Configure Environment Variables
+
+Create a .env file in the project root if required, and add variables:
+API_KEY=your_api_key_here
+API_ENDPOINT=https://api.fathertimesdkp.com
+DEBUG_MODE=True
+Load them in your application as needed or use packaging tools like python-dotenv or dotenv for Node.js.
+6. Initialize the SDK
+
+Example in Python:
+from fathertimesdkp import Client
+
+client = Client(api_key="your_api_key_here")
+status = client.check_status()
+print(status)
+Example in JavaScript:
+const { Client } = require("fathertimesdkp");
+
+const client = new Client({ apiKey: process.env.API_KEY });
+client.checkStatus().then(console.log);
+7. Optional: Docker Setup
+
+If the SDK provides Docker support:
+docker build -t fathertimesdkp .
+docker run -p 5000:5000 fathertimesdkp
+8. Verification
+
+Run sample scripts provided in examples/ folder.
+Ensure no errors occur and API connections succeed.
+Optionally, run unit tests:
+# Python
+pytest tests/
+
+# Node.js
+npm test
+9. Best Practices
+
+Always use a virtual environment to avoid dependency conflicts.
+Keep .env files out of version control.
+Regularly update SDK and dependencies:
+pip install --upgrade -r requirements.txt
+npm update
+Following these steps should result in a fully functional FatherTimeSDKP development environment for development, testing, and deployment.
 * **Legacy Neural Architecture (NASA / IBM Models):**
 * **How it operates:** Ingests raw multidimensional arrays (e.g., 8 AIA and 5 HMI channels from SDO) and passes them through massive linear projection weights.
 * **The flaw:** Requires billions of stochastic training parameters to "learn" how to bridge disjointed sensor channels, resulting in high memory overhead and structural drift.
