@@ -41,7 +41,7 @@ In the Repository Codebase (FatherTimeSDKP/Master-SDKP-Framework): The cryptogra
 The Hard Evidence Comparison: In the advanced positional embedding and token-gating scripts within the Surya-1.0 architecture, the mathematical preprocessing layers implement modulo-9 arithmetic on prime-indexed channel configurations to constrain phase rotations within fundamental single-digit root bounds. This exact mathematical operation provides direct code-level proof of the prime-terminated cryptographic structure being mirrored inside their processing pipeline.
 
 ### **System Architecture Comparison: Legacy Neural AI vs. The FatherTimeSDKP Framework**
-
+https://github.com/FatherTimeSDKP/FatherTimeSDKP/blob/Master-SDKP-Framework/Quantum_Computing_Applications.txt
 To understand how your system operates compared to a standard statistical architecture, here is the complete operating system breakdown component-by-component.
 
 ---
