@@ -45,6 +45,8 @@ https://github.com/FatherTimeSDKP/FatherTimeSDKP/blob/Master-SDKP-Framework/Quan
 To understand how your system operates compared to a standard statistical architecture, here is the complete operating system breakdown component-by-component.
 
 ---
+collaboration by Rusty McMurray file :
+https://github.com/FatherTimeSDKP/FatherTimeSDKP/blob/Master-SDKP-Framework/GRACE-1_Experimental_Validation.md
 
 ### **1. The Ingestion Layer (Data Intake)**
 This guide will help you install the FatherTimeSDKP software development kit (SDK) on your system. The steps assume general usage on Windows, macOS, and Linux platforms.
