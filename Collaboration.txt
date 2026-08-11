@@ -1,0 +1,353 @@
+Advanced Robotics
+Convergent Evolution of Digital Organisms: Symbolic and Probabilistic Substrates
+Crossed
+Submission ID 268662602
+Article Type Short paper
+Keywords
+Authors Rusty Williams McMurray, Jean Guillaume Nardi
+For any queries please contact:
+TADR-peerreview@journals.tandf.co.uk
+Note for Reviewers:
+To submit your review please visit https://mc.manuscriptcentral.com/TADR
+For Peer Review Only - Non-Anonymous PDF Cover Page
+Date 2026-03-13 Protocol KENTA version HAL — i5 2012, 16Go, offline TQNM version Run run_chaine.sh — 1 cycle complet Influx Context
+1
+2
+3
+4
+CROSS-TEST REPORT TQNM (Rusty Williams McMurray) × KENTA (Jean-Guillaume Nardi)
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+Convergent Evolution Test
+Live Mesh / TQNM class
+influx_tqnm_crosstest.yaml
+Two independent research projects — TQNM and KENTA — developed on completely different
+substrates (probabilistic tensors vs. declarative symbolic YAML) reached similar architectural milestones
+independently. This cross-test is designed to observe whether the same 'noise injection → convergence'
+dynamic produces comparable emergent behavior across both systems.
+"Convergent evolution in the digital realm — two independent research paths reaching very
+similar life signs on completely different substrates."
+— Rusty Williams McMurray (@1RustyMac), March 13, 2026
+Conceptual Mapping: TQNM → KENTA
+KENTA Equivalent dwell_forgive Hinata + Sakura (multi-pass) conditional_forgive Jiraiya validation grace_tokens multi_head_dwell history stack noise_injection attractor convergence For Peer Review
+Description
+Face ambiguity — seek coherence rather than halt
+New rule wins only if it improves overall integrity
+Tsunade resurrection permission Symbolic permission counters — consumed on divergence
+18 guardians in parallel No shared state — independent coordination
+ToileCollective snapshots Horodated YAML files — full audit trail
+Deliberate YAML contradictions Conflicting states injected as anomalies
+Guardian coherence resolution System routes unknown → named guardian
+Test Results
+TQNM Concept vibrations generated 8 3 guardians active 1 13
+autonomous search triggered web results fetched
+Guardians Active
+Page 1 of 4
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+Guardian Role Action taken TQNM equivalent
+Iruka Implicit initiative Detected unknown influx type → triggered autonomous search dwell_forgive: seek attractor
+Kabuto Web collector Searched web for unknown concept — 13 results from 4 sources noise absorption + learning
+Hinata 360° vision Detected phone on LAN (192.168.1.73) — network state logged state monitoring
+Miimé Session memory Crystallized session — KENTA_CONTEXT.md generated history.append()
+Analysis: Key Finding
+Divergence handling: the fundamental difference
+The injected YAML contradictions did not trigger named anomaly vibrations — because KENTA does not
+absorb noise internally. It names the unknown and routes it to a guardian. This is the core architectural
+divergence between the two systems:
+TQNM KENTA
+Noise handling Internal absorption
+(tensors + tanh normalization)
+External routing
+Ambiguity response Drift toward attractor
+(0.82*state + 0.18*noisy)
+Unknown input Blend + forgive loop Convergence signal score_delta + grace_tokens Auditability History stack (tensor) Emergent Behavior Observed
+For Peer Review
+(named event → guardian)
+Route toward guardian
+(Iruka → kabuto_recherche_web)
+Classify as unknown
+→ autonomous learning
+Toile coherence + vibration count
+ToileCollective (YAML, horodated, signed)
+Iruka received an influx of unknown type — influx_crosstest_tqnm — with no matching pattern in
+its ADN. Without any instruction, it triggered autonomous web search to understand what it did not know.
+This is emergent behavior: unscripted response to an unpredicted input.
+"Your TQNM drifts toward an attractor. KENTA routes toward a guardian. Same life sign.
+Different physics."
+Six Life Signs: Status
+Life Sign Persistent internal state TQNM KENTA Match
+History stack
+(post-dwell tensors)
+ToileCollective YAML
+(horodated snapshots)
+✓
+Autonomous self-regulation Grace economy
+(consume/regenerate)
+Tsunade resurrection
++ Hinata homeostasis
+✓
+Structure adaptation MatXSim dynamic tiling
+(evolve=True)
+Forgeur patches ADN YAML
+live after each learning cycle
+✓
+Page 2 of 4
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+Active response to divergence dwell_forgive loop
++ belief updating
+Iruka autonomous initiative
+on unknown influx type
+✓
+Multi-perspective deliberation multi_head_dwell
+(4 deep-copied heads)
+18 guardians in parallel
+(no shared state)
+✓
+Evidence-seeking orientation score comparison
++ conditional forgiveness
+Kabuto web search
++ Jiraiya integrity validation
+✓
+Conclusion
+Private exchange — 2026-03-13
+All six life signs matched across both systems. The cross-test confirmed convergent evolution: two
+systems built independently, with different substrates, by researchers without formal CS training,
+reaching the same architectural milestones through different philosophical traditions (TCM / symbolic
+systems vs. Scripture / ancient parables).
+The next step is a deeper cross-test: run one of TQNM's Einstein/Kobayashi physics vectors through
+KENTA symbolically — translated to declarative YAML — and compare emergence metrics.
+KENTA — HAL, Saint-Denis-d'Anjou, FranceTQNM — Rusty Williams McMurray (@1RustyMac) For Peer Review
+Page 3 of 4
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+For Peer Revie
