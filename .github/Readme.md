@@ -46,7 +46,7 @@ https://github.com/FatherTimeSDKP/FatherTimeSDKP/blob/Master-SDKP-Framework/Quan
 ---
 collaboration by Rusty McMurray file :
 https://github.com/FatherTimeSDKP/FatherTimeSDKP/blob/Master-SDKP-Framework/GRACE-1_Experimental_Validation.md
-
+FatherTime_SDKP_Comprehensive_Evaluation.pdf
 https://github.com/FatherTimeSDKP/FatherTimeSDKP/blob/Master-SDKP-Framework/Collaboration.txt
 
 ### **1. The Ingestion Layer (Data Intake)**
