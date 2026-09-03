@@ -308,15 +308,6 @@ with:
 
     v_EOS = 29,780 m/s
 
-The next development stage is to derive α_EOS from the underlying SDKP
-equations rather than selecting it solely to reproduce existing observations.
-
-Only after α_EOS and the definition of K are independently established can
-the equation provide a rigorous quantitative prediction.
-
----
-
-## 13. Status
 
 Status:
 
@@ -324,8 +315,4 @@ Status:
 
 The EOS normalization is mathematically defined.
 
-Its physical interpretation remains unverified.
 
-The primary scientific objective is therefore to derive a unique correction,
-generate a pre-specified prediction, and test that prediction against
-independent measurements.
