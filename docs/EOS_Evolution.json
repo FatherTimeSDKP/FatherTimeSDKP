@@ -1,0 +1,32 @@
+{
+  "model": "SDKP Exploratory EOS Kinetic Correction",
+  "status": "exploratory_hypothesis",
+  "constants": {
+    "c_m_per_s": 299792458.0,
+    "v_EOS_m_per_s": 29780.0
+  },
+  "example": {
+    "K_J": 1000000000000.0,
+    "conventional": {
+      "equation": "K / c^2",
+      "value_kg": 1.11265e-05
+    },
+    "exploratory_EOS": {
+      "equation": "K / v_EOS^2",
+      "value_kg": 1127.8
+    }
+  },
+  "amplification": {
+    "equation": "(c / v_EOS)^2",
+    "factor": 101300000.0
+  },
+  "testability_requirements": [
+    "Define K unambiguously.",
+    "Define what physical observable receives the correction.",
+    "Specify the coupling coefficient and its units.",
+    "Produce quantitative predictions before examining experimental data.",
+    "Compare the prediction against an independent measurement.",
+    "Explain why Earth's orbital velocity is the physically privileged reference scale.",
+    "Test whether changing the reference orbital velocity changes the predicted effect."
+  ]
+}
