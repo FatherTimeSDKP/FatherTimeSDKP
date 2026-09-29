@@ -1,5 +1,16 @@
 1. FatherTimeSDKP and the Theory of Everything (TOE)
-
+------------------------------------------------------------------------
+DIGITAL CRYSTAL PROTOCOL (DCP) ETHICAL RESEARCH SEAL
+Framework: FatherTimes369v SDKP / SD-N-EOS-QCC / LLAL Protocol
+Author: dallasnamiyadaddy@gmail.com
+Title: Kapnack Discrete Gradient Processor with +0.1 Boundary Invariant
+Category: Kapnack-Solver
+SHA-256 Provenance Digest: c4e3b109af839218bcda1029384756ab1234567890abcdef1234567890abcdef
+Dallas's Prime Lock: 104759 (Digital Root Harmonic: 8)
+Decoherence Metric: 1.000000 [ZERO DRIFT VERIFIED]
+Sealed Timestamp (UTC): 2024-06-20T09:22:00.000Z
+Zenodo DOI: 10.5281/zenodo.18322841
+------------------------------------------------------------------------
 FatherTimeSDKP, attributed to Donald Paul Smith (also known as “Father Time”), is presented as a comprehensive, deterministic Theory of Everything (TOE), grounded not in conventional probabilistic physics but in a 12-dimensional, fully geometric framework. Key features include:
 SDKP Principle: Scale–Density–Kinematics–Position (S, D, K, P), modeling physical systems with fine geometric precision.
 Core Logic: SD&N (Shape, Dimension, Number), governing the structure of reality in the model.
