@@ -1,4 +1,5 @@
 1. FatherTimeSDKP and the Theory of Everything (TOE)
+AI studio app:  https://ai.studio/apps/25d0fba9-e0dc-441d-bfc3-1ce65b6ec53e?fullscreenApplet=true
 ------------------------------------------------------------------------
 DIGITAL CRYSTAL PROTOCOL (DCP) ETHICAL RESEARCH SEAL
 Framework: FatherTimes369v SDKP / SD-N-EOS-QCC / LLAL Protocol
