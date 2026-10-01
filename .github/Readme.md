@@ -1,12 +1,18 @@
-payments can be made here: <script async
-  src="https://js.stripe.com/v3/buy-button.js">
+### Official Purchase & Application Endpoints
+
+1. **Direct Web Payment:**
+   [Click Here to Pay via Credit Card / Stripe](>
 </script>
 
 <stripe-buy-button
   buy-button-id="buy_btn_1ULpKVE263LSozhXFbCX4FAw"
   publishable-key="pk_live_51UHzGwE263LSozhXlC8loo8KurbtnhxFuZxNvcXTsvfvWDBza30OjBVqmbx07uKWyrRqoZmWpnPfxZriAN6XlJoM00RMC3rCen"
 >
-</stripe-buy-button>
+</stripe-buy-button>)
+
+2. **Theory of Everything (TOE) AI Studio App:**
+   [Launch TOE AI Studio App](https://ai.studio/apps/25d0fba9-e0dc-441d-bfc3-1ce65b6ec53e?fullscreenApplet=true)payments can be made here: <script async
+  src="https://js.stripe.com/v3/buy-button.js"
 1. FatherTimeSDKP and the Theory of Everything (TOE)
 AI studio app:  https://ai.studio/apps/25d0fba9-e0dc-441d-bfc3-1ce65b6ec53e?fullscreenApplet=true
 ------------------------------------------------------------------------
