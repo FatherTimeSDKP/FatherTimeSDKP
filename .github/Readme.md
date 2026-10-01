@@ -1,26 +1,24 @@
-## Endpoints & Access
+
+* **Security & Provenance:** Digital Crystal Protocol (DCP) and Dallas's Code prime-terminated binary signatures.
+1. FatherTimeSDKP and the Theory of Everything (TOE)
+2. ## Endpoints & Access
 
 ### 1. Direct Web Payment
 Process secure subscriptions and API access via credit card:
 
-<script async src="https://js.stripe.com/v3/buy-button.js"></script>
-<stripe-buy-button
-  buy-button-id="buy_btn_1ULpKVE263LSozhXFbCX4FAw"
-  publishable-key="pk_live_51UHzGwE263LSozhXIC8loo8KurbtnhxFuZxNvcXTsfvWDBza30OjBVqmbx07uKwyrRqoZmWpkPfxZriAN6XlJoM00RMC3rCen">
-</stripe-buy-button>
+[![Pay via Stripe](https://img.shields.io/badge/💳_Pay_via-Stripe_Checkout-0070F3?style=for-the-badge&logo=stripe&logoColor=white)](https://buy.stripe.com/1ULpKVE263LSozhXFbCX4FAw)
 
 ---
 
 ### 2. Theory of Everything (TOE) AI Studio App
-* **Direct App Link:** [Launch TOE AI Studio App](https://ai.studio/apps/25d0fba9-e0dc-441d-bfc3-1ce65b6ec53e?fullscreenApplet=true)[cite: 2]
-* **Fullscreen Applet Endpoint:** `https://ai.studio/apps/25d0fba9-e0dc-441d-bfc3-1ce65b6ec53e?fullscreenApplet=true`[cite: 2]
+* **Direct App Link:** [Launch TOE AI Studio App](https://ai.studio/apps/25d0fba9-e0dc-441d-bfc3-1ce65b6ec53e?fullscreenApplet=true)
+* **Fullscreen Applet Endpoint:** `https://ai.studio/apps/25d0fba9-e0dc-441d-bfc3-1ce65b6ec53e?fullscreenApplet=true`
 
 ---
 
 ### 3. FatherTimesSDKP Architecture Overview
 * **Framework Core:** Kapnack Solver, Discrete Gradient Processor, and SD&N/VFE1 field equations.
 * **Security & Provenance:** Digital Crystal Protocol (DCP) and Dallas's Code prime-terminated binary signatures.
-1. FatherTimeSDKP and the Theory of Everything (TOE)
 AI studio app:  https://ai.studio/apps/25d0fba9-e0dc-441d-bfc3-1ce65b6ec53e?fullscreenApplet=true
 ------------------------------------------------------------------------
 DIGITAL CRYSTAL PROTOCOL (DCP) ETHICAL RESEARCH SEAL
