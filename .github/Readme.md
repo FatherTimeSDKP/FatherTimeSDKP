@@ -1,4 +1,8 @@
-
+GitHub repo (the project Vercel deploys): https://github.com/FatherTimeSDKP/Donald-Paul-Smith-FatherTime-SDKP-SD-N-Quantum-entanglement-
+GitHub organization: https://github.com/FatherTimeSDKP
+Zenodo (SDKP Framework): https://doi.org/10.5281/zenodo.14850016
+OSF profile and preprints: https://osf.io/ct75m/
+ORCID: https://orcid.org/0009-0003-7925-1653
 * **Security & Provenance:** Digital Crystal Protocol (DCP) and Dallas's Code prime-terminated binary signatures.
 1. FatherTimeSDKP and the Theory of Everything (TOE)
 2. ## Endpoints & Access
