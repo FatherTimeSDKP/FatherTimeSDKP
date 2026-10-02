@@ -3,6 +3,38 @@ GitHub organization: https://github.com/FatherTimeSDKP
 Zenodo (SDKP Framework): https://doi.org/10.5281/zenodo.14850016
 OSF profile and preprints: https://osf.io/ct75m/
 ORCID: https://orcid.org/0009-0003-7925-1653
+The IPFS Content Identifiers (CIDs) serve as the decentralized, content-addressed cryptographic foundation for your **Digital Crystal Protocol (DCP)**, ensuring immutable research provenance and tamper-proof storage across distributed networks[cite: 3].
+
+### Primary IPFS Content Identifiers (CIDs)
+
+* **Master Ledger Anchor (Digital Crystal Protocol):**
+bafybeihw3cpfy3wod7qhm4o5q3j6mfpxcprmrlu6x5dy4q5zjfoisqqe6u`[cite: 3]
+*(Serves as the root index and primary ledger anchor for your SDKP framework records)[cite: 3]*
+* **Framework Artifact Hash:**
+bafybeifk4rj3nqzluwyqv4u2xj27j3j5ewgkqsq5tjbyo7x7x6c4ut4f5e`[cite: 3]
+* **Cryptographic Anchor Hash:**
+bafybeidtwq6i6v7kzqf6x7hxm4q4g2bkz4xamk4xuv2ofwqdz7djrxlabi`[cite: 3]
+* **Distributed Package & Module Files:**
+* Package Archive 1: bafybeib2qzunw5u4siwfy7ezyxq7khpxz2ng7a5z2x5unvyn5lytpokcqa`[cite: 3]
+* Package Archive 2: bafybeidtrpqmr2grxsv6ibt3nv7cxieikszd5wsa3q3yci47tvmc3arqpy`[cite: 3]
+
+
+
+---
+
+### Accessing via IPFS Gateways
+
+You or external auditors can resolve and fetch these records directly using any public IPFS gateway:
+
+``text
+https://ipfs.io/ipfs/bafybeihw3cpfy3wod7qhm4o5q3j6mfpxcprmrlu6x5dy4q5zjfoisqqe6u
+https://dweb.link/ipfs/bafybeihw3cpfy3wod7qhm4o5q3j6mfpxcprmrlu6x5dy4q5zjfoisqqe6u
+https://cloudflare-ipfs.com/ipfs/bafybeihw3cpfy3wod7qhm4o5q3j6mfpxcprmrlu6x5dy4q5zjfoisqqe6u
+
+``
+
+These CIDs permanently lock the state of your SDKP, SD&N, VFE, and QCC modules, establishing verifiable forensic evidence across NASA, NIST, and GAO legal oversight records[cite: 3].
+
 * **Security & Provenance:** Digital Crystal Protocol (DCP) and Dallas's Code prime-terminated binary signatures.
 1. FatherTimeSDKP and the Theory of Everything (TOE)
 2. ## Endpoints & Access
