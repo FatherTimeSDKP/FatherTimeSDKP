@@ -1,3 +1,5 @@
+aI_Studio_APP link : https://ai.studio/apps/3128d09b-a985-4831-8522-7b94e6649422
+
 GitHub repo (the project Vercel deploys): https://github.com/FatherTimeSDKP/Donald-Paul-Smith-FatherTime-SDKP-SD-N-Quantum-entanglement-
 GitHub organization: https://github.com/FatherTimeSDKP
 Zenodo (SDKP Framework): https://doi.org/10.5281/zenodo.14850016
