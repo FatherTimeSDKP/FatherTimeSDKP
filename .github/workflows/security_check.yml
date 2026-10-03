@@ -21,7 +21,7 @@ jobs:
           
       - name: Execute Prime-Terminated Logic Check
         run: |
-          # This executes your custom SD&N verification logic. 
+          # This executes your custom SD&N verification logic.
           # If the logic returns a non-zero exit code, the build fails.
           ./bin/dallas_code_processor --verify-integrity --path ./
           
