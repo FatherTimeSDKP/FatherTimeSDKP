@@ -17,7 +17,13 @@
         "https://github.com/agrudkow/usd-ppo/blob/f138363d8eb545e9c9a8802bdb09775525e91fe5/data/ppo-spinup-tf1-half-cheetah_halfcheetah-v2_gam0-99_cli0-2_tar0-01/ppo-spinup-tf1-half-cheetah_halfcheetah-v2_gam0-99_cli0-2_tar0-01_s30/progress.txt",
         "https://github.com/JuliusJacobitz/EvolutionaryAlgos/blob/38d83b6e634020a9271ec93b6f1ed6683a01f96f/src/data/output_julius/50/tour_50_seed64_1761653040.csv",
         "https://github.com/replicatedhq/kustomize-demo/blob/a428f18e28aa261d13f850bfcbc3b703c529580c/src/style/main_spritesheet.svg",
-        "https://github.com/eggersn/DistributedFFT/blob/5c336ca190e0ce5fabfe1ff7984e9ec00ef5e980/benchmarks/bwunicluster/gpu8/large/inverse/pencil/test_1_1_0_0_0_512_512_1024_1_6_8.csv"
+        "https://github.com/eggersn/DistributedFFT/blob/5c336ca190e0ce5fabfe1ff7984e9ec00ef5e980/benchmarks/bwunicluster/gpu8/large/inverse/pencil/test_1_1_0_0_0_512_512_1024_1_6_8.csv",
+        "https://github.com/kelubo/wfbook/blob/fbcb2d163b9d65ad187046abc62ed5c9b426bf7a/Software/mtr.md",
+        "https://github.com/v1cker/src_edu/blob/041d61a93c054fb9589e865174d32243f96d11bf/edu_ips.txt",
+        "https://github.com/kirmarchenko/pyproxyhunter/blob/983fd4bbf2847c8cb430443910b0c3c82559715e/README.md",
+        "https://github.com/Jakee8718/Free-Proxies/blob/b19a156b86364fce1b48a8a3f6bff4cfed5b9327/proxy/http.txt",
+        "https://github.com/ring0x0/emotet-configs/blob/5ae237436f29711b421277ecc1aedc76108e3c6e/77817.txt",
+        "https://github.com/ring0x0/emotet-configs/blob/5ae237436f29711b421277ecc1aedc76108e3c6e/77880.txt"
     ],
     "records": [
         {
@@ -127,6 +133,42 @@
             "repository": "eggersn/DistributedFFT",
             "vector": "Hidden Canary",
             "integrity_seal": "29d53693d1a35a48397ee517cb856adf705b36d1f99b86d24fe356a86ef80ba5:104729"
+        },
+        {
+            "url": "https://github.com/kelubo/wfbook/blob/fbcb2d163b9d65ad187046abc62ed5c9b426bf7a/Software/mtr.md",
+            "repository": "kelubo/wfbook",
+            "vector": "Hidden Canary",
+            "integrity_seal": "22f3af8f71171a8d683a12161125c9e503b5965517ef91030ee47f2a1f528d3b:104729"
+        },
+        {
+            "url": "https://github.com/v1cker/src_edu/blob/041d61a93c054fb9589e865174d32243f96d11bf/edu_ips.txt",
+            "repository": "v1cker/src_edu",
+            "vector": "Hidden Canary",
+            "integrity_seal": "3ce5a538c87da058681581595656d2d03f5b4fe86536359d0353969c3176f3f5:104729"
+        },
+        {
+            "url": "https://github.com/kirmarchenko/pyproxyhunter/blob/983fd4bbf2847c8cb430443910b0c3c82559715e/README.md",
+            "repository": "kirmarchenko/pyproxyhunter",
+            "vector": "Hidden Canary",
+            "integrity_seal": "0c84b3aa2e5306d81ffda9c2c29cbf4e044ee8f2218145523882089bc882ea5d:104729"
+        },
+        {
+            "url": "https://github.com/Jakee8718/Free-Proxies/blob/b19a156b86364fce1b48a8a3f6bff4cfed5b9327/proxy/http.txt",
+            "repository": "Jakee8718/Free-Proxies",
+            "vector": "Hidden Canary",
+            "integrity_seal": "5a8119efa58c18d25e546d88b9ec73af1da9c2750c6a31871f3b0fdac8bb8feb:104729"
+        },
+        {
+            "url": "https://github.com/ring0x0/emotet-configs/blob/5ae237436f29711b421277ecc1aedc76108e3c6e/77817.txt",
+            "repository": "ring0x0/emotet-configs",
+            "vector": "Hidden Canary",
+            "integrity_seal": "ca0917b352f2fadbf34312571e21519ab1cb7d32f058a749b1b243a10745b504:104729"
+        },
+        {
+            "url": "https://github.com/ring0x0/emotet-configs/blob/5ae237436f29711b421277ecc1aedc76108e3c6e/77880.txt",
+            "repository": "ring0x0/emotet-configs",
+            "vector": "Hidden Canary",
+            "integrity_seal": "c5fb7dbaaaed003abf954a5dc4fe99dedf85c27ba157fb35736931e1095bc157:104729"
         }
     ],
     "equilibrium_state": "active_verification"
